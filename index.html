@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>TibiaLootSplit - splitting loot has never been easier</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>TibiaLootSplit</h1>
+    <h3>How to use</h3>
+    <ol>
+        <li>In your 'Party Hunt' analyser select 'Copy to Clipboard' (as shown in the photo below)</li>
+        <li>Paste the values into the input field</li>
+        <li>Click 'Submit'</li>
+    </ol>
+    <img src="images/analyser.png" alt="Picture of 'Party Hunt' analsyer highlighting which button to click">
+    <br>
+    <br>
+    <form>
+        <label for="input">Paste your 'Party Hunt' analyser (Clipboard) below and submit:</label><br><br>
+        <input type="text" id="lootinput" name="lootinput" autocomplete="off"><br>
+        <input type="submit" id="submitbutton" value="Submit" onclick="submit_form()" />
+    </form>
+</body>
+
+</html>
