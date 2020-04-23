@@ -1,3 +1,9 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
 #analyserData {
     width: 365px;
     margin-top: 10px;
@@ -5,11 +11,6 @@
 
 #submitbutton {
     margin-top: 10px;
-}
-
-body {
-    font-family: 'Helvetica', sans-serif;
-    font-size:14px;
 }
 
 h1 {
@@ -25,10 +26,13 @@ ol {
     margin-top: 5px;
 }
 
+li {
+    text-align: center;
+}
+
 #contactParagraph {
     margin-top: 5px;
     margin-bottom: 0px;
-
 }
 
 #profit_positive {
