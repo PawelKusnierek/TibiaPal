@@ -106,14 +106,14 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
         }
     }
 
-    if (Math.abs(total_profit > 1000)) {
+    if (Math.abs(total_profit) > 1000) {
         total_profit = Math.round(total_profit / 1000) + "k~"
     }
     else {
         total_profit = total_profit + " gp"
     }
 
-    if (Math.abs(profit_per_person > 1000)) {
+    if (Math.abs(profit_per_person) > 1000) {
         profit_per_person = Math.round(profit_per_person / 1000) + "k~"
     }
     else {
