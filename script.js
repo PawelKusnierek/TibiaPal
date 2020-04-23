@@ -59,7 +59,7 @@ function final_split(players_and_their_balance, profit_per_person, number_of_pla
     who_to_pay_and_how_much = []
     for (let i = 0; i < number_of_players; i++) {
         if (players_and_outstanding_payment[i]['balance'] < 0) {
-            while (players_and_outstanding_payment[i]['balance'] != 0) {
+            while (Math.abs(players_and_outstanding_payment[i]['balance']) > 5) {
                 for (let j = 0; j < number_of_players; j++) {
                     if (players_and_outstanding_payment[j]['balance'] > 0) {
                         if (players_and_outstanding_payment[j]['balance'] > Math.abs(players_and_outstanding_payment[i]['balance'])) {
@@ -94,7 +94,7 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
     for (let i = 0; i < who_to_pay_and_how_much.length; i++) {
         if (who_to_pay_and_how_much[i]['amount'] != 0) {
             if (who_to_pay_and_how_much[i]['amount'] > 1000) {
-                gp_amount = who_to_pay_and_how_much[i]['amount'];
+                gp_amount = Math.round(who_to_pay_and_how_much[i]['amount']);
                 who_to_pay_and_how_much[i]['amount'] = Math.round(who_to_pay_and_how_much[i]['amount'] / 1000)
                 transfer_message = "<b>" + who_to_pay_and_how_much[i]['name'] + "</b>" + " to pay " + "<b>" + who_to_pay_and_how_much[i]['amount'] + "k" + "</b>" + " to " + "<b>" + who_to_pay_and_how_much[i]['to_who'] + "</b>" + " (rounded " + gp_amount + " gp) ";
                 output_array.push(transfer_message);
