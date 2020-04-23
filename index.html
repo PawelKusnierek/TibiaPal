@@ -6,7 +6,7 @@
     <title>TibiaLootSplit</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Fjalla+One&family=Roboto&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
@@ -19,8 +19,10 @@
     </ol>
     <img src="images/analyser.png" alt="Picture of 'Party Hunt' analsyer highlighting which button to click">
     <br>
+    <p id="contactParagraph">In case of any feedback or issues please contact me at <a href = "mailto: pkusnierek@yahoo.co.uk">pkusnierek@yahoo.co.uk</a> <br>
+        (don't forget to include the session log if reporting issues!)</p> 
     <form>
-        <input type="text" id="analyserData" name="analyserData" value="Paste here..." autocomplete="off"><br>
+        <input type="text" id="analyserData" name="analyserData" value="Paste party session here..." autocomplete="off"><br>
         <input type="submit" id="submitbutton" value="Submit" onclick="submit_form()" />
         <button onclick="location.reload();">Refresh Page</button>
     </form>
