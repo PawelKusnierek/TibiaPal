@@ -114,7 +114,7 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
     if (total_profit > 0) {
         profit = true;
     }
-    
+
     if (Math.abs(total_profit) > 1000) {
         total_profit = Math.round(total_profit / 1000) + "k~"
     }
@@ -133,6 +133,6 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
         document.body.innerHTML = document.body.innerHTML + "<p> Total profit: " + "<span id=\"profit_positive\">" + total_profit + "</span> which is: " + "<span id=\"profit_positive\">" + profit_per_person + "</span> for each player. </p > "
     }
     else {
-        document.body.innerHTML = document.body.innerHTML + "<p> Total profit: " + "<span id=\"profit_negative\">" + total_profit + "</span> which is: " + "<span id=\"profit_negative\">" + profit_per_person + "</span> for each player. </p > "
+        document.body.innerHTML = document.body.innerHTML + "<p> Total waste: " + "<span id=\"profit_negative\">" + total_profit + "</span> which is: " + "<span id=\"profit_negative\">" + profit_per_person + "</span> for each player. </p > "
     }
 }
