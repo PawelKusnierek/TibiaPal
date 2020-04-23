@@ -1,4 +1,12 @@
-#uniqueID {
-    width: 400px;
+#analyserData {
+    width: 365px;
+    margin-top: 5px;
 }
 
+#submitbutton {
+    margin-top: 5px;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+}
