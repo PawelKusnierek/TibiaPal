@@ -106,6 +106,15 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
         }
     }
 
+    for (let j = 0; j < output_array.length; j++) {
+        document.body.innerHTML = document.body.innerHTML + "<p>" + output_array[j] + "</p>"
+    }
+
+    let profit = false;
+    if (total_profit > 0) {
+        profit = true;
+    }
+    
     if (Math.abs(total_profit) > 1000) {
         total_profit = Math.round(total_profit / 1000) + "k~"
     }
@@ -119,9 +128,11 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
     else {
         profit_per_person = profit_per_person + " gp"
     }
-    profit_message = "Total profit: " + total_profit + " which is: " + profit_per_person + " for each player. ";
-    output_array.push(profit_message);
-    for (let j = 0; j < output_array.length; j++) {
-        document.body.innerHTML = document.body.innerHTML + "<p>" + output_array[j] + "</p>"
+
+    if (profit) {
+        document.body.innerHTML = document.body.innerHTML + "<p> Total profit: " + "<span id=\"profit_positive\">" + total_profit + "</span> which is: " + "<span id=\"profit_positive\">" + profit_per_person + "</span> for each player. </p > "
+    }
+    else {
+        document.body.innerHTML = document.body.innerHTML + "<p> Total profit: " + "<span id=\"profit_negative\">" + total_profit + "</span> which is: " + "<span id=\"profit_negative\">" + profit_per_person + "</span> for each player. </p > "
     }
 }

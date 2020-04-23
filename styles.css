@@ -30,3 +30,13 @@ ol {
     margin-bottom: 0px;
 
 }
+
+#profit_positive {
+    font-weight: bold;
+    color: green;
+}
+
+#profit_negative {
+    font-weight: bold;
+    color: red;
+}
