@@ -10,3 +10,16 @@
 body {
     font-family: 'Helvetica', sans-serif;
 }
+
+h1 {
+    font-family: 'Acme', sans-serif;
+}
+
+h4 {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+ol {
+    margin-top: 5px;
+}
