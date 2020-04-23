@@ -6,7 +6,7 @@ function submit_form() {
     profit_per_person = total_profit / number_of_players;
     players_and_their_balance = find_players_and_balance(analyser_data, number_of_players);
     who_to_pay_and_how_much = final_split(players_and_their_balance, profit_per_person, number_of_players);
-    update_the_html(who_to_pay_and_how_much);
+    update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person);
 }
 
 function find_total_profit(data) {
@@ -89,22 +89,38 @@ function final_split(players_and_their_balance, profit_per_person, number_of_pla
     return who_to_pay_and_how_much;
 }
 
-function update_the_html(who_to_pay_and_how_much) {
+function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person) {
     output_array = [];
     for (let i = 0; i < who_to_pay_and_how_much.length; i++) {
         if (who_to_pay_and_how_much[i]['amount'] != 0) {
             if (who_to_pay_and_how_much[i]['amount'] > 1000) {
                 gp_amount = who_to_pay_and_how_much[i]['amount'];
                 who_to_pay_and_how_much[i]['amount'] = Math.round(who_to_pay_and_how_much[i]['amount'] / 1000)
-                transfer_message = who_to_pay_and_how_much[i]['name'] + " to pay " + who_to_pay_and_how_much[i]['amount'] + "k to " + who_to_pay_and_how_much[i]['to_who'] + " (rounded " + gp_amount + " gp) ";
+                transfer_message = "<b>" + who_to_pay_and_how_much[i]['name'] + "</b>" + " to pay " + "<b>" + who_to_pay_and_how_much[i]['amount'] + "k" + "</b>" + " to " + "<b>" + who_to_pay_and_how_much[i]['to_who'] + "</b>" + " (rounded " + gp_amount + " gp) ";
                 output_array.push(transfer_message);
             }
             else {
-                transfer_message = who_to_pay_and_how_much[i]['name'] + " to pay " + who_to_pay_and_how_much[i]['amount'] + " gp to " + who_to_pay_and_how_much[i]['to_who'];
+                transfer_message = "<b>" + who_to_pay_and_how_much[i]['name'] + "</b>" + " to pay " + "<b>" + who_to_pay_and_how_much[i]['amount'] + " gp " + +"</b>" + "to " + "<b>" + who_to_pay_and_how_much[i]['to_who'] + "</b>";
                 output_array.push(transfer_message);
             }
         }
     }
+
+    if (Math.abs(total_profit > 1000)) {
+        total_profit = Math.round(total_profit / 1000) + "k~"
+    }
+    else {
+        total_profit = total_profit + " gp"
+    }
+
+    if (Math.abs(profit_per_person > 1000)) {
+        profit_per_person = Math.round(profit_per_person / 1000) + "k~"
+    }
+    else {
+        profit_per_person = profit_per_person + " gp"
+    }
+    profit_message = "Total profit: " + total_profit + " which is: " + profit_per_person + " for each player. ";
+    output_array.push(profit_message);
     for (let j = 0; j < output_array.length; j++) {
         document.body.innerHTML = document.body.innerHTML + "<p>" + output_array[j] + "</p>"
     }
