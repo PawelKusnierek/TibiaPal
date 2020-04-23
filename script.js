@@ -96,11 +96,11 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
             if (who_to_pay_and_how_much[i]['amount'] > 1000) {
                 gp_amount = Math.round(who_to_pay_and_how_much[i]['amount']);
                 who_to_pay_and_how_much[i]['amount'] = Math.round(who_to_pay_and_how_much[i]['amount'] / 1000)
-                transfer_message = "<b>" + who_to_pay_and_how_much[i]['name'] + "</b>" + " to pay " + "<b>" + who_to_pay_and_how_much[i]['amount'] + "k" + "</b>" + " to " + "<b>" + who_to_pay_and_how_much[i]['to_who'] + "</b>" + " (rounded " + gp_amount + " gp) ";
+                transfer_message = "<b>" + who_to_pay_and_how_much[i]['name'] + "</b>" + " to pay " + "<b>" + who_to_pay_and_how_much[i]['amount'] + "k" + "</b>" + " to " + "<b>" + who_to_pay_and_how_much[i]['to_who'] + "</b>" + " (Bank transfer message: <b> transfer " + gp_amount + " to " + who_to_pay_and_how_much[i]['to_who'] + "</b>)";
                 output_array.push(transfer_message);
             }
             else {
-                transfer_message = "<b>" + who_to_pay_and_how_much[i]['name'] + "</b>" + " to pay " + "<b>" + who_to_pay_and_how_much[i]['amount'] + " gp " + +"</b>" + "to " + "<b>" + who_to_pay_and_how_much[i]['to_who'] + "</b>";
+                transfer_message = "<b>" + who_to_pay_and_how_much[i]['name'] + "</b>" + " to pay " + "<b>" + who_to_pay_and_how_much[i]['amount'] + " gp " + +"</b>" + "to " + "<b>" + who_to_pay_and_how_much[i]['to_who'] + "</b>" + " (Bank transfer message: <b> transfer " + gp_amount + " to " + who_to_pay_and_how_much[i]['to_who'] + "</b>)";
                 output_array.push(transfer_message);
             }
         }
