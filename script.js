@@ -84,6 +84,7 @@ function final_split(players_and_their_balance, profit_per_person, number_of_pla
                         }
                         else {
                             players_and_outstanding_payment[i]['balance'] = players_and_outstanding_payment[i]['balance'] + players_and_outstanding_payment[j]['balance'];
+                            players_and_outstanding_payment[j]['balance'] = Math.round(players_and_outstanding_payment[j]['balance']);
                             who_to_pay_and_how_much.push({
                                 name: players_and_outstanding_payment[i]['name'],
                                 amount: Math.abs(players_and_outstanding_payment[j]['balance']),
