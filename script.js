@@ -100,7 +100,8 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
                 output_array.push(transfer_message);
             }
             else {
-                transfer_message = "<b>" + who_to_pay_and_how_much[i]['name'] + "</b>" + " to pay " + "<b>" + who_to_pay_and_how_much[i]['amount'] + " gp " + "</b>" + "to " + "<b>" + who_to_pay_and_how_much[i]['to_who'] + "</b>" + " (Bank transfer message: <b> transfer " + who_to_pay_and_how_much[i]['amount'] + " to " + who_to_pay_and_how_much[i]['to_who'] + "</b>)";
+                gp_amount = Math.round(who_to_pay_and_how_much[i]['amount']);
+                transfer_message = "<b>" + who_to_pay_and_how_much[i]['name'] + "</b>" + " to pay " + "<b>" + gp_amount + " gp " + "</b>" + "to " + "<b>" + who_to_pay_and_how_much[i]['to_who'] + "</b>" + " (Bank transfer message: <b> transfer " + gp_amount + " to " + who_to_pay_and_how_much[i]['to_who'] + "</b>)";
                 output_array.push(transfer_message);
             }
         }
