@@ -107,8 +107,10 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
         }
     }
 
+    var mainContent = document.getElementById("main-content");
+
     for (let j = 0; j < output_array.length; j++) {
-        document.body.innerHTML = document.body.innerHTML + "<p>" + output_array[j] + "</p>"
+        mainContent.innerHTML = mainContent.innerHTML + "<p>" + output_array[j] + "</p>"
     }
 
     let profit = false;
@@ -132,9 +134,9 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
     }
 
     if (profit) {
-        document.body.innerHTML = document.body.innerHTML + "<p> Total profit: " + "<span id=\"profit_positive\">" + total_profit + "</span> which is: " + "<span id=\"profit_positive\">" + profit_per_person + "</span> for each player. </p > "
+        mainContent.innerHTML = mainContent.innerHTML + "<p> Total profit: " + "<span id=\"profit_positive\">" + total_profit + "</span> which is: " + "<span id=\"profit_positive\">" + profit_per_person + "</span> for each player. </p > <br>"
     }
     else {
-        document.body.innerHTML = document.body.innerHTML + "<p> Total waste: " + "<span id=\"profit_negative\">" + total_profit + "</span> which is: " + "<span id=\"profit_negative\">" + profit_per_person + "</span> for each player. </p > "
+        mainContent.innerHTML = mainContent.innerHTML + "<p> Total waste: " + "<span id=\"profit_negative\">" + total_profit + "</span> which is: " + "<span id=\"profit_negative\">" + profit_per_person + "</span> for each player. </p > <br> "
     }
 }

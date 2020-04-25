@@ -12,7 +12,7 @@
         gtag('config', 'UA-164338286-1');
     </script>
     <meta charset="UTF-8">
-    <meta name="TibiaLootSplit" content="Quick and easy splitting of loot using the 'Party Hunt' analyser">
+    <meta name="TibiaLootSplit" content="Quick and easy splitting of loot using the Tibia 'Party Hunt' analyser">
     <meta name="keywords"
         content="Tibia, Tibia Loot, Tibia Loot Split, TibiaLootSplit, Split Tibia Loot, Tibia Loot Analyser, Tibia Loot Share, Tibia Share Loot">
     <meta name="author" content="Pawel Kusnierek">
@@ -24,26 +24,31 @@
 </head>
 
 <body>
-    <h1>TibiaLootSplit</h1>
-    <h4>How to use</h4>
-
-    <ol>
-        <li>In your 'Party Hunt' analyser select 'Copy to Clipboard'</li>
-        <li>Paste the values into the input field and click 'Submit'</li>
-    </ol>
-
-    <img src="images/analyser.png" alt="Picture of 'Party Hunt' analsyer highlighting which button to click">
-    <br>
-    <p id="contactParagraph">In case of any feedback or issues please contact me at <a
-            href="mailto: pkusnierek@yahoo.co.uk">pkusnierek@yahoo.co.uk</a> <br>
-        (don't forget to include the session log if reporting issues!) <br><br>
-        Alternatively, you can find me in Tibia on Secura. My name is '<b>Kusnier Magician</b>' - say hello!</p> <br>
-    <form>
-        <input type="text" id="analyserData" name="analyserData" value="Paste party session here..."
-            autocomplete="off"><br>
-        <input type="submit" id="submitbutton" value="Submit" onclick="submit_form()" />
-        <button onclick="location.reload();">Refresh Page</button>
-    </form>
+    <div id="page-containter">
+        <div id="left-sidebar"></div>
+        <div id="main-content">
+            <h1>TibiaLootSplit</h1>
+            <h4>How to use</h4>
+            <ol>
+                <li>In your 'Party Hunt' analyser select 'Copy to Clipboard'</li>
+                <li>Paste the values into the input field and click 'Submit'</li>
+            </ol>
+            <img src="images/analyser.png" alt="Picture of 'Party Hunt' analsyer highlighting which button to click">
+            <form>
+                <input type="text" id="analyserData" name="analyserData" value="Paste party hunt session log here..."
+                    autocomplete="off"><br>
+                <input type="submit" id="submitbutton" value="Submit" onclick="submit_form()" />
+                <button onclick="location.reload();">Refresh Page</button>
+            </form>
+        </div>
+        <div id="right-sidebar"></div>
+        <div id="footer">
+            <p id="contactParagraph">In case of any feedback or issues please contact me at <a
+                    href="mailto: pkusnierek@yahoo.co.uk">pkusnierek@yahoo.co.uk</a> <br>
+                (don't forget to include the session log if reporting issues!) <br><br>
+                Alternatively, you can find me in Tibia on Secura. My name is '<b>Kusnier Magician</b>' - say hello!</p>
+        </div>
+    </div>
 </body>
 
 </html>
