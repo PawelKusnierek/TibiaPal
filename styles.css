@@ -63,11 +63,6 @@ li {
     text-align: center;
 }
 
-#contactParagraph {
-    margin-top: 5px;
-    margin-bottom: 0px;
-}
-
 #profit_positive {
     font-weight: bold;
     color: green;
@@ -86,6 +81,14 @@ li {
 #footer {
     height: 10%;
     flex-basis: 100%;
+    align-items: center;
+}
+
+#contactParagraph {
+    position: absolute;
+    bottom: 0px;
+    left: 15%;
+    right: 15%;
 }
 
 a {
