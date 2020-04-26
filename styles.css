@@ -76,6 +76,11 @@ li {
     opacity: 100%;
 }
 
+#example_positive {
+    font-weight: bold;
+    color: green;
+}
+
 #right-sidebar {
     flex-basis: 15%;
 }

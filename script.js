@@ -1,12 +1,16 @@
 function submit_form() {
     form = document.forms[0];
-    analyser_data = form.analyserData.value.replace(" (Leader)", "");;
+    analyser_data = form.analyserData.value.replace(" (Leader)", "");
+    var example_output = document.getElementById("example-output");
+    example_output.innerHTML = "";
+    var mainContent = document.getElementById("main-content");
+    mainContent.innerHTML = mainContent.innerHTML + "<h3>Result:</h3>"
     total_profit = find_total_profit(analyser_data);
     number_of_players = find_total_number_of_players(analyser_data);
     profit_per_person = total_profit / number_of_players;
     players_and_their_balance = find_players_and_balance(analyser_data, number_of_players);
     who_to_pay_and_how_much = final_split(players_and_their_balance, profit_per_person, number_of_players);
-    update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person);
+    update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person, mainContent);
 }
 
 function find_total_profit(data) {
@@ -89,7 +93,7 @@ function final_split(players_and_their_balance, profit_per_person, number_of_pla
     return who_to_pay_and_how_much;
 }
 
-function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person) {
+function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person, mainContent) {
     output_array = [];
     for (let i = 0; i < who_to_pay_and_how_much.length; i++) {
         if (who_to_pay_and_how_much[i]['amount'] != 0) {
@@ -106,8 +110,6 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
             }
         }
     }
-
-    var mainContent = document.getElementById("main-content");
 
     for (let j = 0; j < output_array.length; j++) {
         mainContent.innerHTML = mainContent.innerHTML + "<p>" + output_array[j] + "</p>"
@@ -134,9 +136,9 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
     }
 
     if (profit) {
-        mainContent.innerHTML = mainContent.innerHTML + "<p> Total profit: " + "<span id=\"profit_positive\">" + total_profit + "</span> which is: " + "<span id=\"profit_positive\">" + profit_per_person + "</span> for each player. </p > <br>"
+        mainContent.innerHTML = mainContent.innerHTML + "<p> Total profit: " + "<span id=\"profit_positive\">" + total_profit + "</span> which is: " + "<span id=\"profit_positive\">" + profit_per_person + "</span> for each player. </p >"
     }
     else {
-        mainContent.innerHTML = mainContent.innerHTML + "<p> Total waste: " + "<span id=\"profit_negative\">" + total_profit + "</span> which is: " + "<span id=\"profit_negative\">" + profit_per_person + "</span> for each player. </p > <br> "
+        mainContent.innerHTML = mainContent.innerHTML + "<p> Total waste: " + "<span id=\"profit_negative\">" + total_profit + "</span> which is: " + "<span id=\"profit_negative\">" + profit_per_person + "</span> for each player. </p >"
     }
 }
