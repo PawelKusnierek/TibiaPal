@@ -101,3 +101,23 @@ li {
 a {
     color: rgb(157, 151, 173)
 }
+
+@media only screen and (max-width: 1200px) {
+    body {
+        font-family: 'Helvetica', sans-serif;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    #left-sidebar {
+        display: none;
+    }
+    #right-sidebar {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+    #main-content {
+        flex-basis: 90%;
+    }
+  }
