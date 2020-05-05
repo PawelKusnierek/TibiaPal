@@ -102,7 +102,7 @@ a {
     color: rgb(157, 151, 173)
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1000px) {
     body {
         font-family: 'Helvetica', sans-serif;
         font-size: 1.8rem;
