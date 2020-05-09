@@ -143,7 +143,7 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
     }
 }
 
-function copy_to_clipboard( transferMsg, who_to_pay ){
+function copy_to_clipboard( transferMsg, who_to_pay ){ 
 
     //console.log(transferMsg)
     let attrid = who_to_pay.replace(/[^A-Z0-9]/ig, "_")   

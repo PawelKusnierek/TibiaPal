@@ -109,7 +109,7 @@ a {
         text-align: center;
     }
     #left-sidebar {
-        display: none;
+        display: none; 
     }
     #right-sidebar {
         display: none;
