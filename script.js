@@ -100,12 +100,12 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
             if (who_to_pay_and_how_much[i]['amount'] > 1000) {
                 gp_amount = Math.round(who_to_pay_and_how_much[i]['amount']);
                 who_to_pay_and_how_much[i]['amount'] = Math.round(who_to_pay_and_how_much[i]['amount'] / 1000)
-                transfer_message = `<b> ${who_to_pay_and_how_much[i]['name']}  </b>  to pay ${who_to_pay_and_how_much[i]['amount']}  </b>  to ${who_to_pay_and_how_much[i]['to_who']} (Bank transfer message: <b> transfer ${gp_amount} to ${who_to_pay_and_how_much[i]['to_who']}</b>) <button type="button" onClick='copy_to_clipboard("transfer ${gp_amount} to ${who_to_pay_and_how_much[i]['to_who']}", "${who_to_pay_and_how_much[i]['to_who']}")';>Copy</button>`;
+                transfer_message = `<b> ${who_to_pay_and_how_much[i]['name']}  </b>  to pay ${who_to_pay_and_how_much[i]['amount']}k  </b>  to ${who_to_pay_and_how_much[i]['to_who']} (Bank transfer message: <b> transfer ${gp_amount} to ${who_to_pay_and_how_much[i]['to_who']}</b>) <button type="button" onClick='copy_to_clipboard("transfer ${gp_amount} to ${who_to_pay_and_how_much[i]['to_who']}", "${who_to_pay_and_how_much[i]['to_who']}")';>Copy</button>`;
                 output_array.push(transfer_message);
             }
             else {
                 gp_amount = Math.round(who_to_pay_and_how_much[i]['amount']);
-                transfer_message = "<b>" + who_to_pay_and_how_much[i]['name'] + "</b>" + " to pay " + "<b>" + gp_amount + " gp " + "</b>" + "to " + "<b>" + who_to_pay_and_how_much[i]['to_who'] + "</b>" + " (Bank transfer message: <b> transfer " + gp_amount + " to " + who_to_pay_and_how_much[i]['to_who'] + "</b>)";
+                transfer_message = `<b> ${who_to_pay_and_how_much[i]['name']} </b> to pay <b> ${gp_amount} gp </b> to <b>${who_to_pay_and_how_much[i]['to_who']} </b> (Bank transfer message: <b> transfer  ${gp_amount} to ${who_to_pay_and_how_much[i]['to_who']} </b>) <button type="button" onClick='copy_to_clipboard("transfer ${gp_amount} to ${who_to_pay_and_how_much[i]['to_who']}", "${who_to_pay_and_how_much[i]['to_who']}")';>Copy</button>`;
                 output_array.push(transfer_message);
             }
         }
@@ -145,22 +145,21 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
 
 function copy_to_clipboard( transferMsg, who_to_pay ){ 
 
-    //console.log(transferMsg)
-    let attrid = who_to_pay.replace(/[^A-Z0-9]/ig, "_")   
-
-    let container = document.querySelector("#page-containter")
     
-    if( !document.querySelector(`#${attrid}`) ){
-        let input = document.createElement("input")
-        input.type = "text"
-        input.id = attrid
-        input.className = "hiddeninput"
-        input.value = transferMsg
-        container.appendChild(input)
-    }
+    let attrid = who_to_pay.replace(/[^A-Z0-9]/ig, "_")   
+    let container = document.querySelector("#page-containter")     
+    let input = document.createElement("input")
 
+    input.type = "text"
+    input.id = attrid
+    input.className = "hiddeninput"
+    input.value = transferMsg
+    container.appendChild(input)
 
-    let text_to_copy = document.querySelector(`#${attrid}`);
+    let text_to_copy = document.querySelector(`#${attrid}`)
+    
     text_to_copy.select();    
-    document.execCommand("copy");
+    document.execCommand("copy")
+
+    text_to_copy.remove()
 }
