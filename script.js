@@ -1,8 +1,6 @@
 function submit_form() {
     form = document.forms[0];
     analyser_data = form.analyserData.value.replace(" (Leader)", "");
-    var example_output = document.getElementById("example-output");
-    example_output.innerHTML = "";
     var mainContent = document.getElementById("main-content");
     mainContent.innerHTML = mainContent.innerHTML + "<h3>Result:</h3>"
     total_profit = find_total_profit(analyser_data);
