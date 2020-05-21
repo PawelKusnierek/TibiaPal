@@ -3,11 +3,17 @@ function submit_form() {
     analyser_data = form.analyserData.value.replace(" (Leader)", "");
     var mainContent = document.getElementById("main-content");
     mainContent.innerHTML = mainContent.innerHTML + "<h3>Result:</h3>"
+
+    // Parsing the data from the log to find out profit per person and the balance of each player
     total_profit = find_total_profit(analyser_data);
     number_of_players = find_total_number_of_players(analyser_data);
     profit_per_person = total_profit / number_of_players;
     players_and_their_balance = find_players_and_balance(analyser_data, number_of_players);
+
+    // Main logic part - works very well even if doesn't look great, advise againt touching....
     who_to_pay_and_how_much = final_split(players_and_their_balance, profit_per_person, number_of_players);
+
+    // Final update back to the site
     update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person, mainContent);
 }
 
@@ -93,18 +99,26 @@ function final_split(players_and_their_balance, profit_per_person, number_of_pla
 
 function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person, mainContent) {
     output_array = [];
+    var discord_output = [];
+
     for (let i = 0; i < who_to_pay_and_how_much.length; i++) {
-        if (who_to_pay_and_how_much[i]['amount'] != 0) {
-            if (who_to_pay_and_how_much[i]['amount'] > 1000) {
-                gp_amount = Math.round(who_to_pay_and_how_much[i]['amount']);
-                who_to_pay_and_how_much[i]['amount'] = Math.round(who_to_pay_and_how_much[i]['amount'] / 1000)
-                transfer_message = `<b> ${who_to_pay_and_how_much[i]['name']}  </b>  to pay <b> ${who_to_pay_and_how_much[i]['amount']}k  </b> to <b>${who_to_pay_and_how_much[i]['to_who']} </b> (Bank: <b> transfer ${gp_amount} to ${who_to_pay_and_how_much[i]['to_who']}</b>) <button type="button" onClick='copy_to_clipboard("transfer ${gp_amount} to ${who_to_pay_and_how_much[i]['to_who']}", "${who_to_pay_and_how_much[i]['to_who']}")';>Copy</button>`;
+        var amount = who_to_pay_and_how_much[i]['amount']
+        var gp_amount = Math.round(amount);
+        var payer_name = who_to_pay_and_how_much[i]['name']
+        var payee_name = who_to_pay_and_how_much[i]['to_who']
+        var copy_button = `<button type="button" onClick='copy_to_clipboard("transfer ${gp_amount} to ${payee_name}", "${payee_name}")';>Copy</button>`
+
+        if (amount != 0) {
+            if (amount > 1000) {
+                amount = Math.round(amount / 1000)
+                transfer_message = `<b> ${payer_name} </b> to pay <b> ${amount}k </b> to <b>${payee_name} </b> (Bank: <b> transfer ${gp_amount} to ${payee_name}</b>) ${copy_button}`;
                 output_array.push(transfer_message);
+                discord_output.push(payer_name + ' to pay ' + amount + ' k to ' + payee_name + ' (Bank: transfer ' + gp_amount + ' to ' + payee_name)
             }
             else {
-                gp_amount = Math.round(who_to_pay_and_how_much[i]['amount']);
-                transfer_message = `<b> ${who_to_pay_and_how_much[i]['name']} </b> to pay <b> ${gp_amount} gp </b> to <b>${who_to_pay_and_how_much[i]['to_who']} </b> (Bank: <b> transfer  ${gp_amount} to ${who_to_pay_and_how_much[i]['to_who']} </b>) <button type="button" onClick='copy_to_clipboard("transfer ${gp_amount} to ${who_to_pay_and_how_much[i]['to_who']}", "${who_to_pay_and_how_much[i]['to_who']}")';>Copy</button>`;
+                transfer_message = `<b> ${payer_name} </b> to pay <b> ${gp_amount} gp </b> to <b>${payee_name} </b> (Bank: <b> transfer  ${gp_amount} to ${payee_name} </b>) ${copy_button}`;
                 output_array.push(transfer_message);
+                discord_output.push(payer_name + ' to pay ' + gp_amount + ' k to ' + payee_name + ' (Bank: transfer ' + gp_amount + ' to ' + payee_name)
             }
         }
     }
@@ -135,17 +149,19 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
 
     if (profit) {
         mainContent.innerHTML = mainContent.innerHTML + "<p> Total profit: " + "<span id=\"profit_positive\">" + total_profit + "</span> which is: " + "<span id=\"profit_positive\">" + profit_per_person + "</span> for each player. </p >"
+        discord_output.push("Total profit: " + total_profit + " which is: " + profit_per_person + " for each player.")
     }
     else {
         mainContent.innerHTML = mainContent.innerHTML + "<p> Total waste: " + "<span id=\"profit_negative\">" + total_profit + "</span> which is: " + "<span id=\"profit_negative\">" + profit_per_person + "</span> for each player. </p >"
+        discord_output.push("Total waste: " + total_profit + " which is: " + profit_per_person + " for each player.")
     }
+
+    //mainContent.innerHTML = mainContent.innerHTML + `<button type="button" onClick='copy_whole_log("${discord_output}", "${profit_per_person})';>Copy full output</button>`
 }
 
-function copy_to_clipboard( transferMsg, who_to_pay ){ 
-
-    
-    let attrid = who_to_pay.replace(/[^A-Z0-9]/ig, "_")   
-    let container = document.querySelector("#page-containter")     
+function copy_to_clipboard(transferMsg, who_to_pay) {
+    let attrid = who_to_pay.replace(/[^A-Z0-9]/ig, "_")
+    let container = document.querySelector("#page-containter")
     let input = document.createElement("input")
 
     input.type = "text"
@@ -155,8 +171,32 @@ function copy_to_clipboard( transferMsg, who_to_pay ){
     container.appendChild(input)
 
     let text_to_copy = document.querySelector(`#${attrid}`)
+
+    text_to_copy.select();
+    document.execCommand("copy")
+
+    text_to_copy.remove()
+}
+
+function copy_whole_log(discord_output, id) {
+    let attrid = id
+    let container = document.querySelector("#copy-invis-content")
+    let input = document.createElement("input")
+
+    for (i=0; i < discord_output.length; i++) {
+        container.innerHTML = container.innerHTML 
+    }
+    //`"<p class="${id}>" + discord_output[i] + "</p>"`
+    input.type = "text"
+    input.id = attrid
+    input.className = "hiddeninput"
+
     
-    text_to_copy.select();    
+    container.appendChild(input)
+
+    let text_to_copy = document.querySelector(`#${attrid}`)
+
+    text_to_copy.select();
     document.execCommand("copy")
 
     text_to_copy.remove()
