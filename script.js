@@ -23,7 +23,7 @@ function submit_form() {
     analyser_data = form.analyserData.value.replace(" (Leader)", "");
     // TODO some data validation here
 
-    resultsContent.innerHTML = resultsContent.innerHTML + "<h3>Result:</h3>"
+    resultsContent.innerHTML = resultsContent.innerHTML + "<h3>Results:</h3>"
 
 
     // Parsing the data from the log to find out profit per person and the balance of each player
@@ -184,7 +184,7 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
 
 function copy_to_clipboard(transferMsg, who_to_pay) {
     let attrid = who_to_pay.replace(/[^A-Z0-9]/ig, "_")
-    let container = document.querySelector("#page-containter")
+    let container = document.querySelector("#page-container")
     let input = document.createElement("input")
 
     input.type = "text"

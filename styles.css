@@ -55,6 +55,14 @@ h4 {
     padding-bottom: 0px;
 }
 
+h3 {
+    padding-top: 10px;
+}
+
+p {
+    text-align: center;
+}
+
 ol {
     margin: 5px 0px 10px 0px;
     padding: 0px;
@@ -79,10 +87,6 @@ li {
 #example_positive {
     font-weight: bold;
     color: green;
-}
-
-#results {
-    
 }
 
 #right-sidebar {
