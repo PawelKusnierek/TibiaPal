@@ -1,8 +1,28 @@
 function submit_form() {
+    //we remove any of the previous results 
+    paragraphs = document.getElementById("main-content").getElementsByTagName("p")
+    no_of_paragraphs = paragraphs.length
+    if (no_of_paragraphs > 0) {
+        var r = confirm("This will remove the previous result. Continue?")
+        if (r == true) {
+            for (i = no_of_paragraphs - 1; i >= 0; i--) {
+                paragraphs[i].remove();
+            }
+            h3_element = document.getElementById("main-content").getElementsByTagName("h3")
+            h3_element[0].remove();
+        }
+        else {
+            return false;
+        }
+    }
+    
+    var mainContent = document.getElementById("main-content");
     form = document.forms[0];
     analyser_data = form.analyserData.value.replace(" (Leader)", "");
-    var mainContent = document.getElementById("main-content");
+    // TODO some data validation here
+
     mainContent.innerHTML = mainContent.innerHTML + "<h3>Result:</h3>"
+
 
     // Parsing the data from the log to find out profit per person and the balance of each player
     total_profit = find_total_profit(analyser_data);
@@ -178,20 +198,21 @@ function copy_to_clipboard(transferMsg, who_to_pay) {
     text_to_copy.remove()
 }
 
+// unused right now
 function copy_whole_log(discord_output, id) {
     let attrid = id
     let container = document.querySelector("#copy-invis-content")
     let input = document.createElement("input")
 
-    for (i=0; i < discord_output.length; i++) {
-        container.innerHTML = container.innerHTML 
+    for (i = 0; i < discord_output.length; i++) {
+        container.innerHTML = container.innerHTML
     }
     //`"<p class="${id}>" + discord_output[i] + "</p>"`
     input.type = "text"
     input.id = attrid
     input.className = "hiddeninput"
 
-    
+
     container.appendChild(input)
 
     let text_to_copy = document.querySelector(`#${attrid}`)
