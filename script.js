@@ -12,6 +12,7 @@ function submit_form() {
             h3_element[0].remove();
         }
         else {
+            document.getElementById("myForm").reset();
             return false;
         }
     }
@@ -36,6 +37,7 @@ function submit_form() {
 
     // Final update back to the site
     update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person, resultsContent);
+    document.getElementById("myForm").reset();
 }
 
 function find_total_profit(data) {

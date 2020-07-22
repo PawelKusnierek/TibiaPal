@@ -81,6 +81,10 @@ li {
     color: green;
 }
 
+#results {
+    
+}
+
 #right-sidebar {
     flex-basis: 15%;
 }
