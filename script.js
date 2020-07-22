@@ -173,13 +173,15 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
     if (profit) {
         resultsContent.innerHTML = resultsContent.innerHTML + "<p> Total profit: " + "<span id=\"profit_positive\">" + total_profit + "</span> which is: " + "<span id=\"profit_positive\">" + profit_per_person + "</span> for each player. </p >"
         discord_output.push("Total profit: " + total_profit + " which is: " + profit_per_person + " for each player.")
+        resultsContent.innerHTML = resultsContent.innerHTML + "<div class=\"block_element\"></div>"
     }
     else {
         resultsContent.innerHTML = resultsContent.innerHTML + "<p> Total waste: " + "<span id=\"profit_negative\">" + total_profit + "</span> which is: " + "<span id=\"profit_negative\">" + profit_per_person + "</span> for each player. </p >"
         discord_output.push("Total waste: " + total_profit + " which is: " + profit_per_person + " for each player.")
+        resultsContent.innerHTML = resultsContent.innerHTML + "<div class=\"block_element\"></div>"
     }
 
-    //resultsContent.innerHTML = resultsContent.innerHTML + `<button type="button" onClick='copy_whole_log("${discord_output}", "${profit_per_person})';>Copy full output</button>`
+    resultsContent.innerHTML = resultsContent.innerHTML + `<button type="button" onClick='copy_whole_log()';>Copy all to Discord!</button>`
 }
 
 function copy_to_clipboard(transferMsg, who_to_pay) {
@@ -201,27 +203,47 @@ function copy_to_clipboard(transferMsg, who_to_pay) {
     text_to_copy.remove()
 }
 
-// unused right now
-function copy_whole_log(discord_output, id) {
-    let attrid = id
-    let container = document.querySelector("#copy-invis-content")
-    let input = document.createElement("input")
+function copy_whole_log() {
+    let container = document.querySelector("#results")
+    let discord_output_element = document.createElement("div")
 
-    for (i = 0; i < discord_output.length; i++) {
-        container.innerHTML = container.innerHTML
+    //discord_output_element.type = "textarea"
+    discord_output_element.id = "discord_output_id"
+    discord_output_element.className = "hiddeninput"
+    discord_output_element.style.position = 'fixed'
+    discord_output_element.style.pointerEvents = 'none'
+    discord_output_element.style.opacity = 0
+    discord_output_element.innerHTML = ""
+
+    paragraphs = document.getElementById("results").getElementsByTagName("p")
+    number_of_paragraphs = paragraphs.length
+
+    var discord_output = ""
+
+    for (i = 0; i < number_of_paragraphs; i++) {
+        discord_output = discord_output + paragraphs[i].innerHTML + "<br /><br />"
     }
-    //`"<p class="${id}>" + discord_output[i] + "</p>"`
-    input.type = "text"
-    input.id = attrid
-    input.className = "hiddeninput"
 
+    var activeSheets = Array.prototype.slice.call(document.styleSheets)
+        .filter(function (sheet) {
+            return !sheet.disabled
+        })
 
-    container.appendChild(input)
+    discord_output_element.innerHTML = discord_output
 
-    let text_to_copy = document.querySelector(`#${attrid}`)
+    document.body.appendChild(discord_output_element)
 
-    text_to_copy.select();
-    document.execCommand("copy")
+    window.getSelection().removeAllRanges()
 
-    text_to_copy.remove()
+    var range = document.createRange()
+    range.selectNode(discord_output_element)
+    window.getSelection().addRange(range)
+
+    document.execCommand('copy')
+
+    for (var i = 0; i < activeSheets.length; i++) activeSheets[i].disabled = true
+
+    document.execCommand('copy')
+
+    for (var i = 0; i < activeSheets.length; i++) activeSheets[i].disabled = false
 }
