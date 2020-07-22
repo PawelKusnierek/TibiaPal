@@ -15,13 +15,14 @@ function submit_form() {
             return false;
         }
     }
-    
+
     var mainContent = document.getElementById("main-content");
+    var resultsContent = document.getElementById("results");
     form = document.forms[0];
     analyser_data = form.analyserData.value.replace(" (Leader)", "");
     // TODO some data validation here
 
-    mainContent.innerHTML = mainContent.innerHTML + "<h3>Result:</h3>"
+    resultsContent.innerHTML = resultsContent.innerHTML + "<h3>Result:</h3>"
 
 
     // Parsing the data from the log to find out profit per person and the balance of each player
@@ -34,7 +35,7 @@ function submit_form() {
     who_to_pay_and_how_much = final_split(players_and_their_balance, profit_per_person, number_of_players);
 
     // Final update back to the site
-    update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person, mainContent);
+    update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person, resultsContent);
 }
 
 function find_total_profit(data) {
@@ -117,7 +118,7 @@ function final_split(players_and_their_balance, profit_per_person, number_of_pla
     return who_to_pay_and_how_much;
 }
 
-function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person, mainContent) {
+function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person, resultsContent) {
     output_array = [];
     var discord_output = [];
 
@@ -144,7 +145,7 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
     }
 
     for (let j = 0; j < output_array.length; j++) {
-        mainContent.innerHTML = mainContent.innerHTML + "<p>" + output_array[j] + "</p>"
+        resultsContent.innerHTML = resultsContent.innerHTML + "<p>" + output_array[j] + "</p>"
     }
 
     let profit = false;
@@ -168,15 +169,15 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
     }
 
     if (profit) {
-        mainContent.innerHTML = mainContent.innerHTML + "<p> Total profit: " + "<span id=\"profit_positive\">" + total_profit + "</span> which is: " + "<span id=\"profit_positive\">" + profit_per_person + "</span> for each player. </p >"
+        resultsContent.innerHTML = resultsContent.innerHTML + "<p> Total profit: " + "<span id=\"profit_positive\">" + total_profit + "</span> which is: " + "<span id=\"profit_positive\">" + profit_per_person + "</span> for each player. </p >"
         discord_output.push("Total profit: " + total_profit + " which is: " + profit_per_person + " for each player.")
     }
     else {
-        mainContent.innerHTML = mainContent.innerHTML + "<p> Total waste: " + "<span id=\"profit_negative\">" + total_profit + "</span> which is: " + "<span id=\"profit_negative\">" + profit_per_person + "</span> for each player. </p >"
+        resultsContent.innerHTML = resultsContent.innerHTML + "<p> Total waste: " + "<span id=\"profit_negative\">" + total_profit + "</span> which is: " + "<span id=\"profit_negative\">" + profit_per_person + "</span> for each player. </p >"
         discord_output.push("Total waste: " + total_profit + " which is: " + profit_per_person + " for each player.")
     }
 
-    //mainContent.innerHTML = mainContent.innerHTML + `<button type="button" onClick='copy_whole_log("${discord_output}", "${profit_per_person})';>Copy full output</button>`
+    //resultsContent.innerHTML = resultsContent.innerHTML + `<button type="button" onClick='copy_whole_log("${discord_output}", "${profit_per_person})';>Copy full output</button>`
 }
 
 function copy_to_clipboard(transferMsg, who_to_pay) {
