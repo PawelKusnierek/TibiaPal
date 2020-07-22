@@ -60,7 +60,17 @@ h3 {
 }
 
 p {
-    text-align: center;
+    display:inline-block;
+    margin: 8px;
+}
+
+.copy_button_div {
+    display:inline-block;
+    margin-left: 3px;
+}
+
+.block_element {
+    display: block;
 }
 
 ol {

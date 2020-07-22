@@ -1,15 +1,10 @@
 function submit_form() {
     //we remove any of the previous results 
-    paragraphs = document.getElementById("main-content").getElementsByTagName("p")
-    no_of_paragraphs = paragraphs.length
-    if (no_of_paragraphs > 0) {
+    results = document.getElementById("results")
+    if (results.childNodes.length > 0) {
         var r = confirm("This will remove the previous result. Continue?")
         if (r == true) {
-            for (i = no_of_paragraphs - 1; i >= 0; i--) {
-                paragraphs[i].remove();
-            }
-            h3_element = document.getElementById("main-content").getElementsByTagName("h3")
-            h3_element[0].remove();
+            results.innerHTML = "";
         }
         else {
             document.getElementById("myForm").reset();
@@ -121,7 +116,8 @@ function final_split(players_and_their_balance, profit_per_person, number_of_pla
 }
 
 function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person, resultsContent) {
-    output_array = [];
+    transfer_array = [];
+    copy_button_array = []
     var discord_output = [];
 
     for (let i = 0; i < who_to_pay_and_how_much.length; i++) {
@@ -134,20 +130,24 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
         if (amount != 0) {
             if (amount > 1000) {
                 amount = Math.round(amount / 1000)
-                transfer_message = `<b> ${payer_name} </b> to pay <b> ${amount}k </b> to <b>${payee_name} </b> (Bank: <b> transfer ${gp_amount} to ${payee_name}</b>) ${copy_button}`;
-                output_array.push(transfer_message);
+                transfer_message = `<b> ${payer_name} </b> to pay <b> ${amount}k </b> to <b>${payee_name} </b> (Bank: <b> transfer ${gp_amount} to ${payee_name}</b>)`;
+                transfer_array.push(transfer_message);
+                copy_button_array.push(`${copy_button}`)
                 discord_output.push(payer_name + ' to pay ' + amount + ' k to ' + payee_name + ' (Bank: transfer ' + gp_amount + ' to ' + payee_name)
             }
             else {
-                transfer_message = `<b> ${payer_name} </b> to pay <b> ${gp_amount} gp </b> to <b>${payee_name} </b> (Bank: <b> transfer  ${gp_amount} to ${payee_name} </b>) ${copy_button}`;
-                output_array.push(transfer_message);
+                transfer_message = `<b> ${payer_name} </b> to pay <b> ${gp_amount} gp </b> to <b>${payee_name} </b> (Bank: <b> transfer  ${gp_amount} to ${payee_name} </b>)`;
+                transfer_array.push(transfer_message);
+                copy_button_array.push(`${copy_button}`)
                 discord_output.push(payer_name + ' to pay ' + gp_amount + ' k to ' + payee_name + ' (Bank: transfer ' + gp_amount + ' to ' + payee_name)
             }
         }
     }
 
-    for (let j = 0; j < output_array.length; j++) {
-        resultsContent.innerHTML = resultsContent.innerHTML + "<p>" + output_array[j] + "</p>"
+    for (let j = 0; j < transfer_array.length; j++) {
+        resultsContent.innerHTML = resultsContent.innerHTML + "<p>" + transfer_array[j] + "</p>"
+        resultsContent.innerHTML = resultsContent.innerHTML + "<div class=\"copy_button_div\">" + copy_button_array[j] + "</div>"
+        resultsContent.innerHTML = resultsContent.innerHTML + "<div class=\"block_element\"></div>"
     }
 
     let profit = false;
