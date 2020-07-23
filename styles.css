@@ -170,6 +170,9 @@ a {
     #footer {
         display: none;
     }
+    #changelog-footer {
+        display: none;
+    }
     #main-content {
         flex-basis: 90%;
     }
