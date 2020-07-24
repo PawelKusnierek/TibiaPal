@@ -1,10 +1,29 @@
 function submit_form() {
     //we remove any of the previous results 
-    results = document.getElementById("results")
-    if (results.childNodes.length > 0) {
+    resultsContent = document.getElementById("results")
+    form = document.forms[0];
+
+    if (form.analyserData.value == "") {
+        window.alert("Analyser data cannot be empty")
+        document.getElementById("myForm").reset();
+        return false;
+    }
+
+    if (form.analyserData.value.length < 50 ||
+        !form.analyserData.value.includes("Balance") ||
+        !form.analyserData.value.includes("Supplies") ||
+        !form.analyserData.value.includes("Loot") ||
+        !form.analyserData.value.includes("Session data") ||
+        !form.analyserData.value.includes("Loot Type")) {
+        window.alert("Incorrect analyser data. Please copy the log and try again. \nIf you believe this is a mistake, please raise a bug report.")
+        document.getElementById("myForm").reset();
+        return false;
+    }
+
+    if (resultsContent.childNodes.length > 0) {
         var r = confirm("This will remove the previous result. Continue?")
         if (r == true) {
-            results.innerHTML = "";
+            resultsContent.innerHTML = "";
         }
         else {
             document.getElementById("myForm").reset();
@@ -12,9 +31,9 @@ function submit_form() {
         }
     }
 
+
+
     var mainContent = document.getElementById("main-content");
-    var resultsContent = document.getElementById("results");
-    form = document.forms[0];
     analyser_data = form.analyserData.value.replace(" (Leader)", "");
     // TODO some data validation here
 
