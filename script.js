@@ -163,6 +163,10 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
         }
     }
 
+    if (transfer_array.length > 8) {
+        document.getElementById("footer").style.display = "none"
+    }
+
     for (let j = 0; j < transfer_array.length; j++) {
         resultsContent.innerHTML = resultsContent.innerHTML + "<p>" + transfer_array[j] + "</p>"
         resultsContent.innerHTML = resultsContent.innerHTML + "<div class=\"copy_button_div\">" + copy_button_array[j] + "</div>"
