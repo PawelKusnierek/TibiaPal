@@ -7,7 +7,7 @@ All you need to do is 'Copy to clipboard' your 'Party Hunt' analyser, paste the 
 
 Technical background on how the tool uses the log to build the output (pseudocode):
 1. Look for the overall hunt balance
-2. Look for the number of players
+2. Count the number of players
 3. Work out the final resulting balance per player using 1. and 2.
 4. Find individiual balances (waste/profit) of each player
 5. Use a nested loop to work out how much of each players profit/waste needs to be deducted (if they profited more than the amount obtained in 3.) or how much they need to receive (if they profited less than the amount obtained in 3.). 
