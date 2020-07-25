@@ -13,7 +13,7 @@ Technical background on how the tool uses the log to build the output (pseudocod
 5. Use a nested loop to work out how much of each players profit/waste needs to be deducted (if they profited more than the amount obtained in 3.) or how much they need to receive (if they profited less than the amount obtained in 3.). 
 For example, if player 1's balance after teamhunt is +400k, but the value obtained in 3 is +300k (i.e. 300k profit per person) then in this point we work out that player 1 needs to send 100k of their loot to another player. 
 If player 2 in the above scenario had an overall balance of -50k, then we work out that he needs to receive 350k from another player (to end up with the 300k profit per person)
-6. Based on the values obtained in 5. for each player, run a loop to figure out which player should send money to which player
+6. Based on the values obtained above for each player, run a loop to work out the most efficient order for which player should send money (and how) to which other player
 7. Build the final HTML output
 
 
