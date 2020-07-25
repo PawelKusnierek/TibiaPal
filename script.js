@@ -1,5 +1,6 @@
 function submit_form() {
     //we remove any of the previous results 
+    extraExpensesDiv = document.getElementById("extra-expenses-div")
     resultsContent = document.getElementById("results")
     form = document.forms[0];
 
@@ -24,6 +25,7 @@ function submit_form() {
         var r = confirm("This will remove the previous result. Continue?")
         if (r == true) {
             resultsContent.innerHTML = "";
+            extraExpensesDiv.innerHTML = "";
         }
         else {
             document.getElementById("myForm").reset();
@@ -204,7 +206,18 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
         resultsContent.innerHTML = resultsContent.innerHTML + "<div class=\"block_element\"></div>"
     }
 
-    resultsContent.innerHTML = resultsContent.innerHTML + `<button type="button" onClick='copy_whole_log()';>Copy all to Discord!</button>`
+    resultsContent.innerHTML = resultsContent.innerHTML + `<button type="button" id="copy-all-button" onClick='copy_whole_log()';>Copy all to Discord!</button>`
+    resultsContent.style.border = "1px #0c0c0ce7 dotted"
+    resultsContent.style.borderRadius = "5px"
+    resultsContent.style.backgroundColor = "#272727e7"
+
+    var extraExpensesEl = document.createElement("div");
+    extraExpensesEl.setAttribute("class", "new-feature")
+    
+    extraExpensesEl.innerHTML = (`<span style="color:orange"><b>New Feature:</b></span> To add extra expenses to the results click <button type="button" id="extra-expenses-button" onClick='';>HERE.</button> <br/> <br/>For a guide on how-to use this feature, watch <u>this video</u>.`)
+    
+    
+    extraExpensesDiv.appendChild(extraExpensesEl)
 }
 
 function copy_to_clipboard(transferMsg, who_to_pay) {
