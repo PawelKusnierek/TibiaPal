@@ -36,21 +36,37 @@
         </div>
         <div id="main-content">
             <h1>TibiaLootSplit</h1>
-            <h4>How to use</h4>
-            <ol>
+            <div class="new-feature"><span style="color:orange"><b>New Feature:</b></span> You can now add additional
+                costs to cover expenses such as prey wildcards, boosts, imbues etc.</div>
+            <h4 id="howtouse">How to use</h4>
+            <ol id="instruction-list">
                 <li class="instructions-list">In your 'Party Hunt' analyser select 'Copy to Clipboard'</li>
                 <li class="instructions-list">Paste the values into the input field and click 'Submit'</li>
             </ol>
-            <img src="images/analyser.png" alt="Picture of 'Party Hunt' analsyer highlighting which button to click">
+            <img id="analyser_image" src="images/analyser.png"
+                alt="Picture of 'Party Hunt' analsyer highlighting which button to click">
             <form id="myForm">
                 <input type="text" id="analyserData" name="analyserData"
                     placeholder="Paste party hunt session log here..." autocomplete="off"><br>
                 <input type="submit" id="submitbutton" value="Submit" onclick="event.preventDefault(); submit_form()" />
                 <input type="button" onclick="location.href='https:/\/tibialootsplit.com';" value="Refresh page" />
             </form>
-            <div class="new-feature"><span style="color:orange"><b>New Feature:</b></span> You can now add additional costs to cover expenses such as prey wildcards, boosts, imbues etc.</div>
+
             <div id="results"></div>
             <div id="extra-expenses-div"></div>
+
+            <table id="extra-expense-table"style="width:100%">
+                <tr>
+                    <th>Player</th>
+                    <th>Extra TC expense</th>
+                    <th>Extra gold expense (in k)</th>
+                </tr>
+            </table>
+            <div id ="extra-container">
+                <input type="text" id="TCvalue" name="TCvalue" placeholder="Tibia Coin gold value" autocomplete="off">
+                <input type="submit" id="submitextrabutton" value="Recalculate" onclick="event.preventDefault(); calculate_extra_expenses_click()" />
+
+            </div>
         </div>
         <div id="right-sidebar"></div>
         <div id="footer">

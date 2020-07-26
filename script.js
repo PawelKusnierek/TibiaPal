@@ -1,9 +1,98 @@
 function submit_form() {
-    //we remove any of the previous results 
+    valid_data = validate_analyser_data()
+    if (!valid_data) {
+        return false;
+    }
+
+    //we remove the previous results 
     extraExpensesDiv = document.getElementById("extra-expenses-div")
     resultsContent = document.getElementById("results")
-    form = document.forms[0];
+    if (resultsContent.childNodes.length > 0) {
+        var r = confirm("This will remove the previous result. Continue?")
+        if (r == true) {
+            resultsContent.innerHTML = "";
+            extraExpensesDiv.innerHTML = "";
+        }
+        else {
+            document.getElementById("myForm").reset();
+            return false;
+        }
+    }
 
+    //getting the raw analyser data
+    analyser_data = form.analyserData.value.replace(" (Leader)", "");
+
+    // Parsing the data from the log to find out profit per person and the balance of each player
+    total_profit = find_total_profit(analyser_data);
+    number_of_players = find_total_number_of_players(analyser_data);
+    profit_per_person = total_profit / number_of_players;
+    players_and_their_balance = find_players_and_balance(analyser_data, number_of_players);
+
+    // Main logic part - works very well even if looks confusing, advise againt touching....
+    who_to_pay_and_how_much = final_split(players_and_their_balance, profit_per_person, number_of_players);
+
+    // Final update back to the site
+    update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person, resultsContent);
+    document.getElementById("myForm").reset();
+}
+
+function extra_expenses_click() {
+    remove_html_before_extra_expenses();
+    document.getElementById("extra-container").style.display = "block";
+    document.getElementById("extra-expense-table").style.display = "initial";
+
+    for (i = 0; i < players_and_their_balance.length; i++) {
+        player_name = players_and_their_balance[i].name
+        var tableRef = document.getElementById('extra-expense-table').getElementsByTagName('tbody')[0];
+        var newRow = tableRef.insertRow();
+
+        var thirdCell = newRow.insertCell(0);
+        var thirdCellTextBox = document.createElement("input");
+        thirdCellTextBox.type = "text";
+        thirdCellTextBox.name = "Text1";
+        thirdCellTextBox.id = "goldExpense" + i
+        thirdCell.appendChild(thirdCellTextBox);
+        var secondCell = newRow.insertCell(0);
+        var secondCellTextBox = document.createElement("input");
+        secondCellTextBox.type = "text";
+        secondCellTextBox.name = "Text1";
+        secondCellTextBox.id = "TCexpense" + i
+        secondCell.appendChild(secondCellTextBox);
+        var firstCell = newRow.insertCell(0);
+        var firstCellText = document.createTextNode(player_name);
+        firstCell.id = i
+        firstCell.appendChild(firstCellText);
+    }
+}
+
+function calculate_extra_expenses_click() {
+    tibia_coin_value = document.getElementById("TCvalue").value
+    var tableRef = document.getElementById('extra-expense-table').getElementsByTagName('tbody')[0];
+    for (i = 1; i < tableRef.children.length; i++) {
+        player_name = tableRef.children[i].cells[0].innerHTML
+        player_extra_tc = tableRef.children[i].cells[1].firstChild.value
+        player_extra_gold = tableRef.children[i].cells[2].firstChild.value
+        player_extra_expense = (player_extra_tc * tibia_coin_value) + (player_extra_gold * 1000)
+        total_profit = total_profit - player_extra_expense
+        players_and_their_balance[i - 1].balance = parseInt(players_and_their_balance[i - 1].balance) - player_extra_expense
+    }
+
+    // re-calculating the payout based on updated figured
+    profit_per_person = total_profit / number_of_players;
+    who_to_pay_and_how_much = final_split(players_and_their_balance, profit_per_person, number_of_players);
+    
+    // Final update back to the site
+    var results = document.createElement("div");
+    results.setAttribute("id", "results")
+    main_content.appendChild(results)
+    
+    update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person, resultsContent);
+    remove_old_html();
+}
+
+// function to verify the integrity of the entered data
+function validate_analyser_data() {
+    form = document.forms[0];
     if (form.analyserData.value == "") {
         window.alert("Analyser data cannot be empty")
         document.getElementById("myForm").reset();
@@ -21,39 +110,7 @@ function submit_form() {
         return false;
     }
 
-    if (resultsContent.childNodes.length > 0) {
-        var r = confirm("This will remove the previous result. Continue?")
-        if (r == true) {
-            resultsContent.innerHTML = "";
-            extraExpensesDiv.innerHTML = "";
-        }
-        else {
-            document.getElementById("myForm").reset();
-            return false;
-        }
-    }
-
-
-
-    var mainContent = document.getElementById("main-content");
-    analyser_data = form.analyserData.value.replace(" (Leader)", "");
-    // TODO some data validation here
-
-    resultsContent.innerHTML = resultsContent.innerHTML + "<h3>Results:</h3>"
-
-
-    // Parsing the data from the log to find out profit per person and the balance of each player
-    total_profit = find_total_profit(analyser_data);
-    number_of_players = find_total_number_of_players(analyser_data);
-    profit_per_person = total_profit / number_of_players;
-    players_and_their_balance = find_players_and_balance(analyser_data, number_of_players);
-
-    // Main logic part - works very well even if doesn't look great, advise againt touching....
-    who_to_pay_and_how_much = final_split(players_and_their_balance, profit_per_person, number_of_players);
-
-    // Final update back to the site
-    update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person, resultsContent);
-    document.getElementById("myForm").reset();
+    return true;
 }
 
 function find_total_profit(data) {
@@ -140,6 +197,7 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
     transfer_array = [];
     copy_button_array = []
     var discord_output = [];
+    resultsContent = document.getElementById("results")
 
     for (let i = 0; i < who_to_pay_and_how_much.length; i++) {
         var amount = who_to_pay_and_how_much[i]['amount']
@@ -168,6 +226,8 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
     if (transfer_array.length > 8) {
         document.getElementById("footer").style.display = "none"
     }
+
+    resultsContent.innerHTML = resultsContent.innerHTML + "<h3>Results:</h3>"
 
     for (let j = 0; j < transfer_array.length; j++) {
         resultsContent.innerHTML = resultsContent.innerHTML + "<p>" + transfer_array[j] + "</p>"
@@ -213,10 +273,10 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
 
     var extraExpensesEl = document.createElement("div");
     extraExpensesEl.setAttribute("class", "new-feature")
-    
-    extraExpensesEl.innerHTML = (`<span style="color:orange"><b>New Feature:</b></span> To add extra expenses to the results click <button type="button" id="extra-expenses-button" onClick='';>HERE.</button> <br/> <br/>For a guide on how-to use this feature, watch <u>this video</u>.`)
-    
-    
+
+    extraExpensesEl.innerHTML = (`<span style="color:orange"><b>New Feature:</b></span> To add extra expenses to the results click <button type="button" id="extra-expenses-button" onClick='extra_expenses_click()';>HERE.</button> <br/> <br/>For a guide on how-to use this feature, watch <a href="https://www.youtube.com/watch?v=e3f9eJOFym4" target="_blank"><b>this video</b></a>.`)
+
+
     extraExpensesDiv.appendChild(extraExpensesEl)
 }
 
@@ -282,4 +342,41 @@ function copy_whole_log() {
     document.execCommand('copy')
 
     for (var i = 0; i < activeSheets.length; i++) activeSheets[i].disabled = false
+}
+
+function remove_html_before_extra_expenses() {
+    main_content = document.getElementById("main-content")
+
+    extraExpensesDiv = document.getElementById("extra-expenses-div")
+    extraExpensesDiv.innerHTML = ""
+
+    resultsContent = document.getElementById("results")
+    main_content.removeChild(resultsContent)
+
+    form = document.getElementById("myForm")
+    form.innerHTML = ""
+
+    image = document.getElementById("analyser_image")
+    main_content.removeChild(image)
+
+    list = document.getElementById("instruction-list")
+    list.innerHTML = ""
+
+    howtouse = document.getElementById("howtouse")
+    howtouse.innerHTML = ""
+
+    newFeature = document.getElementsByClassName("new-feature")
+    for (i = 0; i < newFeature.length; i++) {
+        main_content.removeChild(newFeature[i])
+    }
+}
+
+function remove_old_html() {
+    main_content = document.getElementById("main-content")
+    extraExpensesDiv = document.getElementById("extra-expenses-div")
+    extraExpensesDiv.innerHTML = ""
+    extraExpensesTable = document.getElementById("extra-expense-table")
+    main_content.removeChild(extraExpensesTable)
+    extraContainer = document.getElementById("extra-container")
+    main_content.removeChild(extraContainer)
 }
