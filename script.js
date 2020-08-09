@@ -23,10 +23,11 @@ function submit_form() {
     analyser_data = form.analyserData.value.replace(" (Leader)", "");
 
     // Parsing the data from the log to find out profit per person and the balance of each player
-    total_profit = find_total_profit(analyser_data);
+    remove_first_section(analyser_data);
     number_of_players = find_total_number_of_players(analyser_data);
-    profit_per_person = total_profit / number_of_players;
     players_and_their_balance = find_players_and_balance(analyser_data, number_of_players);
+    total_profit = find_total_profit(players_and_their_balance);
+    profit_per_person = total_profit / number_of_players;
 
     // Main logic part - works very well even if looks confusing, advise againt touching....
     who_to_pay_and_how_much = final_split(players_and_their_balance, profit_per_person, number_of_players);
@@ -113,14 +114,21 @@ function validate_analyser_data() {
     return true;
 }
 
-function find_total_profit(data) {
+function remove_first_section(data) {
     index = data.indexOf("Balance: ");
     substring1 = data.substring(index + 9);
     index2 = substring1.indexOf(" ");
     substring2 = substring1.substring(0, index2);
     substring2 = substring2.split(",").join("");
     analyser_data = substring1.substring(substring2.length + 2)
-    return substring2;
+}
+
+function find_total_profit(players_and_their_balance) {
+    let total_balance = 0
+    for (i = 0; i < players_and_their_balance.length; i ++) {
+        total_balance = total_balance + parseInt(players_and_their_balance[i]['balance'])
+    }
+    return total_balance;
 }
 
 function find_total_number_of_players(data) {
