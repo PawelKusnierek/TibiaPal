@@ -380,3 +380,8 @@ function remove_old_html() {
     extraContainer = document.getElementById("extra-container")
     main_content.removeChild(extraContainer)
 }
+
+
+exports._test = {
+    find_total_profit: find_total_profit,
+}
