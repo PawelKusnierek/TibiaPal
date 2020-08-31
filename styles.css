@@ -179,6 +179,15 @@ a {
     }
 }
 
+@media only screen and (max-height: 800px) {
+    #footer {
+        display: none;
+    }
+    #changelog-footer {
+        display: none;
+    }
+}
+
 .hiddeninput {
     opacity: 0;
     position: absolute;
