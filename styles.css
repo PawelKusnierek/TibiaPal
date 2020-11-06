@@ -253,20 +253,3 @@ td {
 #results {
     margin-top: 20px;
 }
-
-.donate_par {
-    position: absolute;
-    display: block;
-    bottom: 105px;
-    margin: 0px;
-    padding: 0px;
-    left:10%;
-    right:10%;
-}
-
-.donate_form {
-    left:10%;
-    right:10%;
-    position: absolute;
-    bottom: 45px;
-}
