@@ -14,10 +14,6 @@ html, body {
     margin: 0;
 }
 
-figure {
-    margin: 0;
-}
-
 #changelog-body {
     text-align: left;
 }
@@ -68,7 +64,6 @@ h1 {
     margin: 0px;
     padding: 0px;
     text-align: center;
-    font-size: 28px;
 }
 
 h4 {
@@ -255,8 +250,4 @@ td {
 
 #results {
     margin-top: 20px;
-}
-
-.orange {
-    color: orange
 }
