@@ -282,7 +282,7 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
     var extraExpensesEl = document.createElement("div");
     extraExpensesEl.setAttribute("class", "new-feature")
 
-    extraExpensesEl.innerHTML = (`<span style="color:orange"><b>New Feature:</b></span> To add extra expenses to the results click <button type="button" id="extra-expenses-button" onClick='extra_expenses_click()';>HERE.</button> <br/> <br/>For a guide on how-to use this feature, watch <a href="https://www.youtube.com/watch?v=e3f9eJOFym4" target="_blank"><b>this video</b></a>.`)
+    extraExpensesEl.innerHTML = (`<span style="color:orange"><b>Feature:</b></span> To add extra expenses to the results click <button type="button" id="extra-expenses-button" onClick='extra_expenses_click()';>HERE.</button> <br/> <br/>For a guide on how-to use this feature, watch <a href="https://www.youtube.com/watch?v=e3f9eJOFym4" target="_blank"><b>this video</b></a>.`)
 
 
     extraExpensesDiv.appendChild(extraExpensesEl)
@@ -387,9 +387,4 @@ function remove_old_html() {
     main_content.removeChild(extraExpensesTable)
     extraContainer = document.getElementById("extra-container")
     main_content.removeChild(extraContainer)
-}
-
-
-exports._test = {
-    find_total_profit: find_total_profit,
 }

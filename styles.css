@@ -67,6 +67,7 @@ h1 {
 }
 
 h4 {
+    margin-top: 5px;
     margin-bottom: 0px;
     padding-bottom: 10px;
 }
@@ -228,9 +229,6 @@ a {
     text-decoration: underline;
     padding: 0;
     margin: 0;
-}
-
-#TCvalue {
 }
 
 table {
