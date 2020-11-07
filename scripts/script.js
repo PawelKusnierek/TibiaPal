@@ -8,8 +8,8 @@ function submit_form() {
     extraExpensesDiv = document.getElementById("extra-expenses-div")
     resultsContent = document.getElementById("results")
     if (resultsContent.childNodes.length > 0) {
-        var r = confirm("This will remove the previous result. Continue?")
-        if (r == true) {
+        var response = confirm("This will remove the previous result. Continue?")
+        if (response == true) {
             resultsContent.innerHTML = "";
             extraExpensesDiv.innerHTML = "";
         }
@@ -81,12 +81,12 @@ function calculate_extra_expenses_click() {
     // re-calculating the payout based on updated figured
     profit_per_person = total_profit / number_of_players;
     who_to_pay_and_how_much = final_split(players_and_their_balance, profit_per_person, number_of_players);
-    
+
     // Final update back to the site
     var results = document.createElement("div");
     results.setAttribute("id", "results")
     main_content.appendChild(results)
-    
+
     update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person, resultsContent);
     remove_old_html();
 }
@@ -125,7 +125,7 @@ function remove_first_section(data) {
 
 function find_total_profit(players_and_their_balance) {
     let total_balance = 0
-    for (i = 0; i < players_and_their_balance.length; i ++) {
+    for (i = 0; i < players_and_their_balance.length; i++) {
         total_balance = total_balance + parseInt(players_and_their_balance[i]['balance'])
     }
     return total_balance;

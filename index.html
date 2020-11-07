@@ -30,35 +30,35 @@
         gtag('js', new Date());
         gtag('config', 'UA-164338286-1');
     </script>
-    <meta name="propeller" content="66ceac52b03a1851730e6f3cbbdde44e">
 </head>
 
 <body>
-    <div id="page-container">
-        <div id="left-sidebar"></div>
-        <div id="main-content">
+    <main id="page-container">
+        <aside id="left-sidebar"></aside>
+        <section id="main-content">
             <h1>TibiaLootSplit</h1>
-            <div class="new-feature"><span style="color:orange"><b>New Feature:</b></span> You can add extra expenses such
-                as prey wildcards, boosts etc.<br>
-                For a guide on this feature, please watch <a href="https://www.youtube.com/watch?v=e3f9eJOFym4"
-                    target="_blank"><b>this video</b></a>.</div>
+            <section class="new-feature"><span class="orange"><b>New Feature:</b></span>
+                You can add extra expenses such as prey wildcards, boosts etc.<br>
+                For a guide on this feature, please watch
+                <a href="https://www.youtube.com/watch?v=e3f9eJOFym4" target="_blank"><b>this video</b></a>.
+            </section>
             <h4 id="howtouse">How to use TibiaLootSplit:</h4>
             <ol id="instruction-list">
                 <li class="instructions-list">In your 'Party Hunt' analyser select 'Copy to Clipboard'</li>
                 <li class="instructions-list">Paste the values into the input field and click 'Submit'</li>
             </ol>
-            <img id="analyser_image" src="images/analyser.png"
-                alt="Picture of 'Party Hunt' analsyer highlighting which button to click">
+            <figure>
+                <img id="analyser_image" src="images/analyser.png"
+                    alt="Picture of 'Party Hunt' analsyer highlighting which button to click">
+            </figure>
             <form id="myForm">
                 <input type="text" id="analyserData" name="analyserData"
                     placeholder="Paste party hunt session log here..." autocomplete="off"><br>
                 <input type="submit" id="submitbutton" value="Submit" onclick="event.preventDefault(); submit_form()" />
                 <input type="button" onclick="location.href='https:/\/tibialootsplit.com';" value="Refresh page" />
             </form>
-
-            <div id="results"></div>
-            <div id="extra-expenses-div"></div>
-
+            <section id="results"></section>
+            <section id="extra-expenses-div"></section>
             <table id="extra-expense-table" style="width:100%">
                 <tr>
                     <th>Player</th>
@@ -66,21 +66,22 @@
                     <th>Extra gold expense (in k)</th>
                 </tr>
             </table>
-            <div id="extra-container">
+            <section id="extra-container">
                 <input type="text" id="TCvalue" name="TCvalue" placeholder="Tibia Coin gold value" autocomplete="off">
                 <input type="submit" id="submitextrabutton" value="Recalculate"
                     onclick="event.preventDefault(); calculate_extra_expenses_click()" />
+            </section>
+        </section>
+        <aside id="right-sidebar">
 
-            </div>
-        </div>
-        <div id="right-sidebar"></div>
-        <div id="footer">
+        </aside>
+        <footer id="footer">
             <p id="contactParagraph">
-                The project source code, contact details and changelog can be found on <a
-                    href="https://github.com/PawelKusnierek/TibiaLootSplit" target="_blank">GitHub</a>.<br>Created by
-                Kusnier.</p> <br>
-        </div>
-    </div>
+                The project source code, contact details and changelog can be found on
+                <a href="https://github.com/PawelKusnierek/TibiaLootSplit" target="_blank">GitHub</a>.<br>
+                Created by Kusnier.</p> <br>
+        </footer>
+    </main>
 </body>
 
 </html>
