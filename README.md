@@ -1,5 +1,4 @@
 # TibiaLootSplit
-Link:
 https://tibialootsplit.com/
 
 ## About the project:
