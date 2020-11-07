@@ -29,7 +29,15 @@ Pure HTML, CSS and JS
 
 ## Changelog
 
-9th August 2020
+### 6th November 2020
+
+Efforts to turn the page into an SPA by moving certain content off the page to GitHub, and the rest back to the home page
+
+Removing the navbar
+
+Moving links to the 'how to videos'
+
+### 9th August 2020
 
 Fixed an issue where the tool would get stuck in an infinite loop if a player was manually removed from the log. You can now remove players from the log to disregard their balance and not share loot with them.
 
