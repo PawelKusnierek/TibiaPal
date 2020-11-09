@@ -159,7 +159,8 @@ ol, ul {
 }
 
 a {
-    color: rgb(157, 151, 173)
+    color: rgba(157, 151, 173, 0.747);
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -215,9 +216,9 @@ a {
     padding: 2px;
 }
 
-.new-feature {
-    padding-top: 20px;
-    padding-bottom: 20px;
+.top-section {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 #copy-all-button {
@@ -259,4 +260,8 @@ td {
 
 .orange {
     color: orange
+}
+
+.support-color {
+    color: #6f7a81
 }
