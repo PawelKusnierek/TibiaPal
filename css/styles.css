@@ -78,17 +78,29 @@ td {
 /* CSS FOR LEFT NAVBAR */
 
 #header {
-    flex-basis: 100%;
+    flex-basis: 15%;
     text-align: left;
-    padding-top: 20px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+
 }
 
 .logo {
     font-family: 'Acme', sans-serif;
     font-size: 40px;
     margin-left: 20px;
+    flex-basis: 15%;
 }
+
+#banner {
+    flex-basis: 70%;
+}
+
+#right-header {
+    flex-basis: 15%;
+}
+
 
 #left-sidebar {
     flex-basis: 15%;
