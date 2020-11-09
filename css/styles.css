@@ -22,7 +22,7 @@ h1 {
     margin: 0px;
     padding: 0px;
     text-align: center;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 h2 {
@@ -73,30 +73,31 @@ td {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    align-content: center;
 }
 
 /* CSS FOR LEFT NAVBAR */
 
+#header {
+    flex-basis: 100%;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+.logo {
+    font-family: 'Acme', sans-serif;
+    font-size: 40px;
+    margin-left: 20px;
+}
+
 #left-sidebar {
     flex-basis: 15%;
-    text-align: center;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
     align-content: center;
-}
-
-.logo {
-    font-family: 'Acme', sans-serif;
-    margin-top: 10px;
-    padding: 0px;
-    text-align: center;
-    font-size: 40px;
 }
 
 .nav-item {
@@ -106,10 +107,8 @@ td {
     font-size: 24px;
 }
 
-.active {}
-
-.nav-first-item {
-    margin-top: 20px;
+.active {
+    width: 100%;
 }
 
 #left-sidebar a {
@@ -276,4 +275,5 @@ ol, ul {
 
 #results {
     margin-top: 20px;
+    margin-bottom: 20px;
 }
