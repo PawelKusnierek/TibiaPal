@@ -1,3 +1,11 @@
+/* COLORS */
+
+.orange {
+    color: orange
+}
+
+/* GENERAL ELEMENTS */
+
 body {
     font-family: 'Helvetica', sans-serif;
     font-size: 14px;
@@ -9,35 +17,99 @@ body {
     opacity: 75%;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
+h1 {
+    font-family: 'Acme', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-size: 28px;
 }
 
-figure {
-    margin: 0;
+h2 {
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
-#changelog-body {
-    text-align: left;
+h3 {
+    margin-top: 10px;
 }
+
+h4 {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+}
+
+p {
+    display: inline-block;
+    margin: 8px;
+}
+
+a {
+    color: rgba(157, 151, 173, 0.747);
+    text-decoration: underline;
+}
+
+table {
+    display: none;
+}
+
+th {
+    width: 33%;
+}
+
+td {
+    color: white;
+}
+
+/* MAIN CONTAINER CSS */
 
 #page-container {
-    width: 100%;
+    max-width: 1600px;
     height: 100%;
-    margin: 0px;
+    margin: auto;
     padding: 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: stretch;
+    align-content: center;
 }
 
+/* CSS FOR LEFT NAVBAR */
+
 #left-sidebar {
-    padding-top: 20px;
     flex-basis: 15%;
-    text-align: left;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.logo {
+    font-family: 'Acme', sans-serif;
+    margin-top: 10px;
+    padding: 0px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.nav-item {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-size: 24px;
+}
+
+.active {}
+
+.nav-first-item {
+    margin-top: 20px;
 }
 
 #left-sidebar a {
@@ -45,9 +117,10 @@ figure {
     padding: 10px 10px 5px 25px;
     color: #FFFFFF;
     text-decoration: none;
-    /* no underline */
     font-size: 16px;
 }
+
+/* CSS FOR MAIN CONTENT */
 
 #main-content {
     flex-basis: 70%;
@@ -61,35 +134,6 @@ figure {
 
 #submitbutton {
     margin-top: 10px;
-}
-
-h1 {
-    font-family: 'Acme', sans-serif;
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-    font-size: 28px;
-}
-
-h4 {
-    font-size: 16px;
-    margin-top: 15px;
-    margin-bottom: 0px;
-    padding-bottom: 10px;
-}
-
-h3 {
-    margin-top: 10px;
-}
-
-h2 {
-    padding-top: 10px;
-    padding-bottom: 20px;
-}
-
-p {
-    display: inline-block;
-    margin: 8px;
 }
 
 .copy_button_div {
@@ -127,21 +171,18 @@ ol, ul {
     color: green;
 }
 
+/* CSS FOR RIGHT NAVBAR/SIDEBAR */
+
 #right-sidebar {
+    height: 100%;
     flex-basis: 15%;
+    background-color: red;
 }
+
+/* CSS FOR FOOTER */
 
 #footer {
-    height: 10%;
-    flex-basis: 100%;
     align-items: center;
-}
-
-#changelog-footer {
-    height: 10%;
-    flex-basis: 100%;
-    align-items: center;
-    text-align: center;
 }
 
 #contactParagraph {
@@ -149,20 +190,10 @@ ol, ul {
     bottom: 0px;
     left: 15%;
     right: 15%;
+    margin: 0px;
 }
 
-#contactParagraphChange {
-    padding-top: 50px;
-    text-align: center;
-    bottom: 0px;
-    left: 15%;
-    right: 15%;
-}
-
-a {
-    color: rgba(157, 151, 173, 0.747);
-    text-decoration: underline;
-}
+/* CSS MEDIA */
 
 @media only screen and (max-width: 1000px) {
     body {
@@ -238,18 +269,6 @@ a {
     margin: 0;
 }
 
-table {
-    display: none;
-}
-
-th {
-    width: 33%;
-}
-
-td {
-    color: white;
-}
-
 #extra-container {
     padding-top: 50px;
     display: none;
@@ -257,12 +276,4 @@ td {
 
 #results {
     margin-top: 20px;
-}
-
-.orange {
-    color: orange
-}
-
-.support-color {
-    color: #6f7a81
 }
