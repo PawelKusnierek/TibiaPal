@@ -79,24 +79,23 @@ td {
 
 #header {
     flex-basis: 14.9%;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: min(25px,1%);
+    padding-bottom: min(25px,1%);
     order: 1;
     font-family: 'Acme', sans-serif;
     font-size: 40px;
+    filter: brightness(100%);
+    margin-left: 5%;
 }
 
 #right-header {
     flex-basis: 15%;
     order: 3;
-}
-
-.logo {
-
+    margin-right: 5%;
 }
 
 #banner {
-    flex-basis: 70%;
+    flex-basis: 60%;
     order: 2;
 }
 
@@ -109,6 +108,7 @@ td {
     align-items: center;
     align-content: center;
     order: 4;
+    margin-left: 5%;
 }
 
 .nav-item {
@@ -154,7 +154,7 @@ td {
 /* CSS FOR MAIN CONTENT */
 
 #main-content {
-    flex-basis: 70%;
+    flex-basis: 60%;
     height: 90%;
     order: 5;
 
@@ -214,6 +214,7 @@ ol, ul {
     flex-wrap: nowrap;
     justify-content: flex-start;
     order: 6;
+    margin-right: 5%;
 }
 
 .right-sidebar-item {
