@@ -128,6 +128,12 @@ td {
     transition: 0.5s;
 }
 
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
 .nav-item:hover {
     background-color: #7a7a7a;
     color: white;
@@ -141,14 +147,6 @@ td {
     border-right: 2px solid #383838;
     border-bottom: 2px solid #474747;
     border-left: 2px solid #505050;
-}
-
-#left-sidebar a {
-    display: block;
-    margin: 10px 10px 5px 25px;
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 16px;
 }
 
 /* CSS FOR MAIN CONTENT */
