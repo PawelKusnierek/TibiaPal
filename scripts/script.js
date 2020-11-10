@@ -275,9 +275,9 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
     }
 
     resultsContent.innerHTML = resultsContent.innerHTML + `<button type="button" id="copy-all-button" onClick='copy_whole_log()';>Copy all to Discord!</button>`
-    resultsContent.style.border = "1px #0c0c0ce7 dotted"
-    resultsContent.style.borderRadius = "5px"
-    resultsContent.style.backgroundColor = "#272727e7"
+    //resultsContent.style.border = "1px #0c0c0ce7 dotted"
+    //resultsContent.style.borderRadius = "5px"
+    //resultsContent.style.backgroundColor = "#272727e7"
 
     var extraExpensesEl = document.createElement("div");
     extraExpensesEl.setAttribute("class", "new-feature")
