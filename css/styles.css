@@ -35,8 +35,8 @@ h3 {
 }
 
 h4 {
-    font-size: 16px;
-    margin-top: 15px;
+    font-size: 18px;
+    margin-top: 0px;
     margin-bottom: 0px;
     padding-bottom: 10px;
 }
@@ -78,12 +78,9 @@ td {
 /* CSS FOR LEFT NAVBAR */
 
 #header {
-    flex-basis: 15%;
-    text-align: left;
-    padding-top: 40px;
-    padding-bottom: 40px;
-
-
+    flex-basis: 14%;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .logo {
@@ -94,16 +91,15 @@ td {
 }
 
 #banner {
-    flex-basis: 70%;
+    flex-basis: 68%;
 }
 
 #right-header {
-    flex-basis: 15%;
+    flex-basis: 14%;
 }
 
-
 #left-sidebar {
-    flex-basis: 15%;
+    flex-basis: 14%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -114,13 +110,34 @@ td {
 
 .nav-item {
     width: 100%;
+    margin-bottom: 4px;
     padding-top: 10px;
-    padding-bottom: 5px;
-    font-size: 24px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-family: Calibri;
+    font-weight: 400;
+    border-top: 1px solid #505050;
+    border-right: 1px solid #383838;
+    border-bottom: 1px solid #474747;
+    border-left: 1px solid #505050;
+    border-radius: 5px;
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+.nav-item:hover {
+    background-color: #7a7a7a;
+    color: white;
 }
 
 .active {
     width: 100%;
+    color: #FFFFFF;
+    background-color: #9b9b9b3d;
+    border: 2px solid #505050;
+    border-right: 2px solid #383838;
+    border-bottom: 2px solid #474747;
+    border-left: 2px solid #505050;
 }
 
 #left-sidebar a {
@@ -134,7 +151,7 @@ td {
 /* CSS FOR MAIN CONTENT */
 
 #main-content {
-    flex-basis: 70%;
+    flex-basis: 68%;
     height: 90%;
 }
 
@@ -186,8 +203,15 @@ ol, ul {
 
 #right-sidebar {
     height: 100%;
-    flex-basis: 15%;
-    background-color: red;
+    flex-basis: 14%;
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.right-sidebar-item {
+    padding: 15px 0 15px 0;
 }
 
 /* CSS FOR FOOTER */
@@ -205,38 +229,6 @@ ol, ul {
 }
 
 /* CSS MEDIA */
-
-@media only screen and (max-width: 1000px) {
-    body {
-        font-family: 'Helvetica', sans-serif;
-        font-size: 1.8rem;
-        text-align: center;
-    }
-    #left-sidebar {
-        display: none;
-    }
-    #right-sidebar {
-        display: none;
-    }
-    #footer {
-        display: none;
-    }
-    #changelog-footer {
-        display: none;
-    }
-    #main-content {
-        flex-basis: 90%;
-    }
-}
-
-@media only screen and (max-height: 800px) {
-    #footer {
-        display: none;
-    }
-    #changelog-footer {
-        display: none;
-    }
-}
 
 .hiddeninput {
     opacity: 0;
