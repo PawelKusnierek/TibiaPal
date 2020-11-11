@@ -349,3 +349,13 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 .vscode/launch.json
+sass/_colors.sass
+sass/_general.sass
+sass/_maincontainers.sass
+sass/_tibialootsplit.sass
+sass/_variables.sass
+sass/colors.css
+sass/colors.css.map
+sass/styles.css
+sass/styles.css.map
+sass/styles.sass
