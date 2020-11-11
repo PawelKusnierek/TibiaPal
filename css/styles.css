@@ -1,3 +1,7 @@
+html {
+  min-width: 570px;
+}
+
 body {
   font-family: "Helvetica", sans-serif;
   font-size: 14px;
@@ -229,8 +233,6 @@ ol, ul {
 
 #footerParagraph {
   width: 100%;
-  left: 45%;
-  right: 15%;
   margin: 0px;
   font-size: 14px;
 }
@@ -309,5 +311,29 @@ ol, ul {
 #results {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  #header {
+    display: none;
+  }
+  #banner {
+    display: none;
+  }
+  #right-header {
+    display: none;
+  }
+  #right-sidebar {
+    display: none;
+  }
+  #left-footer-space {
+    display: none;
+  }
+  #footer {
+    display: none;
+  }
+  #right-footer-space {
+    display: none;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
