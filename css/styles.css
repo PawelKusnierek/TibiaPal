@@ -12,9 +12,12 @@ body {
     text-align: center;
     margin: 0px;
     padding: 0px;
-    background-color: #121212e7;
+    background-color: #061021;
     color: #FFFFFF;
-    opacity: 75%;
+    background-image: url(../images/Background_Artwork.webp);
+    background-repeat: no-repeat;
+    background-size: 1600px 800px; 
+    background-position: top; 
 }
 
 h1 {
@@ -79,8 +82,8 @@ td {
 
 #header {
     flex-basis: 14.9%;
-    padding-top: min(25px,1%);
-    padding-bottom: min(25px,1%);
+    padding-top: min(50px,3%);
+    padding-bottom: min(50px,3%);
     order: 1;
     font-family: 'Acme', sans-serif;
     font-size: 40px;
@@ -113,19 +116,14 @@ td {
 
 .nav-item {
     width: 100%;
-    margin-bottom: 3px;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 20px;
+    font-size: 22px;
     font-family: Calibri;
     font-weight: 400;
-    border-top: 1px solid #505050;
-    border-right: 1px solid #383838;
-    border-bottom: 1px solid #474747;
-    border-left: 1px solid #505050;
-    border-radius: 5px;
-    opacity: 100%;
     transition: 0s;
+    background-color: #061021e8;
+    border-radius: 1px;
 }
 
 .nav-item a {
@@ -135,27 +133,26 @@ td {
 }
 
 .nav-item:hover {
-    background-color: #7a7a7a;
+    background-color: #0f2344e8;
     color: white;
 }
 
 .active {
     width: 100%;
     color: #FFFFFF;
-    background-color: #9b9b9b3d;
-    border: 2px solid #505050;
-    border-right: 2px solid #383838;
-    border-bottom: 2px solid #474747;
-    border-left: 2px solid #505050;
+    background-color: #0f2344e8;
 }
 
 /* CSS FOR MAIN CONTENT */
 
 #main-content {
-    flex-basis: 60%;
+    flex-basis: 50%;
     height: 90%;
     order: 5;
-
+    background-color: #061021f5;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 5px;
 }
 
 #analyserData {
