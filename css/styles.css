@@ -140,7 +140,6 @@ ol, ul {
   -webkit-transition: 0s;
   transition: 0s;
   background-color: #061021e8;
-  border-radius: 1px;
 }
 
 .nav-item a {
@@ -170,7 +169,6 @@ ol, ul {
   background-color: #061021e8;
   margin-left: 5%;
   margin-right: 5%;
-  border-radius: 5px;
   padding-bottom: 25px;
 }
 
@@ -322,6 +320,14 @@ ol, ul {
   }
   #right-header {
     display: none;
+  }
+  #left-sidebar {
+    margin: 0;
+    padding: 0;
+  }
+  #main-content {
+    margin: 0;
+    padding: 0;
   }
   #right-sidebar {
     display: none;
