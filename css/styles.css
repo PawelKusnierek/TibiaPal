@@ -30,6 +30,7 @@ h4 {
 p {
   display: inline-block;
   margin: 8px;
+  overflow-wrap: break-word;
 }
 
 a {
@@ -136,7 +137,6 @@ ol, ul {
   padding-bottom: 10px;
   font-size: 16px;
   font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 400;
   -webkit-transition: 0s;
   transition: 0s;
   background-color: #061021e8;
@@ -169,7 +169,6 @@ ol, ul {
   background-color: #061021e8;
   margin-left: 5%;
   margin-right: 5%;
-  padding-bottom: 25px;
 }
 
 #right-sidebar {
@@ -341,5 +340,28 @@ ol, ul {
   #right-footer-space {
     display: none;
   }
+}
+
+.article-date-title {
+  margin: 15px;
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+.main-article {
+  margin: 15px;
+  text-align: left;
+  padding-bottom: 40px;
+}
+
+.date {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+}
+
+.title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=styles.css.map */
