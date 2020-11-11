@@ -58,6 +58,11 @@ td {
   color: white;
 }
 
+ol, ul {
+  margin: 5px 0px 10px 0px;
+  padding: 0px;
+}
+
 .orange {
   color: orange;
 }
@@ -238,11 +243,6 @@ td {
 
 .block_element {
   display: block;
-}
-
-ol, ul {
-  margin: 5px 0px 10px 0px;
-  padding: 0px;
 }
 
 .instructions-list {
