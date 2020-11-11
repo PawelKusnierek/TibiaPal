@@ -231,9 +231,9 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
         }
     }
 
-    if (transfer_array.length > 8) {
-        document.getElementById("footer").style.display = "none"
-    }
+    //if (transfer_array.length > 8) {
+    //    document.getElementById("footer").style.display = "none"
+    //}
 
     resultsContent.innerHTML = resultsContent.innerHTML + "<h3>Results:</h3>"
 
