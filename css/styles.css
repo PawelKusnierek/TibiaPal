@@ -12,19 +12,6 @@ body {
   background-position: top;
 }
 
-h1 {
-  font-family: "Acme", sans-serif;
-  margin: 0px;
-  padding: 0px;
-  text-align: center;
-  font-size: 24px;
-}
-
-h2 {
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-
 h3 {
   margin-top: 10px;
 }
@@ -59,7 +46,7 @@ td {
 }
 
 ol, ul {
-  margin: 5px 0px 10px 0px;
+  margin: 5px 0px 5px 0px;
   padding: 0px;
 }
 
@@ -144,7 +131,7 @@ ol, ul {
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 16px;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
   -webkit-transition: 0s;
   transition: 0s;
@@ -278,7 +265,7 @@ ol, ul {
 }
 
 #copy-all-button {
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 #extra-expenses-button {
