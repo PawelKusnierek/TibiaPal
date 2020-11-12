@@ -15,9 +15,6 @@
     <!-- css files-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-    <!-- .js scripts -->
-    <script src="scripts/tibialootsplit.js"></script>
-
     <!-- extra googleapi fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
@@ -38,40 +35,14 @@
         </div>
         <nav id="left-sidebar">
             <div class="nav-item"><a href="https://tibiapal.com">Latest News</a></div>
-            <div class="active nav-item"><a href="https://tibiapal.com/tibialootsplit">TibiaLootSplit</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/tibialootsplit">TibiaLootSplit</a></div>
             <div class="nav-item"><a href="https://tibiapal.com">House Auctions</a></div>
             <div class="nav-item"><a href="https://tibiapal.com">Imbue Calculator</a></div>
             <div class="nav-item"><a href="https://tibiapal.com">Bestiary</a></div>
             <div class="nav-item"><a href="https://tibiapal.com">Contact</a></div>
         </nav>
         <section id="main-content">
-            <h4 id="howtouse"><br>How to use TibiaLootSplit:</h4>
-            <ol id="instruction-list">
-                <li class="instructions-list">In your 'Party Hunt' analyser select 'Copy to Clipboard'</li>
-                <li class="instructions-list">Paste the values into the input field and click 'Submit'</li>
-            </ol>
-            <img id="analyser_image" src="images/analyser.png"
-                alt="Picture of 'Party Hunt' analsyer highlighting which button to click">
-            <form id="myForm">
-                <input type="text" id="analyserData" name="analyserData"
-                    placeholder="Paste party hunt session log here..." autocomplete="off"><br>
-                <input type="submit" id="submitbutton" value="Submit" onclick="event.preventDefault(); submit_form()" />
-                <input type="button" onclick="location.href='https:/\/tibialootsplit.com';" value="Refresh page" />
-            </form>
-            <section id="results"></section>
-            <section id="extra-expenses-div"></section>
-            <table id="extra-expense-table" style="width:100%">
-                <tr>
-                    <th>Player</th>
-                    <th>Extra TC expense</th>
-                    <th>Extra gold expense (in k)</th>
-                </tr>
-            </table>
-            <section id="extra-container">
-                <input type="text" id="TCvalue" name="TCvalue" placeholder="Tibia Coin gold value" autocomplete="off">
-                <input type="submit" id="submitextrabutton" value="Recalculate"
-                    onclick="event.preventDefault(); calculate_extra_expenses_click()" />
-            </section><br>
+
         </section>
         <aside id="right-sidebar">
             <div class="right-sidebar-item"><a href="https://tibia.fandom.com" target="_blank"><img

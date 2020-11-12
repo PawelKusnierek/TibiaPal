@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TibiaPal.com - All your Tibia needs in one place!</title>
+    <meta name="author" content="Pawel Kusnierek">
+    <meta name="description"
+        content="Quick and easy splitting of loot after a teamhunt for video game 'Tibia' using the in-game 'Party Hunt' analyser, simple copy and paste into the input field.">
+    <meta name="keywords"
+        content="Tibia, Tibia Loot, Tibia Loot Split, TibiaLootSplit, Split Tibia Loot, Tibia Loot Analyser, Tibia Loot Share, Tibia Share Loot, Tibia Party Hunt, Tibia Hunting, Tibia Party Calculator, Tibia Calculator, Tibia Party Share, Tibia Party">
+    <html>
+    <link rel="shortcut icon" href="images/crystalcoin.ico" type="image/x-icon">
+
+    <!-- css files-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- .js scripts -->
+    <script src="scripts/auctions.js"></script>
+
+    <!-- extra googleapi fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+    <!-- Analytics and ad related section-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+</head>
+
+<body>
+    <main id="page-container">
+        <div id="header">
+            <a href="https://tibiapal.com" target="_blank"><img src="images/1.png" style="width:85%"></a></div>
+        </div>
+        <div id="banner"></div>
+        <div id="right-header">
+            <div class="right-sidebar-item"><a href="https://www.tibia.com" target="_blank"><img
+                        src="images/tibia-logo-artwork-top.gif" style="width:85%"></a></div>
+        </div>
+        <nav id="left-sidebar">
+            <div class="nav-item"><a href="https://tibiapal.com">Latest News</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/tibialootsplit">TibiaLootSplit</a></div>
+            <div class="active nav-item"><a href="https://tibiapal.com">House Auctions</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com">Imbue Calculator</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com">Bestiary</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com">Contact</a></div>
+        </nav>
+        <section id="main-content">
+            <p>
+            <form><label for="server">Select server</label>
+                <select name="server" id="server">
+                    <option value="Adra">Adra</option>
+                    <option value="Antica">Antica</option>
+                    <option value="Assombra">Assombra</option>
+                    <option value="Astera">Astera</option>
+                    <option value="Belluma">Belluma</option>
+                    <option value="Belobra">Belobra</option>
+                    <option value="Bona">Bona</option>
+                    <option value="Calmera">Calmera</option>
+                    <option value="Carnera">Carnera</option>
+                    <option value="Celebra">Celebra</option>
+                    <option value="Celesta">Celesta</option>
+                    <option value="Concorda">Concorda</option>
+                    <option value="Cosera">Cosera</option>
+                    <option value="Damora">Damora</option>
+                    <option value="Descubra">Descubra</option>
+                    <option value="Dibra">Dibra</option>
+                    <option value="Duna">Duna</option>
+                    <option value="Emera">Emera</option>
+                    <option value="Epoca">Epoca</option>
+                    <option value="Estela">Estela</option>
+                    <option value="Faluna">Faluna</option>
+                    <option value="Ferobra">Ferobra</option>
+                    <option value="Firmera">Firmera</option>
+                    <option value="Funera">Funera</option>
+                    <option value="Furia">Furia</option>
+                    <option value="Garnera">Garnera</option>
+                    <option value="Gentebra">Gentebra</option>
+                    <option value="Gladera">Gladera</option>
+                    <option value="Harmonia">Harmonia</option>
+                    <option value="Helera">Helera</option>
+                    <option value="Honbra">Honbra</option>
+                    <option value="Impera">Impera</option>
+                    <option value="Inabra">Inabra</option>
+                    <option value="Javibra">Javibra</option>
+                    <option value="Jonera">Jonera</option>
+                    <option value="Kalibra">Kalibra</option>
+                    <option value="Kenora">Kenora</option>
+                    <option value="Libertabra">Libertabra</option>
+                    <option value="Lobera">Lobera</option>
+                    <option value="Luminera">Luminera</option>
+                    <option value="Lutabra">Lutabra</option>
+                    <option value="Macabra">Macabra</option>
+                    <option value="Menera">Menera</option>
+                    <option value="Mitigera">Mitigera</option>
+                    <option value="Monza">Monza</option>
+                    <option value="Nefera">Nefera</option>
+                    <option value="Noctera">Noctera</option>
+                    <option value="Nossobra">Nossobra</option>
+                    <option value="Olera">Olera</option>
+                    <option value="Ombra">Ombra</option>
+                    <option value="Pacembra">Pacembra</option>
+                    <option value="Pacera">Pacera</option>
+                    <option value="Peloria">Peloria</option>
+                    <option value="Premia">Premia</option>
+                    <option value="Pyra">Pyra</option>
+                    <option value="Quelibra">Quelibra</option>
+                    <option value="Quintera">Quintera</option>
+                    <option value="Ragna">Ragna</option>
+                    <option value="Refugia">Refugia</option>
+                    <option value="Relania">Relania</option>
+                    <option value="Relembra">Relembra</option>
+                    <option value="Secura">Secura</option>
+                    <option value="Serdebra">Serdebra</option>
+                    <option value="Serenebra">Serenebra</option>
+                    <option value="Solidera">Solidera</option>
+                    <option value="Talera">Talera</option>
+                    <option value="Torpera">Torpera</option>
+                    <option value="Tortura">Tortura</option>
+                    <option value="Unica">Unica</option>
+                    <option value="Utobra">Utobra</option>
+                    <option value="Venebra">Venebra</option>
+                    <option value="Vita">Vita</option>
+                    <option value="Vunira">Vunira</option>
+                    <option value="Wintera">Wintera</option>
+                    <option value="Wizera">Wizera</option>
+                    <option value="Xandebra">Xandebra</option>
+                    <option value="Xylona">Xylona</option>
+                    <option value="Yonabra">Yonabra</option>
+                    <option value="Ysolera">Ysolera</option>
+                    <option value="Zenobra">Zenobra</option>
+                    <option value="Zuna">Zuna</option>
+                    <option value="Zunera">Zunera</option>
+
+                </select>
+                <input type="submit" id="submitbutton" value="Submit" onclick="event.preventDefault(); submit_form()" />
+            </form>
+            </p>
+        </section>
+        <aside id="right-sidebar">
+            <div class="right-sidebar-item"><a href="https://tibia.fandom.com" target="_blank"><img
+                        src="images/Tibia.Fandom.com.gif" style="width:85%" class="border-img"></a></div>
+            <div class="right-sidebar-item"><a href="https://tibiadata.com/" target="_blank"><img
+                        src="images/TibiaData.com.gif" style="width:85%" class="border-img"></a></div>
+            <div class="right-sidebar-item"><a href="https://guildstats.eu/" target="_blank"><img
+                        src="images/GuildStats.eu.gif" style="width:85%" class="border-img"></a></div>
+            <div class="right-sidebar-item"><a href="https://tibiabosses.com/" target="_blank"><img
+                        src="images/TibiaBosses.com.gif" style="width:85%" class="border-img"></a></div>
+        </aside>
+        <aside id="left-footer-space"></aside>
+        <footer id="footer">
+            <p id="footerParagraph">
+                Tibia is copyrighted by <a href="https://www.cipsoft.com" target="_blank">CipSoft GmbH</a>. The official
+                website of Tibia is <a href="https://tibia.com" target="_blank">tibia.com</a>.<br><br>
+                TibiaPal.com source code and changelog can be found on
+                <a href="https://github.com/PawelKusnierek/TibiaLootSplit" target="_blank">GitHub</a>.<br>
+                Created by Kusnier. </p><br>
+        </footer>
+        <aside id="right-footer-space"></aside>
+    </main>
+</body>
+
+</html>
