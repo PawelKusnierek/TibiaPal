@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica", sans-serif;
+  font-family: Verdana, Arial, Times New Roman, sans-serif;
   font-size: 14px;
   text-align: center;
   margin: 0px;
@@ -139,7 +139,7 @@ ol, ul {
   font-family: "IBM Plex Sans", sans-serif;
   -webkit-transition: 0s;
   transition: 0s;
-  background-color: #061021e8;
+  background-color: #061021f1;
 }
 
 .nav-item a {
@@ -166,9 +166,13 @@ ol, ul {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   height: 90%;
-  background-color: #061021e8;
+  background-color: #061021f1;
   margin-left: 5%;
   margin-right: 5%;
+  font-size: 14px;
+  text-shadow: black 1px 1px 3px;
+  line-height: 130%;
+  color: #ebebeb;
 }
 
 #right-sidebar {
@@ -355,13 +359,17 @@ ol, ul {
 }
 
 .date {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .title {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
+}
+
+.main-article-standalone {
+  margin: 15px;
+  text-align: left;
+  padding-bottom: 0px;
 }
 /*# sourceMappingURL=styles.css.map */
