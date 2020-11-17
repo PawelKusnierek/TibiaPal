@@ -1,10 +1,13 @@
-# TibiaPal
+# TibiaPal.com
 https://tibiapal.com/
 
 ## About the project
 TibiaPal is a website for players of an old school video game 'Tibia'. 
 
-The site vastly simplifies dividing up in-game loot between all participating players by a simple copy and paste from the game's log. The output is displayed in such a format that the user can immediately copy it back into the game to ease the split. 
+The site is intended to have a number of features to help with the day-to-day life of the players.
+Current features include:
+- 'TibiaLootSplit', which vastly simplifies dividing up in-game loot between all participating players by a simple copy and paste from the game's log. The output is displayed in such a format that the user can immediately copy it back into the game to ease the split. 
+- Active house auctions, which make it easier to see at a glance how many active auctions there are on a particular world. This is convenient for worlds with a few active auctions (e.g Secura or Antice) where using the in-game tool is quite time consuming.
 
 The site currently has approximately 80k pageviews a month.
 
@@ -14,7 +17,7 @@ In case of any issues, questions, comments or suggestions, please feel free to r
 
 You can find me in Tibia on Secura on character 'Isudin'
 
-You can email me at pkusnierek@yahoo.co.uk
+You can email me at kusnierekpawel@gmail.com
 
 You can find me on Discord, @Kusnier#4979
 
@@ -24,10 +27,14 @@ You can leave a message here, on my GitHub
 
 
 ## Application Techstack
-Pure HTML, CSS and JS
+HTML, CSS, SASS and JS
 
 
 ## Changelog
+
+## 17th November 2020
+
+Number of changes related to rebranding from TibiaLootSplit.com to TibiaPal.com, such as contact details, current auctions feature, articles feature (latest news) as well as a huge CSS/HTML overhaul
 
 ### 6th November 2020
 
