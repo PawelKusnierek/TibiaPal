@@ -1,4 +1,4 @@
-# TibiaLootSplit
+# TibiaPal
 https://tibiapal.com/
 
 ## About the project
