@@ -22,7 +22,7 @@ function submit_form() {
 
                         var newRow = tableRef.insertRow();
                         var thirdCell = newRow.insertCell(0);
-                        var thirdCellText = document.createTextNode(size);
+                        var thirdCellText = document.createTextNode(size + " sqm");
                         thirdCell.appendChild(thirdCellText);
                         var secondCell = newRow.insertCell(0);
                         var secondCellText = document.createTextNode(name);
