@@ -222,6 +222,7 @@ ol, ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 10px;
 }
 
 #right-footer-space {
@@ -371,5 +372,9 @@ ol, ul {
   margin: 15px;
   text-align: left;
   padding-bottom: 0px;
+}
+
+.auctions-th {
+  width: 25%;
 }
 /*# sourceMappingURL=styles.css.map */
