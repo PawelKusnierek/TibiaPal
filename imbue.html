@@ -52,27 +52,28 @@
             <div class="nav-item"><a href="https://tibiapal.com/contact">Contact</a></div>
         </nav>
         <section id="main-content">
-            <p>
-            <form id="imbueform"><label for="imbue">Select imbue</label>
-                <select name="server" id="server">
-                    <option value="life">Vampirism (Life Leech)</option>
-                    <option value="crit">Strike (Crit)</option>
-                    <option value="mana">Void (Mana Leech)</option>
+            <p id="imbue_paragraph">
+            <form id="imbueform"><label for="imbue">Select imbue:</label>
+                <select name="imbue" id="imbue">
+                    <option value="Vampirism">Vampirism (Life Leech)</option>
+                    <option value="Strike">Strike (Crit)</option>
+                    <option value="Void">Void (Mana Leech)</option>
                 </select>
-                <input type="submit" id="submitbutton" value="Submit" onclick="event.preventDefault(); submit_form()" />
+                <input type="submit" id="imbuesubmitbutton" value="Submit" onclick="event.preventDefault(); submit_imbue_type()" />
             </form>
             <form id="imbueitemsform">
                 <label for ="goldtokenvalue">Gold token value:</label>
-                <input type="text" id="goldtokenvalue" name="goldtokenvalue" autocomplete="off"><br>
-                <label for ="firstitemvalue">First item value:</label>
-                <input type="text" id="firstitemvalue" name="goldtokenvalue" autocomplete="off"><br>
-                <label for ="seconditemvalue">Second item value:</label>
-                <input type="text" id="seconditemvalue" name="goldtokenvalue" autocomplete="off"><br>
-                <label for ="thirditemvalue">Third item value:</label>
-                <input type="text" id="thirditemvalue" name="goldtokenvalue" autocomplete="off"><br>
-                <input type="submit" id="submitbutton" value="Submit" onclick="event.preventDefault(); submit_form()" />
-                <input type="button" onclick="location.href='https:/\/tibialootsplit.com';" value="Refresh page" />
+                <input type="text" id="goldtokenvalue" name="goldtokenvalue" placeholder="Value in gp" autocomplete="off"><br>
+                <label id ="firstitemvalue_label" for ="firstitemvalue">First item value:</label>
+                <input type="text" id="firstitemvalue" name="firstitemvalue" placeholder="Value in gp" autocomplete="off"><br>
+                <label id ="seconditemvalue_label" for ="seconditemvalue">Second item value:</label>
+                <input type="text" id="seconditemvalue" name="seconditemvalue" placeholder="Value in gp" autocomplete="off"><br>
+                <label id ="thirditemvalue_label" for ="thirditemvalue">Third item value:</label>
+                <input type="text" id="thirditemvalue" name="thirditemvalue" placeholder="Value in gp" autocomplete="off"><br>
+                <input type="submit" id="valuessubmitbutton" value="Submit" onclick="event.preventDefault(); submit_imbue_values()" />
+                <!-- <input type="button" onclick="location.href='https:/\/tibialootsplit.com';" value="Refresh page" /> -->
             </form>
+            <div id="imbue_results"></div>
             </p>
         </section>
         <aside id="right-sidebar">

@@ -379,7 +379,32 @@ ol, ul {
 }
 
 #imbueform {
-  -ms-flex-line-pack: left;
-      align-content: left;
+  text-align: left;
+  padding-left: 15px;
+}
+
+#imbueform label {
+  display: inline-block;
+}
+
+#imbueitemsform {
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  text-align: left;
+  display: none;
+}
+
+#imbueitemsform input {
+  margin-top: 5px;
+}
+
+#imbueitemsform label {
+  display: inline-block;
+  width: 200px;
+}
+
+#imbue_results {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */
