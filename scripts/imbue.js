@@ -156,8 +156,8 @@ function submit_imbue_values() {
 
 function calculate_basic_imbue(gold_token_value, first_item_value, first_item_quantity) {
     results = []
-    items_total = first_item_value * first_item_quantity
-    gold_token_total = gold_token_value * 2
+    items_total = (first_item_value * first_item_quantity)
+    gold_token_total = (gold_token_value * 2)
     if (gold_token_total > items_total) {
         results.push("all_items")
         results.push(items_total)
@@ -175,7 +175,7 @@ function calculate_intricate_imbue(gold_token_value, first_item_value, first_ite
     all_gold_tokens_total = gold_token_value * 4
     all_lowest_cost = Math.min(all_items_total, all_gold_tokens_total)
 
-    basic_gold_tokens_total = gold_token_value * 2 * second_item_value * second_item_quantity
+    basic_gold_tokens_total = (gold_token_value * 2) + (second_item_value * second_item_quantity)
 
     if (basic_gold_tokens_total > all_lowest_cost) {
         if (all_gold_tokens_total > all_items_total) {
@@ -196,12 +196,12 @@ function calculate_intricate_imbue(gold_token_value, first_item_value, first_ite
 
 function calculate_powerful_imbue(gold_token_value, first_item_value, first_item_quantity, second_item_value, second_item_quantity, third_item_value, third_item_quantity) {
     results = []
-    all_items_total = first_item_value * first_item_quantity + second_item_value * second_item_quantity + third_item_value * third_item_quantity
+    all_items_total = (first_item_value * first_item_quantity) + (second_item_value * second_item_quantity) + (third_item_value * third_item_quantity)
     all_gold_tokens_total = gold_token_value * 6
     all_lowest_cost = Math.min(all_items_total, all_gold_tokens_total)
 
-    intricate_gold_tokens_total = gold_token_value * 4 + third_item_value * third_item_quantity
-    basic_gold_tokens_total = gold_token_value * 2 + second_item_value * second_item_quantity + third_item_value * third_item_quantity
+    intricate_gold_tokens_total = (gold_token_value * 4) + (third_item_value * third_item_quantity)
+    basic_gold_tokens_total = (gold_token_value * 2) + (second_item_value * second_item_quantity) + (third_item_value * third_item_quantity)
 
     if (Math.min(all_lowest_cost, intricate_gold_tokens_total, basic_gold_tokens_total) == all_lowest_cost) {
         if (all_gold_tokens_total > all_items_total) {
