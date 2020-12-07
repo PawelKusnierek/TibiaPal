@@ -8,6 +8,7 @@ The site is intended to have a number of features to help with the day-to-day li
 Current features include:
 - 'TibiaLootSplit', which vastly simplifies dividing up in-game loot between all participating players by a simple copy and paste from the game's log. The output is displayed in such a format that the user can immediately copy it back into the game to ease the split. 
 - Active house auctions, which make it easier to see at a glance how many active auctions there are on a particular world. This is convenient for worlds with a few active auctions (e.g Secura or Antice) where using the in-game tool is quite time consuming.
+- Imbue calculator
 
 The site currently has approximately 80k pageviews a month.
 
