@@ -37,7 +37,7 @@ HTML, CSS, SASS and JS
 
 Overhaul of 'Auctions', displaying much more data
 
-Adding message that display total cost and cost/hour of each imbue type in the imbue calculator
+Adding message that displays total cost and cost/hour of each imbue type in the imbue calculator
 
 ### 7th December 2020
 
