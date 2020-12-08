@@ -113,7 +113,7 @@ function updateHTMLWithHouseDetails(auctioned_houses_with_details, i) {
     var firstRowFirstCellText = document.createTextNode("City");
     firstRowSecondCell.appendChild(firstRowSecondCellText);
     firstRowFirstCell.appendChild(firstRowFirstCellText);
-    firstRowSecondCell.style.width = '150px'
+    firstRowSecondCell.style.width = '300px'
 
     var secondRow = tbdy.insertRow();
     var secondRowSecondCell = secondRow.insertCell(0);

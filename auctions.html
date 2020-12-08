@@ -52,7 +52,7 @@
             <div class="nav-item"><a href="https://tibiapal.com/contact">Contact</a></div>
         </nav>
         <section id="main-content">
-            <p>
+            <p> WARNING: This tool is intended to be used on servers with a low volume of active house auactions. <br><br>If used on servers with a high amount of active auctions, the tool will take a long time to execute (1+ min). Suggested worlds to use are Secura, Antica etc.
             <form><label for="server">Select server</label>
                 <select name="server" id="server">
                     <option value="Adra">Adra</option>
@@ -142,15 +142,8 @@
                 <input type="submit" id="submitbutton" value="Submit" onclick="event.preventDefault(); submit_form()" />
             </form>
             </p>
-            <div id=auction_table_container>
-                <table id="houses-table" style="width:100%">
-                    <tr>
-                        <th class="auctions-th">World</th>
-                        <th class="auctions-th">City</th>
-                        <th class="auctions-th">House Name</th>
-                        <th class="auctions-th">House Size</th>
-                    </tr>
-                </table>
+            <div id=auction_container>
+
             </div>
         </section>
         <aside id="right-sidebar">
