@@ -33,6 +33,10 @@ HTML, CSS, SASS and JS
 
 ## Changelog
 
+### 7th December 2020
+
+Added 'Imbue Calculator'
+
 ### 17th November 2020
 
 Number of changes related to rebranding from TibiaLootSplit.com to TibiaPal.com, such as contact details, current auctions feature, articles feature (latest news) as well as a huge CSS/HTML overhaul
