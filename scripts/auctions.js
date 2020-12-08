@@ -1,5 +1,12 @@
 function submit_form() {
     server = document.getElementById("server")
+    button = document.getElementById("submitbutton")
+    button.disabled=true
+
+    var auction_content = document.getElementById("auction_container");
+    auction_content.innerHTML="";
+
+
     var city_array = ["Ab'Dendriel", "Ankrahmun", "Carlin", "Darashia", "Edron", "Issavi", "Kazordoon", "Liberty Bay", "Port Hope", "Rathleton", "Svargrond", "Thais", "Venore", "Yalahar"];
     auctioned_houses = {}
 
@@ -171,4 +178,7 @@ function updateHTMLWithHouseDetails(auctioned_houses_with_details, i) {
     house_container.appendChild(house_details)
     
     auction_content.appendChild(house_container)
+
+    button = document.getElementById("submitbutton")
+    button.disabled=false
 }
