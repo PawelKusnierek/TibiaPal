@@ -451,4 +451,13 @@ ol, ul {
 #imbue_results {
   display: none;
 }
+
+#expshareform {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#level {
+  width: 170px;
+}
 /*# sourceMappingURL=styles.css.map */

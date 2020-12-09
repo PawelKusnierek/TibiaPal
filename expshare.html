@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <!-- .js scripts -->
-    <script src="scripts/imbue.js"></script>
+    <script src="scripts/expshare.js"></script>
 
     <!-- extra googleapi fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
@@ -48,34 +48,22 @@
             <div class="nav-item"><a href="https://tibiapal.com">Latest News</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/tibialootsplit">TibiaLootSplit</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/auctions">House Auctions</a></div>
-            <div class="active nav-item"><a href="https://tibiapal.com/imbue">Imbue Calculator</a></div>
-            <div class="nav-item"><a href="https://tibiapal.com/expshare">Exp Share Calculator</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/imbue">Imbue Calculator</a></div>
+            <div class="nav-item active"><a href="https://tibiapal.com/expshare">Exp Share Calculator</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/contact">Contact</a></div>
+
         </nav>
         <section id="main-content">
-            <p id="imbue_paragraph"> Calculate the most cost effective way of getting imbuement items, by trading gold tokens with Yana or buying from the market! <br><br>
-            <form id="imbueform"><label for="imbue">Select imbue:</label>
-                <select name="imbue" id="imbue">
-                    <option value="Vampirism">Vampirism (Life Leech)</option>
-                    <option value="Strike">Strike (Crit)</option>
-                    <option value="Void">Void (Mana Leech)</option>
-                </select>
-                <input type="submit" id="imbuesubmitbutton" value="Submit" onclick="event.preventDefault(); submit_imbue_type()" />
+            <p id="expshareparagraph">
+                Find out the level range for shared experience.
+            <form id="expshareform">
+                <input type="text" id="level" name="level" placeholder="Enter character level here..."
+                    autocomplete="off">
+                <input type="submit" id="expsharesubmitbutton" value="Submit"
+                    onclick="event.preventDefault(); submit_form()" />
             </form>
-            <form id="imbueitemsform">
-                <label for ="goldtokenvalue">Gold token value:</label>
-                <input type="text" id="goldtokenvalue" name="goldtokenvalue" placeholder="Value in gp" autocomplete="off"><br>
-                <label id ="firstitemvalue_label" for ="firstitemvalue">First item value:</label>
-                <input type="text" id="firstitemvalue" name="firstitemvalue" placeholder="Value in gp" autocomplete="off"><br>
-                <label id ="seconditemvalue_label" for ="seconditemvalue">Second item value:</label>
-                <input type="text" id="seconditemvalue" name="seconditemvalue" placeholder="Value in gp" autocomplete="off"><br>
-                <label id ="thirditemvalue_label" for ="thirditemvalue">Third item value:</label>
-                <input type="text" id="thirditemvalue" name="thirditemvalue" placeholder="Value in gp" autocomplete="off"><br>
-                <input type="submit" id="valuessubmitbutton" value="Submit" onclick="event.preventDefault(); submit_imbue_values()" />
-                <!-- <input type="button" onclick="location.href='https:/\/tibialootsplit.com';" value="Refresh page" /> -->
-            </form>
-            <div id="imbue_results"></div>
             </p>
+            <p id="expresults"></p>
         </section>
         <aside id="right-sidebar">
             <div class="right-sidebar-item"><a href="https://tibia.fandom.com" target="_blank"><img
