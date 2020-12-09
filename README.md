@@ -33,6 +33,12 @@ HTML, CSS, SASS and JS
 
 ## Changelog
 
+### 9th December 2020
+
+Added exp share calculator
+
+Added stamina calculator
+
 ### 8th December 2020
 
 Overhaul of 'Auctions', displaying much more data
