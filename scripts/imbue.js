@@ -172,7 +172,7 @@ function submit_imbue_values() {
                 total_message + powerful_imbue[1] + " gold. <br>" + per_hour_message + (powerful_imbue[1] + 150000) + " gold, which is " + Math.round((powerful_imbue[1] + 150000) / 20) + " gold per hour of use.<br>"
         }
         else if (powerful_imbue[0] == "intricate") {
-            imbue_results.innerHTML = imbue_results.innerHTML + powerful_message + "INTRICATE items for <span style=\"color:gold\">GOLD TOKENS</span> and Piece of Dead Brain from the <span style=\"color:green\">MARKET</span> " +
+            imbue_results.innerHTML = imbue_results.innerHTML + powerful_message + "INTRICATE items for <span style=\"color:gold\">GOLD TOKENS</span> and Grimeleech Wings from the <span style=\"color:green\">MARKET</span> " +
                 total_message + powerful_imbue[1] + " gold. <br>" + per_hour_message + (powerful_imbue[1] + 150000) + " gold, which is " + Math.round((powerful_imbue[1] + 150000) / 20) + " gold per hour of use.<br>"
         }
         else if (powerful_imbue[0] == "basic") {
