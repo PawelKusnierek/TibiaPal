@@ -65,8 +65,26 @@
                 <input type="text" id="analyserData" name="analyserData"
                     placeholder="Paste party hunt session log here..." autocomplete="off"><br>
                 <input type="submit" id="submitbutton" value="Submit" onclick="event.preventDefault(); submit_form()" />
-                <input type="button" onclick="location.href='https:/\/tibiapal.com/tibialootsplit';" value="Refresh page" />
+                <input type="button" onclick="location.href='https:/\/tibiapal.com/tibialootsplit';"
+                    value="Refresh page" />
             </form>
+            <section id="remove-players-section">
+                <br><br><br>
+                <h4><span class="orange">NEW FEATURE:</span> Remove Players</h4>
+                <p>If you want to remove players from the log and NOT share loot with them, paste the log below:</p>
+                <form id="removePlayerForm">
+                    <input type="text" id="removePlayerAnalyserData" name="analyserData"
+                        placeholder="To remove players, paste party hunt session log here..." autocomplete="off"><br>
+                    <input type="submit" id="removeplayersubmitbutton" value="Submit"
+                        onclick="event.preventDefault(); submit_form_remove_players()" />
+                </form>
+
+            </section>
+            <section id="list-remove-players">
+
+            </section>
+            <input type="submit" id="submitremoveplayers" value="Calculate!"
+                onclick="event.preventDefault(); calculate_remove_players_click()" />
             <section id="results"></section>
             <section id="extra-expenses-div"></section>
             <table id="extra-expense-table" style="width:100%">
@@ -80,7 +98,7 @@
                 <input type="text" id="TCvalue" name="TCvalue" placeholder="Tibia Coin gold value" autocomplete="off">
                 <input type="submit" id="submitextrabutton" value="Recalculate"
                     onclick="event.preventDefault(); calculate_extra_expenses_click()" />
-            </section><br>
+            </section>
         </section>
         <aside id="right-sidebar">
             <div class="right-sidebar-item"><a href="https://tibia.fandom.com" target="_blank"><img

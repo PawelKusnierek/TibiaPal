@@ -1,5 +1,5 @@
 function submit_form() {
-    valid_data = validate_analyser_data()
+    valid_data = validate_analyser_data(0)
     if (!valid_data) {
         return false;
     }
@@ -18,6 +18,8 @@ function submit_form() {
             return false;
         }
     }
+    remove_players_section = document.getElementById("remove-players-section")
+    remove_players_section.innerHTML = ""
 
     //getting the raw analyser data
     analyser_data = form.analyserData.value.replace(" (Leader)", "");
@@ -35,6 +37,65 @@ function submit_form() {
     // Final update back to the site
     update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person, resultsContent);
     document.getElementById("myForm").reset();
+}
+
+function submit_form_remove_players() {
+    valid_data = validate_analyser_data(1)
+    if (!valid_data) {
+        return false;
+    }
+
+    analyser_data = form.analyserData.value.replace(" (Leader)", "");
+
+    //remove all other content
+    remove_html_before_extra_expenses();
+
+    remove_first_section(analyser_data);
+    number_of_players = find_total_number_of_players(analyser_data);
+    players_and_their_balance = find_players_and_balance(analyser_data, number_of_players);
+
+    add_players_and_checkboxes(players_and_their_balance);
+}
+
+function calculate_remove_players_click() {
+    list_of_players_to_remove = []
+    for (var i = 0; i < players_and_their_balance.length; i++) {
+        player = players_and_their_balance[i].name
+        checkbox_player = document.getElementById(player);
+        checked = checkbox_player.checked
+        if (!checked) {
+            list_of_players_to_remove.push(player)
+        }
+    }
+    if (list_of_players_to_remove.length > 0) {
+        for (var j = 0; j < list_of_players_to_remove.length; j++) {
+            for (var k = players_and_their_balance.length - 1; k >= 0; k--) {
+                if (players_and_their_balance[k].name == list_of_players_to_remove[j]) {
+                    players_and_their_balance.splice(k, 1)
+                }
+            }
+        }
+    }
+    number_of_players = number_of_players - list_of_players_to_remove.length
+
+    total_profit = find_total_profit(players_and_their_balance);
+    profit_per_person = total_profit / number_of_players;
+
+    // Main logic part - works very well even if looks confusing, advise againt touching....
+    who_to_pay_and_how_much = final_split(players_and_their_balance, profit_per_person, number_of_players);
+
+    document.getElementById('list-remove-players').innerHTML = "";
+    calculate_button = document.getElementById("submitremoveplayers")
+    calculate_button.style.display = "none"
+
+    // Final update back to the site
+    var results = document.createElement("div");
+    results.setAttribute("id", "results")
+    main_content.appendChild(results)
+
+    update_the_html(who_to_pay_and_how_much, total_profit, profit_per_person, resultsContent);
+    document.getElementById('extra-expenses-div').innerHTML = "";
+
 }
 
 function extra_expenses_click() {
@@ -92,8 +153,8 @@ function calculate_extra_expenses_click() {
 }
 
 // function to verify the integrity of the entered data
-function validate_analyser_data() {
-    form = document.forms[0];
+function validate_analyser_data(ref) {
+    form = document.forms[ref];
     if (form.analyserData.value == "") {
         window.alert("Analyser data cannot be empty")
         document.getElementById("myForm").reset();
@@ -282,7 +343,7 @@ function update_the_html(who_to_pay_and_how_much, total_profit, profit_per_perso
     var extraExpensesEl = document.createElement("div");
     extraExpensesEl.setAttribute("class", "new-feature")
 
-    extraExpensesEl.innerHTML = (`<span style="color:orange"><b>Feature:</b></span> To add extra expenses to the results click <button type="button" id="extra-expenses-button" onClick='extra_expenses_click()';>HERE.</button> <br/> <br/>For a guide on how-to use this feature, watch <a href="https://www.youtube.com/watch?v=e3f9eJOFym4" target="_blank"><b>this video</b></a>.<br>`)
+    extraExpensesEl.innerHTML = (`<span style="color:orange"><b>Feature:</b></span> To add extra expenses to the results click <button type="button" id="extra-expenses-button" onClick='extra_expenses_click()';>HERE.</button> <br/> <br/>For a guide on how-to use this feature, watch <a href="https://www.youtube.com/watch?v=e3f9eJOFym4" target="_blank"><b>this video</b></a>.<br><br>`)
 
 
     extraExpensesDiv.appendChild(extraExpensesEl)
@@ -373,6 +434,9 @@ function remove_html_before_extra_expenses() {
     howtouse = document.getElementById("howtouse")
     howtouse.innerHTML = ""
 
+    remove_players_section = document.getElementById("remove-players-section")
+    remove_players_section.innerHTML = ""
+
     newFeature = document.getElementsByClassName("new-feature")
     for (i = 0; i < newFeature.length; i++) {
         main_content.removeChild(newFeature[i])
@@ -388,3 +452,37 @@ function remove_old_html() {
     extraContainer = document.getElementById("extra-container")
     main_content.removeChild(extraContainer)
 }
+
+function add_players_and_checkboxes(players_and_their_balance) {
+    list_remove_players_container = document.getElementById("list-remove-players")
+
+    var p = document.createElement('p');
+    p.innerHTML = 'To remove players from the loot split and NOT share loot with them, UN-CHECK their names:';
+
+    list_remove_players_container.appendChild(p);
+
+
+    for (i = 0; i < players_and_their_balance.length; i++) {
+        linebreak = document.createElement("br");
+        list_remove_players_container.appendChild(linebreak);
+
+        player = players_and_their_balance[i].name
+        var checkbox = document.createElement('input');
+        checkbox.type = "checkbox";
+        checkbox.name = "name";
+        checkbox.value = "value";
+        checkbox.id = player;
+
+        var label = document.createElement('label')
+        label.htmlFor = player;
+        label.appendChild(document.createTextNode(player));
+
+        list_remove_players_container.appendChild(checkbox);
+        list_remove_players_container.appendChild(label);
+        document.getElementById(player).checked = true;
+    }
+
+    calculate_button = document.getElementById("submitremoveplayers")
+    calculate_button.style.display = "initial"
+}
+

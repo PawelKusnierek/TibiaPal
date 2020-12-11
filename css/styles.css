@@ -315,6 +315,33 @@ ol, ul {
   margin-bottom: 10px;
 }
 
+#removePlayerAnalyserData {
+  width: 365px;
+  margin-top: 10px;
+}
+
+#removeplayersubmitbutton {
+  margin-top: 10px;
+}
+
+#list-remove-players {
+  text-align: left;
+  padding-left: 20px;
+}
+
+#list-remove-players input {
+  padding-bottom: 10px;
+}
+
+#submitremoveplayers {
+  display: none;
+  margin-bottom: 10px;
+}
+
+#submitextrabutton {
+  margin-bottom: 10px;
+}
+
 @media (max-width: 768px) {
   #header {
     display: none;
