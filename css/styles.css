@@ -512,4 +512,25 @@ ol, ul {
 #leechsubmitbutton {
   width: 70px !important;
 }
+
+#archivetable {
+  display: initial !important;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+#archivetable td {
+  border: 1px solid grey;
+  padding: 0px;
+  margin: 0px;
+}
+
+#dateheading {
+  width: 30%;
+}
+
+#titleheading {
+  width: 70%;
+}
 /*# sourceMappingURL=styles.css.map */
