@@ -36,7 +36,7 @@ HTML, CSS, SASS and JS
 
 ## Changelog
 
-### 11th December 2020
+### 16th December 2020
 
 Added Leech calculator
 
