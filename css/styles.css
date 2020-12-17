@@ -377,7 +377,8 @@ ol, ul {
 .article-date-title {
   margin: 15px;
   text-align: left;
-  padding-bottom: 5px;
+  padding: 5px;
+  background-image: url(images/Tibia.Fandom.com.gif);
 }
 
 .main-article {
@@ -387,11 +388,11 @@ ol, ul {
 }
 
 .date {
-  font-size: 14px;
+  font-size: 11px;
 }
 
 .title {
-  font-size: 18px;
+  font-size: 12px;
   font-weight: bold;
 }
 
