@@ -13,22 +13,11 @@ Current features include:
 - Stamina calculator
 - Leech calculator
 
-The site currently has approximately 80k pageviews a month.
+The site currently has approximately 100k pageviews a month.
 
 ## Contact
 
-In case of any issues, questions, comments or suggestions, please feel free to reach out to me using any of the methods below.
-
-You can find me in Tibia on Secura on character 'Isudin'
-
-You can email me at kusnierekpawel@gmail.com
-
-You can find me on Discord, @Kusnier#4979
-
-You can (sporadically!) find me on Twitch, twitch.tv/Kusnierr
-
-You can leave a message here, on my GitHub
-
+https://tibiapal.com/contact
 
 ## Application Techstack
 HTML, CSS, SASS and JS
