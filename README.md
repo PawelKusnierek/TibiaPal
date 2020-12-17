@@ -36,7 +36,7 @@ HTML, CSS, SASS and JS
 
 ## Changelog
 
-### 16th December 2020
+### 17th December 2020
 
 Rework of styling for article dates/titles - based on tibia.com
 
