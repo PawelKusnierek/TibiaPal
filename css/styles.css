@@ -375,10 +375,12 @@ ol, ul {
 }
 
 .article-date-title {
-  margin: 15px;
+  margin-bottom: 5px;
   text-align: left;
-  padding: 5px;
-  background-image: url(images/Tibia.Fandom.com.gif);
+  height: 28px;
+  background-image: url(https://tibiapal.com/images/newsheadline_background.gif);
+  margin-left: 10px;
+  margin-right: 5px;
 }
 
 .main-article {
@@ -388,12 +390,18 @@ ol, ul {
 }
 
 .date {
+  position: relative;
   font-size: 11px;
+  top: 3px;
+  left: 5px;
+  padding-right: 15px;
 }
 
 .title {
+  position: relative;
   font-size: 12px;
   font-weight: bold;
+  top: 3px;
 }
 
 .main-article-standalone {
