@@ -38,6 +38,10 @@ HTML, CSS, SASS and JS
 
 ### 16th December 2020
 
+Rework of styling for article dates/titles - based on tibia.com
+
+### 16th December 2020
+
 Added Leech calculator
 
 Added 'Archive' area
