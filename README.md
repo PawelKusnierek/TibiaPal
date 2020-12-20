@@ -25,6 +25,10 @@ HTML, CSS, SASS and JS
 
 ## Changelog
 
+### 20th December 2020
+
+Change display of results for Imbue Calculator - now in table format for easier reading
+
 ### 17th December 2020
 
 Rework of styling for article dates/titles - based on tibia.com
