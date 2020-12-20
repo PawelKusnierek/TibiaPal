@@ -53,132 +53,118 @@ function submit_imbue_values() {
     total_message = "for a total cost of: "
     per_hour_message = "Adding imbue shrine cost at 100% success chance, this works out at a total cost of: "
 
+    powerful_imbue_label = document.getElementById("powerful_imbue_label")
+    intricate_imbue_label = document.getElementById("intricate_imbue_label")
+    basic_imbue_label = document.getElementById("basic_imbue_label")
+
+    powerful_gold_token_cell_decision = document.getElementById("powerful_gold_token_cell_decision")
+    powerful_first_imbue_item_cell_decision = document.getElementById("powerful_first_imbue_item_cell_decision")
+    powerful_second_imbue_item_cell_decision = document.getElementById("powerful_second_imbue_item_cell_decision")
+    powerful_third_imbue_item_cell_decision = document.getElementById("powerful_third_imbue_item_cell_decision")
+
+    intricate_gold_token_cell_decision = document.getElementById("intricate_gold_token_cell_decision")
+    intricate_first_imbue_item_cell_decision = document.getElementById("intricate_first_imbue_item_cell_decision")
+    intricate_second_imbue_item_cell_decision = document.getElementById("intricate_second_imbue_item_cell_decision")
+
+    basic_gold_token_cell_decision = document.getElementById("basic_gold_token_cell_decision")
+    basic_first_imbue_item_cell_decision = document.getElementById("basic_first_imbue_item_cell_decision")
+
+    first_imbue_item_cells = document.getElementsByClassName("first_imbue_item_cell")
+    second_imbue_item_cells = document.getElementsByClassName("second_imbue_item_cell")
+    third_imbue_item_cells = document.getElementsByClassName("third_imbue_item_cell")
+
+    powerful_imbue_cost_paragraph = document.getElementById("powerful_imbue_cost_paragraph")
+    intricate_imbue_cost_paragraph = document.getElementById("intricate_imbue_cost_paragraph")
+    basic_imbue_cost_paragraph = document.getElementById("basic_imbue_cost_paragraph")
+
     if (imbue_type.includes("Vampirism")) {
-        basic_imbue = calculate_basic_imbue(goldtokenvalue, firstitemvalue, 25)
-        if (basic_imbue[0] == "all_items") {
-            imbue_results.innerHTML = imbue_results.innerHTML + basic_message + "ALL ITEMS from the <span style=\"color:green\">MARKET</span> " +
-                total_message + basic_imbue[1] + " gold. <br>" + per_hour_message + (basic_imbue[1] + 15000) + " gold, which is " + Math.round((basic_imbue[1] + 15000) / 20) + " gold per hour of use.<br><br><br>"
-        }
-        else if (basic_imbue[0] == "all_tokens") {
-            imbue_results.innerHTML = imbue_results.innerHTML + basic_message + "ALL ITEMS for <span style=\"color:gold\">GOLD TOKENS</span> " +
-                total_message + basic_imbue[1] + " gold. <br>" + per_hour_message + (basic_imbue[1] + 15000) + " gold, which is " + Math.round((basic_imbue[1] + 15000) / 20) + " gold per hour of use.<br><br><br>"
-        }
-
-        intricate_imbue = calculate_intricate_imbue(goldtokenvalue, firstitemvalue, 25, seconditemvalue, 15)
-        if (intricate_imbue[0] == "all_items") {
-            imbue_results.innerHTML = imbue_results.innerHTML + intricate_message + "ALL ITEMS from the <span style=\"color:green\">MARKET</span> " +
-                total_message + intricate_imbue[1] + " gold. <br>" + per_hour_message + (intricate_imbue[1] + 55000) + " gold, which is " + Math.round((intricate_imbue[1] + 55000) / 20) + " gold per hour of use.<br><br><br>"
-        }
-        else if (intricate_imbue[0] == "all_tokens") {
-            imbue_results.innerHTML = imbue_results.innerHTML + intricate_message + "ALL ITEMS for <span style=\"color:gold\">GOLD TOKENS</span> " +
-                total_message + intricate_imbue[1] + " gold. <br>" + per_hour_message + (intricate_imbue[1] + 55000) + " gold, which is " + Math.round((intricate_imbue[1] + 55000) / 20) + " gold per hour of use.<br><br><br>"
-        }
-        else if (intricate_imbue[0] == "basic") {
-            imbue_results.innerHTML = imbue_results.innerHTML + intricate_message + "BASIC items for <span style=\"color:gold\">GOLD TOKENS</span> and Bloody Pincers from the <span style=\"color:green\">MARKET</span> " +
-                total_message + intricate_imbue[1] + " gold. <br>" + per_hour_message + (intricate_imbue[1] + 55000) + " gold, which is " + Math.round((intricate_imbue[1] + 55000) / 20) + " gold per hour of use.<br><br><br>"
-        }
-
+        initialTablePopulate("Vampire Teeth", "Bloody Pincers", "Piece of Dead Brain")
         powerful_imbue = calculate_powerful_imbue(goldtokenvalue, firstitemvalue, 25, seconditemvalue, 15, thirditemvalue, 5)
-        if (powerful_imbue[0] == "all_items") {
-            imbue_results.innerHTML = imbue_results.innerHTML + powerful_message + "ALL ITEMS from the <span style=\"color:green\">MARKET</span> " +
-                total_message + powerful_imbue[1] + " gold. <br>" + per_hour_message + (powerful_imbue[1] + 150000) + " gold, which is " + Math.round((powerful_imbue[1] + 150000) / 20) + " gold per hour of use.<br>"
-        }
-        else if (powerful_imbue[0] == "all_tokens") {
-            imbue_results.innerHTML = imbue_results.innerHTML + powerful_message + "ALL ITEMS for <span style=\"color:gold\">GOLD TOKENS</span> " +
-                total_message + powerful_imbue[1] + " gold. <br>" + per_hour_message + (powerful_imbue[1] + 150000) + " gold, which is " + Math.round((powerful_imbue[1] + 150000) / 20) + " gold per hour of use.<br>"
-        }
-        else if (powerful_imbue[0] == "intricate") {
-            imbue_results.innerHTML = imbue_results.innerHTML + powerful_message + "INTRICATE items for <span style=\"color:gold\">GOLD TOKENS</span> and Piece of Dead Brain from the <span style=\"color:green\">MARKET</span> " +
-                total_message + powerful_imbue[1] + " gold. <br>" + per_hour_message + (powerful_imbue[1] + 150000) + " gold, which is " + Math.round((powerful_imbue[1] + 150000) / 20) + " gold per hour of use.<br>"
-        }
-        else if (powerful_imbue[0] == "basic") {
-            imbue_results.innerHTML = imbue_results.innerHTML + powerful_message + "BASIC items for <span style=\"color:gold\">GOLD TOKENS</span> and Bloody Pincers AND Piece of Dead Brain from the <span style=\"color:green\">MARKET</span> " +
-                total_message + powerful_imbue[1] + " gold. <br>" + per_hour_message + (powerful_imbue[1] + 150000) + " gold, which is " + Math.round((powerful_imbue[1] + 150000) / 20) + " gold per hour of use.<br>"
-        }
+        intricate_imbue = calculate_intricate_imbue(goldtokenvalue, firstitemvalue, 25, seconditemvalue, 15)
+        basic_imbue = calculate_basic_imbue(goldtokenvalue, firstitemvalue, 25)
     }
     else if (imbue_type.includes("Strike")) {
-        basic_imbue = calculate_basic_imbue(goldtokenvalue, firstitemvalue, 20)
-        if (basic_imbue[0] == "all_items") {
-            imbue_results.innerHTML = imbue_results.innerHTML + basic_message + "ALL ITEMS from the <span style=\"color:green\">MARKET</span> " +
-                total_message + basic_imbue[1] + " gold. <br>" + per_hour_message + (basic_imbue[1] + 15000) + " gold, which is " + Math.round((basic_imbue[1] + 15000) / 20) + " gold per hour of use.<br><br><br>"
-        }
-        else if (basic_imbue[0] == "all_tokens") {
-            imbue_results.innerHTML = imbue_results.innerHTML + basic_message + "ALL ITEMS for <span style=\"color:gold\">GOLD TOKENS</span> " +
-                total_message + basic_imbue[1] + " gold. <br>" + per_hour_message + (basic_imbue[1] + 15000) + " gold, which is " + Math.round((basic_imbue[1] + 15000) / 20) + " gold per hour of use.<br><br><br>"
-        }
-
-        intricate_imbue = calculate_intricate_imbue(goldtokenvalue, firstitemvalue, 20, seconditemvalue, 25)
-        if (intricate_imbue[0] == "all_items") {
-            imbue_results.innerHTML = imbue_results.innerHTML + intricate_message + "ALL ITEMS from the <span style=\"color:green\">MARKET</span> " +
-                total_message + intricate_imbue[1] + " gold. <br>" + per_hour_message + (intricate_imbue[1] + 55000) + " gold, which is " + Math.round((intricate_imbue[1] + 55000) / 20) + " gold per hour of use.<br><br><br>"
-        }
-        else if (intricate_imbue[0] == "all_tokens") {
-            imbue_results.innerHTML = imbue_results.innerHTML + intricate_message + "ALL ITEMS for <span style=\"color:gold\">GOLD TOKENS</span> " +
-                total_message + intricate_imbue[1] + " gold. <br>" + per_hour_message + (intricate_imbue[1] + 55000) + " gold, which is " + Math.round((intricate_imbue[1] + 55000) / 20) + " gold per hour of use.<br><br><br>"
-        }
-        else if (intricate_imbue[0] == "basic") {
-            imbue_results.innerHTML = imbue_results.innerHTML + intricate_message + "BASIC items for <span style=\"color:gold\">GOLD TOKENS</span> and Sabreteeth from the <span style=\"color:green\">MARKET</span> " +
-                total_message + intricate_imbue[1] + " gold. <br>" + per_hour_message + (intricate_imbue[1] + 55000) + " gold, which is " + Math.round((intricate_imbue[1] + 55000) / 20) + " gold per hour of use.<br><br><br>"
-        }
-
+        initialTablePopulate("Protective Charms", "Sabreteeth", "Vexclaw Talons")
         powerful_imbue = calculate_powerful_imbue(goldtokenvalue, firstitemvalue, 20, seconditemvalue, 25, thirditemvalue, 5)
-        if (powerful_imbue[0] == "all_items") {
-            imbue_results.innerHTML = imbue_results.innerHTML + powerful_message + "ALL ITEMS from the <span style=\"color:green\">MARKET</span> " +
-                total_message + powerful_imbue[1] + " gold. <br>" + per_hour_message + (powerful_imbue[1] + 150000) + " gold, which is " + Math.round((powerful_imbue[1] + 150000) / 20) + " gold per hour of use.<br>"
-        }
-        else if (powerful_imbue[0] == "all_tokens") {
-            imbue_results.innerHTML = imbue_results.innerHTML + powerful_message + "ALL ITEMS for <span style=\"color:gold\">GOLD TOKENS</span> " +
-                total_message + powerful_imbue[1] + " gold. <br>" + per_hour_message + (powerful_imbue[1] + 150000) + " gold, which is " + Math.round((powerful_imbue[1] + 150000) / 20) + " gold per hour of use.<br>"
-        }
-        else if (powerful_imbue[0] == "intricate") {
-            imbue_results.innerHTML = imbue_results.innerHTML + powerful_message + "INTRICATE items for <span style=\"color:gold\">GOLD TOKENS</span> and Vexclaw Talons from the <span style=\"color:green\">MARKET</span> " +
-                total_message + powerful_imbue[1] + " gold. <br>" + per_hour_message + (powerful_imbue[1] + 150000) + " gold, which is " + Math.round((powerful_imbue[1] + 150000) / 20) + " gold per hour of use.<br>"
-        }
-        else if (powerful_imbue[0] == "basic") {
-            imbue_results.innerHTML = imbue_results.innerHTML + powerful_message + "BASIC items for <span style=\"color:gold\">GOLD TOKENS</span> and Sabreteeth AND Vexclaw Talons from the <span style=\"color:green\">MARKET</span> " +
-                total_message + powerful_imbue[1] + " gold. <br>" + per_hour_message + (powerful_imbue[1] + 150000) + " gold, which is " + Math.round((powerful_imbue[1] + 150000) / 20) + " gold per hour of use.<br>"
-        }
+        intricate_imbue = calculate_intricate_imbue(goldtokenvalue, firstitemvalue, 20, seconditemvalue, 25)
+        basic_imbue = calculate_basic_imbue(goldtokenvalue, firstitemvalue, 20)
     }
     else if (imbue_type.includes("Void")) {
-        basic_imbue = calculate_basic_imbue(goldtokenvalue, firstitemvalue, 25)
-        if (basic_imbue[0] == "all_items") {
-            imbue_results.innerHTML = imbue_results.innerHTML + basic_message + "ALL ITEMS from the <span style=\"color:green\">MARKET</span> " +
-                total_message + basic_imbue[1] + " gold. <br>" + per_hour_message + (basic_imbue[1] + 15000) + " gold, which is " + Math.round((basic_imbue[1] + 15000) / 20) + " gold per hour of use.<br><br><br>"
-        }
-        else if (basic_imbue[0] == "all_tokens") {
-            imbue_results.innerHTML = imbue_results.innerHTML + basic_message + "ALL ITEMS for <span style=\"color:gold\">GOLD TOKENS</span> " +
-                total_message + basic_imbue[1] + " gold. <br>" + per_hour_message + (basic_imbue[1] + 15000) + " gold, which is " + Math.round((basic_imbue[1] + 15000) / 20) + " gold per hour of use.<br><br><br>"
-        }
-        intricate_imbue = calculate_intricate_imbue(goldtokenvalue, firstitemvalue, 25, seconditemvalue, 25)
-        if (intricate_imbue[0] == "all_items") {
-            imbue_results.innerHTML = imbue_results.innerHTML + intricate_message + "ALL ITEMS from the <span style=\"color:green\">MARKET</span> " +
-                total_message + intricate_imbue[1] + " gold. <br>" + per_hour_message + (intricate_imbue[1] + 55000) + " gold, which is " + Math.round((intricate_imbue[1] + 55000) / 20) + " gold per hour of use.<br><br><br>"
-        }
-        else if (intricate_imbue[0] == "all_tokens") {
-            imbue_results.innerHTML = imbue_results.innerHTML + intricate_message + "ALL ITEMS for <span style=\"color:gold\">GOLD TOKENS</span> " +
-                total_message + intricate_imbue[1] + " gold. <br>" + per_hour_message + (intricate_imbue[1] + 55000) + " gold, which is " + Math.round((intricate_imbue[1] + 55000) / 20) + " gold per hour of use.<br><br><br>"
-        }
-        else if (intricate_imbue[0] == "basic") {
-            imbue_results.innerHTML = imbue_results.innerHTML + intricate_message + "BASIC items for <span style=\"color:gold\">GOLD TOKENS</span> and Silencer Claws from the <span style=\"color:green\">MARKET</span> " +
-                total_message + intricate_imbue[1] + " gold. <br>" + per_hour_message + (intricate_imbue[1] + 55000) + " gold, which is " + Math.round((intricate_imbue[1] + 55000) / 20) + " gold per hour of use.<br><br><br>"
-        }
+        initialTablePopulate("Rope Belts", "Silencer Claws", "Some Grimeleech Wings")
         powerful_imbue = calculate_powerful_imbue(goldtokenvalue, firstitemvalue, 25, seconditemvalue, 25, thirditemvalue, 5)
-        if (powerful_imbue[0] == "all_items") {
-            imbue_results.innerHTML = imbue_results.innerHTML + powerful_message + "ALL ITEMS from the <span style=\"color:green\">MARKET</span> " +
-                total_message + powerful_imbue[1] + " gold. <br>" + per_hour_message + (powerful_imbue[1] + 150000) + " gold, which is " + Math.round((powerful_imbue[1] + 150000) / 20) + " gold per hour of use.<br>"
-        }
-        else if (powerful_imbue[0] == "all_tokens") {
-            imbue_results.innerHTML = imbue_results.innerHTML + powerful_message + "ALL ITEMS for <span style=\"color:gold\">GOLD TOKENS</span> " +
-                total_message + powerful_imbue[1] + " gold. <br>" + per_hour_message + (powerful_imbue[1] + 150000) + " gold, which is " + Math.round((powerful_imbue[1] + 150000) / 20) + " gold per hour of use.<br>"
-        }
-        else if (powerful_imbue[0] == "intricate") {
-            imbue_results.innerHTML = imbue_results.innerHTML + powerful_message + "INTRICATE items for <span style=\"color:gold\">GOLD TOKENS</span> and Grimeleech Wings from the <span style=\"color:green\">MARKET</span> " +
-                total_message + powerful_imbue[1] + " gold. <br>" + per_hour_message + (powerful_imbue[1] + 150000) + " gold, which is " + Math.round((powerful_imbue[1] + 150000) / 20) + " gold per hour of use.<br>"
-        }
-        else if (powerful_imbue[0] == "basic") {
-            imbue_results.innerHTML = imbue_results.innerHTML + powerful_message + "BASIC items for <span style=\"color:gold\">GOLD TOKENS</span> and Silencer Claws AND Grimeleech Wings from the <span style=\"color:green\">MARKET</span> " +
-                total_message + powerful_imbue[1] + " gold. <br>" + per_hour_message + (powerful_imbue[1] + 150000) + " gold, which is " + Math.round((powerful_imbue[1] + 150000) / 20) + " gold per hour of use.<br>"
-        }
+        intricate_imbue = calculate_intricate_imbue(goldtokenvalue, firstitemvalue, 25, seconditemvalue, 25)
+        basic_imbue = calculate_basic_imbue(goldtokenvalue, firstitemvalue, 25)
+    }
+
+    powerful_imbue_cost_paragraph.innerHTML = "Total cost (with 100% imbue shrine chance): " + powerful_imbue[1] + " gold, which is: " + Math.round(powerful_imbue[1]/20) + " gold per hour."
+    intricate_imbue_cost_paragraph.innerHTML = "Total cost (with 100% imbue shrine chance): " + intricate_imbue[1] + " gold, which is: " + Math.round(intricate_imbue[1]/20) + " gold per hour."
+    basic_imbue_cost_paragraph.innerHTML = "Total cost (with 100% imbue shrine chance): " + basic_imbue[1] + " gold, which is: " + Math.round(basic_imbue[1]/20) + " gold per hour."
+
+
+    if (powerful_imbue[0] == "all_items") {
+        powerful_gold_token_cell_decision.innerHTML = "<span id=\"profit_negative\">No</span>"
+        powerful_first_imbue_item_cell_decision.innerHTML = "<span id=\"profit_positive\">Yes, from market</span>"
+        powerful_second_imbue_item_cell_decision.innerHTML = "<span id=\"profit_positive\">Yes, from market</span>"
+        powerful_third_imbue_item_cell_decision.innerHTML = "<span id=\"profit_positive\">Yes, from market</span>"
+    }
+    else if (powerful_imbue[0] == "all_tokens") {
+        powerful_gold_token_cell_decision.innerHTML = "<span id=\"profit_positive\">Yes, Powerful - 6 tokens</span>"
+        powerful_first_imbue_item_cell_decision.innerHTML = "<span id=\"profit_negative\">No</span>"
+        powerful_second_imbue_item_cell_decision.innerHTML = "<span id=\"profit_negative\">No</span>"
+        powerful_third_imbue_item_cell_decision.innerHTML = "<span id=\"profit_negative\">No</span>"
+    }
+    else if (powerful_imbue[0] == "intricate") {
+        powerful_gold_token_cell_decision.innerHTML = "<span id=\"profit_positive\">Yes, Intricate - 4 tokens</span>"
+        powerful_first_imbue_item_cell_decision.innerHTML = "<span id=\"profit_negative\">No</span>"
+        powerful_second_imbue_item_cell_decision.innerHTML = "<span id=\"profit_negative\">No</span>"
+        powerful_third_imbue_item_cell_decision.innerHTML = "<span id=\"profit_positive\">Yes, from market</span>"
+    }
+    else if (powerful_imbue[0] == "basic") {
+        powerful_gold_token_cell_decision.innerHTML = "<span id=\"profit_positive\">Yes, Basic - 2 tokens</span>"
+        powerful_first_imbue_item_cell_decision.innerHTML = "<span id=\"profit_negative\">No</span>"
+        powerful_second_imbue_item_cell_decision.innerHTML = "<span id=\"profit_positive\">Yes, from market</span>"
+        powerful_third_imbue_item_cell_decision.innerHTML = "<span id=\"profit_positive\">Yes, from market</span>"
+    }
+
+    if (intricate_imbue[0] == "all_items") {
+        intricate_gold_token_cell_decision.innerHTML = "<span id=\"profit_negative\">No</span>"
+        intricate_first_imbue_item_cell_decision.innerHTML = "<span id=\"profit_positive\">Yes, from market</span>"
+        intricate_second_imbue_item_cell_decision.innerHTML = "<span id=\"profit_positive\">Yes, from market</span>"
+    }
+    else if (intricate_imbue[0] == "all_tokens") {
+        intricate_gold_token_cell_decision.innerHTML = "<span id=\"profit_positive\">Yes, Intricate - 4 tokens</span>"
+        intricate_first_imbue_item_cell_decision.innerHTML = "<span id=\"profit_negative\">No</span>"
+        intricate_second_imbue_item_cell_decision.innerHTML = "<span id=\"profit_negative\">No</span>"
+    }
+    else if (intricate_imbue[0] == "basic") {
+        intricate_gold_token_cell_decision.innerHTML = "<span id=\"profit_positive\">Yes, Basic - 2 tokens</span>"
+        intricate_first_imbue_item_cell_decision.innerHTML = "<span id=\"profit_negative\">No</span>"
+        intricate_second_imbue_item_cell_decision.innerHTML = "<span id=\"profit_positive\">Yes, from market</span>"
+    }
+
+    if (basic_imbue[0] == "all_items") {
+        basic_gold_token_cell_decision.innerHTML = "<span id=\"profit_negative\">No</span>"
+        basic_first_imbue_item_cell_decision.innerHTML = "<span id=\"profit_positive\">Yes, from market</span>"
+    }
+    else if (basic_imbue[0] == "all_tokens") {
+        basic_gold_token_cell_decision.innerHTML = "<span id=\"profit_positive\">Yes, Basic - 2 tokens</span>"
+        basic_first_imbue_item_cell_decision.innerHTML = "<span id=\"profit_negative\">No</span>"
+    } 
+}
+
+function initialTablePopulate(first_item, second_item, third_item) {
+    powerful_imbue_label.innerHTML = powerful_imbue_label.innerHTML + imbue_type
+    intricate_imbue_label.innerHTML = intricate_imbue_label.innerHTML + imbue_type
+    basic_imbue_label.innerHTML = basic_imbue_label.innerHTML + imbue_type
+
+    for (var i = 0; i < first_imbue_item_cells.length; i++) {
+        first_imbue_item_cells[i].innerHTML = first_item
+    }
+    for (var i = 0; i < second_imbue_item_cells.length; i++) {
+        second_imbue_item_cells[i].innerHTML = second_item
+    }
+    for (var i = 0; i < third_imbue_item_cells.length; i++) {
+        third_imbue_item_cells[i].innerHTML = third_item
     }
 }
 
@@ -188,11 +174,11 @@ function calculate_basic_imbue(gold_token_value, first_item_value, first_item_qu
     gold_token_total = (gold_token_value * 2)
     if (gold_token_total > items_total) {
         results.push("all_items")
-        results.push(items_total)
+        results.push(items_total + 15000)
     }
     else {
         results.push("all_tokens")
-        results.push(gold_token_total)
+        results.push(gold_token_total + 15000)
     }
     return results
 }
@@ -208,16 +194,16 @@ function calculate_intricate_imbue(gold_token_value, first_item_value, first_ite
     if (basic_gold_tokens_total > all_lowest_cost) {
         if (all_gold_tokens_total > all_items_total) {
             results.push("all_items")
-            results.push(all_items_total)
+            results.push(all_items_total + 55000)
         }
         else {
             results.push("all_tokens")
-            results.push(all_gold_tokens_total)
+            results.push(all_gold_tokens_total + 55000)
         }
     }
     else {
         results.push("basic")
-        results.push(basic_gold_tokens_total)
+        results.push(basic_gold_tokens_total + 55000)
     }
     return results
 }
@@ -234,20 +220,20 @@ function calculate_powerful_imbue(gold_token_value, first_item_value, first_item
     if (Math.min(all_lowest_cost, intricate_gold_tokens_total, basic_gold_tokens_total) == all_lowest_cost) {
         if (all_gold_tokens_total > all_items_total) {
             results.push("all_items")
-            results.push(all_items_total)
+            results.push(all_items_total + 150000)
         }
         else {
             results.push("all_tokens")
-            results.push(all_gold_tokens_total)
+            results.push(all_gold_tokens_total + 150000)
         }
     }
     else if (Math.min(all_lowest_cost, intricate_gold_tokens_total, basic_gold_tokens_total) == intricate_gold_tokens_total) {
         results.push("intricate")
-        results.push(intricate_gold_tokens_total)
+        results.push(intricate_gold_tokens_total + 150000)
     }
     else if (Math.min(all_lowest_cost, intricate_gold_tokens_total, basic_gold_tokens_total) == basic_gold_tokens_total) {
         results.push("basic")
-        results.push(basic_gold_tokens_total)
+        results.push(basic_gold_tokens_total + 150000)
     }
     return results
 }

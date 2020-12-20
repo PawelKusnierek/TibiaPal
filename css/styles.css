@@ -497,15 +497,17 @@ ol, ul {
 }
 
 #archivetable {
-  display: initial !important;
+  padding-top: 10px;
+  display: inline-block !important;
   -webkit-box-align: left;
   -ms-flex-align: left;
   align-items: left;
+  border-collapse: collapse;
+  width: 95%;
 }
 
 #archivetable td {
-  border: 1px solid grey;
-  padding: 0px;
+  padding: 8px;
   margin: 0px;
 }
 
@@ -542,5 +544,34 @@ ol, ul {
 
 #imbue_results {
   display: none;
+}
+
+#imbue_results p {
+  display: block;
+}
+
+#imbue_results table {
+  display: inline-block;
+  border-collapse: collapse;
+  width: 90%;
+  padding-bottom: 40px;
+}
+
+#imbue_results td, th {
+  border: 1px solid grey;
+  padding: 5px;
+  margin: 0px;
+}
+
+.imbue_table_item {
+  min-width: 230px;
+}
+
+.imbue_table_decision {
+  min-width: 230px;
+}
+
+#basic_imbue_table {
+  padding-left: 10px;
 }
 /*# sourceMappingURL=styles.css.map */
