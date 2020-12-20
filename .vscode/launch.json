@@ -9,6 +9,13 @@
             "file": "${workspaceFolder}/index.html"
         },
         {
+            "name": "Launch imbue.html",
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "file": "${workspaceFolder}/imbue.html"
+        },
+        {
             "name": "Launch leech.html",
             "type": "firefox",
             "request": "launch",
