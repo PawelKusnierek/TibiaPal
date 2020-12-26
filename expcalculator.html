@@ -3,19 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>TibiaPal.com - Stamina calculator</title>
+    <title>TibiaPal.com - template for a new tool!</title>
     <meta name="author" content="Pawel Kusnierek">
-    <meta name="description"
-        content="Stamina calculator">
+    <meta name="description" content="template for a new tool">
     <meta name="keywords"
-        content="Tibia calculators, Tibia Calculator, Tibia news, Tibia, Tibia articles, TibiaLootSplit, Split Tibia Loot, Tibia Loot Analyser, Tibia Loot Share, Tibia Share Loot, Tibia Loot, Tibia Loot Split, Tibia Party Calculator, Tibia fansite, Tibia fan site, Tibia stamina calculator, stamina calculator">
+        content="Tibia calculators, Tibia Calculator, Tibia news, Tibia, Tibia articles, TibiaLootSplit, Split Tibia Loot, Tibia Loot Analyser, Tibia Loot Share, Tibia Share Loot, Tibia Loot, Tibia Loot Split, Tibia Party Calculator, Tibia fansite, Tibia fan site">
     <link rel="shortcut icon" href="images/crystalcoin.ico" type="image/x-icon">
 
     <!-- css files-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <!-- .js scripts -->
-    <script src="scripts/stamina.js"></script>
+    <script src="scripts/expcalculator.js"></script>
 
     <!-- extra googleapi fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
@@ -36,7 +35,8 @@
 <body>
     <main id="page-container">
         <div id="header">
-            <a href="https://tibiapal.com" target="_blank"><img src="images/1.png" style="width:85%"></a></div>
+            <a href="https://tibiapal.com" target="_blank"><img src="images/1.png" style="width:85%"></a>
+        </div>
         </div>
         <div id="banner"></div>
         <div id="right-header">
@@ -49,24 +49,26 @@
             <div class="nav-item"><a href="https://tibiapal.com/auctions">House Auctions</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/imbue">Imbue Calculator</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/expshare">Exp Share Calculator</a></div>
-            <div class="nav-item active"><a href="https://tibiapal.com/stamina">Stamina Calculator</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/stamina">Stamina Calculator</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/leech">Leech Calculator</a></div>
-            <div class="nav-item"><a href="https://tibiapal.com/expcalculator">Exp Calculator</a></div>
+            <div class="nav-item active"><a href="https://tibiapal.com/expcalculator">Exp Calculator</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/archive">Archive</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/contact">Contact</a></div>
-
         </nav>
         <section id="main-content">
-            <p id="staminaaragraph">
-                Find out the time required to fully regenerate your stamina.
-            <form id="staminaform">
-                <input type="text" id="staminalevel" name="staminalevel" placeholder="Enter stamina here, in format hh:mm, e.g. 38:17"
-                    autocomplete="off">
-                <input type="submit" id="staminasubmitbutton" value="Submit"
+            <p>Calculator to work out the amount of experience points needed between two levels. <br> Works for levels 1 - 2000.
+            </p>
+            <form id="expcalculatorform">
+                <label for="startinglevel">Starting level:</label>
+                <input type="text" id="startinglevel" name="startinglevel" placeholder="enter starting level e.g. 150"
+                    autocomplete="off"><br>
+                <label id="targetlevellabel" for="targetlevel">Target level:</label>
+                <input type="text" id="targetlevel" name="targetlevel" placeholder="enter target level e.g. 450"
+                    autocomplete="off"><br>
+                <input type="submit" id="expcalculatorsubmitbutton" value="Submit"
                     onclick="event.preventDefault(); submit_form()" />
             </form>
-            </p>
-            <p id="staminaresults"></p>
+            <div id="expcalculatorresults"></div>
         </section>
         <aside id="right-sidebar">
             <div class="right-sidebar-item"><a href="https://tibia.fandom.com" target="_blank"><img
@@ -86,7 +88,8 @@
                 website of Tibia is <a href="https://tibia.com" target="_blank">tibia.com</a>.<br><br>
                 TibiaPal.com source code and changelog can be found on
                 <a href="https://github.com/PawelKusnierek/TibiaPal" target="_blank">GitHub</a>.<br>
-                Created by Kusnier. </p><br>
+                Created by Kusnier.
+            </p><br>
         </footer>
         <aside id="right-footer-space"></aside>
     </main>

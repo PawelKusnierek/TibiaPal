@@ -3,19 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>TibiaPal.com - Stamina calculator</title>
+    <title>TibiaPal.com - template for articles!</title>
     <meta name="author" content="Pawel Kusnierek">
-    <meta name="description"
-        content="Stamina calculator">
+    <meta name="description" content="template for articles">
     <meta name="keywords"
-        content="Tibia calculators, Tibia Calculator, Tibia news, Tibia, Tibia articles, TibiaLootSplit, Split Tibia Loot, Tibia Loot Analyser, Tibia Loot Share, Tibia Share Loot, Tibia Loot, Tibia Loot Split, Tibia Party Calculator, Tibia fansite, Tibia fan site, Tibia stamina calculator, stamina calculator">
+        content="Tibia calculators, Tibia Calculator, Tibia news, Tibia, Tibia articles, TibiaLootSplit, Split Tibia Loot, Tibia Loot Analyser, Tibia Loot Share, Tibia Share Loot, Tibia Loot, Tibia Loot Split, Tibia Party Calculator, Tibia fansite, Tibia fan site">
     <link rel="shortcut icon" href="images/crystalcoin.ico" type="image/x-icon">
 
     <!-- css files-->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-
-    <!-- .js scripts -->
-    <script src="scripts/stamina.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
     <!-- extra googleapi fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
@@ -36,12 +32,13 @@
 <body>
     <main id="page-container">
         <div id="header">
-            <a href="https://tibiapal.com" target="_blank"><img src="images/1.png" style="width:85%"></a></div>
+            <a href="https://tibiapal.com" target="_blank"><img src="../images/1.png" style="width:85%"></a>
+        </div>
         </div>
         <div id="banner"></div>
         <div id="right-header">
             <div class="right-sidebar-item"><a href="https://www.tibia.com" target="_blank"><img
-                        src="images/tibia-logo-artwork-top.gif" style="width:85%"></a></div>
+                        src="../images/tibia-logo-artwork-top.gif" style="width:85%"></a></div>
         </div>
         <nav id="left-sidebar">
             <div class="nav-item"><a href="https://tibiapal.com">Latest News</a></div>
@@ -49,34 +46,36 @@
             <div class="nav-item"><a href="https://tibiapal.com/auctions">House Auctions</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/imbue">Imbue Calculator</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/expshare">Exp Share Calculator</a></div>
-            <div class="nav-item active"><a href="https://tibiapal.com/stamina">Stamina Calculator</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/stamina">Stamina Calculator</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/leech">Leech Calculator</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/expcalculator">Exp Calculator</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/archive">Archive</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/contact">Contact</a></div>
-
         </nav>
         <section id="main-content">
-            <p id="staminaaragraph">
-                Find out the time required to fully regenerate your stamina.
-            <form id="staminaform">
-                <input type="text" id="staminalevel" name="staminalevel" placeholder="Enter stamina here, in format hh:mm, e.g. 38:17"
-                    autocomplete="off">
-                <input type="submit" id="staminasubmitbutton" value="Submit"
-                    onclick="event.preventDefault(); submit_form()" />
-            </form>
-            </p>
-            <p id="staminaresults"></p>
+            <div class="article-date-title"><span class="date">26 Dec 2020</span> <span class="title">Exp calculator now
+                    available</span></div>
+            <article class="main-article">
+                <p>Hi all, <br><br>
+                    A new feature, 'Exp calculator' is available from today.<br>
+                    You can use it by navigating to 'Exp Calculator' on the left. <br><br>
+                    You can use it to quickly find out the amount of experience required between two given levels,
+                    e.g.:<br><br><br>
+                    <img id="expcalculatorexample" src="../images/expcalculatorexample.png"><br>
+                </p><br>
+
+                <p></p><br>~Kusnier</p>
+            </article>
         </section>
         <aside id="right-sidebar">
             <div class="right-sidebar-item"><a href="https://tibia.fandom.com" target="_blank"><img
-                        src="images/Tibia.Fandom.com.gif" style="width:85%" class="border-img"></a></div>
+                        src="../images/Tibia.Fandom.com.gif" style="width:85%" class="border-img"></a></div>
             <div class="right-sidebar-item"><a href="https://tibiadata.com/" target="_blank"><img
-                        src="images/TibiaData.com.gif" style="width:85%" class="border-img"></a></div>
+                        src="../images/TibiaData.com.gif" style="width:85%" class="border-img"></a></div>
             <div class="right-sidebar-item"><a href="https://guildstats.eu/" target="_blank"><img
-                        src="images/GuildStats.eu.gif" style="width:85%" class="border-img"></a></div>
+                        src="../images/GuildStats.eu.gif" style="width:85%" class="border-img"></a></div>
             <div class="right-sidebar-item"><a href="https://tibiabosses.com/" target="_blank"><img
-                        src="images/TibiaBosses.com.gif" style="width:85%" class="border-img"></a></div>
+                        src="../images/TibiaBosses.com.gif" style="width:85%" class="border-img"></a></div>
         </aside>
         <aside id="left-footer-space"></aside>
         <footer id="footer">
@@ -86,7 +85,8 @@
                 website of Tibia is <a href="https://tibia.com" target="_blank">tibia.com</a>.<br><br>
                 TibiaPal.com source code and changelog can be found on
                 <a href="https://github.com/PawelKusnierek/TibiaPal" target="_blank">GitHub</a>.<br>
-                Created by Kusnier. </p><br>
+                Created by Kusnier.
+            </p><br>
         </footer>
         <aside id="right-footer-space"></aside>
     </main>

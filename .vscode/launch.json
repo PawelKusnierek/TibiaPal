@@ -21,6 +21,13 @@
             "request": "launch",
             "reAttach": true,
             "file": "${workspaceFolder}/leech.html"
+        },
+        {
+            "name": "Launch expcalculator.html",
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "file": "${workspaceFolder}/expcalculator.html"
         }
     ]
 }
