@@ -475,50 +475,6 @@ ol, ul {
   width: 300px;
 }
 
-#leechform {
-  padding-top: 20px;
-  padding-left: 15px;
-  padding-bottom: 20px;
-  text-align: left;
-}
-
-#leechform input {
-  margin-top: 5px;
-  width: 200px;
-}
-
-#leechform label {
-  display: inline-block;
-  width: 200px;
-}
-
-#leechsubmitbutton {
-  width: 70px !important;
-}
-
-#archivetable {
-  padding-top: 10px;
-  display: inline-block !important;
-  -webkit-box-align: left;
-  -ms-flex-align: left;
-  align-items: left;
-  border-collapse: collapse;
-  width: 95%;
-}
-
-#archivetable td {
-  padding: 8px;
-  margin: 0px;
-}
-
-#dateheading {
-  width: 30%;
-}
-
-#titleheading {
-  width: 70%;
-}
-
 #imbueform {
   padding-left: 15px;
 }
@@ -605,5 +561,75 @@ ol, ul {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+#offlinetrainingform {
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+#offlinetrainingform input {
+  margin-top: 5px;
+  width: 160px;
+}
+
+#offlinetrainingform select {
+  margin-top: 5px;
+  width: 160px;
+}
+
+#offlinetrainingform label {
+  display: inline-block;
+  width: 170px;
+}
+
+#offlinesubmitbutton {
+  width: 70px !important;
+}
+
+#leechform {
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+#leechform input {
+  margin-top: 5px;
+  width: 200px;
+}
+
+#leechform label {
+  display: inline-block;
+  width: 200px;
+}
+
+#leechsubmitbutton {
+  width: 70px !important;
+}
+
+#archivetable {
+  padding-top: 10px;
+  display: inline-block !important;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left;
+  border-collapse: collapse;
+  width: 95%;
+}
+
+#archivetable td {
+  padding: 8px;
+  margin: 0px;
+}
+
+#dateheading {
+  width: 30%;
+}
+
+#titleheading {
+  width: 70%;
 }
 /*# sourceMappingURL=styles.css.map */

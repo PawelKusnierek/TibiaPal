@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <title>TibiaPal.com - Leech calculator</title>
     <meta name="author" content="Pawel Kusnierek">
-    <meta name="description"
-        content="Leech calculator">
+    <meta name="description" content="Leech calculator">
     <meta name="keywords"
         content="Tibia calculators, Tibia Calculator, Tibia news, Tibia, Tibia articles, TibiaLootSplit, Split Tibia Loot, Tibia Loot Analyser, Tibia Loot Share, Tibia Share Loot, Tibia Loot, Tibia Loot Split, Tibia Party Calculator, Tibia fansite, Tibia fan site, Tibia leech, Tibia leech calculator, leech calculator">
     <link rel="shortcut icon" href="images/crystalcoin.ico" type="image/x-icon">
@@ -57,15 +56,19 @@
             <div class="nav-item"><a href="https://tibiapal.com/contact">Contact</a></div>
         </nav>
         <section id="main-content">
-            <br>Leech formula is as follows:<br><br> 100% Leech for first monster hit, additional 10% for each subsequent monster <br><br> For example, if you hit 1 monster, you will Leech 100% (damage * leech percentage), when you hit 6 monsters, you will Leech 150% (100% + 5 * 10%)
+            <br>Leech formula is as follows:<br><br> 100% Leech for first monster hit, additional 10% for each
+            subsequent monster <br><br> For example, if you hit 1 monster, you will Leech 100% (damage * leech
+            percentage), when you hit 6 monsters, you will Leech 150% (100% + 5 * 10%)
             <form id="leechform">
                 <label for="damagedealt">Damage Dealt:</label>
-                <input type="text" id="damagedealt" name="damagedealt" placeholder="damage dealt e.g. 300" autocomplete="off"><br>
+                <input type="text" id="damagedealt" name="damagedealt" placeholder="damage dealt e.g. 300"
+                    autocomplete="off"><br>
                 <label id="leechpercentlabel" for="leechpercent">Leech %:</label>
                 <input type="text" id="leechpercent" name="leechpercent" placeholder="% value e.g. 15"
                     autocomplete="off"><br>
                 <label id="mobshitlabel" for="mobshit">Number of monsters hit:</label>
-                <input type="text" id="mobshit" name="mobshit" placeholder="number of monsters hit e.g. 8" autocomplete="off"><br>
+                <input type="text" id="mobshit" name="mobshit" placeholder="number of monsters hit e.g. 8"
+                    autocomplete="off"><br>
                 <input type="submit" id="leechsubmitbutton" value="Submit"
                     onclick="event.preventDefault(); submit_leech()" />
             </form>
