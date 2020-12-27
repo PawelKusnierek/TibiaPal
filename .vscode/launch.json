@@ -28,6 +28,13 @@
             "request": "launch",
             "reAttach": true,
             "file": "${workspaceFolder}/expcalculator.html"
+        },
+        {
+            "name": "Launch offlinetraining.html",
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "file": "${workspaceFolder}/offlinetraining.html"
         }
     ]
 }
