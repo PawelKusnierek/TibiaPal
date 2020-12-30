@@ -9,14 +9,14 @@ function find_rashid_city() {
 
     if (hour > 9) {
         city = find_city_based_on_day(day)
-        content_day.innerHTML = day + ":"
-        content_city.innerHTML = city
+        content_day.innerHTML =  ""
+        content_city.innerHTML = "Rashid in " + city
     }
     else {
         previous_day = find_previous_day(day)
         city = find_city_based_on_day(previous_day)
-        content_day.innerHTML = day + ":"
-        content_city.innerHTML = city
+        content_day.innerHTML = ""
+        content_city.innerHTML = "Rashid in " + city
     }
 }
 
