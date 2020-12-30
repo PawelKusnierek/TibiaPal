@@ -583,12 +583,12 @@ ol, ul {
 
 #offlinetrainingform input {
   margin-top: 5px;
-  width: 160px;
+  width: 143px;
 }
 
 #offlinetrainingform select {
   margin-top: 5px;
-  width: 160px;
+  width: 150px;
 }
 
 #offlinetrainingform label {
@@ -598,6 +598,15 @@ ol, ul {
 
 #offlinesubmitbutton {
   width: 70px !important;
+}
+
+#offlinetrainingpara {
+  text-align: left;
+  display: block;
+}
+
+#offlinetrainingformresults {
+  padding-bottom: 15px;
 }
 
 #leechform {

@@ -59,19 +59,19 @@
             <div class="nav-item"><a href="https://tibiapal.com/contact">Contact</a></div>
         </nav>
         <section id="main-content">
-            If you somehow made it onto this page... DOESN'T WORK YET!
+            <p id="offlinetrainingpara">This tool calculates the time it will take you to reach your target skill while
+                offline training only.<br><br>
+                The tool assumes 12h of offline training per day.<br><br>
+                The tool assumes:<br>
+                - Magic level training for mages (Druids & Sorcerers)<br>
+                - Melee (Axe/Club/Sword) training for knights<br>
+                - Distance training for paladins<br></p>
             <form id="offlinetrainingform">
-                <label for="vocation">Vocation:</label>
+                <label for="vocation">Vocation & skill:</label>
                 <select id="vocation" name="vocation">
-                    <option value="Mage">Mage (Druid/Sorcerer)</option>
-                    <option value="Knight">Knight</option>
-                    <option value="Paladin">Paladin</option>
-                </select><br>
-                <label id="skilltypelabel" for="skilltype">Skill:</label>
-                <select id="skilltype" name="skilltype">
-                    <option value="Magic">Magic</option>
-                    <option value="Melee">Melee (Axe/Club/Sword)</option>
-                    <option value="Distance">Distance</option>
+                    <option value="Knight">Knight - Melee</option>
+                    <option value="Paladin">Paladin - Distance</option>
+                    <option value="Mage">Mage - Magic</option>
                 </select><br>
                 <label id="currentskilllabel" for="currentskill">Current skill:</label>
                 <input type="text" id="currentskill" name="currentskill" placeholder="current skill, e.g. 112"
@@ -88,7 +88,9 @@
                 <input type="submit" id="offlinesubmitbutton" value="Submit"
                     onclick="event.preventDefault(); submit_form()" />
             </form>
-            <div id="offlinetrainingformresults"></div>
+            <div id="offlinetrainingformresults">
+
+            </div>
         </section>
         <aside id="right-sidebar">
             <div class="right-sidebar-item"><a href="https://tibia.fandom.com" target="_blank"><img
@@ -118,4 +120,5 @@
         <aside id="right-footer-space"></aside>
     </main>
 </body>
+
 </html>
