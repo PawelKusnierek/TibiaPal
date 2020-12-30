@@ -15,6 +15,7 @@
 
     <!-- .js scripts -->
     <script src="scripts/leech.js"></script>
+    <script src="scripts/rashid.js"></script>
 
     <!-- extra googleapi fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
@@ -32,7 +33,7 @@
     </script>
 </head>
 
-<body>
+<body onload="find_rashid_city()">
     <main id="page-container">
         <div id="header">
             <a href="https://tibiapal.com"><img src="images/1.png" style="width:85%"></a>
@@ -83,6 +84,10 @@
                         src="images/GuildStats.eu.gif" style="width:85%" class="border-img"></a></div>
             <div class="right-sidebar-item"><a href="https://tibiabosses.com/" target="_blank"><img
                         src="images/TibiaBosses.com.gif" style="width:85%" class="border-img"></a></div>
+            <div class="right-sidebar-item" id="Rashid"><img src="images/Rashid.gif" style="width:85%">
+            </div>
+            <div id="rashid-day">Unavailable...</div>
+            <div id="rashid-city">Unavailable...</div>
         </aside>
         <aside id="left-footer-space"></aside>
         <footer id="footer">
