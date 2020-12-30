@@ -14,6 +14,7 @@ Current features include:
 - Leech calculator
 - Exp calculator
 - Rashid tracker
+- Offline training calculator
 
 The site currently has approximately 100k pageviews a month.
 
@@ -30,6 +31,8 @@ HTML, CSS, SASS and JS
 ### 30th December 2020
 
 Added Rashid tracker to the sidebar
+
+Added Offline Training calculator
 
 ### 26th December 2020
 
