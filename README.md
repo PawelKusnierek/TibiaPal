@@ -12,6 +12,8 @@ Current features include:
 - Exp Share calculator
 - Stamina calculator
 - Leech calculator
+- Exp calculator
+- Rashid tracker
 
 The site currently has approximately 100k pageviews a month.
 
@@ -24,6 +26,14 @@ HTML, CSS, SASS and JS
 
 
 ## Changelog
+
+### 30th December 2020
+
+Added Rashid tracker to the sidebar
+
+### 26th December 2020
+
+Added exp calculator feature
 
 ### 20th December 2020
 
