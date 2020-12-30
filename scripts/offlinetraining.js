@@ -37,23 +37,26 @@ function submit_form() {
 
     hours = total_hours % 12
     days = (total_hours - hours) / 12
-
+    years = 0
+    months = 0
     if (days > 30) {
         left_days = days % 30
         months = (days - left_days) / 30
         days = left_days
     }
-    else {
-        months = 0
+    if (months > 12) {
+        left_months = months % 12
+        years = (months - left_months) / 12
+        months = left_months
     }
 
 
-    offlinetrainingformresults.innerHTML = "To get from " + currentskill + " " + skill_type + " to " + targetskill + " " + skill_type + ", you need to offline train for a total of " + total_hours + " hours, which is: <br><br><b>" + months + " months, " + days + " days, " + hours + " hours</b><br>"
+    offlinetrainingformresults.innerHTML = "To get from " + currentskill + " " + skill_type + " to " + targetskill + " " + skill_type + ", you need to offline train for a total of " + total_hours + " hours, which is: <br><br><b>" + years + " years, " + months + " months, " + days + " days, " + hours + " hours</b><br>"
 }
 
 function calculate_mage_skill(currentskill, currentskillpercentage, targetskill, loyalty) {
     current_skill_total_points = total_skill_points_at_given_level(magic_skill_constant, mage_magic_constant, parseInt(currentskill) + 1, 0)
-    points_to_next_skill = points_to_next_skill_level(magic_skill_constant, mage_magic_constant, parseInt(currentskill),10) * (currentskillpercentage / 100)
+    points_to_next_skill = points_to_next_skill_level(magic_skill_constant, mage_magic_constant, parseInt(currentskill), 10) * (currentskillpercentage / 100)
     target_skill_total_points = total_skill_points_at_given_level(magic_skill_constant, mage_magic_constant, targetskill, 0)
 
     total_points_needed_for_target = (target_skill_total_points - (current_skill_total_points - points_to_next_skill)) / (1 + (loyalty / 100))
