@@ -480,6 +480,12 @@ ol, ul {
   text-shadow: black 1px 1px 3px;
 }
 
+#rashidexample {
+  display: block;
+  width: 165px;
+  height: 100px;
+}
+
 #imbueform {
   padding-left: 15px;
 }
