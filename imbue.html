@@ -64,13 +64,13 @@
         </nav>
         <section id="main-content">
             <p id="imbue_paragraph"> Calculate the most cost effective way of getting imbuement items, by trading gold tokens with Yana or buying from the market! <br><br>
-            <form id="imbueform"><label for="imbue">Select imbue:</label>
-                <select name="imbue" id="imbue">
+            <form id="imbueform">
+                <select name="imbue" id="imbue" onChange="submit_imbue_type()">
+                    <option disabled selected value>Select Imbue</option>
                     <option value="Vampirism">Vampirism (Life Leech)</option>
                     <option value="Strike">Strike (Crit)</option>
                     <option value="Void">Void (Mana Leech)</option>
                 </select>
-                <input type="submit" id="imbuesubmitbutton" value="Submit" onclick="event.preventDefault(); submit_imbue_type()" />
             </form>
             <form id="imbueitemsform">
                 <label for ="goldtokenvalue">Gold token value:</label>
@@ -85,7 +85,7 @@
                 <!-- <input type="button" onclick="location.href='https:/\/tibialootsplit.com';" value="Refresh page" /> -->
             </form>
             <div id="imbue_results">
-                <p id="powerful_imbue_label" class="orange">POWERFUL </p>
+                <p id="powerful_imbue_label" class="orange"></p>
                 <p id="powerful_imbue_cost_paragraph"></p>
                 <table id="powerful_imbue_table">
                     <tr>
@@ -110,7 +110,7 @@
                     </tr>
                 </table>
 
-                <p id="intricate_imbue_label" class="orange">INTRICATE </p>
+                <p id="intricate_imbue_label" class="orange"></p>
                 <p id="intricate_imbue_cost_paragraph"></p>
                 <table id="intricate_imbue_table">
                     <tr>
@@ -131,7 +131,7 @@
                     </tr>
                 </table>
                 
-                <p id="basic_imbue_label" class="orange">BASIC </p>
+                <p id="basic_imbue_label" class="orange"></p>
                 <p id="basic_imbue_cost_paragraph"></p>
                 <table id="basic_imbue_table">
                     <tr>

@@ -4,8 +4,6 @@ function submit_imbue_type() {
     seconditemvalue_label = document.getElementById("seconditemvalue_label")
     thirditemvalue_label = document.getElementById("thirditemvalue_label")
 
-    document.getElementById("imbueform").style.display = "none"
-
     if (imbue_type.includes("Vampirism")) {
         firstitemvalue_label.innerHTML = "Vampire Teeth value:"
         seconditemvalue_label.innerHTML = "Bloody Pincers value:"
@@ -36,14 +34,12 @@ function submit_imbue_type() {
 
 function submit_imbue_values() {
     imbue_type = document.getElementById("imbue").value
-    document.getElementById("imbueitemsform").style.display = "none"
     goldtokenvalue = document.getElementById("goldtokenvalue").value
     firstitemvalue = document.getElementById("firstitemvalue").value
     seconditemvalue = document.getElementById("seconditemvalue").value
     thirditemvalue = document.getElementById("thirditemvalue").value
     imbue_results = document.getElementById("imbue_results")
     imbue_results.style.display = "initial"
-    document.getElementById("imbue_paragraph").style.display = "none"
 
 
 
@@ -153,9 +149,9 @@ function submit_imbue_values() {
 }
 
 function initialTablePopulate(first_item, second_item, third_item) {
-    powerful_imbue_label.innerHTML = powerful_imbue_label.innerHTML + imbue_type
-    intricate_imbue_label.innerHTML = intricate_imbue_label.innerHTML + imbue_type
-    basic_imbue_label.innerHTML = basic_imbue_label.innerHTML + imbue_type
+    powerful_imbue_label.innerHTML = "POWERFUL " + imbue_type
+    intricate_imbue_label.innerHTML = "INTRICATE " + imbue_type
+    basic_imbue_label.innerHTML = "BASIC " + imbue_type
 
     for (var i = 0; i < first_imbue_item_cells.length; i++) {
         first_imbue_item_cells[i].innerHTML = first_item
