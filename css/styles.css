@@ -92,8 +92,15 @@ ol, ul {
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
   order: 2;
-  -ms-flex-preferred-size: 60%;
-  flex-basis: 60%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  height: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 14px;
+  text-shadow: black 1px 1px 3px;
+  line-height: 130%;
+  color: #ebebeb;
 }
 
 #right-header {
@@ -342,38 +349,6 @@ ol, ul {
   margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-  #header {
-    display: none;
-  }
-  #banner {
-    display: none;
-  }
-  #right-header {
-    display: none;
-  }
-  #left-sidebar {
-    margin: 0;
-    padding: 0;
-  }
-  #main-content {
-    margin: 0;
-    padding: 0;
-  }
-  #right-sidebar {
-    display: none;
-  }
-  #left-footer-space {
-    display: none;
-  }
-  #footer {
-    display: none;
-  }
-  #right-footer-space {
-    display: none;
-  }
-}
-
 .article-date-title {
   margin-bottom: 5px;
   text-align: left;
@@ -489,6 +464,21 @@ ol, ul {
 #offlinetrainingexample {
   border: 1px grey solid;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#banner-paragraph {
+  -webkit-box-ordinal-group: 6;
+  -ms-flex-order: 5;
+  -ms-flex-preferred-size: 50%;
+  background-color: #061021f1;
+  font-size: 14px;
+  text-shadow: black 1px 1px 3px;
+  margin-bottom: 1px;
+  line-height: 130%;
+  color: #ebebeb;
+  margin-top: 10px;
 }
 
 #imbueform {
@@ -656,5 +646,58 @@ ol, ul {
 
 #titleheading {
   width: 70%;
+}
+
+@media (max-width: 768px) {
+  #header {
+    display: none;
+  }
+  #banner {
+    display: none;
+  }
+  #right-header {
+    display: none;
+  }
+  #left-sidebar {
+    margin: 0;
+    padding: 0;
+  }
+  #main-content {
+    margin: 0;
+    padding: 0;
+  }
+  #right-sidebar {
+    display: none;
+  }
+  #left-footer-space {
+    display: none;
+  }
+  #footer {
+    display: none;
+  }
+  #right-footer-space {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  #rashid-day, #rashid-city {
+    font-size: 14px;
+  }
+  #rashidexample {
+    width: 82px;
+    height: 50px;
+  }
+  .nav-item {
+    font-size: 14px;
+  }
+  #expcalculatorexample {
+    width: 300px;
+    height: 170px;
+  }
+  #offlinetrainingexample {
+    width: 300px;
+    height: 170px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
