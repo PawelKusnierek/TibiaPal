@@ -28,6 +28,10 @@ HTML, CSS, SASS and JS
 
 ## Changelog
 
+### 31st December 2020
+
+The imbue calculator form with item values and imbue type will no longer disappear, and will instead be re-usable
+
 ### 30th December 2020
 
 Added Rashid tracker to the sidebar
