@@ -497,12 +497,16 @@ ol, ul {
   margin: 0;
   margin-left: 30px;
   text-align: left;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .flagphoto {
   width: 12px;
   height: 12px;
+}
+
+.donationparagraph {
+  margin: 5px;
 }
 
 #imbueform {
@@ -723,6 +727,24 @@ ol, ul {
   #offlinetrainingexample {
     width: 300px;
     height: 170px;
+  }
+}
+
+@media (max-width: 1270px) {
+  #banner-paragraph {
+    font-size: 10px;
+  }
+  #top-donators {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 1050px) {
+  #banner-paragraph {
+    font-size: 9px;
+  }
+  #top-donators {
+    font-size: 9px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
