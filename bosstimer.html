@@ -3,17 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>TibiaPal.com - template for a new tool!</title>
+    <title>TibiaPal.com - Exp Share Calculator</title>
     <meta name="author" content="Pawel Kusnierek">
     <meta name="description"
-        content="template for a new tool">
+        content="Exp Share Calculator">
     <meta name="keywords"
-        content="Tibia calculators, Tibia Calculator, Tibia news, Tibia, Tibia articles, TibiaLootSplit, Split Tibia Loot, Tibia Loot Analyser, Tibia Loot Share, Tibia Share Loot, Tibia Loot, Tibia Loot Split, Tibia Party Calculator, Tibia fansite, Tibia fan site">
+        content="Tibia calculators, Tibia Calculator, Tibia news, Tibia, Tibia articles, TibiaLootSplit, Split Tibia Loot, Tibia Loot Analyser, Tibia Loot Share, Tibia Share Loot, Tibia Loot, Tibia Loot Split, Tibia Party Calculator, Tibia fansite, Tibia fan site, Tibia share exp, Tibia share exp calculator">
     <link rel="shortcut icon" href="images/crystalcoin.ico" type="image/x-icon">
 
     <!-- css files-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
+    <!-- .js scripts -->
+    <script src="scripts/bosstimer.js"></script>
     <script src="scripts/rashid.js"></script>
 
     <!-- extra googleapi fonts -->
@@ -68,7 +70,7 @@
             <div class="nav-item"><a href="https://tibiapal.com/tibialootsplit">TibiaLootSplit</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/auctions">House Auctions</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/imbue">Imbue Calculator</a></div>
-            <div class="nav-item"><a href="https://tibiapal.com/expshare">Exp Share Calculator</a></div>
+            <div class="nav-item active"><a href="https://tibiapal.com/expshare">Exp Share Calculator</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/stamina">Stamina Calculator</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/leech">Leech Calculator</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/expcalculator">Exp Calculator</a></div>
@@ -76,9 +78,17 @@
             <div class="nav-item"><a href="https://tibiapal.com/bosstimer">Boss Timer</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/archive">Archive</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/contact">Contact</a></div>
+
         </nav>
         <section id="main-content">
 
+            <p>Click in boss to start the cloak.</p>
+
+            <div id="quest-boss-list">
+
+            </div>
+
+            <script type="text/javascript">init();</script>
         </section>
         <aside id="right-sidebar">
             <div class="right-sidebar-item"><a href="https://tibia.fandom.com" target="_blank"><img
