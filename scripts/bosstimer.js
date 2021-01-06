@@ -13,7 +13,9 @@ var questList = [
 			{ name: "Mini Vengoth", hours: 20 },
 			{ name: "Final Vengoth", hours: 20 },
 			{ name: "Faceless Bane", hours: 20 },
+			{ name: "Brokul", hours: 20 },
 			{ name: "Golds", hours: 20 },
+			{ name: "Lion Bosses", hours: 20 },
 			{ name: "Golds Final", hours: 336 },
 			{ name: "Feru Final", hours: 336 },
 		]
@@ -27,6 +29,7 @@ var questList = [
 			{ name: "Soul of Dragonking Zyrtarch", hours: 20 },
 			{ name: "Melting Frozen Horror", hours: 20 },
 			{ name: "The Time Guardian", hours: 20 },
+			{ name: "The Last Lore Keeper", hours: 336 },
 		]
 	},
 	{
