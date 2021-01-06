@@ -509,6 +509,11 @@ ol, ul {
   margin: 5px;
 }
 
+#new-homepage {
+  font-size: 12px;
+  color: red !important;
+}
+
 #imbueform {
   padding-left: 15px;
   padding-bottom: 15px;
@@ -677,57 +682,6 @@ ol, ul {
   width: 70%;
 }
 
-#quest-boss-list h2 {
-  display: block;
-}
-
-#quest-boss-list ul {
-  width: 100%;
-  clear: both;
-  float: left;
-  margin-bottom: 15px;
-}
-
-#quest-boss-list ul li {
-  list-style: none;
-  width: 125px;
-  height: 155px;
-  float: left;
-  background: #dedede;
-  padding: 5px;
-  margin: 5px;
-  cursor: pointer;
-}
-
-#quest-boss-list ul li p {
-  display: block;
-}
-#quest-boss-list ul li .boss-image {
-  width: 64px;
-  height: 64px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#quest-boss-list ul li .boss-name {
-  color: #000;
-  text-shadow: none;
-  text-align: center;
-  text-overflow: ellipsis;
-white-space: nowrap;
-overflow: hidden;
-}
-
-#quest-boss-list ul li .boss-timer {
-  color: #000;
-  text-align: center;
-  margin-top: 10px;
-  font-size: 20px;
-  line-height: 26px;
-}
-
 @media (max-width: 768px) {
   #header {
     display: none;
@@ -797,5 +751,65 @@ overflow: hidden;
   #top-donators {
     font-size: 9px;
   }
+}
+
+#quest-boss-list h2 {
+  display: block;
+}
+
+#quest-boss-list ul {
+  width: 100%;
+  clear: both;
+  float: left;
+  margin-bottom: 15px;
+}
+
+#quest-boss-list ul li {
+  list-style: none;
+  width: 125px;
+  height: 155px;
+  float: left;
+  background: #dedede;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#quest-boss-list ul li p {
+  display: block;
+}
+
+#quest-boss-list ul li .boss-image {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#quest-boss-list ul li .boss-name {
+  color: #000;
+  text-shadow: none;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+#quest-boss-list ul li .boss-timer {
+  color: #000;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 26px;
+  text-shadow: none;
 }
 /*# sourceMappingURL=styles.css.map */

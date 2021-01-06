@@ -3,12 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>TibiaPal.com - Exp Share Calculator</title>
+    <title>TibiaPal.com - Boss Timers</title>
     <meta name="author" content="Pawel Kusnierek">
-    <meta name="description"
-        content="Exp Share Calculator">
+    <meta name="description" content="Tibia Boss Timers with a simple click">
     <meta name="keywords"
-        content="Tibia calculators, Tibia Calculator, Tibia news, Tibia, Tibia articles, TibiaLootSplit, Split Tibia Loot, Tibia Loot Analyser, Tibia Loot Share, Tibia Share Loot, Tibia Loot, Tibia Loot Split, Tibia Party Calculator, Tibia fansite, Tibia fan site, Tibia share exp, Tibia share exp calculator">
+        content="Tibia calculators, Tibia Calculator, Tibia news, Tibia, Tibia articles, TibiaLootSplit, Split Tibia Loot, Tibia Loot Analyser, Tibia Loot Share, Tibia Share Loot, Tibia Loot, Tibia Loot Split, Tibia Party Calculator, Tibia fansite, Tibia fan site, Tibia Boss Timers, Time Bosses Tibia">
     <link rel="shortcut icon" href="images/crystalcoin.ico" type="image/x-icon">
 
     <!-- css files-->
@@ -37,18 +36,23 @@
 <body onload="find_rashid_city()">
     <main id="page-container">
         <div id="header">
-            <a href="https://tibiapal.com"><img src="images/1.png" style="width:85%"></a></div>
+            <a href="https://tibiapal.com"><img src="images/1.png" style="width:85%"></a>
+        </div>
         </div>
         <div id="banner">
             <section id="banner-paragraph">
-                <p class="donationparagraph"><img class="flagphoto" src="images/englishflag.png"> Please consider donating some Tibia Coins to support
+                <p class="donationparagraph"><img class="flagphoto" src="images/englishflag.png"> Please consider
+                    donating some Tibia Coins to support
                     the site, you can transfer them to my character
                     '<b>Isudin</b>', thank you!<br></p>
-                <p class="donationparagraph"><img class="flagphoto" src="images/portugalflag.png"> Por favor, considere doar algumas Tibia Coins para
+                <p class="donationparagraph"><img class="flagphoto" src="images/portugalflag.png"> Por favor, considere
+                    doar algumas Tibia Coins para
                     apoiar o site, você pode transferi-las para o meu
                     personagem '<b>Isudin</b>', obrigado!<br></p>
-                <p class="donationparagraph"><img class="flagphoto" src="images/spainflag.png"> Considere donar algunas Tibia Coins para apoyar el sitio, puede transferirlas a mi personaje
-                    <b>'Isudin'</b>, ¡gracias!<br></p>
+                <p class="donationparagraph"><img class="flagphoto" src="images/spainflag.png"> Considere donar algunas
+                    Tibia Coins para apoyar el sitio, puede transferirlas a mi personaje
+                    <b>'Isudin'</b>, ¡gracias!<br>
+                </p>
             </section>
             <section id="top-donators"><span class="gold"><b>Top Donators:</b></span><br>
                 <ul id="donator-list">
@@ -68,21 +72,21 @@
         <nav id="left-sidebar">
             <div class="nav-item"><a href="https://tibiapal.com">Latest News</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/tibialootsplit">TibiaLootSplit</a></div>
+            <div class="nav-item active"><a href="https://tibiapal.com/bosstimers">Boss Timers</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/auctions">House Auctions</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/imbue">Imbue Calculator</a></div>
-            <div class="nav-item active"><a href="https://tibiapal.com/expshare">Exp Share Calculator</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/expshare">Exp Share Calculator</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/stamina">Stamina Calculator</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/leech">Leech Calculator</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/expcalculator">Exp Calculator</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/offlinetraining">Offline Training</a></div>
-            <div class="nav-item"><a href="https://tibiapal.com/bosstimer">Boss Timer</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/archive">Archive</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/contact">Contact</a></div>
 
         </nav>
         <section id="main-content">
 
-            <p>Click in boss to start the cloak.</p>
+            <p><b>HOW TO USE:</b><br><br>Simply 'click' on the photo of a boss to start their timer!</p>
 
             <div id="quest-boss-list">
 
@@ -112,10 +116,20 @@
                 website of Tibia is <a href="https://tibia.com" target="_blank">tibia.com</a>.<br><br>
                 TibiaPal.com source code and changelog can be found on
                 <a href="https://github.com/PawelKusnierek/TibiaPal" target="_blank">GitHub</a>.<br>
-                Created by Kusnier. </p><br>
+                Created by Kusnier.
+            </p><br>
         </footer>
         <aside id="right-footer-space"></aside>
     </main>
+
+
+    <div class="cookieconsent"
+        style="position:fixed;padding:20px;left:0;bottom:0;background-color:#000;color:#FFF;text-align:center;width:100%;z-index:99999;">
+        This page, TibiaPal 'Boss Timers' uses cookies to keep track of the timers between sessions. By continuing to use this
+        page, you agree to their use.
+        <a href="" style="color:#CCCCCC;" onclick="event.preventDefault(); cookieConsentClicked()">I Understand</a>
+    </div>
+
 </body>
 
 </html>
