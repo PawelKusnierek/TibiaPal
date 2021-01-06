@@ -180,7 +180,6 @@ function setCookieBoss(name, value, hours) {
 		expires = "; expires=" + date.toUTCString();
 	}
 	document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Strict;";
-	console.log(name + "=" + (value || "") + expires + "; path=/; SameSite=Strict;");
 }
 
 function getCookie(cname) {
