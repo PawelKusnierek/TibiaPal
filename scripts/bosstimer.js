@@ -2,8 +2,10 @@ var questList = [
 	{
 		name: "Common Rotation Bosses",
 		bosses: [
+			{ name: "Urmahlullu", hours: 20 },
 			{ name: "Scarlett", hours: 20 },
 			{ name: "Oberon", hours: 20 },
+			{ name: "Drume", hours: 20 },
 			{ name: "Mini Arena", hours: 20 },
 			{ name: "Final Arena", hours: 20 },
 			{ name: "Graves", hours: 20 },
@@ -13,6 +15,7 @@ var questList = [
 			{ name: "Faceless Bane", hours: 20 },
 			{ name: "Golds", hours: 20 },
 			{ name: "Golds Final", hours: 336 },
+			{ name: "Feru Final", hours: 336 },
 		]
 	},
 	{
