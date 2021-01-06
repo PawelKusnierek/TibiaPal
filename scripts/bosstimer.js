@@ -33,6 +33,13 @@ var questList = [
 		]
 	},
 	{
+		name: "Pirat Bosses",
+		bosses: [
+			{ name: "Tentugly", hours: 20 },
+			{ name: "Ratmiral", hours: 20 },
+		]
+	},
+	{
 		name: "Feaster of Souls",
 		bosses: [
 			{ name: "Brain Head", hours: 20 },
