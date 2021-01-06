@@ -14,6 +14,7 @@ var questList = [
 			{ name: "Final Vengoth", hours: 20 },
 			{ name: "Faceless Bane", hours: 20 },
 			{ name: "Brokul", hours: 20 },
+			{ name: "Leiden", hours: 20 },
 			{ name: "Golds", hours: 20 },
 			{ name: "Lion Bosses", hours: 20 },
 			{ name: "Golds Final", hours: 336 },
