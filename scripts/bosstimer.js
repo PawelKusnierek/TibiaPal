@@ -15,8 +15,9 @@ var questList = [
 			{ name: "Faceless Bane", hours: 20 },
 			{ name: "Brokul", hours: 20 },
 			{ name: "Leiden", hours: 20 },
-			{ name: "Golds", hours: 20 },
 			{ name: "Lion Bosses", hours: 20 },
+			{ name: "Were Bosses", hours: 20 },
+			{ name: "Golds", hours: 20 },
 			{ name: "Golds Final", hours: 336 },
 			{ name: "Feru Final", hours: 336 },
 		]
@@ -41,6 +42,39 @@ var questList = [
 		]
 	},
 	{
+		name: "Ferumbras Mini",
+		bosses: [
+			{ name: "Mazoran", hours: 48 },
+			{ name: "Plagirath", hours: 48 },
+			{ name: "Ragiaz", hours: 48 },
+			{ name: "Razzagorn", hours: 48 },
+			{ name: "Shulgrax", hours: 48 },
+			{ name: "Tarbaz", hours: 48 },
+			{ name: "Zamulosh", hours: 48 },
+		]
+	},
+	{
+		name: "Secret Library",
+		bosses: [
+			{ name: "Lokathmor", hours: 20 },
+			{ name: "Mazzinor", hours: 20 },
+			{ name: "Gorzindel", hours: 20 },
+			{ name: "Ghulosh", hours: 20 },
+			{ name: "The Scourge Of Oblivion", hours: 20 },
+		]
+	},
+	{
+		name: "Cults of Tibia",
+		bosses: [
+			{ name: "Essence Of Malice", hours: 20 },
+			{ name: "The Armored Voidborn", hours: 20 },
+			{ name: "The False God", hours: 20 },
+			{ name: "The Sandking", hours: 20 },
+			{ name: "The Souldespoiler", hours: 20 },
+			{ name: "The Source Of Corruption", hours: 20 },
+		]
+	},
+	{
 		name: "Feaster of Souls",
 		bosses: [
 			{ name: "Brain Head", hours: 20 },
@@ -50,13 +84,11 @@ var questList = [
 		]
 	},
 	{
-		name: "The Curse Spreads",
+		name: "Opticording Sphere",
 		bosses: [
-			{ name: "Bloodback", hours: 20 },
-			{ name: "Darkfang", hours: 20 },
-			{ name: "Sharpclaw", hours: 20 },
-			{ name: "Black Vixen", hours: 20 },
-			{ name: "Shadowpelt", hours: 20 },
+			{ name: "An Observer Eye", hours: 20 },
+			{ name: "Last Planegazer", hours: 20 },
+			{ name: "Planestrider", hours: 20 },
 		]
 	},
 	{
