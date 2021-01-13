@@ -161,8 +161,6 @@ function startTimer(boss) {
 
 	setTimer(boss, getTimeRemaining(getCookie(nameUnderscore(boss.name))));
 
-	console.log(getTimeRemaining(getCookie(nameUnderscore(boss.name))));
-
 	bossSetTimer(boss);
 }
 
@@ -172,7 +170,6 @@ function bossSetTimer(boss) {
 
 	// If expire remove cookie
 	if (cookie == '' || new Date(cookie) < new Date()) {
-		document.cookie = nameUnderscore(boss.name) + '=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT;';
 		return;
 	}
 
@@ -225,7 +222,7 @@ function setCookieBoss(name, value, hours) {
 		date.setTime(date.getTime() + hours * 60 * 60 * 1000);
 		expires = "; expires=" + date.toUTCString();
 	}
-	document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Strict;";
+	document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Strict; max-age=31536000;";
 }
 
 function getCookie(cname) {
