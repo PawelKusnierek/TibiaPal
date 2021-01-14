@@ -146,6 +146,17 @@ function init() {
 		});
 
 		mainDiv.appendChild(list);
+
+		questList.forEach(function (quest) {
+			quest.bosses.forEach(function (boss) {
+				var cookie = getCookie(nameUnderscore(boss.name));
+				if (new Date(cookie) < new Date()) {
+					var div = document.getElementById(nameUnderscore(boss.name) + '_timer');
+					div.innerHTML = "expired " + String((new Date(cookie)).getDate()) + "/" + String((new Date(cookie)).getMonth() + 1) + "/" + String((new Date(cookie)).getFullYear())
+				}
+			});
+
+		})
 	});
 }
 
@@ -217,6 +228,7 @@ function getTimeRemaining(endtime) {
 
 function setCookieBoss(name, value, hours) {
 	var expires = "";
+	// never gets called?
 	if (hours) {
 		var date = new Date();
 		date.setTime(date.getTime() + hours * 60 * 60 * 1000);
