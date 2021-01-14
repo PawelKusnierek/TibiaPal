@@ -35,13 +35,6 @@
             "request": "launch",
             "reAttach": true,
             "file": "${workspaceFolder}/offlinetraining.html"
-        },
-        {
-            "name": "Launch bosstimers.html",
-            "type": "firefox",
-            "request": "launch",
-            "reAttach": true,
-            "file": "${workspaceFolder}/bosstimers.html"
         }
     ]
 }
