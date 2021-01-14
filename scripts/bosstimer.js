@@ -146,18 +146,17 @@ function init() {
 		});
 
 		mainDiv.appendChild(list);
+	})
 
-		questList.forEach(function (quest) {
-			quest.bosses.forEach(function (boss) {
-				var cookie = getCookie(nameUnderscore(boss.name));
-				if (new Date(cookie) < new Date()) {
-					var div = document.getElementById(nameUnderscore(boss.name) + '_timer');
-					div.innerHTML = "expired " + String((new Date(cookie)).getDate()) + "/" + String((new Date(cookie)).getMonth() + 1) + "/" + String((new Date(cookie)).getFullYear())
-				}
-			});
-
-		})
-	});
+	questList.forEach(function (quest) {
+		quest.bosses.forEach(function (boss) {
+			var cookie = getCookie(nameUnderscore(boss.name));
+			if (new Date(cookie) < new Date()) {
+				var div = document.getElementById(nameUnderscore(boss.name) + '_timer');
+				div.innerHTML = "expired " + String((new Date(cookie)).getDate()) + "/" + String((new Date(cookie)).getMonth() + 1) + "/" + String((new Date(cookie)).getFullYear())
+			}
+		});
+	})
 }
 
 function startTimer(boss) {

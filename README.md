@@ -15,6 +15,7 @@ Current features include:
 - Exp calculator
 - Rashid tracker
 - Offline training calculator
+- Boss Timers
 
 The site currently has approximately 100k pageviews a month.
 
@@ -27,6 +28,16 @@ HTML, CSS, SASS and JS
 
 
 ## Changelog
+
+### 14th January 2021
+
+Fixes to 'Boss Timers' for certain users who lost state on closing browser
+
+Added 'Expired date' for expired boss timer cookies - to give you an indication if you remembered to click the boss
+
+### 6th January 2021
+
+Added 'Boss Timers' to help track boss cooldowns
 
 ### 31st December 2020
 
