@@ -151,9 +151,22 @@ function init() {
 	questList.forEach(function (quest) {
 		quest.bosses.forEach(function (boss) {
 			var cookie = getCookie(nameUnderscore(boss.name));
-			if (new Date(cookie) < new Date()) {
+			current_date = new Date()
+			boss_expiry_date = new Date(cookie)
+			if (boss_expiry_date < current_date) {
 				var div = document.getElementById(nameUnderscore(boss.name) + '_timer');
-				div.innerHTML = "expired " + String((new Date(cookie)).getDate()) + "/" + String((new Date(cookie)).getMonth() + 1) + "/" + String((new Date(cookie)).getFullYear())
+				time_difference_in_ms = current_date.getTime() - boss_expiry_date.getTime()
+				time_difference_in_sec = Math.round(time_difference_in_ms / 1000)
+				time_difference_in_min = Math.round(time_difference_in_sec / 60)
+				
+				if (time_difference_in_min > 60) {
+					time_difference_in_hr = Math.round(time_difference_in_min / 60)
+					div.innerHTML = "expired<br> " + String(time_difference_in_hr) + " hours ago"
+				}
+				else {
+					div.innerHTML = "expired<br> " + String(time_difference_in_min) + " min ago"
+				}
+				
 			}
 		});
 	})
