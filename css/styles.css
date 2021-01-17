@@ -514,6 +514,13 @@ ol, ul {
   color: red !important;
 }
 
+#ordered_donators_list {
+  text-align: left;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 #imbueform {
   padding-left: 15px;
   padding-bottom: 15px;
