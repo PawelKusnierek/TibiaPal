@@ -521,6 +521,12 @@ ol, ul {
   padding-bottom: 20px;
 }
 
+.about_p {
+  text-align: left;
+  padding-bottom: 12px;
+  padding-left: 10px;
+}
+
 #imbueform {
   padding-left: 15px;
   padding-bottom: 15px;
