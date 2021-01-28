@@ -527,6 +527,22 @@ ol, ul {
   padding-left: 10px;
 }
 
+.hunting_table {
+  display: initial;
+}
+
+.level_row {
+  width: 30%;
+}
+
+.place_row {
+  width: 70%;
+}
+
+.hunting_table td {
+  padding-bottom: 10px;
+}
+
 #imbueform {
   padding-left: 15px;
   padding-bottom: 15px;
