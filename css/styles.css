@@ -718,7 +718,7 @@ ol, ul {
   width: 70%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   #header {
     display: none;
   }
