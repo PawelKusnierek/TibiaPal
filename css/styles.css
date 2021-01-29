@@ -101,7 +101,6 @@ ol, ul {
   text-shadow: black 1px 1px 3px;
   line-height: 130%;
   color: #ebebeb;
-  background-color: #061021f1;
 }
 
 #right-header {
@@ -540,7 +539,7 @@ ol, ul {
 }
 
 .hunting_table td {
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 }
 
 #imbueform {
