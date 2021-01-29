@@ -550,6 +550,13 @@ ol, ul {
   padding-top: 40px;
 }
 
+#adblock-disable {
+  margin-top: 10px;
+  background-color: #061021f1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 #imbueform {
   padding-left: 15px;
   padding-bottom: 15px;
