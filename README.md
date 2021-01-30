@@ -16,6 +16,7 @@ Current features include:
 - Rashid tracker
 - Offline training calculator
 - Boss Timers
+- Hunting Places
 
 The site currently has approximately 100k pageviews a month.
 
@@ -28,6 +29,10 @@ HTML, CSS, SASS and JS
 
 
 ## Changelog
+
+### 30th January 2021
+
+Added 'Hunting Places', list of all hunting places for all solo and multiple vocation combinations
 
 ### 14th January 2021
 
