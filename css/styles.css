@@ -563,6 +563,14 @@ ol, ul {
   background-color: #0d1e38;
 }
 
+#hunting_list_notes {
+  text-align: left;
+}
+
+#hunting_list_notes li {
+  padding-bottom: 12px;
+}
+
 #imbueform {
   padding-left: 15px;
   padding-bottom: 15px;
