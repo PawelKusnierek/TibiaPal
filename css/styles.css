@@ -540,7 +540,8 @@ ol, ul {
 }
 
 .hunting_table td {
-  padding-bottom: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 #left-sidebar-ad {
@@ -556,6 +557,10 @@ ol, ul {
   background-color: #061021f1;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.hunting_table tbody tr:nth-child(even) {
+  background-color: #0d1e38;
 }
 
 #imbueform {
