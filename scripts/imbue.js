@@ -74,19 +74,19 @@ function submit_imbue_values() {
     basic_imbue_cost_paragraph = document.getElementById("basic_imbue_cost_paragraph")
 
     if (imbue_type.includes("Vampirism")) {
-        initialTablePopulate("Vampire Teeth", "Bloody Pincers", "Piece of Dead Brain")
+        initialTablePopulate("Vampire Teeth (25)", "Bloody Pincers (15)", "Piece of Dead Brain (5)")
         powerful_imbue = calculate_powerful_imbue(goldtokenvalue, firstitemvalue, 25, seconditemvalue, 15, thirditemvalue, 5)
         intricate_imbue = calculate_intricate_imbue(goldtokenvalue, firstitemvalue, 25, seconditemvalue, 15)
         basic_imbue = calculate_basic_imbue(goldtokenvalue, firstitemvalue, 25)
     }
     else if (imbue_type.includes("Strike")) {
-        initialTablePopulate("Protective Charms", "Sabreteeth", "Vexclaw Talons")
+        initialTablePopulate("Protective Charms (20)", "Sabreteeth (25)", "Vexclaw Talons (5)")
         powerful_imbue = calculate_powerful_imbue(goldtokenvalue, firstitemvalue, 20, seconditemvalue, 25, thirditemvalue, 5)
         intricate_imbue = calculate_intricate_imbue(goldtokenvalue, firstitemvalue, 20, seconditemvalue, 25)
         basic_imbue = calculate_basic_imbue(goldtokenvalue, firstitemvalue, 20)
     }
     else if (imbue_type.includes("Void")) {
-        initialTablePopulate("Rope Belts", "Silencer Claws", "Some Grimeleech Wings")
+        initialTablePopulate("Rope Belts (25)", "Silencer Claws (25)", "Some Grimeleech Wings (5)")
         powerful_imbue = calculate_powerful_imbue(goldtokenvalue, firstitemvalue, 25, seconditemvalue, 25, thirditemvalue, 5)
         intricate_imbue = calculate_intricate_imbue(goldtokenvalue, firstitemvalue, 25, seconditemvalue, 25)
         basic_imbue = calculate_basic_imbue(goldtokenvalue, firstitemvalue, 25)
