@@ -5,17 +5,14 @@ function find_rashid_city() {
     hour = parseInt(time.substring(time.length - 5, time.length - 3))
 
     content_city = document.getElementById("rashid-city")
-    content_day = document.getElementById("rashid-day")
 
     if (hour > 9) {
         city = find_city_based_on_day(day)
-        content_day.innerHTML =  ""
         content_city.innerHTML = "Rashid in " + city
     }
     else {
         previous_day = find_previous_day(day)
         city = find_city_based_on_day(previous_day)
-        content_day.innerHTML = ""
         content_city.innerHTML = "Rashid in " + city
     }
 }
