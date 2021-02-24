@@ -224,7 +224,7 @@ ol, ul {
   -ms-flex-order: 8;
   order: 8;
   -ms-flex-preferred-size: 70%;
-  flex-basis: 70%;
+  flex-basis: 60%;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
