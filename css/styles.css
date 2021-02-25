@@ -447,9 +447,10 @@ ol, ul {
   width: 300px;
 }
 
-#rashid-day, #rashid-city {
+#rashid-city {
   font-size: 18px;
   text-shadow: black 1px 1px 3px;
+  padding-bottom: 30px;
 }
 
 #rashidexample {
@@ -568,6 +569,13 @@ ol, ul {
 
 #hunting_list_notes li {
   padding-bottom: 12px;
+}
+
+#stream-info {
+  padding-top: 15px;
+  font-size: 18px;
+  padding-bottom: 15px;
+  background-color: #061021f1;
 }
 
 #imbueform {
@@ -771,7 +779,7 @@ ol, ul {
 }
 
 @media (max-width: 1000px) {
-  #rashid-day, #rashid-city {
+  #rashid-day {
     font-size: 14px;
   }
   #rashidexample {
