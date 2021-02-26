@@ -13,6 +13,7 @@ function find_stream_status() {
     XML.open("GET", "https://api.twitch.tv/helix/streams/?user_login=kusnierr", true);
     XML.setRequestHeader("Client-ID", "qqiafa1gpappsi6jz2yq056ajcuxnu");
     XML.send();
+    console.log(XML)
     XML.onload = function () {
         console.log(XML.response)
         response1 = JSON.parse(XML.response);
