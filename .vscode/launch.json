@@ -42,6 +42,13 @@
             "request": "launch",
             "reAttach": true,
             "file": "${workspaceFolder}/bosstimers.html"
+        },
+        {
+            "name": "Launch contact.html",
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "file": "${workspaceFolder}/contact.html"
         }
     ]
 }
