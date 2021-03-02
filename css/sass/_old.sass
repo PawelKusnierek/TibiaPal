@@ -508,14 +508,14 @@ ol, ul
     padding: 0 10px 0 10px
 
 .collapsible
-    background-color: #061021f1
+    background-color: #09162e49
     cursor: pointer
     padding: 18px
     width: 100%
-    border: 1px solid grey
+    border: none
     outline: none
     text-align: left
-    font-size: 14px
+    font-size: 18px
     text-shadow: black 1px 1px 3px
     line-height: 130%
     color: #ebebeb
@@ -524,6 +524,9 @@ ol, ul
 .active-bestiary, .collapsible:hover
     background-color: #0f2344e8
 
+.active-bestiary:after
+    content: '\2212' !important
+
 .bestiary-content
     padding: 0 18px
     display: none
@@ -531,3 +534,10 @@ ol, ul
 
 .bestiary_table tbody tr:nth-child(even)
     background-color: #0d1e38
+
+.collapsible:after
+    content: '\002B'
+    font-size: 14px
+    float: right
+
+

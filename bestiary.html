@@ -87,7 +87,7 @@
                 <li>If you have suggestions for this guide please email me at <a
                         href="mailto:tibiapalcontact@gmail.com">tibiapalcontact@gmail.com</a>.</li>
             </ol>
-            <button type="button" class="collapsible">1x Respawn</button>
+            <button type="button" class="collapsible"><b>1x Respawn</b></button>
             <div class="bestiary-content">
                 <p>Monsters in this section are completable on 1x respawn. Of course, all of these monsters can be
                     completed quicker on rapid respawn, but rapid is not necessary.<br><br></p>
@@ -137,7 +137,7 @@
                 </table>
             </div>
 
-            <button type="button" class="collapsible">Rapid Respawn</button>
+            <button type="button" class="collapsible"><b>Rapid Respawn</b></button>
             <div class="bestiary-content">
                 <p>Monsters in this section are best completed on rapid respawn. It will take a significantly longer
                     amount of time to complete these monsters outside of rapid respawn.<br><br></p>
@@ -181,7 +181,7 @@
                 </table>
             </div>
 
-            <button type="button" class="collapsible">Regular Hunting</button>
+            <button type="button" class="collapsible"><b>Regular Hunting</b></button>
             <div class="bestiary-content">
                 <p>Monsters in this section are normally completed during regular solo/team hunting. We do not recommend
                     specifically targetting these monsters for bestiary outside of regular hunting.<br><br></p>
@@ -237,7 +237,7 @@
                 </table>
             </div>
 
-            <button type="button" class="collapsible">Rare Bestiary and Special Events</button>
+            <button type="button" class="collapsible"><b>Rare Bestiary and Special Events</b></button>
             <div class="bestiary-content">
                 <p>Monsters in this section are only completable during raids/special events (e.g. Midnight Panther,
                     Cake Golem, Orger, Lightbearer Monsters, Yeti etc.). We recommend completing these monsters whenever such an event is
@@ -282,7 +282,7 @@
 
                 for (i = 0; i < coll.length; i++) {
                     coll[i].addEventListener("click", function () {
-                        this.classList.toggle("active");
+                        this.classList.toggle("active-bestiary");
                         var content = this.nextElementSibling;
                         if (content.style.display === "block") {
                             content.style.display = "none";
