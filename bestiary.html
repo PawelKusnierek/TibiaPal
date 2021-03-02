@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TibiaPal.com - Bestiary Guide</title>
+    <meta name="author" content="Pawel Kusnierek">
+    <meta name="description" content="Bestiary Guide for Tibia for all monsters split by best approach to complete it">
+    <meta name="keywords"
+        content="Tibia calculators, Tibia Calculator, Tibia news, Tibia, Tibia articles, TibiaLootSplit, Split Tibia Loot, Tibia Loot Analyser, Tibia Loot Share, Tibia Share Loot, Tibia Loot, Tibia Loot Split, Tibia Party Calculator, Tibia fansite, Tibia fan site, Bestiary Guide">
+    <link rel="shortcut icon" href="images/crystalcoin.ico" type="image/x-icon">
+
+    <!-- css files-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <script src="scripts/bestiary.js"></script>
+    <script src="scripts/rashid.js"></script>
+
+    <!-- extra googleapi fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+    <!-- Analytics and ad related section-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVVNY9BHWM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PVVNY9BHWM');
+    </script>
+    <script data-ad-client="ca-pub-2936542406889680" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body onload="find_rashid_city()">
+    <main id="page-container">
+        <div id="header">
+            <a href="https://tibiapal.com"><img src="images/1.png" style="width:85%"></a>
+        </div>
+        </div>
+        <div id="banner">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- Banner Ad -->
+            <ins class="adsbygoogle" style="display:inline-block;width:400px;height:90px"
+                data-ad-client="ca-pub-2936542406889680" data-ad-slot="4845773006"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <div id="right-header">
+            <div class="right-sidebar-item"><a href="https://www.tibia.com" target="_blank"><img
+                        src="images/tibia-logo-artwork-top.gif" style="width:85%"></a></div>
+        </div>
+        <nav id="left-sidebar">
+            <div class="nav-item"><a href="https://tibiapal.com">Latest News</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/about">About</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/tibialootsplit">TibiaLootSplit</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/bosstimers">Boss Timers</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/hunting">Hunting Places</a></div>
+            <div class="nav-item active"><a href="https://tibiapal.com/bestiary"><span
+                        id="new-homepage">NEW!</span>Bestiary Guide</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/auctions">House Auctions</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/imbue">Imbue Calculator</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/expshare">Exp Share Calculator</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/stamina">Stamina Calculator</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/leech">Leech Calculator</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/expcalculator">Exp Calculator</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/offlinetraining">Offline Training</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/donators">Donators</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/archive">Archive</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/contact">Contact</a>
+            </div>
+            <div class="nav-item"><a href="https://tibiapal.com/privacy">Privacy Policy</a></div>
+            <div class="right-sidebar-item" id="Rashid"><img src="images/Rashid.gif" style="width:45%">
+            </div>
+            <div id="rashid-city">Unavailable...</div>
+
+        </nav>
+        <section id="main-content">
+            <h1>Tibia Bestiary Guide</h1>
+            <ol id="hunting_list_notes">
+                <li>All Bestiary monsters can be found in one of the sections of this guide</li>
+                <li>Explain Difficulty...</li>
+                <li>Explain how type of event was decided blah blah....</li>
+                <li>If you have suggestions for this guide please email me at <a
+                        href="mailto:tibiapalcontact@gmail.com">tibiapalcontact@gmail.com</a>.</li>
+            </ol>
+            <button type="button" class="collapsible">1x Respawn</button>
+            <div class="bestiary-content">
+                <p>Monsters in this section are completable on 1x respawn. Of course, all of these monsters can be
+                    completed quicker on rapid respawn, but rapid is not necessary.<br><br></p>
+                <table class="bestiary_table">
+                    <tr>
+                        <th>Monster</th>
+                        <th>Points</th>
+                        <th>Difficulty</th>
+                        <th>Suggested Spawn</th>
+                    </tr>
+                    <tr>
+                        <td>Troll</td>
+                        <td>5</td>
+                        <td>Easy</td>
+                        <td>Ab'Dendriel Trolls</td>
+                    </tr>
+                    <tr>
+                        <td>Goblin</td>
+                        <td>5</td>
+                        <td>Easy</td>
+                        <td>Edron Goblins</td>
+                    </tr>
+                    <tr>
+                        <td>Wasp</td>
+                        <td>5</td>
+                        <td>Easy</td>
+                        <td>Ab'Dendriel Wasp Cave</td>
+                    </tr>
+                    <tr>
+                        <td>Wasp</td>
+                        <td>5</td>
+                        <td>Easy</td>
+                        <td>Ab'Dendriel Wasp Cave</td>
+                    </tr>
+                    <tr>
+                        <td>Wasp</td>
+                        <td>5</td>
+                        <td>Easy</td>
+                        <td>Ab'Dendriel Wasp Cave</td>
+                    </tr>
+                    <tr>
+                        <td>Wasp</td>
+                        <td>5</td>
+                        <td>Easy</td>
+                        <td>Ab'Dendriel Wasp Cave</td>
+                    </tr>
+                </table>
+            </div>
+
+            <button type="button" class="collapsible">Rapid Respawn</button>
+            <div class="bestiary-content">
+                <p>Monsters in this section are best completed on rapid respawn. It will take a significantly longer
+                    amount of time to complete these monsters outside of rapid respawn.<br><br></p>
+                <table class="bestiary_table">
+                    <tr>
+                        <th>Monster</th>
+                        <th>Points</th>
+                        <th>Difficulty</th>
+                        <th>Suggested Spawn</th>
+                    </tr>
+                    <tr>
+                        <td>Skunk</td>
+                        <td>5</td>
+                        <td>Easy</td>
+                        <td>South Thais</td>
+                    </tr>
+                    <tr>
+                        <td>Squirrel</td>
+                        <td>5</td>
+                        <td>Easy</td>
+                        <td>Yalahar</td>
+                    </tr>
+                    <tr>
+                        <td>Hyaena</td>
+                        <td>15</td>
+                        <td>Medium</td>
+                        <td>Oasis Tomb</td>
+                    </tr>
+                    <tr>
+                        <td>Hyaena</td>
+                        <td>15</td>
+                        <td>Medium</td>
+                        <td>Oasis Tomb</td>
+                    </tr>
+                    <tr>
+                        <td>Hyaena</td>
+                        <td>15</td>
+                        <td>Medium</td>
+                        <td>Oasis Tomb</td>
+                    </tr>
+                </table>
+            </div>
+
+            <button type="button" class="collapsible">Regular Hunting</button>
+            <div class="bestiary-content">
+                <p>Monsters in this section are normally completed during regular solo/team hunting. We do not recommend
+                    specifically targetting these monsters for bestiary outside of regular hunting.<br><br></p>
+                <table class="bestiary_table">
+                    <tr>
+                        <th>Monster</th>
+                        <th>Points</th>
+                        <th>Difficulty</th>
+                        <th>Suggested Spawn</th>
+                    </tr>
+                    <tr>
+                        <td>Midnight Asura</td>
+                        <td>25</td>
+                        <td>Medium</td>
+                        <td>Asura Palace/Mirror</td>
+                    </tr>
+                    <tr>
+                        <td>Dawnfire Asura</td>
+                        <td>50</td>
+                        <td>Medium</td>
+                        <td>Asura Palace/Mirror</td>
+                    </tr>
+                    <tr>
+                        <td>Dawnfire Asura</td>
+                        <td>50</td>
+                        <td>Medium</td>
+                        <td>Asura Palace/Mirror</td>
+                    </tr>
+                    <tr>
+                        <td>Dawnfire Asura</td>
+                        <td>50</td>
+                        <td>Medium</td>
+                        <td>Asura Palace/Mirror</td>
+                    </tr>
+                    <tr>
+                        <td>Dawnfire Asura</td>
+                        <td>50</td>
+                        <td>Medium</td>
+                        <td>Asura Palace/Mirror</td>
+                    </tr>
+                    <tr>
+                        <td>Dawnfire Asura</td>
+                        <td>50</td>
+                        <td>Medium</td>
+                        <td>Asura Palace/Mirror</td>
+                    </tr>
+                    <tr>
+                        <td>Dawnfire Asura</td>
+                        <td>50</td>
+                        <td>Medium</td>
+                        <td>Asura Palace/Mirror</td>
+                    </tr>
+                </table>
+            </div>
+
+            <button type="button" class="collapsible">Rare Bestiary and Special Events</button>
+            <div class="bestiary-content">
+                <p>Monsters in this section are only completable during raids/special events (e.g. Midnight Panther,
+                    Cake Golem, Orger, Lightbearer Monsters, Yeti etc.). We recommend completing these monsters whenever such an event is
+                    active. For rare bestiaries, please refer to other fansites (e.g. TibiaBosses, TibiaWiki) for more information.<br><br></p>
+                <table class="bestiary_table">
+                    <tr>
+                        <th>Monster</th>
+                        <th>Points</th>
+                        <th>Difficulty</th>
+                        <th>Event</th>
+                    </tr>
+                    <tr>
+                        <td>Cake Golem</td>
+                        <td>30</td>
+                        <td>Easy</td>
+                        <td>Piece of Cake</td>
+                    </tr>
+                    <tr>
+                        <td>Cake Golem</td>
+                        <td>30</td>
+                        <td>Easy</td>
+                        <td>Piece of Cake</td>
+                    </tr>
+                    <tr>
+                        <td>Cake Golem</td>
+                        <td>30</td>
+                        <td>Easy</td>
+                        <td>Piece of Cake</td>
+                    </tr>
+                    <tr>
+                        <td>Cake Golem</td>
+                        <td>30</td>
+                        <td>Easy</td>
+                        <td>Piece of Cake</td>
+                    </tr>
+                </table>
+            </div>
+
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.display === "block") {
+                            content.style.display = "none";
+                        } else {
+                            content.style.display = "block";
+                        }
+                    });
+                } 
+            </script>
+        </section>
+        <aside id="right-sidebar">
+            <section id="banner-paragraph">
+                <p class="donationparagraph"><img class="flagphoto" src="images/englishflag.png"> Please consider
+                    donating some Tibia Coins to support
+                    the site, you can transfer them to my character
+                    '<b>Kusnier</b>', thank you!<br></p>
+                <p class="donationparagraph"><img class="flagphoto" src="images/portugalflag.png"> Por favor, considere
+                    doar algumas Tibia Coins para
+                    apoiar o site, você pode transferi-las para o meu
+                    personagem '<b>Kusnier</b>', obrigado!<br></p>
+                <p class="donationparagraph"><img class="flagphoto" src="images/spainflag.png"> Considere donar algunas
+                    Tibia Coins para apoyar el sitio, puede transferirlas a mi personaje
+                    <b>'Kusnier'</b>, ¡gracias!<br>
+                </p>
+                <p class="donationparagraph"><img class="flagphoto" src="images/polandflag.png"> Proszę rozważ
+                    przekazanie kilku Tibia Coinów w celu wsparcia strony, możesz je przesłać na moją postać o nicku
+                    <b>'Kusnier'</b>, dziękuję!<br>
+                </p>
+            </section>
+            <section id="top-donators"><span class="gold"><b>Top 5 Donators:</b></span><br>
+                <ul id="donator-list">
+                    <li>100 TC - Iron Raiden</li>
+                    <li>100 TC - Caiozera The Hell</li>
+                    <li>100 TC - Zekusin</li>
+                    <li>50 TC - Gancat</li>
+                    <li>50 TC - Damon Aesir</li>
+                </ul>
+            </section>
+            <div id="stream-info">Come say hello on Twitch!</div>
+            <div id="twitch-embed"></div>
+
+            <!-- Load the Twitch embed script -->
+            <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+            <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+            <script type="text/javascript">
+                new Twitch.Embed("twitch-embed", {
+                    width: "100%",
+                    height: 500,
+                    channel: "kusnierr",
+                    muted: true,
+                    parent: ["tibiapal.com"]
+                });
+            </script>
+
+        </aside>
+        <aside id="left-footer-space"></aside>
+        <footer id="footer">
+            <p id="footerParagraph">
+                Tibia and all products related to Tibia are copyrighted by <a href="https://www.cipsoft.com"
+                    target="_blank">CipSoft GmbH</a>. The official
+                website of Tibia is <a href="https://tibia.com" target="_blank">tibia.com</a>.<br><br>
+                TibiaPal.com source code and changelog can be found on
+                <a href="https://github.com/PawelKusnierek/TibiaPal" target="_blank">GitHub</a>.<br>
+                Created by Kusnier.
+            </p><br>
+        </footer>
+        <aside id="right-footer-space"></aside>
+    </main>
+</body>
+
+</html>

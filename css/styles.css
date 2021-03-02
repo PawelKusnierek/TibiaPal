@@ -581,6 +581,49 @@ ol, ul {
   background-color: #061021f1;
 }
 
+.bestiary_table {
+  display: initial;
+  text-align: left;
+}
+
+.bestiary_table td {
+  padding: 5px 10px 5px 10px;
+}
+
+.bestiary_table th {
+  width: auto;
+  padding: 0 10px 0 10px;
+}
+
+.collapsible {
+  background-color: #061021f1;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 1px solid grey;
+  outline: none;
+  text-align: left;
+  font-size: 14px;
+  text-shadow: black 1px 1px 3px;
+  line-height: 130%;
+  color: #ebebeb;
+  font-family: Verdana, Arial, Times New Roman, sans-serif;
+}
+
+.active-bestiary, .collapsible:hover {
+  background-color: #0f2344e8;
+}
+
+.bestiary-content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+
+.bestiary_table tbody tr:nth-child(even) {
+  background-color: #0d1e38;
+}
+
 #imbueform {
   padding-left: 15px;
   padding-bottom: 15px;
