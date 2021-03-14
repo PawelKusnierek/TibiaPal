@@ -140,23 +140,12 @@
                     <li>100 TC - Zekusin</li>
                 </ul>
             </section>
-            <div id="stream-info">Come say hello on Twitch!</div>
-            <div id="twitch-embed"></div>
-
-            <!-- Load the Twitch embed script -->
-            <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-            <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-            <script type="text/javascript">
-                new Twitch.Embed("twitch-embed", {
-                    width: "100%",
-                    height: 650,
-                    channel: "kusnierr",
-                    muted: true,
-                    autoplay: false,
-                    parent: ["tibiapal.com"]
-                });
-            </script>
+            <div id="stream-container">
+                <div id="stream-info">Come say hello on Twitch!</div>
+                <iframe id="twitch_iframe" src="https://player.twitch.tv/?channel=Kusnierr&parent=tibiapal.com&autoplay=false" height="300px"
+                    width="100%" allowfullscreen="true">
+                </iframe>
+            </div>
             
         </aside>
         <aside id="left-footer-space"></aside>
