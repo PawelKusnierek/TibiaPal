@@ -87,7 +87,7 @@ var questList = [
 		name: "Opticording Sphere",
 		bosses: [
 			{ name: "An Observer Eye", hours: 20 },
-			{ name: "Last Planegazer", hours: 20 },
+			{ name: "Last Planegazer", hours: 168 },
 			{ name: "Planestrider", hours: 20 },
 		]
 	},
