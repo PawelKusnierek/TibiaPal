@@ -638,6 +638,15 @@ ol, ul {
   float: right;
 }
 
+#bestiaryexample {
+  border: 1px grey solid;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 425px;
+  height: 300px;
+}
+
 #imbueform {
   padding-left: 15px;
   padding-bottom: 15px;
