@@ -1,25 +1,5 @@
 function initialize() {
     find_rashid_city()
-    find_stream_status()
-}
-
-function find_stream_status() {
-    stream_content = document.getElementById("stream-content")
-
-
-
-
-    var XML = new XMLHttpRequest();
-    XML.open("GET", "https://api.twitch.tv/helix/streams/?user_login=kusnierr", true);
-    XML.setRequestHeader("Client-ID", "qqiafa1gpappsi6jz2yq056ajcuxnu");
-    XML.send();
-    console.log(XML)
-    XML.onload = function () {
-        console.log(XML.response)
-        response1 = JSON.parse(XML.response);
-        var a = 1;
-      }
-    
 }
 
 function find_rashid_city() {
