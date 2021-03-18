@@ -38,10 +38,6 @@ a {
   text-decoration: underline;
 }
 
-table {
-  display: none;
-}
-
 th {
   width: 33%;
 }
@@ -593,6 +589,10 @@ ol, ul {
 
 #submitextrabutton {
   margin-bottom: 10px;
+}
+
+#extra-expense-table {
+  display: none;
 }
 
 .bestiary_table {
