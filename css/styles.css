@@ -769,7 +769,6 @@ ol, ul {
 
 #archivetable {
   padding-top: 10px;
-  display: inline-block !important;
   -webkit-box-align: left;
   -ms-flex-align: left;
   align-items: left;
