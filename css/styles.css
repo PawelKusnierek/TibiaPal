@@ -599,7 +599,7 @@ ol, ul {
   padding: 0 10px 0 10px;
 }
 
-.collapsible {
+.expandable-div {
   background-color: #09162e49;
   cursor: pointer;
   padding: 18px;
@@ -614,11 +614,11 @@ ol, ul {
   font-family: Verdana, Arial, Times New Roman, sans-serif;
 }
 
-.active-bestiary, .collapsible:hover {
+.active-expanded-div, .expandable-div:hover {
   background-color: #0f2344e8;
 }
 
-.active-bestiary:after {
+.active-expanded-div:after {
   content: '\2212' !important;
 }
 
@@ -632,7 +632,7 @@ ol, ul {
   background-color: #0d1e38;
 }
 
-.collapsible:after {
+.expandable-div:after {
   content: '\002B';
   font-size: 14px;
   float: right;

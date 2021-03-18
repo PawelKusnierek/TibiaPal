@@ -1,5 +1,6 @@
 function initialize() {
     find_rashid_city()
+    enable_expandable_div_buttons()
 }
 
 function find_rashid_city() {
@@ -74,5 +75,22 @@ function find_previous_day(day) {
     }
     else if (day == "Sunday") {
         return 'Saturday'
+    }
+}
+
+function enable_expandable_div_buttons() {
+    var coll = document.getElementsByClassName("expandable-div");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active-expanded-div");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
     }
 }
