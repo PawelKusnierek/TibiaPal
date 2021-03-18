@@ -55,10 +55,6 @@ ol, ul {
   padding: 0px 0px 0px 35px;
 }
 
-.orange {
-  color: orange;
-}
-
 #page-container {
   max-width: 1600px;
   height: 100%;
@@ -245,109 +241,6 @@ ol, ul {
   font-size: 14px;
 }
 
-#analyserData {
-  width: 365px;
-  margin-top: 10px;
-}
-
-#submitbutton {
-  margin-top: 10px;
-}
-
-.copy_button_div {
-  display: inline-block;
-  margin-left: 3px;
-}
-
-.block_element {
-  display: block;
-}
-
-.instructions-list {
-  text-align: center;
-  list-style-position: inside;
-}
-
-#profit_positive {
-  font-weight: bold;
-  color: green;
-}
-
-#profit_negative {
-  font-weight: bold;
-  color: red;
-  opacity: 100%;
-}
-
-#example_positive {
-  font-weight: bold;
-  color: green;
-}
-
-.hiddeninput {
-  opacity: 0;
-  position: absolute;
-  z-index: -1;
-}
-
-.top-section {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-#copy-all-button {
-  margin-top: 10px;
-}
-
-#extra-expenses-button {
-  color: white;
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  text-decoration: underline;
-  padding: 0;
-  margin: 0;
-}
-
-#extra-container {
-  padding-top: 50px;
-  display: none;
-}
-
-#results {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-#removePlayerAnalyserData {
-  width: 365px;
-  margin-top: 10px;
-}
-
-#removeplayersubmitbutton {
-  margin-top: 10px;
-}
-
-#list-remove-players {
-  text-align: left;
-  padding-left: 20px;
-}
-
-#list-remove-players input {
-  padding-bottom: 10px;
-}
-
-#submitremoveplayers {
-  display: none;
-  margin-bottom: 10px;
-}
-
-#submitextrabutton {
-  margin-bottom: 10px;
-}
-
 .article-date-title {
   margin-bottom: 5px;
   text-align: left;
@@ -385,8 +278,135 @@ ol, ul {
   padding-bottom: 0px;
 }
 
-.auctions-th {
-  width: 25%;
+#banner-paragraph {
+  font-size: 12px;
+  text-shadow: black 1px 1px 3px;
+  line-height: 130%;
+  color: #ebebeb;
+  display: inline-block;
+  background-color: #061021f1;
+}
+
+.orange {
+  color: orange;
+}
+
+.gold {
+  color: gold;
+}
+
+#submitbutton {
+  margin-top: 10px;
+}
+
+.block_element {
+  display: block;
+}
+
+#profit_positive {
+  font-weight: bold;
+  color: green;
+}
+
+#profit_negative {
+  font-weight: bold;
+  color: red;
+  opacity: 100%;
+}
+
+#align-left {
+  text-align: left;
+}
+
+#align-left li {
+  padding-bottom: 12px;
+}
+
+.expandable-div {
+  background-color: #09162e49;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  font-size: 18px;
+  text-shadow: black 1px 1px 3px;
+  line-height: 130%;
+  color: #ebebeb;
+  font-family: Verdana, Arial, Times New Roman, sans-serif;
+}
+
+.active-expanded-div, .expandable-div:hover {
+  background-color: #0f2344e8;
+}
+
+.active-expanded-div:after {
+  content: '\2212' !important;
+}
+
+.expandable-div-content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+
+.expandable-div:after {
+  content: '\002B';
+  font-size: 14px;
+  float: right;
+}
+
+#rashid-city {
+  font-size: 16px;
+  text-shadow: black 1px 1px 3px;
+  padding-bottom: 20px;
+}
+
+#rashidexample {
+  display: block;
+  width: 165px;
+  height: 100px;
+}
+
+#Rashid {
+  padding-top: 20px;
+}
+
+#stream-container {
+  padding-bottom: 40px;
+}
+
+#twitch_iframe {
+  border: none;
+}
+
+#stream-info {
+  font-size: 14px;
+  padding-bottom: 10px;
+  background-color: #061021f1;
+}
+
+#staminalevel {
+  width: 300px;
+}
+
+#offlinetrainingexample {
+  border: 1px grey solid;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#new-homepage {
+  font-size: 12px;
+  color: red !important;
+}
+
+.about_p {
+  text-align: left;
+  padding-bottom: 12px;
+  padding-left: 10px;
 }
 
 .house_container {
@@ -443,42 +463,6 @@ ol, ul {
   width: 170px;
 }
 
-#staminalevel {
-  width: 300px;
-}
-
-#rashid-city {
-  font-size: 16px;
-  text-shadow: black 1px 1px 3px;
-  padding-bottom: 20px;
-}
-
-#rashidexample {
-  display: block;
-  width: 165px;
-  height: 100px;
-}
-
-#Rashid {
-  padding-top: 20px;
-}
-
-#offlinetrainingexample {
-  border: 1px grey solid;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#banner-paragraph {
-  font-size: 12px;
-  text-shadow: black 1px 1px 3px;
-  line-height: 130%;
-  color: #ebebeb;
-  display: inline-block;
-  background-color: #061021f1;
-}
-
 #top-donators {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -488,10 +472,6 @@ ol, ul {
   color: #ebebeb;
   display: inline-block;
   background-color: #061021f1;
-}
-
-.gold {
-  color: gold;
 }
 
 #donator-list {
@@ -512,22 +492,11 @@ ol, ul {
   margin: 5px;
 }
 
-#new-homepage {
-  font-size: 12px;
-  color: red !important;
-}
-
 #ordered_donators_list {
   text-align: left;
   margin: auto;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.about_p {
-  text-align: left;
-  padding-bottom: 12px;
-  padding-left: 10px;
 }
 
 .hunting_table {
@@ -548,41 +517,82 @@ ol, ul {
   padding-bottom: 4px;
 }
 
-#right-sidebar-ad {
-  padding-top: 40px;
-}
-
-#adblock-disable {
-  margin-top: 10px;
-  background-color: #061021f1;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
 .hunting_table tbody tr:nth-child(even) {
   background-color: #0d1e38;
 }
 
-#hunting_list_notes {
-  text-align: left;
+#analyserData {
+  width: 365px;
+  margin-top: 10px;
 }
 
-#hunting_list_notes li {
-  padding-bottom: 12px;
+.copy_button_div {
+  display: inline-block;
+  margin-left: 3px;
 }
 
-#stream-container {
-  padding-bottom: 40px;
+.instructions-list {
+  text-align: center;
+  list-style-position: inside;
 }
 
-#twitch_iframe {
+.hiddeninput {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#copy-all-button {
+  margin-top: 10px;
+}
+
+#extra-expenses-button {
+  color: white;
+  background-color: Transparent;
+  background-repeat: no-repeat;
   border: none;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: underline;
+  padding: 0;
+  margin: 0;
 }
 
-#stream-info {
-  font-size: 14px;
+#extra-container {
+  padding-top: 50px;
+  display: none;
+}
+
+#results {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#removePlayerAnalyserData {
+  width: 365px;
+  margin-top: 10px;
+}
+
+#removeplayersubmitbutton {
+  margin-top: 10px;
+}
+
+#list-remove-players {
+  text-align: left;
+  padding-left: 20px;
+}
+
+#list-remove-players input {
   padding-bottom: 10px;
-  background-color: #061021f1;
+}
+
+#submitremoveplayers {
+  display: none;
+  margin-bottom: 10px;
+}
+
+#submitextrabutton {
+  margin-bottom: 10px;
 }
 
 .bestiary_table {
@@ -599,43 +609,8 @@ ol, ul {
   padding: 0 10px 0 10px;
 }
 
-.expandable-div {
-  background-color: #09162e49;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  font-size: 18px;
-  text-shadow: black 1px 1px 3px;
-  line-height: 130%;
-  color: #ebebeb;
-  font-family: Verdana, Arial, Times New Roman, sans-serif;
-}
-
-.active-expanded-div, .expandable-div:hover {
-  background-color: #0f2344e8;
-}
-
-.active-expanded-div:after {
-  content: '\2212' !important;
-}
-
-.expandable-div-content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-}
-
 .bestiary_table tbody tr:nth-child(even) {
   background-color: #0d1e38;
-}
-
-.expandable-div:after {
-  content: '\002B';
-  font-size: 14px;
-  float: right;
 }
 
 #bestiaryexample {
