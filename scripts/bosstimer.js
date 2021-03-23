@@ -213,8 +213,11 @@ function setTimer(boss, time) {
 	var div = document.getElementById(nameUnderscore(boss.name) + '_timer');
 
 	var text = "";
-	if (time.days > 0) {
+	if (time.days > 1) {
 		text += time.days + " days ";
+	}
+	else if (time.days == 1) {
+		text += time.days + " day ";
 	}
 
 	text += ('0' + time.hours).slice(-2) + ':' + ('0' + time.minutes).slice(-2) + ':' + ('0' + time.seconds).slice(-2)
