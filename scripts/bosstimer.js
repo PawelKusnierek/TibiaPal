@@ -18,8 +18,8 @@ var questList = [
 			{ name: "Lion Bosses", hours: 20 },
 			{ name: "Were Bosses", hours: 20 },
 			{ name: "Golds", hours: 20 },
-			{ name: "Golds Final", hours: 336 },
-			{ name: "Feru Final", hours: 336 },
+			{ name: "Golds Final", hours: 337 },
+			{ name: "Feru Final", hours: 337 },
 		]
 	},
 	{
@@ -31,7 +31,7 @@ var questList = [
 			{ name: "Soul of Dragonking Zyrtarch", hours: 20 },
 			{ name: "Melting Frozen Horror", hours: 20 },
 			{ name: "The Time Guardian", hours: 20 },
-			{ name: "The Last Lore Keeper", hours: 336 },
+			{ name: "The Last Lore Keeper", hours: 337 },
 		]
 	},
 	{
@@ -87,7 +87,7 @@ var questList = [
 		name: "Opticording Sphere",
 		bosses: [
 			{ name: "An Observer Eye", hours: 20 },
-			{ name: "Last Planegazer", hours: 168 },
+			{ name: "Last Planegazer", hours: 169 },
 			{ name: "Planestrider", hours: 20 },
 		]
 	},
