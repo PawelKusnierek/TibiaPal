@@ -13,7 +13,7 @@ function initial_submit() {
   if (is_regularlootsplit || is_extraexpenseslootsplit) {
     preplootsplit();
   } else if (is_removeplayerslootsplit) {
-    submit_form_remove_players();
+    prepare_remove_players_lootsplit();
   }
 }
 
@@ -70,7 +70,7 @@ function regularlootsplit() {
   document.getElementById("tibialootsplitform").reset();
 }
 
-function submit_form_remove_players() {
+function prepare_remove_players_lootsplit() {
   analyser_data = form.analyserData.value.replace(" (Leader)", "");
 
   //remove all other content
