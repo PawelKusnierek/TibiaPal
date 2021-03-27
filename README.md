@@ -32,6 +32,10 @@ HTML, CSS, SASS and JS
 
 ### 30th January 2021
 
+Added 'Bestiary Reference', list of all bestiaries to complete split by event and difficulty
+
+### 30th January 2021
+
 Added 'Hunting Places', list of all hunting places for all solo and multiple vocation combinations
 
 ### 14th January 2021
