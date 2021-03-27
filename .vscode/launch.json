@@ -9,6 +9,13 @@
             "file": "${workspaceFolder}/index.html"
         },
         {
+            "name": "Launch tibialootsplit.html",
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "file": "${workspaceFolder}/tibialootsplit.html"
+        },
+        {
             "name": "Launch imbue.html",
             "type": "firefox",
             "request": "launch",
