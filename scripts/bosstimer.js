@@ -277,7 +277,4 @@ function nameUnderscore(name) {
   return name.replace(/ /g, "_").toLowerCase();
 }
 
-function cookieConsentClicked() {
-  document.querySelector(".cookieconsent").style.display = "none";
-  localStorage.setItem("cookieconsent", true);
-}
+

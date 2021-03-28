@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <title>TibiaPal.com - Imbue Calculator</title>
     <meta name="author" content="Pawel Kusnierek">
-    <meta name="description"
-        content="Imbue Calculator">
+    <meta name="description" content="Imbue Calculator">
     <meta name="keywords"
         content="Tibia calculators, Tibia Calculator, Tibia news, Tibia, Tibia articles, TibiaLootSplit, Split Tibia Loot, Tibia Loot Analyser, Tibia Loot Share, Tibia Share Loot, Tibia Loot, Tibia Loot Split, Tibia Party Calculator, Tibia fansite, Tibia fan site, Tibia imbue, Tibia imbue calculator, imbue calculator">
     <link rel="shortcut icon" href="images/crystalcoin.ico" type="image/x-icon">
@@ -39,7 +38,8 @@
 <body onload="initialize()">
     <main id="page-container">
         <div id="header">
-            <a href="https://tibiapal.com"><img src="images/1.png" style="width:85%"></a></div>
+            <a href="https://tibiapal.com"><img src="images/1.png" style="width:85%"></a>
+        </div>
         </div>
         <div id="banner">
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -49,7 +49,7 @@
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
-            
+
         </div>
         </div>
         <div id="right-header">
@@ -80,7 +80,8 @@
 
         </nav>
         <section id="main-content">
-            <p id="imbue_paragraph"> Calculate the most cost effective way of getting imbuement items, by trading gold tokens with Yana or buying from the market! <br><br>
+            <p id="imbue_paragraph"> Calculate the most cost effective way of getting imbuement items, by trading gold
+                tokens with Yana or buying from the market! <br><br>
             <form id="imbueform">
                 <select name="imbue" id="imbue" onChange="submit_imbue_type()">
                     <option disabled selected value>Select Imbue</option>
@@ -90,15 +91,20 @@
                 </select>
             </form>
             <form id="imbueitemsform">
-                <label for ="goldtokenvalue">Gold token value:</label>
-                <input type="text" id="goldtokenvalue" name="goldtokenvalue" placeholder="Value in gp" autocomplete="off"><br>
-                <label id ="firstitemvalue_label" for ="firstitemvalue">First item value:</label>
-                <input type="text" id="firstitemvalue" name="firstitemvalue" placeholder="Value in gp" autocomplete="off"><br>
-                <label id ="seconditemvalue_label" for ="seconditemvalue">Second item value:</label>
-                <input type="text" id="seconditemvalue" name="seconditemvalue" placeholder="Value in gp" autocomplete="off"><br>
-                <label id ="thirditemvalue_label" for ="thirditemvalue">Third item value:</label>
-                <input type="text" id="thirditemvalue" name="thirditemvalue" placeholder="Value in gp" autocomplete="off"><br>
-                <input type="submit" id="valuessubmitbutton" value="Submit" onclick="event.preventDefault(); submit_imbue_values()" />
+                <label for="goldtokenvalue">Gold token value:</label>
+                <input type="text" id="goldtokenvalue" name="goldtokenvalue" placeholder="Value in gp"
+                    autocomplete="off"><br>
+                <label id="firstitemvalue_label" for="firstitemvalue">First item value:</label>
+                <input type="text" id="firstitemvalue" name="firstitemvalue" placeholder="Value in gp"
+                    autocomplete="off"><br>
+                <label id="seconditemvalue_label" for="seconditemvalue">Second item value:</label>
+                <input type="text" id="seconditemvalue" name="seconditemvalue" placeholder="Value in gp"
+                    autocomplete="off"><br>
+                <label id="thirditemvalue_label" for="thirditemvalue">Third item value:</label>
+                <input type="text" id="thirditemvalue" name="thirditemvalue" placeholder="Value in gp"
+                    autocomplete="off"><br>
+                <input type="submit" id="valuessubmitbutton" value="Submit"
+                    onclick="event.preventDefault(); submit_imbue_values()" />
                 <!-- <input type="button" onclick="location.href='https:/\/tibialootsplit.com';" value="Refresh page" /> -->
             </form>
             <div id="imbue_results">
@@ -184,7 +190,8 @@
                 </p>
                 <p class="donationparagraph"><img class="flagphoto" src="images/polandflag.png"> Proszę rozważ
                     przekazanie kilku Tibia Coinów w celu wsparcia strony, możesz je przesłać na moją postać o nicku
-                    <b>'Kusnier'</b>, dziękuję!<br></p>
+                    <b>'Kusnier'</b>, dziękuję!<br>
+                </p>
             </section>
             <section id="top-donators"><span class="gold"><b>Top 5 Donators:</b></span><br>
                 <ul id="donator-list">
@@ -200,7 +207,7 @@
                     <a href="https://twitch.tv/Kusnierr" target="_blank">twitch.tv/Kusnierr</a>
                 </div>
             </div>
-            
+
         </aside>
         <aside id="left-footer-space"></aside>
         <footer id="footer">
@@ -208,11 +215,18 @@
                 Tibia and all products related to Tibia are copyrighted by <a href="https://www.cipsoft.com"
                     target="_blank">CipSoft GmbH</a>. The official
                 website of Tibia is <a href="https://tibia.com" target="_blank">tibia.com</a>.<br><br>
-                
+
                 Created by Kusnier. </p><br>
         </footer>
         <aside id="right-footer-space"></aside>
     </main>
+    <div class="cookieconsent"
+        style="display:none;position:fixed;padding:20px;left:0;bottom:0;background-color:#000;color:#FFF;text-align:center;width:100%;z-index:99999;">
+        TibiaPal.com uses cookies to ensure you get the best experience possible. By continuing to use this website, you
+        agree to their use. You can find more information about our cookies on our <a
+            href="https://tibiapal.com/privacy" target="_blank">Privacy Policy</a> page.
+        <a href="" style="color:#CCCCCC;" onclick="event.preventDefault(); cookieConsentClicked()">I Understand</a>
+    </div>
 </body>
 
 </html>
