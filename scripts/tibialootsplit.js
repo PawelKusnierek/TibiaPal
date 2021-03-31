@@ -36,6 +36,8 @@ function preplootsplit() {
   analyser_data = form.analyserData.value.replace(" (Leader)", "");
 
   // Parsing the data from the log to find out profit per person and the balance of each player
+  session_date = find_session_date(analyser_data);
+  session_duration = find_session_duration(analyser_data);
   remove_first_section(analyser_data);
   number_of_players = find_total_number_of_players(analyser_data);
   players_and_their_balance = find_players_and_balance(
@@ -67,6 +69,7 @@ function regularlootsplit() {
     profit_per_person,
     resultsContent
   );
+  update_the_history_results();
   document.getElementById("tibialootsplitform").reset();
 }
 
@@ -74,8 +77,10 @@ function prepare_remove_players_lootsplit() {
   analyser_data = form.analyserData.value.replace(" (Leader)", "");
 
   //remove all other content
-  remove_html_before_extra_expenses();
+  remove_tibialootsplit_html();
 
+  session_date = find_session_date(analyser_data);
+  session_duration = find_session_duration(analyser_data);
   remove_first_section(analyser_data);
   number_of_players = find_total_number_of_players(analyser_data);
   players_and_their_balance = find_players_and_balance(
@@ -88,15 +93,19 @@ function prepare_remove_players_lootsplit() {
 
 function calculate_remove_players_click() {
   list_of_players_to_remove = [];
+  list_of_players_to_keep = [];
   for (var i = 0; i < players_and_their_balance.length; i++) {
     player = players_and_their_balance[i].name;
     checkbox_player = document.getElementById(player);
     checked = checkbox_player.checked;
     if (!checked) {
       list_of_players_to_remove.push(player);
+    } else {
+      list_of_players_to_keep.push(player);
     }
   }
   if (list_of_players_to_remove.length > 0) {
+    player_names_list = list_of_players_to_keep;
     for (var j = 0; j < list_of_players_to_remove.length; j++) {
       for (var k = players_and_their_balance.length - 1; k >= 0; k--) {
         if (players_and_their_balance[k].name == list_of_players_to_remove[j]) {
@@ -132,11 +141,12 @@ function calculate_remove_players_click() {
     profit_per_person,
     resultsContent
   );
+  update_the_history_results();
   document.getElementById("extra-expenses-div").innerHTML = "";
 }
 
 function extra_expenses_click() {
-  remove_html_before_extra_expenses();
+  remove_tibialootsplit_html();
   document.getElementById("extra-container").style.display = "block";
   document.getElementById("extra-expense-table").style.display = "initial";
 
@@ -201,6 +211,7 @@ function calculate_extra_expenses_click() {
     profit_per_person,
     resultsContent
   );
+  update_the_history_results();
   remove_old_html();
 }
 
@@ -231,6 +242,15 @@ function validate_analyser_data(ref) {
   return true;
 }
 
+function find_session_date(data) {
+  return data.substring(19, 29);
+}
+
+function find_session_duration(data) {
+  index = data.indexOf("Session: ");
+  return data.substring(index + 9, index + 15);
+}
+
 function remove_first_section(data) {
   index = data.indexOf("Balance: ");
   substring1 = data.substring(index + 9);
@@ -255,6 +275,7 @@ function find_total_number_of_players(data) {
 
 function find_players_and_balance(data, number_of_players) {
   players_and_balance = [];
+  player_names_list = [];
   for (let i = 0; i < number_of_players; i++) {
     index_loot = data.indexOf("Loot:");
     name_of_player = data.substring(0, index_loot);
@@ -268,6 +289,7 @@ function find_players_and_balance(data, number_of_players) {
       name: name_of_player,
       balance: balance_of_player,
     });
+    player_names_list.push(name_of_player);
     index_healing = data.indexOf("Healing: ");
     data = data.substring(index_healing + 9);
     index_space = data.indexOf(" ");
@@ -536,14 +558,15 @@ function copy_whole_log() {
     activeSheets[i].disabled = false;
 }
 
-function remove_html_before_extra_expenses() {
+function remove_tibialootsplit_html() {
   main_content = document.getElementById("main-content");
 
   extraExpensesDiv = document.getElementById("extra-expenses-div");
   extraExpensesDiv.innerHTML = "";
 
   resultsContent = document.getElementById("results");
-  main_content.removeChild(resultsContent);
+  resultsContent.innerHTML = "";
+  //main_content.removeChild(resultsContent);
 
   form = document.getElementById("tibialootsplitform");
   form.innerHTML = "";
@@ -557,10 +580,8 @@ function remove_html_before_extra_expenses() {
   howtouse = document.getElementById("howtouse");
   howtouse.innerHTML = "";
 
-  newFeature = document.getElementsByClassName("new-feature");
-  for (i = 0; i < newFeature.length; i++) {
-    main_content.removeChild(newFeature[i]);
-  }
+  main_content.removeChild(howtouse);
+  main_content.removeChild(list);
 }
 
 function remove_old_html() {
@@ -606,4 +627,127 @@ function add_players_and_checkboxes(players_and_their_balance) {
 
   calculate_button = document.getElementById("submitremoveplayers");
   calculate_button.style.display = "initial";
+}
+
+function view_tibialootsplit_history() {
+  remove_tibialootsplit_html();
+  document.getElementById("h4_history_tls").style.display = "block";
+  document.getElementById("tibialootsplit-history-table").style.display =
+    "initial";
+
+  const history = JSON.parse(
+    localStorage.getItem("tibialootsplitresults") || "[]"
+  );
+
+  if (history.length > 5) {
+    number_of_loops = history.length / 6;
+    var tableRef = document
+      .getElementById("tibialootsplit-history-table")
+      .getElementsByTagName("tbody")[0];
+    for (j = 0; j < number_of_loops; j++) {
+      var newRow = tableRef.insertRow();
+      for (i = 0; i < 6; i++) {
+        index = 6 * j + i;
+        //covering 'first' result per row, i.e. the actual tibialootsplit results
+        if (index == 0 || index % 6 == 0) {
+          let cell = newRow.insertCell(0);
+          cell.id = index;
+          cell.innerHTML =
+            "<button id='" +
+            index +
+            "' onclick='results_from_history(this.id)';>Here</button>";
+        }
+        //covering 'third' result per row, i.e. the names of players
+        else if ((index + 3) % 6 == 0) {
+          let cell = newRow.insertCell(0);
+          cell.id = index;
+          players = history[index];
+          var players_array = players.split(",");
+          for (k = 0; k < players_array.length; k++) {
+            player = players_array[k];
+            player.trim();
+            cell.innerHTML = cell.innerHTML + player + "<br/>";
+          }
+        } else if ((index + 4) % 6 == 0) {
+          let cell = newRow.insertCell(0);
+          cell.id = index;
+          let cellTextBox = document.createTextNode(
+            Math.round(history[index] / 1000) + "k~"
+          );
+          cellTextBox.type = "text";
+          cellTextBox.name = "text" + index;
+          cellTextBox.id = index;
+          cell.appendChild(cellTextBox);
+        } else if ((index + 5) % 6 == 0) {
+          let cell = newRow.insertCell(0);
+          cell.id = index;
+          let cellTextBox = document.createTextNode(
+            Math.round(history[index] / 1000) + "k~"
+          );
+          cellTextBox.type = "text";
+          cellTextBox.name = "text" + index;
+          cellTextBox.id = index;
+          cell.appendChild(cellTextBox);
+        } else {
+          let cell = newRow.insertCell(0);
+          cell.id = index;
+          let cellTextBox = document.createTextNode(history[index]);
+          cellTextBox.type = "text";
+          cellTextBox.name = "text" + index;
+          cellTextBox.id = index;
+          cell.appendChild(cellTextBox);
+        }
+      }
+    }
+  }
+}
+
+function update_the_history_results() {
+  const maxHistoryLength = 90;
+  const history = JSON.parse(
+    localStorage.getItem("tibialootsplitresults") || "[]"
+  );
+  const isHistoryMaxed = history.length === maxHistoryLength;
+
+  players_formatted = "";
+  for (i = 0; i < player_names_list.length; i++) {
+    players_formatted = players_formatted + player_names_list[i] + ", ";
+  }
+  players_formatted = players_formatted.slice(0, -2);
+  new_results = [
+    who_to_pay_and_how_much,
+    profit_per_person,
+    total_profit,
+    players_formatted,
+    session_duration,
+    session_date,
+  ];
+  const workingHistory = isHistoryMaxed
+    ? history.slice(0, 90 - new_results.length)
+    : history;
+
+  const updatedHistory = new_results.concat(workingHistory);
+  localStorage.setItem("tibialootsplitresults", JSON.stringify(updatedHistory));
+}
+
+function results_from_history(table_cell_id) {
+  const history = JSON.parse(
+    localStorage.getItem("tibialootsplitresults") || "[]"
+  );
+
+  who_to_pay_and_how_much = history[table_cell_id];
+  total_profit = history[parseInt(table_cell_id) + 2];
+  profit_per_person = history[parseInt(table_cell_id) + 1];
+
+  resultsContent = document.getElementById("results");
+  update_the_html(
+    who_to_pay_and_how_much,
+    total_profit,
+    profit_per_person,
+    resultsContent
+  );
+
+  document.getElementById("h4_history_tls").style.display = "none";
+  document.getElementById("tibialootsplit-history-table").style.display =
+    "none";
 }

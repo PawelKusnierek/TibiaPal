@@ -3,19 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>TibiaPal.com - TibiaLootSplit</title>
+    <title>TibiaPal.com - Changes to
+        TibiaLootSplit! History and more.</title>
     <meta name="author" content="Pawel Kusnierek">
-    <meta name="description" content="TibiaLootSplit">
+    <meta name="description" content="Changes to
+    TibiaLootSplit! History and more.">
     <meta name="keywords"
         content="Tibia calculators, Tibia Calculator, Tibia news, Tibia, Tibia articles, TibiaLootSplit, Split Tibia Loot, Tibia Loot Analyser, Tibia Loot Share, Tibia Share Loot, Tibia Loot, Tibia Loot Split, Tibia Party Calculator, Tibia fansite, Tibia fan site">
     <link rel="shortcut icon" href="images/crystalcoin.ico" type="image/x-icon">
 
     <!-- css files-->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
-    <!-- .js scripts -->
-    <script src="scripts/tibialootsplit.js"></script>
-    <script src="scripts/onload.js"></script>
+    <script src="../scripts/onload.js"></script>
 
     <!-- extra googleapi fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@
 <body onload="initialize()">
     <main id="page-container">
         <div id="header">
-            <a href="https://tibiapal.com"><img src="images/1.png" style="width:85%"></a>
+            <a href="https://tibiapal.com"><img src="../images/1.png" style="width:85%"></a>
         </div>
         </div>
         <div id="banner">
@@ -54,12 +54,12 @@
         </div>
         <div id="right-header">
             <div class="right-sidebar-item"><a href="https://www.tibia.com" target="_blank"><img
-                        src="images/tibia-logo-artwork-top.gif" style="width:85%"></a></div>
+                        src="../images/tibia-logo-artwork-top.gif" style="width:85%"></a></div>
         </div>
         <nav id="left-sidebar">
             <div class="nav-item"><a href="https://tibiapal.com">Latest News</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/about">About</a></div>
-            <div class="active nav-item"><a href="https://tibiapal.com/tibialootsplit">TibiaLootSplit</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/tibialootsplit">TibiaLootSplit</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/bosstimers">Boss Timers</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/hunting">Hunting Places</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/bestiary">Bestiary Reference</a></div>
@@ -74,87 +74,46 @@
             <div class="nav-item"><a href="https://tibiapal.com/archive">Archive</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/contact">Contact</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/privacy">Privacy Policy</a></div>
-            <div class="right-sidebar-item" id="Rashid"><img src="images/Rashid.gif" style="width:45%">
+            <div class="right-sidebar-item" id="Rashid"><img src="../images/Rashid.gif" style="width:45%">
             </div>
             <div id="rashid-city">Unavailable...</div>
 
         </nav>
         <section id="main-content">
-            <h4 id="howtouse"><br>How to use TibiaLootSplit:</h4>
-            <ol id="instruction-list">
-                <li class="instructions-list">In your 'Party Hunt' analyser select 'Copy to Clipboard'</li>
-                <li class="instructions-list">Paste the values into the input field and click 'Submit'</li>
-            </ol>
-            <img id="analyser_image" src="images/analyser.png"
-                alt="Picture of 'Party Hunt' analsyer highlighting which button to click">
-            <form id="tibialootsplitform">
-                <input type="text" id="analyserData" name="analyserData"
-                    placeholder="Paste party hunt session log here..." autocomplete="off"><br>
-
-                <input type="radio" id="regularlootsplit" name="lootsplittype" value="regularlootsplit"
-                    checked="checked">
-                <label for="regularlootsplit">Regular</label>
-                <input type="radio" id="extraexpenseslootsplit" name="lootsplittype" value="extraexpenseslootsplit">
-                <label for="extraexpenseslootsplit">Add Extra Expenses</label>
-                <input type="radio" id="removeplayerslootsplit" name="lootsplittype" value="removeplayerslootsplit">
-                <label for="removeplayerslootsplit">Remove Players</label><br>
-
-                <input type="submit" id="submitbutton" value="Submit"
-                    onclick="event.preventDefault(); initial_submit()" />
-                <input type="button" onclick="location.href='https:/\/tibiapal.com/tibialootsplit';"
-                    value="Refresh page" />
-                <input type="button" onclick="view_tibialootsplit_history()"
-                    value="History" />
-            </form>
-            <section id="list-remove-players">
-
-            </section>
-
-            <input type="submit" id="submitremoveplayers" value="Calculate!"
-                onclick="event.preventDefault(); calculate_remove_players_click()" />
-            <section id="results"></section>
-            <section id="extra-expenses-div"></section>
-            <table id="extra-expense-table" style="width:100%">
-                <tr>
-                    <th>Player</th>
-                    <th>Extra TC expense</th>
-                    <th>Extra gold expense (in k)</th>
-                </tr>
-            </table>
-            <section id="extra-container">
-                <input type="text" id="TCvalue" name="TCvalue" placeholder="Tibia Coin gold value" autocomplete="off">
-                <input type="submit" id="submitextrabutton" value="Recalculate"
-                    onclick="event.preventDefault(); calculate_extra_expenses_click()" />
-            </section>
-
-            <p id="h4_history_tls"><br>TibiaLootSplit History</p>
-
-            <table id="tibialootsplit-history-table" style="width:100%">
-                <tr>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Players</th>
-                    <th>Total Profit</th>
-                    <th>Profit per player</th>
-                    <th>Results</th>
-                </tr>
-            </table>
+            <div class="article-date-title"><span class="date">31 Mar 2021</span> <span class="title">Changes to
+                    TibiaLootSplit! History and more.</span></div>
+            <article class="main-article">
+                <p>Hello everyone, <br><br> Today I added the much requested 'History' feature to
+                    TibiaLootSplit!<br><br>
+                    From now on your latest 15 results will be saved for future reference. They can be accessed by
+                    clicking the 'History' button in the TibiaLootSplit screen :) <br><br>
+                    Of course this will only work on new results you enter from today on, unfortunately not any of your
+                    older results. <br><br>
+                    Also you may have noticed that a few days ago I re-factored the way to access 'Extra Expenses' and
+                    'Remove Players' screens of TibiaLootSplit. Now they can be pre-selected after copying over the log
+                    for a much friendlier User Experience!<br><br>
+                    If you experience any issues with the new features please let me know. <br><br>
+                </p>
+                <p>I hope you find the new improvements useful!<br>~Kusnier</p>
+            </article>
         </section>
         <aside id="right-sidebar">
             <section id="banner-paragraph">
-                <p class="donationparagraph"><img class="flagphoto" src="images/englishflag.png"> Please consider
+                <p class="donationparagraph"><img class="flagphoto" src="../images/englishflag.png"> Please consider
                     donating some Tibia Coins to support
                     the site, you can transfer them to my character
                     '<b>Kusnier</b>', thank you!<br></p>
-                <p class="donationparagraph"><img class="flagphoto" src="images/portugalflag.png"> Por favor, considere
+                <p class="donationparagraph"><img class="flagphoto" src="../images/portugalflag.png"> Por favor,
+                    considere
                     doar algumas Tibia Coins para
                     apoiar o site, você pode transferi-las para o meu
                     personagem '<b>Kusnier</b>', obrigado!<br></p>
-                <p class="donationparagraph"><img class="flagphoto" src="images/spainflag.png"> Considere donar algunas
+                <p class="donationparagraph"><img class="flagphoto" src="../images/spainflag.png"> Considere donar
+                    algunas
                     Tibia Coins para apoyar el sitio, puede transferirlas a mi personaje
                     <b>'Kusnier'</b>, ¡gracias!<br>
                 </p>
-                <p class="donationparagraph"><img class="flagphoto" src="images/polandflag.png"> Proszę rozważ
+                <p class="donationparagraph"><img class="flagphoto" src="../images/polandflag.png"> Proszę rozważ
                     przekazanie kilku Tibia Coinów w celu wsparcia strony, możesz je przesłać na moją postać o nicku
                     <b>'Kusnier'</b>, dziękuję!<br>
                 </p>
@@ -182,7 +141,8 @@
                     target="_blank">CipSoft GmbH</a>. The official
                 website of Tibia is <a href="https://tibia.com" target="_blank">tibia.com</a>.<br><br>
 
-                Created by Kusnier. </p><br>
+                Created by Kusnier.
+            </p><br>
         </footer>
         <aside id="right-footer-space"></aside>
     </main>

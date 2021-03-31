@@ -1,61 +1,41 @@
 {
-    "version": "0.2.0",
+    "version": "0.1.0",
     "configurations": [
         {
-            "name": "Launch index.html",
-            "type": "firefox",
+            "name": "tibialootsplit.html",
+            "type": "chrome",
             "request": "launch",
-            "reAttach": true,
-            "file": "${workspaceFolder}/index.html"
-        },
-        {
-            "name": "Launch tibialootsplit.html",
-            "type": "firefox",
-            "request": "launch",
-            "reAttach": true,
             "file": "${workspaceFolder}/tibialootsplit.html"
         },
         {
-            "name": "Launch imbue.html",
-            "type": "firefox",
+            "name": "tibialootsplit.html",
+            "type": "chrome",
             "request": "launch",
-            "reAttach": true,
-            "file": "${workspaceFolder}/imbue.html"
+            "file": "${workspaceFolder}/tibialootsplit.html"
         },
         {
-            "name": "Launch leech.html",
-            "type": "firefox",
+            "name": "tibialootsplit.html",
+            "type": "chrome",
             "request": "launch",
-            "reAttach": true,
-            "file": "${workspaceFolder}/leech.html"
+            "file": "${workspaceFolder}/tibialootsplit.html"
         },
         {
-            "name": "Launch expcalculator.html",
-            "type": "firefox",
+            "name": "tibialootsplit.html",
+            "type": "chrome",
             "request": "launch",
-            "reAttach": true,
-            "file": "${workspaceFolder}/expcalculator.html"
+            "file": "${workspaceFolder}/tibialootsplit.html"
         },
         {
-            "name": "Launch offlinetraining.html",
-            "type": "firefox",
+            "name": "tibialootsplit.html",
+            "type": "chrome",
             "request": "launch",
-            "reAttach": true,
-            "file": "${workspaceFolder}/offlinetraining.html"
+            "file": "${workspaceFolder}/tibialootsplit.html"
         },
         {
-            "name": "Launch bosstimers.html",
-            "type": "firefox",
+            "name": "tibialootsplit.html",
+            "type": "chrome",
             "request": "launch",
-            "reAttach": true,
-            "file": "${workspaceFolder}/bosstimers.html"
-        },
-        {
-            "name": "Launch contact.html",
-            "type": "firefox",
-            "request": "launch",
-            "reAttach": true,
-            "file": "${workspaceFolder}/contact.html"
+            "file": "${workspaceFolder}/tibialootsplit.html"
         }
     ]
 }

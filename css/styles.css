@@ -587,6 +587,36 @@ ol, ul {
   display: none;
 }
 
+#h4_history_tls {
+  display: none;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  bottom: 10px;
+}
+
+#tibialootsplit-history-table {
+  display: none;
+}
+
+#tibialootsplit-history-table tbody {
+  padding-top: 20px;
+}
+
+#tibialootsplit-history-table th, tr {
+  width: auto;
+  padding: 0 10px 0 10px;
+}
+
+#tibialootsplit-history-table td {
+  width: auto;
+  padding: 5px 5px 5px 5px;
+}
+
+#tibialootsplit-history-table tbody tr:nth-child(even) {
+  background-color: #0d1e38;
+}
+
 #tibialootsplitform label {
   font-size: 14px;
   padding: 0;
