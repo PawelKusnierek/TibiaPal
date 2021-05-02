@@ -8,34 +8,10 @@
             "file": "${workspaceFolder}/tibialootsplit.html"
         },
         {
-            "name": "tibialootsplit.html",
+            "name": "index.html",
             "type": "chrome",
             "request": "launch",
-            "file": "${workspaceFolder}/tibialootsplit.html"
-        },
-        {
-            "name": "tibialootsplit.html",
-            "type": "chrome",
-            "request": "launch",
-            "file": "${workspaceFolder}/tibialootsplit.html"
-        },
-        {
-            "name": "tibialootsplit.html",
-            "type": "chrome",
-            "request": "launch",
-            "file": "${workspaceFolder}/tibialootsplit.html"
-        },
-        {
-            "name": "tibialootsplit.html",
-            "type": "chrome",
-            "request": "launch",
-            "file": "${workspaceFolder}/tibialootsplit.html"
-        },
-        {
-            "name": "tibialootsplit.html",
-            "type": "chrome",
-            "request": "launch",
-            "file": "${workspaceFolder}/tibialootsplit.html"
+            "file": "${workspaceFolder}/index.html"
         }
     ]
 }
