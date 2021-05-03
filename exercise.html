@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TibiaPal.com - Exercise Weapon Calculator!</title>
+    <meta name="author" content="Pawel Kusnierek">
+    <meta name="description"
+        content="Tool to calculate Tibia exercise weapon training, how much you need to spend for a certain skill etc.">
+    <meta name="keywords"
+        content="Tibia calculators, Tibia Calculator, Tibia news, Tibia, Tibia articles, TibiaLootSplit, Split Tibia Loot, Tibia Loot Analyser, Tibia Loot Share, Tibia Share Loot, Tibia Loot, Tibia Loot Split, Tibia Party Calculator, Tibia fansite, Tibia fan site, Tibia Exercise Weapon Calculator, Tibia training calculator, Tibia training dummy calculator">
+    <link rel="shortcut icon" href="images/crystalcoin.ico" type="image/x-icon">
+
+    <!-- css files-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <script src="scripts/onload.js"></script>
+
+    <!-- extra googleapi fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+    <!-- Analytics and ad related section-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVVNY9BHWM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PVVNY9BHWM');
+    </script>
+    <script data-ad-client="ca-pub-2936542406889680" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body onload="initialize()">
+    <main id="page-container">
+        <div id="header">
+            <a href="https://tibiapal.com"><img src="images/1.png" style="width:85%"></a>
+        </div>
+        </div>
+        <div id="banner">
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2936542406889680"
+                crossorigin="anonymous"></script>
+            <!-- Banner Ad -->
+            <ins class="adsbygoogle" style="display:inline-block;width:420px;height:120px"
+                data-ad-client="ca-pub-2936542406889680" data-ad-slot="4845773006"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+        </div>
+        <div id="right-header">
+            <div class="right-sidebar-item"><a href="https://www.tibia.com" target="_blank"><img
+                        src="images/tibia-logo-artwork-top.gif" style="width:85%"></a></div>
+        </div>
+        <nav id="left-sidebar">
+            <div class="nav-item"><a href="https://tibiapal.com">Latest News</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/about">About</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/tibialootsplit">TibiaLootSplit</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/bosstimers">Boss Timers</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/hunting">Hunting Places</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/bestiary">Bestiary Reference</a></div>
+            <div class="nav-item"> <a href="https://tibiapal.com/weapons">Weapons Reference</a> </div>
+            <div class="active nav-item"> <a href="https://tibiapal.com/exercise">Exercise Weapons Calculator</a> </div>
+            <div class="nav-item"><a href="https://tibiapal.com/auctions">House Auctions</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/imbue">Imbue Calculator</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/expshare">Exp Share Calculator</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/stamina">Stamina Calculator</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/leech">Leech Calculator</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/expcalculator">Exp Calculator</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/offlinetraining">Offline Training</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/donators">Donators</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/archive">Archive</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/contact">Contact</a></div>
+            <div class="nav-item"><a href="https://tibiapal.com/privacy">Privacy Policy</a></div>
+            <div class="right-sidebar-item" id="Rashid"><img src="images/Rashid.gif" style="width:45%">
+            </div>
+            <div id="rashid-city">Unavailable...</div>
+
+        </nav>
+        <section id="main-content">
+            <p id="exercise_paragraph"> Calculate how many exercise weapons you have to use to get from skill X to skill
+                Y.
+                <br><br>
+                REMEMBER to always buy exercise weapons for gold when the price of Tibia Coins is above 10 500 gp on
+                your server. <br>
+            <form id="vocation_exercise_form">
+                <label for="vocation">Vocation & skill:</label>
+                <select name="vocation" id="vocation">
+                    <option value="Mage">Druid/Sorcerer - Magic</option>
+                    <option value="Knight">Knight - Melee</option>
+                    <option value="Paladin Magic">Paladin - Magic</option>
+                    <option value="Paladin Melee">Paladin - Distance</option>
+                </select><br>
+                <label id="currentskilllabel" for="currentskill">Current skill:</label>
+                <input type="text" id="currentskill" name="currentskill" placeholder="current skill, e.g. 112"
+                    autocomplete="off"><br>
+                <label id="currentskillpercentagelabel" for="currentskillpercentage">% to next:</label>
+                <input type="text" id="currentskillpercentage" name="currentskillpercentage" value="100"><br>
+                <label id="targetskilllabel" for="targetskill">Target skill:</label>
+                <input type="text" id="targetskill" name="targetskill" placeholder="target skill, e.g. 114"
+                    autocomplete="off"><br>
+                <label id="loyaltylabel" for="loyalty">Loyalty bonus:</label>
+                <select name="loyalty" id="loyalty">
+                    <option value="0">0%</option>
+                    <option value="5">5%</option>
+                    <option value="10">10%</option>
+                    <option value="15">15%</option>
+                    <option value="20">20%</option>
+                    <option value="25">25%</option>
+                    <option value="30">30%</option>
+                    <option value="35">35%</option>
+                    <option value="40">40%</option>
+                    <option value="45">45%</option>
+                    <option value="50">50%</option>
+                </select><br>
+                <label id="event" for="event">Double event:</label>
+                <input type="checkbox" id="event" name="event"><br>
+                <label id="dummy" for="dummy">Private dummy:</label>
+                <input type="checkbox" id="dummy" name="dummy"><br>
+                <input type="submit" id="exercisesubmitbutton" value="Submit"
+                    onclick="event.preventDefault(); submit_exercise_form()" />
+            </form>
+        </section>
+        <aside id="right-sidebar">
+            <section id="banner-paragraph">
+                <p class="donationparagraph">Please consider donating some Tibia Coins to support the site, you can
+                    transfer them to my character '<b>Kusnier</b>', thank you!</p>
+            </section>
+            <section id="top-donators"><span class="gold"><b>Top 5 Donators:</b></span><br>
+                <ul id="donator-list">
+                    <li>350 TC - Mexican Lover</li>
+                    <li>275 TC - Huzky</li>
+                    <li>250 TC - Puzolente</li>
+                    <li>175 TC - Raymon Peshmerge</li>
+                    <li>150 TC - Bandak Starkiller</li>
+                </ul>
+            </section>
+            <div id="discord-container">
+                <div id="stream-info"><br>Come and join the TibiaPal.com community discord! <br><br>
+                    <a href="https://discord.gg/pJEFWr6Fjw" target="_blank">https://discord.gg/pJEFWr6Fjw</a>
+                </div>
+            </div>
+            <div id="stream-container">
+                <div id="stream-info"><br>Come and say hello on Twitch! <br><br>
+                    <a href="https://twitch.tv/Kusnierr" target="_blank">twitch.tv/Kusnierr</a>
+                </div>
+            </div>
+            <div>
+                <script async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2936542406889680"
+                    crossorigin="anonymous"></script>
+                <!-- right-sidebar-2 -->
+                <ins class="adsbygoogle" style="display:inline-block;width:200px;height:200px"
+                    data-ad-client="ca-pub-2936542406889680" data-ad-slot="7878791141"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+        </aside>
+        <aside id="left-footer-space"></aside>
+        <footer id="footer">
+            <p id="footerParagraph">
+                Tibia and all products related to Tibia are copyrighted by <a href="https://www.cipsoft.com"
+                    target="_blank">CipSoft GmbH</a>. The official
+                website of Tibia is <a href="https://tibia.com" target="_blank">tibia.com</a>.<br><br>
+
+                Created by Kusnier.
+            </p><br>
+        </footer>
+        <aside id="right-footer-space"></aside>
+    </main>
+    <div class="cookieconsent"
+        style="display:none;position:fixed;padding:20px;left:0;bottom:0;background-color:#000;color:#FFF;text-align:center;width:100%;z-index:99999;">
+        TibiaPal.com uses cookies to ensure you get the best experience possible. By continuing to use this website, you
+        agree to their use. You can find more information about our cookies on our <a
+            href="https://tibiapal.com/privacy" target="_blank">Privacy Policy</a> page.
+        <a href="" style="color:#CCCCCC;" onclick="event.preventDefault(); cookieConsentClicked()">I Understand</a>
+    </div>
+</body>
+
+</html>

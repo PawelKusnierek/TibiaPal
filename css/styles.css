@@ -964,4 +964,39 @@ ol, ul {
 .weapons_table tbody tr:nth-child(even) {
   background-color: #0d1e38;
 }
+
+#vocation_exercise_form {
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+#vocation_exercise_form input {
+  margin-top: 7px;
+  width: 153px;
+}
+
+#vocation_exercise_form select {
+  margin-top: 7px;
+  width: 160px;
+}
+
+#vocation_exercise_form label {
+  display: inline-block;
+  width: 180px;
+}
+
+#exercisesubmitbutton {
+  width: 70px !important;
+}
+
+#exercisepara {
+  text-align: left;
+  display: block;
+}
+
+#exerciseformresults {
+  padding-bottom: 15px;
+}
 /*# sourceMappingURL=styles.css.map */
