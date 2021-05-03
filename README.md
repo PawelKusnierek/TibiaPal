@@ -17,6 +17,8 @@ Current features include:
 - Offline training calculator
 - Boss Timers
 - Hunting Places
+- Bestiary Reference
+- Weapons Reference
 
 The site currently has approximately 100k pageviews a month.
 
@@ -30,7 +32,11 @@ HTML, CSS, SASS and JS
 
 ## Changelog
 
-### 30th January 2021
+### 3rd May 2021
+
+Added 'Weapons Reference' list of all weapons for all vocations for levelling as well as end-game
+
+### 17th March 2021
 
 Added 'Bestiary Reference', list of all bestiaries to complete split by event and difficulty
 
