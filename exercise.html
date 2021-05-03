@@ -14,6 +14,7 @@
     <!-- css files-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
+    <script src="scripts/exercise.js"></script>
     <script src="scripts/onload.js"></script>
 
     <!-- extra googleapi fonts -->
@@ -82,18 +83,18 @@
 
         </nav>
         <section id="main-content">
-            <p id="exercise_paragraph"> Calculate how many exercise weapons you have to use to get from skill X to skill
+            <p id="exercisepara"> Calculate how many exercise weapons you have to use to get from skill X to skill
                 Y.
                 <br><br>
                 REMEMBER to always buy exercise weapons for gold when the price of Tibia Coins is above 10 500 gp on
-                your server. <br>
+                your server. <br></p>
             <form id="vocation_exercise_form">
                 <label for="vocation">Vocation & skill:</label>
                 <select name="vocation" id="vocation">
                     <option value="Mage">Druid/Sorcerer - Magic</option>
                     <option value="Knight">Knight - Melee</option>
                     <option value="Paladin Magic">Paladin - Magic</option>
-                    <option value="Paladin Melee">Paladin - Distance</option>
+                    <option value="Paladin Distance">Paladin - Distance</option>
                 </select><br>
                 <label id="currentskilllabel" for="currentskill">Current skill:</label>
                 <input type="text" id="currentskill" name="currentskill" placeholder="current skill, e.g. 112"
@@ -117,13 +118,14 @@
                     <option value="45">45%</option>
                     <option value="50">50%</option>
                 </select><br>
-                <label id="event" for="event">Double event:</label>
+                <label id="eventlabel" for="event">Double event:</label>
                 <input type="checkbox" id="event" name="event"><br>
-                <label id="dummy" for="dummy">Private dummy:</label>
+                <label id="dummylabel" for="dummy">Private dummy:</label>
                 <input type="checkbox" id="dummy" name="dummy"><br>
                 <input type="submit" id="exercisesubmitbutton" value="Submit"
                     onclick="event.preventDefault(); submit_exercise_form()" />
             </form>
+            <p id="exerciseformresults"></p>
         </section>
         <aside id="right-sidebar">
             <section id="banner-paragraph">

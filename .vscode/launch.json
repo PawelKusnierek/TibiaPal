@@ -12,6 +12,12 @@
             "type": "chrome",
             "request": "launch",
             "file": "${workspaceFolder}/index.html"
+        },
+        {
+            "name": "exercise.html",
+            "type": "chrome",
+            "request": "launch",
+            "file": "${workspaceFolder}/exercise.html"
         }
     ]
 }
