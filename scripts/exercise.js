@@ -57,7 +57,7 @@ function submit_exercise_form() {
   regular_cost = regular_weapons_required * cost_regular_k
   regular_cost_tc = regular_weapons_required * cost_regular_tc
   if (Math.round(regular_cost) > 1000) {
-    regular_cost = Math.round(regular_cost / 1000)
+    regular_cost = regular_cost / 1000
     regular_k_or_kk = "kk"
   }
 
@@ -65,7 +65,7 @@ function submit_exercise_form() {
   durable_cost = durable_weapons_required * cost_durable_k
   durable_cost_tc = durable_weapons_required * cost_durable_tc
   if (Math.round(durable_cost) > 1000) {
-    durable_cost = Math.round(durable_cost / 1000)
+    durable_cost = durable_cost / 1000
     durable_k_or_kk = "kk"
   }
 
@@ -73,7 +73,7 @@ function submit_exercise_form() {
   lasting_cost = lasting_weapons_required * cost_lasting_k
   lasting_cost_tc = lasting_weapons_required * cost_lasting_tc
   if (Math.round(lasting_cost) > 1000) {
-    lasting_cost = Math.round(lasting_cost / 1000)
+    lasting_cost = lasting_cost / 1000
     lasting_k_or_kk = "kk"
   }
 
