@@ -38,9 +38,9 @@ function submit_exercise_form() {
   else if (vocation_and_type == "Paladin Magic") {
     points_required = main_skill_calculation_points_required(1.4, currentskill, currentskillpercentage, targetskill, loyalty, IsDummy, IsEvent)
 
-    regular_weapons_required = Math.ceil(points_required / points_main_skill_regular_weapon)
-    durable_weapons_required = Math.ceil(points_required / points_main_skill_durable_weapon)
-    lasting_weapons_required = Math.ceil(points_required / points_main_skill_lasting_weapon)
+    regular_weapons_required = Math.ceil(points_required / (points_main_skill_regular_weapon * (1 + (loyalty / 100))))
+    durable_weapons_required = Math.ceil(points_required / (points_main_skill_durable_weapon * (1 + (loyalty / 100))))
+    lasting_weapons_required = Math.ceil(points_required / (points_main_skill_lasting_weapon * (1 + (loyalty / 100))))
   }
   regular_k_or_kk = "k"
   regular_cost = regular_weapons_required * cost_regular_k
