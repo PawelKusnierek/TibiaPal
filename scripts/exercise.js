@@ -23,6 +23,10 @@ function submit_exercise_form() {
   vocation_and_type = document.getElementById("vocation").value;
   currentskill = document.getElementById("currentskill").value;
   currentskillpercentage = document.getElementById("currentskillpercentage").value;
+  if (currentskillpercentage.includes(",")) {
+    currentskillpercentage = currentskillpercentage.replace(",", ".")
+  }
+
   targetskill = document.getElementById("targetskill").value;
   loyalty = document.getElementById("loyalty").value;
   IsDummy = document.getElementById("dummy").checked;
