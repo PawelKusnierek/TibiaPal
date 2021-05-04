@@ -29,14 +29,21 @@ function submit_exercise_form() {
   IsEvent = document.getElementById("event").checked;
 
   if (vocation_and_type == "Mage" || vocation_and_type == "Knight" || vocation_and_type == "Paladin Distance") {
-    points_required = main_skill_calculation_points_required(1.1, currentskill, currentskillpercentage, targetskill, loyalty, IsDummy, IsEvent)
+    points_required = main_skill_calculation_points_required(1.1, currentskill, currentskillpercentage, targetskill, IsDummy, IsEvent, 0)
+
+    regular_weapons_required = Math.ceil(points_required / (points_main_skill_regular_weapon * (1 + (loyalty / 100))))
+    durable_weapons_required = Math.ceil(points_required / (points_main_skill_durable_weapon * (1 + (loyalty / 100))))
+    lasting_weapons_required = Math.ceil(points_required / (points_main_skill_lasting_weapon * (1 + (loyalty / 100))))
+  }
+  else if (vocation_and_type == "Mage") {
+    points_required = main_skill_calculation_points_required(1.1, currentskill, currentskillpercentage, targetskill, IsDummy, IsEvent, 0)
 
     regular_weapons_required = Math.ceil(points_required / (points_main_skill_regular_weapon * (1 + (loyalty / 100))))
     durable_weapons_required = Math.ceil(points_required / (points_main_skill_durable_weapon * (1 + (loyalty / 100))))
     lasting_weapons_required = Math.ceil(points_required / (points_main_skill_lasting_weapon * (1 + (loyalty / 100))))
   }
   else if (vocation_and_type == "Paladin Magic") {
-    points_required = main_skill_calculation_points_required(1.4, currentskill, currentskillpercentage, targetskill, loyalty, IsDummy, IsEvent)
+    points_required = main_skill_calculation_points_required(1.4, currentskill, currentskillpercentage, targetskill, IsDummy, IsEvent, 0)
 
     regular_weapons_required = Math.ceil(points_required / (points_main_skill_regular_weapon * (1 + (loyalty / 100))))
     durable_weapons_required = Math.ceil(points_required / (points_main_skill_durable_weapon * (1 + (loyalty / 100))))
@@ -73,10 +80,10 @@ function submit_exercise_form() {
     + lasting_weapons_required + " lasting exercise weapons, at a cost of " + lasting_cost + lasting_k_or_kk + " (or " + lasting_cost_tc + " Tibia Coins), time required: " + lasting_weapons_required * 8 + " hours"
 }
 
-function main_skill_calculation_points_required(vocation_constant, currentskill, currentskillpercentage, targetskill, loyalty, IsDummy, IsEvent) {
-  current_skill_total_points = total_skill_points_at_given_level(1600, vocation_constant, parseInt(currentskill) + 1, 0)
-  points_to_next_skill = points_to_next_skill_level(1600, vocation_constant, parseInt(currentskill), 10) * (currentskillpercentage / 100)
-  target_skill_total_points = total_skill_points_at_given_level(1600, vocation_constant, targetskill, 0)
+function main_skill_calculation_points_required(vocation_constant, currentskill, currentskillpercentage, targetskill, IsDummy, IsEvent, skill_offset) {
+  current_skill_total_points = total_skill_points_at_given_level(1600, vocation_constant, parseInt(currentskill) + 1, skill_offset)
+  points_to_next_skill = points_to_next_skill_level(1600, vocation_constant, parseInt(currentskill), skill_offset) * (currentskillpercentage / 100)
+  target_skill_total_points = total_skill_points_at_given_level(1600, vocation_constant, targetskill, skill_offset)
 
   total_points_needed_for_target = (target_skill_total_points - (current_skill_total_points - points_to_next_skill))
   // / (1 + (loyalty / 100))
