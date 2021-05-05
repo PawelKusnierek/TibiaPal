@@ -19,6 +19,7 @@ Current features include:
 - Hunting Places
 - Bestiary Reference
 - Weapons Reference
+- Exercise Weapons Calculator
 
 The site currently has approximately 100k pageviews a month.
 
@@ -31,6 +32,10 @@ HTML, CSS, SASS and JS
 
 
 ## Changelog
+
+### 4th May 2021
+
+Added 'Exercise Weapons Calculator'
 
 ### 3rd May 2021
 
