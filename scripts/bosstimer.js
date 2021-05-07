@@ -42,6 +42,17 @@ var questList = [
     ],
   },
   {
+    name: "Warzones",
+    bosses: [
+      { name: "Warzone 1", hours: 20 },
+      { name: "Warzone 2", hours: 20 },
+      { name: "Warzone 3", hours: 20 },
+      { name: "Warzone 4", hours: 4 },
+      { name: "Warzone 5", hours: 4 },
+      { name: "Warzone 6", hours: 4 },
+    ],
+  },
+  {
     name: "Ferumbras Mini",
     bosses: [
       { name: "Mazoran", hours: 48 },
