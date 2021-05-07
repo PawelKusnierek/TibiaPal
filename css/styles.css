@@ -999,4 +999,9 @@ ol, ul {
 #exerciseformresults {
   padding-bottom: 15px;
 }
+
+#other_tools_list li {
+  text-align: left;
+  padding-top: 12px;
+}
 /*# sourceMappingURL=styles.css.map */
