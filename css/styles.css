@@ -73,8 +73,8 @@ ol, ul {
   order: 1;
   -ms-flex-preferred-size: 14.9%;
   flex-basis: 14.9%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 10px;
   font-family: "Acme", sans-serif;
   font-size: 40px;
   margin-left: 2%;
@@ -100,8 +100,7 @@ ol, ul {
   -ms-flex-order: 3;
   order: 3;
   -ms-flex-preferred-size: 15%;
-  flex-basis: 15%;
-  margin-left: 5%;
+  flex-basis: 25%;
 }
 
 #left-sidebar {
@@ -158,6 +157,22 @@ ol, ul {
   background-color: #0f2344e8;
 }
 
+#nav-item-hidden-list {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-item-hidden {
+  font-size: 90%;
+  padding: 10px 0 0 0;
+}
+
+.nav-item-hidden a {
+  padding: 5px 15px 5px 0;
+  text-align: right;
+}
+
 #main-content {
   -webkit-box-ordinal-group: 6;
   -ms-flex-order: 5;
@@ -196,7 +211,11 @@ ol, ul {
 }
 
 .right-sidebar-item {
-  margin: 10px 0 10px 0;
+  margin: 20px 0 10px 0;
+}
+
+.logos {
+  display: inline;
 }
 
 .border-img {
@@ -370,7 +389,8 @@ ol, ul {
 }
 
 #stream-container {
-  padding-bottom: 40px;
+  background-color: #061021f1;
+  padding-bottom: 30px;
 }
 
 #twitch_iframe {
@@ -380,6 +400,9 @@ ol, ul {
 #stream-info {
   font-size: 14px;
   padding-bottom: 10px;
+}
+
+#discord-container {
   background-color: #061021f1;
 }
 
@@ -1003,5 +1026,9 @@ ol, ul {
 #other_tools_list li {
   text-align: left;
   padding-top: 12px;
+}
+
+.videos-list li {
+  padding-top: 15px;
 }
 /*# sourceMappingURL=styles.css.map */
