@@ -157,6 +157,22 @@ ol, ul {
   background-color: #0f2344e8;
 }
 
+#nav-item-hidden-list {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-item-hidden {
+  font-size: 90%;
+  padding: 10px 0 0 0;
+}
+
+.nav-item-hidden a {
+  padding: 5px 15px 5px 0;
+  text-align: right;
+}
+
 #main-content {
   -webkit-box-ordinal-group: 6;
   -ms-flex-order: 5;
