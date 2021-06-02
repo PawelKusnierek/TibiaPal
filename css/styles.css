@@ -1027,4 +1027,8 @@ ol, ul {
   text-align: left;
   padding-top: 12px;
 }
+
+.videos-list li {
+  padding-top: 15px;
+}
 /*# sourceMappingURL=styles.css.map */
