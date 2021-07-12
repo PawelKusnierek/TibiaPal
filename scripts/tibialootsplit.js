@@ -252,7 +252,7 @@ function find_session_duration(data) {
 }
 
 function remove_first_section(data) {
-  index = data.indexOf("Balance: ");
+  index = data.indexOf("Balance ");
   substring1 = data.substring(index + 9);
   index2 = substring1.indexOf(" ");
   substring2 = substring1.substring(0, index2);
@@ -277,12 +277,12 @@ function find_players_and_balance(data, number_of_players) {
   players_and_balance = [];
   player_names_list = [];
   for (let i = 0; i < number_of_players; i++) {
-    index_loot = data.indexOf("Loot:");
+    index_loot = data.indexOf("Loot");
     name_of_player = data.substring(0, index_loot);
     name_of_player = name_of_player.trim();
-    index_balance = data.indexOf("Balance: ");
-    index_damage = data.indexOf("Damage: ");
-    balance_of_player = data.substring(index_balance + 9, index_damage);
+    index_balance = data.indexOf("Balance ");
+    index_damage = data.indexOf("Damage ");
+    balance_of_player = data.substring(index_balance + 8, index_damage -2);
     balance_of_player = balance_of_player.split(",").join("");
     balance_of_player = balance_of_player.trim();
     players_and_balance.push({
@@ -290,8 +290,8 @@ function find_players_and_balance(data, number_of_players) {
       balance: balance_of_player,
     });
     player_names_list.push(name_of_player);
-    index_healing = data.indexOf("Healing: ");
-    data = data.substring(index_healing + 9);
+    index_healing = data.indexOf("Healing ");
+    data = data.substring(index_healing + 8);
     index_space = data.indexOf(" ");
     data = data.substring(index_space + 1);
   }
