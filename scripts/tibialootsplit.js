@@ -256,9 +256,7 @@ function remove_first_section(data) {
   substring1 = data.substring(index + 8);
   index2 = substring1.indexOf(" ");
   substring2 = substring1.substring(0, index2);
-  /*
-  don't think this is necessary anymore. also messes up the .length in line 262. if we re-add below line we need to increase the lenght appropriately based on number of commas 
-  substring2 = substring2.split(",").join(""); */
+  substring2 = substring2.split(",").join("");
   analyser_data = substring1.substring(substring2.length + 1);
 }
 
