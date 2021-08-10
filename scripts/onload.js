@@ -98,13 +98,23 @@ function add_expandable_nav_item_listener() {
   var i;
 
   for (i = 0; i < nav_elements.length; i++) {
-    nav_elements[i].addEventListener("mouseover", function(event) {
+    nav_elements[i].addEventListener("mouseover", function (event) {
       hidden_list = document.getElementById("nav-item-hidden-list")
       hidden_list.style.display = "initial"
     })
-    nav_elements[i].addEventListener("mouseout", function(event) {
+    nav_elements[i].addEventListener("mouseout", function (event) {
       hidden_list = document.getElementById("nav-item-hidden-list")
       hidden_list.style.display = "none"
     })
   }
+}
+
+function populate_youtube_videos() {
+  const url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCSSKSQ0Q_OJ9vEUtxBDar-g&order=date&type=video&videoSyndicated=true&key=AIzaSyCst8usFdzsoPuPx-C90jARNG7k8kJMgLE'
+  
+  let response = fetch(url);
+  fetch(url)
+    .then(data => { return data.json() })
+    .then(res => { console.log(res) })
+  return response
 }
