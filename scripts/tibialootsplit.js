@@ -256,8 +256,7 @@ function remove_first_section(data) {
   substring1 = data.substring(index + 9);
   index2 = substring1.indexOf(" ");
   substring2 = substring1.substring(0, index2);
-  substring2 = substring2.split(",").join("");
-  analyser_data = substring1.substring(substring2.length + 2);
+  analyser_data = substring1.substring(substring2.length + 1);
 }
 
 function find_total_profit(players_and_their_balance) {
