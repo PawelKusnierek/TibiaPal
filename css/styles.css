@@ -653,6 +653,7 @@ ol, ul {
 
 .bestiary_table td {
   padding: 5px 10px 5px 10px;
+  text-align: center;
 }
 
 .bestiary_table th {
