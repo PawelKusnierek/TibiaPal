@@ -117,9 +117,6 @@ var questList = [
 ];
 
 function init() {
-  var profile_dropdown = document.getElementById("profile_dropdown");
-  profile_dropdown.addEventListener("change", profile_change);
-
   var mainDiv = document.getElementById("quest-boss-list");
 
   questList.forEach(function (quest) {
@@ -171,9 +168,7 @@ function init() {
 
   questList.forEach(function (quest) {
     quest.bosses.forEach(function (boss) {
-      var profile = document.getElementById("profile_dropdown").value;
-      var profile_boss = profile + nameUnderscore(boss.name)
-      var cookie = getCookie(profile_boss);
+      var cookie = getCookie(nameUnderscore(boss.name));
       current_date = new Date();
       boss_expiry_date = new Date(cookie);
       if (boss_expiry_date < current_date) {
@@ -206,17 +201,13 @@ function startTimer(boss) {
     clearInterval(boss.timer);
   }
 
-  var profile = document.getElementById("profile_dropdown").value;
-  var profile_boss = profile + nameUnderscore(boss.name)
-  setTimer(boss, getTimeRemaining(getCookie(profile_boss)));
+  setTimer(boss, getTimeRemaining(getCookie(nameUnderscore(boss.name))));
 
   bossSetTimer(boss);
 }
 
 function bossSetTimer(boss) {
-  var profile = document.getElementById("profile_dropdown").value;
-  var profile_boss = profile + nameUnderscore(boss.name)
-  var cookie = getCookie(profile_boss);
+  var cookie = getCookie(nameUnderscore(boss.name));
 
   // If expire remove cookie
   if (cookie == "" || new Date(cookie) < new Date()) {
@@ -277,11 +268,8 @@ function setCookieBoss(name, value, hours) {
     date.setTime(date.getTime() + hours * 60 * 60 * 1000);
     expires = "; expires=" + date.toUTCString();
   }
-  var profile = document.getElementById("profile_dropdown").value;
-  var profile_name = profile + name
-
   document.cookie =
-    profile_name +
+    name +
     "=" +
     (value || "") +
     expires +
@@ -308,6 +296,4 @@ function nameUnderscore(name) {
   return name.replace(/ /g, "_").toLowerCase();
 }
 
-function profile_change() {
-  location.reload();
-}
+

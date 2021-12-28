@@ -1,18 +1,11 @@
 {
     "version": "0.1.0",
     "configurations": [
-
         {
             "name": "tibialootsplit.html",
             "type": "chrome",
             "request": "launch",
             "file": "${workspaceFolder}/tibialootsplit.html"
-        },
-        {
-            "name": "bosstimers.html",
-            "type": "chrome",
-            "request": "launch",
-            "file": "${workspaceFolder}/bosstimers.html"
         },
         {
             "name": "index.html",
