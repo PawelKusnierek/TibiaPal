@@ -50,6 +50,15 @@ var questList = [
       { name: "Warzone 4", hours: 4 },
       { name: "Warzone 5", hours: 4 },
       { name: "Warzone 6", hours: 4 },
+      { name: "The Brainstealer", hours: 20 },
+    ],
+  },
+  {
+    name: "Issavi Mini",
+    bosses: [
+      { name: "Amenef The Burning", hours: 20 },
+      { name: "Neferi The Spy", hours: 20 },
+      { name: "Sister Hetai", hours: 20 },
     ],
   },
   {
