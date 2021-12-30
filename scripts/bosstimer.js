@@ -2,7 +2,7 @@ var questList = [
   {
     name: "Common Rotation Bosses",
     bosses: [
-      { name: "Urmahlullu", hours: 20 },
+      { name: "Urmahlullu", hours: 1 },
       { name: "Scarlett", hours: 20 },
       { name: "Oberon", hours: 20 },
       { name: "Drume", hours: 20 },
@@ -117,6 +117,9 @@ var questList = [
 ];
 
 function init() {
+  var profile_dropdown = document.getElementById("profile_dropdown");
+  profile_dropdown.addEventListener("change", profile_change);
+
   var mainDiv = document.getElementById("quest-boss-list");
 
   questList.forEach(function (quest) {
@@ -168,7 +171,9 @@ function init() {
 
   questList.forEach(function (quest) {
     quest.bosses.forEach(function (boss) {
-      var cookie = getCookie(nameUnderscore(boss.name));
+      var profile = document.getElementById("profile_dropdown").value;
+      var profile_boss = profile + nameUnderscore(boss.name)
+      var cookie = getCookie(profile_boss);
       current_date = new Date();
       boss_expiry_date = new Date(cookie);
       if (boss_expiry_date < current_date) {
@@ -201,13 +206,17 @@ function startTimer(boss) {
     clearInterval(boss.timer);
   }
 
-  setTimer(boss, getTimeRemaining(getCookie(nameUnderscore(boss.name))));
+  var profile = document.getElementById("profile_dropdown").value;
+  var profile_boss = profile + nameUnderscore(boss.name)
+  setTimer(boss, getTimeRemaining(getCookie(profile_boss)));
 
   bossSetTimer(boss);
 }
 
 function bossSetTimer(boss) {
-  var cookie = getCookie(nameUnderscore(boss.name));
+  var profile = document.getElementById("profile_dropdown").value;
+  var profile_boss = profile + nameUnderscore(boss.name)
+  var cookie = getCookie(profile_boss);
 
   // If expire remove cookie
   if (cookie == "" || new Date(cookie) < new Date()) {
@@ -216,6 +225,8 @@ function bossSetTimer(boss) {
 
   boss.timer = setInterval(() => {
     var t = getTimeRemaining(cookie);
+    var div = document.getElementById(nameUnderscore(boss.name) + "_timer");
+      div.innerHTML = "--:--:--"
     setTimer(boss, t);
 
     if (t.total <= 0) {
@@ -268,8 +279,11 @@ function setCookieBoss(name, value, hours) {
     date.setTime(date.getTime() + hours * 60 * 60 * 1000);
     expires = "; expires=" + date.toUTCString();
   }
+  var profile = document.getElementById("profile_dropdown").value;
+  var profile_name = profile + name
+
   document.cookie =
-    name +
+    profile_name +
     "=" +
     (value || "") +
     expires +
@@ -279,9 +293,9 @@ function setCookieBoss(name, value, hours) {
 function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(";");
-  for (var i = 0; i < ca.length; i++) {
-    var c = ca[i];
+  var cookie_array = decodedCookie.split(";");
+  for (var i = 0; i < cookie_array.length; i++) {
+    var c = cookie_array[i];
     while (c.charAt(0) == " ") {
       c = c.substring(1);
     }
@@ -296,4 +310,38 @@ function nameUnderscore(name) {
   return name.replace(/ /g, "_").toLowerCase();
 }
 
+function profile_change() {
+  questList.forEach(function (quest) {
+    quest.bosses.forEach(function (boss) {
 
+      var div = document.getElementById(nameUnderscore(boss.name) + "_timer");
+      div.innerHTML = "--:--:--"
+      clearInterval(boss.timer);
+      //double timer...
+      bossSetTimer(boss);
+
+
+      var profile = document.getElementById("profile_dropdown").value;
+      var profile_boss = profile + nameUnderscore(boss.name)
+      var cookie = getCookie(profile_boss);
+      current_date = new Date();
+      boss_expiry_date = new Date(cookie);
+      if (boss_expiry_date < current_date) {
+        var div = document.getElementById(nameUnderscore(boss.name) + "_timer");
+        time_difference_in_ms =
+          current_date.getTime() - boss_expiry_date.getTime();
+        time_difference_in_sec = Math.round(time_difference_in_ms / 1000);
+        time_difference_in_min = Math.round(time_difference_in_sec / 60);
+
+        if (time_difference_in_min > 60) {
+          time_difference_in_hr = Math.round(time_difference_in_min / 60);
+          div.innerHTML =
+            "expired<br> " + String(time_difference_in_hr) + " hours ago";
+        } else {
+          div.innerHTML =
+            "expired<br> " + String(time_difference_in_min) + " min ago";
+        }
+      }
+    });
+  })
+}
