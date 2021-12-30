@@ -90,14 +90,17 @@
         </nav>
         <section id="main-content">
             <p><b>HOW TO USE:</b><br><br>Simply 'click' on the photo of a boss to start their timer!</p> <br>
-            <p><b><span id="new-homepage">NEW! </span>SELECT PROFILE:</b></p><br>
+            <p><b><span id="new-homepage">NEW! </span>PROFILES:</b></p><br>
+            <form id="profile_name_form">
+                <input type="text" id="profile_name" name="profile_name"
+                    placeholder="Enter new profile here..." autocomplete="off">
+                <input type="submit" id="profile_name_submit" value="Add"
+                    onclick="event.preventDefault(); profile_name_submit_click()" />
+            </form>
             <select name="profile_dropdown" id="profile_dropdown">
-                <option value="profile1">Character 1</option>
-                <option value="profile2">Character 2</option>
-                <option value="profile3">Character 3</option>
-                <option value="profile4">Character 4</option>
-                <option value="profile5">Character 5</option>
             </select>
+            <input type="submit" id="profile_remove_submit" value="Remove"
+                    onclick="event.preventDefault(); profile_remove_submit_click()" />
             <!--<input type="button" onclick="view_tibialootsplit_history()" value="Rename" /> -->
 
             <div id="quest-boss-list"><br>
