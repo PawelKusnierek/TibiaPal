@@ -2,7 +2,7 @@ var questList = [
   {
     name: "Common Rotation Bosses",
     bosses: [
-      { name: "Urmahlullu", hours: 1 },
+      { name: "Urmahlullu", hours: 20 },
       { name: "Scarlett", hours: 20 },
       { name: "Oberon", hours: 20 },
       { name: "Drume", hours: 20 },
@@ -117,6 +117,18 @@ var questList = [
 ];
 
 function init() {
+  if (typeof localStorage.profiles != "undefined") {
+    var existing_profiles = JSON.parse(localStorage.profiles);
+    var select = document.getElementById("profile_dropdown");
+
+    for (i = 0; i < existing_profiles.length; i++) {
+      var option = document.createElement('option');
+      option.value = existing_profiles[i]
+      option.innerHTML = existing_profiles[i]
+      select.appendChild(option)
+    }
+  }
+
   var profile_dropdown = document.getElementById("profile_dropdown");
   profile_dropdown.addEventListener("change", profile_change);
 
@@ -226,7 +238,7 @@ function bossSetTimer(boss) {
   boss.timer = setInterval(() => {
     var t = getTimeRemaining(cookie);
     var div = document.getElementById(nameUnderscore(boss.name) + "_timer");
-      div.innerHTML = "--:--:--"
+    div.innerHTML = "--:--:--"
     setTimer(boss, t);
 
     if (t.total <= 0) {
@@ -344,4 +356,54 @@ function profile_change() {
       }
     });
   })
+}
+
+function profile_name_submit_click() {
+  var new_profile_name = document.getElementById("profile_name").value;
+  var select = document.getElementById("profile_dropdown");
+  if (typeof localStorage.profiles != "undefined") {
+    var existing_profiles = JSON.parse(localStorage.profiles);
+
+    if (existing_profiles.includes(new_profile_name)) {
+      window.alert("Profile with this name already exists.");
+      return
+    }
+    else {
+      var option = document.createElement('option');
+      option.value = new_profile_name
+      option.innerHTML = new_profile_name
+      select.appendChild(option)
+
+      existing_profiles.push(new_profile_name)
+      localStorage.setItem("profiles", JSON.stringify(existing_profiles));
+    }
+  }
+  else {
+    var option = document.createElement('option');
+    option.value = new_profile_name
+    option.innerHTML = new_profile_name
+    select.appendChild(option)
+    var profiles = [];
+    profiles.push(new_profile_name)
+    localStorage.setItem("profiles", JSON.stringify(profiles));
+  }
+}
+
+function profile_remove_submit_click() {
+  if (typeof localStorage.profiles != "undefined") {
+    var profile_dropdown = document.getElementById("profile_dropdown");
+    var profile_to_remove = profile_dropdown.value;
+
+    var existing_profiles = JSON.parse(localStorage.profiles);
+    var index = existing_profiles.indexOf(profile_to_remove)
+    if (index > -1) {
+      existing_profiles.splice(index, 1);
+    }
+    localStorage.setItem("profiles", JSON.stringify(existing_profiles))
+    for (var i = 0; i < profile_dropdown.length; i++) {
+      if (profile_dropdown.options[i].value == profile_to_remove)
+        profile_dropdown.remove(i);
+    }
+    profile_change()
+  }
 }

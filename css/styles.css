@@ -971,6 +971,23 @@ ol, ul {
   text-shadow: none;
 }
 
+#profile_name_form {
+  margin-bottom: 15px;
+}
+
+#profile_name {
+  width: 150px;
+}
+
+#profile_remove_submit {
+  width: 70px;
+}
+
+#profile_name_submit {
+  width: 50px;
+  margin-left: 6px;
+}
+
 .weapons_table {
   display: initial;
 }
