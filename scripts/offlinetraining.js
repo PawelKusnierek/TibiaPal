@@ -51,7 +51,7 @@ function submit_form() {
     }
 
 
-    offlinetrainingformresults.innerHTML = "To get from " + currentskill + " " + skill_type + " to " + targetskill + " " + skill_type + ", you need to offline train for a total of " + total_hours + " hours, which is: <br><br><b>" + years + " years, " + months + " months, " + days + " days, " + hours + " hours</b><br>"
+    offlinetrainingformresults.innerHTML = "To get from " + currentskill + " " + skill_type + " to " + targetskill + " " + skill_type + ", you need to offline train for a total of " + total_hours + " hours, which at 12 hours of offline training a day is: <br><br><b>" + years + " years, " + months + " months, " + days + " days, " + hours + " hours</b><br>"
 }
 
 function calculate_mage_skill(currentskill, currentskillpercentage, targetskill, loyalty) {
