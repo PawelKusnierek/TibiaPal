@@ -83,17 +83,16 @@
                     <li class="nav-item-hidden"><a href="https://tibiapal.com/auctions">House Auctions</a></li>
                     <li class="nav-item-hidden"><a href="https://tibiapal.com/weapons">Weapons Reference</a></li>
                 </ul>
-            </div>            <div class="nav-item"><a href="https://tibiapal.com/donators">Donators</a></div>
+            </div>
+            <div class="nav-item"><a href="https://tibiapal.com/donators">Donators</a></div>
             <div class="right-sidebar-item" id="Rashid"><img src="/images/Rashid.gif" style="width:45%">
             </div>
             <div id="rashid-city">Unavailable...</div>
         </nav>
         <section id="main-content">
-            <p id="exercisepara"> THIS IS A <span style="color:red">BETA</span> VERSION! Please let me know in case of any issues.<br><br>Calculate how many exercise weapons you have to use to get from skill X to skill
-                Y.
-                <br><br>
-                REMEMBER to always buy exercise weapons for gold when the price of Tibia Coins is above 10 500 gp on
-                your server. <br></p>
+            <br>Calculate how many exercise weapons you have to use to get from skill X to skill Y. <br><br>
+            Always buy exercise weapons for gold when the price of Tibia Coins is above 10 500 gp on
+            your server. <br></p>
             <form id="vocation_exercise_form">
                 <label for="vocation">Vocation & skill:</label>
                 <select name="vocation" id="vocation">
@@ -103,8 +102,8 @@
                     <option value="Paladin Distance">Paladin - Distance</option>
                 </select><br>
                 <label id="currentskilllabel" for="currentskill">Current skill with loyalty:</label>
-                <input type="text" id="currentskill" name="currentskill" placeholder="current skill with loyalty, e.g. 112"
-                    autocomplete="off"><br>
+                <input type="text" id="currentskill" name="currentskill"
+                    placeholder="current skill with loyalty, e.g. 112" autocomplete="off"><br>
                 <label id="currentskillpercentagelabel" for="currentskillpercentage">% to next:</label>
                 <input type="text" id="currentskillpercentage" name="currentskillpercentage" value="100"><br>
                 <label id="targetskilllabel" for="targetskill">Target skill:</label>
@@ -128,6 +127,8 @@
                 <input type="checkbox" id="event" name="event"><br>
                 <label id="dummylabel" for="dummy">Private dummy:</label>
                 <input type="checkbox" id="dummy" name="dummy"><br>
+                <label id="tc_price_label" for="tc_price">TC over 10500 gp:</label>
+                <input type="checkbox" id="tc_price" name="tc_price" checked><br>
                 <input type="submit" id="exercisesubmitbutton" value="Submit"
                     onclick="event.preventDefault(); submit_exercise_form()" />
             </form>
@@ -167,7 +168,7 @@
                     target="_blank">CipSoft GmbH</a>. The official
                 website of Tibia is <a href="https://www.tibia.com" target="_blank">tibia.com</a>.<br><br>
 
-                Created by Kusnier. 
+                Created by Kusnier.
             </p><br>
         </footer>
         <aside id="right-footer-space"></aside>
@@ -175,8 +176,8 @@
     <div class="cookieconsent"
         style="display:none;position:fixed;padding:20px;left:0;bottom:0;background-color:#000;color:#FFF;text-align:center;width:100%;z-index:99999;">
         TibiaPal.com uses cookies to ensure you get the best experience possible. By continuing to use this website, you
-        agree to their use. You can find more information about our cookies on our <a
-            href="https://tibiapal.com/about" target="_blank">Privacy Policy</a> page.
+        agree to their use. You can find more information about our cookies on our <a href="https://tibiapal.com/about"
+            target="_blank">Privacy Policy</a> page.
         <a href="" style="color:#CCCCCC;" onclick="event.preventDefault(); cookieConsentClicked()">I Understand</a>
     </div>
 </body>
