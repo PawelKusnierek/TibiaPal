@@ -47,7 +47,7 @@ function submit_exercise_form() {
   regular_k_or_kk = "k"
   regular_cost = regular_weapons_required * cost_regular_k
   regular_cost_tc = regular_weapons_required * cost_regular_tc
-  
+
   if (Math.round(regular_cost) > 1000) {
     regular_cost = regular_cost / 1000
     regular_k_or_kk = "kk"
@@ -70,10 +70,21 @@ function submit_exercise_form() {
   }
 
   //filling out the html after calculation
-  exerciseformresults.innerHTML = "To get from skill " + currentskill + " to skill " + targetskill + ", you need to use a total of: <br><br>"
-    + regular_weapons_required + " regular exercise weapons, at a cost of " + regular_cost + regular_k_or_kk + " (or " + regular_cost_tc + " Tibia Coins), time required: " + Math.floor(regular_weapons_required / 3.6) + " hours and " + Math.round((regular_weapons_required % 3.6) * 16.67) + " minutes<br><br>"
-    + durable_weapons_required + " durable exercise weapons, at a cost of " + durable_cost + durable_k_or_kk + " (or " + durable_cost_tc + " Tibia Coins), time required: " + durable_weapons_required + " hours<br><br>"
-    + lasting_weapons_required + " lasting exercise weapons, at a cost of " + lasting_cost + lasting_k_or_kk + " (or " + lasting_cost_tc + " Tibia Coins), time required: " + lasting_weapons_required * 8 + " hours"
+  IsTCOver10500 = IsDummy = document.getElementById("tc_price").checked;
+
+  if (IsTCOver10500) {
+    exerciseformresults.innerHTML = "To get from skill " + currentskill + " to skill " + targetskill + ", you need to use a total of: <br><br>"
+      + regular_weapons_required + " regular exercise weapons, at a cost of " + regular_cost + regular_k_or_kk + ", time required: " + Math.floor(regular_weapons_required / 3.6) + " hours and " + Math.round((regular_weapons_required % 3.6) * 16.67) + " minutes<br><br>"
+      + durable_weapons_required + " durable exercise weapons, at a cost of " + durable_cost + durable_k_or_kk + ", time required: " + durable_weapons_required + " hours<br><br>"
+      + lasting_weapons_required + " lasting exercise weapons, at a cost of " + lasting_cost + lasting_k_or_kk + ", time required: " + lasting_weapons_required * 8 + " hours"
+  }
+  else {
+    exerciseformresults.innerHTML = "To get from skill " + currentskill + " to skill " + targetskill + ", you need to use a total of: <br><br>"
+      + regular_weapons_required + " regular exercise weapons, at a cost of " + regular_cost_tc + " Tibia Coins, time required: " + Math.floor(regular_weapons_required / 3.6) + " hours and " + Math.round((regular_weapons_required % 3.6) * 16.67) + " minutes<br><br>"
+      + durable_weapons_required + " durable exercise weapons, at a cost of " + durable_cost_tc + " Tibia Coins, time required: " + durable_weapons_required + " hours<br><br>"
+      + lasting_weapons_required + " lasting exercise weapons, at a cost of " + lasting_cost_tc + " Tibia Coins, time required: " + lasting_weapons_required * 8 + " hours"
+  }
+
 }
 
 function main_skill_calculation_points_required(vocation_constant, currentskill, currentskillpercentage, targetskill, IsDummy, IsEvent, skill_offset) {
