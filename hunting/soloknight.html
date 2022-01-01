@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
     <script src="/scripts/onload.js"></script>
+    <script src="/scripts/hunting.js"></script>
+
 
     <!-- extra googleapi fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
@@ -89,7 +91,31 @@
         </nav>
         <section id="main-content">
             <h1>Hunting Places - Solo Knight</h1>
-            <table class="hunting_table">
+            <div id="filter_selection"><b>Level Filter</b>:<br><br>
+                <label id="all_label" for="all_choice">All</label>
+                <input type="radio" id="all_choice" name="level_filter_choice" checked onclick="apply_level_filter()" />
+
+                <label id="all_label" for="50_choice">50+</label>
+                <input type="radio" id="50_choice" name="level_filter_choice" onclick="apply_level_filter()" />
+
+                <label id="all_label" for="100_choice">100+</label>
+                <input type="radio" id="100_choice" name="level_filter_choice" onclick="apply_level_filter()" />
+
+                <label id="all_label" for="130_choice">130+</label>
+                <input type="radio" id="130_choice" name="level_filter_choice" onclick="apply_level_filter()" />
+
+                <label id="all_label" for="200_choice">200+</label>
+                <input type="radio" id="200_choice" name="level_filter_choice" onclick="apply_level_filter()" />
+
+                <label id="all_label" for="300_choice">300+</label>
+                <input type="radio" id="300_choice" name="level_filter_choice" onclick="apply_level_filter()" />
+
+                <label id="all_label" for="400_choice">400+</label>
+                <input type="radio" id="400_choice" name="level_filter_choice" onclick="apply_level_filter()" />
+                <br>
+            </div>
+
+            <table id="hunting_table">
                 <tr>
                     <th class="level_row">Level</th>
                     <th class="place_row">Place</th>
@@ -139,12 +165,12 @@
                     <td>Nomad Cave</td>
                 </tr>
                 <tr>
-                    <td>30+</td>
-                    <td><a href="https://youtu.be/BmLScxZQ9Vk" target="_blank">Mutated Humans Yala</a></td>
-                </tr>
-                <tr>
                     <td>20+</td>
                     <td><a href="https://youtu.be/3mcY_eNBThg" target="_blank">Blood Crabs Laguna Islands</a></td>
+                </tr>
+                <tr>
+                    <td>30+</td>
+                    <td><a href="https://youtu.be/BmLScxZQ9Vk" target="_blank">Mutated Humans Yala</a></td>
                 </tr>
                 <tr>
                     <td>30+</td>
@@ -368,7 +394,8 @@
                 </tr>
                 <tr>
                     <td>300+</td>
-                    <td> <a href="https://youtu.be/7lL9Eu4gEfY" target="_blank">Werelions -1</a>, <a href="https://youtu.be/4UjR7XhKo2Q" target="_blank">Werelions -2</a> </td>
+                    <td> <a href="https://youtu.be/7lL9Eu4gEfY" target="_blank">Werelions -1</a>, <a
+                            href="https://youtu.be/4UjR7XhKo2Q" target="_blank">Werelions -2</a> </td>
                 </tr>
                 <tr>
                     <td>300+</td>
@@ -419,7 +446,7 @@
                     <td><a href="https://youtu.be/zZv9XYnpF_U" target="_blank">Oramond Wildlife Raid</a></td>
                 </tr>
                 <tr>
-                    <td>350+</td> 
+                    <td>350+</td>
                     <td><a href="https://youtu.be/xEV7rp0YQ8g" target="_blank">Lower Rosha</a></td>
                 </tr>
                 <tr>
@@ -428,7 +455,8 @@
                 </tr>
                 <tr>
                     <td>350+</td>
-                    <td>Bazir Seal (<a href="https://youtu.be/VQAQTyqpkgI" target="_blank">part 1</a>, <a href="https://youtu.be/0lPT8sbgToU" target="_blank">part 2</a>)</td>
+                    <td>Bazir Seal (<a href="https://youtu.be/VQAQTyqpkgI" target="_blank">part 1</a>, <a
+                            href="https://youtu.be/0lPT8sbgToU" target="_blank">part 2</a>)</td>
                 </tr>
                 <tr>
                     <td>350+</td>
@@ -476,7 +504,8 @@
                 </tr>
                 <tr>
                     <td>450+</td>
-                    <td><a href="https://youtu.be/aIa1rppOhBg" target="_blank">Summer Court for first timers (half boxes)</a></td>
+                    <td><a href="https://youtu.be/aIa1rppOhBg" target="_blank">Summer Court for first timers (half
+                            boxes)</a></td>
                 </tr>
                 <tr>
                     <td>500+</td>
@@ -558,7 +587,7 @@
                     target="_blank">CipSoft GmbH</a>. The official
                 website of Tibia is <a href="https://www.tibia.com" target="_blank">tibia.com</a>.<br><br>
 
-                Created by Kusnier. 
+                Created by Kusnier.
             </p><br>
         </footer>
         <aside id="right-footer-space"></aside>

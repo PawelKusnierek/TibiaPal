@@ -9,6 +9,12 @@
             "file": "${workspaceFolder}/tibialootsplit.html"
         },
         {
+            "name": "hunting.html",
+            "type": "chrome",
+            "request": "launch",
+            "file": "${workspaceFolder}/hunting/soloknight.html"
+        },
+        {
             "name": "bosstimers.html",
             "type": "chrome",
             "request": "launch",

@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
     <script src="/scripts/onload.js"></script>
+    <script src="/scripts/hunting.js"></script>
+
 
     <!-- extra googleapi fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
@@ -88,7 +90,31 @@
         </nav>
         <section id="main-content">
             <h1>Hunting Places - Paladin Druid duo</h1>
-            <table class="hunting_table">
+            <div id="filter_selection"><b>Level Filter</b>:<br><br>
+                <label id="all_label" for="all_choice">All</label>
+                <input type="radio" id="all_choice" name="level_filter_choice" checked onclick="apply_level_filter()" />
+
+                <label id="all_label" for="50_choice">50+</label>
+                <input type="radio" id="50_choice" name="level_filter_choice" onclick="apply_level_filter()" />
+
+                <label id="all_label" for="100_choice">100+</label>
+                <input type="radio" id="100_choice" name="level_filter_choice" onclick="apply_level_filter()" />
+
+                <label id="all_label" for="130_choice">130+</label>
+                <input type="radio" id="130_choice" name="level_filter_choice" onclick="apply_level_filter()" />
+
+                <label id="all_label" for="200_choice">200+</label>
+                <input type="radio" id="200_choice" name="level_filter_choice" onclick="apply_level_filter()" />
+
+                <label id="all_label" for="300_choice">300+</label>
+                <input type="radio" id="300_choice" name="level_filter_choice" onclick="apply_level_filter()" />
+
+                <label id="all_label" for="400_choice">400+</label>
+                <input type="radio" id="400_choice" name="level_filter_choice" onclick="apply_level_filter()" />
+                <br>
+            </div>
+
+            <table id="hunting_table">
                 <tr>
                     <th class="level_row">Level</th>
                     <th class="place_row">Place</th>
