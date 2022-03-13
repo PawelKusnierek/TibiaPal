@@ -111,8 +111,11 @@ var questList = [
     ],
   },
   {
-    name: "Feyrist",
-    bosses: [{ name: "Kroazur", hours: 2 }],
+    name: "Misc",
+    bosses: [
+      { name: "Kroazur", hours: 2 },
+      { name: "Oramond", minutes: 16, seconds: 40 },
+    ],
   },
 ];
 
@@ -210,7 +213,16 @@ function init() {
 
 function startTimer(boss) {
   var date = new Date();
-  date.setHours(date.getHours() + boss.hours);
+  if (boss.hours) {
+    date.setHours(date.getHours() + boss.hours);
+  }
+  if (boss.minutes) {
+    date.setMinutes(date.getMinutes() + boss.minutes);
+  }
+  if (boss.seconds) {
+    date.setSeconds(date.getSeconds() + boss.seconds);
+  }
+
 
   setCookieBoss(nameUnderscore(boss.name), date);
 
