@@ -91,29 +91,30 @@
         </nav>
         <section id="main-content">
             <h1>Hunting Places - Solo Knight</h1>
-            <div id="filter_selection"><b>Level Filter</b>:<br><br>
-                <label id="all_label" for="all_choice">All</label>
-                <input type="radio" id="all_choice" name="level_filter_choice" checked onclick="apply_level_filter()" />
-
-                <label id="all_label" for="50_choice">50+</label>
-                <input type="radio" id="50_choice" name="level_filter_choice" onclick="apply_level_filter()" />
-
-                <label id="all_label" for="100_choice">100+</label>
-                <input type="radio" id="100_choice" name="level_filter_choice" onclick="apply_level_filter()" />
-
-                <label id="all_label" for="130_choice">130+</label>
-                <input type="radio" id="130_choice" name="level_filter_choice" onclick="apply_level_filter()" />
-
-                <label id="all_label" for="200_choice">200+</label>
-                <input type="radio" id="200_choice" name="level_filter_choice" onclick="apply_level_filter()" />
-
-                <label id="all_label" for="300_choice">300+</label>
-                <input type="radio" id="300_choice" name="level_filter_choice" onclick="apply_level_filter()" />
-
-                <label id="all_label" for="400_choice">400+</label>
-                <input type="radio" id="400_choice" name="level_filter_choice" onclick="apply_level_filter()" />
-                <br>
-            </div>
+			<div id="filter_selection">
+				<b>Level Filter</b>:<br><br>
+				<label>
+					<input value="0" type="radio" name="level_filter_choice" checked onclick="apply_level_filter()"> All
+				</label>
+				<label>
+					<input value="50" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 50+
+				</label>
+				<label>
+					<input value="100" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 100+
+				</label>
+				<label>
+					<input value="130" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 130+
+				</label>
+				<label>
+					<input value="200" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 200+
+				</label>
+				<label>
+					<input value="300" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 300+
+				</label>
+				<label>
+					<input value="400" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 400+
+				</label>
+			</div>
 
             <table id="hunting_table">
                 <tr>
@@ -584,6 +585,7 @@
                     </script>
                 </div>
                 <br>
+			</div>
         </aside>
         <aside id="left-footer-space"></aside>
         <footer id="footer">
