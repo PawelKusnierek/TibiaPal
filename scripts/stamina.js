@@ -1,39 +1,47 @@
 function submit_form() {
-    stamina = document.getElementById("staminalevel").value
-    content = document.getElementById("staminaresults")
+    let stamina = document.getElementById("staminalevel").value;
+	let content = document.getElementById("staminaresults");
     content.innerHTML = "";
-    duration = findTimeToRenegerate(stamina)
+	let timeToFullStamina = findTimeToRenegerate(stamina);
+	const fullStaminaDate = calcFullStaminaDate(timeToFullStamina * 60 * 1000);
+	const fullStaminaInfo = 'Your stamina will be full at ' + fullStaminaDate;
 
-    if (duration == "invalid input") {
-        content.innerHTML = content.innerHTML + duration
+    if (timeToFullStamina === "invalid input") {
+        content.innerHTML = content.innerHTML + timeToFullStamina
     }
-    else if (duration >= 1440) {
-        days = (duration - (duration%1440)) / 1440
-        duration = duration - (days * 1440)
-        if (duration >= 60) {
-            hours = (duration - (duration%60)) / 60
-            duration = duration - (hours * 60)
-            content.innerHTML = content.innerHTML + "To get from " + stamina + " to full stamina, you need to rest for<b> " + days + " days, " + hours + " hours and " + duration + " minutes</b>."
+    else if (timeToFullStamina >= 1440) {
+		let days = (timeToFullStamina - (timeToFullStamina%1440)) / 1440
+        timeToFullStamina = timeToFullStamina - (days * 1440)
+        if (timeToFullStamina >= 60) {
+			let hours = (timeToFullStamina - (timeToFullStamina%60)) / 60
+            timeToFullStamina = timeToFullStamina - (hours * 60)
+            content.innerHTML = "To get from " + stamina + " to full stamina, you need to rest for <b>" + days + " days, " + hours + " hours and " + timeToFullStamina + " minutes</b>.<br>" + fullStaminaInfo;
         }
         else {
-            content.innerHTML = content.innerHTML + "To get from " + stamina + " to full stamina, you need to rest for<b> " + days + " days, 0 hours and " + duration + " minutes</b>."
+            content.innerHTML = "To get from " + stamina + " to full stamina, you need to rest for <b>" + days + " days, 0 hours and " + timeToFullStamina + " minutes</b>.<br>" + fullStaminaInfo;
         }
     }
     else {
-        if (duration >= 60) {
-            hours = (duration - (duration%60)) / 60
-            duration = duration - (hours * 60)
-            content.innerHTML = content.innerHTML + "To get from " + stamina + " to full stamina, you need to rest for<b> " + hours + " hours and " + duration + " minutes</b>."
+        if (timeToFullStamina >= 60) {
+			let hours = (timeToFullStamina - (timeToFullStamina%60)) / 60
+            timeToFullStamina = timeToFullStamina - (hours * 60)
+            content.innerHTML = "To get from " + stamina + " to full stamina, you need to rest for <b>" + hours + " hours and " + timeToFullStamina + " minutes</b>.<br>" + fullStaminaInfo;
         }
         else {
-            content.innerHTML = content.innerHTML + "To get from " + stamina + " to full stamina, you need to rest for<b> " + duration + " minutes</b>."
+            content.innerHTML = "To get from " + stamina + " to full stamina, you need to rest for <b>" + timeToFullStamina + " minutes</b>.<br>" + fullStaminaInfo;
         }
     }
 }
 
+function calcFullStaminaDate(millisToFullStamina) {
+	const now = new Date();
+	const fullStaminaTimestamp = now.getTime() + millisToFullStamina;
+	return new Date(fullStaminaTimestamp).toLocaleString();
+}
+
 function findTimeToRenegerate(stamina) {
-    hours = parseInt(stamina.substring(0, 2))
-    minutes = parseInt(stamina.substring(3, 5))
+	let hours = parseInt(stamina.substring(0, 2))
+	let minutes = parseInt(stamina.substring(3, 5))
     if(minutes > 60) {
         return "invalid input"
     }
