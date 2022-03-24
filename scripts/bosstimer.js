@@ -247,13 +247,10 @@ function bossSetTimer(boss) {
     return;
   }
 
-  var div = document.getElementById(nameUnderscore(boss.name) + "_timer");
-  div.innerHTML = "--:--:--"
-  var t = getTimeRemaining(cookie);
-  setTimer(boss, t);
-
   boss.timer = setInterval(() => {
     var t = getTimeRemaining(cookie);
+    var div = document.getElementById(nameUnderscore(boss.name) + "_timer");
+    div.innerHTML = "--:--:--"
     setTimer(boss, t);
 
     if (t.total <= 0) {
