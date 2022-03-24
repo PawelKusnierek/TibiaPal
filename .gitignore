@@ -16,6 +16,10 @@
 # Mono auto generated files
 mono_crash.*
 
+# IntelliJ Idea files
+.idea/
+*.iml
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
