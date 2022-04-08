@@ -74,7 +74,7 @@
             <div class="nav-item"><a href="https://tibiapal.com/bestiary">Bestiary Reference</a></div>
             <div class="nav-item"><a href="https://tibiapal.com/exercise">Exercise Weapons Calculator</a> </div>
             <div class="nav-item"><a href="https://tibiapal.com/imbue">Imbue Calculator</a></div>
-<div class="nav-item nav-item-expandable"><a href="https://tibiapal.com/othertools">Other Tools</a>
+            <div class="nav-item nav-item-expandable"><a href="https://tibiapal.com/othertools">Other Tools</a>
                 <ul id="nav-item-hidden-list">
                     <li class="nav-item-hidden"><a href="https://tibiapal.com/expshare">Exp Share Calculator</a></li>
                     <li class="nav-item-hidden"><a href="https://tibiapal.com/stamina">Stamina Calculator</a></li>
@@ -84,7 +84,8 @@
                     <li class="nav-item-hidden"><a href="https://tibiapal.com/auctions">House Auctions</a></li>
                     <li class="nav-item-hidden"><a href="https://tibiapal.com/weapons">Weapons Reference</a></li>
                 </ul>
-            </div>            <div class="nav-item"><a href="https://tibiapal.com/donators">Donators</a></div>
+            </div>
+            <div class="nav-item"><a href="https://tibiapal.com/donators">Donators</a></div>
             <div class="right-sidebar-item" id="Rashid"><img src="/images/Rashid.gif" style="width:45%">
             </div>
             <div id="rashid-city">Unavailable...</div>
@@ -93,8 +94,12 @@
             <p id="staminaaragraph">
                 Find out the time required to fully regenerate your stamina.
             <form id="staminaform">
+                <label id="staminalevellabel" for="staminalevel">Current stamina:</label>
                 <input type="text" id="staminalevel" name="staminalevel"
-                    placeholder="Enter stamina here, in format hh:mm, e.g. 38:17" autocomplete="off">
+                    placeholder="Enter current stamina here, in format hh:mm, e.g. 38:17" autocomplete="off"><br>
+                <label id="targetstaminalabel" for="targetstamina">(optional) Target stamina:</label>
+                <input type="text" id="targetstamina" name="targetstamina"
+                    placeholder="Enter target stamina here, in format hh:mm, e.g. 41:00" autocomplete="off"><br><br>
                 <input type="submit" id="staminasubmitbutton" value="Submit"
                     onclick="event.preventDefault(); submit_form()" />
             </form>
@@ -132,7 +137,7 @@
                     </script>
                 </div>
                 <br>
-			</div>
+            </div>
         </aside>
         <aside id="left-footer-space"></aside>
         <footer id="footer">
@@ -141,15 +146,15 @@
                     target="_blank">CipSoft GmbH</a>. The official
                 website of Tibia is <a href="https://www.tibia.com" target="_blank">tibia.com</a>.<br><br>
 
-                Created by Kusnier.  </p><br>
+                Created by Kusnier. </p><br>
         </footer>
         <aside id="right-footer-space"></aside>
     </main>
     <div class="cookieconsent"
         style="display:none;position:fixed;padding:20px;left:0;bottom:0;background-color:#000;color:#FFF;text-align:center;width:100%;z-index:99999;">
         TibiaPal.com uses cookies to ensure you get the best experience possible. By continuing to use this website, you
-        agree to their use. You can find more information about our cookies on our <a
-            href="https://tibiapal.com/about" target="_blank">Privacy Policy</a> page.
+        agree to their use. You can find more information about our cookies on our <a href="https://tibiapal.com/about"
+            target="_blank">Privacy Policy</a> page.
         <a href="" style="color:#CCCCCC;" onclick="event.preventDefault(); cookieConsentClicked()">I Understand</a>
     </div>
 </body>

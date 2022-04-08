@@ -406,8 +406,18 @@ ol, ul {
   background-color: #061021f1;
 }
 
+#staminaform label {
+  display: inline-block;
+  width: 220px;
+  padding-bottom: 5px;
+}
+
 #staminalevel {
-  width: 300px;
+  width: 330px;
+}
+
+#targetstamina {
+  width: 330px;
 }
 
 #offlinetrainingexample {
@@ -544,8 +554,8 @@ ol, ul {
   margin-bottom: 20px;
 }
 
-#all_label {
-  padding-left: 10px;
+#filter_selection label {
+  margin-right: 15px;
 }
 
 #analyserData {
