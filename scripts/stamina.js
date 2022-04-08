@@ -77,7 +77,7 @@ function findTimeToRenegerateTargetStamina(currentStamina, targetStamina) {
     if ((currentMinutes > 60) || (targetMinutes > 60)) {
         return "invalid input"
     }
-    else if ((currentHours >= 42) || (targetHours >= 42)) {
+    else if (currentHours >= 42) {
         return "0"
     }
     else if ((currentHours < 39) && (targetHours < 39)) {
