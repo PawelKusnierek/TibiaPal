@@ -16,6 +16,9 @@
 # Mono auto generated files
 mono_crash.*
 
+# Visual Studio Code files
+.vscode/
+
 # IntelliJ Idea files
 .idea/
 *.iml
