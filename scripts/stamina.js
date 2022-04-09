@@ -11,10 +11,34 @@ function submit_form() {
         var timeToFullStamina = findTimeToRenegerate(stamina);
     }
     const fullStaminaDate = calcFullStaminaDate(timeToFullStamina * 60 * 1000);
-    const fullStaminaInfo = 'Your stamina will be full at ' + fullStaminaDate;
+    const fullStaminaInfo = 'Your stamina will be ready at ' + fullStaminaDate;
 
     if (timeToFullStamina === "invalid input") {
         content.innerHTML = content.innerHTML + timeToFullStamina
+    }
+    else if (targetStamina) {
+        if (timeToFullStamina >= 1440) {
+            let days = (timeToFullStamina - (timeToFullStamina % 1440)) / 1440
+            timeToFullStamina = timeToFullStamina - (days * 1440)
+            if (timeToFullStamina >= 60) {
+                let hours = (timeToFullStamina - (timeToFullStamina % 60)) / 60
+                timeToFullStamina = timeToFullStamina - (hours * 60)
+                content.innerHTML = "To get from " + stamina + " to " + targetStamina + " stamina, you need to rest for <b>" + days + " days, " + hours + " hours and " + timeToFullStamina + " minutes</b>.<br>" + fullStaminaInfo;
+            }
+            else {
+                content.innerHTML = "To get from " + stamina + " to " + targetStamina + " stamina, you need to rest for <b>" + days + " days, 0 hours and " + timeToFullStamina + " minutes</b>.<br>" + fullStaminaInfo;
+            }
+        }
+        else {
+            if (timeToFullStamina >= 60) {
+                let hours = (timeToFullStamina - (timeToFullStamina % 60)) / 60
+                timeToFullStamina = timeToFullStamina - (hours * 60)
+                content.innerHTML = "To get from " + stamina + " to " + targetStamina + " stamina, you need to rest for <b>" + hours + " hours and " + timeToFullStamina + " minutes</b>.<br>" + fullStaminaInfo;
+            }
+            else {
+                content.innerHTML = "To get from " + stamina + " to " + targetStamina + " stamina, you need to rest for <b>" + timeToFullStamina + " minutes</b>.<br>" + fullStaminaInfo;
+            }
+        }
     }
     else if (timeToFullStamina >= 1440) {
         let days = (timeToFullStamina - (timeToFullStamina % 1440)) / 1440
