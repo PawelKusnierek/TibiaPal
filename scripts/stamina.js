@@ -11,7 +11,7 @@ function submit_form() {
         var timeToFullStamina = findTimeToRenegerate(stamina);
     }
     const fullStaminaDate = calcFullStaminaDate(timeToFullStamina * 60 * 1000);
-    const fullStaminaInfo = 'Your stamina will be ready at ' + fullStaminaDate;
+    const fullStaminaInfo = 'Your stamina will be ready on ' + fullStaminaDate;
 
     if (timeToFullStamina === "invalid input") {
         content.innerHTML = content.innerHTML + timeToFullStamina
