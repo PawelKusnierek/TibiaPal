@@ -408,16 +408,16 @@ ol, ul {
 
 #staminaform label {
   display: inline-block;
-  width: 220px;
+  width: 160px;
   padding-bottom: 5px;
 }
 
 #staminalevel {
-  width: 330px;
+  width: 70px;
 }
 
 #targetstamina {
-  width: 330px;
+  width: 70px;
 }
 
 #offlinetrainingexample {
