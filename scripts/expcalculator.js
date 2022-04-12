@@ -12,10 +12,15 @@ function submit_form() {
 }
 
 function experience_for_level(level) {
+  // you start at lvl 1, its impossible to reach lvl <1, so we could do something like: if(level < 1){throw new Error("lvl <1 is impossible");}
+  if(level === 1){
+    // specialcase.
+    return 0;
+  }
   return ((50 * Math.pow(level, 3)) / 3) - (100 * Math.pow(level, 2)) + (((850 * level) / 3) - 200);
 }
 function calculate_experience(startinglevel, targetlevel) {
-    // sometimes possibly off-by-1 due to rounding? idk
+    // sometimes possibly off-by-1 due to rounding? i'm not sure
     return Math.round(experience_for_level(targetlevel) - experience_for_level(startinglevel));
 }
 
