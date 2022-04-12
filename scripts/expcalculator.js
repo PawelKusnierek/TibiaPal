@@ -15,7 +15,8 @@ function experience_for_level(level) {
   return ((50 * Math.pow(level, 3)) / 3) - (100 * Math.pow(level, 2)) + (((850 * level) / 3) - 200);
 }
 function calculate_experience(startinglevel, targetlevel) {
-    return experience_for_level(targetlevel) - experience_for_level(startinglevel);
+    // sometimes possibly off-by-1 due to rounding? idk
+    return Math.round(experience_for_level(targetlevel) - experience_for_level(startinglevel));
 }
 
 function numberWithSpaces(x) {
