@@ -172,7 +172,7 @@
             let hours_needed = (days_needed - parseInt(days_needed)) * 24;
             let minutes_needed = (hours_needed - parseInt(hours_needed)) * 60;
             let seconds_needed = (minutes_needed - parseInt(minutes_needed)) * 60;
-            let str = "time needed to reach target level: " +  Math.round(days_needed) + " day(s), " + Math.round(hours_needed) + " hour(s), " + Math.round(minutes_needed) + " minute(s) and "  + Math.round(seconds_needed) + " second(s).";
+            let str = "time needed to reach target level: " +  Math.floor(days_needed) + " day(s), " + Math.floor(hours_needed) + " hour(s), " + Math.floor(minutes_needed) + " minute(s) and "  + Math.round(seconds_needed) + " second(s).";
             $("#expcalculatorresults .orange")[0].innerHTML += "<br/>"+str;
         });
     })();
