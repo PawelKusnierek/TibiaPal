@@ -757,12 +757,12 @@ ol, ul {
 
 #expcalculatorform input {
   margin-top: 5px;
-  width: 180px;
+  width: 210px;
 }
 
 #expcalculatorform label {
   display: inline-block;
-  width: 120px;
+  width: 260px;
 }
 
 #expcalculatorsubmitbutton {

@@ -4,14 +4,25 @@ function submit_form() {
 
   startinglevel = document.getElementById("startinglevel").value
   targetlevel = document.getElementById("targetlevel").value
+  exp_per_hour = document.getElementById("exp").value
 
   total_experience_needed = calculate_experience(startinglevel, targetlevel)
-  if (typeof total_experience_needed === 'string' ) {
+  if (typeof total_experience_needed === 'string') {
     expcalculatorresults.innerHTML = total_experience_needed
   }
   else {
     formatted_experience = numberWithSpaces(total_experience_needed)
     expcalculatorresults.innerHTML = "Total experience needed to get from level <b>" + startinglevel + "</b> to <b>" + targetlevel + "</b> is:<br><br> <b><span class=\"orange\">" + formatted_experience + "</span></b><br>"
+
+    if (exp_per_hour > 0) {
+      exp_per_hour = exp_per_hour * 1000000
+      let days_needed = (total_experience_needed / exp_per_hour) / 24;
+      let hours_needed = (days_needed - parseInt(days_needed)) * 24;
+      let minutes_needed = (hours_needed - parseInt(hours_needed)) * 60;
+      let seconds_needed = (minutes_needed - parseInt(minutes_needed)) * 60;
+      let time_to_target_level = "Time needed to reach target level: " + Math.floor(days_needed) + " day(s), " + Math.floor(hours_needed) + " hour(s), " + Math.floor(minutes_needed) + " minute(s) and " + Math.round(seconds_needed) + " second(s).";
+      expcalculatorresults.innerHTML = expcalculatorresults.innerHTML + "<br>" + time_to_target_level
+    }
   }
 }
 //Can return results off by one due to rounding, but not a significant difference
