@@ -21,7 +21,7 @@ Some of the current features include:
 - Weapons Reference
 - Exercise Weapons Calculator
 
-The site currently has approximately 100k pageviews a month.
+The site currently has approximately 25k monthly users and 100k monthly pageviews/visits.
 
 ## Contact
 
