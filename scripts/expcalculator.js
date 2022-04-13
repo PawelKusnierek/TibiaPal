@@ -13,9 +13,35 @@ function submit_form() {
   else {
     formatted_experience = numberWithSpaces(total_experience_needed)
     expcalculatorresults.innerHTML = "Total experience needed to get from level <b>" + startinglevel + "</b> to <b>" + targetlevel + "</b> is:<br><br> <b><span class=\"orange\">" + formatted_experience + "</span></b><br>"
-
+    // "intelligent" parsing of exp_per_hour, example 1.4kk = 140000
+    exp_per_hour = (function(){
+        exp_per_hour=exp_per_hour.toLowerCase();
+        // the endsWith function is only for Internet Explorer compatibility, 
+        // if we don't need IE support, we can drop this for the modern String.prototype.endsWith.
+        let endsWith = function(str, needle){
+            return str.substring(str.length - needle.length) === needle;
+        };
+        if(endsWith(exp_per_hour, "kk")){
+            return Number(exp_per_hour.substring(0, exp_per_hour.length - "kk".length)) * 1000000;
+        }
+        if(endsWith(exp_per_hour, "k")){
+            return Number(exp_per_hour.substring(0, exp_per_hour.length - "k".length)) * 1000;
+        }
+        if(endsWith(exp_per_hour, "m")){
+            // million, same as kk
+            return Number(exp_per_hour.substring(0, exp_per_hour.length - "m".length)) * 1000000;
+        }
+        if(endsWith(exp_per_hour, "b")){
+            // billion (OT players may appreciate this)
+            return Number(exp_per_hour.substring(0, exp_per_hour.length - "b".length)) * 1000000000;
+        }
+        if(endsWith(exp_per_hour, "t")){
+          // trillion, questionable usefulness
+          return Number(exp_per_hour.substring(0, exp_per_hour.length - "t".length)) * 1000000000000;
+        }
+        return Number(exp_per_hour);
+    })();
     if (exp_per_hour > 0) {
-      exp_per_hour = exp_per_hour * 1000000
       let days_needed = (total_experience_needed / exp_per_hour) / 24;
       let hours_needed = (days_needed - parseInt(days_needed)) * 24;
       let minutes_needed = (hours_needed - parseInt(hours_needed)) * 60;
