@@ -100,6 +100,8 @@
                 <label id="explabel" for="exp">(Optional) Exp per hour (in kk/h):</label>
                 <input type="text" id="exp" name="exp" placeholder="enter exp per hour in kk e.g. 4.5"
                     autocomplete="off"><br>
+                <input type="text" id="exp_day" name="exp_day" placeholder="enter exp per day in kk e.g. 4.5"
+                    autocomplete="off"><br>
                 <input type="submit" id="expcalculatorsubmitbutton" value="Submit"
                     onclick="event.preventDefault(); submit_form()" />
             </form>
@@ -156,6 +158,21 @@
             target="_blank">Privacy Policy</a> page.
         <a href="" style="color:#CCCCCC;" onclick="event.preventDefault(); cookieConsentClicked()">I Understand</a>
     </div>
+    <script id="todo_move_me_to_scripts">
+    (function(){
+        let $ = document.querySelectorAll.bind(document);
+        $("#exp")[0].addEventListener("input",function(){
+            let exp_hour = $("#exp")[0].value;
+            let exp_day = exp_hour * 24;
+            $("#exp_day")[0].value = exp_day;
+        });
+        $("#exp_day")[0].addEventListener("input",function(){
+            let exp_day = $("#exp_day")[0].value;
+            let exp_hour = exp_day / 24;
+            $("#exp")[0].value = exp_hour;
+        });
+    })();
+    </script>
 </body>
 
 </html>
