@@ -16,7 +16,7 @@ function submit_form() {
     if (exp_per_hour > 0) {
       exp_per_hour = exp_per_hour * 1000000;
       let total_seconds_needed = (total_experience_needed / exp_per_hour) * 60 * 60;
-      let finished_time_string = (new Date(Date.now() + (total_seconds_needed * 1000))).toString();
+      let finished_time_string = (new Date(Date.now() + (total_seconds_needed * 1000))).toLocaleString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second:'numeric' });
       let days_needed = (total_experience_needed / exp_per_hour) / 24;
       let hours_needed = (days_needed - parseInt(days_needed)) * 24;
       let minutes_needed = (hours_needed - parseInt(hours_needed)) * 60;
