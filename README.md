@@ -27,7 +27,7 @@ The site currently has approximately 25k monthly users and 100k monthly pageview
 
 ## Contact
 
-https://tibiapal.com/contact
+https://tibiapal.com/about
 
 ## Application Techstack
 HTML, CSS, SASS and JS
