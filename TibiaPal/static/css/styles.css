@@ -303,7 +303,7 @@ ol, ul {
   margin-bottom: 5px;
   text-align: left;
   height: 28px;
-  background-image: url(https://tibiapal.com/images/newsheadline_background.gif);
+  background-image: url(https://tibiapal.com/static/images/newsheadline_background.gif);
   border-left: 1px solid black;
   border-right: 1px solid black;
 }
@@ -878,28 +878,6 @@ ol, ul {
 
 #leechsubmitbutton {
   width: 70px !important;
-}
-
-#archivetable {
-  padding-top: 10px;
-  -webkit-box-align: left;
-  -ms-flex-align: left;
-  align-items: left;
-  border-collapse: collapse;
-  width: 95%;
-}
-
-#archivetable td {
-  padding: 8px;
-  margin: 0px;
-}
-
-#dateheading {
-  width: 30%;
-}
-
-#titleheading {
-  width: 70%;
 }
 
 @media (max-width: 1400px) {
