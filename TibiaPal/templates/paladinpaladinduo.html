@@ -1,0 +1,202 @@
+{% extends "nested_link_template.html" %}
+
+{% block nav-hunting %}<div class="active nav-item">{% endblock %}
+
+{% block main-content %}
+<h1>Hunting Places - 2x Paladin duo</h1>
+<div id="filter_selection">
+    <b>Level Filter</b>:<br><br>
+    <label>
+        <input value="0" type="radio" name="level_filter_choice" checked onclick="apply_level_filter()"> All
+    </label>
+    <label>
+        <input value="50" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 50+
+    </label>
+    <label>
+        <input value="100" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 100+
+    </label>
+    <label>
+        <input value="130" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 130+
+    </label>
+    <label>
+        <input value="200" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 200+
+    </label>
+    <label>
+        <input value="300" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 300+
+    </label>
+    <label>
+        <input value="400" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 400+
+    </label>
+</div>
+
+<table id="hunting_table">
+    <tr>
+        <th class="level_row">Level</th>
+        <th class="place_row">Place</th>
+    </tr>
+    <tr>
+        <td>8+</td>
+        <td>Rotworms Liberty Bay</td>
+    </tr>
+    <tr>
+        <td>8+</td>
+        <td>Cyclops Mistrock</td>
+    </tr>
+    <tr>
+        <td>14+</td>
+        <td>Tarantulas PH</td>
+    </tr>
+    <tr>
+        <td>15+</td>
+        <td>Coryms PH</td>
+    </tr>
+    <tr>
+        <td>15+</td>
+        <td>Cyclopolis</td>
+    </tr>
+    <tr>
+        <td>25+</td>
+        <td>Upper Spike</td>
+    </tr>
+    <tr>
+        <td>50+</td>
+        <td>Darashia Dragon Lords</td>
+    </tr>
+    <tr>
+        <td>50+</td>
+        <td>Mother of Scarabs Lair</td>
+    </tr>
+    <tr>
+        <td>50+</td>
+        <td>Krailos Bug Cave</td>
+    </tr>
+    <tr>
+        <td>50+</td>
+        <td>Wyrms Drefia/LB</td>
+    </tr>
+    <tr>
+        <td>90+</td>
+        <td>Edron Vampire Crypt</td>
+    </tr>
+    <tr>
+        <td>90+</td>
+        <td>Nightmare Scions Krailos</td>
+    </tr>
+    <tr>
+        <td>150+</td>
+        <td>Old Fortress Heroes</td>
+    </tr>
+    <tr>
+        <td>90+</td>
+        <td>Grimvale -4</td>
+    </tr>
+    <tr>
+        <td>150+</td>
+        <td>Carlin Cults</td>
+    </tr>
+    <tr>
+        <td>150+</td>
+        <td>Inner Hive</td>
+    </tr>
+    <tr>
+        <td>150+</td>
+        <td>Lizard Chosens</td>
+    </tr>
+    <tr>
+        <td>150+</td>
+        <td>Ravenous Lava Lurkers</td>
+    </tr>
+    <tr>
+        <td>150+</td>
+        <td>Elder Wyrms Drefia</td>
+    </tr>
+    <tr>
+        <td>150+</td>
+        <td>Werehyaenas</td>
+    </tr>
+    <tr>
+        <td>150+</td>
+        <td>Oramond West</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Deeper Banuta</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Medusa Tower</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Asura Palace</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Lower Rosha</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Draken Walls</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>INQ Vats + Battlefield</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>POI Seals</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Werelions</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Catacombs</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Nightmare Isles</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Prison -1</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>West Roshamuul</td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td>Lower Spike</td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td>Rosha East</td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td>Cobras</td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td>Otherworld</td>
+    </tr>
+    <tr>
+        <td>550+</td>
+        <td>Darashia Skeletons/Gladiators</td>
+    </tr>
+    <tr>
+        <td>550+</td>
+        <td>Ferumbras Way</td>
+    </tr>
+    <tr>
+        <td>600+</td>
+        <td>Issavi Goannas</td>
+    </tr>
+    <tr>
+        <td>600+</td>
+        <td>True Asuras</td>
+    </tr>
+</table>
+{% endblock %}

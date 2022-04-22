@@ -1,0 +1,98 @@
+{% extends "base_template.html" %}
+{% block title %} <title>TibiaPal.com - Auctions</title> {% endblock %}
+{% block scripts %}
+<script src="../static/scripts/auctions.js"></script>
+{% endblock %}
+
+{% block nav-othertools %}<div class="active nav-item nav-item-expandable">{% endblock %}
+
+{% block main-content %}
+<p> WARNING: This tool is intended to be used on servers with a low volume of active house auctions.
+    <br><br>If used on servers with a high amount of active auctions, the tool will take a long time to
+    execute (1+ min). Suggested worlds to use are Secura, Antica etc. </p>
+<form><label for="server">Select server</label>
+    <select name="server" id="server">
+        <option value="Adra">Adra</option>
+        <option value="Alumbra">Alumbra</option>
+        <option value="Ardera">Ardera</option>
+        <option value="Antica">Antica</option>
+        <option value="Astera">Astera</option>
+        <option value="Batabra">Batabra</option>
+        <option value="Bastia">Bastia</option>
+        <option value="Belobra">Belobra</option>
+        <option value="Bona">Bona</option>
+        <option value="Cadebra">Cadebra</option>
+        <option value="Calmera">Calmera</option>
+        <option value="Celebra">Celebra</option>
+        <option value="Celesta">Celesta</option>
+        <option value="Collabra">Collabra</option>
+        <option value="Damora">Damora</option>
+        <option value="Descubra">Descubra</option>
+        <option value="Dibra">Dibra</option>
+        <option value="Epoca">Epoca</option>
+        <option value="Famosa">Famosa</option>
+        <option value="Fera">Fera</option>
+        <option value="Ferobra">Ferobra</option>
+        <option value="Firmera">Firmera</option>
+        <option value="Gentebra">Gentebra</option>
+        <option value="Gladera">Gladera</option>
+        <option value="Harmonia">Harmonia</option>
+        <option value="Havera">Havera</option>
+        <option value="Honbra">Honbra</option>
+        <option value="Illusera">Impera</option>
+        <option value="Impulsa">Impulsa</option>
+        <option value="Inabra">Inabra</option>
+        <option value="Kalibra">Kalibra</option>
+        <option value="Karna">Karna</option>
+        <option value="Libertabra">Libertabra</option>
+        <option value="Lobera">Lobera</option>
+        <option value="Luminera">Luminera</option>
+        <option value="Lutabra">Lutabra</option>
+        <option value="Marbera">Marbera</option>
+        <option value="Marcia">Marcia</option>
+        <option value="Menera">Menera</option>
+        <option value="Monza">Monza</option>
+        <option value="Mudabra">Mudabra</option>
+        <option value="Mykera">Mykera</option>
+        <option value="Nefera">Nefera</option>
+        <option value="Noctera">Noctera</option>
+        <option value="Nossobra">Nossobra</option>
+        <option value="Ocebra">Ocebra</option>
+        <option value="Olima">Olima</option>
+        <option value="Ombra">Ombra</option>
+        <option value="Optera">Optera</option>
+        <option value="Pacera">Pacera</option>
+        <option value="Peloria">Peloria</option>
+        <option value="Premia">Premia</option>
+        <option value="Quelibra">Quelibra</option>
+        <option value="Quintera">Quintera</option>
+        <option value="Refugia">Refugia</option>
+        <option value="Reinobra">Reinobra</option>
+        <option value="Seanera">Seanera</option>
+        <option value="Secura">Secura</option>
+        <option value="Serdebra">Serdebra</option>
+        <option value="Solidera">Solidera</option>
+        <option value="Suna">Suna</option>
+        <option value="Talera">Talera</option>
+        <option value="Tembra">Tembra</option>
+        <option value="Thyria">Thyria</option>
+        <option value="Trona">Trona</option>
+        <option value="Utobra">Utobra</option>
+        <option value="Venebra">Venebra</option>
+        <option value="Versa">Versa</option>
+        <option value="Visabra">Visabra</option>
+        <option value="Vunira">Vunira</option>
+        <option value="Wintera">Wintera</option>
+        <option value="Wizera">Wizera</option>
+        <option value="Xandebra">Xandebra</option>
+        <option value="Yonabra">Yonabra</option>
+        <option value="Zenobra">Zenobra</option>
+        <option value="Zuna">Zuna</option>
+        <option value="Zunera">Zunera</option>
+    </select>
+    <input type="submit" id="submitbutton" value="Submit" onclick="event.preventDefault(); submit_form()" />
+</form><br>
+<div id=auction_container>
+
+</div>
+{% endblock %}

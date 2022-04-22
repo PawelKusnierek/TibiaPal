@@ -1,0 +1,36 @@
+{% extends "base_template.html" %}
+{% block title %} <title>TibiaPal.com - Boss Timers</title> {% endblock %}
+{% block scripts %}
+<script src="../static/scripts/bosstimer.js"></script>
+{% endblock %}
+
+{% block nav-bosstimers %}<div class="active nav-item">{% endblock %}
+
+{% block main-content %}
+<p><b>HOW TO USE:</b><br><br>Create profile, then simply 'click' on the photo of a boss to start their timer!</p> <br>
+
+<p><b>Create profile:</b></p><br>
+
+<form id="profile_name_form">
+    <!--suppress HtmlFormInputWithoutLabel -->
+    <input type="text" id="profile_name" name="profile_name" placeholder="Enter new profile here..." autocomplete="off">
+    <input type="submit" id="profile_name_submit" value="Add"
+        onclick="event.preventDefault(); profile_name_submit_click()" />
+</form>
+
+<p><b>Existing profiles:</b></p><br>
+
+<!--suppress HtmlFormInputWithoutLabel -->
+<select name="profile_dropdown" id="profile_dropdown">
+</select>
+<input type="submit" id="profile_remove_submit" value="Remove"
+    onclick="event.preventDefault(); profile_remove_submit_click()" />
+
+<div id="quest-boss-list"><br>
+
+</div>
+
+<script type="text/javascript">
+    init();
+</script>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base_template.html" %}
+{% block title %} <title>TibiaPal.com - Stamina calculator</title> {% endblock %}
+{% block scripts %}
+<script src="../static/scripts/stamina.js"></script>
+{% endblock %}
+
+{% block nav-othertools %}<div class="active nav-item nav-item-expandable">{% endblock %}
+
+{% block main-content %}
+<p id="staminaaragraph">
+    Find out the time required to fully regenerate your stamina.</p>
+<form id="staminaform">
+    <label id="staminalevellabel" for="staminalevel">Current stamina:</label>
+    <input type="text" id="staminalevel" name="staminalevel" value="38:00" autocomplete="off"><br>
+    <label id="targetstaminalabel" for="targetstamina">Target stamina:</label>
+    <input type="text" id="targetstamina" name="targetstamina" value="42:00" autocomplete="off"><br><br>
+    <input type="submit" id="staminasubmitbutton" value="Submit" onclick="event.preventDefault(); submit_form()" />
+</form>
+<p id="staminaresults"></p>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base_template.html" %}
+{% block title %} <title>TibiaPal.com - Offline Training Calculator</title> {% endblock %}
+{% block scripts %}
+<script src="../static/scripts/offlinetraining.js"></script>
+{% endblock %}
+
+{% block nav-othertools %}<div class="active nav-item nav-item-expandable">{% endblock %}
+
+{% block main-content %}
+<p id="offlinetrainingpara">This tool calculates the time it will take you to reach your target skill while
+    offline training only.<br><br>
+    The tool assumes 12h of offline training per day.<br><br>
+    The tool assumes:<br>
+    - Magic level training for mages (Druids & Sorcerers)<br>
+    - Melee (Axe/Club/Sword) training for knights<br>
+    - Distance training for paladins<br></p>
+<form id="offlinetrainingform">
+    <label for="vocation">Vocation & skill:</label>
+    <select id="vocation" name="vocation">
+        <option value="Knight">Knight - Melee</option>
+        <option value="Paladin">Paladin - Distance</option>
+        <option value="Mage">Mage - Magic</option>
+    </select><br>
+    <label id="currentskilllabel" for="currentskill">Current skill:</label>
+    <input type="text" id="currentskill" name="currentskill" placeholder="current skill, e.g. 112"
+        autocomplete="off"><br>
+    <label id="currentskillpercentagelabel" for="currentskillpercentage">Percentage to next skill:</label>
+    <input type="text" id="currentskillpercentage" name="currentskillpercentage" placeholder="% missing, e.g. 35"
+        autocomplete="off"><br>
+    <label id="targetskilllabel" for="targetskill">Target skill:</label>
+    <input type="text" id="targetskill" name="targetskill" placeholder="target skill, e.g. 114" autocomplete="off"><br>
+    <label id="loyaltylabel" for="loyalty">Loyalty bonus:</label>
+    <input type="text" id="loyalty" name="loyalty" placeholder="loyalty bonus, e.g. 15" autocomplete="off"><br>
+    <input type="submit" id="offlinesubmitbutton" value="Submit" onclick="event.preventDefault(); submit_form()" />
+</form>
+<div id="offlinetrainingformresults">
+
+</div>
+{% endblock %}

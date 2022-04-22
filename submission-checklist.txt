@@ -1,5 +1,0 @@
-1. Update page 'title'
-2. Update page 'description'
-3. If any main-content photos added, add a media query for smaller devices
-4. Test on Firefox and Chrome
-5. Use absolute root link references e.g. src="/xxx/abc.png"
