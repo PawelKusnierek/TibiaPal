@@ -27,7 +27,8 @@ DEBUG = config("DEBUG")
 
 ALLOWED_HOSTS = ['kusnier.pythonanywhere.com',
                  'tibiapal.com',
-                 '127.0.0.1']
+                 '127.0.0.1',
+                 'www.tibiapal.com',]
 
 # Application definition
 
