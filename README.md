@@ -31,9 +31,12 @@ https://tibiapal.com/about
 
 ## Application Techstack
 Back-end: Django/Python, MySQL
+
 Front-end: HTML, CSS (SASS) and plain JS
 
 ## Hosting
 The site is hosted on PythonAnywhere. 
+
 SSL certificate is provided by Let's Encrypt. 
+
 SSL re-direct is provided by NakedSSL.com.
