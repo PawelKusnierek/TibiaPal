@@ -30,4 +30,10 @@ The site currently has approximately 25k monthly users and 100k monthly pageview
 https://tibiapal.com/about
 
 ## Application Techstack
-HTML, CSS, SASS and JS
+Back-end: Django/Python, MySQL
+Front-end: HTML, CSS (SASS) and plain JS
+
+## Hosting
+The site is hosted on PythonAnywhere. 
+SSL certificate is provided by Let's Encrypt. 
+SSL re-direct is provided by NakedSSL.com.
