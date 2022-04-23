@@ -1,6 +1,8 @@
 
 import requests
 from bs4 import BeautifulSoup
+from models import World
+
 
 url = "https://www.tibia.com/community/?subtopic=worlds"
 
@@ -14,4 +16,11 @@ rows = table[2].find_all('tr')
 rows = rows[1:]
 worlds = []
 for row in rows:
-    worlds.append(row.next.text)
+    world = World(name=row.next.text)
+    worlds.append(world)
+    print(world)
+
+# Veryfing that the output makes sense, i.e. there are more than 50 worlds but less than 100. This should be true for a few years at least
+if len(worlds) < 100 and len(worlds) > 50:
+    World.objects.delete()
+    World.objects.bulk_create(worlds)

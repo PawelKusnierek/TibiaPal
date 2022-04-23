@@ -19,26 +19,8 @@ from django.views.generic import TemplateView
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    path('about/', include('TibiaPal.apps.about.urls')),
-    path('auctions/', include('TibiaPal.apps.auctions.urls')),
-    path('bestiary/', include('TibiaPal.apps.bestiary.urls')),
-    path('bosstimers/', include('TibiaPal.apps.bosstimers.urls')),
-    path('donators/', include('TibiaPal.apps.donators.urls')),
-    path('exercise/', include('TibiaPal.apps.exercise.urls')),
-    path('expcalculator/', include('TibiaPal.apps.expcalculator.urls')),
-    path('expshare/', include('TibiaPal.apps.expshare.urls')),
-    path('hunting/', include('TibiaPal.apps.hunting.urls')),
-    path('imbue/', include('TibiaPal.apps.imbue.urls')),
-    path('leech/', include('TibiaPal.apps.leech.urls')),
-    path('offlinetraining/', include('TibiaPal.apps.offlinetraining.urls')),
-    path('othertools/', include('TibiaPal.apps.othertools.urls')),
-    path('stamina/', include('TibiaPal.apps.stamina.urls')),
-    path('tibialootsplit/', include('TibiaPal.apps.tibialootsplit.urls')),
-    path('videos/', include('TibiaPal.apps.videos.urls')),
-    path('weapons/', include('TibiaPal.apps.weapons.urls')),
-    path('testapp/', include('TibiaPal.apps.testapp.urls')),
+    path('', include('TibiaPal.apps.core.urls')),
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='index.html')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
