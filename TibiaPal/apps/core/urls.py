@@ -32,4 +32,6 @@ urlpatterns = [
     path('weapons/', views.weapons, name='weapons'),
     path('testapp/', views.testapp, name='testapp'),
     path('ads.txt/', TemplateView.as_view(template_name='ads.txt')),
+    path('robots.txt/', TemplateView.as_view(template_name='robots.txt')),
+
 ]
