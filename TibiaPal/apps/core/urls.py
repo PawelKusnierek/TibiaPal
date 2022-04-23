@@ -31,5 +31,5 @@ urlpatterns = [
     path('videos/', views.videos, name='videos'),
     path('weapons/', views.weapons, name='weapons'),
     path('testapp/', views.testapp, name='testapp'),
-    path(r'^ads\.txt$', TemplateView.as_view(template_name="ads.txt")),
+    path('ads.txt/', TemplateView.as_view(template_name='ads.txt')),
 ]
