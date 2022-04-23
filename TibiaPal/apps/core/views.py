@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.template import loader
+from TibiaPal.apps.core.models import Test_Character
 
 
 def index(request):
@@ -129,7 +130,7 @@ def weapons(request):
 
 def testapp(request):
     template = loader.get_template('testapp.html')
-   # new_character = Test_Character.objects.get_or_create(
-    #    name="Kusnierr", vocation="ELITE KNIGHT", level="528", achievement_points="512", world="Olima")
-    #print(new_character)
+    new_character = Test_Character.objects.get_or_create(
+       name="Kusnierr", vocation="ELITE KNIGHT", level="528", achievement_points="512", world="Olima")
+    print(new_character)
     return HttpResponse(template.render())

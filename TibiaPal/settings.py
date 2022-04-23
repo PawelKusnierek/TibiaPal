@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['kusnier.pythonanywhere.com',
 # Application definition
 
 INSTALLED_APPS = [
+    'TibiaPal.apps.core.apps.CoreConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
