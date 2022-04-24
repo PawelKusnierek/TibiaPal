@@ -48,5 +48,5 @@ class World(models.Model):
     def update_worlds_db(worlds):
         # Veryfing that the output makes sense, i.e. there are more than 50 worlds but less than 100. This should be true for a few years at least
         if len(worlds) < 100 and len(worlds) > 50:
-            World.objects.delete()
+            World.objects.all().delete()
             World.objects.bulk_create(worlds)

@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.template import loader
-from TibiaPal.apps.core.models import Test_Character
+from TibiaPal.apps.core.models import Test_Character, World
 
 
 def index(request):
@@ -15,7 +15,17 @@ def about(request):
 
 def auctions(request):
     template = loader.get_template('auctions.html')
-    return HttpResponse(template.render())
+    worlds = World.objects.all()
+    context = {
+        'worlds' : worlds
+    }
+    return HttpResponse(template.render(context))
+
+
+def auctions_update(request):
+    worlds = World.scrape_worlds()
+    World.update_worlds_db(worlds)
+    return HttpResponse("Worlds updated")
 
 
 def bestiary(request):
@@ -131,6 +141,6 @@ def weapons(request):
 def testapp(request):
     template = loader.get_template('testapp.html')
     new_character = Test_Character.objects.get_or_create(
-       name="Kusnierr", vocation="ELITE KNIGHT", level="528", achievement_points="512", world="Olima")
+        name="Kusnierr", vocation="ELITE KNIGHT", level="528", achievement_points="512", world="Olima")
     print(new_character)
     return HttpResponse(template.render())
