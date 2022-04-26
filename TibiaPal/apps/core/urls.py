@@ -6,7 +6,7 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('auctions/', views.auctions, name='auctions'),
-    path('auctions/update/', views.auctions_update, name='auctions'),
+    path('auctions/update/', views.auctions_update, name='auctions_update'),
     path('about/', views.about, name='about'),
     path('bestiary/', views.bestiary, name='bestiary'),
     path('bosstimers/', views.bosstimers, name='bosstimers'),
@@ -30,6 +30,8 @@ urlpatterns = [
     path('offlinetraining/', views.offlinetraining, name='offlinetraining'),
     path('stamina/', views.stamina, name='stamina'),
     path('tibialootsplit/', views.tibialootsplit, name='tibialootsplit'),
+    path('charactertracker/', views.charactertracker, name='charactertracker'),
+    path('charactertracker/update/', views.charactertracker_update, name='charactertracker_update'),
     path('videos/', views.videos, name='videos'),
     path('weapons/', views.weapons, name='weapons'),
     path('testapp/', views.testapp, name='testapp'),

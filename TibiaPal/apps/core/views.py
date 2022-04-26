@@ -17,7 +17,7 @@ def auctions(request):
     template = loader.get_template('auctions.html')
     worlds = World.objects.all()
     context = {
-        'worlds' : worlds
+        'worlds': worlds
     }
     return HttpResponse(template.render(context))
 
@@ -36,6 +36,15 @@ def bestiary(request):
 def bosstimers(request):
     template = loader.get_template('bosstimers.html')
     return HttpResponse(template.render())
+
+
+def charactertracker(request):
+    template = loader.get_template('charactertracker.html')
+    return HttpResponse(template.render())
+
+
+def charactertracker_update(request):
+    return HttpResponse("Characters successfully tracked")
 
 
 def donators(request):
