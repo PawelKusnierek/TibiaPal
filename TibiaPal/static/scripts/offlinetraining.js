@@ -17,7 +17,6 @@ function submit_form() {
     offlinetrainingformresults.innerHTML = ""
 
     type_of_training = document.getElementById("type_of_training").value
-    print(type_of_training)
     vocation = document.getElementById("vocation").value
     currentskill = document.getElementById("currentskill").value
     currentskillpercentage = document.getElementById("currentskillpercentage").value
