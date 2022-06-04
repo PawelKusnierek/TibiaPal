@@ -1,5 +1,5 @@
 {% extends "base_template.html" %}
-{% block title %} <title>TibiaPal.com - Offline Training Calculator</title> {% endblock %}
+{% block title %} <title>TibiaPal.com - Training Calculator</title> {% endblock %}
 {% block scripts %}
 <script src="../static/scripts/offlinetraining.js"></script>
 {% endblock %}
@@ -8,13 +8,18 @@
 
 {% block main-content %}
 <p id="offlinetrainingpara">This tool calculates the time it will take you to reach your target skill while
-    offline training only.<br><br>
-    The tool assumes 12h of offline training per day.<br><br>
+    offline or online training.<br><br>
+    If you select 'offline' training, the tool assumes full 12h of offline training per day.<br><br>
     The tool assumes:<br>
     - Magic level training for mages (Druids & Sorcerers)<br>
     - Melee (Axe/Club/Sword) training for knights<br>
     - Distance training for paladins<br></p>
 <form id="offlinetrainingform">
+<label for="type_of_training">Training type:</label>
+    <select id="type_of_training" name="type_of_training">
+        <option value="Offline">Offline</option>
+        <option value="Online">Online</option>
+    </select><br>
     <label for="vocation">Vocation & skill:</label>
     <select id="vocation" name="vocation">
         <option value="Knight">Knight - Melee</option>

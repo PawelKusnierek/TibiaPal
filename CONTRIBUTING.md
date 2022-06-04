@@ -46,3 +46,5 @@ https://help.pythonanywhere.com/pages/AccessingMySQLFromOutsidePythonAnywhere/
 
 Miscellaneous tips that helped me at some point, that may also help you:
 https://stackoverflow.com/questions/46177499/django-cant-import-module-check-that-module-appconfig-name-is-correct
+If MySQL workbench cannot connect to the server you should try to start it manually via services.msc:
+try Start -> cmd.exe -> services.msc

@@ -17,7 +17,7 @@ Some of the current features include:
 - Leech calculator
 - Exp calculator
 - Rashid tracker
-- Offline training calculator
+- Offline and Online training calculator
 - Boss Timers
 - Hunting Places
 - Bestiary Reference

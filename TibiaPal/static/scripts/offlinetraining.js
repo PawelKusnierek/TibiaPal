@@ -16,6 +16,8 @@ function submit_form() {
     offlinetrainingformresults = document.getElementById("offlinetrainingformresults")
     offlinetrainingformresults.innerHTML = ""
 
+    type_of_training = document.getElementById("type_of_training").value
+    print(type_of_training)
     vocation = document.getElementById("vocation").value
     currentskill = document.getElementById("currentskill").value
     currentskillpercentage = document.getElementById("currentskillpercentage").value
@@ -35,23 +37,44 @@ function submit_form() {
         skill_type = "distance"
     }
 
-    hours = total_hours % 12
-    days = (total_hours - hours) / 12
-    years = 0
-    months = 0
-    if (days > 30) {
-        left_days = days % 30
-        months = (days - left_days) / 30
-        days = left_days
-    }
-    if (months > 12) {
-        left_months = months % 12
-        years = (months - left_months) / 12
-        months = left_months
+    if (type_of_training == 'Online') {
+        total_hours = total_hours / 2
     }
 
-
-    offlinetrainingformresults.innerHTML = "To get from " + currentskill + " " + skill_type + " to " + targetskill + " " + skill_type + ", you need to offline train for a total of " + total_hours + " hours, which at 12 hours of offline training a day is: <br><br><b>" + years + " years, " + months + " months, " + days + " days, " + hours + " hours</b><br>"
+    if (type_of_training == 'Online') {
+        online_hours = total_hours % 24
+        online_days = (total_hours - online_hours) / 24
+        online_years = 0
+        online_months = 0
+        if (online_days > 30) {
+            left_days = online_days % 30
+            online_months = (online_days - left_days) / 30
+            online_days = left_days
+        }
+        if (online_months > 12) {
+            left_months = online_months % 12
+            online_years = (online_months - left_months) / 12
+            online_months = left_months
+        }
+        offlinetrainingformresults.innerHTML = "To get from " + currentskill + " " + skill_type + " to " + targetskill + " " + skill_type + ", you need to online train for a total of " + total_hours + " hours, which at 24 hours of online training a day is: <br><br><b>" + online_years + " years, " + online_months + " months, " + online_days + " days, " + online_hours + " hours</b><br>"
+    }
+    else {
+        offline_hours = total_hours % 12
+        offline_days = (total_hours - offline_hours) / 12
+        offline_years = 0
+        offline_months = 0
+        if (offline_days > 30) {
+            left_days = offline_days % 30
+            offline_months = (offline_days - left_days) / 30
+            offline_days = left_days
+        }
+        if (offline_months > 12) {
+            left_months = offline_months % 12
+            offline_years = (offline_months - left_months) / 12
+            offline_months = left_months
+        }
+        offlinetrainingformresults.innerHTML = "To get from " + currentskill + " " + skill_type + " to " + targetskill + " " + skill_type + ", you need to offline train for a total of " + total_hours + " hours, which at 12 hours of offline training a day is: <br><br><b>" + offline_years + " years, " + offline_months + " months, " + offline_days + " days, " + offline_hours + " hours</b><br>"
+    }
 }
 
 function calculate_mage_skill(currentskill, currentskillpercentage, targetskill, loyalty) {
