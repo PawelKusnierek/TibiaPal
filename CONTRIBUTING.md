@@ -17,6 +17,7 @@ DATABASE_HOST = '127.0.0.1'
 DATABASE_PORT = '3306'
 4. If you plan to setup a local database instance, follow instructions here (does not need to be MySQL, I use MySQL because that's the default for 'PythonAnywhere' where the site is hosted):
 https://www.javatpoint.com/how-to-connect-mysql-to-django
+4a. install https://dev.mysql.com/downloads/installer/, create schema tibiapal_db
 5. To start the development server run below command in 'manage.py' directory:
 python manage.py runserver
 
