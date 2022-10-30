@@ -21,7 +21,7 @@ function submit_form() {
       let hours_needed = (days_needed - parseInt(days_needed)) * 24;
       let minutes_needed = (hours_needed - parseInt(hours_needed)) * 60;
       let seconds_needed = (minutes_needed - parseInt(minutes_needed)) * 60;
-      let time_to_target_level = "At " + exp_per_hour / 1000000 + " kk/h, hunting time needed to reach target level: " + (Math.floor(days_needed) * 24 + Math.floor(hours_needed)) + " hour(s)"
+      let time_to_target_level = "At " + exp_per_hour / 1000000 + " kk/h, hunting time needed to reach target level: " + (Math.floor(days_needed) * 24 + Math.floor(hours_needed)) + " hour(s) and " + Math.floor(minutes_needed) + " minutes"
       if (hunt_per_day > 0) {
         total_seconds_needed = total_seconds_needed * 24 / hunt_per_day
         finished_time_string = (new Date(Date.now() + (total_seconds_needed * 1000))).toLocaleString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
