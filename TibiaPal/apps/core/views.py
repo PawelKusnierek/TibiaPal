@@ -146,6 +146,10 @@ def weapons(request):
     template = loader.get_template('weapons.html')
     return HttpResponse(template.render())
 
+def wheel(request):
+    template = loader.get_template('wheel.html')
+    return HttpResponse(template.render())
+
 
 def testapp(request):
     template = loader.get_template('testapp.html')
