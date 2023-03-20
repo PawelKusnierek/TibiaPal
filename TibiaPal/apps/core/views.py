@@ -28,10 +28,13 @@ def auctions_update(request):
     return HttpResponse("Worlds updated")
 
 
+def bosstiary(request):
+    template = loader.get_template('bosstiary.html')
+    return HttpResponse(template.render())
+
 def bestiary(request):
     template = loader.get_template('bestiary.html')
     return HttpResponse(template.render())
-
 
 def bosstimers(request):
     template = loader.get_template('bosstimers.html')
