@@ -36,6 +36,10 @@ def bestiary(request):
     template = loader.get_template('bestiary.html')
     return HttpResponse(template.render())
 
+def bless(request):
+    template = loader.get_template('bless.html')
+    return HttpResponse(template.render())
+
 def bosstimers(request):
     template = loader.get_template('bosstimers.html')
     return HttpResponse(template.render())
