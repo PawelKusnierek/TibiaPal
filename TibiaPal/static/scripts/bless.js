@@ -30,7 +30,7 @@ function submit_form() {
 
     total_cost = Math.round(regular_cost + enhanced_cost + twist_cost)
 
-    content.innerHTML = content.innerHTML + "For a character with level " + level + ", total bless cost: <b>" + total_cost + "k</b> <br><br> Regular Bless: " + regular_cost + "k<br>Enhanced Bless: " + enhanced_cost + "k<br> Twist of Fate: " + twist_cost + "k"
+    content.innerHTML = content.innerHTML + "For a character with level " + level + ", total bless cost: <b>" + total_cost + "k</b> <br><br> Regular Blessings: " + regular_cost + "k<br>Enhanced Blessings: " + enhanced_cost + "k<br> Twist of Fate: " + twist_cost + "k"
 }
 
 function regular_blesses(level, IsHenricus) {
