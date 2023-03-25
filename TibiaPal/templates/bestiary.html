@@ -1,5 +1,8 @@
 {% extends "base_template.html" %}
 {% block title %} <title>TibiaPal.com - Bestiary Reference</title> {% endblock %}
+{% block scripts %}
+<script src="../static/scripts/tablecheckbox.js"></script>
+{% endblock %}
 
 {% block nav-bestiary %}<div class="active nav-item">{% endblock %}
 
@@ -2752,7 +2755,7 @@
             <td>Draptor</td>
             <td>50</td>
             <td>Medium</td>
-            <td>Muggy Plains Dragon Raid, WOTE Random spawn</td>
+            <td>Muggy Plains Raid, WOTE</td>
         </tr>
         <tr>
             <td>Undead Cavebear</td>
@@ -2918,4 +2921,8 @@
         </tr>
     </table>
 </div>
+
+<script type="text/javascript">
+    init();
+</script>
 {% endblock %}

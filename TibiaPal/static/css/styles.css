@@ -676,6 +676,11 @@ ol, ul {
   padding: 5px 10px 5px 10px;
 }
 
+.table_cell_checkbox {
+  text-align: center;
+  vertical-align: middle;
+}
+
 .bestiary_table th {
   width: auto;
   padding: 0 10px 0 10px;
