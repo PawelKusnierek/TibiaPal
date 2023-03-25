@@ -82,6 +82,7 @@ function profile_name_submit_click() {
 
             existing_profiles.push(new_profile_name)
             localStorage.setItem("bosstiary_profiles", JSON.stringify(existing_profiles));
+            profile_change()
         }
     } else {
         var option = document.createElement('option');
