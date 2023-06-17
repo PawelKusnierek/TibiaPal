@@ -21,7 +21,8 @@ Some of the current features include:
 - Boss Timers
 - Hunting Places
 - Bestiary Reference
-- Weapons Reference
+- Bosstiary Reference
+- Wheel of Destiny Presets
 - Exercise Weapons Calculator
 
 ## Usage
