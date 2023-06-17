@@ -153,8 +153,8 @@ def weapons(request):
     template = loader.get_template('weapons.html')
     return HttpResponse(template.render())
 
-def wheel(request):
-    template = loader.get_template('wheel.html')
+def wheelpresets(request):
+    template = loader.get_template('wheelpresets.html')
     return HttpResponse(template.render())
 
 
