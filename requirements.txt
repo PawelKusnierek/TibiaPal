@@ -1,8 +1,0 @@
-python-decouple>=3.6
-pip~=22.0.4
-wheel~=0.37.1
-setuptools~=60.2.0
-Django~=4.0.4
-mysqlclient~=2.1.0
-requests~=2.27.1
-beautifulsoup4~=4.11.1

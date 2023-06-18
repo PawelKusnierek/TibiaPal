@@ -1,0 +1,49 @@
+---
+layout: default
+title: TibiaPal.com - Exercise Weapons Calculator
+scripts: <script src="scripts/exercise.js"></script>
+
+---
+
+<br>Calculate how many exercise weapons you have to use to get from skill X to skill Y. <br><br>
+Always buy exercise weapons for gold when the price of Tibia Coins is above 10 500 gp on
+your server. <br>
+<form id="vocation_exercise_form">
+    <label for="vocation">Vocation & skill:</label>
+    <select name="vocation" id="vocation">
+        <option value="Mage">Druid/Sorcerer - Magic</option>
+        <option value="Knight">Knight - Melee</option>
+        <option value="Paladin Magic">Paladin - Magic</option>
+        <option value="Paladin Distance">Paladin - Distance</option>
+    </select><br>
+    <label id="currentskilllabel" for="currentskill">Current skill with loyalty:</label>
+    <input type="text" id="currentskill" name="currentskill" placeholder="current skill with loyalty, e.g. 112"
+        autocomplete="off"><br>
+    <label id="currentskillpercentagelabel" for="currentskillpercentage">% to next:</label>
+    <input type="text" id="currentskillpercentage" name="currentskillpercentage" value="100"><br>
+    <label id="targetskilllabel" for="targetskill">Target skill:</label>
+    <input type="text" id="targetskill" name="targetskill" placeholder="target skill, e.g. 114" autocomplete="off"><br>
+    <label id="loyaltylabel" for="loyalty">Loyalty bonus:</label>
+    <select name="loyalty" id="loyalty">
+        <option value="0">0%</option>
+        <option value="5">5%</option>
+        <option value="10">10%</option>
+        <option value="15">15%</option>
+        <option value="20">20%</option>
+        <option value="25">25%</option>
+        <option value="30">30%</option>
+        <option value="35">35%</option>
+        <option value="40">40%</option>
+        <option value="45">45%</option>
+        <option value="50">50%</option>
+    </select><br>
+    <label id="eventlabel" for="event">Double event:</label>
+    <input type="checkbox" id="event" name="event"><br>
+    <label id="dummylabel" for="dummy">Private dummy:</label>
+    <input type="checkbox" id="dummy" name="dummy"><br>
+    <label id="tc_price_label" for="tc_price">TC over 10500 gp:</label>
+    <input type="checkbox" id="tc_price" name="tc_price" checked><br>
+    <input type="submit" id="exercisesubmitbutton" value="Submit"
+        onclick="event.preventDefault(); submit_exercise_form()" />
+</form>
+<p id="exerciseformresults"></p>

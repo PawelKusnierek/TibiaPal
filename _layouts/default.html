@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <meta name="author" content="Pawel Kusnierek">
+    <meta name="description"
+    content="Tools for video game 'Tibia', TibiaLootSplit, Imbue calculator, Stamina calculator, Exercise Weapons calculator, Wheel of Destiny presets and more.">
+    <meta name="keywords"
+        content="Tibia calculators, Tibia tools, TibiaLootSplit, Tibia Loot Analyser,
+          Tibia fansite, Exercise Weapons Calculator, Stamina Calculator, Imbue Calculator, Exp Share Calculator, Wheel of Destiny presets ">
+    <link rel="shortcut icon" href={{"images/crystalcoin.ico" | relative_url}} type="image/x-icon">
+
+    <!-- css files -->
+    <link rel="stylesheet" href={{"css/main.css" | relative_url}}>
+
+    <!-- javascript files -->
+    {{ page.scripts }}
+    <script src={{"scripts/onload.js" | relative_url}}></script>
+
+    <!-- extra googleapi fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+    <!-- Analytics and ad related section-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVVNY9BHWM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PVVNY9BHWM');
+    </script>
+    <script data-ad-client="ca-pub-2936542406889680" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body onload="initialize()">
+    <main id="page-container">
+        <div id="header">
+            <a class="float-left" href="https://www.tibia.com/community/?subtopic=fansites" target="_blank">
+                <img src={{"images/supported.png" | relative_url}} style="width:100%" alt="Tibia supported fansite Logo">
+            </a>
+            <a class="float-left" href="https://tibiapal.com"> 
+                <img src={{"images/mainlogo.png" | relative_url}} style="width:100px" alt="TibiaPal beaver logo">
+            </a>
+        </div>
+        <div id="banner">
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2936542406889680"
+                crossorigin="anonymous"></script>
+            <!-- 420x110 -->
+            <ins class="adsbygoogle" style="display:inline-block;width:420px;height:110px"
+                data-ad-client="ca-pub-2936542406889680" data-ad-slot="3541231516"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <a class="float-right" href="https://www.tibia.com" target="_blank"> 
+                <img src={{"images/tibia-logo-artwork-top.gif" | relative_url}} style="width:120px" alt="Official Tibia Logo">
+            </a>
+        </div>
+        <div id="right-header">
+
+        </div>
+    {% include navigation.html %}
+    
+    <section id="main-content">
+    {{ content }}
+    </section>
+    
+    <div class="cookieconsent"
+        style="display:none;position:fixed;padding:20px;left:0;bottom:0;background-color:#000;color:#FFF;text-align:center;width:100%;z-index:99999;">
+        TibiaPal.com uses cookies to ensure you get the best experience possible. By continuing to use this website, you
+        agree to their use. You can find more information about our cookies on our <a href="https://tibiapal.com/about"
+            target="_blank">Privacy Policy</a> page.
+        <a href="" style="color:#CCCCCC;" onclick="event.preventDefault(); cookieConsentClicked()">I Understand</a>
+    </div>
+
+    <aside id="right-sidebar">
+            <section id="banner-paragraph">
+                <p class="donationparagraph">Join our <b>Discord</b> channel to stay up-to-date!<br>
+                    <a href="https://discord.gg/f2hESCbgvz" target="_blank">discord.gg/f2hESCbgvz</a>
+                </p>
+
+                <h4><br>Latest <a href="https://www.youtube.com/kusnierr" target="_blank">YouTube</a> Video:</h4>
+                <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLC0KAO2SnwlREgB3ScVsAK9OeAqwLXq8-" allowfullscreen></iframe>
+            </section>
+            <div id="ads-container">
+                <div>
+                    <script async
+                        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2936542406889680"
+                        crossorigin="anonymous">
+                        </script>
+                    <!-- right-sidebar-2 -->
+                    <ins class="adsbygoogle" style="display:inline-block;width:200px;height:200px"
+                        data-ad-client="ca-pub-2936542406889680" data-ad-slot="7878791141"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <br>
+            </div>
+            <br>
+        </aside>
+        <aside id="left-footer-space"></aside>
+        <footer id="footer">
+            <p id="footerParagraph">
+                Tibia and all products related to Tibia are copyrighted by <a href="https://www.cipsoft.com"
+                    target="_blank">CipSoft GmbH</a>. The official
+                website of Tibia is <a href="https://www.tibia.com" target="_blank">tibia.com</a>.<br><br>
+                Created by Kusnier.
+            </p><br><br>
+        </footer>
+        <aside id="right-footer-space"></aside>
+        </main>
+</body>
+</html>

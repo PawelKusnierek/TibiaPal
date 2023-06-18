@@ -127,9 +127,6 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
-# mkdocs documentation
-/site
-
 # mypy
 .mypy_cache/
 .dmypy.json
@@ -149,3 +146,7 @@ cython_debug/
 
 # vsc
 launch.json
+_site/CODE_OF_CONDUCT.md
+_site/CONTRIBUTING.md
+_site/LICENSE
+_site/README.md

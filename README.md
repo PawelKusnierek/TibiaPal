@@ -27,20 +27,14 @@ Some of the current features include:
 
 ## Usage
 
-The site currently has approximately 25k monthly users and 100k monthly pageviews/visits.
+The site currently has approximately 30k monthly users and 150k monthly pageviews/visits.
 
 ## Contact
 
 https://tibiapal.com/about
 
 ## Application Techstack
-Back-end: Django/Python, MySQL
-
-Front-end: HTML, CSS (SASS) and plain JS
+HTML (Generated with Jekyll), CSS (SASS) and plain JS
 
 ## Hosting
-The site is hosted on PythonAnywhere. 
-
-SSL certificate is provided by Let's Encrypt. 
-
-SSL re-direct is provided by NakedSSL.com.
+The site is hosted on GitHub Pages. 

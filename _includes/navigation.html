@@ -1,0 +1,97 @@
+<nav id="left-sidebar">
+    <div class="nav-section">GENERAL</div>
+    <div class="{% if page.url == "/" %}active {% endif %}nav-item"> <a href="/">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/icon-news.gif" | relative_url}}><span id="new-homepage">NEW!</span>Latest
+                News</div>
+        </a>
+    </div>
+    <div class="{% if page.url == "/about.html" %}active {% endif %}nav-item"><a href="/about">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/icon-abouttibia.gif" |
+                    relative_url}}>About & Contact
+            </div>
+        </a>
+    </div>
+    <div class="{% if page.url == "/donators.html" %}active {% endif %}nav-item"><a href="/donators">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/Heart_Pillow.gif" |
+                    relative_url}}>Donators</div>
+        </a></div>
+
+    <div class="nav-section">TOOLS</div>
+    <div class="{% if page.url == "/tibialootsplit.html" %}active {% endif %}nav-item"><a href="/tibialootsplit">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/crystalcoin.ico" |
+                    relative_url}}>TibiaLootSplit</div>
+        </a></div>
+    <!--<div class="{% if page.url == " /wheelpresets.html" %}active {% endif %}nav-item"><a href="../wheelpresets">
+                    <div class="nav-image-container"><img class="nav-image" src={{"images/Wheel.gif" | relative_url}}><span id="new-homepage">NEW!</span>Wheel Presets</div>
+                </a></div>-->
+
+    <div class="nav-section">GUIDES / REFERENCES</div>
+    <div class="{% if page.url contains "/hunting" %}active {% endif %}nav-item"><a href="/hunting">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/Sword.gif" | relative_url}}>Hunting
+                Places</div>
+        </a></div>
+    <div class="{% if page.url == "/bestiary.html" %}active {% endif %}nav-item"><a href="/bestiary">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/Bestiary_Betterment.gif" |
+                    relative_url}}>Bestiary
+                Reference</div>
+        </a> </div>
+    <div class="{% if page.url == "/bosstiary.html" %}active {% endif %}nav-item"><a href="/bosstiary">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/Falcon_Greaves.gif" |
+                    relative_url}}>Bosstiary Reference
+            </div>
+        </a> </div>
+    <div class="nav-item"><a href="https://www.youtube.com/kusnierr" target="_blank">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/youtube-icon.png" |
+                    relative_url}}>YouTube Videos &
+                Guides</div>
+        </a></div>
+    </div>
+
+    <div class="nav-section">CALCULATORS</div>
+    <div class="{% if page.url == "/exercise.html" %}active {% endif %}nav-item"><a href="/exercise">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/Exercise_Wand.gif" |
+            relative_url}}>Exercise
+                Weapons Calculator</div>
+        </a></div>
+    <div class="{% if page.url == "/imbue.html" %}active {% endif %}nav-item"><a href="/imbue">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/Imbuing_Shrine.gif" |
+            relative_url}}>Imbue
+                Calculator</div>
+        </a></div>
+    <div class="{% if page.url == "/expshare.html" %}active {% endif %}nav-item"><a href="/expshare">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/Bricklayers.gif" |
+            relative_url}}>Exp Share
+                Calculator</div>
+        </a></div>
+    <div class="{% if page.url == "/stamina.html" %}active {% endif %}nav-item"><a href="/stamina">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/Staminafull.png" |
+            relative_url}}>Stamina
+                Calculator</div>
+        </a></div>
+    <div class="{% if page.url == "/bless.html" %}active {% endif %}nav-item"><a href="/bless">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/Solitude_Charm.gif" |
+            relative_url}}>Bless
+                Calculator</div>
+        </a></div>
+    <div class="{% if page.url == "/expcalculator.html" %}active {% endif %}nav-item"><a href="/expcalculator">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/Demon.gif" |
+            relative_url}}>Levelling
+                Calculator</div>
+        </a></div>
+    <div class="{% if page.url == "/offlinetraining.html" %}active {% endif %}nav-item"><a href="/offlinetraining">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/Skill_Trainer.gif" |
+            relative_url}}>Training
+                Calculator</div>
+        </a></div>
+    <div class="{% if page.url == "/leech.html" %}active {% endif %}nav-item"><a href="/leech">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/Leech.gif" |
+            relative_url}}>Leech Calculator
+            </div>
+        </a></div>
+
+    <div class="right-sidebar-item" id="Rashid">
+        <img src={{"images/Rashid.gif" | relative_url}} style="width:45%" alt="Rashid NPC">
+        <br>
+        <div id="rashid-city">Unavailable...</div>
+    </div>
+</nav>

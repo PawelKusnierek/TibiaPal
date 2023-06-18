@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TibiaPal.com - Solo Knight</title>
+    <meta name="author" content="Pawel Kusnierek">
+    <meta name="description"
+    content="Tools for video game 'Tibia', TibiaLootSplit, Imbue calculator, Stamina calculator, Exercise Weapons calculator, Wheel of Destiny presets and more.">
+    <meta name="keywords"
+        content="Tibia calculators, Tibia tools, TibiaLootSplit, Tibia Loot Analyser,
+          Tibia fansite, Exercise Weapons Calculator, Stamina Calculator, Imbue Calculator, Exp Share Calculator, Wheel of Destiny presets ">
+    <link rel="shortcut icon" href=/images/crystalcoin.ico type="image/x-icon">
+
+    <!-- css files -->
+    <link rel="stylesheet" href=/css/main.css>
+
+    <!-- javascript files -->
+    <script src="../scripts/hunting.js"></script>
+    <script src=/scripts/onload.js></script>
+
+    <!-- extra googleapi fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+    <!-- Analytics and ad related section-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVVNY9BHWM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PVVNY9BHWM');
+    </script>
+    <script data-ad-client="ca-pub-2936542406889680" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body onload="initialize()">
+    <main id="page-container">
+        <div id="header">
+            <a class="float-left" href="https://www.tibia.com/community/?subtopic=fansites" target="_blank">
+                <img src=/images/supported.png style="width:100%" alt="Tibia supported fansite Logo">
+            </a>
+            <a class="float-left" href="https://tibiapal.com"> 
+                <img src=/images/mainlogo.png style="width:100px" alt="TibiaPal beaver logo">
+            </a>
+        </div>
+        <div id="banner">
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2936542406889680"
+                crossorigin="anonymous"></script>
+            <!-- 420x110 -->
+            <ins class="adsbygoogle" style="display:inline-block;width:420px;height:110px"
+                data-ad-client="ca-pub-2936542406889680" data-ad-slot="3541231516"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <a class="float-right" href="https://www.tibia.com" target="_blank"> 
+                <img src=/images/tibia-logo-artwork-top.gif style="width:120px" alt="Official Tibia Logo">
+            </a>
+        </div>
+        <div id="right-header">
+
+        </div>
+    <nav id="left-sidebar">
+    <div class="nav-section">GENERAL</div>
+    <div class="nav-item"> <a href="/">
+            <div class="nav-image-container"><img class="nav-image" src=/images/icon-news.gif><span id="new-homepage">NEW!</span>Latest
+                News</div>
+        </a>
+    </div>
+    <div class="nav-item"><a href="/about">
+            <div class="nav-image-container"><img class="nav-image" src=/images/icon-abouttibia.gif>About & Contact
+            </div>
+        </a>
+    </div>
+    <div class="nav-item"><a href="/donators">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Heart_Pillow.gif>Donators</div>
+        </a></div>
+
+    <div class="nav-section">TOOLS</div>
+    <div class="nav-item"><a href="/tibialootsplit">
+            <div class="nav-image-container"><img class="nav-image" src=/images/crystalcoin.ico>TibiaLootSplit</div>
+        </a></div>
+    <!--<div class="nav-item"><a href="../wheelpresets">
+                    <div class="nav-image-container"><img class="nav-image" src=/images/Wheel.gif><span id="new-homepage">NEW!</span>Wheel Presets</div>
+                </a></div>-->
+
+    <div class="nav-section">GUIDES / REFERENCES</div>
+    <div class="active nav-item"><a href="/hunting">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Sword.gif>Hunting
+                Places</div>
+        </a></div>
+    <div class="nav-item"><a href="/bestiary">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bestiary_Betterment.gif>Bestiary
+                Reference</div>
+        </a> </div>
+    <div class="nav-item"><a href="/bosstiary">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Falcon_Greaves.gif>Bosstiary Reference
+            </div>
+        </a> </div>
+    <div class="nav-item"><a href="https://www.youtube.com/kusnierr" target="_blank">
+            <div class="nav-image-container"><img class="nav-image" src=/images/youtube-icon.png>YouTube Videos &
+                Guides</div>
+        </a></div>
+    </div>
+
+    <div class="nav-section">CALCULATORS</div>
+    <div class="nav-item"><a href="/exercise">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Exercise_Wand.gif>Exercise
+                Weapons Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/imbue">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Imbuing_Shrine.gif>Imbue
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/expshare">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bricklayers.gif>Exp Share
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/stamina">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Staminafull.png>Stamina
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/bless">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Solitude_Charm.gif>Bless
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/expcalculator">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Demon.gif>Levelling
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/offlinetraining">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Skill_Trainer.gif>Training
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/leech">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Leech.gif>Leech Calculator
+            </div>
+        </a></div>
+
+    <div class="right-sidebar-item" id="Rashid">
+        <img src=/images/Rashid.gif style="width:45%" alt="Rashid NPC">
+        <br>
+        <div id="rashid-city">Unavailable...</div>
+    </div>
+</nav>
+    
+    <section id="main-content">
+    <h1>Hunting Places - Solo Knight</h1>
+<div id="filter_selection">
+    <b>Level Filter</b>:<br><br>
+    <label>
+        <input value="0" type="radio" name="level_filter_choice" checked onclick="apply_level_filter()"> All
+    </label>
+    <label>
+        <input value="50" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 50+
+    </label>
+    <label>
+        <input value="100" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 100+
+    </label>
+    <label>
+        <input value="130" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 130+
+    </label>
+    <label>
+        <input value="200" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 200+
+    </label>
+    <label>
+        <input value="300" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 300+
+    </label>
+    <label>
+        <input value="400" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 400+
+    </label>
+</div>
+
+<table id="hunting_table">
+    <tr>
+        <th class="level_row">Level</th>
+        <th class="place_row">Place</th>
+    </tr>
+    <tr>
+        <td>8+</td>
+        <td>Rotworms Liberty Bay</td>
+    </tr>
+    <tr>
+        <td>8+</td>
+        <td>Swamp Trolls Port Hope/Venore</td>
+    </tr>
+    <tr>
+        <td>8+</td>
+        <td>Crocodiles PH</td>
+    </tr>
+    <tr>
+        <td>8+</td>
+        <td>Larva Ankh</td>
+    </tr>
+    <tr>
+        <td>20+</td>
+        <td>Coryms PH</td>
+    </tr>
+    <tr>
+        <td>20+</td>
+        <td>Cyclopolis</td>
+    </tr>
+    <tr>
+        <td>20+</td>
+        <td>Cyclops Mistrock</td>
+    </tr>
+    <tr>
+        <td>20+</td>
+        <td>Elves Yalahar</td>
+    </tr>
+    <tr>
+        <td>20+</td>
+        <td><a href="https://youtu.be/hg5Tgj_bubU" target="_blank">Laguna Islands</a></td>
+    </tr>
+    <tr>
+        <td>20+</td>
+        <td>Tarantulas PH</td>
+    </tr>
+    <tr>
+        <td>20+</td>
+        <td>Nomad Cave</td>
+    </tr>
+    <tr>
+        <td>20+</td>
+        <td><a href="https://youtu.be/3mcY_eNBThg" target="_blank">Blood Crabs Laguna Islands</a></td>
+    </tr>
+    <tr>
+        <td>30+</td>
+        <td><a href="https://youtu.be/BmLScxZQ9Vk" target="_blank">Mutated Humans Yala</a></td>
+    </tr>
+    <tr>
+        <td>30+</td>
+        <td>Minotaur Pyramind Darashia</td>
+    </tr>
+    <tr>
+        <td>30+</td>
+        <td>Apes Banuta</td>
+    </tr>
+    <tr>
+        <td>30+</td>
+        <td>Zombies Yala/Treasure Island</td>
+    </tr>
+    <tr>
+        <td>30+</td>
+        <td>Carniphilas PH</td>
+    </tr>
+    <tr>
+        <td>30+</td>
+        <td>Upper Spike</td>
+    </tr>
+    <tr>
+        <td>40+</td>
+        <td>Pirates Yala</td>
+    </tr>
+    <tr>
+        <td>50+</td>
+        <td>Mummy/Bonebeasts Mother of Scarabs Lair -3</td>
+    </tr>
+    <tr>
+        <td>50+</td>
+        <td>Mutated Rats Alchemist Quarter</td>
+    </tr>
+    <tr>
+        <td>50+</td>
+        <td>Arena Quarter</td>
+    </tr>
+    <tr>
+        <td>50+</td>
+        <td>Darashia Dragon Lair</td>
+    </tr>
+    <tr>
+        <td>50+</td>
+        <td>Yalahar Dragons</td>
+    </tr>
+    <tr>
+        <td>50+</td>
+        <td>Orc Fortress</td>
+    </tr>
+    <tr>
+        <td>50+</td>
+        <td><a href="https://youtu.be/xTQ6dk8LvlQ" target="_blank">Lion's Rock</a></td>
+    </tr>
+    <tr>
+        <td>50+</td>
+        <td><a href="https://youtu.be/bY6IJrqDAaY" target="_blank">Nibelor Crystal Spiders</a></td>
+    </tr>
+    <tr>
+        <td>50+</td>
+        <td><a href="https://youtu.be/MzHX_f4jK-0" target="_blank">Vengoth Haunted Treelings</a></td>
+    </tr>
+    <tr>
+        <td>60+</td>
+        <td>Old Fortress Bonebeasts</td>
+    </tr>
+    <tr>
+        <td>70+</td>
+        <td><a href="https://youtu.be/Eup4SAXdINs" target="_blank">Mother of Scarabs Lair</a></td>
+    </tr>
+    <tr>
+        <td>70+</td>
+        <td><a href="https://youtu.be/4-BRA05J6xs" target="_blank">Yalahar Bog Raiders Central</a></td>
+    </tr>
+    <tr>
+        <td>70+</td>
+        <td><a href="https://youtu.be/L16-bc9CP5Q" target="_blank">Yalahar Alchemist Outskirts</a></td>
+    </tr>
+    <tr>
+        <td>70+</td>
+        <td>Killer Caiman Cave</td>
+    </tr>
+    <tr>
+        <td>70+</td>
+        <td><a href="https://youtu.be/p2HPO2i4IWw" target="_blank">Hive Surface</a></td>
+    </tr>
+    <tr>
+        <td>80+</td>
+        <td><a href="https://youtu.be/C3z3KF_ZB-Y" target="_blank">Giant Spiders PH</a></td>
+    </tr>
+    <tr>
+        <td>90+</td>
+        <td>Carlin Cults</td>
+    </tr>
+    <tr>
+        <td>90+</td>
+        <td>Sea Serpents</td>
+    </tr>
+    <tr>
+        <td>90+</td>
+        <td>Yielothax</td>
+    </tr>
+    <tr>
+        <td>90+</td>
+        <td><a href="https://youtu.be/-9-sCX_V1Q8" target="_blank">Krailos Bug Cave</a></td>
+    </tr>
+    <tr>
+        <td>90+</td>
+        <td>Wyrms Drefia/LB</td>
+    </tr>
+    <tr>
+        <td>90+</td>
+        <td>Nightmare Scions Krailos</td>
+    </tr>
+    <tr>
+        <td>90+</td>
+        <td>Edron Vampire Crypt</td>
+    </tr>
+    <tr>
+        <td>100+</td>
+        <td>Dragon Lords Fenrock/POI</td>
+    </tr>
+    <tr>
+        <td>110+</td>
+        <td>Edron Old Fortress</td>
+    </tr>
+    <tr>
+        <td>120+</td>
+        <td>Grimvale -4</td>
+    </tr>
+    <tr>
+        <td>120+</td>
+        <td>Exotic Cave Spiders cave</td>
+    </tr>
+    <tr>
+        <td>130+</td>
+        <td>Hydras PH Mountain</td>
+    </tr>
+    <tr>
+        <td>130+</td>
+        <td>Vengoth Castle</td>
+    </tr>
+    <tr>
+        <td>130+</td>
+        <td>Inner Hive</td>
+    </tr>
+    <tr>
+        <td>130+</td>
+        <td>Banuta -1 (Hydras/SS/Medusa)</td>
+    </tr>
+    <tr>
+        <td>130+</td>
+        <td>Mini Rosha</td>
+    </tr>
+    <tr>
+        <td>130+</td>
+        <td>Ravenous Lava Lurkers</td>
+    </tr>
+    <tr>
+        <td>130+</td>
+        <td>Dark Faun Cave</td>
+    </tr>
+    <tr>
+        <td>130+</td>
+        <td>Edron Orc Cults</td>
+    </tr>
+    <tr>
+        <td>140+</td>
+        <td>Hydras Oramond</td>
+    </tr>
+    <tr>
+        <td>150+</td>
+        <td><a href="https://youtu.be/1Up6TcdEWCU" target="_blank">Barkless Ab Cults</a></td>
+    </tr>
+    <tr>
+        <td>150+</td>
+        <td><a href="https://youtu.be/zBhplhuKXIY" target="_blank">Iksupan</a></td>
+    </tr>
+    <tr>
+        <td>160+</td>
+        <td>Minotaur Cults</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Werehyaenas</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Glooth Bandits</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Oramond West</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Edron South Werecreatures</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Pirats</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Lizard Chosens</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td><a href="https://youtu.be/_Nl5iLP_ysw" target="_blank">Draken Walls</a></td>
+    </tr>
+    <tr>
+        <td>220+</td>
+        <td>Elder Wyrms Drefia</td>
+    </tr>
+    <tr>
+        <td>220+</td>
+        <td>Glooth Tower</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Carnivora's Rock</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Seacrest Serpents</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td><a href="https://youtu.be/QlVshD00-WQ" target="_blank">Medusa Tower</a></td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td><a href="https://youtu.be/D-tKd-2-aP8" target="_blank">Asura Palace</a></td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td><a href="https://youtu.be/7lL9Eu4gEfY" target="_blank">Werelions -1</a>, <a
+                href="https://youtu.be/4UjR7XhKo2Q" target="_blank">Werelions -2</a></td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td><a href="https://youtu.be/C3HBF3noWV0" target="_blank">Deeper Banuta (Bottom Floor)</a></td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td><a href="https://youtu.be/KJ9s5nD2_XM" target="_blank">Wote 8 Drakens</a></td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td><a href="https://youtu.be/UXeQuJ7UXbA" target="_blank">Oramond Fury Dungeon</a></td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td><a href="https://youtu.be/sUyHb_pEeRQ" target="_blank">Drefia Grim Reapers</a></td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td><a href="https://youtu.be/8J9jVBLu8ik" target="_blank">Diremaw Task Area</a></td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td><a href="https://youtu.be/w0XLvF35jCY" target="_blank">Warzone 4</a></td>
+    </tr>
+    <tr>
+        <td>350+</td>
+        <td><a href="https://youtu.be/vlOWwyJpEZI" target="_blank">POI Dark Torturer Seal</a></td>
+    </tr>
+    <tr>
+        <td>350+</td>
+        <td><a href="https://youtu.be/pI6rwhbkRE4" target="_blank">Winter Court behind TP/Portal</a></td>
+    </tr>
+    <tr>
+        <td>350+</td>
+        <td><a href="https://youtu.be/nd95xvmtIUc" target="_blank">Asura Mirror -1</a></td>
+    </tr>
+    <tr>
+        <td>350+</td>
+        <td><a href="https://youtu.be/zZv9XYnpF_U" target="_blank">Oramond Wildlife Raid</a></td>
+    </tr>
+    <tr>
+        <td>350+</td>
+        <td><a href="https://youtu.be/xEV7rp0YQ8g" target="_blank">Lower Rosha</a></td>
+    </tr>
+    <tr>
+        <td>350+</td>
+        <td><a href="https://youtu.be/xDNZPhIDBfE" target="_blank">Warzone 5</a></td>
+    </tr>
+    <tr>
+        <td>350+</td>
+        <td><a href="https://youtu.be/kTMrNwPKebg" target="_blank">Gazer Spectre</a></td>
+    </tr>
+    <tr>
+        <td>350+</td>
+        <td><a href="https://youtu.be/ZjtdCId8l_M" target="_blank">POI Infernatil Seal (Fire)</a></td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td><a href="https://youtu.be/z6fgTbeD--k" target="_blank">Warzone 6</a></td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td><a href="https://youtu.be/ObUXgSt0CKY" target="_blank">Rosha West</a></td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td><a href="https://youtu.be/p_Fy4LA8UaI" target="_blank">POI Infernatil + DT Seals</a></td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td><a href="https://youtu.be/SwhH7mfXKWA" target="_blank">POI Verminor Seal</a></td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td><a href="https://youtu.be/IZmXegtiO3U" target="_blank">Buried Cathedral -1</a></td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td><a href="https://youtu.be/oSh1OpMdNlI" target="_blank">Winter Court</a></td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td><a href="https://youtu.be/UyBEeDVkh8Y" target="_blank">Burster Spectre</a></td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td><a href="https://youtu.be/nt7sNGSzkDM" target="_blank">Roshamuul Depot</a></td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td><a href="https://youtu.be/n0UFwT3P6Pc" target="_blank">Marapur Turtles and Foam Stalkers</a></td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td><a href="https://youtu.be/F09eddj6M54" target="_blank">Prison -1</a></td>
+    </tr>
+    <tr>
+        <td>450+</td>
+        <td><a href="https://youtu.be/P2at25KY0eU" target="_blank">Prison -2</a></td>
+    </tr>
+    <tr>
+        <td>450+</td>
+        <td><a href="https://youtu.be/aIa1rppOhBg" target="_blank">Summer Court for first timers (half
+                boxes)</a></td>
+    </tr>
+    <tr>
+        <td>450+</td>
+        <td><a href="https://youtu.be/Y8VtANmM6WY" target="_blank">Nagas</a></td>
+    </tr>
+    <tr>
+        <td>450+</td>
+        <td><a href="https://youtu.be/9jrVlQdyKR0" target="_blank">Roshamuul Shockheads</a></td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td><a href="https://youtu.be/qztNKrkX4xQ" target="_blank">Otherworld</a></td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td><a href="https://youtu.be/c5AQnTF3W1I" target="_blank">Deathlings</a></td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td><a href="https://youtu.be/iNy9v0cuywY" target="_blank">INQ Dark Torturer Seal</a></td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td><a href="https://youtu.be/Qg59I8UENT8" target="_blank">Nightmare Isles</a></td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td><a href="https://youtu.be/u3J4bu9CYi4" target="_blank">Warzone 7</a></td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td><a href="https://youtu.be/rVoJo4yPoyE" target="_blank">Warzone 8</a></td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td><a href="https://youtu.be/d5R5ZYgPbOc" target="_blank">Oramond Catacombs</a></td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td><a href="https://youtu.be/9UPypZPCjg4" target="_blank">Cobra Bastion for Beginners</a></td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td><a href="https://youtu.be/XdWrKp46meE" target="_blank">Floating Savants MoTA</a></td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td><a href="https://youtu.be/LgrIoKfVKMY" target="_blank">Summer Court full boxing</a></td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td><a href="https://youtu.be/eYww7TEtxxA" target="_blank">Carnisylvans</a></td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td><a href="https://youtu.be/p-kD2EpGF8g" target="_blank">Issavi Crypts (Sphinx, Wardens)</a></td>
+    </tr>
+    <tr>
+        <td>550+</td>
+        <td><a href="https://youtu.be/Duv2NWQc1nc" target="_blank">Cobra Bastion -1</a></td>
+    </tr>
+    <tr>
+        <td>550+</td>
+        <td><a href="https://youtu.be/CMwLp0PWqi4" target="_blank">Flimsy Venore -1</a></td>
+    </tr>
+    <tr>
+        <td>550+</td>
+        <td><a href="https://youtu.be/R4BrdVEDcDQ" target="_blank">Flimsy Port Hope</a></td>
+    </tr>
+    <tr>
+        <td>550+</td>
+        <td><a href="https://youtu.be/TQ6acS-sKEU" target="_blank">Bashmu</a></td>
+    </tr>
+    <tr>
+        <td>550+</td>
+        <td><a href="https://youtu.be/4oUyVfnzvAw" target="_blank">Feru Way</a></td>
+    </tr>
+    <tr>
+        <td>600+</td>
+        <td><a href="https://youtu.be/euMIhkrT0Mw" target="_blank">Issavi Sewers</a></td>
+    </tr>
+    <tr>
+        <td>600+</td>
+        <td><a href="https://youtu.be/X4C2-DFsTvM" target="_blank">Issavi Surface (East)</a></td>
+    </tr>
+    <tr>
+        <td>600+</td>
+        <td><a href="https://youtu.be/bqSzm8ueGzc" target="_blank">Temple of the Sun and Sea</a></td>
+    </tr>
+    <tr>
+        <td>600+</td>
+        <td>Girtablilus</td>
+    </tr>
+    <tr>
+        <td>700+</td>
+        <td>Feru DT/Vexclaw seal (Tafariel)</td>
+    </tr>
+    <tr>
+        <td>900+</td>
+        <td>Pumin Feru Seal</td>
+    </tr>
+</table>
+
+    </section>
+    
+    <div class="cookieconsent"
+        style="display:none;position:fixed;padding:20px;left:0;bottom:0;background-color:#000;color:#FFF;text-align:center;width:100%;z-index:99999;">
+        TibiaPal.com uses cookies to ensure you get the best experience possible. By continuing to use this website, you
+        agree to their use. You can find more information about our cookies on our <a href="https://tibiapal.com/about"
+            target="_blank">Privacy Policy</a> page.
+        <a href="" style="color:#CCCCCC;" onclick="event.preventDefault(); cookieConsentClicked()">I Understand</a>
+    </div>
+
+    <aside id="right-sidebar">
+            <section id="banner-paragraph">
+                <p class="donationparagraph">Join our <b>Discord</b> channel to stay up-to-date!<br>
+                    <a href="https://discord.gg/f2hESCbgvz" target="_blank">discord.gg/f2hESCbgvz</a>
+                </p>
+
+                <h4><br>Latest <a href="https://www.youtube.com/kusnierr" target="_blank">YouTube</a> Video:</h4>
+                <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLC0KAO2SnwlREgB3ScVsAK9OeAqwLXq8-" allowfullscreen></iframe>
+            </section>
+            <div id="ads-container">
+                <div>
+                    <script async
+                        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2936542406889680"
+                        crossorigin="anonymous">
+                        </script>
+                    <!-- right-sidebar-2 -->
+                    <ins class="adsbygoogle" style="display:inline-block;width:200px;height:200px"
+                        data-ad-client="ca-pub-2936542406889680" data-ad-slot="7878791141"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <br>
+            </div>
+            <br>
+        </aside>
+        <aside id="left-footer-space"></aside>
+        <footer id="footer">
+            <p id="footerParagraph">
+                Tibia and all products related to Tibia are copyrighted by <a href="https://www.cipsoft.com"
+                    target="_blank">CipSoft GmbH</a>. The official
+                website of Tibia is <a href="https://www.tibia.com" target="_blank">tibia.com</a>.<br><br>
+                Created by Kusnier.
+            </p><br><br>
+        </footer>
+        <aside id="right-footer-space"></aside>
+        </main>
+</body>
+</html>
