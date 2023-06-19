@@ -178,6 +178,12 @@ percentage), when you hit 6 monsters, you will Leech 150% (100% + 5 * 10%)
         <a href="" style="color:#CCCCCC;" onclick="event.preventDefault(); cookieConsentClicked()">I Understand</a>
     </div>
 
+    <div class="adblockpopup"
+        style="display:none;position:fixed;padding:0px;padding-bottom:5px;left:30%;right:40%;top:0;background-color:red;color:#FFF;text-align:center;width:30%;z-index:99999;">
+        Please consider disabling AdBlock or donating a few TCs to 'Kusnierr' to support the site/server costs <3 <br> Thank you! <br>This pop-up will appear once every 30 days.
+        <a href="" style="color:white;" onclick="event.preventDefault(); adBlockPopupClicked()"><br><br>CLOSE</a>
+    </div>
+
     <aside id="right-sidebar">
             <section id="banner-paragraph">
                 <p class="donationparagraph">Join our <b>Discord</b> channel to stay up-to-date!<br>
@@ -215,5 +221,8 @@ percentage), when you hit 6 monsters, you will Leech 150% (100% + 5 * 10%)
         </footer>
         <aside id="right-footer-space"></aside>
         </main>
+            <script>
+                showAdblockPopup();
+            </script>
 </body>
 </html>

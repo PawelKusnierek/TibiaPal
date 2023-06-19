@@ -91,3 +91,19 @@ function cookieConsentClicked() {
   document.querySelector(".cookieconsent").style.display = "none";
   localStorage.setItem("cookieconsent", true);
 }
+
+function showAdblockPopup() {
+  last_confirm_time = localStorage.getItem("adblockconfirm");
+  if (last_confirm_time === undefined) {
+    document.querySelector(".adblockpopup").style.display = "initial";
+  }
+  // checking if last pop-up was more than 30 days ago (in epoch time)
+  else if (Date.now() - localStorage.getItem("adblockconfirm") > 2592000000) {
+    document.querySelector(".adblockpopup").style.display = "initial";
+  }
+}
+
+function adBlockPopupClicked() {
+  document.querySelector(".adblockpopup").style.display = "none";
+  localStorage.setItem("adblockconfirm", Date.now());
+}
