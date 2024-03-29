@@ -8,6 +8,9 @@ scripts: <script src="../scripts/hunting.js"></script>
 <div id="filter_selection">
     <b>Level Filter</b>:<br><br>
     <label>
+        <input value="0" type="radio" name="level_filter_choice" checked onclick="apply_level_filter()"> All
+    </label>
+    <label>
         <input value="200" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 200+
     </label>
     <label>
