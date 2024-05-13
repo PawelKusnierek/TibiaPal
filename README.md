@@ -2,9 +2,7 @@
 https://tibiapal.com/
 
 ## About the project
-TibiaPal is a website for players of an old school video game 'Tibia'. TibiaPal is a recognised fansite and is supported by the developer of Tibia, Cipsoft. It can be found on Tibia's fansites here:
-
-https://www.tibia.com/community/?subtopic=fansites
+TibiaPal is a fansite for players of MMORPG video game 'Tibia'.
 
 ## Features
 The site has a number of features to help with the day-to-day life of the players, in the form of tools, guides and information.
@@ -27,7 +25,7 @@ Some of the current features include:
 
 ## Usage
 
-The site currently has approximately 30k monthly users and 150k monthly pageviews/visits.
+The site currently has approximately 35k monthly users and 300k monthly pageviews/visits.
 
 ## Contact
 
