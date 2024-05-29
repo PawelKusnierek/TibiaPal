@@ -10,8 +10,8 @@ function find_rashid_city() {
     timeStyle: "short",
     timeZone: "Europe/Berlin",
   }).format(new Date());
-  first_comma = time.indexOf(",");
-  day = time.substring(0, first_comma);
+  first_space = time.indexOf(" ");
+  day = time.substring(0, first_space);
   hour = parseInt(time.substring(time.length - 5, time.length - 3));
 
   content_city = document.getElementById("rashid-city");
