@@ -1,6 +1,6 @@
 function initialize() {
   //cookie_notice();
-  find_rashid_city();
+  //find_rashid_city();
   enable_expandable_div_buttons();
 }
 
