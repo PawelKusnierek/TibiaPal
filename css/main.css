@@ -548,6 +548,10 @@ ol, ul {
   width: 15%;
 }
 
+.loot_row {
+  width: 15%;
+}
+
 #hunting_table td {
   padding-top: 4px;
   padding-bottom: 4px;
