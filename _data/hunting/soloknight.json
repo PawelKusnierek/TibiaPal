@@ -1,0 +1,889 @@
+[
+    {
+        "level": "8+",
+        "place": "Rotworms Liberty Bay/Darashia",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "8+",
+        "place": "Swamp Trolls Port Hope/Venore",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "8+",
+        "place": "Crocodiles Port Hope",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "8+",
+        "place": "Larva Ankrahmun",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "20+",
+        "place": "Coryms Port Hope",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "20+",
+        "place": "Cyclopolis",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "20+",
+        "place": "Cyclops Mistrock",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "20+",
+        "place": "Elves Yalahar",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "20+",
+        "place": "Laguna Islands",
+        "raw_exp": "90k",
+        "loot": "50k",
+        "link": "https://youtu.be/hg5Tgj_bubU"
+    },
+    {
+        "level": "20+",
+        "place": "Tarantulas Port Hope",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "20+",
+        "place": "Blood Crabs Laguna Islands",
+        "raw_exp": "100k",
+        "loot": "150k",
+        "link": "https://youtu.be/3mcY_eNBThg"
+    },
+    {
+        "level": "30+",
+        "place": "Mutated Humans Yalahar",
+        "raw_exp": "135k",
+        "loot": "20k",
+        "link": "https://youtu.be/BmLScxZQ9Vk"
+    },
+    {
+        "level": "30+",
+        "place": "Zombies Treasure Island",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "30+",
+        "place": "Carniphilas Port Hope",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "30+",
+        "place": "Upper Spike",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "40+",
+        "place": "Pirates Yalahar",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Mother of Scarabs Lair -3",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Mutated Rats Alchemist Quarter",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Arena Quarter",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Darashia Dragon Lair",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Yalahar Dragons",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Lion's Rock",
+        "raw_exp": "500k",
+        "loot": "65k",
+        "link": "https://youtu.be/xTQ6dk8LvlQ"
+    },
+    {
+        "level": "50+",
+        "place": "Nibelor Crystal Spiders",
+        "raw_exp": "400k",
+        "loot": "90k",
+        "link": "https://youtu.be/bY6IJrqDAaY"
+    },
+    {
+        "level": "50+",
+        "place": "Vengoth Haunted Treelings",
+        "raw_exp": "360k",
+        "loot": "15k",
+        "link": "https://youtu.be/MzHX_f4jK-0"
+    },
+    {
+        "level": "50+",
+        "place": "Middle Spike",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "60+",
+        "place": "Old Fortress Bonebeasts",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "70+",
+        "place": "Mother of Scarabs Lair",
+        "raw_exp": "-",
+        "loot": "-",
+        "link": "https://youtu.be/Eup4SAXdINs"
+    },
+    {
+        "level": "70+",
+        "place": "Yalahar Bog Raiders Central",
+        "raw_exp": "600k",
+        "loot": "20k",
+        "link": "https://youtu.be/4-BRA05J6xs"
+    },
+    {
+        "level": "70+",
+        "place": "Yalahar Alchemist Outskirts",
+        "raw_exp": "470k",
+        "loot": "75k",
+        "link": "https://youtu.be/L16-bc9CP5Q"
+    },
+    {
+        "level": "70+",
+        "place": "Hive Surface",
+        "raw_exp": "450k",
+        "loot": "100k",
+        "link": "https://youtu.be/p2HPO2i4IWw"
+    },
+    {
+        "level": "80+",
+        "place": "Giant Spiders PH",
+        "raw_exp": "500k",
+        "loot": "25k",
+        "link": "https://youtu.be/C3z3KF_ZB-Y"
+    },
+    {
+        "level": "90+",
+        "place": "Carlin Cults",
+        "raw_exp": "1.3kk",
+        "loot": "75k",
+        "link": "https://youtu.be/shFG3_qgkT0"
+    },
+    {
+        "level": "90+",
+        "place": "Sea Serpents",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "90+",
+        "place": "Yielothax",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "90+",
+        "place": "Krailos Bug Cave",
+        "raw_exp": "600k",
+        "loot": "150k",
+        "link": "https://youtu.be/-9-sCX_V1Q8"
+    },
+    {
+        "level": "90+",
+        "place": "Wyrms Drefia/LB",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "90+",
+        "place": "Nightmare Scions Krailos",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "90+",
+        "place": "Edron Vampire Crypt",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "90+",
+        "place": "Dragon Lords Fenrock/POI",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "90+",
+        "place": "Edron Heroes -2",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "90+",
+        "place": "Edron Heroes -3",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Grimvale -4",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Exotic Cave",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Vengoth Castle",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Okolnir",
+        "raw_exp": "1.55kk",
+        "loot": "-75k",
+        "link": "https://youtu.be/a8tJcIpDARk"
+    },
+    {
+        "level": "130+",
+        "place": "Yalahar Sunken Quarter",
+        "raw_exp": "1.6kk",
+        "loot": "150k",
+        "link": "https://youtu.be/SD2Ete6ZUpQ"
+    },
+    {
+        "level": "130+",
+        "place": "Inner Hive",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Mini Rosha",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Ravenous Lava Lurkers",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Dark Faun Cave",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Oramond West",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Lizard Chosens",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Edron Orc Cults",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Hydras Oramond",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "150+",
+        "place": "Oramond Minos",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "150+",
+        "place": "Barkless Ab Cults",
+        "raw_exp": "2.2kk",
+        "loot": "-250k",
+        "link": "https://youtu.be/1Up6TcdEWCU"
+    },
+    {
+        "level": "150+",
+        "place": "Iksupan",
+        "raw_exp": "1.1kk",
+        "loot": "150k",
+        "link": "https://youtu.be/zBhplhuKXIY"
+    },
+    {
+        "level": "150+",
+        "place": "Edron South Werecreatures",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "180+",
+        "place": "Deeplings Library",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Werehyaenas",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Minotaur Cults",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Glooth Bandits",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Pirats",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Lower Spike",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Yalahar Grim Reapers",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Draken Walls",
+        "raw_exp": "2.1kk",
+        "loot": "350k",
+        "link": "https://youtu.be/_Nl5iLP_ysw"
+    },
+    {
+        "level": "200+",
+        "place": "Elder Wyrms Drefia",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Oramond Mountain Hideout Minotaurs",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Glooth Tower",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "250+",
+        "place": "Carnivora's Rock",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "250+",
+        "place": "Seacrest Serpents",
+        "raw_exp": "1.6kk",
+        "loot": "450k",
+        "link": "https://youtu.be/OqV3NWN5fo8"
+    },
+    {
+        "level": "250+",
+        "place": "Medusa Tower",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "300+",
+        "place": "Asura Palace",
+        "raw_exp": "3.5kk",
+        "loot": "550k",
+        "link": "https://youtu.be/D-tKd-2-aP8"
+    },
+    {
+        "level": "300+",
+        "place": "Werelions -1",
+        "raw_exp": "-",
+        "loot": "-",
+        "link": "https://youtu.be/7lL9Eu4gEfY"
+    },
+    {
+        "level": "300+",
+        "place": "Werelions -2",
+        "raw_exp": "-",
+        "loot": "-",
+        "link": "https://youtu.be/4UjR7XhKo2Q"
+    },
+    {
+        "level": "300+",
+        "place": "Deeper Banuta (Bottom Floor)",
+        "raw_exp": "3kk",
+        "loot": "800k",
+        "link": "https://youtu.be/C3HBF3noWV0"
+    },
+    {
+        "level": "300+",
+        "place": "Wote 8 Drakens",
+        "raw_exp": "2.5kk",
+        "loot": "700k",
+        "link": "https://youtu.be/KJ9s5nD2_XM"
+    },
+    {
+        "level": "300+",
+        "place": "Oramond Fury Dungeon",
+        "raw_exp": "2.5kk",
+        "loot": "500k",
+        "link": "https://youtu.be/UXeQuJ7UXbA"
+    },
+    {
+        "level": "300+",
+        "place": "Drefia Grim Reapers",
+        "raw_exp": "2.8kk",
+        "loot": "200k",
+        "link": "https://youtu.be/sUyHb_pEeRQ"
+    },
+    {
+        "level": "300+",
+        "place": "Diremaw Task Area",
+        "raw_exp": "2.4kk",
+        "loot": "700k",
+        "link": "https://youtu.be/8J9jVBLu8ik"
+    },
+    {
+        "level": "300+",
+        "place": "Warzone 4",
+        "raw_exp": "3.5kk",
+        "loot": "600k",
+        "link": "https://youtu.be/w0XLvF35jCY"
+    },
+    {
+        "level": "350+",
+        "place": "POI Dark Torturer Seal",
+        "raw_exp": "1.5kk",
+        "loot": "550k",
+        "link": "https://youtu.be/vlOWwyJpEZI"
+    },
+    {
+        "level": "350+",
+        "place": "Winter Court behind TP/Portal",
+        "raw_exp": "3.3kk",
+        "loot": "600k",
+        "link": "https://youtu.be/pI6rwhbkRE4"
+    },
+    {
+        "level": "350+",
+        "place": "Asura Mirror -1",
+        "raw_exp": "5.7kk",
+        "loot": "800k",
+        "link": "https://youtu.be/nd95xvmtIUc"
+    },
+    {
+        "level": "350+",
+        "place": "Oramond Wildlife Raid",
+        "raw_exp": "3.8kk",
+        "loot": "600k",
+        "link": "https://youtu.be/zZv9XYnpF_U"
+    },
+    {
+        "level": "350+",
+        "place": "Lower Rosha",
+        "raw_exp": "3.5kk",
+        "loot": "750k",
+        "link": "https://youtu.be/xEV7rp0YQ8g"
+    },
+    {
+        "level": "350+",
+        "place": "Warzone 5",
+        "raw_exp": "3.9kk",
+        "loot": "800k",
+        "link": "https://youtu.be/xDNZPhIDBfE"
+    },
+    {
+        "level": "350+",
+        "place": "Gazer Spectre",
+        "raw_exp": "3.7kk",
+        "loot": "700k",
+        "link": "https://youtu.be/kTMrNwPKebg"
+    },
+    {
+        "level": "350+",
+        "place": "POI Infernatil Seal (Fire)",
+        "raw_exp": "1.5kk",
+        "loot": "700k",
+        "link": "https://youtu.be/ZjtdCId8l_M"
+    },
+    {
+        "level": "400+",
+        "place": "Oskayaat Weretigers",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "400+",
+        "place": "Oskayaat Werecrocodiles",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "400+",
+        "place": "Warzone 6",
+        "raw_exp": "3kk",
+        "loot": "750k",
+        "link": "https://youtu.be/z6fgTbeD--k"
+    },
+    {
+        "level": "400+",
+        "place": "Rosha West",
+        "raw_exp": "4.3kk",
+        "loot": "1kk",
+        "link": "https://youtu.be/ObUXgSt0CKY"
+    },
+    {
+        "level": "400+",
+        "place": "POI Infernatil + DT Seals",
+        "raw_exp": "2.2kk",
+        "loot": "900k",
+        "link": "https://youtu.be/p_Fy4LA8UaI"
+    },
+    {
+        "level": "400+",
+        "place": "POI Verminor Seal",
+        "raw_exp": "3kk",
+        "loot": "650k",
+        "link": "https://youtu.be/SwhH7mfXKWA"
+    },
+    {
+        "level": "400+",
+        "place": "Buried Cathedral -1",
+        "raw_exp": "4.5kk",
+        "loot": "750k",
+        "link": "https://youtu.be/IZmXegtiO3U"
+    },
+    {
+        "level": "400+",
+        "place": "Winter Court",
+        "raw_exp": "4kk",
+        "loot": "750k",
+        "link": "https://youtu.be/oSh1OpMdNlI"
+    },
+    {
+        "level": "400+",
+        "place": "Haunted House",
+        "raw_exp": "4.4kk",
+        "loot": "800k",
+        "link": "https://youtu.be/ZvAdeRxwIF8"
+    },
+    {
+        "level": "400+",
+        "place": "Burster Spectre",
+        "raw_exp": "4.5kk",
+        "loot": "400k",
+        "link": "https://youtu.be/UyBEeDVkh8Y"
+    },
+    {
+        "level": "400+",
+        "place": "Roshamuul Depot",
+        "raw_exp": "3.5kk",
+        "loot": "750k",
+        "link": "https://youtu.be/nt7sNGSzkDM"
+    },
+    {
+        "level": "400+",
+        "place": "Marapur Turtles and Foam Stalkers",
+        "raw_exp": "2.6kk",
+        "loot": "1.2kk",
+        "link": "https://youtu.be/n0UFwT3P6Pc"
+    },
+    {
+        "level": "400+",
+        "place": "Prison -1",
+        "raw_exp": "4.1kk",
+        "loot": "-",
+        "link": "https://youtu.be/F09eddj6M54"
+    },
+    {
+        "level": "450+",
+        "place": "Prison -2",
+        "raw_exp": "4kk",
+        "loot": "850k",
+        "link": "https://youtu.be/P2at25KY0eU"
+    },
+    {
+        "level": "450+",
+        "place": "Summer Court for first timers (half boxes)",
+        "raw_exp": "4.8kk",
+        "loot": "900k",
+        "link": "https://youtu.be/aIa1rppOhBg"
+    },
+    {
+        "level": "450+",
+        "place": "Nagas",
+        "raw_exp": "5.5kk",
+        "loot": "500k",
+        "link": "https://youtu.be/Y8VtANmM6WY"
+    },
+    {
+        "level": "450+",
+        "place": "Roshamuul Shockheads",
+        "raw_exp": "4.3kk",
+        "loot": "1kk",
+        "link": "https://youtu.be/9jrVlQdyKR0"
+    },
+    {
+        "level": "500+",
+        "place": "Otherworld",
+        "raw_exp": "3kk",
+        "loot": "1.1kk",
+        "link": "https://youtu.be/qztNKrkX4xQ"
+    },
+    {
+        "level": "500+",
+        "place": "Deathlings",
+        "raw_exp": "4.9kk",
+        "loot": "700k",
+        "link": "https://youtu.be/c5AQnTF3W1I"
+    },
+    {
+        "level": "500+",
+        "place": "INQ Dark Torturer Seal",
+        "raw_exp": "4kk",
+        "loot": "1.1kk",
+        "link": "https://youtu.be/iNy9v0cuywY"
+    },
+    {
+        "level": "500+",
+        "place": "Nightmare Isles",
+        "raw_exp": "4.2kk",
+        "loot": "800k",
+        "link": "https://youtu.be/Qg59I8UENT8"
+    },
+    {
+        "level": "500+",
+        "place": "Warzone 7",
+        "raw_exp": "2.4kk",
+        "loot": "1.1kk",
+        "link": "https://youtu.be/u3J4bu9CYi4"
+    },
+    {
+        "level": "500+",
+        "place": "Warzone 8",
+        "raw_exp": "3.7kk",
+        "loot": "1.6kk",
+        "link": "https://youtu.be/rVoJo4yPoyE"
+    },
+    {
+        "level": "500+",
+        "place": "Oramond Catacombs",
+        "raw_exp": "4.4kk",
+        "loot": "900k",
+        "link": "https://youtu.be/d5R5ZYgPbOc"
+    },
+    {
+        "level": "500+",
+        "place": "Cobra Bastion for Beginners",
+        "raw_exp": "5.5kk",
+        "loot": "700k",
+        "link": "https://youtu.be/9UPypZPCjg4"
+    },
+    {
+        "level": "500+",
+        "place": "Floating Savants MoTA",
+        "raw_exp": "4kk",
+        "loot": "1kk",
+        "link": "https://youtu.be/XdWrKp46meE"
+    },
+    {
+        "level": "500+",
+        "place": "Summer Court full boxing",
+        "raw_exp": "6kk",
+        "loot": "1kk",
+        "link": "https://youtu.be/LgrIoKfVKMY"
+    },
+    {
+        "level": "500+",
+        "place": "Carnisylvans",
+        "raw_exp": "3.2kk",
+        "loot": "1.5kk",
+        "link": "https://youtu.be/eYww7TEtxxA"
+    },
+    {
+        "level": "500+",
+        "place": "Warzone 1",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "500+",
+        "place": "Warzone 2",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "500+",
+        "place": "Issavi Crypts (Sphinx, Wardens)",
+        "raw_exp": "6.2kk",
+        "loot": "500k",
+        "link": "https://youtu.be/p-kD2EpGF8g"
+    },
+    {
+        "level": "550+",
+        "place": "Cobra Bastion -1",
+        "raw_exp": "6.5kk",
+        "loot": "400k",
+        "link": "https://youtu.be/Duv2NWQc1nc"
+    },
+    {
+        "level": "550+",
+        "place": "Flimsy Venore -1",
+        "raw_exp": "5.1kk",
+        "loot": "1kk",
+        "link": "https://youtu.be/CMwLp0PWqi4"
+    },
+    {
+        "level": "550+",
+        "place": "Flimsy Port Hope",
+        "raw_exp": "5kk",
+        "loot": "550k",
+        "link": "https://youtu.be/R4BrdVEDcDQ"
+    },
+    {
+        "level": "550+",
+        "place": "Bashmu",
+        "raw_exp": "3.2kk",
+        "loot": "1.3kk",
+        "link": "https://youtu.be/TQ6acS-sKEU"
+    },
+    {
+        "level": "550+",
+        "place": "Feru Way",
+        "raw_exp": "4.5kk",
+        "loot": "1.3kk",
+        "link": "https://youtu.be/4oUyVfnzvAw"
+    },
+    {
+        "level": "600+",
+        "place": "Issavi Sewers",
+        "raw_exp": "5.5kk",
+        "loot": "1kk",
+        "link": "https://youtu.be/euMIhkrT0Mw"
+    },
+    {
+        "level": "600+",
+        "place": "Issavi Surface (East)",
+        "raw_exp": "6kk",
+        "loot": "350k",
+        "link": "https://youtu.be/X4C2-DFsTvM"
+    },
+    {
+        "level": "600+",
+        "place": "Temple of the Sun and Sea",
+        "raw_exp": "5.2kk",
+        "loot": "650k",
+        "link": "https://youtu.be/bqSzm8ueGzc"
+    },
+    {
+        "level": "600+",
+        "place": "Warzone 3",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "600+",
+        "place": "Feru Pumin Seal -3",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "600+",
+        "place": "Oramond Mountain Hideout -1/-2",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "600+",
+        "place": "Girtablilus",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "700+",
+        "place": "Feru DT/Vexclaw seal (Tafariel)",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "700+",
+        "place": "Wardragons",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "900+",
+        "place": "Pumin Feru Seal",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "900+",
+        "place": "Infernatil Feru Seal",
+        "raw_exp": "-",
+        "loot": "-"
+    }
+]

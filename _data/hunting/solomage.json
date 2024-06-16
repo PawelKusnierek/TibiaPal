@@ -1,0 +1,578 @@
+[
+    {
+        "level": "8+",
+        "place": "Rotworms Liberty Bay",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "8+",
+        "place": "Swamp Trolls Port Hope/Venore",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "8+",
+        "place": "Crocodiles PH",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "8+",
+        "place": "Larva Ankh (Sorcerer)",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "12+",
+        "place": "Cyclops Mistrock",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "13+",
+        "place": "Edron Tomb",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "14+",
+        "place": "Tarantulas PH",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "15+",
+        "place": "Cormaya Dwarf Mines",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "20+",
+        "place": "Edron Orc Cave",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "20+",
+        "place": "Coryms PH",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "20+",
+        "place": "Cyclopolis",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "20+",
+        "place": "Elves Yalahar",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "20+",
+        "place": "Laguna Islands",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "20+",
+        "place": "Mutated Humans Yala",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "20+",
+        "place": "Minotaur Pyramind Darashia",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "30+",
+        "place": "Upper Spike",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "30+",
+        "place": "Apes Banuta",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "30+",
+        "place": "Gargoyle Cave Meriana",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "30+",
+        "place": "Edron Earth Elementals",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "30+",
+        "place": "Carniphilas PH",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "30+",
+        "place": "Mummy/Bonebeasts MOAS -3",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "40+",
+        "place": "Yalahar Cults",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Mutated Rats Alchemist Quarter",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Arena Quarter",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Darashia Dragon Lair",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Yalahar Dragons",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Peninsula Tomb",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Bonebeast Island (Ramoa)",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Haunted Treelings Vengoth",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Old Fortress Bonebeasts",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Middle Spike",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Water Elementals PH",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Nibelor Crystal Spiders",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Mother of Scarabs Lair",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Hive Surface",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "80+",
+        "place": "Giant Spiders PH",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "80+",
+        "place": "Muggy Plains",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "80+",
+        "place": "Oramond Minos (SD)",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "80+",
+        "place": "Issavi Surafce (SD)",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "80+",
+        "place": "Feyrist Surface",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "80+",
+        "place": "Krailos Bug Cave",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "80+",
+        "place": "Old Masonry (Death portal)",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "100+",
+        "place": "Grimvale -4",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "100+",
+        "place": "Putrid Mummy",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "100+",
+        "place": "Calassa",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "100+",
+        "place": "Souleater Mountain",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "100+",
+        "place": "Edron Were South",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "100+",
+        "place": "Edron Vampire Crypt",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "100+",
+        "place": "Dragon Lords Fenrock/POI",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "100+",
+        "place": "Ravenous Lava Lurkers",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "100+",
+        "place": "Lizard Chosens",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "120+",
+        "place": "Lizard City",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "120+",
+        "place": "Brimstone Bugs WOTE",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Yalahar Sunken Quarter",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Edron Old Fortress",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Carlin Cults",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Goroma Medusa/Serpents (Talahu)",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Oramond East Minos",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Behemoths Forbidden Lands",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Glooth Bandits",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "150+",
+        "place": "Deeplings Library Fiehonja",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "150+",
+        "place": "Oramond West",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Deeper Banuta (Sorcerer)",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Goroma Demons Avalanche",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Edron/Yalahar Demons Icicles",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Mini Rosha",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Minotaur Cults",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Pirats",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "250+",
+        "place": "Winter Court",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "250+",
+        "place": "Summer Court",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "250+",
+        "place": "INQ Hellfires + Spectres",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "250+",
+        "place": "Yalahar Grim Reapers",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "250+",
+        "place": "Lower Spike",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "250+",
+        "place": "Carnivors",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "300+",
+        "place": "Draken Walls",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "300+",
+        "place": "Werehyaenas",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "300+",
+        "place": "Oramond Wildlife Raid",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "300+",
+        "place": "Gazer Spectre",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "300+",
+        "place": "Drefia Grim Reapers (Sorcerer)",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "350+",
+        "place": "Werelions",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "400+",
+        "place": "Falcons",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "400+",
+        "place": "Warzone 4",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "400+",
+        "place": "Warzone 5",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "400+",
+        "place": "Cobras",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "500+",
+        "place": "Iksupan",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "500+",
+        "place": "Oskayaat Weretigers",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "500+",
+        "place": "Oskayaat Werecrocodiles",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "500+",
+        "place": "Marapur Turtles",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "500+",
+        "place": "Otherworld",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "500+",
+        "place": "Issavi Goannas",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "500+",
+        "place": "Flimsy Lost Souls",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "600+",
+        "place": "Crypt Wardens -2",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "600+",
+        "place": "Crypt Warriors",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "600+",
+        "place": "Cursed Prospector",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "700+",
+        "place": "Warzone 7",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "800+",
+        "place": "Warzone 1 (spawner)",
+        "raw_exp": "-",
+        "loot": "-"
+    }
+]
