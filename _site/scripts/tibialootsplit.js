@@ -369,7 +369,15 @@ function update_the_html(
         var gp_amount = Math.round(amount);
         var payer_name = who_to_pay_and_how_much[i]["name"];
         var payee_name = who_to_pay_and_how_much[i]["to_who"];
-        var copy_button = `<button type="button" onClick='copy_to_clipboard("transfer ${gp_amount} to ${payee_name}", "${payee_name}")';>Copy</button>`;
+        
+        var copy_payee_name = payee_name
+
+        // Hacky way of handling character names containing ', otherwise breaks the copy to clipboard function call 
+        if (payee_name.includes("'")) {
+            console.log(payee_name)
+            copy_payee_name = copy_payee_name.replace("'","*")
+        }
+        var copy_button = `<button type="button" onClick='copy_to_clipboard("transfer ${gp_amount} to ${copy_payee_name}", "${copy_payee_name}")';>Copy</button>`;
 
         if (amount != 0) {
             if (amount > 1000) {
@@ -492,6 +500,11 @@ function update_the_html(
 }
 
 function copy_to_clipboard(transferMsg, who_to_pay) {
+    if (transferMsg.includes("*")) {
+        transferMsg = transferMsg.replace("*","'")
+        who_to_pay = who_to_pay.replace("*","'")
+    }
+
     let attrid = who_to_pay.replace(/[^A-Z0-9]/gi, "_");
     let container = document.querySelector("#page-container");
     let input = document.createElement("input");
