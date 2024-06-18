@@ -1,0 +1,418 @@
+[
+    {
+        "level": "8+",
+        "place": "Rotworms Liberty Bay",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "8+",
+        "place": "Cyclops Mistrock",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "14+",
+        "place": "Tarantulas PH",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "15+",
+        "place": "Coryms PH",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "15+",
+        "place": "Cyclopolis",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "25+",
+        "place": "Upper Spike",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "30+",
+        "place": "Killer Caimans",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Darashia Dragon Lords",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Old Fortress Heroes",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Mother of Scarabs Lair",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Middle Spike",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Krailos Bug Cave",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Edron Vampire Crypt",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "50+",
+        "place": "Wyrms Drefia/LB",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "65+",
+        "place": "Nightmare Scions Krailos",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "80+",
+        "place": "Grimvale -4",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "80+",
+        "place": "Carlin Cults",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "80+",
+        "place": "Hellspawns Yalahar",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "80+",
+        "place": "Elder Wyrms Drefia",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "100+",
+        "place": "Edron Were South",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "100+",
+        "place": "Vengoth Castle",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "100+",
+        "place": "Inner Hive",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "100+",
+        "place": "Lizard City",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Oramond West",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Lizard Chosens",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Deeper Banuta",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Draken Walls",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Ravenous Lava Lurkers",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Werehyaenas",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Asura Palace",
+        "raw_exp": "-",
+        "loot": "-",
+        "link": "https://youtu.be/sHEmoJvzOK0"
+    },
+    {
+        "level": "140+",
+        "place": "Lower Rosha",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "180+",
+        "place": "Gazer Spectre",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "180+",
+        "place": "Medusa Tower",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "180+",
+        "place": "Glooth Tower",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "180+",
+        "place": "Burster Spectre",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Ripper Spectre + Arachnophobica",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Prison -1",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Catacombs",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "INQ Vats",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "INQ Battlefield",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "200+",
+        "place": "Drefia Grim Reapers",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "220+",
+        "place": "Winter Court",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "250+",
+        "place": "Nightmare Isles",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "250+",
+        "place": "Summer Court",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "250+",
+        "place": "Asura Mirror",
+        "raw_exp": "-",
+        "loot": "-",
+        "link": "https://youtu.be/8vgI24db-rk"
+    },
+    {
+        "level": "250+",
+        "place": "Oramond Abandoned Sewers",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "250+",
+        "place": "INQ DT Seal",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "250+",
+        "place": "Werelions",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "300+",
+        "place": "Lost Souls (Flimsy etc.)",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "300+",
+        "place": "Lower Spike",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "300+",
+        "place": "Buried Cathedral",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "300+",
+        "place": "Prison -3",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "300+",
+        "place": "Deathlings",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "350+",
+        "place": "Falcons Eagle",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "350+",
+        "place": "West Roshamuul",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "350+",
+        "place": "Ferumbras Way",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "350+",
+        "place": "Warzone 3",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "350+",
+        "place": "Otherworld",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "350+",
+        "place": "Issavi Sewers",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "350+",
+        "place": "Kilmaresh Catacombs",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "400+",
+        "place": "Cobras",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "400+",
+        "place": "Falcons Castle",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "400+",
+        "place": "Issavi Goannas",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "400+",
+        "place": "True Asuras",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "400+",
+        "place": "Darashia Skeletons/Gladiators",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "450+",
+        "place": "Secret Library",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "450+",
+        "place": "Ferumbras Ascension Seals",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "600+",
+        "place": "Soul War Areas",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "600+",
+        "place": "Primal Ordeal Areas",
+        "raw_exp": "-",
+        "loot": "-"
+    }
+]
