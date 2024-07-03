@@ -190,16 +190,16 @@ function calculate_intricate_imbue(gold_token_value, first_item_value, first_ite
     if (basic_gold_tokens_total > all_lowest_cost) {
         if (all_gold_tokens_total > all_items_total) {
             results.push("all_items")
-            results.push(all_items_total + 55000)
+            results.push(all_items_total + 60000)
         }
         else {
             results.push("all_tokens")
-            results.push(all_gold_tokens_total + 55000)
+            results.push(all_gold_tokens_total + 60000)
         }
     }
     else {
         results.push("basic")
-        results.push(basic_gold_tokens_total + 55000)
+        results.push(basic_gold_tokens_total + 60000)
     }
     return results
 }
@@ -216,20 +216,20 @@ function calculate_powerful_imbue(gold_token_value, first_item_value, first_item
     if (Math.min(all_lowest_cost, intricate_gold_tokens_total, basic_gold_tokens_total) == all_lowest_cost) {
         if (all_gold_tokens_total > all_items_total) {
             results.push("all_items")
-            results.push(all_items_total + 150000)
+            results.push(all_items_total + 250000)
         }
         else {
             results.push("all_tokens")
-            results.push(all_gold_tokens_total + 150000)
+            results.push(all_gold_tokens_total + 250000)
         }
     }
     else if (Math.min(all_lowest_cost, intricate_gold_tokens_total, basic_gold_tokens_total) == intricate_gold_tokens_total) {
         results.push("intricate")
-        results.push(intricate_gold_tokens_total + 150000)
+        results.push(intricate_gold_tokens_total + 250000)
     }
     else if (Math.min(all_lowest_cost, intricate_gold_tokens_total, basic_gold_tokens_total) == basic_gold_tokens_total) {
         results.push("basic")
-        results.push(basic_gold_tokens_total + 150000)
+        results.push(basic_gold_tokens_total + 250000)
     }
     return results
 }
