@@ -4,7 +4,7 @@ function submit_exercise_form() {
   points_main_skill_durable_weapon = points_main_skill_regular_weapon * 3.6;
   points_main_skill_lasting_weapon = points_main_skill_regular_weapon * 28.8;
 
-  cost_regular_k = 262.5
+  cost_regular_k = 347.222
   cost_regular_tc = 25
 
   cost_durable_k = 1250
