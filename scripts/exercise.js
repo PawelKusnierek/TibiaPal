@@ -7,10 +7,10 @@ function submit_exercise_form() {
   cost_regular_k = 262.5
   cost_regular_tc = 25
 
-  cost_durable_k = 945
+  cost_durable_k = 1250
   cost_durable_tc = 90
 
-  cost_lasting_k = 7560
+  cost_lasting_k = 10000
   cost_lasting_tc = 720
 
   magic_skill_constant = 1600;
