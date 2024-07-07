@@ -548,10 +548,6 @@ ol, ul {
   width: 15%;
 }
 
-.loot_row {
-  width: 15%;
-}
-
 #hunting_table td {
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1171,4 +1167,39 @@ ol, ul {
 
 #wheel_bonus_list {
   text-align: left;
+}
+
+#forge_form {
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+}
+
+#forge_form input {
+  margin-top: 7px;
+  width: 203px;
+}
+
+#forge_form select {
+  margin-top: 7px;
+  width: 210px;
+}
+
+#forge_form label {
+  display: inline-block;
+  width: 225px;
+}
+
+#forgesubmitbutton {
+  margin-top: 20px !important;
+  width: 70px !important;
+}
+
+#exercisepara {
+  text-align: left;
+  display: block;
+}
+
+#exerciseformresults {
+  padding-bottom: 15px;
 }/*# sourceMappingURL=main.css.map */

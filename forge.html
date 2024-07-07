@@ -1,0 +1,57 @@
+---
+layout: default
+title: TibiaPal.com - Forge Assistant
+scripts: <script src="scripts/forge.js"></script>
+
+---
+<h1> Forge Assistant </h1>
+<br>Works out the cheapest strategy of tiering an item in the Exaltation Forge.<br><br>
+<form id="forge_form">
+    <label for="classification">Item Classification:</label>
+    <select name="classification" id="classification">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option selected="selected" value="4">4</option>
+    </select><br>
+    <label for="current_tier">Current Tier:</label>
+    <select name="current_tier" id="current_tier">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select><br>
+    <label for="target_tier">Target Tier:</label>
+    <select name="target_tier" id="target_tier">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select><br>
+    <label id="main_item_price_label" for="main_item_price">Target Item Price (in kk):</label>
+    <input type="number" id="main_item_price" name="main_item_price" placeholder="Target item price in kk, e.g. 50"
+        autocomplete="off"><br>
+    <label id="feeder_item_price_label" for="feeder_item_price">Feeder Item Price (in kk):</label>
+    <input type="number" id="feeder_item_price" name="feeder_item_price" placeholder="Feeder item price in kk, e.g. 1.5"
+        autocomplete="off"><br>
+    <label id="exalted_core_price_label" for="exalted_core_price">Exalted Core Price (in k):</label>
+    <input type="number" id="exalted_core_price" name="exalted_core_price" value="150"><br>
+    <label id="sliver_price_label" for="sliver_price">Sliver Price (in gp):</label>
+    <input type="number" id="sliver_price" name="sliver_price" value="4000"><br>
+    
+    <input type="submit" id="forgesubmitbutton" value="Submit"
+        onclick="event.preventDefault(); submit_forge_form()" />
+</form>
+<p id="forge_results"></p>
