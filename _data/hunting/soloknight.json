@@ -353,6 +353,13 @@
     },
     {
         "level": "150+",
+        "place": "Lower Spike",
+        "raw_exp": "1.9kk",
+        "loot": "100k",
+        "link": "https://youtu.be/qmU9s79Y1NU"
+    },
+    {
+        "level": "150+",
         "place": "Iksupan",
         "raw_exp": "1.1kk",
         "loot": "150k",
@@ -571,18 +578,6 @@
     },
     {
         "level": "400+",
-        "place": "Oskayaat Weretigers",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "400+",
-        "place": "Oskayaat Werecrocodiles",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "400+",
         "place": "Warzone 6",
         "raw_exp": "3kk",
         "loot": "750k",
@@ -688,6 +683,18 @@
     },
     {
         "level": "500+",
+        "place": "Oskayaat Weretigers",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "500+",
+        "place": "Oskayaat Werecrocodiles",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "500+",
         "place": "Otherworld",
         "raw_exp": "3kk",
         "loot": "1.1kk",
@@ -766,14 +773,16 @@
     {
         "level": "500+",
         "place": "Warzone 1",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "3.5kk",
+        "loot": "1kk",
+        "link": "https://youtu.be/-2E-eooe3NU"
     },
     {
         "level": "500+",
         "place": "Warzone 2",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "4.3kk",
+        "loot": "900k",
+        "link": "https://youtu.be/43CrzKHwN_A"
     },
     {
         "level": "500+",
@@ -853,8 +862,9 @@
     {
         "level": "600+",
         "place": "Oramond Mountain Hideout -1/-2",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "4kk",
+        "loot": "800k",
+        "link": "https://youtu.be/iXCGQvGSEQA"
     },
     {
         "level": "600+",

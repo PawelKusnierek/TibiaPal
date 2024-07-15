@@ -251,15 +251,10 @@
     },
     {
         "level": "250+",
-        "place": "Drefia Grim Reapers",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "250+",
-        "place": "Draken Walls",
-        "raw_exp": "-",
-        "loot": "-"
+        "place": "Medusa Tower",
+        "raw_exp": "2.4kk",
+        "loot": "450k",
+        "link": "https://youtu.be/RuA-mm0weAM"
     },
     {
         "level": "250+",
@@ -267,6 +262,27 @@
         "raw_exp": "1.8kk",
         "loot": "100k",
         "link": "https://youtu.be/guF8Myg363M"
+    },
+    {
+        "level": "250+",
+        "place": "Hive West (Stage3)",
+        "raw_exp": "2kk",
+        "loot": "400k",
+        "link": "https://youtu.be/Qwq0wDVcmVg"
+    },
+    {
+        "level": "300+",
+        "place": "Draken Walls",
+        "raw_exp": "2kk",
+        "loot": "300k",
+        "link": "https://youtu.be/GMIvP48ruqY"
+    },
+    {
+        "level": "300+",
+        "place": "Drefia Grim Reapers",
+        "raw_exp": "2.6kk",
+        "loot": "0k",
+        "link": "https://youtu.be/uTBkrfVRZ_c"
     },
     {
         "level": "300+",
@@ -291,27 +307,31 @@
     },
     {
         "level": "300+",
-        "place": "Medusa Tower",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "300+",
-        "place": "Formorgar Mines",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "300+",
         "place": "Oramond Wildlife Raid",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "3.7kk",
+        "loot": "900k",
+        "link": "https://youtu.be/YdDeyAlPtHM"
+    },
+    {
+        "level": "300+",
+        "place": "Oramond Minotaur Raid",
+        "raw_exp": "2.8kk",
+        "loot": "700k",
+        "link": "https://youtu.be/l9R9fQVdKRA"
+    },
+    {
+        "level": "300+",
+        "place": "Oramond Golem Raid",
+        "raw_exp": "2.4kk",
+        "loot": "200k",
+        "link": "https://youtu.be/kHxbhQvygwI"
     },
     {
         "level": "300+",
         "place": "Warzone 6",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "2.3kk",
+        "loot": "450k",
+        "link": "https://youtu.be/nBrE_sBMpfs"
     },
     {
         "level": "300+",
@@ -350,39 +370,52 @@
     },
     {
         "level": "350+",
-        "place": "Oramond Abandoned Sewers",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "350+",
         "place": "Warzone 4",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "3kk",
+        "loot": "400k",
+        "link": "https://youtu.be/ZNXXgG_oDkU"
     },
     {
         "level": "350+",
         "place": "Warzone 5",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "3.3kk",
+        "loot": "400k",
+        "link": "https://youtu.be/UJqgHsjDDMk"
     },
     {
         "level": "350+",
-        "place": "Asura Mirror -1",
-        "raw_exp": "-",
-        "loot": "-"
+        "place": "Asura Mirror",
+        "raw_exp": "4.5kk",
+        "loot": "300k",
+        "link": "https://youtu.be/S5RJ4oootAU"
+    },
+    {
+        "level": "350+",
+        "place": "Oramond Fury Dungeon",
+        "raw_exp": "3kk",
+        "loot": "500k",
+        "link": "https://youtu.be/PRy0uMcBUNQ"
+    },
+    {
+        "level": "400+",
+        "place": "Oramond Abandoned Sewers",
+        "raw_exp": "2.9kk",
+        "loot": "450k",
+        "link": "https://youtu.be/ZdfZEC39DgY"
     },
     {
         "level": "400+",
         "place": "Wote 8 Drakens",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "2.3kk",
+        "loot": "450k",
+        "link": "https://youtu.be/kg-qhJ1EkKk"
     },
     {
         "level": "400+",
         "place": "Marapur Turtles and Foam Stalkers",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "2.2kk",
+        "loot": "800k",
+        "link": "https://youtu.be/C4IrR9dSdeQ"
     },
     {
         "level": "400+",
@@ -415,14 +448,37 @@
     {
         "level": "400+",
         "place": "Oramond Catacombs",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "3.8kk",
+        "loot": "850k",
+        "link": "https://youtu.be/75WRV0ufPXo"
     },
     {
         "level": "400+",
+        "place": "Iksupan Occupied Sanctuary",
+        "raw_exp": "4kk",
+        "loot": "400k",
+        "link": "https://youtu.be/Z4UecG4KdHM"
+    },
+    {
+        "level": "400+",
+        "place": "Iksupan Last Stand",
+        "raw_exp": "3.8kk",
+        "loot": "900k",
+        "link": "https://youtu.be/BpBBm22t3ZY"
+    },
+    {
+        "level": "400+",
+        "place": "Verminor Seal",
+        "raw_exp": "2.6kk",
+        "loot": "400k",
+        "link": "https://youtu.be/BpBBm22t3ZY"
+    },
+    {
+        "level": "450+",
         "place": "Nightmare Isles",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "2.9kk",
+        "loot": "550k",
+        "link": "https://youtu.be/s8CVPJ_Ixow"
     },
     {
         "level": "450+",
@@ -448,14 +504,9 @@
     {
         "level": "450+",
         "place": "Otherworld",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "450+",
-        "place": "Rosha Depot",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "2.9kk",
+        "loot": "850k",
+        "link": "https://youtu.be/4ECe-O6pP34"
     },
     {
         "level": "450+",
