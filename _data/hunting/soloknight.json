@@ -242,31 +242,33 @@
     },
     {
         "level": "90+",
-        "place": "Dragon Lords Fenrock/POI",
+        "place": "Dragon Lords Fenrock",
         "raw_exp": "-",
         "loot": "-"
     },
     {
         "level": "90+",
-        "place": "Edron Heroes -2",
-        "raw_exp": "-",
-        "loot": "-"
+        "place": "Edron Heroes -2/-3",
+        "raw_exp": "1.2kk",
+        "loot": "150k",
+        "link": "https://youtu.be/Blmm8zBjKRg"
     },
     {
         "level": "90+",
-        "place": "Edron Heroes -3",
+        "place": "Inner Hive Stage2 East",
+        "raw_exp": "750k",
+        "loot": "300k",
+        "link": "https://youtu.be/2bqsbJWm1og"
+    },
+    {
+        "level": "100+",
+        "place": "Exotic Cave",
         "raw_exp": "-",
         "loot": "-"
     },
     {
         "level": "130+",
         "place": "Grimvale -4",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "130+",
-        "place": "Exotic Cave",
         "raw_exp": "-",
         "loot": "-"
     },
@@ -398,12 +400,6 @@
     {
         "level": "200+",
         "place": "Pirats",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "200+",
-        "place": "Lower Spike",
         "raw_exp": "-",
         "loot": "-"
     },
@@ -684,14 +680,16 @@
     {
         "level": "500+",
         "place": "Oskayaat Weretigers",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "5.1kk",
+        "loot": "900k",
+        "link": "https://youtu.be/EikJ5qIFccg"
     },
     {
         "level": "500+",
         "place": "Oskayaat Werecrocodiles",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "4.9kk",
+        "loot": "800k",
+        "link": "https://youtu.be/IUvxMTq8eMg"
     },
     {
         "level": "500+",

@@ -509,28 +509,46 @@
         "link": "https://youtu.be/4ECe-O6pP34"
     },
     {
-        "level": "450+",
+        "level": "500+",
+        "place": "Upper Roshamuul (Beginners)",
+        "raw_exp": "4.2kk",
+        "loot": "500k",
+        "link": "https://youtu.be/nt3aFsOTC7U"
+    },
+    {
+        "level": "500+",
+        "place": "Winter Court (Advanced)",
+        "raw_exp": "5.2kk",
+        "loot": "850k",
+        "link": "https://www.youtube.com/watch?v=USrHT1lDNsQ"
+    },
+    {
+        "level": "500+",
         "place": "Summer Court",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "5.3kk",
+        "loot": "850k",
+        "link": "https://youtu.be/kLB2IKk13g0"
     },
     {
         "level": "500+",
         "place": "Bashmu",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "3.4kk",
+        "loot": "900k",
+        "link": "https://youtu.be/LpAlf5v4rjc"
     },
     {
         "level": "500+",
         "place": "Marapur Naga",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "5.2kk",
+        "loot": "250k",
+        "link": "https://youtu.be/SSNelutT3q8"
     },
     {
         "level": "500+",
         "place": "Deathlings",
-        "raw_exp": "-",
-        "loot": "-"
+        "raw_exp": "4.4kk",
+        "loot": "300k",
+        "link": "https://youtu.be/-GZes-PICZ0"
     },
     {
         "level": "600+",
