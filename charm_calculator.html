@@ -4,7 +4,9 @@ title: TibiaPal.com - Charm Damage Calculator
 scripts: <script src="scripts/charm_calculator.js"></script>
 ---
 
-<p id="imbue_paragraph"> Work out if you should use Overpower/Overflux charm or an elemental charm (does not include calculations for Parry/Low Blow/Savage Blow etc.) <br><br></p>
+<p id="imbue_paragraph"> Work out if you should use Overpower/Overflux charm or an elemental charm (does not include calculations for Parry/Low Blow/Savage Blow etc.).<br>
+Please note that all values are calculated pre-mitigation, so real in-game damage will be slightly lower due to a monster's mitigation modifier. <br><br> </p>
+<form id="imbueform"></p>
 <form id="charm_form">
     <!--suppress HtmlFormInputWithoutLabel -->
     <select name="charms" id="charms" onChange="submit_charms_type()">
