@@ -21,14 +21,25 @@ function submit_charms_calculator_values() {
     charm_results = document.getElementById("charm_results")
     charm_results.style.display = "initial"
 
+    monster_damage_cap = Math.round(monster_health * 0.08)
 
     if (charm_type.includes("Overpower")) {
         resource_based_charm_damage = Math.round(player_resource_value * 0.05)
-        charm_results.innerHTML = "<p> Overpower damage: " + resource_based_charm_damage
+        if (resource_based_charm_damage < monster_damage_cap) {
+            charm_results.innerHTML = "<p> Overpower damage: " + resource_based_charm_damage
+        }
+        else {
+            charm_results.innerHTML = "<p> Overpower damage: " + monster_damage_cap + " (capped at 8% max monster health)"
+        }
     }
     else {
         resource_based_charm_damage = Math.round(player_resource_value * 0.025)
-        charm_results.innerHTML = "<p> Overflux damage: " + resource_based_charm_damage
+        if (resource_based_charm_damage < monster_damage_cap) {
+            charm_results.innerHTML = "<p> Overflux damage: " + resource_based_charm_damage
+        }
+        else {
+            charm_results.innerHTML = "<p> Overflux damage: " + monster_damage_cap + " (capped at 8% max monster health)"
+        }
     }
 
     elemental_damage = Math.round(monster_health * 0.05 * (monster_resistance / 100))
