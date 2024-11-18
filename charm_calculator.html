@@ -1,0 +1,32 @@
+---
+layout: default
+title: TibiaPal.com - Charm Damage Calculator
+scripts: <script src="scripts/charm_calculator.js"></script>
+---
+
+<p id="imbue_paragraph"> Work out if you should use Overpower/Overflux charm or an elemental charm (does not include calculations for Parry/Low Blow/Savage Blow etc.) <br><br></p>
+<form id="charm_form">
+    <!--suppress HtmlFormInputWithoutLabel -->
+    <select name="charms" id="charms" onChange="submit_charms_type()">
+        <option disabled selected value>Select Charm</option>
+        <option value="Overpower">Overpower (5% max Health)</option>
+        <option value="Overflux">Overflux (2.5% max Mana)</option>
+    </select>
+</form>
+
+<form id="charm_form_values">
+    <label id="health_mana_value_label" for="health_mana_value">Your maximum Health/mana:</label>
+    <input type="text" id="health_mana_value" name="health_mana_value" placeholder="Health/mana e.g. 6800" autocomplete="off" required><br>
+
+    <label id="monster_health_label" for="monster_health_value">Monster Health:</label>
+    <input type="text" id="monster_health_value" name="monster_health_value" placeholder="Monster Health e.g. 12600" autocomplete="off" required><br>
+
+    <label id="monster_resistance_label" for="monster_resistance">Monster Elemental Resistance:</label>
+    <input type="text" id="monster_resistance" name="monster_resistance" placeholder="Resistance e.g. 110" autocomplete="off" required><br>
+
+    <input type="submit" id="charms_submit_button" value="Submit"
+        onclick="event.preventDefault(); submit_charms_calculator_values()" />
+</form>
+
+<div id="charm_results">
+</div>

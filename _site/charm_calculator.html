@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>TibiaPal.com - Training Calculator</title>
+    <title>TibiaPal.com - Charm Damage Calculator</title>
     <meta name="author" content="Pawel Kusnierek">
     <meta name="description"
     content="Tools for video game 'Tibia', TibiaLootSplit, Imbue calculator, Stamina calculator, Exercise Weapons calculator, Wheel of Destiny presets and more.">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href=/css/main.css>
 
     <!-- javascript files -->
-    <script src="scripts/offlinetraining.js"></script>
+    <script src="scripts/charm_calculator.js"></script>
     <script src=/scripts/onload.js></script>
 
     <!-- extra googleapi fonts -->
@@ -104,7 +104,7 @@
             <div class="nav-image-container"><img class="nav-image" src=/images/Imbuing_Shrine.gif>Imbue
                 Calculator</div>
         </a></div>
-    <div class="nav-item"><a href="/charm_calculator">
+    <div class="active nav-item"><a href="/charm_calculator">
             <div class="nav-image-container"><img class="nav-image" src=/images/Overpower.png><span id="new-homepage">NEW!</span>Charms Damage
                 Calculator</div>
         </a></div>
@@ -124,7 +124,7 @@
             <div class="nav-image-container"><img class="nav-image" src=/images/Demon.gif>Levelling
                 Calculator</div>
         </a></div>
-    <div class="active nav-item"><a href="/offlinetraining">
+    <div class="nav-item"><a href="/offlinetraining">
             <div class="nav-image-container"><img class="nav-image" src=/images/Skill_Trainer.gif>Training
                 Calculator</div>
         </a></div>
@@ -141,39 +141,31 @@
 </nav>
     
     <section id="main-content">
-    <p id="offlinetrainingpara">This tool calculates the time it will take you to reach your target skill while
-    offline or online training.<br><br>
-    If you select 'offline' training, the tool assumes full 12h of offline training per day.<br><br>
-    The tool assumes:<br>
-    - Magic level training for mages (Druids & Sorcerers)<br>
-    - Melee (Axe/Club/Sword) training for knights<br>
-    - Distance training for paladins<br></p>
-<form id="offlinetrainingform">
-<label for="type_of_training">Training type:</label>
-    <select id="type_of_training" name="type_of_training">
-        <option value="Offline">Offline</option>
-        <option value="Online">Online</option>
-    </select><br>
-    <label for="vocation">Vocation & skill:</label>
-    <select id="vocation" name="vocation">
-        <option value="Knight">Knight - Melee</option>
-        <option value="Paladin">Paladin - Distance</option>
-        <option value="Mage">Mage - Magic</option>
-    </select><br>
-    <label id="currentskilllabel" for="currentskill">Current skill:</label>
-    <input type="text" id="currentskill" name="currentskill" placeholder="current skill, e.g. 112"
-        autocomplete="off"><br>
-    <label id="currentskillpercentagelabel" for="currentskillpercentage">Percentage to next skill:</label>
-    <input type="text" id="currentskillpercentage" name="currentskillpercentage" placeholder="% missing, e.g. 35"
-        autocomplete="off"><br>
-    <label id="targetskilllabel" for="targetskill">Target skill:</label>
-    <input type="text" id="targetskill" name="targetskill" placeholder="target skill, e.g. 114" autocomplete="off"><br>
-    <label id="loyaltylabel" for="loyalty">Loyalty bonus:</label>
-    <input type="text" id="loyalty" name="loyalty" placeholder="loyalty bonus, e.g. 15" autocomplete="off"><br>
-    <input type="submit" id="offlinesubmitbutton" value="Submit" onclick="event.preventDefault(); submit_form()" />
+    <p id="imbue_paragraph"> Work out if you should use Overpower/Overflux charm or an elemental charm (does not include calculations for Parry/Low Blow/Savage Blow etc.) <br><br></p>
+<form id="charm_form">
+    <!--suppress HtmlFormInputWithoutLabel -->
+    <select name="charms" id="charms" onChange="submit_charms_type()">
+        <option disabled selected value>Select Charm</option>
+        <option value="Overpower">Overpower (5% max Health)</option>
+        <option value="Overflux">Overflux (2.5% max Mana)</option>
+    </select>
 </form>
-<div id="offlinetrainingformresults">
 
+<form id="charm_form_values">
+    <label id="health_mana_value_label" for="health_mana_value">Your maximum Health/mana:</label>
+    <input type="text" id="health_mana_value" name="health_mana_value" placeholder="Health/mana e.g. 6800" autocomplete="off" required><br>
+
+    <label id="monster_health_label" for="monster_health_value">Monster Health:</label>
+    <input type="text" id="monster_health_value" name="monster_health_value" placeholder="Monster Health e.g. 12600" autocomplete="off" required><br>
+
+    <label id="monster_resistance_label" for="monster_resistance">Monster Elemental Resistance:</label>
+    <input type="text" id="monster_resistance" name="monster_resistance" placeholder="Resistance e.g. 110" autocomplete="off" required><br>
+
+    <input type="submit" id="charms_submit_button" value="Submit"
+        onclick="event.preventDefault(); submit_charms_calculator_values()" />
+</form>
+
+<div id="charm_results">
 </div>
     </section>
     
