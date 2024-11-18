@@ -17,6 +17,7 @@ function submit_charms_calculator_values() {
     player_resource_value = document.getElementById("health_mana_value").value
     monster_health = document.getElementById("monster_health_value").value
     monster_resistance = document.getElementById("monster_resistance").value
+    monster_resistance = monster_resistance.replace("%", "")
 
     charm_results = document.getElementById("charm_results")
     charm_results.style.display = "initial"
