@@ -1260,4 +1260,22 @@ ol, ul {
 
 #basic_imbue_table {
   padding-left: 10px;
+}
+
+.charm_div {
+  display: inline-block;
+  padding-bottom: 30px;
+}
+
+#planner_charms {
+  display: inline-block;
+}
+
+.charm_div:hover {
+  opacity: 0.7;
+}
+
+.planner_para {
+  width: 100%;
+  text-align: left;
 }/*# sourceMappingURL=main.css.map */
