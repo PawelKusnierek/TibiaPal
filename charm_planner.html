@@ -19,9 +19,12 @@ scripts: <script src="scripts/charm_planner.js"></script>
 <br>
 <p class="planner_para" id="charm_planner_summary_total_echoes_leftover">
     Total Minor charm points (echoes) still available: 100
+</p>
+<p class="planner_para" id="error_message">
+    Latest Error Message:
 </p><br><br><br>
 
-<div id="planner_charms">
+<div id="planner_major_charms">
     <div class="charm_div" id="low_blow" onclick="charm_pressed('low_blow')" oncontextmenu="charm_unpressed('low_blow');return false;">
         <div>Low Blow</div>
         <img src="{{"images/charms/low_blow.png" | relative_url}}" alt="low_blow_charm_image" width="80px">
@@ -96,4 +99,62 @@ scripts: <script src="scripts/charm_planner.js"></script>
     
 
 
+</div>
+
+<div id="planner_minor_charms">
+    <div class="charm_div" id="fatal_hold" onclick="charm_pressed('fatal_hold')" oncontextmenu="charm_unpressed('fatal_hold');return false;">
+        <div>Fatal Hold</div>
+        <img src="{{"images/charms/fatal_hold.png" | relative_url}}" alt="fatal_hold_charm_image" width="80px">
+        <div id="fatal_hold_stage">Stage: 0</div>
+    </div>
+    <div class="charm_div" id="void_inversion" onclick="charm_pressed('void_inversion')" oncontextmenu="charm_unpressed('void_inversion');return false;">
+        <div>Void Inversion</div>
+        <img src="{{"images/charms/void_inversion.png" | relative_url}}" alt="void_inversion_charm_image" width="80px">
+        <div id="void_inversion_stage">Stage: 0</div>
+    </div>
+    <div class="charm_div" id="vampiric_embrace" onclick="charm_pressed('vampiric_embrace')" oncontextmenu="charm_unpressed('vampiric_embrace');return false;">
+        <div>Vampiric Embrace</div>
+        <img src="{{"images/charms/vampiric_embrace.png" | relative_url}}" alt="vampiric_embrace_charm_image" width="80px">
+        <div id="vampiric_embrace_stage">Stage: 0</div>
+    </div>
+    <div class="charm_div" id="voids_call" onclick="charm_pressed('voids_call')" oncontextmenu="charm_unpressed('voids_call');return false;">
+        <div>Void's Call</div>
+        <img src="{{"images/charms/voids_call.png" | relative_url}}" alt="voids_call_charm_image" width="80px">
+        <div id="voids_call_stage">Stage: 0</div>
+    </div>
+    <div class="charm_div" id="gut" onclick="charm_pressed('gut')" oncontextmenu="charm_unpressed('gut');return false;">
+        <div>Gut</div>
+        <img src="{{"images/charms/gut.png" | relative_url}}" alt="gut_charm_image" width="80px">
+        <div id="gut_stage">Stage: 0</div>
+    </div>
+    <div class="charm_div" id="scavenge" onclick="charm_pressed('scavenge')" oncontextmenu="charm_unpressed('scavenge');return false;">
+        <div>Scavenge</div>
+        <img src="{{"images/charms/scavenge.png" | relative_url}}" alt="scavenge_charm_image" width="80px">
+        <div id="scavenge_stage">Stage: 0</div>
+    </div>
+    <div class="charm_div" id="adrenaline_burst" onclick="charm_pressed('adrenaline_burst')" oncontextmenu="charm_unpressed('adrenaline_burst');return false;">
+        <div>Adrenaline Burst</div>
+        <img src="{{"images/charms/adrenaline_burst.png" | relative_url}}" alt="adrenaline_burst_charm_image" width="80px">
+        <div id="adrenaline_burst_stage">Stage: 0</div>
+    </div>
+    <div class="charm_div" id="cleanse" onclick="charm_pressed('cleanse')" oncontextmenu="charm_unpressed('cleanse');return false;">
+        <div>Cleanse</div>
+        <img src="{{"images/charms/cleanse.png" | relative_url}}" alt="cleanse_charm_image" width="80px">
+        <div id="cleanse_stage">Stage: 0</div>
+    </div>
+    <div class="charm_div" id="cripple" onclick="charm_pressed('cripple')" oncontextmenu="charm_unpressed('cripple');return false;">
+        <div>Cripple</div>
+        <img src="{{"images/charms/cripple.png" | relative_url}}" alt="cripple_charm_image" width="80px">
+        <div id="cripple_stage">Stage: 0</div>
+    </div>
+    <div class="charm_div" id="numb" onclick="charm_pressed('numb')" oncontextmenu="charm_unpressed('numb');return false;">
+        <div>Numb</div>
+        <img src="{{"images/charms/numb.png" | relative_url}}" alt="numb_charm_image" width="80px">
+        <div id="numb_stage">Stage: 0</div>
+    </div>
+    <div class="charm_div" id="bless" onclick="charm_pressed('bless')" oncontextmenu="charm_unpressed('bless');return false;">
+        <div>Bless</div>
+        <img src="{{"images/charms/bless.png" | relative_url}}" alt="bless_charm_image" width="80px">
+        <div id="bless_stage">Stage: 0</div>
+    </div>
 </div>

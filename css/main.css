@@ -1268,8 +1268,12 @@ ol, ul {
   padding-right: 30px;
 }
 
-#planner_charms {
+#planner_major_charms, #planner_minor_charms {
   display: inline-block;
+}
+
+#planner_minor_charms {
+  padding-top: 50px;
 }
 
 .charm_div:hover {
