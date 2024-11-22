@@ -130,7 +130,7 @@ function update_html_after_change(charm_name, major) {
     var charm_planner_summary_total_echoes_leftover = document.getElementById('charm_planner_summary_total_echoes_leftover')
 
     charm_planner_summary_total.innerHTML = 'Total Major charm points required: ' + total_major_charm_points
-    charm_planner_summary_total_echoes.innerHTML = 'Total Minor charm points (echoes) required: ' + total_minor_charm_points
+    charm_planner_summary_total_echoes.innerHTML = 'Total Minor charm points (echoes) used: ' + total_minor_charm_points
     charm_planner_summary_total_echoes_leftover.innerHTML = 'Total Minor charm points (echoes) still available: ' + total_minor_charm_points_available
 
     var error_message_div = document.getElementById('error_message')
