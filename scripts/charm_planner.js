@@ -1,6 +1,18 @@
 var major_charm_state_dict = {
+    "low_blow": 0,
+    "savage_blow": 0,
+    "overpower": 0,
+    "overflux": 0,
+    "carnage": 0,
+    "parry": 0,
+    "dodge": 0,
     "wound": 0,
     "poison": 0,
+    "freeze": 0,
+    "zap": 0,
+    "curse": 0,
+    "enflame": 0,
+    "divine_wrath": 0,
 }
 
 var minor_charm_state_dict = {
@@ -8,8 +20,20 @@ var minor_charm_state_dict = {
 }
 
 var major_charms_costs = {
+    "low_blow": [800, 1200, 4000],
+    "savage_blow": [800, 1200, 4000],
+    "overpower": [600, 900, 3000],
+    "overflux": [600, 900, 3000],
+    "carnage": [600, 900, 3000],
+    "parry": [400, 600, 2000],
+    "dodge": [240, 360, 1200],
     "wound": [240, 360, 1200],
     "poison": [240, 360, 1200],
+    "freeze": [320, 480, 1600],
+    "zap": [320, 480, 1600],
+    "curse": [360, 540, 1800],
+    "enflame": [400, 600, 2000],
+    "divine_wrath": [600, 900, 3000],
 }
 
 var minor_charms_costs = {
@@ -36,13 +60,13 @@ function charm_pressed(charm_name) {
     if (charm_name in major_charm_state_dict) {
         if (major_charm_state_dict[charm_name] < 3) {
             total_major_charm_points += major_charms_costs[charm_name][major_charm_state_dict[charm_name]]
-            
+
             major_charm_state_dict[charm_name] += 1
-            
+
             total_minor_charm_points_available += minor_echoes_gain[major_charm_state_dict[charm_name]]
-            
+
             update_html_after_change(charm_name)
-            
+
         }
     }
     else if (charm_name in minor_charm_state_dict) {
@@ -56,13 +80,13 @@ function charm_unpressed(charm_name) {
             total_minor_charm_points_available -= minor_echoes_gain[major_charm_state_dict[charm_name]]
             major_charm_state_dict[charm_name] -= 1
             total_major_charm_points -= major_charms_costs[charm_name][major_charm_state_dict[charm_name]]
-            
-            
-            
-            
-            
+
+
+
+
+
             update_html_after_change(charm_name)
-            
+
         }
     }
 }
