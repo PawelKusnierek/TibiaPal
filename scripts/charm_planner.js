@@ -96,8 +96,9 @@ function charm_pressed(charm_name) {
         console.log(max_charm_points)
         if (max_charm_points > 0) {
             if ((total_major_charm_points + major_charms_costs[charm_name][major_charm_state_dict[charm_name]]) > max_charm_points) {
+                var missing_points = total_major_charm_points + major_charms_costs[charm_name][major_charm_state_dict[charm_name]] - max_charm_points
                 var error_message_div = document.getElementById('error_message')
-                error_message_div.innerHTML = 'Error Message: ' + '<span style="color: red">Not enough Major charm points.'
+                error_message_div.innerHTML = 'Error Message: ' + '<span style="color: red">Not enough Major charm points. You need ' + missing_points + ' more charm points.'
             }
             else {
                 if (major_charm_state_dict[charm_name] < 3) {
@@ -128,8 +129,9 @@ function charm_pressed(charm_name) {
     else if (charm_name in minor_charm_state_dict) {
         if (minor_charm_state_dict[charm_name] < 3) {
             if (total_minor_charm_points_available < minor_charms_costs[minor_charm_state_dict[charm_name] + 1]) {
+                var missing_points = minor_charms_costs[minor_charm_state_dict[charm_name] + 1] - total_minor_charm_points_available
                 var error_message_div = document.getElementById('error_message')
-                error_message_div.innerHTML = 'Error Message: ' + '<span style="color: red">Not enough Minor charm points (echoes).'
+                error_message_div.innerHTML = 'Error Message: ' + '<span style="color: red">Not enough Minor charm points (echoes). You need ' + missing_points + ' more minor charm points.'
             }
             else {
                 minor_charm_state_dict[charm_name] += 1
