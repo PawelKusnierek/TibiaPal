@@ -145,24 +145,43 @@
     
     <section id="main-content">
     <p id="charm_planner_info">
-    HOW TO USE: Left click to increase charm stage, right click to decrease.
+    <span style="color: gold">HOW TO USE:</span> Left click to increase charm stage, right click to decrease.
 </p>
 <br>
 
+<p class="planner_para" id="max_charm_points_para">
+    <label id="max_charm_points_label" for="max_charm_points">(Optional) Your Charm Points:</label>
+    <input type="text" id="max_charm_points" name="max_charm_points" placeholder="Charm points, e.g. 7500"
+        autocomplete="off"><br>
+</p>
+
 <p class="planner_para" id="charm_planner_summary_total">
-    Total Major charm points required: 0
+    Total <b>Major</b> charm points used: <b>0</b>
 </p>
 <br>
 <p class="planner_para" id="charm_planner_summary_total_echoes">
-    Total Minor charm points (echoes) used: 0
+    Total <b>Minor</b> charm points used: <b>0</b>
 </p>
 <br>
 <p class="planner_para" id="charm_planner_summary_total_echoes_leftover">
-    Total Minor charm points (echoes) still available: 100
+    Total <b>Minor</b> charm points available: <b>100</b>
+</p>
+<br>
+<p class="planner_para" id="assigned_majors">
+    Assigned <b>Major</b> charms:
+    </p>
+<br>
+<p class="planner_para" id="assigned_minors">
+    Assigned <b>Minor</b> charms:
 </p>
 <p class="planner_para" id="error_message">
-    Latest Error Message:
-</p><br><br><br>
+    Error Message:
+</p>
+<br>
+<div id="reset_button_container">
+    <input type="submit" id="reset_charms" value="Reset All" onclick="event.preventDefault(); reset_charms()" />
+</div>
+<br><br><br>
 
 <div id="planner_major_charms">
     <div class="charm_div" id="low_blow" onclick="charm_pressed('low_blow')" oncontextmenu="charm_unpressed('low_blow');return false;">

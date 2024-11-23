@@ -1283,4 +1283,15 @@ ol, ul {
 .planner_para {
   width: 100%;
   text-align: left;
+  padding-bottom: 2px;
+}
+
+#reset_button_container {
+  width: 100%;
+  text-align: left;
+}
+
+#reset_charms {
+  text-align: left;
+  margin-left: 10px;
 }/*# sourceMappingURL=main.css.map */

@@ -64,22 +64,44 @@ var total_minor_charm_points_available = 100
 
 function charm_pressed(charm_name) {
     if (charm_name in major_charm_state_dict) {
-        if (major_charm_state_dict[charm_name] < 3) {
-            total_major_charm_points += major_charms_costs[charm_name][major_charm_state_dict[charm_name]]
+        var max_charm_points = document.getElementById('max_charm_points').value
+        console.log(max_charm_points)
+        if (max_charm_points > 0) {
+            if ((total_major_charm_points + major_charms_costs[charm_name][major_charm_state_dict[charm_name]]) > max_charm_points) {
+                var error_message_div = document.getElementById('error_message')
+                error_message_div.innerHTML = 'Error Message: ' + '<span style="color: red">Not enough Major charm points.'
+            }
+            else {
+                if (major_charm_state_dict[charm_name] < 3) {
+                    total_major_charm_points += major_charms_costs[charm_name][major_charm_state_dict[charm_name]]
 
-            major_charm_state_dict[charm_name] += 1
+                    major_charm_state_dict[charm_name] += 1
 
-            total_minor_charm_points_available += minor_echoes_gain[major_charm_state_dict[charm_name]]
+                    total_minor_charm_points_available += minor_echoes_gain[major_charm_state_dict[charm_name]]
 
-            update_html_after_change(charm_name, true)
+                    update_html_after_change(charm_name, true)
 
+                }
+            }
+        }
+        else {
+            if (major_charm_state_dict[charm_name] < 3) {
+                total_major_charm_points += major_charms_costs[charm_name][major_charm_state_dict[charm_name]]
+
+                major_charm_state_dict[charm_name] += 1
+
+                total_minor_charm_points_available += minor_echoes_gain[major_charm_state_dict[charm_name]]
+
+                update_html_after_change(charm_name, true)
+
+            }
         }
     }
     else if (charm_name in minor_charm_state_dict) {
         if (minor_charm_state_dict[charm_name] < 3) {
             if (total_minor_charm_points_available < minor_charms_costs[minor_charm_state_dict[charm_name] + 1]) {
                 var error_message_div = document.getElementById('error_message')
-                error_message_div.innerHTML = 'Latest Error Message: ' + '<span style="color: red">Not enough Minor Charm Points (Echoes)'
+                error_message_div.innerHTML = 'Error Message: ' + '<span style="color: red">Not enough Minor charm points (echoes).'
             }
             else {
                 minor_charm_state_dict[charm_name] += 1
@@ -96,7 +118,7 @@ function charm_unpressed(charm_name) {
         if (major_charm_state_dict[charm_name] > 0) {
             if ((total_minor_charm_points_available - minor_echoes_gain[major_charm_state_dict[charm_name]]) < 0) {
                 var error_message_div = document.getElementById('error_message')
-                error_message_div.innerHTML = 'Latest Error Message: ' + '<span style="color: red">Unassign a minor charm first, otherwise would result in negative points.'
+                error_message_div.innerHTML = 'Error Message: ' + '<span style="color: red">Unassign a Minor charm first, otherwise would result in negative minor points.'
             }
             else {
                 total_minor_charm_points_available -= minor_echoes_gain[major_charm_state_dict[charm_name]]
@@ -129,10 +151,83 @@ function update_html_after_change(charm_name, major) {
     var charm_planner_summary_total_echoes = document.getElementById('charm_planner_summary_total_echoes')
     var charm_planner_summary_total_echoes_leftover = document.getElementById('charm_planner_summary_total_echoes_leftover')
 
-    charm_planner_summary_total.innerHTML = 'Total Major charm points required: ' + total_major_charm_points
-    charm_planner_summary_total_echoes.innerHTML = 'Total Minor charm points (echoes) used: ' + total_minor_charm_points
-    charm_planner_summary_total_echoes_leftover.innerHTML = 'Total Minor charm points (echoes) still available: ' + total_minor_charm_points_available
+    charm_planner_summary_total.innerHTML = 'Total <b>Major</b> charm points used: <b>' + total_major_charm_points + '</b>'
+    charm_planner_summary_total_echoes.innerHTML = 'Total <b>Minor</b> charm points used: <b>' + total_minor_charm_points + '</b>'
+    charm_planner_summary_total_echoes_leftover.innerHTML = 'Total <b>Minor</b> charm points available: <b>' + total_minor_charm_points_available + '</b>'
 
     var error_message_div = document.getElementById('error_message')
-    error_message_div.innerHTML = 'Latest Error Message: '
+    error_message_div.innerHTML = 'Error Message: '
+
+    var assigned_majors = document.getElementById('assigned_majors')
+    var assigned_minors = document.getElementById('assigned_minors')
+
+    assigned_majors.innerHTML = 'Assigned <b>Major</b> charms: '
+    assigned_minors.innerHTML = 'Assigned <b>Minor</b> charms: '
+
+    var has_major_charm = false
+    for (charm in major_charm_state_dict) {
+        if (major_charm_state_dict[charm] > 0) {
+            has_major_charm = true
+            var humanized_charm = humanize(charm)
+            assigned_majors.innerHTML += '<span style="color: orange">T' + major_charm_state_dict[charm] + ' ' + humanized_charm + ', '
+        }
+    }
+    if (has_major_charm) {
+        assigned_majors.innerHTML = assigned_majors.innerHTML.slice(0, -9)
+    }
+
+    var has_minor_charm = false
+    for (charm in minor_charm_state_dict) {
+        if (minor_charm_state_dict[charm] > 0) {
+            has_minor_charm = true
+            var humanized_charm = humanize(charm)
+            assigned_minors.innerHTML += '<span style="color: violet">T' + minor_charm_state_dict[charm] + ' ' + humanized_charm + ', '
+        }
+    }
+    if (has_minor_charm) {
+        assigned_minors.innerHTML = assigned_minors.innerHTML.slice(0, -9)
+    }
+
+}
+
+function humanize(string) {
+    string = string.replace('_', ' ')
+    return string[0].toUpperCase() + string.slice(1);
+}
+
+function reset_charms() {
+    var charm_stage_div
+    for (charm in major_charm_state_dict) {
+        major_charm_state_dict[charm] = 0
+        charm_stage_div = document.getElementById(charm + '_stage')
+        charm_stage_div.innerHTML = 'Stage: 0'
+    }
+    for (charm in minor_charm_state_dict) {
+        minor_charm_state_dict[charm] = 0
+        charm_stage_div = document.getElementById(charm + '_stage')
+        charm_stage_div.innerHTML = 'Stage: 0'
+    }
+
+    total_major_charm_points = 0
+    total_minor_charm_points = 0
+    total_minor_charm_points_available = 100
+
+    var charm_planner_summary_total = document.getElementById('charm_planner_summary_total')
+    var charm_planner_summary_total_echoes = document.getElementById('charm_planner_summary_total_echoes')
+    var charm_planner_summary_total_echoes_leftover = document.getElementById('charm_planner_summary_total_echoes_leftover')
+
+    charm_planner_summary_total.innerHTML = 'Total <b>Major</b> charm points used: <b>' + total_major_charm_points + '</b>'
+    charm_planner_summary_total_echoes.innerHTML = 'Total <b>Minor</b> charm points used: <b>' + total_minor_charm_points + '</b>'
+    charm_planner_summary_total_echoes_leftover.innerHTML = 'Total <b>Minor</b> charm points available: <b>' + total_minor_charm_points_available + '</b>'
+
+    var error_message_div = document.getElementById('error_message')
+    error_message_div.innerHTML = 'Error Message: '
+
+    var assigned_majors = document.getElementById('assigned_majors')
+    var assigned_minors = document.getElementById('assigned_minors')
+
+    assigned_majors.innerHTML = 'Assigned <b>Major</b> charms: '
+    assigned_minors.innerHTML = 'Assigned <b>Minor</b> charms: '
+
+    update_html_after_change('n/a', false)
 }
