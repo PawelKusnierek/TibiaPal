@@ -15,6 +15,34 @@ var major_charm_state_dict = {
     "divine_wrath": 0,
 }
 
+var charm_description_dict = {
+    "low_blow": 'Adds 4/8/9% critical hit chance to attacks with Critical Hit weapons.',
+    "savage_blow": 'Adds 20/40/44% critical extra damage to attacks with Critical Hit weapons.',
+    "overpower": 'Your attacks have a 5/10/11% chance to deal damage equal to 5% of your maximum health.',
+    "overflux": 'Your attacks have a 5/10/11% chance to deal damage equal to 2.5% of your maximum mana.',
+    "carnage": 'Killing a monster has 10/20/22% chance to deal Physical Damage equal to 15% of its maximum health to all monsters in a small radius.',
+    "parry": 'Any damage taken is reflected to the aggressor with a certain chance (5/10/11%).',
+    "dodge": 'Dodges an attack with a certain chance (5/10/11%) without taking any damage at all.',
+    "wound": 'Triggers on a creature with a certain chance (5/10/11%) and deals 5% of its initial hit points as Physical Damage once.',
+    "poison": 'Triggers on a creature with a certain chance (5/10/11%) and deals 5% of its initial hit points as Earth Damage once.',
+    "freeze": 'Triggers on a creature with a certain chance (5/10/11%) and deals 5% of its initial hit points as Ice Damage once.',
+    "zap": 'Triggers on a creature with a certain chance (5/10/11%) and deals 5% of its initial hit points as Energy Damage once.',
+    "curse": 'Triggers on a creature with a certain chance (5/10/11%) and deals 5% of its initial hit points as Death Damage once.',
+    "enflame": 'Triggers on a creature with a certain chance (5/10/11%) and deals 5% of its initial hit points as Fire Damage once.',
+    "divine_wrath": 'Triggers on a creature with a certain chance (5/10/11%) and deals 5% of its initial hit points as Holy Damage once.',
+    "fatal_hold": 'Your attacks have a 30/45/60% chance to prevent creatures from fleeing due to low health for 30 seconds.',
+    "void_inversion": '20/30/40% chance to gain mana instead of losing it when taking mana drain damage.',
+    "vampiric_embrace": 'Adds 1.6/2.4/3.2% Life Leech to attacks if wearing equipment that provides life leech.',
+    "voids_call": 'Adds 0.8/1.2/1.6% Mana Leech to attacks if wearing equipment that provides mana leech.',
+    "gut": 'The creature yields 6/9/12% more creature products.',
+    "scavenge": 'Enhances your chances (+60/90/120%) to successfully skin/dust a skinnable/dustable creature.',
+    "adrenaline_burst": 'Bursts of adrenaline enhance your reflexes with a certain chance (6/9/12%) after you get hit and let you move faster for 10 seconds.',
+    "cleanse": 'Cleanses you from within with a certain chance (6/9/12%) after you get hit and removes one random active negative status effect and temporarily makes you immune against it.',
+    "cripple": 'Cripples the creature with a certain chance (6/9/12%) and paralyses it for 10 seconds.',
+    "numb": 'Numbs the creature with a certain chance (6/9/12%) after its attack and paralyses the creature for 10 seconds.',
+    "bless": 'Blesses you and reduces skill and xp loss by 6/9/12% when killed by the chosen creature.',
+}
+
 var minor_charm_state_dict = {
     "fatal_hold": 0,
     "void_inversion": 0,
@@ -229,5 +257,11 @@ function reset_charms() {
     assigned_majors.innerHTML = 'Assigned <b>Major</b> charms: '
     assigned_minors.innerHTML = 'Assigned <b>Minor</b> charms: '
 
-    update_html_after_change('n/a', false)
+    var charm_description = document.getElementById('charm_description')
+    charm_description.innerHTML = 'Charm Description: '
+}
+
+function description_on_hover(charm_name) {
+    var charm_description = document.getElementById('charm_description')
+    charm_description.innerHTML = 'Charm Description: <span style="color: gold">' + humanize(charm_name) + ' - ' + charm_description_dict[charm_name]
 }
