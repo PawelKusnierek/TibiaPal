@@ -1273,7 +1273,7 @@ ol, ul {
 }
 
 #planner_minor_charms {
-  padding-top: 50px;
+  padding-top: 0px;
 }
 
 .charm_div:hover {
@@ -1294,4 +1294,38 @@ ol, ul {
 #reset_charms {
   text-align: left;
   margin-left: 10px;
+}
+
+.tab {
+  overflow: hidden;
+}
+
+.tab button {
+  border: 1px solid #cbd4ff;
+  background-color: inherit;
+  float: left;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  width: 50%;
+  color: #ccc;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Verdana, Arial, Times New Roman, sans-serif;
+}
+
+.tab button:hover {
+  background-color: #14356d;
+}
+
+.tab button.active {
+  background-color: #1c4b9b;
+  width: 50%;
+}
+
+.tabcontent {
+  padding-top: 10px;
+  display: none;
+  border-top: none;
 }/*# sourceMappingURL=main.css.map */

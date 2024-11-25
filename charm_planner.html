@@ -44,139 +44,172 @@ scripts: <script src="scripts/charm_planner.js"></script>
 <div id="reset_button_container">
     <input type="submit" id="reset_charms" value="Reset All" onclick="event.preventDefault(); reset_charms()" />
 </div>
-<br><br><br>
+<br>
 
-<div id="planner_major_charms">
-    <div class="charm_div" id="low_blow" onclick="charm_pressed('low_blow')" onmouseover="description_on_hover('low_blow')" oncontextmenu="charm_unpressed('low_blow');return false;">
-        <div>Low Blow</div>
-        <img src="{{"images/charms/low_blow.png" | relative_url}}" alt="low_blow_charm_image" width="80px">
-        <div id="low_blow_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="savage_blow" onclick="charm_pressed('savage_blow')" onmouseover="description_on_hover('savage_blow')" oncontextmenu="charm_unpressed('savage_blow');return false;">
-        <div>Savage Blow</div>
-        <img src="{{"images/charms/savage_blow.png" | relative_url}}" alt="savage_blow_charm_image" width="80px">
-        <div id="savage_blow_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="overpower" onclick="charm_pressed('overpower')" onmouseover="description_on_hover('overpower')" oncontextmenu="charm_unpressed('overpower');return false;">
-        <div>Overpower</div>
-        <img src="{{"images/charms/overpower.png" | relative_url}}" alt="overpower_charm_image" width="80px">
-        <div id="overpower_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="overflux" onclick="charm_pressed('overflux')" onmouseover="description_on_hover('overflux')" oncontextmenu="charm_unpressed('overflux');return false;">
-        <div>Overflux</div>
-        <img src="{{"images/charms/overflux.png" | relative_url}}" alt="overflux_charm_image" width="80px">
-        <div id="overflux_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="carnage" onclick="charm_pressed('carnage')" onmouseover="description_on_hover('carnage')" oncontextmenu="charm_unpressed('carnage');return false;">
-        <div>Carnage</div>
-        <img src="{{"images/charms/carnage.png" | relative_url}}" alt="carnage_charm_image" width="80px">
-        <div id="carnage_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="parry" onclick="charm_pressed('parry')" onmouseover="description_on_hover('parry')" oncontextmenu="charm_unpressed('parry');return false;">
-        <div>Parry</div>
-        <img src="{{"images/charms/parry.png" | relative_url}}" alt="parry_charm_image" width="80px">
-        <div id="parry_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="dodge" onclick="charm_pressed('dodge')" onmouseover="description_on_hover('dodge')" oncontextmenu="charm_unpressed('dodge');return false;">
-        <div>Dodge</div>
-        <img src="{{"images/charms/dodge.png" | relative_url}}" alt="dodge_charm_image" width="80px">
-        <div id="dodge_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="wound" onclick="charm_pressed('wound')" onmouseover="description_on_hover('wound')" oncontextmenu="charm_unpressed('wound');return false;">
-        <div>Wound</div>
-        <img src="{{"images/charms/wound.png" | relative_url}}" alt="wound_charm_image" width="80px">
-        <div id="wound_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="poison" onclick="charm_pressed('poison')" onmouseover="description_on_hover('poison')" oncontextmenu="charm_unpressed('poison');return false;">
-        <div>Poison</div>
-        <img src="{{"images/charms/poison.png" | relative_url}}" alt="poison_charm_image" width="80px">
-        <div id="poison_stage">Stage: 0</div>
-    </div>
-
-    <div class="charm_div" id="freeze" onclick="charm_pressed('freeze')" onmouseover="description_on_hover('freeze')" oncontextmenu="charm_unpressed('freeze');return false;">
-        <div>Freeze</div>
-        <img src="{{"images/charms/freeze.png" | relative_url}}" alt="freeze_charm_image" width="80px">
-        <div id="freeze_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="zap" onclick="charm_pressed('zap')" onmouseover="description_on_hover('zap')" oncontextmenu="charm_unpressed('zap');return false;">
-        <div>Zap</div>
-        <img src="{{"images/charms/zap.png" | relative_url}}" alt="zap_charm_image" width="80px">
-        <div id="zap_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="curse" onclick="charm_pressed('curse')" onmouseover="description_on_hover('curse')" oncontextmenu="charm_unpressed('curse');return false;">
-        <div>Curse</div>
-        <img src="{{"images/charms/curse.png" | relative_url}}" alt="curse_charm_image" width="80px">
-        <div id="curse_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="enflame" onclick="charm_pressed('enflame')" onmouseover="description_on_hover('enflame')" oncontextmenu="charm_unpressed('enflame');return false;">
-        <div>Enflame</div>
-        <img src="{{"images/charms/enflame.png" | relative_url}}" alt="enflame_charm_image" width="80px">
-        <div id="enflame_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="divine_wrath" onclick="charm_pressed('divine_wrath')" onmouseover="description_on_hover('divine_wrath')" oncontextmenu="charm_unpressed('divine_wrath');return false;">
-        <div>Divine Wrath</div>
-        <img src="{{"images/charms/divine_wrath.png" | relative_url}}" alt="divine_wrath_charm_image" width="80px">
-        <div id="divine_wrath_stage">Stage: 0</div>
-    </div>
-    
-
-
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks active" onclick="show_tab(event, 'Major Charms')">Major Charms</button>
+  <button class="tablinks" onclick="show_tab(event, 'Minor Charms')">Minor Charms</button>
 </div>
 
-<div id="planner_minor_charms">
-    <div class="charm_div" id="fatal_hold" onclick="charm_pressed('fatal_hold')" onmouseover="description_on_hover('fatal_hold')" oncontextmenu="charm_unpressed('fatal_hold');return false;">
-        <div>Fatal Hold</div>
-        <img src="{{"images/charms/fatal_hold.png" | relative_url}}" alt="fatal_hold_charm_image" width="80px">
-        <div id="fatal_hold_stage">Stage: 0</div>
+<!-- Tab content -->
+<div id="Major Charms" class="tabcontent">
+      <div id="planner_major_charms">
+        <div class="charm_div" id="low_blow" onclick="charm_pressed('low_blow')" onmouseover="description_on_hover('low_blow')" oncontextmenu="charm_unpressed('low_blow');return false;">
+            <div>Low Blow</div>
+            <img src="{{"images/charms/low_blow.png" | relative_url}}" alt="low_blow_charm_image" width="80px">
+            <div id="low_blow_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 800, 1200, 4000</span>
+        </div>
+        <div class="charm_div" id="savage_blow" onclick="charm_pressed('savage_blow')" onmouseover="description_on_hover('savage_blow')" oncontextmenu="charm_unpressed('savage_blow');return false;">
+            <div>Savage Blow</div>
+            <img src="{{"images/charms/savage_blow.png" | relative_url}}" alt="savage_blow_charm_image" width="80px">
+            <div id="savage_blow_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 800, 1200, 4000</span>
+        </div>
+        <div class="charm_div" id="overpower" onclick="charm_pressed('overpower')" onmouseover="description_on_hover('overpower')" oncontextmenu="charm_unpressed('overpower');return false;">
+            <div>Overpower</div>
+            <img src="{{"images/charms/overpower.png" | relative_url}}" alt="overpower_charm_image" width="80px">
+            <div id="overpower_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 600, 900, 3000</span>
+        </div>
+        <div class="charm_div" id="overflux" onclick="charm_pressed('overflux')" onmouseover="description_on_hover('overflux')" oncontextmenu="charm_unpressed('overflux');return false;">
+            <div>Overflux</div>
+            <img src="{{"images/charms/overflux.png" | relative_url}}" alt="overflux_charm_image" width="80px">
+            <div id="overflux_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 600, 900, 3000</span>
+        </div>
+        <div class="charm_div" id="carnage" onclick="charm_pressed('carnage')" onmouseover="description_on_hover('carnage')" oncontextmenu="charm_unpressed('carnage');return false;">
+            <div>Carnage</div>
+            <img src="{{"images/charms/carnage.png" | relative_url}}" alt="carnage_charm_image" width="80px">
+            <div id="carnage_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 600, 900, 3000</span>
+        </div>
+        <div class="charm_div" id="parry" onclick="charm_pressed('parry')" onmouseover="description_on_hover('parry')" oncontextmenu="charm_unpressed('parry');return false;">
+            <div>Parry</div>
+            <img src="{{"images/charms/parry.png" | relative_url}}" alt="parry_charm_image" width="80px">
+            <div id="parry_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 400, 600, 2000</span>
+        </div>
+        <div class="charm_div" id="dodge" onclick="charm_pressed('dodge')" onmouseover="description_on_hover('dodge')" oncontextmenu="charm_unpressed('dodge');return false;">
+            <div>Dodge</div>
+            <img src="{{"images/charms/dodge.png" | relative_url}}" alt="dodge_charm_image" width="80px">
+            <div id="dodge_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 240, 360, 1200</span>
+        </div>
+        <div class="charm_div" id="wound" onclick="charm_pressed('wound')" onmouseover="description_on_hover('wound')" oncontextmenu="charm_unpressed('wound');return false;">
+            <div>Wound</div>
+            <img src="{{"images/charms/wound.png" | relative_url}}" alt="wound_charm_image" width="80px">
+            <div id="wound_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 240, 360, 1200</span>
+        </div>
+        <div class="charm_div" id="poison" onclick="charm_pressed('poison')" onmouseover="description_on_hover('poison')" oncontextmenu="charm_unpressed('poison');return false;">
+            <div>Poison</div>
+            <img src="{{"images/charms/poison.png" | relative_url}}" alt="poison_charm_image" width="80px">
+            <div id="poison_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 240, 360, 1200</span>
+        </div>
+
+        <div class="charm_div" id="freeze" onclick="charm_pressed('freeze')" onmouseover="description_on_hover('freeze')" oncontextmenu="charm_unpressed('freeze');return false;">
+            <div>Freeze</div>
+            <img src="{{"images/charms/freeze.png" | relative_url}}" alt="freeze_charm_image" width="80px">
+            <div id="freeze_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 320, 480, 1600</span>
+        </div>
+        <div class="charm_div" id="zap" onclick="charm_pressed('zap')" onmouseover="description_on_hover('zap')" oncontextmenu="charm_unpressed('zap');return false;">
+            <div>Zap</div>
+            <img src="{{"images/charms/zap.png" | relative_url}}" alt="zap_charm_image" width="80px">
+            <div id="zap_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 320, 480, 1600</span>
+        </div>
+        <div class="charm_div" id="curse" onclick="charm_pressed('curse')" onmouseover="description_on_hover('curse')" oncontextmenu="charm_unpressed('curse');return false;">
+            <div>Curse</div>
+            <img src="{{"images/charms/curse.png" | relative_url}}" alt="curse_charm_image" width="80px">
+            <div id="curse_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 360, 540, 1800</span>
+        </div>
+        <div class="charm_div" id="enflame" onclick="charm_pressed('enflame')" onmouseover="description_on_hover('enflame')" oncontextmenu="charm_unpressed('enflame');return false;">
+            <div>Enflame</div>
+            <img src="{{"images/charms/enflame.png" | relative_url}}" alt="enflame_charm_image" width="80px">
+            <div id="enflame_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 400, 600, 2000</span>
+        </div>
+        <div class="charm_div" id="divine_wrath" onclick="charm_pressed('divine_wrath')" onmouseover="description_on_hover('divine_wrath')" oncontextmenu="charm_unpressed('divine_wrath');return false;">
+            <div>Divine Wrath</div>
+            <img src="{{"images/charms/divine_wrath.png" | relative_url}}" alt="divine_wrath_charm_image" width="80px">
+            <div id="divine_wrath_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 600, 900, 3000</span>
+        </div>
     </div>
-    <div class="charm_div" id="void_inversion" onclick="charm_pressed('void_inversion')" onmouseover="description_on_hover('void_inversion')" oncontextmenu="charm_unpressed('void_inversion');return false;">
-        <div>Void Inversion</div>
-        <img src="{{"images/charms/void_inversion.png" | relative_url}}" alt="void_inversion_charm_image" width="80px">
-        <div id="void_inversion_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="vampiric_embrace" onclick="charm_pressed('vampiric_embrace')" onmouseover="description_on_hover('vampiric_embrace')" oncontextmenu="charm_unpressed('vampiric_embrace');return false;">
-        <div>Vampiric Embrace</div>
-        <img src="{{"images/charms/vampiric_embrace.png" | relative_url}}" alt="vampiric_embrace_charm_image" width="80px">
-        <div id="vampiric_embrace_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="voids_call" onclick="charm_pressed('voids_call')" onmouseover="description_on_hover('voids_call')" oncontextmenu="charm_unpressed('voids_call');return false;">
-        <div>Void's Call</div>
-        <img src="{{"images/charms/voids_call.png" | relative_url}}" alt="voids_call_charm_image" width="80px">
-        <div id="voids_call_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="gut" onclick="charm_pressed('gut')" onmouseover="description_on_hover('gut')" oncontextmenu="charm_unpressed('gut');return false;">
-        <div>Gut</div>
-        <img src="{{"images/charms/gut.png" | relative_url}}" alt="gut_charm_image" width="80px">
-        <div id="gut_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="scavenge" onclick="charm_pressed('scavenge')" onmouseover="description_on_hover('scavenge')" oncontextmenu="charm_unpressed('scavenge');return false;">
-        <div>Scavenge</div>
-        <img src="{{"images/charms/scavenge.png" | relative_url}}" alt="scavenge_charm_image" width="80px">
-        <div id="scavenge_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="adrenaline_burst" onclick="charm_pressed('adrenaline_burst')" onmouseover="description_on_hover('adrenaline_burst')" oncontextmenu="charm_unpressed('adrenaline_burst');return false;">
-        <div>Adrenaline Burst</div>
-        <img src="{{"images/charms/adrenaline_burst.png" | relative_url}}" alt="adrenaline_burst_charm_image" width="80px">
-        <div id="adrenaline_burst_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="cleanse" onclick="charm_pressed('cleanse')" onmouseover="description_on_hover('cleanse')" oncontextmenu="charm_unpressed('cleanse');return false;">
-        <div>Cleanse</div>
-        <img src="{{"images/charms/cleanse.png" | relative_url}}" alt="cleanse_charm_image" width="80px">
-        <div id="cleanse_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="cripple" onclick="charm_pressed('cripple')" onmouseover="description_on_hover('cripple')" oncontextmenu="charm_unpressed('cripple');return false;">
-        <div>Cripple</div>
-        <img src="{{"images/charms/cripple.png" | relative_url}}" alt="cripple_charm_image" width="80px">
-        <div id="cripple_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="numb" onclick="charm_pressed('numb')" onmouseover="description_on_hover('numb')" oncontextmenu="charm_unpressed('numb');return false;">
-        <div>Numb</div>
-        <img src="{{"images/charms/numb.png" | relative_url}}" alt="numb_charm_image" width="80px">
-        <div id="numb_stage">Stage: 0</div>
-    </div>
-    <div class="charm_div" id="bless" onclick="charm_pressed('bless')" onmouseover="description_on_hover('bless')" oncontextmenu="charm_unpressed('bless');return false;">
-        <div>Bless</div>
-        <img src="{{"images/charms/bless.png" | relative_url}}" alt="bless_charm_image" width="80px">
-        <div id="bless_stage">Stage: 0</div>
+</div>
+
+<div id="Minor Charms" class="tabcontent">
+  <div id="planner_minor_charms">
+        <div class="charm_div" id="fatal_hold" onclick="charm_pressed('fatal_hold')" onmouseover="description_on_hover('fatal_hold')" oncontextmenu="charm_unpressed('fatal_hold');return false;">
+            <div>Fatal Hold</div>
+            <img src="{{"images/charms/fatal_hold.png" | relative_url}}" alt="fatal_hold_charm_image" width="80px">
+            <div id="fatal_hold_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 100, 150, 225</span>
+        </div>
+        <div class="charm_div" id="void_inversion" onclick="charm_pressed('void_inversion')" onmouseover="description_on_hover('void_inversion')" oncontextmenu="charm_unpressed('void_inversion');return false;">
+            <div>Void Inversion</div>
+            <img src="{{"images/charms/void_inversion.png" | relative_url}}" alt="void_inversion_charm_image" width="80px">
+            <div id="void_inversion_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 100, 150, 225</span>
+        </div>
+        <div class="charm_div" id="vampiric_embrace" onclick="charm_pressed('vampiric_embrace')" onmouseover="description_on_hover('vampiric_embrace')" oncontextmenu="charm_unpressed('vampiric_embrace');return false;">
+            <div>Vampiric Embrace</div>
+            <img src="{{"images/charms/vampiric_embrace.png" | relative_url}}" alt="vampiric_embrace_charm_image" width="80px">
+            <div id="vampiric_embrace_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 100, 150, 225</span>
+        </div>
+        <div class="charm_div" id="voids_call" onclick="charm_pressed('voids_call')" onmouseover="description_on_hover('voids_call')" oncontextmenu="charm_unpressed('voids_call');return false;">
+            <div>Void's Call</div>
+            <img src="{{"images/charms/voids_call.png" | relative_url}}" alt="voids_call_charm_image" width="80px">
+            <div id="voids_call_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 100, 150, 225</span>
+        </div>
+        <div class="charm_div" id="gut" onclick="charm_pressed('gut')" onmouseover="description_on_hover('gut')" oncontextmenu="charm_unpressed('gut');return false;">
+            <div>Gut</div>
+            <img src="{{"images/charms/gut.png" | relative_url}}" alt="gut_charm_image" width="80px">
+            <div id="gut_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 100, 150, 225</span>
+        </div>
+        <div class="charm_div" id="scavenge" onclick="charm_pressed('scavenge')" onmouseover="description_on_hover('scavenge')" oncontextmenu="charm_unpressed('scavenge');return false;">
+            <div>Scavenge</div>
+            <img src="{{"images/charms/scavenge.png" | relative_url}}" alt="scavenge_charm_image" width="80px">
+            <div id="scavenge_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 100, 150, 225</span>
+        </div>
+        <div class="charm_div" id="adrenaline_burst" onclick="charm_pressed('adrenaline_burst')" onmouseover="description_on_hover('adrenaline_burst')" oncontextmenu="charm_unpressed('adrenaline_burst');return false;">
+            <div>Adrenaline Burst</div>
+            <img src="{{"images/charms/adrenaline_burst.png" | relative_url}}" alt="adrenaline_burst_charm_image" width="80px">
+            <div id="adrenaline_burst_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 100, 150, 225</span>
+        </div>
+        <div class="charm_div" id="cleanse" onclick="charm_pressed('cleanse')" onmouseover="description_on_hover('cleanse')" oncontextmenu="charm_unpressed('cleanse');return false;">
+            <div>Cleanse</div>
+            <img src="{{"images/charms/cleanse.png" | relative_url}}" alt="cleanse_charm_image" width="80px">
+            <div id="cleanse_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 100, 150, 225</span>
+        </div>
+        <div class="charm_div" id="cripple" onclick="charm_pressed('cripple')" onmouseover="description_on_hover('cripple')" oncontextmenu="charm_unpressed('cripple');return false;">
+            <div>Cripple</div>
+            <img src="{{"images/charms/cripple.png" | relative_url}}" alt="cripple_charm_image" width="80px">
+            <div id="cripple_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 100, 150, 225</span>
+        </div>
+        <div class="charm_div" id="numb" onclick="charm_pressed('numb')" onmouseover="description_on_hover('numb')" oncontextmenu="charm_unpressed('numb');return false;">
+            <div>Numb</div>
+            <img src="{{"images/charms/numb.png" | relative_url}}" alt="numb_charm_image" width="80px">
+            <div id="numb_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 100, 150, 225</span>
+        </div>
+        <div class="charm_div" id="bless" onclick="charm_pressed('bless')" onmouseover="description_on_hover('bless')" oncontextmenu="charm_unpressed('bless');return false;">
+            <div>Bless</div>
+            <img src="{{"images/charms/bless.png" | relative_url}}" alt="bless_charm_image" width="80px">
+            <div id="bless_stage">Stage: 0</div>
+            <span style="font-size:12px">Cost: 100, 150, 225</span>
+        </div>
     </div>
 </div>
