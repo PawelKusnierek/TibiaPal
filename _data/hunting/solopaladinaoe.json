@@ -581,6 +581,18 @@
         "loot": "-"
     },
     {
+        "level": "600+",
+        "place": "Azzilon Walls",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "700+",
+        "place": "Azzilon Castle",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
         "level": "700+",
         "place": "Ferumbras Way",
         "raw_exp": "-",
