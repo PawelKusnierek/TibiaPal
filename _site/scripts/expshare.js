@@ -4,5 +4,6 @@ function submit_form() {
     content.innerHTML = "";
     lower_range = Math.ceil(level/1.5)
     upper_range = Math.floor(level*1.5)
+    upper_range += level % 2 === 0 ? 1 : 0
     content.innerHTML = content.innerHTML + "A character with level <b>" + level +"</b> can share experience with levels <b>" + lower_range + "</b> to <b>" + upper_range +"</b><br>"
 }
