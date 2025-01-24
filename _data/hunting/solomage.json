@@ -1,7 +1,7 @@
 [
     {
         "level": "8+",
-        "place": "Rotworms Liberty Bay",
+        "place": "Rotworms Liberty Bay/Darashia",
         "raw_exp": "-",
         "loot": "-"
     },
@@ -13,7 +13,7 @@
     },
     {
         "level": "8+",
-        "place": "Crocodiles PH",
+        "place": "Crocodiles Port Hope",
         "raw_exp": "-",
         "loot": "-"
     },
@@ -30,32 +30,26 @@
         "loot": "-"
     },
     {
+        "level": "12+",
+        "place": "Stonerefiners (Stealth Ring)",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
         "level": "13+",
-        "place": "Edron Tomb",
+        "place": "Edron Forgotten Tomb",
         "raw_exp": "-",
         "loot": "-"
     },
     {
         "level": "14+",
-        "place": "Tarantulas PH",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "15+",
-        "place": "Cormaya Dwarf Mines",
+        "place": "Tarantulas Port Hope",
         "raw_exp": "-",
         "loot": "-"
     },
     {
         "level": "20+",
-        "place": "Edron Orc Cave",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "20+",
-        "place": "Coryms PH",
+        "place": "Coryms Port Hope",
         "raw_exp": "-",
         "loot": "-"
     },
@@ -79,13 +73,19 @@
     },
     {
         "level": "20+",
-        "place": "Mutated Humans Yala",
+        "place": "Edron Earth Elementals",
         "raw_exp": "-",
         "loot": "-"
     },
     {
         "level": "20+",
-        "place": "Minotaur Pyramind Darashia",
+        "place": "Mutated Humans Yala",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "28+",
+        "place": "Minotaur Pyramid Darashia",
         "raw_exp": "-",
         "loot": "-"
     },
@@ -109,24 +109,18 @@
     },
     {
         "level": "30+",
-        "place": "Edron Earth Elementals",
+        "place": "Carniphilas Port Hope",
         "raw_exp": "-",
         "loot": "-"
     },
     {
         "level": "30+",
-        "place": "Carniphilas PH",
+        "place": "Mummy/Bonebeasts MOSL -3",
         "raw_exp": "-",
         "loot": "-"
     },
     {
-        "level": "30+",
-        "place": "Mummy/Bonebeasts MOAS -3",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "40+",
+        "level": "50+",
         "place": "Yalahar Cults",
         "raw_exp": "-",
         "loot": "-"
@@ -566,12 +560,6 @@
     {
         "level": "700+",
         "place": "Warzone 7",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "800+",
-        "place": "Warzone 1 (spawner)",
         "raw_exp": "-",
         "loot": "-"
     }
