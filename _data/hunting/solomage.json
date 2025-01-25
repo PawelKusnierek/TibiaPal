@@ -30,8 +30,14 @@
         "loot": "-"
     },
     {
+        "level": "12+",
+        "place": "Amazon Camp (Profit)",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
         "level": "13+",
-        "place": "Cyclops Mistrock",
+        "place": "Cyclops Mistrock/Mount Sternum",
         "raw_exp": "-",
         "loot": "-"
     },
@@ -50,6 +56,12 @@
     {
         "level": "15+",
         "place": "Stonerefiners (Stealth Ring)",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "15+",
+        "place": "Minotaur Pyramid Darashia (Stealth Ring)",
         "raw_exp": "-",
         "loot": "-"
     },
@@ -78,14 +90,14 @@
         "loot": "-"
     },
     {
-        "level": "28+",
-        "place": "Minotaur Pyramid Darashia",
+        "level": "30+",
+        "place": "Upper Spike",
         "raw_exp": "-",
         "loot": "-"
     },
     {
         "level": "30+",
-        "place": "Upper Spike",
+        "place": "Coryms Port Hope (AOE)",
         "raw_exp": "-",
         "loot": "-"
     },
