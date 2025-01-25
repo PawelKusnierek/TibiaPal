@@ -321,6 +321,12 @@
     },
     {
         "level": "300+",
+        "place": "Candia Nibblemaws",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "300+",
         "place": "Oramond Golem Raid",
         "raw_exp": "2.4kk",
         "loot": "200k",

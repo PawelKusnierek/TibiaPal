@@ -445,6 +445,12 @@
     },
     {
         "level": "300+",
+        "place": "Candia Nibblemaws",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "300+",
         "place": "Oramond Wildlife Raid",
         "raw_exp": "-",
         "loot": "-"
