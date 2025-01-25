@@ -25,19 +25,13 @@
     },
     {
         "level": "12+",
-        "place": "Cyclops Mistrock",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "12+",
-        "place": "Stonerefiners (Stealth Ring)",
+        "place": "Edron Forgotten Tomb",
         "raw_exp": "-",
         "loot": "-"
     },
     {
         "level": "13+",
-        "place": "Edron Forgotten Tomb",
+        "place": "Cyclops Mistrock",
         "raw_exp": "-",
         "loot": "-"
     },
@@ -48,8 +42,14 @@
         "loot": "-"
     },
     {
-        "level": "20+",
-        "place": "Coryms Port Hope",
+        "level": "14+",
+        "place": "Coryms Port Hope (Stealth Ring)",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "15+",
+        "place": "Stonerefiners (Stealth Ring)",
         "raw_exp": "-",
         "loot": "-"
     },
@@ -62,12 +62,6 @@
     {
         "level": "20+",
         "place": "Elves Yalahar",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "20+",
-        "place": "Laguna Islands",
         "raw_exp": "-",
         "loot": "-"
     },
@@ -92,6 +86,12 @@
     {
         "level": "30+",
         "place": "Upper Spike",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "30+",
+        "place": "Laguna Islands (AOE)",
         "raw_exp": "-",
         "loot": "-"
     },
