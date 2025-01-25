@@ -145,24 +145,6 @@
     },
     {
         "level": "50+",
-        "place": "Arena Quarter",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "50+",
-        "place": "Darashia Dragon Lair",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "50+",
-        "place": "Yalahar Dragons",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "50+",
         "place": "Peninsula Tomb",
         "raw_exp": "-",
         "loot": "-"
@@ -187,13 +169,7 @@
     },
     {
         "level": "50+",
-        "place": "Middle Spike",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "50+",
-        "place": "Water Elementals PH",
+        "place": "Water Elementals Port Hope",
         "raw_exp": "-",
         "loot": "-"
     },
@@ -212,6 +188,12 @@
     {
         "level": "50+",
         "place": "Hive Surface",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "65+",
+        "place": "Middle Spike",
         "raw_exp": "-",
         "loot": "-"
     },
