@@ -23,22 +23,6 @@ scripts: <script src="scripts/equipment.js"></script>
       Paladin
 </div>
 <div id="Sorcerer" class="tabcontent">
-    <div class="filter_selection">
-        <b>Level Filter</b>:<br><br>
-        <label>
-            <input value="0" type="radio" name="level_filter_choice" checked onclick="apply_filters()"> All
-        </label>
-        <label>
-            <input value="200" type="radio" name="level_filter_choice" onclick="apply_filters()"> 200+
-        </label>
-        <label>
-            <input value="300" type="radio" name="level_filter_choice" onclick="apply_filters()"> 300+
-        </label>
-        <label>
-            <input value="400" type="radio" name="level_filter_choice" onclick="apply_filters()"> 400+
-        </label>
-    </div>
-
     <div class="type_filter_selection">
         <b>Type Filter</b>:<br><br>
         <label>
@@ -69,6 +53,22 @@ scripts: <script src="scripts/equipment.js"></script>
             <input value="Spellbook" type="radio" name="type_filter_choice" onclick="apply_filters()"> Spellbook
         </label>
     </div><br>
+
+    <div class="filter_selection">
+        <b>Level Filter</b>:<br><br>
+        <label>
+            <input value="0" type="radio" name="level_filter_choice" checked onclick="apply_filters()"> All
+        </label>
+        <label>
+            <input value="200" type="radio" name="level_filter_choice" onclick="apply_filters()"> 200+
+        </label>
+        <label>
+            <input value="300" type="radio" name="level_filter_choice" onclick="apply_filters()"> 300+
+        </label>
+        <label>
+            <input value="400" type="radio" name="level_filter_choice" onclick="apply_filters()"> 400+
+        </label>
+    </div>
 
     <table class="equipment_table" id="equipment_table_sorcerer">
         <tr>
