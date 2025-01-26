@@ -1352,7 +1352,7 @@ ol, ul {
   padding-bottom: 4px;
 }
 
-.equipment_table tbody tr:nth-child(even) {
+.equipment_table tbody tr {
   background-color: #0d1e38;
 }
 
