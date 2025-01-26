@@ -121,6 +121,12 @@
     },
     {
         "level": "30+",
+        "place": "Dryad Gardens",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "30+",
         "place": "Carniphilas Port Hope",
         "raw_exp": "-",
         "loot": "-"
@@ -186,7 +192,7 @@
         "loot": "-"
     },
     {
-        "level": "65+",
+        "level": "60+",
         "place": "Middle Spike",
         "raw_exp": "-",
         "loot": "-"
@@ -362,6 +368,12 @@
     {
         "level": "130+",
         "place": "Glooth Bandits",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "130+",
+        "place": "Elder Wyrms Drefia",
         "raw_exp": "-",
         "loot": "-"
     },
