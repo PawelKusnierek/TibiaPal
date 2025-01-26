@@ -186,12 +186,6 @@
         "loot": "-"
     },
     {
-        "level": "50+",
-        "place": "Hive Surface",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
         "level": "65+",
         "place": "Middle Spike",
         "raw_exp": "-",
@@ -236,6 +230,24 @@
     {
         "level": "80+",
         "place": "Old Masonry (Death portal)",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "80+",
+        "place": "Hive Surface",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "80+",
+        "place": "Krailos Ogres Surface",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "80+",
+        "place": "Quaras Liberty Bay",
         "raw_exp": "-",
         "loot": "-"
     },
@@ -289,6 +301,12 @@
     },
     {
         "level": "100+",
+        "place": "Exotic Cave",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "120+",
         "place": "Lizard Chosens",
         "raw_exp": "-",
         "loot": "-"
@@ -360,6 +378,12 @@
         "loot": "-"
     },
     {
+        "level": "150+",
+        "place": "Wreckoning Pirats",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
         "level": "200+",
         "place": "Deeper Banuta (Sorcerer)",
         "raw_exp": "-",
@@ -409,6 +433,12 @@
     },
     {
         "level": "250+",
+        "place": "Diremaw Task Area (AOE)",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "250+",
         "place": "INQ Hellfires + Spectres",
         "raw_exp": "-",
         "loot": "-"
@@ -451,6 +481,12 @@
     },
     {
         "level": "300+",
+        "place": "Burster Spectres",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "300+",
         "place": "Oramond Wildlife Raid",
         "raw_exp": "-",
         "loot": "-"
@@ -481,6 +517,18 @@
     },
     {
         "level": "400+",
+        "place": "Oramond Fury",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "400+",
+        "place": "Ripper Spectres",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "400+",
         "place": "Warzone 4",
         "raw_exp": "-",
         "loot": "-"
@@ -493,7 +541,25 @@
     },
     {
         "level": "400+",
+        "place": "Warzone 6",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "400+",
         "place": "Cobras",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "400+",
+        "place": "Oskayaat Weretigers",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "400+",
+        "place": "Oskayaat Werecrocodiles",
         "raw_exp": "-",
         "loot": "-"
     },
@@ -505,13 +571,7 @@
     },
     {
         "level": "500+",
-        "place": "Oskayaat Weretigers",
-        "raw_exp": "-",
-        "loot": "-"
-    },
-    {
-        "level": "500+",
-        "place": "Oskayaat Werecrocodiles",
+        "place": "Dream Labrynith",
         "raw_exp": "-",
         "loot": "-"
     },
@@ -529,6 +589,12 @@
     },
     {
         "level": "500+",
+        "place": "Girtablilu",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "500+",
         "place": "Issavi Goannas",
         "raw_exp": "-",
         "loot": "-"
@@ -536,6 +602,12 @@
     {
         "level": "500+",
         "place": "Flimsy Lost Souls",
+        "raw_exp": "-",
+        "loot": "-"
+    },
+    {
+        "level": "500+",
+        "place": "Marapur Nagas",
         "raw_exp": "-",
         "loot": "-"
     },
