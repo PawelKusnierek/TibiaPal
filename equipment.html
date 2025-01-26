@@ -1,0 +1,351 @@
+---
+layout: default
+title: TibiaPal.com - Vocation Equipment Reference 
+scripts: <script src="scripts/equipment.js"></script>
+---
+
+<p id="equipment_info">
+    <span style="color: gold"><b>PURPOSE:</b></span> Simple reference for all level 150+, vocation specific equipment.<br> Intended for new players or players trying out new vocations to know when new items become available.<br><br>
+    <span style="color: green"><b>UPDATED:</b></span> Winter Update 2024.
+</p>
+<br>
+<div class="tab">
+    <button id="knight" class="tablinks active" onclick="show_tab(event, 'Knight')">Knight</button>
+    <button id="paladin" class="tablinks" onclick="show_tab(event, 'Paladin')">Paladin</button>
+    <button id="sorcerer" class="tablinks" onclick="show_tab(event, 'Sorcerer')">Sorcerer</button>
+    <button id="druid" class="tablinks" onclick="show_tab(event, 'Druid')">Druid</button>
+</div>
+
+<div id="Knight" class="tabcontent">
+      Knight
+</div>
+<div id="Paladin" class="tabcontent">
+      Paladin
+</div>
+<div id="Sorcerer" class="tabcontent">
+    <div class="filter_selection">
+        <b>Level Filter</b>:<br><br>
+        <label>
+            <input value="0" type="radio" name="level_filter_choice" checked onclick="apply_level_filter()"> All
+        </label>
+        <label>
+            <input value="200" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 200+
+        </label>
+        <label>
+            <input value="300" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 300+
+        </label>
+        <label>
+            <input value="400" type="radio" name="level_filter_choice" onclick="apply_level_filter()"> 400+
+        </label>
+    </div>
+
+    <div class="type_filter_selection">
+        <b>Type Filter</b>:<br><br>
+        <label>
+            <input value="0" type="radio" name="type_filter_choice" checked onclick="apply_type_filter()"> All
+        </label>
+        <label>
+            <input value="200" type="radio" name="type_filter_choice" onclick="apply_type_filter()"> Amulet
+        </label>
+        <label>
+            <input value="300" type="radio" name="type_filter_choice" onclick="apply_type_filter()"> Ring
+        </label>
+        <label>
+            <input value="400" type="radio" name="type_filter_choice" onclick="apply_type_filter()"> Wand
+        </label>
+        <label>
+            <input value="400" type="radio" name="type_filter_choice" onclick="apply_type_filter()"> Helmet
+        </label>
+        <label>
+            <input value="400" type="radio" name="type_filter_choice" onclick="apply_type_filter()"> Armor
+        </label>
+        <label>
+            <input value="400" type="radio" name="type_filter_choice" onclick="apply_type_filter()"> Legs
+        </label>
+        <label>
+            <input value="400" type="radio" name="type_filter_choice" onclick="apply_type_filter()"> Boots
+        </label>
+        <label>
+            <input value="400" type="radio" name="type_filter_choice" onclick="apply_type_filter()"> Spellbook
+        </label>
+    </div><br>
+
+    <table class="equipment_table" id="equipment_table_sorcerer">
+        <tr>
+            <th class="level_row">Level</th>
+            <th class="name_row">Name</th>
+            <th class="type_row">Type</th>
+        </tr>
+        <tr>
+            <td>150</td>
+            <td>Jungle Wand</td>
+            <td>Wand</td>
+        </tr>
+        <tr>
+            <td>150</td>
+            <td>Gill Gugel</td>
+            <td>Helmet</td>
+        </tr>
+        <tr>
+            <td>150</td>
+            <td>Gill Coat</td>
+            <td>Armor</td>
+        </tr>
+        <tr>
+            <td>150</td>
+            <td>Gill Legs</td>
+            <td>Legs</td>
+        </tr>
+        <tr>
+            <td>150</td>
+            <td>Makeshift Boots</td>
+            <td>Boots</td>
+        </tr>
+        <tr>
+            <td>150</td>
+            <td>Spellbook of Ancient Arcana</td>
+            <td>Spellbook</td>
+        </tr>
+        <tr>
+            <td>150</td>
+            <td>Book of Lies</td>
+            <td>Spellbook</td>
+        </tr>
+        <tr>
+            <td>180</td>
+            <td>Spirit Guide</td>
+            <td>Spellbook</td>
+        </tr>
+        <tr>
+            <td>180</td>
+            <td>Shoulder Plate</td>
+            <td>Spellbook</td>
+        </tr>
+        <tr>
+            <td>180</td>
+            <td>Brain in a Jar</td>
+            <td>Spellbook</td>
+        </tr>
+        <tr>
+            <td>180</td>
+            <td>Pair of Dreamwalkers</td>
+            <td>Boots</td>
+        </tr>
+        <tr>
+            <td>180</td>
+            <td>Living Armor</td>
+            <td>Armor</td>
+        </tr>
+        <tr>
+            <td>180</td>
+            <td>Soulful Legs</td>
+            <td>Legs</td>
+        </tr>
+        <tr>
+            <td>180</td>
+            <td>Dream Shroud</td>
+            <td>Armor</td>
+        </tr>
+        <tr>
+            <td>180</td>
+            <td>Energized Limb</td>
+            <td>Wand</td>
+        </tr>
+        <tr>
+            <td>180</td>
+            <td>Deepling Ceremonial Dagger</td>
+            <td>Wand</td>
+        </tr>
+        <tr>
+            <td>200</td>
+            <td>Cocoa Grimoire</td>
+            <td>Spellbook</td>
+        </tr>
+        <tr>
+            <td>200</td>
+            <td>Wand of Destruction</td>
+            <td>Wand</td>
+        </tr>
+        <tr>
+            <td>200</td>
+            <td>Gnome Helmet</td>
+            <td>Helmet</td>
+        </tr>
+        <tr>
+            <td>200</td>
+            <td>Gnome Legs</td>
+            <td>Legs</td>
+        </tr>
+        <tr>
+            <td>200</td>
+            <td>Elemental Raiments</td>
+            <td>Armor</td>
+        </tr>
+        <tr>
+            <td>220</td>
+            <td>Lion Spellbook</td>
+            <td>Spellbook</td>
+        </tr>
+        <tr>
+            <td>220</td>
+            <td>Galea Mortis</td>
+            <td>Helmet</td>
+        </tr>
+        <tr>
+            <td>220</td>
+            <td>Toga Mortis</td>
+            <td>Armor</td>
+        </tr>
+        <tr>
+            <td>220</td>
+            <td>Lion Wand</td>
+            <td>Wand</td>
+        </tr>
+        <tr>
+            <td>220</td>
+            <td>Theurgic Amulet</td>
+            <td>Amulet</td>
+        </tr>
+        <tr>
+            <td>230</td>
+            <td>Deepling Fork</td>
+            <td>Wand</td>
+        </tr>
+        <tr>
+            <td>250</td>
+            <td>Stoic Iks Faulds</td>
+            <td>Legs</td>
+        </tr>
+        <tr>
+            <td>250</td>
+            <td>Naga Wand</td>
+            <td>Wand</td>
+        </tr>
+        <tr>
+            <td>250</td>
+            <td>Stoic Iks Sandals</td>
+            <td>Boots</td>
+        </tr>
+        <tr>
+            <td>250</td>
+            <td>Umbral Master Spellbook</td>
+            <td>Spellbook</td>
+        </tr>
+        <tr>
+            <td>250</td>
+            <td>Alchemist's Notepad</td>
+            <td>Spellbook</td>
+        </tr>
+        <tr>
+            <td>250</td>
+            <td>Alchemist's Boots</td>
+            <td>Boots</td>
+        </tr>
+        <tr>
+            <td>250</td>
+            <td>Eldritch Wand</td>
+            <td>Wand</td>
+        </tr>
+        <tr>
+            <td>250</td>
+            <td>Eldritch Cowl</td>
+            <td>Helmet</td>
+        </tr>
+        <tr>
+            <td>270</td>
+            <td>Cobra Wand</td>
+            <td>Wand</td>
+        </tr>
+        <tr>
+            <td>270</td>
+            <td>Dawnfire Sherwani</td>
+            <td>Armor</td>
+        </tr>
+        <tr>
+            <td>300</td>
+            <td>Dawnfire Pantaloons</td>
+            <td>Legs</td>
+        </tr>
+        <tr>
+            <td>300</td>
+            <td>Arcane Dragon Robe</td>
+            <td>Armor</td>
+        </tr>
+        <tr>
+            <td>300</td>
+            <td>Eldritch Folio</td>
+            <td>Spellbook</td>
+        </tr>
+        <tr>
+            <td>300</td>
+            <td>Inferniarch Wand</td>
+            <td>Wand</td>
+        </tr>
+        <tr>
+            <td>300</td>
+            <td>Falcon Wand</td>
+            <td>Wand</td>
+        </tr>
+        <tr>
+            <td>300</td>
+            <td>Falcon Circlet</td>
+            <td>Helmet</td>
+        </tr>
+        <tr>
+            <td>300</td>
+            <td>Dreadfire Headpiece</td>
+            <td>Helmet</td>
+        </tr>
+        <tr>
+            <td>330</td>
+            <td>Amber Wand</td>
+            <td>Wand</td>
+        </tr>
+        <tr>
+            <td>400</td>
+            <td>Soultainter</td>
+            <td>Wand</td>
+        </tr>
+        <tr>
+            <td>400</td>
+            <td>Soulmantle</td>
+            <td>Armor</td>
+        </tr>
+        <tr>
+            <td>400</td>
+            <td>Soulshanks</td>
+            <td>Legs</td>
+        </tr>
+        <tr>
+            <td>400</td>
+            <td>Arcanomancer Folio</td>
+            <td>Spellbook</td>
+        </tr>
+        <tr>
+            <td>400</td>
+            <td>Arcanomancer Sigil</td>
+            <td>Ring</td>
+        </tr>
+        <tr>
+            <td>400</td>
+            <td>Arcanomancer Regalia</td>
+            <td>Helmet</td>
+        </tr>
+        <tr>
+            <td>500</td>
+            <td>Sanguine Boots</td>
+            <td>Boots</td>
+        </tr>
+        <tr>
+            <td>600</td>
+            <td>Sanguine Coil</td>
+            <td>Wand</td>
+        </tr>
+    </table>
+</div>
+
+<div id="Druid" class="tabcontent">
+      Druid
+</div>
+
+</div>

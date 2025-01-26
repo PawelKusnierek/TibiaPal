@@ -1328,4 +1328,38 @@ ol, ul {
   padding-top: 10px;
   display: none;
   border-top: none;
+}
+
+.equipment_table {
+  display: initial;
+  text-align: left;
+}
+
+.level_row {
+  width: 15%;
+}
+
+.name_row {
+  width: 65%;
+}
+
+.type_row {
+  width: 20%;
+}
+
+.equipment_table td {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.equipment_table tbody tr:nth-child(even) {
+  background-color: #0d1e38;
+}
+
+.filter_selection {
+  margin-bottom: 20px;
+}
+
+.filter_selection label {
+  margin-right: 15px;
 }/*# sourceMappingURL=main.css.map */

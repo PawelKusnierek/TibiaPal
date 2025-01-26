@@ -109,9 +109,12 @@ function adBlockPopupClicked() {
   localStorage.setItem("adblockconfirm", Date.now());
 }
 
-function enable_default_tabs(){
+function enable_default_tabs() {
   if (location.href.split("/").slice(-1).includes('charm_planner')) {
     initial_show_tab("Major Charms")
+  }
+  else if(location.href.split("/").slice(-1).includes('equipment')) {
+    initial_show_tab("Knight")
   }
 
 }
