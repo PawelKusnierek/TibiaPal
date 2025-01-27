@@ -1339,8 +1339,12 @@ ol, ul {
   width: 15%;
 }
 
+.image_row {
+  width: 10%;
+}
+
 .name_row {
-  width: 65%;
+  width: 55%;
 }
 
 .type_row {
