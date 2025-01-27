@@ -28,7 +28,7 @@ function filter_equipment_table(level_selection, type_selection) {
 		if (parseInt(level_value) < level_selection) {
 			equipment_table.rows[i].style.display = 'none'
 		}
-        let type_value = equipment_table.rows[i].cells[2].childNodes[0].data;
+        let type_value = equipment_table.rows[i].cells[3].childNodes[0].data;
         if (type_selection != "All") {
             if (type_value != type_selection) {
                 equipment_table.rows[i].style.display = 'none'
