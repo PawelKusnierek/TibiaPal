@@ -1366,4 +1366,10 @@ ol, ul {
 
 .filter_selection label {
   margin-right: 15px;
+}
+
+.equipment_table tr td img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }/*# sourceMappingURL=main.css.map */
