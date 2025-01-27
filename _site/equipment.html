@@ -153,69 +153,71 @@
 </p>
 <br>
 <div class="tab">
-    <button id="knight" class="tablinks active" onclick="show_tab(event, 'Knight')">Knight</button>
+    <button id="druid" class="tablinks active" onclick="show_tab(event, 'Druid')">Druid</button>
+    <button id="knight" class="tablinks" onclick="show_tab(event, 'Knight')">Knight</button>
     <button id="paladin" class="tablinks" onclick="show_tab(event, 'Paladin')">Paladin</button>
     <button id="sorcerer" class="tablinks" onclick="show_tab(event, 'Sorcerer')">Sorcerer</button>
-    <button id="druid" class="tablinks" onclick="show_tab(event, 'Druid')">Druid</button>
+</div>
+
+<div id="Paladin" class="tabcontent">
+      Paladin
 </div>
 
 <div id="Knight" class="tabcontent">
       Knight
 </div>
-<div id="Paladin" class="tabcontent">
-      Paladin
-</div>
+
 <div id="Sorcerer" class="tabcontent">
     <div class="type_filter_selection">
         <b>Type Filter</b>:<br><br>
         <label>
-            <input value="All" type="radio" name="type_filter_choice" checked onclick="apply_filters()"> All
+            <input value="All" type="radio" name="type_filter_choice_sorcerer" checked onclick="apply_filters()"> All
         </label>
         <label>
-            <input value="Amulet" type="radio" name="type_filter_choice" onclick="apply_filters()"> Amulet
+            <input value="Amulet" type="radio" name="type_filter_choice_sorcerer" onclick="apply_filters()"> Amulet
         </label>
         <label>
-            <input value="Ring" type="radio" name="type_filter_choice" onclick="apply_filters()"> Ring
+            <input value="Ring" type="radio" name="type_filter_choice_sorcerer" onclick="apply_filters()"> Ring
         </label>
         <label>
-            <input value="Wand" type="radio" name="type_filter_choice" onclick="apply_filters()"> Wand
+            <input value="Wand" type="radio" name="type_filter_choice_sorcerer" onclick="apply_filters()"> Wand
         </label>
         <label>
-            <input value="Helmet" type="radio" name="type_filter_choice" onclick="apply_filters()"> Helmet
+            <input value="Helmet" type="radio" name="type_filter_choice_sorcerer" onclick="apply_filters()"> Helmet
         </label>
         <label>
-            <input value="Armor" type="radio" name="type_filter_choice" onclick="apply_filters()"> Armor
+            <input value="Armor" type="radio" name="type_filter_choice_sorcerer" onclick="apply_filters()"> Armor
         </label>
         <label>
-            <input value="Legs" type="radio" name="type_filter_choice" onclick="apply_filters()"> Legs
+            <input value="Legs" type="radio" name="type_filter_choice_sorcerer" onclick="apply_filters()"> Legs
         </label>
         <label>
-            <input value="Boots" type="radio" name="type_filter_choice" onclick="apply_filters()"> Boots
+            <input value="Boots" type="radio" name="type_filter_choice_sorcerer" onclick="apply_filters()"> Boots
         </label>
         <label>
-            <input value="Spellbook" type="radio" name="type_filter_choice" onclick="apply_filters()"> Spellbook
+            <input value="Spellbook" type="radio" name="type_filter_choice_sorcerer" onclick="apply_filters()"> Spellbook
         </label>
     </div><br>
 
     <div class="filter_selection">
         <b>Level Filter</b>:<br><br>
         <label>
-            <input value="150" type="radio" name="level_filter_choice" checked onclick="apply_filters()"> 150+
+            <input value="150" type="radio" name="level_filter_choice_sorcerer" checked onclick="apply_filters()"> 150+
         </label>
         <label>
-            <input value="200" type="radio" name="level_filter_choice" onclick="apply_filters()"> 200+
+            <input value="200" type="radio" name="level_filter_choice_sorcerer" onclick="apply_filters()"> 200+
         </label>
         <label>
-            <input value="250" type="radio" name="level_filter_choice" onclick="apply_filters()"> 250+
+            <input value="250" type="radio" name="level_filter_choice_sorcerer" onclick="apply_filters()"> 250+
         </label>
         <label>
-            <input value="300" type="radio" name="level_filter_choice" onclick="apply_filters()"> 300+
+            <input value="300" type="radio" name="level_filter_choice_sorcerer" onclick="apply_filters()"> 300+
         </label>
         <label>
-            <input value="400" type="radio" name="level_filter_choice" onclick="apply_filters()"> 400+
+            <input value="400" type="radio" name="level_filter_choice_sorcerer" onclick="apply_filters()"> 400+
         </label>
         <label>
-            <input value="500" type="radio" name="level_filter_choice" onclick="apply_filters()"> 500+
+            <input value="500" type="radio" name="level_filter_choice_sorcerer" onclick="apply_filters()"> 500+
         </label>
     </div>
 
@@ -346,10 +348,28 @@
             <td><a href="https://tibia.fandom.com/wiki/Gnome_Legs" target="_blank">Gnome Legs</a></td>
             <td>Legs</td>
         </tr>
+        <tr>        
+            <td>200</td>
+            <td><img src="images/equipment/Earthmind_Raiment.gif" height="32" width="32"></td>
+            <td><a href="https://tibia.fandom.com/wiki/Earthmind_Raiment" target="_blank">Earthmind Raiment</a></td>
+            <td>Armor</td>
+        </tr>
         <tr>
             <td>200</td>
             <td><img src="images/equipment/Firemind_Raiment.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Firemind_Raiment" target="_blank">Elemental Raiments</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Firemind_Raiment" target="_blank">Firemind Raiment</a></td>
+            <td>Armor</td>
+        </tr>
+        <tr>        
+            <td>200</td>
+            <td><img src="images/equipment/Frostmind_Raiment.gif" height="32" width="32"></td>
+            <td><a href="https://tibia.fandom.com/wiki/Frostmind_Raiment" target="_blank">Frostmind Raiment</a></td>
+            <td>Armor</td>
+        </tr>
+        <tr>        
+            <td>200</td>
+            <td><img src="images/equipment/Thundermind_Raiment.gif" height="32" width="32"></td>
+            <td><a href="https://tibia.fandom.com/wiki/Thundermind_Raiment" target="_blank">Thundermind Raiment</a></td>
             <td>Armor</td>
         </tr>
         <tr>
@@ -548,9 +568,129 @@
 </div>
 
 <div id="Druid" class="tabcontent">
-      Druid
-</div>
+    <div class="type_filter_selection">
+        <b>Type Filter</b>:<br><br>
+        <label>
+            <input value="All" type="radio" name="type_filter_choice_druid" checked onclick="apply_filters()"> All
+        </label>
+        <label>
+            <input value="Amulet" type="radio" name="type_filter_choice_druid" onclick="apply_filters()"> Amulet
+        </label>
+        <label>
+            <input value="Ring" type="radio" name="type_filter_choice_druid" onclick="apply_filters()"> Ring
+        </label>
+        <label>
+            <input value="Rod" type="radio" name="type_filter_choice_druid" onclick="apply_filters()"> Rod
+        </label>
+        <label>
+            <input value="Helmet" type="radio" name="type_filter_choice_druid" onclick="apply_filters()"> Helmet
+        </label>
+        <label>
+            <input value="Armor" type="radio" name="type_filter_choice_druid" onclick="apply_filters()"> Armor
+        </label>
+        <label>
+            <input value="Legs" type="radio" name="type_filter_choice_druid" onclick="apply_filters()"> Legs
+        </label>
+        <label>
+            <input value="Boots" type="radio" name="type_filter_choice_druid" onclick="apply_filters()"> Boots
+        </label>
+        <label>
+            <input value="Spellbook" type="radio" name="type_filter_choice_druid" onclick="apply_filters()"> Spellbook
+        </label>
+    </div><br>
 
+    <div class="filter_selection">
+        <b>Level Filter</b>:<br><br>
+        <label>
+            <input value="150" type="radio" name="level_filter_choice_druid" checked onclick="apply_filters()"> 150+
+        </label>
+        <label>
+            <input value="200" type="radio" name="level_filter_choice_druid" onclick="apply_filters()"> 200+
+        </label>
+        <label>
+            <input value="250" type="radio" name="level_filter_choice_druid" onclick="apply_filters()"> 250+
+        </label>
+        <label>
+            <input value="300" type="radio" name="level_filter_choice_druid" onclick="apply_filters()"> 300+
+        </label>
+        <label>
+            <input value="400" type="radio" name="level_filter_choice_druid" onclick="apply_filters()"> 400+
+        </label>
+        <label>
+            <input value="500" type="radio" name="level_filter_choice_druid" onclick="apply_filters()"> 500+
+        </label>
+    </div>
+
+	<table class="equipment_table" id="equipment_table_druid">
+		<tr>
+			<th class="level_row">Level</th>
+            <th class="image_row">Image</th>
+			<th class="name_row">Name</th>
+			<th class="type_row">Type</th>
+		</tr>
+		<tr>        
+        <td>150</td>
+        <td><img src="images/equipment/Book_of_Lies.gif" height="32" width="32"></td>
+        <td><a href="https://tibia.fandom.com/wiki/Book_of_Lies" target="_blank">Book of Lies</td>
+        <td>Spellbook</td>
+        </tr>
+        <tr>        <td>150</td><td><img src="images/equipment/Gill_Coat.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Gill_Coat" target="_blank">Gill Coat</td>        <td>Armor</td>    </tr>
+<tr>        <td>150</td><td><img src="images/equipment/Gill_Gugel.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Gill_Gugel" target="_blank">Gill Gugel</td>        <td>Helmet</td>    </tr>
+<tr>        <td>150</td><td><img src="images/equipment/Gill_Legs.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Gill_Legs" target="_blank">Gill Legs</td>        <td>Legs</td>    </tr>
+<tr>        <td>150</td><td><img src="images/equipment/Jungle_Rod.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Jungle_Rod" target="_blank">Jungle Rod</td>        <td>Rod</td>    </tr>
+<tr>        <td>150</td><td><img src="images/equipment/Make-Do_Boots.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Make-Do_Boots" target="_blank">Make-Do Boots</td>        <td>Boots</td>    </tr>
+<tr>        <td>150</td><td><img src="images/equipment/Spellbook_of_Ancient_Arcana.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Spellbook_of_Ancient_Arcana" target="_blank">Spellbook of Ancient Arcana</td>        <td>Spellbook</td>    </tr>
+<tr>        <td>180</td><td><img src="images/equipment/Brain_in_a_Jar.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Brain_in_a_Jar" target="_blank">Brain in a Jar</td>        <td>Spellbook</td>    </tr>
+<tr>        <td>180</td><td><img src="images/equipment/Deepling_Ceremonial_Dagger.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Deepling_Ceremonial_Dagger" target="_blank">Deepling Ceremonial Dagger</td>        <td>Rod</td>    </tr>
+<tr>        <td>180</td><td><img src="images/equipment/Dream_Shroud.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Dream_Shroud" target="_blank">Dream Shroud</td>        <td>Armor</td>    </tr>
+<tr>        <td>180</td><td><img src="images/equipment/Energized_Limb.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Energized_Limb" target="_blank">Energized Limb</td>        <td>Rod</td>    </tr>
+<tr>        <td>180</td><td><img src="images/equipment/Pair_of_Dreamwalkers.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Pair_of_Dreamwalkers" target="_blank">Pair of Dreamwalkers</td>        <td>Boots</td>    </tr>
+<tr>        <td>180</td><td><img src="images/equipment/Living_Armor.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Living_Armor" target="_blank">Living Armor</td>        <td>Armor</td>    </tr>
+<tr>        <td>180</td><td><img src="images/equipment/Shoulder_Plate.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Shoulder_Plate" target="_blank">Shoulder Plate</td>        <td>Spellbook</td>    </tr>
+<tr>        <td>180</td><td><img src="images/equipment/Soulful_Legs.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Soulful_Legs" target="_blank">Soulful Legs</td>        <td>Legs</td>    </tr>
+<tr>        <td>180</td><td><img src="images/equipment/Spirit_Guide.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Spirit_Guide" target="_blank">Spirit Guide</td>        <td>Spellbook</td>    </tr>
+<tr>        <td>200</td><td><img src="images/equipment/Creamy_Grimoire.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Creamy_Grimoire" target="_blank">Creamy Grimoire</td>        <td>Spellbook</td>    </tr>
+<tr>        <td>200</td><td><img src="images/equipment/Earthmind_Raiment.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Earthmind_Raiment" target="_blank">Earthmind Raiment</td>        <td>Armor</td>    </tr>
+<tr>        <td>200</td><td><img src="images/equipment/Firemind_Raiment.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Firemind_Raiment" target="_blank">Firemind Raiment</td>        <td>Armor</td>    </tr>
+<tr>        <td>200</td><td><img src="images/equipment/Frostmind_Raiment.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Frostmind_Raiment" target="_blank">Frostmind Raiment</td>        <td>Armor</td>    </tr>
+<tr>        <td>200</td><td><img src="images/equipment/Thundermind_Raiment.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Thundermind_Raiment" target="_blank">Thundermind Raiment</td>        <td>Armor</td>    </tr>
+<tr>        <td>200</td><td><img src="images/equipment/Gnome_Helmet.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Gnome_Helmet" target="_blank">Gnome Helmet</td>        <td>Helmet</td>    </tr>
+<tr>        <td>200</td><td><img src="images/equipment/Gnome_Legs.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Gnome_Legs" target="_blank">Gnome Legs</td>        <td>Legs</td>    </tr>
+<tr>        <td>200</td><td><img src="images/equipment/Rod_of_Destruction.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Rod_of_Destruction" target="_blank">Rod of Destruction</td>        <td>Rod</td>    </tr>
+<tr>        <td>220</td><td><img src="images/equipment/Cobra_Rod.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Cobra_Rod" target="_blank">Cobra Rod</td>        <td>Rod</td>    </tr>
+<tr>        <td>220</td><td><img src="images/equipment/Lion_Spellbook.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Lion_Spellbook" target="_blank">Lion Spellbook</td>        <td>Spellbook</td>    </tr>
+<tr>        <td>220</td><td><img src="images/equipment/Enchanted_Theurgic_Amulet.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Enchanted_Theurgic_Amulet" target="_blank">Theurgic Amulet</td>        <td>Amulet</td>    </tr>
+<tr>        <td>230</td><td><img src="images/equipment/Bear_Skin.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Bear_Skin" target="_blank">Bear Skin</td>        <td>Armor</td>    </tr>
+<tr>        <td>230</td><td><img src="images/equipment/Deepling_Fork.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Deepling_Fork" target="_blank">Deepling Fork</td>        <td>Rod</td>    </tr>
+<tr>        <td>250</td><td><img src="images/equipment/Eldritch_Hood.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Eldritch_Hood" target="_blank">Eldritch Hood</td>        <td>Helmet</td>    </tr>
+<tr>        <td>250</td><td><img src="images/equipment/Eldritch_Rod.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Eldritch_Rod" target="_blank">Eldritch Rod</td>        <td>Rod</td>    </tr>
+<tr>        <td>250</td><td><img src="images/equipment/Midnight_Sarong.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Midnight_Sarong" target="_blank">Midnight Sarong</td>        <td>Legs</td>    </tr>
+<tr>        <td>250</td><td><img src="images/equipment/Mutant_Bone_Boots.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Mutant_Bone_Boots" target="_blank">Mutant Bone Boots</td>        <td>Boots</td>    </tr>
+<tr>        <td>250</td><td><img src="images/equipment/Naga_Rod.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Naga_Rod" target="_blank">Naga Rod</td>        <td>Rod</td>    </tr>
+<tr>        <td>250</td><td><img src="images/equipment/Stoic_Iks_Cuirass.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Stoic_Iks_Cuirass" target="_blank">Stoic Iks Cuirass</td>        <td>Armor</td>    </tr>
+<tr>        <td>250</td><td><img src="images/equipment/Stoic_Iks_Headpiece.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Stoic_Iks_Headpiece" target="_blank">Stoic Iks Headpiece</td>        <td>Helmet</td>    </tr>
+<tr>        <td>250</td><td><img src="images/equipment/Umbral_Master_Spellbook.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Umbral_Master_Spellbook" target="_blank">Umbral Master Spellbook</td>        <td>Spellbook</td>    </tr>
+<tr>        <td>270</td><td><img src="images/equipment/Lion_Rod.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Lion_Rod" target="_blank">Lion Rod</td>        <td>Rod</td>    </tr>
+<tr>        <td>300</td><td><img src="images/equipment/Demonfang_Mask.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Demonfang_Mask" target="_blank">Demonfang Mask</td>        <td>Helmet</td>    </tr>
+<tr>        <td>300</td><td><img src="images/equipment/Eldritch_Tome.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Eldritch_Tome" target="_blank">Eldritch Tome</td>        <td>Spellbook</td>    </tr>
+<tr>        <td>300</td><td><img src="images/equipment/Falcon_Circlet.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Falcon_Circlet" target="_blank">Falcon Circlet</td>        <td>Helmet</td>    </tr>
+<tr>        <td>300</td><td><img src="images/equipment/Falcon_Rod.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Falcon_Rod" target="_blank">Falcon Rod</td>        <td>Rod</td>    </tr>
+<tr>        <td>300</td><td><img src="images/equipment/Inferniarch_Rod.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Inferniarch_Rod" target="_blank">Inferniarch Rod</td>        <td>Rod</td>    </tr>
+<tr>        <td>300</td><td><img src="images/equipment/Midnight_Tunic.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Midnight_Tunic" target="_blank">Midnight Tunic</td>        <td>Armor</td>    </tr>
+<tr>        <td>300</td><td><img src="images/equipment/Mutant_Bone_Kilt.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Mutant_Bone_Kilt" target="_blank">Mutant Bone Kilt</td>        <td>Legs</td>    </tr>
+<tr>        <td>300</td><td><img src="images/equipment/Mystical_Dragon_Robe.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Mystical_Dragon_Robe" target="_blank">Mystical Dragon Robe</td>        <td>Armor</td>    </tr>
+<tr>        <td>330</td><td><img src="images/equipment/Amber_Rod.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Amber_Rod" target="_blank">Amber Rod</td>        <td>Rod</td>    </tr>
+<tr>        <td>400</td><td><img src="images/equipment/Arboreal_Crown.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Arboreal_Crown" target="_blank">Arboreal Crown</td>        <td>Helmet</td>    </tr>
+<tr>        <td>400</td><td><img src="images/equipment/Arboreal_Ring.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Arboreal_Ring" target="_blank">Arboreal Ring</td>        <td>Ring</td>    </tr>
+<tr>        <td>400</td><td><img src="images/equipment/Arboreal_Tome.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Arboreal_Tome" target="_blank">Arboreal Tome</td>        <td>Spellbook</td>    </tr>
+<tr>        <td>400</td><td><img src="images/equipment/Soulhexer.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Soulhexer" target="_blank">Soulhexer</td>        <td>Rod</td>    </tr>
+<tr>        <td>400</td><td><img src="images/equipment/Soulshroud.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Soulshroud" target="_blank">Soulshroud</td>        <td>Armor</td>    </tr>
+<tr>        <td>400</td><td><img src="images/equipment/Soulstrider.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Soulstrider" target="_blank">Soulstrider</td>        <td>Legs</td>    </tr>
+<tr>        <td>500</td><td><img src="images/equipment/Sanguine_Galoshes.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Sanguine_Galoshes" target="_blank">Sanguine Galoshes</td>        <td>Boots</td>    </tr>
+<tr>        <td>600</td><td><img src="images/equipment/Sanguine_Rod.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Sanguine_Rod" target="_blank">Sanguine Rod</td>        <td>Rod</td>    </tr>
+
+
+	</table>
 </div>
     </section>
     

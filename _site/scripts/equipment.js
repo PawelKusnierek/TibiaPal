@@ -1,7 +1,8 @@
 function apply_filters() {
-	let level_elements = document.getElementsByName('level_filter_choice');
+	let vocation = get_active_vocation()
+	let level_elements = document.getElementsByName('level_filter_choice_' + vocation);
     let level_selection
-    let type_elements = document.getElementsByName('type_filter_choice');
+    let type_elements = document.getElementsByName('type_filter_choice_' + vocation);
 	for (let i = 0; i < level_elements.length; i++) {
 		if (level_elements[i].checked) {
 			level_selection = parseInt(level_elements[i].value);
@@ -12,14 +13,13 @@ function apply_filters() {
 			type_selection = type_elements[i].value;
 		}
 	}
-    filter_equipment_table(level_selection, type_selection)
+    filter_equipment_table(level_selection, type_selection, vocation)
 }
 
-function filter_equipment_table(level_selection, type_selection) {
+function filter_equipment_table(level_selection, type_selection, vocation) {
     console.log(level_selection)
     console.log(type_selection)
 
-    let vocation = get_active_vocation()
 	let equipment_table = document.getElementById("equipment_table_" + vocation);
 	let number_of_rows = equipment_table.rows.length;
 	unfilter_equipment_table(vocation);

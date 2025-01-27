@@ -114,7 +114,7 @@ function enable_default_tabs() {
     initial_show_tab("Major Charms")
   }
   else if(location.href.split("/").slice(-1).includes('equipment')) {
-    initial_show_tab("Knight")
+    initial_show_tab("Druid")
   }
 
 }
