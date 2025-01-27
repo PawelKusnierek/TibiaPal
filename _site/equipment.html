@@ -284,7 +284,86 @@
 </div>
 
 <div id="Knight" class="tabcontent">
-      Knight
+      <div class="type_filter_selection">
+        <b>Type Filter</b>:<br><br>
+        <label>
+            <input value="All" type="radio" name="type_filter_choice_knight" checked onclick="apply_filters()"> All
+        </label>
+        <label>
+            <input value="Amulet" type="radio" name="type_filter_choice_knight" onclick="apply_filters()"> Amulet
+        </label>
+        <label>
+            <input value="Ring" type="radio" name="type_filter_choice_knight" onclick="apply_filters()"> Ring
+        </label>
+        <label>
+            <input value="Weapon" type="radio" name="type_filter_choice_knight" onclick="apply_filters()"> Weapon
+        </label>
+        <label>
+            <input value="Helmet" type="radio" name="type_filter_choice_knight" onclick="apply_filters()"> Helmet
+        </label>
+        <label>
+            <input value="Armor" type="radio" name="type_filter_choice_knight" onclick="apply_filters()"> Armor
+        </label>
+        <label>
+            <input value="Legs" type="radio" name="type_filter_choice_knight" onclick="apply_filters()"> Legs
+        </label>
+        <label>
+            <input value="Boots" type="radio" name="type_filter_choice_knight" onclick="apply_filters()"> Boots
+        </label>
+        <label>
+            <input value="Quiver" type="radio" name="type_filter_choice_knight" onclick="apply_filters()"> Shield
+        </label>
+    </div><br>
+
+    <div class="filter_selection">
+        <b>Level Filter</b>:<br><br>
+        <label>
+            <input value="150" type="radio" name="level_filter_choice_knight" checked onclick="apply_filters()"> 150+
+        </label>
+        <label>
+            <input value="200" type="radio" name="level_filter_choice_knight" onclick="apply_filters()"> 200+
+        </label>
+        <label>
+            <input value="250" type="radio" name="level_filter_choice_knight" onclick="apply_filters()"> 250+
+        </label>
+        <label>
+            <input value="300" type="radio" name="level_filter_choice_knight" onclick="apply_filters()"> 300+
+        </label>
+        <label>
+            <input value="400" type="radio" name="level_filter_choice_knight" onclick="apply_filters()"> 400+
+        </label>
+        <label>
+            <input value="500" type="radio" name="level_filter_choice_knight" onclick="apply_filters()"> 500+
+        </label>
+    </div>
+
+    <div class="filter_selection">
+        <b>Weapon Type</b>:<br><br>
+        <label>
+            <input value="All" type="radio" name="weapon_filter_choice_knight" checked onclick="apply_filters()"> All
+        </label>
+        <label>
+            <input value="Axe" type="radio" name="weapon_filter_choice_knight" onclick="apply_filters()"> Axe
+        </label>
+        <label>
+            <input value="Club" type="radio" name="weapon_filter_choice_knight" onclick="apply_filters()"> Club
+        </label>
+        <label>
+            <input value="Sword" type="radio" name="weapon_filter_choice_knight" onclick="apply_filters()"> Sword
+        </label>
+    </div>
+
+    <table class="equipment_table" id="equipment_table_knight">
+		<tr>
+			<th class="level_row">Level</th>
+            <th class="image_row">Image</th>
+			<th class="name_row">Name</th>
+			<th class="type_row">Type</th>
+		</tr>
+        <tr>        <td>150</td><td><img src="images/equipment/Bast_Legs.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Bast_Legs" target="_blank">Random Axe</td>        <td>Axe Weapon</td>    </tr>
+        <tr>        <td>150</td><td><img src="images/equipment/Depth_Lorica.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Depth_Lorica" target="_blank">Random Club</td>        <td>Club Weapon</td>    </tr>
+        <tr>        <td>150</td><td><img src="images/equipment/Jungle_Quiver.gif" height="32" width="32"></td>        <td><a href="https://tibia.fandom.com/wiki/Jungle_Quiver" target="_blank">Random Sword</td>        <td>Sword Weapon</td>    </tr>
+    </table>
 </div>
 
 <div id="Paladin" class="tabcontent">
