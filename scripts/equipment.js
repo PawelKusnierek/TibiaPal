@@ -42,8 +42,10 @@ function filter_equipment_table(level_selection, type_selection, weapon_type_sel
 		if (vocation == "knight") {
 			if (weapon_type_selection != "All") {
 				let weapon_type_value = equipment_table.rows[i].cells[3].childNodes[0].data;
-				if (!weapon_type_value.includes(weapon_type_selection)) {
-					equipment_table.rows[i].style.display = 'none'
+				if (weapon_type_value.includes("Weapon")) {
+					if (!weapon_type_value.includes(weapon_type_selection)) {
+						equipment_table.rows[i].style.display = 'none'
+					}
 				}
 			}
 		}
