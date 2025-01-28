@@ -33,6 +33,10 @@
             <div class="nav-image-container"><img class="nav-image" src={{"images/Sword.gif" | relative_url}}>Hunting
                 Places</div>
         </a></div>
+<div class="{% if page.url == "/equipment.html" %}active {% endif %}nav-item"><a href="/equipment">
+        <div class="nav-image-container"><img class="nav-image" src={{"images/equipment.gif" |
+                relative_url}}><span id="new-homepage">NEW!</span>Vocation Equipment Reference
+        </div></a> </div>
     <div class="{% if page.url == "/bestiary.html" %}active {% endif %}nav-item"><a href="/bestiary">
             <div class="nav-image-container"><img class="nav-image" src={{"images/Bestiary_Betterment.gif" |
                     relative_url}}>Bestiary
@@ -43,10 +47,6 @@
                     relative_url}}>Bosstiary Reference
             </div>
         </a> </div>
-    <div class="{% if page.url == "/equipment.html" %}active {% endif %}nav-item"><a href="/equipment">
-            <div class="nav-image-container"><img class="nav-image" src={{"images/equipment.gif" |
-                    relative_url}}><span id="new-homepage">NEW!</span>Vocation Equipment
-            </div></a> </div>
     <div class="nav-item"><a href="https://www.youtube.com/kusnierr" target="_blank">
             <div class="nav-image-container"><img class="nav-image" src={{"images/youtube-icon.png" |
                     relative_url}}>YouTube Videos &
