@@ -63,6 +63,27 @@ ol, ul {
   display: inline-block;
 }
 
+#tibiatrade {
+  border: none;
+  transform: scale(1);
+  transform-origin: 0 0;
+  width: 100%;
+  height: 58px;
+  align: center;
+}
+
+#tibiatrade_span {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: 12px;
+}
+
+#tibiatrade_span a {
+  color: inherit;
+}
+
 #page-container {
   height: 100%;
   margin: auto;

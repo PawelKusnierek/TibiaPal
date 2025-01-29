@@ -35,7 +35,7 @@ scripts: <script src="../scripts/hunting.js"></script>
         <tr>
             <td>{{ hunt.level }}</td>
 
-            {% if hunt.link %}
+            {% if hunt.link != "https://youtu.be/" %}
             <td><a href="{{ hunt.link }}" target="_blank">{{ hunt.place }}</a></td>
             {% else %}
             <td>{{ hunt.place }}</td>

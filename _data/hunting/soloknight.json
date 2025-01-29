@@ -3,49 +3,57 @@
         "level": "8+",
         "place": "Rotworms Liberty Bay/Darashia",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "8+",
         "place": "Swamp Trolls Port Hope/Venore",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "8+",
         "place": "Crocodiles Port Hope",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "8+",
         "place": "Larva Ankrahmun",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "20+",
         "place": "Coryms Port Hope",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "20+",
         "place": "Cyclopolis",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "20+",
         "place": "Cyclops Mistrock",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "20+",
         "place": "Elves Yalahar",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "20+",
@@ -58,7 +66,8 @@
         "level": "20+",
         "place": "Tarantulas Port Hope",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "20+",
@@ -78,55 +87,64 @@
         "level": "30+",
         "place": "Zombies Treasure Island",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "30+",
         "place": "Carniphilas Port Hope",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "30+",
         "place": "Upper Spike",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "40+",
         "place": "Pirates Yalahar",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "50+",
         "place": "Mother of Scarabs Lair -3",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "50+",
         "place": "Mutated Rats Alchemist Quarter",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "50+",
         "place": "Arena Quarter",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "50+",
         "place": "Darashia Dragon Lair",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "50+",
         "place": "Yalahar Dragons",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "50+",
@@ -153,13 +171,15 @@
         "level": "50+",
         "place": "Middle Spike",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "50+",
         "place": "Old Fortress (Edron) Bonebeasts",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "70+",
@@ -207,13 +227,15 @@
         "level": "90+",
         "place": "Sea Serpents",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "90+",
         "place": "Yielothax",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "90+",
@@ -226,7 +248,8 @@
         "level": "90+",
         "place": "Wyrms Drefia/LB",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "90+",
@@ -267,7 +290,8 @@
         "level": "100+",
         "place": "Exotic Cave",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "130+",
@@ -322,7 +346,8 @@
         "level": "130+",
         "place": "Lizard Chosens",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "130+",
@@ -426,19 +451,22 @@
         "level": "200+",
         "place": "Minotaur Cults",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "200+",
         "place": "Glooth Bandits",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "200+",
         "place": "Pirats",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "200+",
@@ -465,7 +493,8 @@
         "level": "200+",
         "place": "Oramond Mountain Hideout Minotaurs",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "200+",
@@ -478,13 +507,15 @@
         "level": "250+",
         "place": "Carnivora's Rock",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "250+",
         "place": "Medusa Tower",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "300+",
@@ -553,7 +584,8 @@
         "level": "300+",
         "place": "Candia Nibblemaws",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "350+",
@@ -888,13 +920,15 @@
         "level": "600+",
         "place": "Warzone 3",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "600+",
         "place": "Feru Pumin Seal -3",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "600+",
@@ -907,37 +941,43 @@
         "level": "600+",
         "place": "Girtablilus",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "600+",
         "place": "Azzilon Walls",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "700+",
         "place": "Azzilon Castle",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "700+",
         "place": "Feru DT/Vexclaw seal (Tafariel)",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "700+",
         "place": "Wardragons",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "900+",
         "place": "Pumin Feru Seal",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "900+",

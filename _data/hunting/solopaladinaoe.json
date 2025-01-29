@@ -3,13 +3,15 @@
         "level": "50+",
         "place": "Peninsula Tomb",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "50+",
         "place": "Bonebeast Island (Ramoa)",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "65+",
@@ -22,7 +24,8 @@
         "level": "75+",
         "place": "Middle Spike",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "150+",
@@ -34,13 +37,15 @@
         "level": "150+",
         "place": "Yalahar Sunken Quarter",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "150+",
         "place": "Exotic Cave",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "150+",
@@ -88,7 +93,8 @@
         "level": "150+",
         "place": "Mini Rosha",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "150+",
@@ -101,7 +107,8 @@
         "level": "150+",
         "place": "Lizard Chosens",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "150+",
@@ -205,7 +212,8 @@
         "level": "200+",
         "place": "Yalahar Grim Reapers",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "200+",
@@ -323,7 +331,8 @@
         "level": "300+",
         "place": "Candia Nibblemaws",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "300+",
@@ -560,85 +569,99 @@
         "level": "600+",
         "place": "Port Hope Flimsies",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "600+",
         "place": "Girtablilu",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "600+",
         "place": "Warzone 2",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "600+",
         "place": "Warzone 3",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "600+",
         "place": "Venore Lost Souls",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "600+",
         "place": "Azzilon Walls",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "700+",
         "place": "Azzilon Castle",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "700+",
         "place": "Ferumbras Way",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "700+",
         "place": "Falcon Bastion",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "700+",
         "place": "Thais Floating Savants",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "800+",
         "place": "Darashia Skeletons",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "800+",
         "place": "Bounac Crypt Warriors",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "850+",
         "place": "Issavi Crypts (Wardens/Sphinx)",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "1200+",
         "place": "Feru Infernatil",
         "raw_exp": "-",
-        "loot": "-"
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "1300+",
