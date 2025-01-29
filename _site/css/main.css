@@ -72,7 +72,7 @@ ol, ul {
   align: center;
 }
 
-#tibiatrade_span {
+.tibiatrade_span {
   margin-top: 10px;
   display: block;
   width: 100%;
@@ -80,8 +80,12 @@ ol, ul {
   font-size: 12px;
 }
 
-#tibiatrade_span a {
+.tibiatrade_span a {
   color: inherit;
+}
+
+#tibiatrade_low_res {
+  display: none;
 }
 
 #page-container {
@@ -917,6 +921,10 @@ ol, ul {
   }
   #right-footer-space {
     display: none;
+  }
+  #tibiatrade_low_res {
+    display: initial;
+    width: 100%;
   }
 }
 @media (max-width: 800px) {
