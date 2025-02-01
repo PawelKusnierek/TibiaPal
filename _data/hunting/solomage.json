@@ -364,6 +364,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "100+",
+        "place": "Iksupan",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "120+",
         "place": "Lizard Chosens",
         "raw_exp": "-",
@@ -455,8 +462,8 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "150+",
-        "place": "Wreckoning Pirats",
+        "level": "200+",
+        "place": "Okolnir (Sorcerer)",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -477,21 +484,7 @@
     },
     {
         "level": "200+",
-        "place": "Edron/Yalahar Demons Icicles",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "200+",
         "place": "Mini Rosha",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "200+",
-        "place": "Minotaur Cults",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
