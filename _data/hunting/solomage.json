@@ -184,8 +184,8 @@
     {
         "level": "50+",
         "place": "Haunted Treelings Vengoth",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "375k",
+        "loot": "-80k",
         "link" : "https://youtu.be/"
     },
     {
@@ -211,83 +211,76 @@
     },
     {
         "level": "50+",
-        "place": "Roaring Lions",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Lion's Rock Lions",
+        "raw_exp": "440k",
+        "loot": "-20k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "60+",
         "place": "Middle Spike",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "800k",
+        "loot": "-20k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "70+",
+        "place": "Mutated Tigers Yalahar (Profit)",
+        "raw_exp": "325k",
+        "loot": "200k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "70+",
+        "place": "Krailos Ogres Surface",
+        "raw_exp": "530k",
+        "loot": "300k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "80+",
         "place": "Giant Spiders Port Hope",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "620k",
+        "loot": "-25k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "80+",
         "place": "Muggy Plains",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "80+",
-        "place": "Oramond Minos (SD)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "750k",
+        "loot": "-50k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "80+",
         "place": "Issavi Surafce (SD)",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "80+",
-        "place": "Feyrist Surface",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "80+",
-        "place": "Cemetery Quarter -1 (Profit)",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "80+",
-        "place": "Old Masonry (Death portal)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "830k",
+        "loot": "-200k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "80+",
         "place": "Hive Surface",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "490k",
+        "loot": "240k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "80+",
-        "place": "Krailos Ogres Surface",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Feyrist Surface",
+        "raw_exp": "650k",
+        "loot": "50k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "80+",
+        "place": "Old Masonry (Death portal)",
+        "raw_exp": "800k",
+        "loot": "20k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "100+",
         "place": "Quaras Liberty Bay",
         "raw_exp": "-",
         "loot": "-",
@@ -694,6 +687,13 @@
     },
     {
         "level": "500+",
+        "place": "Oramond Catacombs",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "500+",
         "place": "Girtablilu",
         "raw_exp": "-",
         "loot": "-",
@@ -737,6 +737,20 @@
     {
         "level": "600+",
         "place": "Cursed Prospector",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Ingol",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Warzone 1/2/3",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
