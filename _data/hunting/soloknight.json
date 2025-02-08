@@ -302,6 +302,20 @@
     },
     {
         "level": "130+",
+        "place": "Replica Dungeon",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "130+",
+        "place": "Desecrated Glade",
+        "raw_exp": "-",
+        "loot": "-",
+        "link": ""
+    },
+    {
+        "level": "130+",
         "place": "Okolnir",
         "raw_exp": "1.55kk",
         "loot": "-75k",

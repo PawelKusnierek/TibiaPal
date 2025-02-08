@@ -120,6 +120,13 @@
     },
     {
         "level": "80+",
+        "place": "Desecrated Glade",
+        "raw_exp": "-",
+        "loot": "-",
+        "link": ""
+    },
+    {
+        "level": "80+",
         "place": "Okolnir",
         "raw_exp": "-",
         "loot": "-",
