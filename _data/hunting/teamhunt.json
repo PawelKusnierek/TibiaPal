@@ -455,6 +455,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "400+",
+        "place": "Ingol",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "450+",
         "place": "Secret Library",
         "raw_exp": "-",
@@ -463,13 +470,13 @@
     },
     {
         "level": "450+",
-        "place": "Ferumbras Ascension Seals",
+        "place": "Ferum Seals",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "600+",
+        "level": "500+",
         "place": "Soul War Areas",
         "raw_exp": "-",
         "loot": "-",
@@ -478,6 +485,20 @@
     {
         "level": "600+",
         "place": "Primal Ordeal Areas",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Azzilon Catacombs",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Rotten Blood Areas",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
