@@ -169,11 +169,12 @@
     <span style="color: green"><b>UPDATED:</b></span> Winter Update 2024.
 </p>
 <br>
-<div class="tab">
+<div class="equipment_tab">
     <button id="druid" class="tablinks active" onclick="show_tab(event, 'Druid')">Druid</button>
     <button id="knight" class="tablinks" onclick="show_tab(event, 'Knight')">Knight</button>
     <button id="paladin" class="tablinks" onclick="show_tab(event, 'Paladin')">Paladin</button>
     <button id="sorcerer" class="tablinks" onclick="show_tab(event, 'Sorcerer')">Sorcerer</button>
+    <button id="monk" class="tablinks" onclick="show_tab(event, 'Monk')">Monk (WIP)</button>
 </div>
 
 <div id="Druid" class="tabcontent">
@@ -1610,7 +1611,83 @@
     </table>
 </div>
 
+<div id="Monk" class="tabcontent">
+    <div class="type_filter_selection">
+        <b>Type Filter</b>:<br><br>
+        <label>
+            <input value="All" type="radio" name="type_filter_choice_monk" checked onclick="apply_filters()"> All
+        </label>
+        <label>
+            <input value="Amulet" type="radio" name="type_filter_choice_monk" onclick="apply_filters()"> Amulet
+        </label>
+        <label>
+            <input value="Ring" type="radio" name="type_filter_choice_monk" onclick="apply_filters()"> Ring
+        </label>
+        <label>
+            <input value="Wand" type="radio" name="type_filter_choice_monk" onclick="apply_filters()"> Wand
+        </label>
+        <label>
+            <input value="Helmet" type="radio" name="type_filter_choice_monk" onclick="apply_filters()"> Helmet
+        </label>
+        <label>
+            <input value="Armor" type="radio" name="type_filter_choice_monk" onclick="apply_filters()"> Armor
+        </label>
+        <label>
+            <input value="Legs" type="radio" name="type_filter_choice_monk" onclick="apply_filters()"> Legs
+        </label>
+        <label>
+            <input value="Boots" type="radio" name="type_filter_choice_monk" onclick="apply_filters()"> Boots
+        </label>
+        <label>
+            <input value="Spellbook" type="radio" name="type_filter_choice_monk" onclick="apply_filters()"> Spellbook
+        </label>
+    </div><br>
 
+    <div class="filter_selection">
+        <b>Level Filter</b>:<br><br>
+        <label>
+            <input value="0" type="radio" name="level_filter_choice_monk" checked onclick="apply_filters()"> All
+        </label><br><br>
+        <label>
+            <input value="200+" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> 200+
+        </label>
+        <label>
+            <input value="250+" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> 250+
+        </label>
+        <label>
+            <input value="300+" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> 300+
+        </label>
+        <label>
+            <input value="400+" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> 400+
+        </label>
+        <label>
+            <input value="500+" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> 500+
+        </label><br><br>
+        <label>
+            <input value="<200" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> &le;200
+        </label>
+        <label>
+            <input value="<250" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> &le;250
+        </label>
+        <label>
+            <input value="<300" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> &le;300
+        </label>
+        <label>
+            <input value="<400" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> &le;400
+        </label>
+        <label>
+            <input value="<500" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> &le;500
+    </div>
+
+    <table class="equipment_table" id="equipment_table_monk">
+        <tr>
+            <th class="level_row">Level</th>
+            <th class="image_row">Image</th>
+            <th class="name_row">Name</th>
+            <th class="type_row">Type</th>
+        </tr>
+    </table>
+</div>
     </section>
     
     <!--><div class="cookieconsent"

@@ -1325,11 +1325,11 @@ ol, ul {
   margin-left: 10px;
 }
 
-.tab {
+.charm_tab {
   overflow: hidden;
 }
 
-.tab button {
+.charm_tab button {
   border: 1px solid #cbd4ff;
   background-color: inherit;
   float: left;
@@ -1344,11 +1344,11 @@ ol, ul {
   font-family: Verdana, Arial, Times New Roman, sans-serif;
 }
 
-.tab button:hover {
+.charm_tab button:hover {
   background-color: #14356d;
 }
 
-.tab button.active {
+.charm_tab button.active {
   background-color: #1c4b9b;
   width: 50%;
 }
@@ -1401,4 +1401,38 @@ ol, ul {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.equipment_tab {
+  overflow: hidden;
+}
+
+.equipment_tab button {
+  border: 1px solid #cbd4ff;
+  background-color: inherit;
+  float: left;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  width: 20%;
+  color: #ccc;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Verdana, Arial, Times New Roman, sans-serif;
+}
+
+.equipment_tab button:hover {
+  background-color: #14356d;
+}
+
+.equipment_tab button.active {
+  background-color: #1c4b9b;
+  width: 20%;
+}
+
+.tabcontent {
+  padding-top: 10px;
+  display: none;
+  border-top: none;
 }/*# sourceMappingURL=main.css.map */
