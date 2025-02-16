@@ -116,7 +116,7 @@ function enable_default_tabs() {
   else if(location.href.split("/").slice(-1).includes('equipment')) {
     initial_show_tab("Druid")
   }
-  else if(location.href.split("/").slice(-1).includes('hunting')) {
+  else if(location.href.includes('/hunting')) {
     initial_show_tab("Knight")
   }
 
@@ -145,7 +145,7 @@ function show_tab(evt, tab_name) {
 
 function initial_show_tab(tab_name) {
   // Declare all variables
-  var i, tabcontent, tablinks;
+  var i, tabcontent;
 
   // Get all elements with class="tabcontent" and hide them
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -153,6 +153,6 @@ function initial_show_tab(tab_name) {
     tabcontent[i].style.display = "none";
   }
 
-  // Show the current tab, and add an "active" class to the button that opened the tab
+  // Show the current tab
   document.getElementById(tab_name).style.display = "block";
 }

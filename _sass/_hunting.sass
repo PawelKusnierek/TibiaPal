@@ -1,4 +1,4 @@
-#hunting_table
+.hunting_table
     display: initial
     text-align: left
 
@@ -12,11 +12,11 @@
 .exp_row
     width: 15%
 
-#hunting_table td
+.hunting_table td
     padding-top: 4px
     padding-bottom: 4px
 
-#hunting_table tbody tr:nth-child(even)
+.hunting_table tbody tr:nth-child(even)
     background-color: #0d1e38
 
 #filter_selection
@@ -24,3 +24,34 @@
 
 #filter_selection label
     margin-right: 15px
+
+.hunting_tab 
+    overflow: hidden
+
+.hunting_tab button 
+    border: 1px solid #cbd4ff
+    background-color: inherit
+    float: left
+    outline: none
+    cursor: pointer
+    padding: 14px 16px
+    transition: 0.3s
+    width: 33.33%
+    color: #ccc
+    font-size: 14px
+    font-weight: bold
+    font-family: Verdana, Arial, Times New Roman, sans-serif
+
+
+.hunting_tab button:hover 
+    background-color: #14356d
+
+
+.hunting_tab button.active 
+    background-color: #1c4b9b
+    width: 33.33%
+
+.tabcontent
+    padding-top: 10px
+    display: none
+    border-top: none

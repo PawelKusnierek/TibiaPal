@@ -16,7 +16,7 @@
     <link rel="stylesheet" href=/css/main.css>
 
     <!-- javascript files -->
-    
+    <script src="../scripts/hunting.js"></script>
     <script src=/scripts/onload.js></script>
 
     <!-- extra googleapi fonts -->
@@ -98,7 +98,7 @@
 
     <div class="nav-section">GUIDES / REFERENCES</div>
     <div class="active nav-item"><a href="/hunting">
-            <div class="nav-image-container"><img class="nav-image" src=/images/Sword.gif>Hunting
+            <div class="nav-image-container"><img class="nav-image" src=/images/Sword.gif><span id="new-homepage">UPDATED!</span>Hunting
                 Places</div>
         </a></div>
 <div class="nav-item"><a href="/equipment">
@@ -164,22 +164,6359 @@
 </nav>
     
     <section id="main-content">
-    <h1>Tibia Hunting Places</h1>
-<h3>Solo Places</h3>
-<h5><a href="/hunting/soloknight">Solo Knight</a></h5>
-<h5><a href="/hunting/solomage">Solo Mage (Sorcerer/Druid)</a></h5>
-<h5><a href="/hunting/solopaladinsingle">Solo Paladin - Single Target</a></h5>
-<h5><a href="/hunting/solopaladinaoe">Solo Paladin - AOE (150+)</a></h5>
-<h3>Multi Vocation Places</h3>
-<h5><a href="/hunting/fullth">Full 4 Vocation TH</a></h5>
-<h5><a href="/hunting/duos">Duos</a></h5>
-<h1>Notes</h1>
-<ol id="align-left">
-    <li>These lists intend to cover all 'good enough' spots to hunt at, this means not all the places
-        will be meta S tier
-    </li>
-    <li>These lists intend to be an easy reference & to provide ideas of places to hunt that you might not otherwise think of</li>
-</ol>
+    <div class="hunting_tab">
+    <button id="knight" class="tablinks active" onclick="show_tab(event, 'Knight')">Knight</button>
+    <button id="paladin" class="tablinks" onclick="show_tab(event, 'Paladin')">Paladin</button>
+    <button id="mage" class="tablinks" onclick="show_tab(event, 'Mage')">Druid/Sorcerer</button>
+    <button id="monk" class="tablinks" onclick="show_tab(event, 'Monk')">Monk</button>
+    <button id="duo" class="tablinks" onclick="show_tab(event, 'Duo')">Duos</button>
+    <button id="teamhunt" class="tablinks" onclick="show_tab(event, 'Teamhunt')">Teamhunts</button>
+</div>
+
+<div id="Knight" class="tabcontent">
+    <div id="filter_selection">
+        <b>Level Filter</b>:<br><br>
+        <label>
+            <input value="0" type="radio" name="level_filter_choice_knight" checked onclick="apply_level_filter()"> All
+        </label>
+        <label>
+            <input value="50" type="radio" name="level_filter_choice_knight" onclick="apply_level_filter()"> 50+
+        </label>
+        <label>
+            <input value="100" type="radio" name="level_filter_choice_knight" onclick="apply_level_filter()"> 100+
+        </label>
+        <label>
+            <input value="130" type="radio" name="level_filter_choice_knight" onclick="apply_level_filter()"> 130+
+        </label>
+        <label>
+            <input value="200" type="radio" name="level_filter_choice_knight" onclick="apply_level_filter()"> 200+
+        </label>
+        <label>
+            <input value="300" type="radio" name="level_filter_choice_knight" onclick="apply_level_filter()"> 300+
+        </label>
+        <label>
+            <input value="400" type="radio" name="level_filter_choice_knight" onclick="apply_level_filter()"> 400+
+        </label>
+    </div>
+
+    <table id="hunting_table_knight" class="hunting_table">
+        <tr>
+            <th class="level_row">Level</th>
+            <th class="place_row">Place</th>
+            <th class="exp_row">Raw exp</th>
+            <th class="loot_row">Loot</th>
+        </tr>
+        
+            <tr>
+                <td>8+</td>
+
+                
+                <td>Rotworms Liberty Bay/Darashia</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>8+</td>
+
+                
+                <td>Swamp Trolls Port Hope/Venore</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>8+</td>
+
+                
+                <td>Crocodiles Port Hope</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>8+</td>
+
+                
+                <td>Larva Ankrahmun</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>20+</td>
+
+                
+                <td>Coryms Port Hope</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>20+</td>
+
+                
+                <td>Cyclopolis</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>20+</td>
+
+                
+                <td>Cyclops Mistrock</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>20+</td>
+
+                
+                <td>Elves Yalahar</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>20+</td>
+
+                
+                <td><a href="https://youtu.be/hg5Tgj_bubU" target="_blank">Laguna Islands</a></td>
+                
+
+                <td>90k</td>
+                <td>50k</td>
+            </tr>
+        
+            <tr>
+                <td>20+</td>
+
+                
+                <td>Tarantulas Port Hope</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>20+</td>
+
+                
+                <td><a href="https://youtu.be/3mcY_eNBThg" target="_blank">Blood Crabs Laguna Islands</a></td>
+                
+
+                <td>100k</td>
+                <td>150k</td>
+            </tr>
+        
+            <tr>
+                <td>30+</td>
+
+                
+                <td><a href="https://youtu.be/BmLScxZQ9Vk" target="_blank">Mutated Humans Yalahar</a></td>
+                
+
+                <td>135k</td>
+                <td>20k</td>
+            </tr>
+        
+            <tr>
+                <td>30+</td>
+
+                
+                <td>Zombies Treasure Island</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>30+</td>
+
+                
+                <td>Carniphilas Port Hope</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>30+</td>
+
+                
+                <td>Upper Spike</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>40+</td>
+
+                
+                <td>Pirates Yalahar</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Mother of Scarabs Lair -3</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Mutated Rats Alchemist Quarter</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Arena Quarter</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Darashia Dragon Lair</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Yalahar Dragons</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td><a href="https://youtu.be/xTQ6dk8LvlQ" target="_blank">Lion's Rock</a></td>
+                
+
+                <td>500k</td>
+                <td>65k</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td><a href="https://youtu.be/bY6IJrqDAaY" target="_blank">Nibelor Crystal Spiders</a></td>
+                
+
+                <td>400k</td>
+                <td>90k</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td><a href="https://youtu.be/MzHX_f4jK-0" target="_blank">Vengoth Haunted Treelings</a></td>
+                
+
+                <td>360k</td>
+                <td>15k</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Middle Spike</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Old Fortress (Edron) Bonebeasts</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>70+</td>
+
+                
+                <td><a href="https://youtu.be/Eup4SAXdINs" target="_blank">Mother of Scarabs Lair</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>70+</td>
+
+                
+                <td><a href="https://youtu.be/4-BRA05J6xs" target="_blank">Yalahar Bog Raiders Central</a></td>
+                
+
+                <td>600k</td>
+                <td>20k</td>
+            </tr>
+        
+            <tr>
+                <td>70+</td>
+
+                
+                <td><a href="https://youtu.be/L16-bc9CP5Q" target="_blank">Yalahar Alchemist Outskirts</a></td>
+                
+
+                <td>470k</td>
+                <td>75k</td>
+            </tr>
+        
+            <tr>
+                <td>70+</td>
+
+                
+                <td><a href="https://youtu.be/p2HPO2i4IWw" target="_blank">Hive Surface</a></td>
+                
+
+                <td>450k</td>
+                <td>100k</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td><a href="https://youtu.be/C3z3KF_ZB-Y" target="_blank">Giant Spiders PH</a></td>
+                
+
+                <td>500k</td>
+                <td>25k</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td><a href="https://youtu.be/shFG3_qgkT0" target="_blank">Carlin Cults</a></td>
+                
+
+                <td>1.3kk</td>
+                <td>75k</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td>Sea Serpents</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td>Yielothax</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td><a href="https://youtu.be/-9-sCX_V1Q8" target="_blank">Krailos Bug Cave</a></td>
+                
+
+                <td>600k</td>
+                <td>150k</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td>Wyrms Drefia/LB</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td><a href="https://youtu.be/JnwY4WAKX24" target="_blank">Nightmare Scions Krailos</a></td>
+                
+
+                <td>1.25kk</td>
+                <td>0k</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td><a href="https://youtu.be/F_d9LzRCACw" target="_blank">Edron Vampire Crypt</a></td>
+                
+
+                <td>800k</td>
+                <td>200k</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td><a href="https://youtu.be/8XYare-fX6A" target="_blank">Fenrock Dragon Lords</a></td>
+                
+
+                <td>950k</td>
+                <td>0k</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td><a href="https://youtu.be/Blmm8zBjKRg" target="_blank">Edron Heroes -2/-3</a></td>
+                
+
+                <td>1.2kk</td>
+                <td>150k</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td><a href="https://youtu.be/2bqsbJWm1og" target="_blank">Inner Hive Stage2 East</a></td>
+                
+
+                <td>750k</td>
+                <td>300k</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Exotic Cave</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td><a href="https://youtu.be/KRcizvzF0sM" target="_blank">Grimvale -4</a></td>
+                
+
+                <td>1.4kk</td>
+                <td>100k</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Replica Dungeon</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Desecrated Glade</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td><a href="https://youtu.be/a8tJcIpDARk" target="_blank">Okolnir</a></td>
+                
+
+                <td>1.55kk</td>
+                <td>-75k</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td><a href="https://youtu.be/SD2Ete6ZUpQ" target="_blank">Yalahar Sunken Quarter</a></td>
+                
+
+                <td>1.6kk</td>
+                <td>150k</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td><a href="https://youtu.be/Iq47VL2AulA" target="_blank">Mini Rosha</a></td>
+                
+
+                <td>1.15kk</td>
+                <td>350k</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td><a href="https://youtu.be/caQBlOhC5vY" target="_blank">Ravenous Lava Lurkers</a></td>
+                
+
+                <td>2.1kk</td>
+                <td>-200k</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td><a href="https://youtu.be/VVyzX69WqqI" target="_blank">Dark Faun Cave</a></td>
+                
+
+                <td>1.1kk</td>
+                <td>150k</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td><a href="https://youtu.be/oPCujZNnN9k" target="_blank">Oramond West</a></td>
+                
+
+                <td>1.9kk</td>
+                <td>50k</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Lizard Chosens</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td><a href="https://youtu.be/4TjwgLYvmmw" target="_blank">Edron Orc Cults</a></td>
+                
+
+                <td>1.15kk</td>
+                <td>200k</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td><a href="https://youtu.be/p0i3ivvMXFY" target="_blank">Hydras Oramond</a></td>
+                
+
+                <td>1.2kk</td>
+                <td>150k</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td><a href="https://youtu.be/QY5J9Yv36Y8" target="_blank">Oramond Minos</a></td>
+                
+
+                <td>1.5kk</td>
+                <td>150k</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td><a href="https://youtu.be/KYit9Ogcfdc" target="_blank">Elder Wyrms Drefia</a></td>
+                
+
+                <td>1.8kk</td>
+                <td>0</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td><a href="https://youtu.be/1Up6TcdEWCU" target="_blank">Barkless Ab Cults</a></td>
+                
+
+                <td>2.2kk</td>
+                <td>-250k</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td><a href="https://youtu.be/qmU9s79Y1NU" target="_blank">Lower Spike</a></td>
+                
+
+                <td>1.9kk</td>
+                <td>100k</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td><a href="https://youtu.be/zBhplhuKXIY" target="_blank">Iksupan</a></td>
+                
+
+                <td>1.1kk</td>
+                <td>150k</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td><a href="https://youtu.be/ByrANFDESa8" target="_blank">Edron South Werecreatures</a></td>
+                
+
+                <td>1.7kk</td>
+                <td>100k</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td><a href="https://youtu.be/p84-jPg3_D8" target="_blank">Otherworld (Kazo)</a></td>
+                
+
+                <td>1.2kk</td>
+                <td>100k</td>
+            </tr>
+        
+            <tr>
+                <td>185+</td>
+
+                
+                <td><a href="https://youtu.be/3tpY677sesw" target="_blank">Deeplings Library</a></td>
+                
+
+                <td>1.6kk</td>
+                <td>100k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/R_6x8Ktq2TU" target="_blank">Otherworld (Edron)</a></td>
+                
+
+                <td>1.9kk</td>
+                <td>250k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/wBK-Zsv4pGY" target="_blank">Seacrest Serpents</a></td>
+                
+
+                <td>2.1kk</td>
+                <td>400k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/UkyGtD43cIA" target="_blank">Werehyaenas North</a></td>
+                
+
+                <td>2.2kk</td>
+                <td>250k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/YQYLazeveWE" target="_blank">Werehyaenas South</a></td>
+                
+
+                <td>2.6kk</td>
+                <td>250k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>Minotaur Cults</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>Glooth Bandits</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>Pirats</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/RGjHuTgxg7k" target="_blank">Yalahar Grim Reapers</a></td>
+                
+
+                <td>3.5kk</td>
+                <td>0k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/xDwJy-iTtI0" target="_blank">Hive Stage3</a></td>
+                
+
+                <td>2kk</td>
+                <td>300k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/_Nl5iLP_ysw" target="_blank">Draken Walls</a></td>
+                
+
+                <td>2.1kk</td>
+                <td>350k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>Oramond Mountain Hideout Minotaurs</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/Jo0b8yTfkjg" target="_blank">Glooth Tower</a></td>
+                
+
+                <td>2.05kk</td>
+                <td>250k</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Carnivora's Rock</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Medusa Tower</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/D-tKd-2-aP8" target="_blank">Asura Palace</a></td>
+                
+
+                <td>3.5kk</td>
+                <td>550k</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/7lL9Eu4gEfY" target="_blank">Werelions -1</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/4UjR7XhKo2Q" target="_blank">Werelions -2</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/C3HBF3noWV0" target="_blank">Deeper Banuta (Bottom Floor)</a></td>
+                
+
+                <td>3kk</td>
+                <td>800k</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/KJ9s5nD2_XM" target="_blank">Wote 8 Drakens</a></td>
+                
+
+                <td>2.5kk</td>
+                <td>700k</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/UXeQuJ7UXbA" target="_blank">Oramond Fury Dungeon</a></td>
+                
+
+                <td>2.5kk</td>
+                <td>500k</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/sUyHb_pEeRQ" target="_blank">Drefia Grim Reapers</a></td>
+                
+
+                <td>2.8kk</td>
+                <td>200k</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/8J9jVBLu8ik" target="_blank">Diremaw Task Area</a></td>
+                
+
+                <td>2.4kk</td>
+                <td>700k</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/w0XLvF35jCY" target="_blank">Warzone 4</a></td>
+                
+
+                <td>3.5kk</td>
+                <td>600k</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Candia Nibblemaws</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td><a href="https://youtu.be/vlOWwyJpEZI" target="_blank">POI Dark Torturer Seal</a></td>
+                
+
+                <td>1.5kk</td>
+                <td>550k</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td><a href="https://youtu.be/pI6rwhbkRE4" target="_blank">Winter Court behind TP/Portal</a></td>
+                
+
+                <td>3.3kk</td>
+                <td>600k</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td><a href="https://youtu.be/nd95xvmtIUc" target="_blank">Asura Mirror -1</a></td>
+                
+
+                <td>5.7kk</td>
+                <td>800k</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td><a href="https://youtu.be/zZv9XYnpF_U" target="_blank">Oramond Wildlife Raid</a></td>
+                
+
+                <td>3.8kk</td>
+                <td>600k</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td><a href="https://youtu.be/xEV7rp0YQ8g" target="_blank">Lower Rosha</a></td>
+                
+
+                <td>3.5kk</td>
+                <td>750k</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td><a href="https://youtu.be/xDNZPhIDBfE" target="_blank">Warzone 5</a></td>
+                
+
+                <td>3.9kk</td>
+                <td>800k</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td><a href="https://youtu.be/kTMrNwPKebg" target="_blank">Gazer Spectre</a></td>
+                
+
+                <td>3.7kk</td>
+                <td>700k</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td><a href="https://youtu.be/ZjtdCId8l_M" target="_blank">POI Infernatil Seal (Fire)</a></td>
+                
+
+                <td>1.5kk</td>
+                <td>700k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/z6fgTbeD--k" target="_blank">Warzone 6</a></td>
+                
+
+                <td>3kk</td>
+                <td>750k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/ObUXgSt0CKY" target="_blank">Rosha West</a></td>
+                
+
+                <td>4.3kk</td>
+                <td>1kk</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/p_Fy4LA8UaI" target="_blank">POI Infernatil + DT Seals</a></td>
+                
+
+                <td>2.2kk</td>
+                <td>900k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/SwhH7mfXKWA" target="_blank">POI Verminor Seal</a></td>
+                
+
+                <td>3kk</td>
+                <td>650k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/IZmXegtiO3U" target="_blank">Buried Cathedral -1</a></td>
+                
+
+                <td>4.5kk</td>
+                <td>750k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/oSh1OpMdNlI" target="_blank">Winter Court</a></td>
+                
+
+                <td>4kk</td>
+                <td>750k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/ZvAdeRxwIF8" target="_blank">Haunted House</a></td>
+                
+
+                <td>4.4kk</td>
+                <td>800k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/UyBEeDVkh8Y" target="_blank">Burster Spectre</a></td>
+                
+
+                <td>4.5kk</td>
+                <td>400k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/nt7sNGSzkDM" target="_blank">Roshamuul Depot</a></td>
+                
+
+                <td>3.5kk</td>
+                <td>750k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/n0UFwT3P6Pc" target="_blank">Marapur Turtles and Foam Stalkers</a></td>
+                
+
+                <td>2.6kk</td>
+                <td>1.2kk</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/F09eddj6M54" target="_blank">Prison -1</a></td>
+                
+
+                <td>4.1kk</td>
+                <td>850k</td>
+            </tr>
+        
+            <tr>
+                <td>450+</td>
+
+                
+                <td><a href="https://youtu.be/P2at25KY0eU" target="_blank">Prison -2</a></td>
+                
+
+                <td>4kk</td>
+                <td>850k</td>
+            </tr>
+        
+            <tr>
+                <td>450+</td>
+
+                
+                <td><a href="https://youtu.be/aIa1rppOhBg" target="_blank">Summer Court for first timers (half boxes)</a></td>
+                
+
+                <td>4.8kk</td>
+                <td>900k</td>
+            </tr>
+        
+            <tr>
+                <td>450+</td>
+
+                
+                <td><a href="https://youtu.be/Y8VtANmM6WY" target="_blank">Nagas</a></td>
+                
+
+                <td>5.5kk</td>
+                <td>500k</td>
+            </tr>
+        
+            <tr>
+                <td>450+</td>
+
+                
+                <td><a href="https://youtu.be/9jrVlQdyKR0" target="_blank">Roshamuul Shockheads</a></td>
+                
+
+                <td>4.3kk</td>
+                <td>1kk</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/EikJ5qIFccg" target="_blank">Oskayaat Weretigers</a></td>
+                
+
+                <td>5.1kk</td>
+                <td>900k</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/IUvxMTq8eMg" target="_blank">Oskayaat Werecrocodiles</a></td>
+                
+
+                <td>4.9kk</td>
+                <td>800k</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/qztNKrkX4xQ" target="_blank">Otherworld</a></td>
+                
+
+                <td>3kk</td>
+                <td>1.1kk</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/c5AQnTF3W1I" target="_blank">Deathlings</a></td>
+                
+
+                <td>4.9kk</td>
+                <td>700k</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/iNy9v0cuywY" target="_blank">INQ Dark Torturer Seal</a></td>
+                
+
+                <td>4kk</td>
+                <td>1.1kk</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/Qg59I8UENT8" target="_blank">Nightmare Isles</a></td>
+                
+
+                <td>4.2kk</td>
+                <td>800k</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/u3J4bu9CYi4" target="_blank">Warzone 7</a></td>
+                
+
+                <td>2.4kk</td>
+                <td>1.1kk</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/rVoJo4yPoyE" target="_blank">Warzone 8</a></td>
+                
+
+                <td>3.7kk</td>
+                <td>1.6kk</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/d5R5ZYgPbOc" target="_blank">Oramond Catacombs</a></td>
+                
+
+                <td>4.4kk</td>
+                <td>900k</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/9UPypZPCjg4" target="_blank">Cobra Bastion for Beginners</a></td>
+                
+
+                <td>5.5kk</td>
+                <td>700k</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/XdWrKp46meE" target="_blank">Floating Savants MoTA</a></td>
+                
+
+                <td>4kk</td>
+                <td>1kk</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/LgrIoKfVKMY" target="_blank">Summer Court full boxing</a></td>
+                
+
+                <td>6kk</td>
+                <td>1kk</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/eYww7TEtxxA" target="_blank">Carnisylvans</a></td>
+                
+
+                <td>3.2kk</td>
+                <td>1.5kk</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/-2E-eooe3NU" target="_blank">Warzone 1</a></td>
+                
+
+                <td>3.5kk</td>
+                <td>1kk</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/43CrzKHwN_A" target="_blank">Warzone 2</a></td>
+                
+
+                <td>4.3kk</td>
+                <td>900k</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/p-kD2EpGF8g" target="_blank">Issavi Crypts (Sphinx, Wardens)</a></td>
+                
+
+                <td>6.2kk</td>
+                <td>500k</td>
+            </tr>
+        
+            <tr>
+                <td>550+</td>
+
+                
+                <td><a href="https://youtu.be/Duv2NWQc1nc" target="_blank">Cobra Bastion -1</a></td>
+                
+
+                <td>6.5kk</td>
+                <td>400k</td>
+            </tr>
+        
+            <tr>
+                <td>550+</td>
+
+                
+                <td><a href="https://youtu.be/CMwLp0PWqi4" target="_blank">Flimsy Venore -1</a></td>
+                
+
+                <td>5.1kk</td>
+                <td>1kk</td>
+            </tr>
+        
+            <tr>
+                <td>550+</td>
+
+                
+                <td><a href="https://youtu.be/R4BrdVEDcDQ" target="_blank">Flimsy Port Hope</a></td>
+                
+
+                <td>5kk</td>
+                <td>550k</td>
+            </tr>
+        
+            <tr>
+                <td>550+</td>
+
+                
+                <td><a href="https://youtu.be/TQ6acS-sKEU" target="_blank">Bashmu</a></td>
+                
+
+                <td>3.2kk</td>
+                <td>1.3kk</td>
+            </tr>
+        
+            <tr>
+                <td>550+</td>
+
+                
+                <td><a href="https://youtu.be/4oUyVfnzvAw" target="_blank">Feru Way</a></td>
+                
+
+                <td>4.5kk</td>
+                <td>1.3kk</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td><a href="https://youtu.be/euMIhkrT0Mw" target="_blank">Issavi Sewers</a></td>
+                
+
+                <td>5.5kk</td>
+                <td>1kk</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td><a href="https://youtu.be/X4C2-DFsTvM" target="_blank">Issavi Surface (East)</a></td>
+                
+
+                <td>6kk</td>
+                <td>350k</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td><a href="https://youtu.be/bqSzm8ueGzc" target="_blank">Temple of the Sun and Sea</a></td>
+                
+
+                <td>5.2kk</td>
+                <td>650k</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Warzone 3</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Feru Pumin Seal -3</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td><a href="https://youtu.be/iXCGQvGSEQA" target="_blank">Oramond Mountain Hideout -1/-2</a></td>
+                
+
+                <td>4kk</td>
+                <td>800k</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Girtablilus</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Azzilon Walls</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>700+</td>
+
+                
+                <td>Azzilon Castle</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>700+</td>
+
+                
+                <td>Feru DT/Vexclaw seal (Tafariel)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>700+</td>
+
+                
+                <td>Wardragons</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>900+</td>
+
+                
+                <td>Pumin Feru Seal</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>900+</td>
+
+                
+                <td>Infernatil Feru Seal</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+    </table>
+</div>
+
+<div id="Paladin" class="tabcontent">
+    <div id="filter_selection">
+        <b>Level Filter</b>:<br><br>
+        <label>
+            <input value="0" type="radio" name="level_filter_choice_paladin" checked onclick="apply_level_filter()"> All
+        </label>
+        <label>
+            <input value="50" type="radio" name="level_filter_choice_paladin" onclick="apply_level_filter()"> 50+
+        </label>
+        <label>
+            <input value="100" type="radio" name="level_filter_choice_paladin" onclick="apply_level_filter()"> 100+
+        </label>
+        <label>
+            <input value="150" type="radio" name="level_filter_choice_paladin" onclick="apply_level_filter()"> 150+
+        </label>
+        <label>
+            <input value="200" type="radio" name="level_filter_choice_paladin" onclick="apply_level_filter()"> 200+
+        </label>
+        <label>
+            <input value="300" type="radio" name="level_filter_choice_paladin" onclick="apply_level_filter()"> 300+
+        </label>
+        <label>
+            <input value="400" type="radio" name="level_filter_choice_paladin" onclick="apply_level_filter()"> 400+
+        </label>
+    </div>
+
+    <table id="hunting_table_paladin" class="hunting_table">
+        <tr>
+            <th class="level_row">Level</th>
+            <th class="place_row">Place</th>
+            <th class="exp_row">Raw exp</th>
+            <th class="loot_row">Loot</th>
+        </tr>
+        
+            <tr>
+                <td>8+</td>
+
+                
+                <td>Rotworms Liberty Bay</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>8+</td>
+
+                
+                <td>Swamp Trolls Port Hope/Venore</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>8+</td>
+
+                
+                <td>Crocodiles PH</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>8+</td>
+
+                
+                <td>Larva Ankh</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>15+</td>
+
+                
+                <td>Edron Tomb</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>15+</td>
+
+                
+                <td>Larva/Mummy MOSL -1/-2</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>20+</td>
+
+                
+                <td>Cyclopolis</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>20+</td>
+
+                
+                <td>Cyclops Mistrock</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>25+</td>
+
+                
+                <td><a href="https://youtu.be/_PQb_eT6nVU" target="_blank">Stonerefiners</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>25+</td>
+
+                
+                <td>Coryms PH</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>25+</td>
+
+                
+                <td>Elves Yalahar</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>25+</td>
+
+                
+                <td>Laguna Islands</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>25+</td>
+
+                
+                <td>Tarantulas PH</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>25+</td>
+
+                
+                <td>Mutated Humans Yalahar</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>25+</td>
+
+                
+                <td>Minotaur Pyramind Darashia</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>30+</td>
+
+                
+                <td>Zombies Yala/Treasure Island</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>30+</td>
+
+                
+                <td>Apes Banuta</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>30+</td>
+
+                
+                <td>Carniphilas PH</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>40+</td>
+
+                
+                <td>Mummy/Bonebeasts MOSL -3</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>40+</td>
+
+                
+                <td>Pirates Yala</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>40+</td>
+
+                
+                <td>Cults Yala</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Lion's Rock</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Bonebeast Island</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Mutated Rats Alchemist Quarter</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td><a href="https://youtu.be/uIkClHzNg60" target="_blank">Edron Vampire Crypt -3</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Arena Quarter</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Darashia Dragon Lair</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Yalahar Dragons</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td><a href="https://youtu.be/Rimlz__WgqY" target="_blank">Old Fortress Bonebeasts</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Krailos Surface</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td><a href="https://youtu.be/6Bh7yIzXaZU" target="_blank">Werebadgers Grimvale -1</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Hive Surface</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Peninsula Tomb (AOE)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Bonebeast Island (AOE)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>60+</td>
+
+                
+                <td>Nibelor Crystal Spiders</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>70+</td>
+
+                
+                <td>Goroma Cults</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>70+</td>
+
+                
+                <td><a href="https://youtu.be/R9Vg1m-_X8c" target="_blank">Cemetery Quarter -1</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>70+</td>
+
+                
+                <td>Wyrms Drefia/LB</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>70+</td>
+
+                
+                <td>Mother of Scarabs Lair (AOE)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td>Middle Spike (AOE)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td>Giant Spiders PH</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td>Krailos Bug Cave</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td>Muggy Plains</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td>Sea Serpents</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td>Okolnir Frost Dragons</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td>Braindeath LB</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td>Yielothax</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td><a href="https://youtu.be/-XQOfzhki80" target="_blank">Nightmare Scions Krailos</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td>Edron Vampire Crypt -4</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td><a href="https://youtu.be/V5oa4ANRnH0" target="_blank">Oramond Minos</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td>Dragon Lords Fenrock/POI</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td><a href="https://youtu.be/pO_RoBW3OwY" target="_blank">Grimvale -4</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td>Exotic Cave Spiders cave</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td><a href="https://youtu.be/zkCvaKdiHgs" target="_blank">Mini Rosha</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td><a href="https://youtu.be/wiQJULJ2sZI" target="_blank">Werehyaenas -1</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td><a href="https://youtu.be/3Z_mfTJReVg" target="_blank">Putrid Mummy</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td>Feyrist Surface</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td><a href="https://youtu.be/C9Tz1wPGugY" target="_blank">Edron South Were</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td><a href="https://youtu.be/59Cpjs7Gaus" target="_blank">Lizard Chosens</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>90+</td>
+
+                
+                <td>Hellspawns Yalahar</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Ravenous Lava Lurkers</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Nightmares Cemetery Yalahar</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>MoTa Fury</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td><a href="https://youtu.be/PTu0cnRk1hQ" target="_blank">Banuta -1 (Hydras/SS/Medusa)</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td><a href="https://youtu.be/pV3kDQhMSzI" target="_blank">Talahu Medusa/Serpents</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td><a href="https://youtu.be/M1mQIymMIZM" target="_blank">Edron Demons</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td><a href="https://youtu.be/47EEF2XqGtQ" target="_blank">Frazzlemaw Bridge</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td><a href="https://youtu.be/5lnfVhI_FgI" target="_blank">Ghastly Dragons</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td><a href="https://youtu.be/gn2LVX4fY5o" target="_blank">Mother of Scarabs Lair</a></td>
+                
+
+                <td>700k</td>
+                <td>-50k</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td>Yalahar Sunken Quarter</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td>Exotic Cave</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td><a href="https://youtu.be/9cAX1kVkRaU" target="_blank">Carlin Cults</a></td>
+                
+
+                <td>1.2kk</td>
+                <td>100k</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td><a href="https://youtu.be/adjpul3B1XA" target="_blank">Edron Vampire Crypt</a></td>
+                
+
+                <td>900k</td>
+                <td>125k</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td><a href="https://youtu.be/ebCvpKOJxfo" target="_blank">Edron Heroes -2</a></td>
+                
+
+                <td>1.2kk</td>
+                <td>75k</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td><a href="https://youtu.be/olJTJP-WR9g" target="_blank">Edron Heroes -3</a></td>
+                
+
+                <td>1.3kk</td>
+                <td>50k</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td><a href="https://youtu.be/1YBwojd1S4U" target="_blank">Inner Hive (East Stage2)</a></td>
+                
+
+                <td>1.05kk</td>
+                <td>350k</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td><a href="https://youtu.be/LvdeHKM5Zho" target="_blank">Deeplings Library</a></td>
+                
+
+                <td>1.4kk</td>
+                <td>0</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td>Mini Rosha (AOE)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td><a href="https://youtu.be/Tez8wUPL9Xw" target="_blank">Dark Faun Cave</a></td>
+                
+
+                <td>1kk</td>
+                <td>0</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td>Lizard Chosens</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td><a href="https://youtu.be/8dRGek4gRrk" target="_blank">Orc Cults</a></td>
+                
+
+                <td>1.05kk</td>
+                <td>150k</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td><a href="https://youtu.be/AOhqvO8Ghd4" target="_blank">Ravenous Lava Lurkers</a></td>
+                
+
+                <td>2kk</td>
+                <td>-250k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/dOBkd_LdLZE" target="_blank">Oramond Catacombs (Single Target)</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/50-_mcLKK7M" target="_blank">Oramond West</a></td>
+                
+
+                <td>2kk</td>
+                <td>0</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/0z6er7Xf4iQ" target="_blank">Grimvale -4</a></td>
+                
+
+                <td>1.5kk</td>
+                <td>125k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/X1Cqg7GD_VQ" target="_blank">Werelions -2 East</a></td>
+                
+
+                <td>1.7kk</td>
+                <td>150k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/jxn1hdU_5G8" target="_blank">Mino Cults</a></td>
+                
+
+                <td>1.05kk</td>
+                <td>450k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/0IPVH9V7DyE" target="_blank">Werehyaenas North</a></td>
+                
+
+                <td>2kk</td>
+                <td>250k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/gqmBnR8tnwI" target="_blank">Brimstone Bugs WOTE</a></td>
+                
+
+                <td>1.1kk</td>
+                <td>600k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/RSLx2-truP0" target="_blank">Otherworld Kazordoon (Dwarf Bridge)</a></td>
+                
+
+                <td>1.3kk</td>
+                <td>100k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/8LFhpDKsxA4" target="_blank">Otherworld Edron</a></td>
+                
+
+                <td>1.7kk</td>
+                <td>100k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/f-mU8mLrEYU" target="_blank">Glooth Bandits</a></td>
+                
+
+                <td>1.6kk</td>
+                <td>350k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/eyemOlt2wCA" target="_blank">Werecreatures Edron</a></td>
+                
+
+                <td>1.35kk</td>
+                <td>50k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/yvalwLOBtWY" target="_blank">Lizard City</a></td>
+                
+
+                <td>1.5kk</td>
+                <td>100k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/06YRKlTrbXU" target="_blank">Glooth Tower</a></td>
+                
+
+                <td>1.7kk</td>
+                <td>200k</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>Yalahar Grim Reapers</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td><a href="https://youtu.be/Kfg1x-TAGUY" target="_blank">Barkless Elves</a></td>
+                
+
+                <td>2.2kk</td>
+                <td>-300k</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td><a href="https://youtu.be/2OEJ7blT8X0" target="_blank">Deeper Banuta -6</a></td>
+                
+
+                <td>2kk</td>
+                <td>350k</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td><a href="https://youtu.be/eWChoPnU8Eg" target="_blank">Deeper Banuta -8</a></td>
+                
+
+                <td>2.3kk</td>
+                <td>400k</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td><a href="https://youtu.be/ze5o_-5hFx4" target="_blank">Werehyaenas South</a></td>
+                
+
+                <td>2.6kk</td>
+                <td>500k</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td><a href="https://youtu.be/OqV3NWN5fo8" target="_blank">Seacrest Serpents Birthing Grounds</a></td>
+                
+
+                <td>1.65kk</td>
+                <td>450k</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td><a href="https://youtu.be/0nYExmxEovQ" target="_blank">Diremaw Task Area</a></td>
+                
+
+                <td>2kk</td>
+                <td>500k</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td><a href="https://youtu.be/RuA-mm0weAM" target="_blank">Medusa Tower</a></td>
+                
+
+                <td>2.4kk</td>
+                <td>450k</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td><a href="https://youtu.be/guF8Myg363M" target="_blank">Elder Wyrms Drefia</a></td>
+                
+
+                <td>1.8kk</td>
+                <td>100k</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td><a href="https://youtu.be/Qwq0wDVcmVg" target="_blank">Hive West (Stage3)</a></td>
+                
+
+                <td>2kk</td>
+                <td>400k</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/GMIvP48ruqY" target="_blank">Draken Walls</a></td>
+                
+
+                <td>2kk</td>
+                <td>300k</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/uTBkrfVRZ_c" target="_blank">Drefia Grim Reapers</a></td>
+                
+
+                <td>2.6kk</td>
+                <td>0k</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/DWTVf9DLcAw" target="_blank">Werelions -1</a></td>
+                
+
+                <td>2.75kk</td>
+                <td>700k</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/TtzhdO5v33g" target="_blank">Werelions -2</a></td>
+                
+
+                <td>2.55kk</td>
+                <td>650k</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/M89Pq5NI9ho" target="_blank">Asura Palace</a></td>
+                
+
+                <td>3.1kk</td>
+                <td>350k</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/YdDeyAlPtHM" target="_blank">Oramond Wildlife Raid</a></td>
+                
+
+                <td>3.7kk</td>
+                <td>900k</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/l9R9fQVdKRA" target="_blank">Oramond Minotaur Raid</a></td>
+                
+
+                <td>2.8kk</td>
+                <td>700k</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Candia Nibblemaws</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/kHxbhQvygwI" target="_blank">Oramond Golem Raid</a></td>
+                
+
+                <td>2.4kk</td>
+                <td>200k</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/nBrE_sBMpfs" target="_blank">Warzone 6</a></td>
+                
+
+                <td>2.3kk</td>
+                <td>450k</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td><a href="https://youtu.be/ZYLZJW0gnMc" target="_blank">Oramond Catacombs (EK + RP DUO)</a></td>
+                
+
+                <td>3.5kk</td>
+                <td>300k</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td><a href="https://youtu.be/UNnw06Z2lIA" target="_blank">Buried Cathedral -1 (EK + RP DUO)</a></td>
+                
+
+                <td>3.2kk</td>
+                <td>400k</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td><a href="https://youtu.be/3NFxjm9lMmU" target="_blank">Prison -1 (EK + RP DUO)</a></td>
+                
+
+                <td>3.2kk</td>
+                <td>400k</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td><a href="https://youtu.be/P8IRr8WbYIk" target="_blank">Ripper Spectres (EK + RP DUO)</a></td>
+                
+
+                <td>3kk</td>
+                <td>400k</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td><a href="https://youtu.be/AV7LlzEg4tQ" target="_blank">Lower Roshamuul</a></td>
+                
+
+                <td>2.7kk</td>
+                <td>450k</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td><a href="https://youtu.be/ZNXXgG_oDkU" target="_blank">Warzone 4</a></td>
+                
+
+                <td>3kk</td>
+                <td>400k</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td><a href="https://youtu.be/UJqgHsjDDMk" target="_blank">Warzone 5</a></td>
+                
+
+                <td>3.3kk</td>
+                <td>400k</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td><a href="https://youtu.be/S5RJ4oootAU" target="_blank">Asura Mirror</a></td>
+                
+
+                <td>4.5kk</td>
+                <td>300k</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td><a href="https://youtu.be/PRy0uMcBUNQ" target="_blank">Oramond Fury Dungeon</a></td>
+                
+
+                <td>3kk</td>
+                <td>500k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/ZdfZEC39DgY" target="_blank">Oramond Abandoned Sewers</a></td>
+                
+
+                <td>2.9kk</td>
+                <td>450k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/kg-qhJ1EkKk" target="_blank">Wote 8 Drakens</a></td>
+                
+
+                <td>2.3kk</td>
+                <td>450k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/C4IrR9dSdeQ" target="_blank">Marapur Turtles and Foam Stalkers</a></td>
+                
+
+                <td>2.2kk</td>
+                <td>800k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/yLHrCeITFZA" target="_blank">Winter Court for beginners</a></td>
+                
+
+                <td>3.7kk</td>
+                <td>650k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/t1UqxaBqeAE" target="_blank">Weretigers -1</a></td>
+                
+
+                <td>3kk</td>
+                <td>450k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/rXnyo2hcFxI" target="_blank">Weretigers -2</a></td>
+                
+
+                <td>3.3kk</td>
+                <td>600k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/HucVgt-7y54" target="_blank">Werecrocodiles -1</a></td>
+                
+
+                <td>3.3kk</td>
+                <td>550k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/75WRV0ufPXo" target="_blank">Oramond Catacombs</a></td>
+                
+
+                <td>3.8kk</td>
+                <td>850k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/Z4UecG4KdHM" target="_blank">Iksupan Occupied Sanctuary</a></td>
+                
+
+                <td>4kk</td>
+                <td>400k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://youtu.be/BpBBm22t3ZY" target="_blank">Iksupan Last Stand</a></td>
+                
+
+                <td>3.8kk</td>
+                <td>900k</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td><a href="https://www.youtube.com/watch?v=aHc3iL329-U" target="_blank">Verminor Seal</a></td>
+                
+
+                <td>2.6kk</td>
+                <td>400k</td>
+            </tr>
+        
+            <tr>
+                <td>450+</td>
+
+                
+                <td><a href="https://youtu.be/s8CVPJ_Ixow" target="_blank">Nightmare Isles</a></td>
+                
+
+                <td>2.9kk</td>
+                <td>550k</td>
+            </tr>
+        
+            <tr>
+                <td>450+</td>
+
+                
+                <td><a href="https://youtu.be/hXTshHAvLL4" target="_blank">Rosha Shockheads</a></td>
+                
+
+                <td>4.3kk</td>
+                <td>650k</td>
+            </tr>
+        
+            <tr>
+                <td>450+</td>
+
+                
+                <td><a href="https://youtu.be/55eG2wJBtGE" target="_blank">Rosha Bones</a></td>
+                
+
+                <td>4.5kk</td>
+                <td>850k</td>
+            </tr>
+        
+            <tr>
+                <td>450+</td>
+
+                
+                <td><a href="https://youtu.be/_-kuBf_j28I" target="_blank">Rosha West</a></td>
+                
+
+                <td>5.2kk</td>
+                <td>1kk</td>
+            </tr>
+        
+            <tr>
+                <td>450+</td>
+
+                
+                <td><a href="https://youtu.be/4ECe-O6pP34" target="_blank">Otherworld</a></td>
+                
+
+                <td>2.9kk</td>
+                <td>850k</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/nt3aFsOTC7U" target="_blank">Upper Roshamuul (Beginners)</a></td>
+                
+
+                <td>4.2kk</td>
+                <td>500k</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://www.youtube.com/watch?v=USrHT1lDNsQ" target="_blank">Winter Court (Advanced)</a></td>
+                
+
+                <td>5.2kk</td>
+                <td>850k</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/kLB2IKk13g0" target="_blank">Summer Court</a></td>
+                
+
+                <td>5.3kk</td>
+                <td>850k</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/LpAlf5v4rjc" target="_blank">Bashmu</a></td>
+                
+
+                <td>3.4kk</td>
+                <td>900k</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/SSNelutT3q8" target="_blank">Marapur Naga</a></td>
+                
+
+                <td>5.2kk</td>
+                <td>250k</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td><a href="https://youtu.be/-GZes-PICZ0" target="_blank">Deathlings</a></td>
+                
+
+                <td>4.4kk</td>
+                <td>300k</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Port Hope Flimsies</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Girtablilu</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Warzone 2</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Warzone 3</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Venore Lost Souls</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Azzilon Walls</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>700+</td>
+
+                
+                <td>Azzilon Castle</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>700+</td>
+
+                
+                <td>Ferumbras Way</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>700+</td>
+
+                
+                <td>Falcon Bastion</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>700+</td>
+
+                
+                <td>Thais Floating Savants</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>700+</td>
+
+                
+                <td>Wardragons</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>800+</td>
+
+                
+                <td>Darashia Skeletons</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>800+</td>
+
+                
+                <td>Bounac Crypt Warriors</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>850+</td>
+
+                
+                <td>Issavi Crypts (Wardens/Sphinx)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>1200+</td>
+
+                
+                <td>Feru Infernatil</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>1300+</td>
+
+                
+                <td>Feru Pumin</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+    </table>
+</div>
+
+<div id="Mage" class="tabcontent">
+    <div id="filter_selection">
+        <b>Level Filter</b>:<br><br>
+        <label>
+            <input value="0" type="radio" name="level_filter_choice_mage" checked onclick="apply_level_filter()"> All
+        </label>
+        <label>
+            <input value="50" type="radio" name="level_filter_choice_mage" onclick="apply_level_filter()"> 50+
+        </label>
+        <label>
+            <input value="80" type="radio" name="level_filter_choice_mage" onclick="apply_level_filter()"> 80+
+        </label>
+        <label>
+            <input value="130" type="radio" name="level_filter_choice_mage" onclick="apply_level_filter()"> 130+
+        </label>
+        <label>
+            <input value="200" type="radio" name="level_filter_choice_mage" onclick="apply_level_filter()"> 200+
+        </label>
+        <label>
+            <input value="300" type="radio" name="level_filter_choice_mage" onclick="apply_level_filter()"> 300+
+        </label>
+        <label>
+            <input value="400" type="radio" name="level_filter_choice_mage" onclick="apply_level_filter()"> 400+
+        </label>
+    </div>
+    <table id="hunting_table_mage" class="hunting_table">
+        <tr>
+            <th class="level_row">Level</th>
+            <th class="place_row">Place</th>
+            <th class="exp_row">Raw exp</th>
+            <th class="loot_row">Loot</th>
+        </tr>
+        
+            <tr>
+                <td>8+</td>
+
+                
+                <td>Rotworms Liberty Bay/Darashia</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>8+</td>
+
+                
+                <td>Swamp Trolls Port Hope/Venore</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>8+</td>
+
+                
+                <td>Crocodiles Port Hope</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>8+</td>
+
+                
+                <td>Larva Ankh (Sorcerer)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>8+</td>
+
+                
+                <td>Ankh Library Tomb (Sorcerer)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>12+</td>
+
+                
+                <td>Edron Forgotten Tomb</td>
+                
+
+                <td>75k</td>
+                <td>50k</td>
+            </tr>
+        
+            <tr>
+                <td>12+</td>
+
+                
+                <td>Amazon Camp (Profit)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>13+</td>
+
+                
+                <td>Cyclops Mistrock/Mount Sternum</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>14+</td>
+
+                
+                <td>Tarantulas Port Hope</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>14+</td>
+
+                
+                <td>Poacher's Cave (Poachers + Hunters)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>14+</td>
+
+                
+                <td>Coryms Port Hope (Stealth Ring)</td>
+                
+
+                <td>100k</td>
+                <td>-5k</td>
+            </tr>
+        
+            <tr>
+                <td>15+</td>
+
+                
+                <td>Stonerefiners (Stealth Ring)</td>
+                
+
+                <td>135k</td>
+                <td>40k</td>
+            </tr>
+        
+            <tr>
+                <td>15+</td>
+
+                
+                <td>Minotaurs Darashia (Stealth Ring)</td>
+                
+
+                <td>95k</td>
+                <td>-10k</td>
+            </tr>
+        
+            <tr>
+                <td>20+</td>
+
+                
+                <td>Cyclopolis</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>20+</td>
+
+                
+                <td>Elves Yalahar</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>20+</td>
+
+                
+                <td>Edron Earth Elementals</td>
+                
+
+                <td>150k</td>
+                <td>10k</td>
+            </tr>
+        
+            <tr>
+                <td>20+</td>
+
+                
+                <td>Mutated Humans Yala</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>28+</td>
+
+                
+                <td>Gargoyle Cave Meriana</td>
+                
+
+                <td>220k</td>
+                <td>50k</td>
+            </tr>
+        
+            <tr>
+                <td>28+</td>
+
+                
+                <td>Upper Spike</td>
+                
+
+                <td>320k</td>
+                <td>75k</td>
+            </tr>
+        
+            <tr>
+                <td>30+</td>
+
+                
+                <td>Coryms Port Hope (AOE)</td>
+                
+
+                <td>260k</td>
+                <td>-100k</td>
+            </tr>
+        
+            <tr>
+                <td>30+</td>
+
+                
+                <td>Laguna Islands (Profit)</td>
+                
+
+                <td>200k</td>
+                <td>400k</td>
+            </tr>
+        
+            <tr>
+                <td>30+</td>
+
+                
+                <td>Apes Banuta (Profit)</td>
+                
+
+                <td>210k</td>
+                <td>200k</td>
+            </tr>
+        
+            <tr>
+                <td>30+</td>
+
+                
+                <td>Stonerefiners (AOE)</td>
+                
+
+                <td>250k</td>
+                <td>25k</td>
+            </tr>
+        
+            <tr>
+                <td>30+</td>
+
+                
+                <td>Dryad Gardens</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>30+</td>
+
+                
+                <td>Carniphilas Port Hope</td>
+                
+
+                <td>120k</td>
+                <td>-30k</td>
+            </tr>
+        
+            <tr>
+                <td>30+</td>
+
+                
+                <td>Mummy/Bonebeasts MOSL -3</td>
+                
+
+                <td>240k</td>
+                <td>150k</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Yalahar Cults</td>
+                
+
+                <td>290k</td>
+                <td>500k</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Peninsula Tomb</td>
+                
+
+                <td>440k</td>
+                <td>60k</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Haunted Treelings Vengoth</td>
+                
+
+                <td>375k</td>
+                <td>-80k</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Water Elementals Port Hope</td>
+                
+
+                <td>400k</td>
+                <td>-50k</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Nibelor Crystal Spiders</td>
+                
+
+                <td>400k</td>
+                <td>-10k</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Mother of Scarabs Lair</td>
+                
+
+                <td>680k</td>
+                <td>-10k</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Lion's Rock Lions</td>
+                
+
+                <td>440k</td>
+                <td>-20k</td>
+            </tr>
+        
+            <tr>
+                <td>60+</td>
+
+                
+                <td>Middle Spike</td>
+                
+
+                <td>800k</td>
+                <td>-20k</td>
+            </tr>
+        
+            <tr>
+                <td>70+</td>
+
+                
+                <td>Mutated Tigers Yalahar (Profit)</td>
+                
+
+                <td>325k</td>
+                <td>200k</td>
+            </tr>
+        
+            <tr>
+                <td>70+</td>
+
+                
+                <td>Krailos Ogres Surface</td>
+                
+
+                <td>530k</td>
+                <td>300k</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td>Giant Spiders Port Hope</td>
+                
+
+                <td>600k</td>
+                <td>-25k</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td>Muggy Plains</td>
+                
+
+                <td>700k</td>
+                <td>-50k</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td>Issavi Surafce (SD)</td>
+                
+
+                <td>830k</td>
+                <td>-200k</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td>Hive Surface</td>
+                
+
+                <td>490k</td>
+                <td>240k</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td>Feyrist Surface</td>
+                
+
+                <td>600k</td>
+                <td>50k</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Old Masonry (Death portal)</td>
+                
+
+                <td>800k</td>
+                <td>20k</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Quaras Liberty Bay</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Grimvale -4</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Krailos Bug Cave</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Putrid Mummy</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Calassa</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Souleater Mountain</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Edron Were South</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Edron Vampire Crypt</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Dragon Lords Fenrock/POI</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Ravenous Lava Lurkers</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Exotic Cave</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Iksupan</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>120+</td>
+
+                
+                <td>Lizard Chosens</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>120+</td>
+
+                
+                <td>Lizard City</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>120+</td>
+
+                
+                <td>Brimstone Bugs WOTE</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>120+</td>
+
+                
+                <td>Edron Old Fortress</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>120+</td>
+
+                
+                <td>Carlin Cults</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Yalahar Sunken Quarter</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Goroma Medusa/Serpents (Talahu)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Oramond East Minos</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Behemoths Forbidden Lands</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Glooth Bandits</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Elder Wyrms Drefia</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td>Deeplings Library Fiehonja</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td>Oramond West</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>Okolnir (Sorcerer)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>Deeper Banuta (Sorcerer)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>Goroma Demons Avalanche</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>Mini Rosha</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>Pirats</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Winter Court</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Summer Court</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Diremaw Task Area (AOE)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>INQ Hellfires + Spectres</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Yalahar Grim Reapers</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Lower Spike</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Carnivors</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Draken Walls</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Werehyaenas</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Candia Nibblemaws</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Burster Spectres</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Oramond Wildlife Raid</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Gazer Spectre</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Drefia Grim Reapers (Sorcerer)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td>Werelions</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Falcons</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Oramond Fury</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Ripper Spectres</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Warzone 4</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Warzone 5</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Warzone 6</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Cobras</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Oskayaat Weretigers</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Oskayaat Werecrocodiles</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td>Iksupan</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td>Dream Labrynith</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td>Marapur Turtles</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td>Otherworld</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td>Oramond Catacombs</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td>Girtablilu</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td>Issavi Goannas</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td>Flimsy Lost Souls</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td>Marapur Nagas</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Crypt Wardens -2</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Crypt Warriors</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Cursed Prospector</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Ingol</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Warzone 1/2/3</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>700+</td>
+
+                
+                <td>Warzone 7</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+    </table>
+</div>
+
+<div id="Monk" class="tabcontent">
+    <div id="filter_selection">
+        <b>Level Filter</b>:<br><br>
+        <label>
+            <input value="0" type="radio" name="level_filter_choice_monk" checked onclick="apply_level_filter()"> All
+        </label>
+        <label>
+            <input value="50" type="radio" name="level_filter_choice_monk" onclick="apply_level_filter()"> 50+
+        </label>
+        <label>
+            <input value="100" type="radio" name="level_filter_choice_monk" onclick="apply_level_filter()"> 100+
+        </label>
+        <label>
+            <input value="130" type="radio" name="level_filter_choice_monk" onclick="apply_level_filter()"> 130+
+        </label>
+        <label>
+            <input value="200" type="radio" name="level_filter_choice_monk" onclick="apply_level_filter()"> 200+
+        </label>
+        <label>
+            <input value="300" type="radio" name="level_filter_choice_monk" onclick="apply_level_filter()"> 300+
+        </label>
+        <label>
+            <input value="400" type="radio" name="level_filter_choice_monk" onclick="apply_level_filter()"> 400+
+        </label>
+    </div>
+    <table id="hunting_table_monk" class="hunting_table">
+        <tr>
+            <th class="level_row">Level</th>
+            <th class="place_row">Place</th>
+            <th class="exp_row">Raw exp</th>
+            <th class="loot_row">Loot</th>
+        </tr>
+        
+    </table>
+</div>
+
+<div id="Duo" class="tabcontent">
+    <div id="filter_selection">
+        <b>Level Filter</b>:<br><br>
+        <label>
+            <input value="0" type="radio" name="level_filter_choice_duo" checked onclick="apply_level_filter()"> All
+        </label>
+        <label>
+            <input value="50" type="radio" name="level_filter_choice_duo" onclick="apply_level_filter()"> 50+
+        </label>
+        <label>
+            <input value="100" type="radio" name="level_filter_choice_duo" onclick="apply_level_filter()"> 100+
+        </label>
+        <label>
+            <input value="130" type="radio" name="level_filter_choice_duo" onclick="apply_level_filter()"> 130+
+        </label>
+        <label>
+            <input value="200" type="radio" name="level_filter_choice_duo" onclick="apply_level_filter()"> 200+
+        </label>
+        <label>
+            <input value="300" type="radio" name="level_filter_choice_duo" onclick="apply_level_filter()"> 300+
+        </label>
+        <label>
+            <input value="400" type="radio" name="level_filter_choice_duo" onclick="apply_level_filter()"> 400+
+        </label>
+    </div>
+    <table id="hunting_table_duo" class="hunting_table">
+        <tr>
+            <th class="level_row">Level</th>
+            <th class="place_row">Place</th>
+            <th class="exp_row">Raw exp</th>
+            <th class="loot_row">Loot</th>
+        </tr>
+        
+            <tr>
+                <td>8+</td>
+
+                
+                <td>Rotworms Liberty Bay</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>8+</td>
+
+                
+                <td>Cyclops Mistrock</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>14+</td>
+
+                
+                <td>Tarantulas PH</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>15+</td>
+
+                
+                <td>Coryms PH</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>15+</td>
+
+                
+                <td>Cyclopolis</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>25+</td>
+
+                
+                <td>Upper Spike</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>30+</td>
+
+                
+                <td>Killer Caimans</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Darashia Dragon Lords</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Mother of Scarabs Lair</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Middle Spike</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Krailos Bug Cave</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Wyrms Drefia/LB</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>60+</td>
+
+                
+                <td>Edron Vampire Crypt</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td>Nightmare Scions Krailos</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td>Yalahar Sunken Quarter</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td>Old Fortress Heroes</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td>Grimvale -4</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td>Desecrated Glade</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td>Okolnir</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Carlin Cults</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Hellspawns Yalahar</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Vengoth Castle</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Inner Hive</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>110+</td>
+
+                
+                <td>Deeplings</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Lizard Chosens</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Yalahar Grim Reapers</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Ravenous Lava Lurkers</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Werehyaenas</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Formorgar Mines</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td>Deeper Banuta</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td>Draken Walls</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td>Edron Were South</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>150+</td>
+
+                
+                <td>Oramond East Minos</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>180+</td>
+
+                
+                <td>Gazer Spectre</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>Medusa Tower</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>INQ Vats + Battlefield</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>Asura Palace</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>Lower Rosha</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Burster Spectres</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Oramond Wildlife Raid</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Ripper Spectres + Arachnophobica</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Winter Court</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>POI Seals</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Diremaws Task Area</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Werelions</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>West Roshamuul</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Warzone 5</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Summer Court</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Buried Cathedral -6</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Deathlings</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Lower Spike</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Nightmare Isles</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Warzone 4</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td>Lost Souls (Flimsy etc.)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td>Catacombs</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td>Marapur Nagas</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td>Issavi Sewers</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td>Buried Cathedral -7/-8</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td>Falcons Eagle</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Falcons Castle</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Kilmaresh Catacombs</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Warzone 2</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Warzone 3</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Issavi Crypt Wardens</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Cobras</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Prison -1</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Otherworld</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Darashia Skeletons/Gladiators</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>450+</td>
+
+                
+                <td>Ferumbras Way</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td>Feru DT/Vexclaw seal (Tafariel)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>500+</td>
+
+                
+                <td>True Asuras</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Issavi Goannas</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+    </table>
+</div>
+
+<div id="Teamhunt" class="tabcontent">
+    <div id="filter_selection">
+        <b>Level Filter</b>:<br><br>
+        <label>
+            <input value="0" type="radio" name="level_filter_choice_teamhunt" checked onclick="apply_level_filter()"> All
+        </label>
+        <label>
+            <input value="50" type="radio" name="level_filter_choice_teamhunt" onclick="apply_level_filter()"> 50+
+        </label>
+        <label>
+            <input value="100" type="radio" name="level_filter_choice_teamhunt" onclick="apply_level_filter()"> 100+
+        </label>
+        <label>
+            <input value="130" type="radio" name="level_filter_choice_teamhunt" onclick="apply_level_filter()"> 130+
+        </label>
+        <label>
+            <input value="200" type="radio" name="level_filter_choice_teamhunt" onclick="apply_level_filter()"> 200+
+        </label>
+        <label>
+            <input value="300" type="radio" name="level_filter_choice_teamhunt" onclick="apply_level_filter()"> 300+
+        </label>
+        <label>
+            <input value="400" type="radio" name="level_filter_choice_teamhunt" onclick="apply_level_filter()"> 400+
+        </label>
+    </div>
+    <table id="hunting_table_teamhunt" class="hunting_table">
+        <tr>
+            <th class="level_row">Level</th>
+            <th class="place_row">Place</th>
+            <th class="exp_row">Raw exp</th>
+            <th class="loot_row">Loot</th>
+        </tr>
+        
+            <tr>
+                <td>8+</td>
+
+                
+                <td>Rotworms Liberty Bay</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>8+</td>
+
+                
+                <td>Cyclops Mistrock</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>14+</td>
+
+                
+                <td>Tarantulas PH</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>15+</td>
+
+                
+                <td>Coryms PH</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>15+</td>
+
+                
+                <td>Cyclopolis</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>25+</td>
+
+                
+                <td>Upper Spike</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>30+</td>
+
+                
+                <td>Killer Caimans</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Darashia Dragon Lords</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Old Fortress Heroes</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Mother of Scarabs Lair</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Middle Spike</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Krailos Bug Cave</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Edron Vampire Crypt</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>50+</td>
+
+                
+                <td>Wyrms Drefia/LB</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>65+</td>
+
+                
+                <td>Nightmare Scions Krailos</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td>Grimvale -4</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td>Carlin Cults</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td>Hellspawns Yalahar</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>80+</td>
+
+                
+                <td>Elder Wyrms Drefia</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Edron Were South</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Vengoth Castle</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Inner Hive</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>100+</td>
+
+                
+                <td>Lizard City</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Oramond West</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Lizard Chosens</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Deeper Banuta</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Draken Walls</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Ravenous Lava Lurkers</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td>Werehyaenas</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>130+</td>
+
+                
+                <td><a href="https://youtu.be/sHEmoJvzOK0" target="_blank">Asura Palace</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>140+</td>
+
+                
+                <td>Lower Rosha</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>180+</td>
+
+                
+                <td>Gazer Spectre</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>180+</td>
+
+                
+                <td>Medusa Tower</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>180+</td>
+
+                
+                <td>Glooth Tower</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>180+</td>
+
+                
+                <td>Burster Spectre</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>Ripper Spectre + Arachnophobica</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>Prison -1</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>Catacombs</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>INQ Vats</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>INQ Battlefield</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>200+</td>
+
+                
+                <td>Drefia Grim Reapers</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>220+</td>
+
+                
+                <td>Winter Court</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Nightmare Isles</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Summer Court</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td><a href="https://youtu.be/8vgI24db-rk" target="_blank">Asura Mirror</a></td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Oramond Abandoned Sewers</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>INQ DT Seal</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>250+</td>
+
+                
+                <td>Werelions</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Lost Souls (Flimsy etc.)</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Lower Spike</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Buried Cathedral</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Prison -3</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>300+</td>
+
+                
+                <td>Deathlings</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td>Falcons Eagle</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td>West Roshamuul</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td>Ferumbras Way</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td>Warzone 3</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td>Otherworld</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td>Issavi Sewers</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>350+</td>
+
+                
+                <td>Kilmaresh Catacombs</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Cobras</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Falcons Castle</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Issavi Goannas</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>True Asuras</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>400+</td>
+
+                
+                <td>Darashia Skeletons/Gladiators</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>450+</td>
+
+                
+                <td>Secret Library</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>450+</td>
+
+                
+                <td>Ferumbras Ascension Seals</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Soul War Areas</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>600+</td>
+
+                
+                <td>Primal Ordeal Areas</td>
+                
+
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        
+    </table>
+</div>
     </section>
     
     <!--><div class="cookieconsent"
