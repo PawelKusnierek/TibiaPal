@@ -17,6 +17,14 @@ function apply_filters() {
 		}
 	}
 
+	let protection_elements = document.getElementsByName('protection_filter_choice_' + vocation);
+	let protection_selection
+	for (let i = 0; i < protection_elements.length; i++) {
+		if (protection_elements[i].checked) {
+			protection_selection = protection_elements[i].value;
+		}
+	}
+
 	let weapon_elements = document.getElementsByName('weapon_filter_choice_knight');
 	let weapon_type_selection
 	for (let i = 0; i < weapon_elements.length; i++) {
@@ -24,10 +32,10 @@ function apply_filters() {
 			weapon_type_selection = weapon_elements[i].value;
 		}
 	}
-	filter_equipment_table(level_selection, type_selection, weapon_type_selection, vocation)
+	filter_equipment_table(level_selection, type_selection, protection_selection, weapon_type_selection, vocation)
 }
 
-function filter_equipment_table(level_selection, type_selection, weapon_type_selection, vocation) {
+function filter_equipment_table(level_selection, type_selection, protection_selection, weapon_type_selection, vocation) {
 	let apply_level_filter = false
 	if (level_selection != "0") {
 		apply_level_filter = true
@@ -59,6 +67,13 @@ function filter_equipment_table(level_selection, type_selection, weapon_type_sel
 		let type_value = equipment_table.rows[i].cells[3].childNodes[0].data;
 		if (type_selection != "All") {
 			if (!type_value.includes(type_selection)) {
+				equipment_table.rows[i].style.display = 'none'
+			}
+		}
+
+		let protection_value = equipment_table.rows[i].cells[4].childNodes[0].data;
+		if (protection_selection != "All") {
+			if (!protection_value.includes(protection_selection)) {
 				equipment_table.rows[i].style.display = 'none'
 			}
 		}

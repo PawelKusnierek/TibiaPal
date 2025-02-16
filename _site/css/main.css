@@ -1407,10 +1407,14 @@ ol, ul {
 }
 
 .name_row {
-  width: 50%;
+  width: 35%;
 }
 
 .type_row {
+  width: 15%;
+}
+
+.protection_row {
   width: 20%;
 }
 
