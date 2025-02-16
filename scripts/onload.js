@@ -116,6 +116,10 @@ function enable_default_tabs() {
   else if(location.href.split("/").slice(-1).includes('equipment')) {
     initial_show_tab("Druid")
   }
+  else if(location.href.split("/").slice(-1).includes('hunting')) {
+    initial_show_tab("Knight")
+  }
+
 
 }
 function show_tab(evt, tab_name) {
