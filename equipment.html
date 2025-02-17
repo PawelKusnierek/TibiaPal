@@ -625,6 +625,31 @@ scripts: <script src="scripts/equipment.js"></script>
         </label>
     </div>
 
+    <div class="filter_selection">
+        <b>Weapon Damage Type</b>:<br><br>
+        <label>
+            <input value="All" type="radio" name="weapon_damage_type_choice_knight" checked onclick="apply_filters()"> All
+        </label>
+        <label>
+            <input value="Death" type="radio" name="weapon_damage_type_choice_knight" onclick="apply_filters()"> Death
+        </label>
+        <label>
+            <input value="Earth" type="radio" name="weapon_damage_type_choice_knight" onclick="apply_filters()"> Earth
+        </label>
+        <label>
+            <input value="Energy" type="radio" name="weapon_damage_type_choice_knight" onclick="apply_filters()"> Energy
+        </label>
+        <label>
+            <input value="Fire" type="radio" name="weapon_damage_type_choice_knight" onclick="apply_filters()"> Fire
+        </label>
+        <label>
+            <input value="Ice" type="radio" name="weapon_damage_type_choice_knight" onclick="apply_filters()"> Ice
+        </label>
+        <label>
+            <input value="Physical" type="radio" name="weapon_damage_type_choice_knight" onclick="apply_filters()"> Physical
+        </label>
+    </div><br>
+
     <table class="equipment_table" id="equipment_table_knight">
         <tr>
             <th class="level_row">Level</th>
@@ -657,14 +682,14 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>150</td>
             <td><img src="images/equipment/Jungle_Flail.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Jungle_Flail" target="_blank">Jungle Flail</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Jungle_Flail" target="_blank">Jungle Flail</a> (Physical)</td>
             <td>Club Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>150</td>
             <td><img src="images/equipment/Throwing_Axe.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Throwing_Axe" target="_blank">Throwing Axe</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Throwing_Axe" target="_blank">Throwing Axe</a> (Physical)</td>
             <td>Axe Weapon</td>
             <td>None</td>
         </tr>
@@ -678,7 +703,7 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>180</td>
             <td><img src="images/equipment/Phantasmal_Axe.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Phantasmal_Axe" target="_blank">Phantasmal Axe</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Phantasmal_Axe" target="_blank">Phantasmal Axe</a> (Fire)</td>
             <td>Axe Weapon</td>
             <td>None</td>
         </tr>
@@ -699,7 +724,7 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>200</td>
             <td><img src="images/equipment/Blade_of_Destruction.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Blade_of_Destruction" target="_blank">Blade of Destruction</a>
+            <td><a href="https://tibia.fandom.com/wiki/Blade_of_Destruction" target="_blank">Blade of Destruction</a> (Physical)
             </td>
             <td>Sword Weapon</td>
             <td>None</td>
@@ -707,7 +732,7 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>200</td>
             <td><img src="images/equipment/Slayer_of_Destruction.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Slayer_of_Destruction" target="_blank">Slayer of Destruction</a>
+            <td><a href="https://tibia.fandom.com/wiki/Slayer_of_Destruction" target="_blank">Slayer of Destruction</a> (Physical)
             </td>
             <td>Sword Weapon</td>
             <td>None</td>
@@ -715,7 +740,7 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>200</td>
             <td><img src="images/equipment/Axe_of_Destruction.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Axe_of_Destruction" target="_blank">Axe of Destruction</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Axe_of_Destruction" target="_blank">Axe of Destruction</a> (Physical)</td>
             <td>Axe Weapon</td>
             <td>None</td>
         </tr>
@@ -723,21 +748,21 @@ scripts: <script src="scripts/equipment.js"></script>
             <td>200</td>
             <td><img src="images/equipment/Chopper_of_Destruction.gif" height="32" width="32"></td>
             <td><a href="https://tibia.fandom.com/wiki/Chopper_of_Destruction" target="_blank">Chopper of
-                    Destruction</a></td>
+                    Destruction</a> (Physical)</td>
             <td>Axe Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>200</td>
             <td><img src="images/equipment/Mace_of_Destruction.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Mace_of_Destruction" target="_blank">Mace of Destruction</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Mace_of_Destruction" target="_blank">Mace of Destruction</a> (Physical)</td>
             <td>Club Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>200</td>
             <td><img src="images/equipment/Hammer_of_Destruction.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Hammer_of_Destruction" target="_blank">Hammer of Destruction</a>
+            <td><a href="https://tibia.fandom.com/wiki/Hammer_of_Destruction" target="_blank">Hammer of Destruction</a> (Physical)
             </td>
             <td>Club Weapon</td>
             <td>None</td>
@@ -848,14 +873,14 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>200</td>
             <td><img src="images/equipment/Summerblade.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Summerblade" target="_blank">Summerblade</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Summerblade" target="_blank">Summerblade</a> (Fire)</td>
             <td>Sword Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>200</td>
             <td><img src="images/equipment/Winterblade.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Winterblade" target="_blank">Winterblade</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Winterblade" target="_blank">Winterblade</a> (Ice)</td>
             <td>Sword Weapon</td>
             <td>None</td>
         </tr>
@@ -869,7 +894,7 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>220</td>
             <td><img src="images/equipment/Cobra_Axe.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Cobra_Axe" target="_blank">Cobra Axe</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Cobra_Axe" target="_blank">Cobra Axe</a> (Ice)</td>
             <td>Axe Weapon</td>
             <td>None</td>
         </tr>
@@ -883,21 +908,21 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>220</td>
             <td><img src="images/equipment/Cobra_Club.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Cobra_Club" target="_blank">Cobra Club</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Cobra_Club" target="_blank">Cobra Club</a> (Fire)</td>
             <td>Club Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>220</td>
             <td><img src="images/equipment/Cobra_Sword.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Cobra_Sword" target="_blank">Cobra Sword</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Cobra_Sword" target="_blank">Cobra Sword</a> (Physical)</td>
             <td>Sword Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>220</td>
             <td><img src="images/equipment/Mortal_Mace.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Mortal_Mace" target="_blank">Mortal Mace</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Mortal_Mace" target="_blank">Mortal Mace</a> (Death)</td>
             <td>Club Weapon</td>
             <td>None</td>
         </tr>
@@ -911,7 +936,7 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>230</td>
             <td><img src="images/equipment/Resizer.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Resizer" target="_blank">Resizer</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Resizer" target="_blank">Resizer</a> (Ice)</td>
             <td>Club Weapon</td>
             <td>None</td>
         </tr>
@@ -939,7 +964,7 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>250</td>
             <td><img src="images/equipment/Gnome_Sword.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Gnome_Sword" target="_blank">Gnome Sword</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Gnome_Sword" target="_blank">Gnome Sword</a> (Energy)</td>
             <td>Sword Weapon</td>
             <td>Energy</td>
         </tr>
@@ -968,28 +993,28 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>250</td>
             <td><img src="images/equipment/Tagralt_Blade.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Tagralt_Blade" target="_blank">Tagralt Blade</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Tagralt_Blade" target="_blank">Tagralt Blade</a> (Earth)</td>
             <td>Sword Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>250</td>
             <td><img src="images/equipment/Umbral_Masterblade.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Umbral_Masterblade" target="_blank">Umbral Masterblade</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Umbral_Masterblade" target="_blank">Umbral Masterblade</a> (Physical)</td>
             <td>Sword Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>250</td>
             <td><img src="images/equipment/Umbral_Master_Axe.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Umbral_Master_Axe" target="_blank">Umbral Master Axe</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Umbral_Master_Axe" target="_blank">Umbral Master Axe</a> (Physical)</td>
             <td>Axe Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>250</td>
             <td><img src="images/equipment/Umbral_Master_Chopper.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Umbral_Master_Chopper" target="_blank">Umbral Master Chopper</a>
+            <td><a href="https://tibia.fandom.com/wiki/Umbral_Master_Chopper" target="_blank">Umbral Master Chopper</a> (Physical)
             </td>
             <td>Axe Weapon</td>
             <td>None</td>
@@ -997,7 +1022,7 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>250</td>
             <td><img src="images/equipment/Umbral_Master_Hammer.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Umbral_Master_Hammer" target="_blank">Umbral Master Hammer</a>
+            <td><a href="https://tibia.fandom.com/wiki/Umbral_Master_Hammer" target="_blank">Umbral Master Hammer</a> (Physical)
             </td>
             <td>Club Weapon</td>
             <td>None</td>
@@ -1005,14 +1030,14 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>250</td>
             <td><img src="images/equipment/Umbral_Master_Mace.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Umbral_Master_Mace" target="_blank">Umbral Master Mace</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Umbral_Master_Mace" target="_blank">Umbral Master Mace</a> (Physical)</td>
             <td>Club Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>250</td>
             <td><img src="images/equipment/Umbral_Master_Slayer.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Umbral_Master_Slayer" target="_blank">Umbral Master Slayer</a>
+            <td><a href="https://tibia.fandom.com/wiki/Umbral_Master_Slayer" target="_blank">Umbral Master Slayer</a> (Physical)
             </td>
             <td>Sword Weapon</td>
             <td>None</td>
@@ -1034,21 +1059,21 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>270</td>
             <td><img src="images/equipment/Lion_Axe.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Lion_Axe" target="_blank">Lion Axe</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Lion_Axe" target="_blank">Lion Axe</a> (Earth)</td>
             <td>Axe Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>270</td>
             <td><img src="images/equipment/Lion_Hammer.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Lion_Hammer" target="_blank">Lion Hammer</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Lion_Hammer" target="_blank">Lion Hammer</a> (Earth)</td>
             <td>Club Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>270</td>
             <td><img src="images/equipment/Lion_Longsword.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Lion_Longsword" target="_blank">Lion Longsword</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Lion_Longsword" target="_blank">Lion Longsword</a> (Earth)</td>
             <td>Sword Weapon</td>
             <td>None</td>
         </tr>
@@ -1062,14 +1087,14 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>270</td>
             <td><img src="images/equipment/Eldritch_Claymore.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Eldritch_Claymore" target="_blank">Eldritch Claymore</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Eldritch_Claymore" target="_blank">Eldritch Claymore</a> (Fire)</td>
             <td>Sword Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>270</td>
             <td><img src="images/equipment/Eldritch_Greataxe.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Eldritch_Greataxe" target="_blank">Eldritch Greataxe</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Eldritch_Greataxe" target="_blank">Eldritch Greataxe</a> (Physical)</td>
             <td>Axe Weapon</td>
             <td>None</td>
         </tr>
@@ -1083,7 +1108,7 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>270</td>
             <td><img src="images/equipment/Eldritch_Warmace.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Eldritch_Warmace" target="_blank">Eldritch Warmace</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Eldritch_Warmace" target="_blank">Eldritch Warmace</a> (Fire)</td>
             <td>Club Weapon</td>
             <td>None</td>
         </tr>
@@ -1106,7 +1131,7 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>300</td>
             <td><img src="images/equipment/Falcon_Battleaxe.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Falcon_Battleaxe" target="_blank">Falcon Battleaxe</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Falcon_Battleaxe" target="_blank">Falcon Battleaxe</a> (Energy)</td>
             <td>Axe Weapon</td>
             <td>Energy</td>
         </tr>
@@ -1134,14 +1159,14 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>300</td>
             <td><img src="images/equipment/Falcon_Longsword.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Falcon_Longsword" target="_blank">Falcon Longsword</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Falcon_Longsword" target="_blank">Falcon Longsword</a> (Physical)</td>
             <td>Sword Weapon</td>
             <td>Earth</td>
         </tr>
         <tr>
             <td>300</td>
             <td><img src="images/equipment/Falcon_Mace.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Falcon_Mace" target="_blank">Falcon Mace</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Falcon_Mace" target="_blank">Falcon Mace</a> (Energy)</td>
             <td>Club Weapon</td>
             <td>Energy</td>
         </tr>
@@ -1155,7 +1180,7 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>300</td>
             <td><img src="images/equipment/Inferniarch_Battleaxe.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Inferniarch_Battleaxe" target="_blank">Inferniarch Battleaxe</a>
+            <td><a href="https://tibia.fandom.com/wiki/Inferniarch_Battleaxe" target="_blank">Inferniarch Battleaxe</a> (Fire)
             </td>
             <td>Axe Weapon</td>
             <td>None</td>
@@ -1163,21 +1188,21 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>300</td>
             <td><img src="images/equipment/Inferniarch_Blade.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Inferniarch_Blade" target="_blank">Inferniarch Blade</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Inferniarch_Blade" target="_blank">Inferniarch Blade</a> (Fire)</td>
             <td>Sword Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>300</td>
             <td><img src="images/equipment/Inferniarch_Flail.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Inferniarch_Flail" target="_blank">Inferniarch Flail</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Inferniarch_Flail" target="_blank">Inferniarch Flail</a> (Death)</td>
             <td>Club Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>300</td>
             <td><img src="images/equipment/Inferniarch_Greataxe.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Inferniarch_Greataxe" target="_blank">Inferniarch Greataxe</a>
+            <td><a href="https://tibia.fandom.com/wiki/Inferniarch_Greataxe" target="_blank">Inferniarch Greataxe</a> (Fire)
             </td>
             <td>Axe Weapon</td>
             <td>None</td>
@@ -1185,14 +1210,14 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>300</td>
             <td><img src="images/equipment/Inferniarch_Slayer.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Inferniarch_Slayer" target="_blank">Inferniarch Slayer</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Inferniarch_Slayer" target="_blank">Inferniarch Slayer</a> (Energy)</td>
             <td>Sword Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>300</td>
             <td><img src="images/equipment/Inferniarch_Warhammer.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Inferniarch_Warhammer" target="_blank">Inferniarch Warhammer</a>
+            <td><a href="https://tibia.fandom.com/wiki/Inferniarch_Warhammer" target="_blank">Inferniarch Warhammer</a> (Ice)
             </td>
             <td>Club Weapon</td>
             <td>None</td>
@@ -1207,63 +1232,63 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>300</td>
             <td><img src="images/equipment/Naga_Axe.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Naga_Axe" target="_blank">Naga Axe</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Naga_Axe" target="_blank">Naga Axe</a> (Energy)</td>
             <td>Axe Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>300</td>
             <td><img src="images/equipment/Naga_Club.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Naga_Club" target="_blank">Naga Club</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Naga_Club" target="_blank">Naga Club</a> (Physical)</td>
             <td>Club Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>300</td>
             <td><img src="images/equipment/Naga_Sword.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Naga_Sword" target="_blank">Naga Sword</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Naga_Sword" target="_blank">Naga Sword</a> (Ice)</td>
             <td>Sword Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>330</td>
             <td><img src="images/equipment/Amber_Axe.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Amber_Axe" target="_blank">Amber Axe</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Amber_Axe" target="_blank">Amber Axe</a> (Ice)</td>
             <td>Axe Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>330</td>
             <td><img src="images/equipment/Amber_Bludgeon.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Amber_Bludgeon" target="_blank">Amber Bludgeon</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Amber_Bludgeon" target="_blank">Amber Bludgeon</a> (Death)</td>
             <td>Club Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>330</td>
             <td><img src="images/equipment/Amber_Cudgel.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Amber_Cudgel" target="_blank">Amber Cudgel</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Amber_Cudgel" target="_blank">Amber Cudgel</a> (Fire)</td>
             <td>Club Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>330</td>
             <td><img src="images/equipment/Amber_Greataxe.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Amber_Greataxe" target="_blank">Amber Greataxe</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Amber_Greataxe" target="_blank">Amber Greataxe</a> (Earth)</td>
             <td>Axe Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>330</td>
             <td><img src="images/equipment/Amber_Sabre.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Amber_Sabre" target="_blank">Amber Sabre</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Amber_Sabre" target="_blank">Amber Sabre</a> (Energy)</td>
             <td>Sword Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>330</td>
             <td><img src="images/equipment/Amber_Slayer.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Amber_Slayer" target="_blank">Amber Slayer</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Amber_Slayer" target="_blank">Amber Slayer</a> (Death)</td>
             <td>Sword Weapon</td>
             <td>None</td>
         </tr>
@@ -1284,42 +1309,42 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>400</td>
             <td><img src="images/equipment/Soulbiter.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Soulbiter" target="_blank">Soulbiter</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Soulbiter" target="_blank">Soulbiter</a> (Death)</td>
             <td>Axe Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>400</td>
             <td><img src="images/equipment/Soulcrusher.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Soulcrusher" target="_blank">Soulcrusher</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Soulcrusher" target="_blank">Soulcrusher</a> (Ice)</td>
             <td>Club Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>400</td>
             <td><img src="images/equipment/Soulcutter.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Soulcutter" target="_blank">Soulcutter</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Soulcutter" target="_blank">Soulcutter</a> (Death)</td>
             <td>Sword Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>400</td>
             <td><img src="images/equipment/Souleater.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Souleater_(Axe)" target="_blank">Souleater</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Souleater_(Axe)" target="_blank">Souleater</a> (Ice)</td>
             <td>Axe Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>400</td>
             <td><img src="images/equipment/Soulmaimer.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Soulmaimer" target="_blank">Soulmaimer</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Soulmaimer" target="_blank">Soulmaimer</a> (Energy)</td>
             <td>Club Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>400</td>
             <td><img src="images/equipment/Soulshredder.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Soulshredder" target="_blank">Soulshredder</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Soulshredder" target="_blank">Soulshredder</a> (Ice)</td>
             <td>Sword Weapon</td>
             <td>None</td>
         </tr>
@@ -1354,42 +1379,42 @@ scripts: <script src="scripts/equipment.js"></script>
         <tr>
             <td>600</td>
             <td><img src="images/equipment/Sanguine_Battleaxe.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Sanguine_Battleaxe" target="_blank">Sanguine Battleaxe</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Sanguine_Battleaxe" target="_blank">Sanguine Battleaxe</a> (Death)</td>
             <td>Axe Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>600</td>
             <td><img src="images/equipment/Sanguine_Blade.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Sanguine_Blade" target="_blank">Sanguine Blade</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Sanguine_Blade" target="_blank">Sanguine Blade</a> (Fire)</td>
             <td>Sword Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>600</td>
             <td><img src="images/equipment/Sanguine_Bludgeon.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Sanguine_Bludgeon" target="_blank">Sanguine Bludgeon</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Sanguine_Bludgeon" target="_blank">Sanguine Bludgeon</a> (Earth)</td>
             <td>Club Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>600</td>
             <td><img src="images/equipment/Sanguine_Cudgel.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Sanguine_Cudgel" target="_blank">Sanguine Cudgel</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Sanguine_Cudgel" target="_blank">Sanguine Cudgel</a> (Death)</td>
             <td>Club Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>600</td>
             <td><img src="images/equipment/Sanguine_Hatchet.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Sanguine_Hatchet" target="_blank">Sanguine Hatchet</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Sanguine_Hatchet" target="_blank">Sanguine Hatchet</a> (Fire)</td>
             <td>Axe Weapon</td>
             <td>None</td>
         </tr>
         <tr>
             <td>600</td>
             <td><img src="images/equipment/Sanguine_Razor.gif" height="32" width="32"></td>
-            <td><a href="https://tibia.fandom.com/wiki/Sanguine_Razor" target="_blank">Sanguine Razor</a></td>
+            <td><a href="https://tibia.fandom.com/wiki/Sanguine_Razor" target="_blank">Sanguine Razor</a> (Energy)</td>
             <td>Sword Weapon</td>
             <td>None</td>
         </tr>

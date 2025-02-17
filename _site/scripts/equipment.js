@@ -32,10 +32,19 @@ function apply_filters() {
 			weapon_type_selection = weapon_elements[i].value;
 		}
 	}
-	filter_equipment_table(level_selection, type_selection, protection_selection, weapon_type_selection, vocation)
+
+	let weapon_type_elements = document.getElementsByName('weapon_damage_type_choice_knight');
+	let weapon_damage_type_selection
+	for (let i = 0; i < weapon_type_elements.length; i++) {
+		if (weapon_type_elements[i].checked) {
+			weapon_damage_type_selection = weapon_type_elements[i].value;
+		}
+	}
+
+	filter_equipment_table(level_selection, type_selection, protection_selection, weapon_type_selection, weapon_damage_type_selection, vocation)
 }
 
-function filter_equipment_table(level_selection, type_selection, protection_selection, weapon_type_selection, vocation) {
+function filter_equipment_table(level_selection, type_selection, protection_selection, weapon_type_selection, weapon_damage_type_selection, vocation) {
 	let apply_level_filter = false
 	if (level_selection != "0") {
 		apply_level_filter = true
@@ -86,6 +95,18 @@ function filter_equipment_table(level_selection, type_selection, protection_sele
 				let weapon_type_value = equipment_table.rows[i].cells[3].childNodes[0].data;
 				if (weapon_type_value.includes("Weapon")) {
 					if (!weapon_type_value.includes(weapon_type_selection)) {
+						equipment_table.rows[i].style.display = 'none'
+					}
+				}
+			}
+			if (weapon_damage_type_selection != "All") {
+				let weapon_type_value = equipment_table.rows[i].cells[3].childNodes[0].data;
+				if (!weapon_type_value.includes("Weapon")) {
+					equipment_table.rows[i].style.display = 'none'
+				}
+				else {
+					let weapon_damage_type_value = equipment_table.rows[i].cells[2].innerHTML;
+					if (!weapon_damage_type_value.includes(weapon_damage_type_selection)) {
 						equipment_table.rows[i].style.display = 'none'
 					}
 				}
