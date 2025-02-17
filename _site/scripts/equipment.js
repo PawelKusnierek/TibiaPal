@@ -73,7 +73,10 @@ function filter_equipment_table(level_selection, type_selection, protection_sele
 
 		let protection_value = equipment_table.rows[i].cells[4].childNodes[0].data;
 		if (protection_selection != "All") {
-			if (!protection_value.includes(protection_selection)) {
+			if (protection_value.includes('All')) {
+				continue
+			}
+			else if (!protection_value.includes(protection_selection)) {
 				equipment_table.rows[i].style.display = 'none'
 			}
 		}

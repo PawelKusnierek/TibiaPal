@@ -1399,11 +1399,11 @@ ol, ul {
 }
 
 .level_row {
-  width: 15%;
+  width: 10%;
 }
 
 .image_row {
-  width: 15%;
+  width: 10%;
 }
 
 .name_row {
@@ -1415,7 +1415,7 @@ ol, ul {
 }
 
 .protection_row {
-  width: 20%;
+  width: 30%;
 }
 
 .equipment_table td {
