@@ -37,7 +37,10 @@ function submit_form() {
     }
 
     if (type_of_training == 'Online') {
-        total_hours = total_hours / 2
+        total_hours = Math.round(total_hours / 2)
+        if (skill_type == 'distance') {
+            total_hours = Math.round(total_hours / 2)
+        }
     }
 
     if (type_of_training == 'Online') {
