@@ -78,9 +78,9 @@ function submit_exercise_form() {
 
   if (IsTCOver10500) {
     exerciseformresults.innerHTML = "To get from skill " + currentskill + " to skill " + targetskill + ", you need to use a total of: <br><br><b>"
-      + regular_weapons_required + " regular exercise weapons</b>, at a cost of " + regular_cost + regular_k_or_kk + ", time required: " + Math.floor(regular_weapons_required / 3.6) + " hours and " + Math.round((regular_weapons_required % 3.6) * 16.67) + " minutes<br><br><b>"
-      + durable_weapons_required + " durable exercise weapons</b>, at a cost of " + durable_cost + durable_k_or_kk + ", time required: " + durable_weapons_required + " hours<br><br><b>"
-      + lasting_weapons_required + " lasting exercise weapons</b>, at a cost of " + lasting_cost + lasting_k_or_kk + ", time required: " + lasting_weapons_required * 8 + " hours"
+      + regular_weapons_required + " regular exercise weapons</b>, at a cost of " + regular_cost + " " + regular_k_or_kk + ", time required: " + Math.floor(regular_weapons_required / 3.6) + " hours and " + Math.round((regular_weapons_required % 3.6) * 16.67) + " minutes<br><br><b>"
+      + durable_weapons_required + " durable exercise weapons</b>, at a cost of " + durable_cost + " " + durable_k_or_kk + ", time required: " + durable_weapons_required + " hours<br><br><b>"
+      + lasting_weapons_required + " lasting exercise weapons</b>, at a cost of " + lasting_cost + " " + lasting_k_or_kk + ", time required: " + lasting_weapons_required * 8 + " hours"
   }
   else {
     exerciseformresults.innerHTML = "To get from skill " + currentskill + " to skill " + targetskill + ", you need to use a total of: <br><br><b>"
