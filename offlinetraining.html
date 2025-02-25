@@ -9,8 +9,9 @@ scripts: <script src="scripts/offlinetraining.js"></script>
     If you select 'offline' training, the tool assumes full 12h of offline training per day.<br><br>
     The tool assumes:<br>
     - Magic level training for mages (Druids & Sorcerers)<br>
-    - Melee (Axe/Club/Sword) training for knights<br>
-    - Distance training for paladins<br></p>
+    - Melee (Axe/Club/Sword) training for Knights<br>
+    - Distance training for Paladins<br>
+    - Fist training for Monks<br></p>
 <form id="offlinetrainingform">
 <label for="type_of_training">Training type:</label>
     <select id="type_of_training" name="type_of_training">
@@ -22,6 +23,7 @@ scripts: <script src="scripts/offlinetraining.js"></script>
         <option value="Knight">Knight - Melee</option>
         <option value="Paladin">Paladin - Distance</option>
         <option value="Mage">Mage - Magic</option>
+        <option value="Mage">Monk - Fist</option>
     </select><br>
     <label id="currentskilllabel" for="currentskill">Current skill:</label>
     <input type="text" id="currentskill" name="currentskill" placeholder="current skill, e.g. 112"

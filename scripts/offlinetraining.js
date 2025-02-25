@@ -31,6 +31,10 @@ function submit_form() {
         total_hours = Math.round(calculate_knight_skill(currentskill, currentskillpercentage, targetskill, loyalty))
         skill_type = "melee"
     }
+    else if (vocation == 'Monk') {
+        total_hours = Math.round(calculate_knight_skill(currentskill, currentskillpercentage, targetskill, loyalty))
+        skill_type = "fist"
+    }
     else {
         total_hours = Math.round(calculate_paladin_skill(currentskill, currentskillpercentage, targetskill, loyalty))
         skill_type = "distance"
