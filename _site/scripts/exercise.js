@@ -37,6 +37,10 @@ function submit_exercise_form() {
   if (vocation_and_type == "Paladin Magic") {
     vocation_constant = 1.4
   }
+  else if (vocation_and_type == "Monk Magic") {
+    vocation_constant = 1.25
+  }
+
 
   points_required = main_skill_calculation_points_required(vocation_constant, currentskill, currentskillpercentage, targetskill, IsDummy, IsEvent, 0)
 
