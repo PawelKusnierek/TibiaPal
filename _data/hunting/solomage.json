@@ -141,6 +141,13 @@
     },
     {
         "level": "30+",
+        "place": "Chor",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "30+",
         "place": "Laguna Islands (Profit)",
         "raw_exp": "200k",
         "loot": "400k",
@@ -180,6 +187,13 @@
         "raw_exp": "240k",
         "loot": "150k",
         "link" : "https://youtu.be/VKifdYSTD2g"
+    },
+    {
+        "level": "50+",
+        "place": "LB Wyrms SD",
+        "raw_exp": "600k",
+        "loot": "-150k",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "50+",

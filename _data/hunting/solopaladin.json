@@ -56,6 +56,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "20+",
+        "place": "Chor",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "25+",
         "place": "Stonerefiners",
         "raw_exp": "-",
@@ -149,13 +156,6 @@
     {
         "level": "50+",
         "place": "Lion's Rock",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Bonebeast Island",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -273,7 +273,7 @@
         "link": "https://youtu.be/"
     },
     {
-        "level": "80+",
+        "level": "70+",
         "place": "Middle Spike (AOE)",
         "raw_exp": "-",
         "loot": "-",
@@ -877,7 +877,7 @@
     {
         "level": "400+",
         "place": "Wote 8 Drakens",
-        "raw_exp": "2.3kk",
+        "raw_exp": "3kk",
         "loot": "450k",
         "link": "https://youtu.be/kg-qhJ1EkKk"
     },

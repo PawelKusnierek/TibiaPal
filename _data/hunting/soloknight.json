@@ -77,6 +77,13 @@
         "link": "https://youtu.be/3mcY_eNBThg"
     },
     {
+        "level": "28+",
+        "place": "Chor",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "30+",
         "place": "Mutated Humans Yalahar",
         "raw_exp": "135k",
@@ -562,7 +569,7 @@
     {
         "level": "300+",
         "place": "Wote 8 Drakens",
-        "raw_exp": "2.5kk",
+        "raw_exp": "3.2kk",
         "loot": "700k",
         "link": "https://youtu.be/KJ9s5nD2_XM"
     },
