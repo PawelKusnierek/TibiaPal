@@ -58,8 +58,8 @@
     {
         "level": "14+",
         "place": "Tarantulas Port Hope",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "60k",
+        "loot": "-10k",
         "link" : "https://youtu.be/"
     },
     {
@@ -91,17 +91,17 @@
         "link" : "https://youtu.be/i-x5UKJdslU"
     },
     {
-        "level": "20+",
+        "level": "15+",
         "place": "Cyclopolis",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "20+",
+        "level": "15+",
         "place": "Elves Yalahar",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "80k",
+        "loot": "150k",
         "link" : "https://youtu.be/"
     },
     {
@@ -114,8 +114,8 @@
     {
         "level": "20+",
         "place": "Mutated Humans Yala",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "120k",
+        "loot": "-5k",
         "link" : "https://youtu.be/"
     },
     {
@@ -142,8 +142,8 @@
     {
         "level": "30+",
         "place": "Chor",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "290k",
+        "loot": "-20k",
         "link" : "https://youtu.be/"
     },
     {
@@ -170,8 +170,8 @@
     {
         "level": "30+",
         "place": "Dryad Gardens",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "220k",
+        "loot": "-30k",
         "link" : "https://youtu.be/"
     },
     {
