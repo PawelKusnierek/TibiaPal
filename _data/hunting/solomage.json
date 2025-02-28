@@ -310,127 +310,141 @@
     {
         "level": "100+",
         "place": "Quaras Liberty Bay",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1.1kk",
+        "loot": "100k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "100+",
         "place": "Grimvale -4",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1kk",
+        "loot": "200k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "100+",
         "place": "Krailos Bug Cave",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "600k",
+        "loot": "150k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "100+",
         "place": "Putrid Mummy",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "700k",
+        "loot": "400k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "100+",
         "place": "Calassa",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1kk",
+        "loot": "-50k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "100+",
+        "place": "Sunken Quarter",
+        "raw_exp": "1.3kk",
+        "loot": "0k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "100+",
         "place": "Souleater Mountain",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "100+",
-        "place": "Edron Were South",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1kk",
+        "loot": "100k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "100+",
         "place": "Edron Vampire Crypt",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "850k",
+        "loot": "400k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "100+",
-        "place": "Dragon Lords Fenrock/POI",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Dragon Lords POI",
+        "raw_exp": "850k",
+        "loot": "-100k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "100+",
+        "place": "Dragon Lords Fenrock",
+        "raw_exp": "900k",
+        "loot": "-50k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "100+",
+        "place": "Edron Old Fortress -2",
+        "raw_exp": "1.15kk",
+        "loot": "100k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "100+",
         "place": "Ravenous Lava Lurkers",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1.8kk",
+        "loot": "-100k",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "100+",
+        "level": "110+",
         "place": "Exotic Cave",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1.2kk",
+        "loot": "300k",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "100+",
+        "level": "110+",
         "place": "Iksupan",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1.1kk",
+        "loot": "200k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "110+",
+        "place": "Edron Were South",
+        "raw_exp": "1.4kk",
+        "loot": "100k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "120+",
         "place": "Lizard Chosens",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1kk",
+        "loot": "0k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "120+",
         "place": "Lizard City",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1kk",
+        "loot": "100k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "120+",
         "place": "Brimstone Bugs WOTE",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "950k",
+        "loot": "600k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "120+",
-        "place": "Edron Old Fortress",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Edron Old Fortress -3",
+        "raw_exp": "1.15kk",
+        "loot": "0k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "120+",
         "place": "Carlin Cults",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "130+",
-        "place": "Yalahar Sunken Quarter",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1.2kk",
+        "loot": "-100k",
         "link" : "https://youtu.be/"
     },
     {
