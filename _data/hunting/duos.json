@@ -358,6 +358,13 @@
     },
     {
         "level": "300+",
+        "place": "Kilmaresh Mountains (Ogres)",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
         "place": "Nightmare Isles",
         "raw_exp": "-",
         "loot": "-",

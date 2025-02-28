@@ -729,6 +729,13 @@
     },
     {
         "level": "400+",
+        "place": "Roshamuul Mines",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
         "place": "Marapur Turtles and Foam Stalkers",
         "raw_exp": "2.6kk",
         "loot": "1.2kk",
@@ -803,6 +810,13 @@
         "raw_exp": "4kk",
         "loot": "1.1kk",
         "link": "https://youtu.be/iNy9v0cuywY"
+    },
+    {
+        "level": "500+",
+        "place": "Kilmaresh Mountains (Ogres)",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "500+",

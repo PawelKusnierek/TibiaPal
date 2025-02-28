@@ -945,6 +945,13 @@
         "link": "https://www.youtube.com/watch?v=aHc3iL329-U"
     },
     {
+        "level": "400+",
+        "place": "Roshamuul Mines",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "450+",
         "place": "Nightmare Isles",
         "raw_exp": "2.9kk",
