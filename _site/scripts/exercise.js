@@ -55,6 +55,7 @@ function submit_exercise_form() {
   if (Math.round(regular_cost) > 1000) {
     regular_cost = regular_cost / 1000
     regular_k_or_kk = "kk"
+    regular_cost = Math.round(regular_cost * 100) / 100
   }
 
   durable_k_or_kk = "k"

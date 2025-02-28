@@ -446,5 +446,19 @@
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Kilmaresh Mountains (Ogres)",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Roshamuul Cistern",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
     }
 ]
