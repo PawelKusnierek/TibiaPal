@@ -43,6 +43,13 @@
     },
     {
         "level": "12+",
+        "place": "Drefia Surface",
+        "raw_exp": "75k",
+        "loot": "50k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "12+",
         "place": "Amazon Camp (Profit)",
         "raw_exp": "-",
         "loot": "-",
