@@ -133,6 +133,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "40+",
+        "place": "Peninsula Tomb",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "50+",
         "place": "Lion's Rock",
         "raw_exp": "-",
@@ -142,13 +149,6 @@
     {
         "level": "50+",
         "place": "Krailos Surface",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Peninsula Tomb",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"

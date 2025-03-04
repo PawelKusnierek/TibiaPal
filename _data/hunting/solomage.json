@@ -56,6 +56,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "12+",
+        "place": "Cormaya Dwarf Mines",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "13+",
         "place": "Cyclops Mistrock/Mount Sternum",
         "raw_exp": "-",
@@ -477,6 +484,13 @@
     },
     {
         "level": "130+",
+        "place": "Dark Faun Cave Feyrist",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "130+",
         "place": "Glooth Bandits",
         "raw_exp": "-",
         "loot": "-",
@@ -540,20 +554,6 @@
     },
     {
         "level": "250+",
-        "place": "Winter Court",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "250+",
-        "place": "Summer Court",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "250+",
         "place": "Diremaw Task Area (AOE)",
         "raw_exp": "-",
         "loot": "-",
@@ -590,6 +590,20 @@
     {
         "level": "300+",
         "place": "Draken Walls",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Winter Court",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Summer Court",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
