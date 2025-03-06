@@ -1461,4 +1461,40 @@ ol, ul {
   padding-top: 10px;
   display: none;
   border-top: none;
+}
+
+.monk_event_tab {
+  overflow: hidden;
+}
+
+.monk_event_tab button {
+  border: 1px solid #cbd4ff;
+  background-color: inherit;
+  float: left;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  width: 33.33%;
+  color: #ccc;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Verdana, Arial, Times New Roman, sans-serif;
+}
+
+.monk_event_tab button:hover {
+  background-color: #14356d;
+}
+
+.monk_event_tab button.active {
+  background-color: #1c4b9b;
+  width: 33.33%;
+}
+
+#monklist {
+  text-align: left;
+}
+
+#monklist li {
+  padding-bottom: 5px;
 }/*# sourceMappingURL=main.css.map */

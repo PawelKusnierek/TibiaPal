@@ -119,6 +119,9 @@ function enable_default_tabs() {
   else if(location.href.includes('/hunting')) {
     initial_show_tab("Knight")
   }
+  else if(location.href.includes('/monkcontest')) {
+    initial_show_tab("Bounties")
+  }
 
 
 }

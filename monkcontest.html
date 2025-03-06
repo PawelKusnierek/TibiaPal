@@ -1,0 +1,170 @@
+---
+layout: default
+title: TibiaPal.com - Monk Bounty Contest
+scripts: <script src="scripts/monk_contest.js"></script>
+---
+
+<!-- Tab links -->
+<div class="monk_event_tab">
+  <button class="tablinks active" onclick="show_tab(event, 'Bounties')">Bounties</button>
+  <button class="tablinks" onclick="show_tab(event, 'Funding')">Crowd Funding & Design your own bounty</button>
+  <button class="tablinks" onclick="show_tab(event, 'Rules')">Rules & How to claim</button>
+</div>
+
+<div id="Bounties" class="tabcontent">
+    <p>Please note that final TC rewards will be fully decided based on crowd funding amount, currently they are just goals/estimates.<br><br>Available <span style="color:green">EASY</span> Bounties:<br>
+   </p>
+    <table class="equipment_table" id="equipment_table_monk">
+        <tr>
+            <th class="reward_row">Reward</th>
+            <th class="bounty_row">Bounty</th>
+        </tr>
+        <tr>
+            <td>100 TC</td>
+            <td>Beat Svargrond warlord arena</td>
+        </tr>
+        <tr>
+            <td>100 TC</td>
+            <td>Loot 'Boots of Haste' from a Necromancer</td>
+        </tr>
+        <tr>
+            <td>100 TC</td>
+            <td>Get 100 fist fighting (in highscores, excluding loyalty)</td>
+        </tr>
+        <tr>
+            <td>100 TC</td>
+            <td>Achieve rank 50 solo in Tibiadrome</td>
+        </tr>
+        <tr>
+            <td>100 TC</td>
+            <td>Obtain 'Giant Beaver' mount</td>
+        </tr>
+        <tr>
+            <td>100 TC</td>
+            <td>Complete 'The Way of the Monk Quest' (10/10 shrines)</td>
+        </tr>
+        <tr>
+            <td>100 TC</td>
+            <td>One shot a Dragon (1000 damage)</td>
+        </tr>
+    </table>
+    <p><br>Available <span style="color:orange">MEDIUM</span> Bounties:<br></p>
+    <table class="equipment_table" id="equipment_table_monk">
+        <tr>
+            <th class="reward_row">Reward</th>
+            <th class="bounty_row">Bounty</th>
+        </tr>
+        <tr>
+            <td>250 TC</td>
+            <td>Advance to level 300<td>
+        </tr>
+        <tr>
+            <td>250 TC</td>
+            <td>Kill a demon using only default unarmed fist attack (provide video as proof)</td>
+        </tr>
+        <tr>
+            <td>250 TC</td>
+            <td>Solo a Sight of Surrender (provide video as proof)</td>
+        </tr>
+        <tr>
+            <td>250 TC</td>
+            <td>Obtain 'Midnight Panther' mount</td>
+        </tr>
+        <tr>
+            <td>250 TC</td>
+            <td>Loot a 'Shield of Corruption' from a Draken Abomination</td>
+        </tr>
+        <tr>
+            <td>250 TC</td>
+            <td>Complete 'Demon Oak Quest'</td>
+        </tr>
+        <tr>
+            <td>250 TC</td>
+            <td>Obtain 'His True Face achievement' (no rooking, but through Armenius teleport)</td>
+        </tr>
+        <tr>
+            <td>250 TC</td>
+            <td>Have 3000 charm points (no rooking, only fresh Monk characters allowed)</td>
+        </tr>
+        <tr>
+            <td>250 TC</td>
+            <td>Have 3000 boss points (no rooking, only fresh Monk characters allowed)</td>
+        </tr>
+        <tr>
+            <td>250 TC</td>
+            <td>Have 500 achievement points (no rooking, only fresh Monk characters allowed)</td>
+        </tr>
+        <tr>
+            <td>250 TC</td>
+            <td>Have 4% animus mastery (no rooking, only fresh Monk characters allowed)</td>
+        </tr>
+    </table>
+    <p><br>Available <span style="color:red">HARD</span> Bounties:<br></p>
+    <table class="equipment_table" id="equipment_table_monk">
+        <tr>
+            <th class="reward_row">Reward</th>
+            <th class="bounty_row">Bounty</th>
+        </tr>
+        <tr>
+            <td>500 TC</td>
+            <td>Advance to level 1000</td>
+        </tr>
+        <tr>
+            <td>500 TC</td>
+            <td>Kill 'Bakragore' (need to survive until the end)</td>
+        </tr>
+        <tr>
+            <td>500 TC</td>
+            <td>Complete 'Soulwar Quest'</td>
+        </tr>
+        <tr>
+            <td>500 TC</td>
+            <td>Loot a 'Ferumbras Hat'</td>
+        </tr>
+        <tr>
+            <td>500 TC</td>
+            <td>Complete full Discoverer outfit (no rooking, only fresh Monk characters allowed)</td>
+        </tr>
+    </table>
+    <p><br>Already Claimed Bounties:</p>
+    <table class="equipment_table" id="equipment_table_monk">
+        <tr>
+            <th class="reward_row">Reward</th>
+            <th class="bounty_row">Bounty</th>
+            <th class="completed_row">Claimed by</th>
+            <th class="completed_row">Date claimed</th>
+
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+    </table>
+    <p><br><br><br></p>
+</div>
+
+<div id="Funding" class="tabcontent">
+<p>I will be paying for the bounties with my own TC, but if you would like to further contribute to the event, any TC donations sent to my character '<b>Kusnier</b>' between now and the Monks' release will be 100% added to the bounty prize pool. <br><span style="color:gold">THANK YOU!</span><br><br>
+In addition, if you donate over a certain threshold, you will be able to design* a bounty yourself. If you donate:
+    <ul id="monklist">
+            <li>Over 250 TC, you can design an Easy bounty
+            <li>Over 500 TC, you can design a Medium bounty
+            <li>Over 1000 TC, you can design a Hard bounty
+    </ul>
+<br>*obviously the bounties need to make thematic sense so I reserve the right to reject them/discuss with you how to change them <br>
+</p>
+
+</div>
+<div id="Rules" class="tabcontent">
+    <p>
+        <ul id="monklist">
+            <li>There is no need to register for the event in any way, it's free and open to everyone
+            <li>Bounties can only be completed by Monk characters (obviously)
+            <li>Once a bounty has been claimed, it cannot be claimed again
+            <li>To claim a bounty, include a full in-game screenshot completing the bounty in our <a href="https://discord.gg/kbjqY2VRa9" target="_blank">Discord</a>, in channel #bounty-claim. Any other special conditions are explained directly on each bounty. Once verified, I will contact you for character name to deliver the reward to
+            <li>Reward is paid out to the first person to successfully claim it on the Discord server, NOT necessarily the first person who completes it in game - we do not want to police timezones etc., so simply claim here as soon as you can to ensure you win. Time of claim in the Discord server will be the deciding factor.
+        </ul>
+    </p>
+</div>
