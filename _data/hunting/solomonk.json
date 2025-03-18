@@ -645,14 +645,28 @@
     },
     {
         "level": "400+",
-        "place": "Prison -1/-2",
+        "place": "Nightmare Isles",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "400+",
-        "place": "Nightmare Isles",
+        "place": "Azzilon",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Falcons",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Sphinx/Crypt Warden",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -673,20 +687,6 @@
     },
     {
         "level": "600+",
-        "place": "Azzilon",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Falcons",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
         "place": "Warzone 1/2/3/7/8/9 (TBD)",
         "raw_exp": "-",
         "loot": "-",
@@ -694,7 +694,21 @@
     },
     {
         "level": "600+",
-        "place": "Pumin/Plague Seal",
+        "place": "Pumin Seal",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Plague Seal",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "UD Seal",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"

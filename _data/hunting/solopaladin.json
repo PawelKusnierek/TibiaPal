@@ -988,7 +988,7 @@
     },
     {
         "level": "500+",
-        "place": "Upper Roshamuul (Beginners)",
+        "place": "Upper Roshamuul (North)",
         "raw_exp": "4.2kk",
         "loot": "500k",
         "link": "https://youtu.be/nt3aFsOTC7U"
@@ -1030,10 +1030,24 @@
     },
     {
         "level": "600+",
+        "place": "Bounac Crypt Warriors",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
         "place": "Port Hope Flimsies",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Upper Roshamuul (South)",
+        "raw_exp": "",
+        "loot": "",
+        "link": "https://youtu.be/"
     },
     {
         "level": "600+",
@@ -1071,6 +1085,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "600+",
+        "place": "Falcon Bastion",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "700+",
         "place": "Azzilon Castle",
         "raw_exp": "-",
@@ -1078,15 +1099,8 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "700+",
+        "level": "800+",
         "place": "Ferumbras Way",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "700+",
-        "place": "Falcon Bastion",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -1113,15 +1127,15 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "800+",
-        "place": "Bounac Crypt Warriors",
+        "level": "850+",
+        "place": "Issavi Crypts (Wardens/Sphinx)",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "850+",
-        "place": "Issavi Crypts (Wardens/Sphinx)",
+        "level": "1200+",
+        "place": "Feru DT",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
