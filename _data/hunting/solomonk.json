@@ -554,6 +554,13 @@
     },
     {
         "level": "400+",
+        "place": "Buried Cathedral",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
         "place": "Oskayaat",
         "raw_exp": "-",
         "loot": "-",
@@ -716,6 +723,13 @@
     {
         "level": "600+",
         "place": "Wardragons",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "True Asuras",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
