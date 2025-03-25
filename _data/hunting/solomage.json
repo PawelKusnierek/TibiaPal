@@ -130,7 +130,7 @@
         "place": "Mutated Humans Yala",
         "raw_exp": "120k",
         "loot": "-5k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/y5jPGCL_JsI"
     },
     {
         "level": "28+",
@@ -158,7 +158,7 @@
         "place": "Chor",
         "raw_exp": "290k",
         "loot": "-20k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/PgJSRyBCSzs"
     },
     {
         "level": "30+",
@@ -186,7 +186,7 @@
         "place": "Dryad Gardens",
         "raw_exp": "220k",
         "loot": "-30k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/h6frDxop6bA"
     },
     {
         "level": "30+",
@@ -207,21 +207,21 @@
         "place": "LB Wyrms SD",
         "raw_exp": "600k",
         "loot": "-150k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/GTB7xIoN3gQ"
     },
     {
         "level": "50+",
         "place": "Yalahar Cults",
         "raw_exp": "290k",
         "loot": "500k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/Mf97YGUteV0"
     },
     {
         "level": "50+",
         "place": "Peninsula Tomb",
         "raw_exp": "440k",
         "loot": "60k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/cZQncRLVp90"
     },
     {
         "level": "50+",
@@ -235,14 +235,14 @@
         "place": "Water Elementals Port Hope",
         "raw_exp": "400k",
         "loot": "-50k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/Qjdpi5yDl0E"
     },
     {
         "level": "50+",
         "place": "Nibelor Crystal Spiders",
         "raw_exp": "450k",
         "loot": "-10k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/Ma_T9DV5GqA"
     },
     {
         "level": "50+",
@@ -284,6 +284,13 @@
         "place": "Giant Spiders Port Hope",
         "raw_exp": "600k",
         "loot": "-25k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "80+",
+        "place": "Ice Witch Temple",
+        "raw_exp": "-",
+        "loot": "-",
         "link" : "https://youtu.be/"
     },
     {

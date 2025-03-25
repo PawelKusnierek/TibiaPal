@@ -921,7 +921,21 @@
         "place": "Oramond Catacombs",
         "raw_exp": "5.0kk",
         "loot": "850k",
-        "link": "https://youtu.be/75WRV0ufPXo"
+        "link": "https://youtu.be/GZghOWmypUI"
+    },
+    {
+        "level": "400+",
+        "place": "Burster Spectres Solo (Bestiary)",
+        "raw_exp": "3.0kk",
+        "loot": "400k",
+        "link": "https://youtu.be/gm18bfC8slI"
+    },
+    {
+        "level": "400+",
+        "place": "Gazer Spectres Solo (Bestiary)",
+        "raw_exp": "3.0kk",
+        "loot": "400k",
+        "link": "https://youtu.be/5-HfnAMHYA0"
     },
     {
         "level": "400+",
@@ -943,13 +957,6 @@
         "raw_exp": "2.6kk",
         "loot": "400k",
         "link": "https://www.youtube.com/watch?v=aHc3iL329-U"
-    },
-    {
-        "level": "400+",
-        "place": "Roshamuul Mines",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
     },
     {
         "level": "450+",
@@ -978,6 +985,13 @@
         "raw_exp": "5.2kk",
         "loot": "1kk",
         "link": "https://youtu.be/_-kuBf_j28I"
+    },
+    {
+        "level": "450+",
+        "place": "Roshamuul Mines (Terrorsleeps)",
+        "raw_exp": "5.0kk",
+        "loot": "700k",
+        "link": "https://youtu.be/sAdUsiRcKD8"
     },
     {
         "level": "450+",
@@ -1029,11 +1043,11 @@
         "link": "https://youtu.be/-GZes-PICZ0"
     },
     {
-        "level": "600+",
+        "level": "500+",
         "place": "Bounac Crypt Warriors",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
+        "raw_exp": "5.7kk",
+        "loot": "500k",
+        "link" : "https://youtu.be/SrQtQZjq66w"
     },
     {
         "level": "600+",
