@@ -98,22 +98,29 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "35+",
+        "level": "30+",
         "place": "Upper Spike",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "35+",
+        "level": "30+",
         "place": "Meriana Gargoyle Cave",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "40+",
+        "level": "30+",
         "place": "Laguna Blood Crabs",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "40+",
+        "place": "LB Quara Scouts",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -148,13 +155,6 @@
     },
     {
         "level": "50+",
-        "place": "Krailos Surface",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
         "place": "Nibelor Crystal Spiders",
         "raw_exp": "-",
         "loot": "-",
@@ -176,7 +176,7 @@
     },
     {
         "level": "60+",
-        "place": "Mother of Scarabs Lair",
+        "place": "Krailos Surface",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -184,6 +184,27 @@
     {
         "level": "60+",
         "place": "Yalahar Bog Raiders Central",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "70+",
+        "place": "Mother of Scarabs Lair",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "70+",
+        "place": "Middle Spike",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "70+",
+        "place": "Fenrock Dragon Lords",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -204,41 +225,34 @@
     },
     {
         "level": "80+",
-        "place": "Nightmare Scions",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "80+",
-        "place": "Edron Vampire Crypts",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "80+",
-        "place": "Fenrock Dragon Lords",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "80+",
         "place": "Giant Spiders Port Hope",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "80+",
+        "level": "90+",
+        "place": "Nightmare Scions",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "90+",
+        "place": "Edron Vampire Crypts",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "90+",
         "place": "Souleater Mountain",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "80+",
+        "level": "100+",
         "place": "Dark Faun Cave",
         "raw_exp": "-",
         "loot": "-",
@@ -302,13 +316,6 @@
     },
     {
         "level": "120+",
-        "place": "Edron Orc Cults",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "120+",
         "place": "Okolnir",
         "raw_exp": "-",
         "loot": "-",
@@ -365,6 +372,13 @@
     },
     {
         "level": "150+",
+        "place": "Edron Orc Cults",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "150+",
         "place": "Barkless Elves Ab",
         "raw_exp": "-",
         "loot": "-",
@@ -379,6 +393,13 @@
     },
     {
         "level": "150+",
+        "place": "Deeplings Library",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "200+",
         "place": "Drefia Grim Reapers",
         "raw_exp": "-",
         "loot": "-",
@@ -387,13 +408,6 @@
     {
         "level": "200+",
         "place": "Otherworld (Edron)",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "200+",
-        "place": "Pirats",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -414,13 +428,6 @@
     },
     {
         "level": "200+",
-        "place": "Seacrest Serpents",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "200+",
         "place": "Glooth Tower",
         "raw_exp": "-",
         "loot": "-",
@@ -435,21 +442,7 @@
     },
     {
         "level": "200+",
-        "place": "Deeplings Library",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "200+",
         "place": "Yalahar Grim Reapers",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "200+",
-        "place": "Burster Spectres",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -470,14 +463,7 @@
     },
     {
         "level": "250+",
-        "place": "Deeper Banuta -8",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "250+",
-        "place": "Oramond Fury Dungeon",
+        "place": "Pirats",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -485,6 +471,34 @@
     {
         "level": "250+",
         "place": "Asura Palace",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "250+",
+        "place": "Burster Spectres",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "270+",
+        "place": "Deeper Banuta -8",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "270+",
+        "place": "Seacrest Serpents",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "270+",
+        "place": "Oramond Fury Dungeon",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
