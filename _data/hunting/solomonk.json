@@ -70,7 +70,14 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "20+",
+        "level": "15+",
+        "place": "Elves Yalahar",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "15+",
         "place": "Minotaurs Darashia (Stealth Ring)",
         "raw_exp": "-",
         "loot": "-",
@@ -86,13 +93,6 @@
     {
         "level": "20+",
         "place": "Mutated Humans Alchemist",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "20+",
-        "place": "Elves Yalahar",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
