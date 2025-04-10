@@ -127,27 +127,6 @@
     },
     {
         "level": "50+",
-        "place": "Water Elementals Port Hope",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Yalahar Cults",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Peninsula Tomb",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
         "place": "Lion's Rock",
         "raw_exp": "-",
         "loot": "-",
@@ -155,7 +134,7 @@
     },
     {
         "level": "50+",
-        "place": "Nibelor Crystal Spiders",
+        "place": "Yalahar Cults",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -176,13 +155,34 @@
     },
     {
         "level": "60+",
-        "place": "Krailos Surface",
+        "place": "Peninsula Tomb",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "60+",
+        "place": "Water Elementals Port Hope",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "60+",
+        "place": "Nibelor Crystal Spiders",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "70+",
+        "place": "Krailos Surface",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "70+",
         "place": "Yalahar Bog Raiders Central",
         "raw_exp": "-",
         "loot": "-",
@@ -205,6 +205,13 @@
     {
         "level": "70+",
         "place": "Fenrock Dragon Lords",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "70+",
+        "place": "Quaras LB",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -252,8 +259,36 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "90+",
+        "place": "Edron Old Fortress -2/-3",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "90+",
+        "place": "Carlin Cults",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "90+",
+        "place": "Sunken Quarter",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "100+",
         "place": "Dark Faun Cave",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "100+",
+        "place": "Oramond West",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -267,14 +302,14 @@
     },
     {
         "level": "100+",
-        "place": "Quaras LB",
+        "place": "Okolnir",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "120+",
-        "place": "Edron Old Fortress -2/-3",
+        "level": "100+",
+        "place": "Lizard Chosens",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -308,36 +343,8 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "120+",
-        "place": "Lizard Chosens",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "120+",
-        "place": "Okolnir",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "120+",
-        "place": "Carlin Cults",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "120+",
+        "level": "130+",
         "place": "Elder Wyrms Drefia",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "135+",
-        "place": "Sunken Quarter",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -359,13 +366,6 @@
     {
         "level": "135+",
         "place": "Deeper Banuta -1",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "135+",
-        "place": "Oramond West",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
