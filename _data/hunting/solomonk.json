@@ -37,8 +37,8 @@
     {
         "level": "14+",
         "place": "Amazon Camp (Profit)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "35k",
+        "loot": "60k",
         "link" : "https://youtu.be/"
     },
     {
@@ -219,8 +219,8 @@
     {
         "level": "80+",
         "place": "Yielothaxes",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "900k",
+        "loot": "250k",
         "link" : "https://youtu.be/"
     },
     {
@@ -260,23 +260,23 @@
     },
     {
         "level": "90+",
-        "place": "Edron Old Fortress -2/-3",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Edron Old Fortress Heroes",
+        "raw_exp": "1.7kk",
+        "loot": "80k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "90+",
         "place": "Carlin Cults",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1.55kk",
+        "loot": "100k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "90+",
         "place": "Sunken Quarter",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1.6kk",
+        "loot": "150k",
         "link" : "https://youtu.be/"
     },
     {
@@ -302,16 +302,23 @@
     },
     {
         "level": "100+",
+        "place": "Chyllfroest (April only)",
+        "raw_exp": "1.9kk",
+        "loot": "0k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "100+",
         "place": "Okolnir",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1.4kk",
+        "loot": "-80k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "100+",
         "place": "Lizard Chosens",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1.5kk",
+        "loot": "80k",
         "link" : "https://youtu.be/"
     },
     {
@@ -345,8 +352,8 @@
     {
         "level": "130+",
         "place": "Elder Wyrms Drefia",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1.7kk",
+        "loot": "120k",
         "link" : "https://youtu.be/"
     },
     {
