@@ -148,13 +148,6 @@
     },
     {
         "level": "50+",
-        "place": "Lion's Rock",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
         "place": "Vengoth Haunted Treelings",
         "raw_exp": "-",
         "loot": "-",
@@ -163,6 +156,13 @@
     {
         "level": "50+",
         "place": "Edron Bonebeasts",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "60+",
+        "place": "Lion's Rock",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -252,6 +252,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "80+",
+        "place": "Okolnir",
+        "raw_exp": "1.4kk",
+        "loot": "-80k",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "90+",
         "place": "Nightmare Scions",
         "raw_exp": "-",
@@ -294,6 +301,20 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "90+",
+        "place": "Putrid Mummy",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "100+",
+        "place": "Mini Rosha",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "100+",
         "place": "Dark Faun Cave",
         "raw_exp": "-",
@@ -323,13 +344,6 @@
     },
     {
         "level": "100+",
-        "place": "Okolnir",
-        "raw_exp": "1.4kk",
-        "loot": "-80k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "100+",
         "place": "Lizard Chosens",
         "raw_exp": "1.5kk",
         "loot": "80k",
@@ -338,20 +352,6 @@
     {
         "level": "120+",
         "place": "Exotic Cave",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "120+",
-        "place": "Putrid Mummy",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "120+",
-        "place": "Mini Rosha",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
