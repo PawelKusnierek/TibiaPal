@@ -93,8 +93,8 @@
     {
         "level": "20+",
         "place": "Mutated Humans Alchemist",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "80k",
+        "loot": "15k",
         "link" : "https://youtu.be/"
     },
     {
@@ -119,6 +119,27 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "35+",
+        "place": "Yalahar Cults",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "35+",
+        "place": "Mutated Rats Yalahar",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "35+",
+        "place": "MoSL -3",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "40+",
         "place": "LB Quara Scouts",
         "raw_exp": "-",
@@ -128,13 +149,6 @@
     {
         "level": "50+",
         "place": "Lion's Rock",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Yalahar Cults",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -296,8 +310,8 @@
     {
         "level": "100+",
         "place": "Ravenous Lava Lurkers",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "2.4kk",
+        "loot": "-50k",
         "link" : "https://youtu.be/"
     },
     {
