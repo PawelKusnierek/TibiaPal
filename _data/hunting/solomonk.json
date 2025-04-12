@@ -72,8 +72,8 @@
     {
         "level": "15+",
         "place": "Elves Yalahar",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "50k",
+        "loot": "100k",
         "link" : "https://youtu.be/"
     },
     {
@@ -98,21 +98,21 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "30+",
+        "level": "35+",
         "place": "Upper Spike",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "30+",
+        "level": "35+",
         "place": "Meriana Gargoyle Cave",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "30+",
+        "level": "35+",
         "place": "Laguna Blood Crabs",
         "raw_exp": "-",
         "loot": "-",
@@ -302,6 +302,13 @@
     },
     {
         "level": "90+",
+        "place": "Edron Orc Cults",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "90+",
         "place": "Putrid Mummy",
         "raw_exp": "-",
         "loot": "-",
@@ -387,13 +394,6 @@
     {
         "level": "135+",
         "place": "Deeper Banuta -1",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "150+",
-        "place": "Edron Orc Cults",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
