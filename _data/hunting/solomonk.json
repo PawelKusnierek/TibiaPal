@@ -98,6 +98,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "30+",
+        "place": "Carniphilas Port Hope",
+        "raw_exp": "90k",
+        "loot": "10k",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "35+",
         "place": "Upper Spike",
         "raw_exp": "-",
