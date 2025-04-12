@@ -231,6 +231,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "70+",
+        "place": "Nightmare Scions Krailos",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "80+",
         "place": "Yielothaxes",
         "raw_exp": "900k",
@@ -252,17 +259,10 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "80+",
+        "level": "90+",
         "place": "Okolnir",
         "raw_exp": "1.4kk",
         "loot": "-80k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "90+",
-        "place": "Nightmare Scions",
-        "raw_exp": "-",
-        "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
@@ -357,15 +357,8 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "120+",
+        "level": "100+",
         "place": "Exotic Cave",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "120+",
-        "place": "Grimvale -4",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
