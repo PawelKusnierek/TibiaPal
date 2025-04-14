@@ -30,8 +30,8 @@
     {
         "level": "14+",
         "place": "Edron Forgotten Tomb",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "60k",
+        "loot": "80k",
         "link" : "https://youtu.be/"
     },
     {
@@ -43,16 +43,9 @@
     },
     {
         "level": "14+",
-        "place": "Poacher's Cave (Poachers + Hunters)",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "14+",
         "place": "Tarantulas Port Hope",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "50k",
+        "loot": "15k",
         "link" : "https://youtu.be/"
     },
     {
@@ -147,6 +140,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "35+",
+        "place": "Peninsula Tomb",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "40+",
         "place": "LB Quara Scouts",
         "raw_exp": "-",
@@ -170,13 +170,6 @@
     {
         "level": "60+",
         "place": "Lion's Rock",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "60+",
-        "place": "Peninsula Tomb",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
