@@ -72,8 +72,8 @@
     {
         "level": "15+",
         "place": "Minotaurs Darashia (Stealth Ring)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "80k",
+        "loot": "-20k",
         "link" : "https://youtu.be/"
     },
     {
@@ -252,6 +252,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "70+",
+        "place": "Edron Vampire Crypts",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "80+",
         "place": "Yielothaxes",
         "raw_exp": "900k",
@@ -273,6 +280,20 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "80+",
+        "place": "Edron Old Fortress Heroes",
+        "raw_exp": "1.7kk",
+        "loot": "80k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "80+",
+        "place": "Carlin Cults",
+        "raw_exp": "1.55kk",
+        "loot": "100k",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "90+",
         "place": "Okolnir",
         "raw_exp": "1.4kk",
@@ -281,30 +302,9 @@
     },
     {
         "level": "90+",
-        "place": "Edron Vampire Crypts",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "90+",
         "place": "Souleater Mountain",
         "raw_exp": "-",
         "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "90+",
-        "place": "Edron Old Fortress Heroes",
-        "raw_exp": "1.7kk",
-        "loot": "80k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "90+",
-        "place": "Carlin Cults",
-        "raw_exp": "1.55kk",
-        "loot": "100k",
         "link" : "https://youtu.be/"
     },
     {
