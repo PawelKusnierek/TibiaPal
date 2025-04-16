@@ -323,6 +323,20 @@
     },
     {
         "level": "90+",
+        "place": "Oramond West",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "90+",
+        "place": "Hydras Oramond",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "90+",
         "place": "Putrid Mummy",
         "raw_exp": "-",
         "loot": "-",
@@ -338,13 +352,6 @@
     {
         "level": "100+",
         "place": "Dark Faun Cave",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "100+",
-        "place": "Oramond West",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -385,29 +392,43 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "135+",
+        "level": "130+",
         "place": "Brimstone Bugs WOTE",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "135+",
-        "place": "Hydras Oramond",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "135+",
+        "level": "130+",
         "place": "Deeper Banuta -1",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "150+",
+        "level": "130+",
+        "place": "Drefia Grim Reapers",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "130+",
         "place": "Barkless Elves Ab",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "130+",
+        "place": "Deeplings Library",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "130+",
+        "place": "Glooth Bandits",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -421,16 +442,9 @@
     },
     {
         "level": "150+",
-        "place": "Deeplings Library",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "200+",
-        "place": "Drefia Grim Reapers",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Yalahar Grim Reapers",
+        "raw_exp": "3.5kk",
+        "loot": "-150k",
         "link" : "https://youtu.be/"
     },
     {
@@ -443,13 +457,6 @@
     {
         "level": "200+",
         "place": "Werehyaenas",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "200+",
-        "place": "Glooth Bandits",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -470,13 +477,6 @@
     },
     {
         "level": "200+",
-        "place": "Yalahar Grim Reapers",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "200+",
         "place": "Hive Stage3",
         "raw_exp": "-",
         "loot": "-",
@@ -490,15 +490,15 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "250+",
-        "place": "Pirats",
+        "level": "220+",
+        "place": "Asura Palace",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "250+",
-        "place": "Asura Palace",
+        "place": "Pirats",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
