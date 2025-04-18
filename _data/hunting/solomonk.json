@@ -259,6 +259,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "70+",
+        "place": "Iksupan Entrance",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "80+",
         "place": "Yielothaxes",
         "raw_exp": "900k",
@@ -448,6 +455,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "150+",
+        "place": "Glooth Tower",
+        "raw_exp": "2.0kk",
+        "loot": "200k",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "200+",
         "place": "Otherworld (Edron)",
         "raw_exp": "-",
@@ -457,22 +471,15 @@
     {
         "level": "200+",
         "place": "Werehyaenas",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "200+",
-        "place": "Glooth Tower",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "2.8kk",
+        "loot": "500k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "200+",
         "place": "Draken Walls",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "2.2kk",
+        "loot": "500k",
         "link" : "https://youtu.be/"
     },
     {
@@ -485,6 +492,13 @@
     {
         "level": "200+",
         "place": "Medusa Tower",
+        "raw_exp": "2.8kk",
+        "loot": "350k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "200+",
+        "place": "Deeper Banuta -4",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -532,7 +546,7 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "300+",
+        "level": "270+",
         "place": "Werelions",
         "raw_exp": "-",
         "loot": "-",
