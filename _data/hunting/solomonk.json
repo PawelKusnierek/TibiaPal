@@ -407,23 +407,9 @@
     },
     {
         "level": "130+",
-        "place": "Deeper Banuta -1",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "130+",
-        "place": "Drefia Grim Reapers",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "130+",
         "place": "Barkless Elves Ab",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "2.5kk",
+        "loot": "-400k",
         "link" : "https://youtu.be/"
     },
     {
@@ -445,6 +431,13 @@
         "place": "Otherworld (Kazo)",
         "raw_exp": "-",
         "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "150+",
+        "place": "Deeper Banuta -4",
+        "raw_exp": "2.1kk",
+        "loot": "400k",
         "link" : "https://youtu.be/"
     },
     {
@@ -494,13 +487,6 @@
         "place": "Medusa Tower",
         "raw_exp": "2.8kk",
         "loot": "350k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "200+",
-        "place": "Deeper Banuta -4",
-        "raw_exp": "-",
-        "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
