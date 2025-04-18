@@ -436,7 +436,7 @@
     {
         "level": "150+",
         "place": "Deeper Banuta -4",
-        "raw_exp": "2.1kk",
+        "raw_exp": "2.2kk",
         "loot": "400k",
         "link" : "https://youtu.be/"
     },
@@ -511,6 +511,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "250+",
+        "place": "Gazer Spectre",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "270+",
         "place": "Deeper Banuta -8",
         "raw_exp": "-",
@@ -568,20 +575,13 @@
     },
     {
         "level": "300+",
-        "place": "Gazer Spectre",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "330+",
         "place": "Lower Rosh",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "330+",
+        "level": "300+",
         "place": "Warzone4/5/6",
         "raw_exp": "-",
         "loot": "-",
