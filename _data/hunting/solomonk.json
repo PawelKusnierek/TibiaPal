@@ -79,8 +79,8 @@
     {
         "level": "20+",
         "place": "Stonerefiners (Stealth Ring)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "140k",
+        "loot": "25k",
         "link" : "https://youtu.be/"
     },
     {
@@ -478,8 +478,15 @@
     {
         "level": "200+",
         "place": "Hive Stage3",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "2.2kk",
+        "loot": "500k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "200+",
+        "place": "Deeper Banuta -8",
+        "raw_exp": "2.6kk",
+        "loot": "500k",
         "link" : "https://youtu.be/"
     },
     {
@@ -513,13 +520,6 @@
     {
         "level": "250+",
         "place": "Gazer Spectre",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "270+",
-        "place": "Deeper Banuta -8",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
