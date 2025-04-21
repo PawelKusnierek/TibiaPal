@@ -465,7 +465,7 @@
         "level": "200+",
         "place": "Werehyaenas",
         "raw_exp": "2.8kk",
-        "loot": "500k",
+        "loot": "600k",
         "link" : "https://youtu.be/"
     },
     {
@@ -478,8 +478,8 @@
     {
         "level": "200+",
         "place": "Hive Stage3",
-        "raw_exp": "2.2kk",
-        "loot": "500k",
+        "raw_exp": "2.1kk",
+        "loot": "600k",
         "link" : "https://youtu.be/"
     },
     {
@@ -493,14 +493,14 @@
         "level": "200+",
         "place": "Medusa Tower",
         "raw_exp": "2.8kk",
-        "loot": "350k",
+        "loot": "400k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "220+",
         "place": "Asura Palace",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "3.3kk",
+        "loot": "400k",
         "link" : "https://youtu.be/"
     },
     {
