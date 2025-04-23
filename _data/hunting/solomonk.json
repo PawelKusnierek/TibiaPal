@@ -98,6 +98,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "30+",
+        "place": "Banuta Apes",
+        "raw_exp": "100k",
+        "loot": "100k",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "35+",
         "place": "Coryms PH",
         "raw_exp": "-",
@@ -232,7 +239,7 @@
     },
     {
         "level": "70+",
-        "place": "Fenrock Dragon Lords",
+        "place": "Fenrock/POI Dragon Lords",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -323,13 +330,6 @@
     },
     {
         "level": "90+",
-        "place": "Edron Orc Cults",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "90+",
         "place": "Oramond West",
         "raw_exp": "-",
         "loot": "-",
@@ -350,8 +350,22 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "90+",
+        "place": "Werehyaenas -1",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "100+",
         "place": "Mini Rosha",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "100+",
+        "place": "Edron Orc Cults",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -512,16 +526,9 @@
     },
     {
         "level": "250+",
-        "place": "Burster Spectres",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "250+",
         "place": "Gazer Spectre",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "3.4kk",
+        "loot": "500k",
         "link" : "https://youtu.be/"
     },
     {
@@ -543,6 +550,13 @@
         "place": "Werelions",
         "raw_exp": "-",
         "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Burster Spectres",
+        "raw_exp": "3.8kk",
+        "loot": "0k",
         "link" : "https://youtu.be/"
     },
     {
@@ -582,7 +596,35 @@
     },
     {
         "level": "300+",
+        "place": "Oskayaat",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Marapur Turtles",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Marapur Nagas",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
         "place": "Warzone4/5/6",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Nightmare Isles",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -597,27 +639,6 @@
     {
         "level": "400+",
         "place": "Buried Cathedral",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "400+",
-        "place": "Oskayaat",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "400+",
-        "place": "Marapur Turtles",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "400+",
-        "place": "Marapur Nagas",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -688,13 +709,6 @@
     {
         "level": "400+",
         "place": "Rosha West",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "400+",
-        "place": "Nightmare Isles",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
