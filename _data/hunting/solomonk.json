@@ -128,22 +128,22 @@
     {
         "level": "35+",
         "place": "Laguna Blood Crabs (Runes)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "160k",
+        "loot": "350k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "35+",
-        "place": "Yalahar Cults",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Mutated Rats Yalahar Alchemist",
+        "raw_exp": "180k",
+        "loot": "-40k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "35+",
-        "place": "Mutated Rats Yalahar",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Mutated Rats Yalahar Arena",
+        "raw_exp": "150k",
+        "loot": "-30k",
         "link" : "https://youtu.be/"
     },
     {
@@ -169,6 +169,13 @@
     },
     {
         "level": "40+",
+        "place": "Yalahar Cults",
+        "raw_exp": "200k",
+        "loot": "250k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "40+",
         "place": "Killer Caiman Cave Zao",
         "raw_exp": "-",
         "loot": "-",
@@ -189,7 +196,14 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "60+",
+        "level": "50+",
+        "place": "Ankrahmun West Ancient Scarabs",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "50+",
         "place": "Lion's Rock",
         "raw_exp": "-",
         "loot": "-",
@@ -198,6 +212,13 @@
     {
         "level": "60+",
         "place": "Water Elementals Port Hope",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "60+",
+        "place": "Okolnir (Low Level Style)",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -546,6 +567,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "300+",
+        "place": "Candia Nibblemaws",
+        "raw_exp": "3.2kk",
+        "loot": "600k",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "250+",
         "place": "Gazer Spectre",
         "raw_exp": "3.4kk",
@@ -555,15 +583,15 @@
     {
         "level": "250+",
         "place": "Oramond Fury Dungeon",
-        "raw_exp": "3.6kk",
-        "loot": "850k",
+        "raw_exp": "4.0kk",
+        "loot": "900k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "250+",
         "place": "Werelions",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "3.1kk",
+        "loot": "800k",
         "link" : "https://youtu.be/"
     },
     {
@@ -571,13 +599,6 @@
         "place": "Burster Spectres",
         "raw_exp": "3.8kk",
         "loot": "0k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "300+",
-        "place": "Candia Nibblemaws",
-        "raw_exp": "-",
-        "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
