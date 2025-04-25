@@ -99,35 +99,35 @@
     },
     {
         "level": "30+",
-        "place": "Banuta Apes",
+        "place": "Banuta Apes (Runes)",
         "raw_exp": "100k",
         "loot": "100k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "35+",
-        "place": "Coryms PH",
+        "place": "Coryms PH (Runes)",
+        "raw_exp": "200k",
+        "loot": "-100k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "35+",
+        "place": "Upper Spike (Runes)",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "35+",
-        "place": "Upper Spike",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Meriana Gargoyle Cave (Runes)",
+        "raw_exp": "160k",
+        "loot": "10k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "35+",
-        "place": "Meriana Gargoyle Cave",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "35+",
-        "place": "Laguna Blood Crabs",
+        "place": "Laguna Blood Crabs (Runes)",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -212,6 +212,13 @@
     {
         "level": "70+",
         "place": "Krailos Surface",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "70+",
+        "place": "Hive Surface",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -511,6 +518,20 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "200+",
+        "place": "Seacrest Serpents",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "200+",
+        "place": "Lower Spike",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "220+",
         "place": "Asura Palace",
         "raw_exp": "3.3kk",
@@ -532,17 +553,10 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "270+",
-        "place": "Seacrest Serpents",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "270+",
+        "level": "250+",
         "place": "Oramond Fury Dungeon",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "3.6kk",
+        "loot": "800k",
         "link" : "https://youtu.be/"
     },
     {
