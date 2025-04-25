@@ -520,8 +520,8 @@
     {
         "level": "200+",
         "place": "Seacrest Serpents",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "2.5kk",
+        "loot": "500k",
         "link" : "https://youtu.be/"
     },
     {
@@ -556,11 +556,11 @@
         "level": "250+",
         "place": "Oramond Fury Dungeon",
         "raw_exp": "3.6kk",
-        "loot": "800k",
+        "loot": "850k",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "270+",
+        "level": "250+",
         "place": "Werelions",
         "raw_exp": "-",
         "loot": "-",
@@ -571,13 +571,6 @@
         "place": "Burster Spectres",
         "raw_exp": "3.8kk",
         "loot": "0k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "300+",
-        "place": "Ripper Spectres",
-        "raw_exp": "-",
-        "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
