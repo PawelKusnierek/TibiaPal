@@ -149,15 +149,15 @@
     {
         "level": "35+",
         "place": "MoSL -3",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "200k",
+        "loot": "180k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "35+",
         "place": "Peninsula Tomb",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "185k",
+        "loot": "90k",
         "link" : "https://youtu.be/"
     },
     {
@@ -583,7 +583,7 @@
     {
         "level": "300+",
         "place": "Candia Nibblemaws",
-        "raw_exp": "3.2kk",
+        "raw_exp": "3.4kk",
         "loot": "600k",
         "link" : "https://youtu.be/"
     },
