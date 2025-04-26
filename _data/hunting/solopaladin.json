@@ -1043,18 +1043,25 @@
         "link" : "https://youtu.be/SrQtQZjq66w"
     },
     {
+        "level": "550+",
+        "place": "Falcon's Eagle",
+        "raw_exp": "5.6kk",
+        "loot": "1.1kk",
+        "link" : "https://youtu.be/w9Vp1ayH_Vo"
+    },
+    {
+        "level": "550+",
+        "place": "Upper Roshamuul (South)",
+        "raw_exp": "6.1kk",
+        "loot": "1kk",
+        "link": "https://youtu.be/kvDpADO5pII"
+    },
+    {
         "level": "600+",
         "place": "Port Hope Flimsies",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Upper Roshamuul (South)",
-        "raw_exp": "",
-        "loot": "",
-        "link": "https://youtu.be/"
     },
     {
         "level": "600+",
@@ -1087,13 +1094,6 @@
     {
         "level": "600+",
         "place": "Azzilon Walls",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Falcon Bastion",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
