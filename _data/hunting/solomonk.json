@@ -589,13 +589,6 @@
     },
     {
         "level": "250+",
-        "place": "Gazer Spectre",
-        "raw_exp": "3.4kk",
-        "loot": "500k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "250+",
         "place": "Oramond Fury Dungeon",
         "raw_exp": "4.0kk",
         "loot": "900k",
@@ -604,8 +597,15 @@
     {
         "level": "250+",
         "place": "Werelions",
-        "raw_exp": "3.1kk",
-        "loot": "800k",
+        "raw_exp": "3.2kk",
+        "loot": "900k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "270+",
+        "place": "Gazer Spectre",
+        "raw_exp": "3.4kk",
+        "loot": "500k",
         "link" : "https://youtu.be/"
     },
     {
@@ -618,8 +618,8 @@
     {
         "level": "300+",
         "place": "Asura Mirror",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "5.2kk",
+        "loot": "600k",
         "link" : "https://youtu.be/"
     },
     {
@@ -659,7 +659,7 @@
     },
     {
         "level": "300+",
-        "place": "Warzone4/5/6",
+        "place": "Warzone 4/5/6",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
