@@ -108,7 +108,7 @@
         "level": "35+",
         "place": "Coryms PH (Runes)",
         "raw_exp": "200k",
-        "loot": "-100k",
+        "loot": "-50k",
         "link" : "https://youtu.be/"
     },
     {
@@ -170,7 +170,7 @@
     {
         "level": "40+",
         "place": "Yalahar Cults",
-        "raw_exp": "200k",
+        "raw_exp": "180k",
         "loot": "250k",
         "link" : "https://youtu.be/"
     },
@@ -184,6 +184,13 @@
     {
         "level": "50+",
         "place": "Vengoth Haunted Treelings",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "50+",
+        "place": "Wyrms LB",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -218,14 +225,14 @@
     },
     {
         "level": "60+",
-        "place": "Okolnir (Low Level Style)",
+        "place": "Nibelor Crystal Spiders",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "60+",
-        "place": "Nibelor Crystal Spiders",
+        "level": "70+",
+        "place": "Okolnir (Low Level Style)",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -385,6 +392,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "90+",
+        "place": "Dark Faun Cave",
+        "raw_exp": "1kk",
+        "loot": "100k",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "100+",
         "place": "Mini Rosha",
         "raw_exp": "-",
@@ -394,15 +408,8 @@
     {
         "level": "100+",
         "place": "Edron Orc Cults",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "100+",
-        "place": "Dark Faun Cave",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1.05kk",
+        "loot": "250k",
         "link" : "https://youtu.be/"
     },
     {
@@ -501,6 +508,13 @@
         "place": "Otherworld (Edron)",
         "raw_exp": "-",
         "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "200+",
+        "place": "Wildlife Raid (Active)",
+        "raw_exp": "3kk",
+        "loot": "600k",
         "link" : "https://youtu.be/"
     },
     {
