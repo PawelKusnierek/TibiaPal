@@ -100,15 +100,15 @@
     {
         "level": "30+",
         "place": "Banuta Apes (Runes)",
-        "raw_exp": "100k",
+        "raw_exp": "110k",
         "loot": "100k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "35+",
         "place": "Coryms PH (Runes)",
-        "raw_exp": "200k",
-        "loot": "-50k",
+        "raw_exp": "250k",
+        "loot": "-80k",
         "link" : "https://youtu.be/"
     },
     {
@@ -562,8 +562,8 @@
     {
         "level": "200+",
         "place": "Lower Spike",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "2.8kk",
+        "loot": "200k",
         "link" : "https://youtu.be/"
     },
     {
@@ -602,6 +602,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "250+",
+        "place": "Carnivoras",
+        "raw_exp": "2.0kk",
+        "loot": "1kk",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "270+",
         "place": "Gazer Spectre",
         "raw_exp": "3.3kk",
@@ -609,17 +616,17 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "300+",
-        "place": "Burster Spectres",
-        "raw_exp": "3.8kk",
-        "loot": "0k",
+        "level": "270+",
+        "place": "Asura Mirror",
+        "raw_exp": "5.1kk",
+        "loot": "500k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "300+",
-        "place": "Asura Mirror",
-        "raw_exp": "5.2kk",
-        "loot": "600k",
+        "place": "Burster Spectres",
+        "raw_exp": "3.8kk",
+        "loot": "0k",
         "link" : "https://youtu.be/"
     },
     {
