@@ -399,6 +399,20 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "90+",
+        "place": "Orclops",
+        "raw_exp": "1.0kk",
+        "loot": "150k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "100+",
+        "place": "Replica Dungeon",
+        "raw_exp": "1.1kk",
+        "loot": "-50k",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "100+",
         "place": "Mini Rosha",
         "raw_exp": "-",
@@ -581,7 +595,7 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "300+",
+        "level": "250+",
         "place": "Candia Nibblemaws",
         "raw_exp": "3.4kk",
         "loot": "600k",
