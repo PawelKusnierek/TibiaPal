@@ -105,6 +105,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "30+",
+        "place": "Chor (Runes)",
+        "raw_exp": "230k",
+        "loot": "-25k",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "35+",
         "place": "Coryms PH (Runes)",
         "raw_exp": "250k",
@@ -114,8 +121,8 @@
     {
         "level": "35+",
         "place": "Upper Spike (Runes)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "250k",
+        "loot": "10k",
         "link" : "https://youtu.be/"
     },
     {
@@ -163,8 +170,8 @@
     {
         "level": "40+",
         "place": "LB Quara Scouts",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "180k",
+        "loot": "60k",
         "link" : "https://youtu.be/"
     },
     {
@@ -175,7 +182,7 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "40+",
+        "level": "50+",
         "place": "Killer Caiman Cave Zao",
         "raw_exp": "-",
         "loot": "-",
@@ -632,8 +639,8 @@
     {
         "level": "270+",
         "place": "Asura Mirror",
-        "raw_exp": "5.1kk",
-        "loot": "500k",
+        "raw_exp": "5.4kk",
+        "loot": "600k",
         "link" : "https://youtu.be/"
     },
     {
@@ -646,20 +653,27 @@
     {
         "level": "300+",
         "place": "Winter Court",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "5.0kk",
+        "loot": "750k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "300+",
         "place": "Lower Rosh",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "3.3kk",
+        "loot": "700k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "300+",
-        "place": "Oskayaat",
+        "place": "Oskayaat Weretigers",
+        "raw_exp": "4.6kk",
+        "loot": "800k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Oskayaat Werecrocodiles",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -687,7 +701,7 @@
     },
     {
         "level": "300+",
-        "place": "Nightmare Isles",
+        "place": "Summer Court",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -758,13 +772,6 @@
     {
         "level": "400+",
         "place": "Otherworld",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "400+",
-        "place": "Summer Court",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
