@@ -323,13 +323,6 @@
     },
     {
         "level": "80+",
-        "place": "Wyrms Drefia/LB",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "80+",
         "place": "Giant Spiders Port Hope",
         "raw_exp": "-",
         "loot": "-",
@@ -638,9 +631,9 @@
     },
     {
         "level": "250+",
-        "place": "Oskayaat Werecrocodiles",
-        "raw_exp": "4.1kk",
-        "loot": "600k",
+        "place": "Warzone 4",
+        "raw_exp": "3.5kk",
+        "loot": "800k",
         "link" : "https://youtu.be/"
     },
     {
@@ -660,14 +653,14 @@
     {
         "level": "300+",
         "place": "Burster Spectres",
-        "raw_exp": "3.8kk",
-        "loot": "0k",
+        "raw_exp": "4.0kk",
+        "loot": "200k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "300+",
         "place": "Winter Court",
-        "raw_exp": "5.0kk",
+        "raw_exp": "4.9kk",
         "loot": "750k",
         "link" : "https://youtu.be/"
     },
@@ -681,8 +674,15 @@
     {
         "level": "300+",
         "place": "Oskayaat Weretigers",
-        "raw_exp": "4.6kk",
+        "raw_exp": "4.4kk",
         "loot": "800k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Oskayaat Werecrocodiles",
+        "raw_exp": "3.9kk",
+        "loot": "600k",
         "link" : "https://youtu.be/"
     },
     {
@@ -695,13 +695,6 @@
     {
         "level": "300+",
         "place": "Marapur Nagas",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "300+",
-        "place": "Warzone 4",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
