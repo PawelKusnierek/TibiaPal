@@ -184,8 +184,8 @@
     {
         "level": "50+",
         "place": "Killer Caiman Cave Zao",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "320k",
+        "loot": "-20k",
         "link" : "https://youtu.be/"
     },
     {
@@ -198,29 +198,29 @@
     {
         "level": "50+",
         "place": "Wyrms LB",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "420k",
+        "loot": "-50k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "50+",
         "place": "Edron Bonebeasts",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "350k",
+        "loot": "-50k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "50+",
         "place": "Ankrahmun West Ancient Scarabs",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "300k",
+        "loot": "0k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "50+",
         "place": "Lion's Rock",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "375k",
+        "loot": "0k",
         "link" : "https://youtu.be/"
     },
     {
@@ -471,7 +471,7 @@
     {
         "level": "130+",
         "place": "Barkless Elves Ab",
-        "raw_exp": "2.5kk",
+        "raw_exp": "2.4kk",
         "loot": "-400k",
         "link" : "https://youtu.be/YXDva_Orwgs"
     },
@@ -499,7 +499,7 @@
     {
         "level": "150+",
         "place": "Deeper Banuta -6",
-        "raw_exp": "2.2kk",
+        "raw_exp": "2.1kk",
         "loot": "400k",
         "link" : "https://youtu.be/bP3pGqPJXCA"
     },
@@ -534,7 +534,7 @@
     {
         "level": "200+",
         "place": "Werehyaenas",
-        "raw_exp": "2.8kk",
+        "raw_exp": "2.7kk",
         "loot": "600k",
         "link" : "https://youtu.be/aunNgm5-XsI"
     },
@@ -562,7 +562,7 @@
     {
         "level": "200+",
         "place": "Medusa Tower",
-        "raw_exp": "2.8kk",
+        "raw_exp": "2.7kk",
         "loot": "400k",
         "link" : "https://youtu.be/iUp7dma4WuI"
     },
@@ -688,15 +688,15 @@
     {
         "level": "300+",
         "place": "Marapur Turtles",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "2.7kk",
+        "loot": "1.2kk",
         "link" : "https://youtu.be/"
     },
     {
         "level": "300+",
         "place": "Marapur Nagas",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "5.2kk",
+        "loot": "200k",
         "link" : "https://youtu.be/"
     },
     {
