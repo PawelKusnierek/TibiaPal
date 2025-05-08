@@ -1,23 +1,9 @@
 [
     {
         "level": "8+",
-        "place": "Rotworms Liberty Bay/Darashia",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "8+",
         "place": "Swamp Trolls Port Hope/Venore",
         "raw_exp": "25k",
         "loot": "50k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "8+",
-        "place": "Crocodiles Port Hope",
-        "raw_exp": "-",
-        "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
@@ -28,17 +14,24 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "14+",
-        "place": "Edron Forgotten Tomb",
-        "raw_exp": "60k",
-        "loot": "80k",
+        "level": "8+",
+        "place": "Rotworms Liberty Bay/Darashia",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "8+",
+        "place": "Crocodiles Port Hope",
+        "raw_exp": "-",
+        "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "14+",
-        "place": "Amazon Camp (Profit)",
-        "raw_exp": "30k",
-        "loot": "60k",
+        "place": "Edron Forgotten Tomb",
+        "raw_exp": "60k",
+        "loot": "80k",
         "link" : "https://youtu.be/"
     },
     {
@@ -56,11 +49,18 @@
         "link" : "https://youtu.be/hpCXYpMPudM"
     },
     {
+        "level": "14+",
+        "place": "Amazon Camp (Profit)",
+        "raw_exp": "30k",
+        "loot": "60k",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "15+",
-        "place": "Cyclops Mistrock/Mount Sternum",
-        "raw_exp": "50k",
+        "place": "Minotaurs Darashia (Stealth Ring)",
+        "raw_exp": "80k",
         "loot": "-20k",
-        "link" : "https://youtu.be/YEl_uzXqAFc"
+        "link" : "https://youtu.be/"
     },
     {
         "level": "15+",
@@ -71,10 +71,10 @@
     },
     {
         "level": "15+",
-        "place": "Minotaurs Darashia (Stealth Ring)",
-        "raw_exp": "80k",
+        "place": "Cyclops Mistrock/Mount Sternum",
+        "raw_exp": "50k",
         "loot": "-20k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/YEl_uzXqAFc"
     },
     {
         "level": "20+",
@@ -92,9 +92,9 @@
     },
     {
         "level": "30+",
-        "place": "Carniphilas Port Hope",
-        "raw_exp": "90k",
-        "loot": "10k",
+        "place": "Chor (Runes)",
+        "raw_exp": "230k",
+        "loot": "-25k",
         "link" : "https://youtu.be/"
     },
     {
@@ -106,9 +106,9 @@
     },
     {
         "level": "30+",
-        "place": "Chor (Runes)",
-        "raw_exp": "230k",
-        "loot": "-25k",
+        "place": "Carniphilas Port Hope",
+        "raw_exp": "90k",
+        "loot": "10k",
         "link" : "https://youtu.be/"
     },
     {
@@ -127,6 +127,27 @@
     },
     {
         "level": "35+",
+        "place": "MoSL -3",
+        "raw_exp": "200k",
+        "loot": "180k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "35+",
+        "place": "Peninsula Tomb",
+        "raw_exp": "185k",
+        "loot": "90k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "35+",
+        "place": "Mutated Rats Yalahar Alchemist",
+        "raw_exp": "180k",
+        "loot": "-40k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "35+",
         "place": "Meriana Gargoyle Cave (Runes)",
         "raw_exp": "160k",
         "loot": "10k",
@@ -141,30 +162,16 @@
     },
     {
         "level": "35+",
-        "place": "Mutated Rats Yalahar Alchemist",
-        "raw_exp": "180k",
-        "loot": "-40k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "35+",
         "place": "Mutated Rats Yalahar Arena",
         "raw_exp": "150k",
         "loot": "-30k",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "35+",
-        "place": "MoSL -3",
-        "raw_exp": "200k",
-        "loot": "180k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "35+",
-        "place": "Peninsula Tomb",
-        "raw_exp": "185k",
-        "loot": "90k",
+        "level": "40+",
+        "place": "Yalahar Cults",
+        "raw_exp": "180k",
+        "loot": "250k",
         "link" : "https://youtu.be/"
     },
     {
@@ -175,10 +182,24 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "40+",
-        "place": "Yalahar Cults",
-        "raw_exp": "180k",
-        "loot": "250k",
+        "level": "50+",
+        "place": "Wyrms LB",
+        "raw_exp": "420k",
+        "loot": "-50k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "50+",
+        "place": "Lion's Rock",
+        "raw_exp": "375k",
+        "loot": "0k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "50+",
+        "place": "Edron Bonebeasts",
+        "raw_exp": "350k",
+        "loot": "-50k",
         "link" : "https://youtu.be/"
     },
     {
@@ -197,37 +218,9 @@
     },
     {
         "level": "50+",
-        "place": "Wyrms LB",
-        "raw_exp": "420k",
-        "loot": "-50k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Edron Bonebeasts",
-        "raw_exp": "350k",
-        "loot": "-50k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
         "place": "Ankrahmun West Ancient Scarabs",
         "raw_exp": "300k",
         "loot": "0k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Lion's Rock",
-        "raw_exp": "375k",
-        "loot": "0k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "60+",
-        "place": "Water Elementals West Port Hope",
-        "raw_exp": "-",
-        "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
@@ -239,9 +232,16 @@
     },
     {
         "level": "60+",
-        "place": "Nibelor Crystal Spiders",
+        "place": "Water Elementals West Port Hope",
         "raw_exp": "-",
         "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "60+",
+        "place": "Nibelor Crystal Spiders",
+        "raw_exp": "440k",
+        "loot": "-30k",
         "link" : "https://youtu.be/"
     },
     {
