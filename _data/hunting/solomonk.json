@@ -233,8 +233,8 @@
     {
         "level": "60+",
         "place": "Water Elementals West Port Hope",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "440k",
+        "loot": "20k",
         "link" : "https://youtu.be/"
     },
     {
@@ -268,8 +268,8 @@
     {
         "level": "70+",
         "place": "Yalahar Bog Raiders Central",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "600k",
+        "loot": "-50k",
         "link" : "https://youtu.be/"
     },
     {
@@ -282,13 +282,6 @@
     {
         "level": "70+",
         "place": "Middle Spike",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "70+",
-        "place": "Fenrock/POI Dragon Lords",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -331,6 +324,20 @@
     {
         "level": "80+",
         "place": "Giant Spiders Port Hope",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "80+",
+        "place": "Fenrock Dragon Lords",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "80+",
+        "place": "POI Dragon Lords",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -749,10 +756,10 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "400+",
+        "level": "350+",
         "place": "Buried Cathedral",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "5.0kk",
+        "loot": "300k",
         "link" : "https://youtu.be/"
     },
     {
@@ -797,7 +804,6 @@
         "loot": "-",
         "link" : "https://youtu.be/"
     },
-
     {
         "level": "400+",
         "place": "Azzilon",
