@@ -246,23 +246,16 @@
     },
     {
         "level": "70+",
-        "place": "Okolnir (Low Level Style)",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Nightmare Scions Krailos",
+        "raw_exp": "1kk",
+        "loot": "-150k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "70+",
-        "place": "Krailos Surface",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "70+",
-        "place": "Hive Surface",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Quaras LB",
+        "raw_exp": "900k",
+        "loot": "-40k",
         "link" : "https://youtu.be/"
     },
     {
@@ -281,27 +274,6 @@
     },
     {
         "level": "70+",
-        "place": "Middle Spike",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "70+",
-        "place": "Quaras LB",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "70+",
-        "place": "Nightmare Scions Krailos",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "70+",
         "place": "Edron Vampire Crypts",
         "raw_exp": "-",
         "loot": "-",
@@ -310,6 +282,20 @@
     {
         "level": "70+",
         "place": "Iksupan Entrance",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+        {
+        "level": "75+",
+        "place": "Hive Surface",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "75+",
+        "place": "Middle Spike",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
