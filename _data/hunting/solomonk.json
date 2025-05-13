@@ -307,21 +307,7 @@
         "loot": "-30k",
         "link" : "https://youtu.be/"
     },
-    {
-        "level": "80+",
-        "place": "Yielothaxes",
-        "raw_exp": "900k",
-        "loot": "250k",
-        "link" : "https://youtu.be/QUZCbA0c5Eg"
-    },
-    {
-        "level": "80+",
-        "place": "Inner Hive Stage2 (East)",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
+        {
         "level": "80+",
         "place": "Edron Old Fortress Heroes",
         "raw_exp": "1.5kk",
@@ -337,10 +323,31 @@
     },
     {
         "level": "80+",
+        "place": "Inner Hive Stage2 (East)",
+        "raw_exp": "950k",
+        "loot": "300k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "80+",
+        "place": "Yielothaxes",
+        "raw_exp": "900k",
+        "loot": "250k",
+        "link" : "https://youtu.be/QUZCbA0c5Eg"
+    },
+    {
+        "level": "80+",
         "place": "Giant Spiders Task - Port Hope",
         "raw_exp": "600k",
         "loot": "-50k",
         "link" : "https://youtu.be/"
+    },
+    {
+        "level": "90+",
+        "place": "Sunken Quarter",
+        "raw_exp": "1.5kk",
+        "loot": "150k",
+        "link" : "https://youtu.be/xD_W5_GCFFE"
     },
     {
         "level": "90+",
@@ -355,13 +362,6 @@
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
-    },
-    {
-        "level": "90+",
-        "place": "Sunken Quarter",
-        "raw_exp": "1.5kk",
-        "loot": "150k",
-        "link" : "https://youtu.be/xD_W5_GCFFE"
     },
     {
         "level": "90+",
