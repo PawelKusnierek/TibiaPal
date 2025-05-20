@@ -276,7 +276,7 @@
         "level": "70+",
         "place": "Mother of Scarabs Lair",
         "raw_exp": "750k",
-        "loot": "-30k",
+        "loot": "-50k",
         "link" : "https://youtu.be/"
     },
     {
@@ -520,8 +520,8 @@
     {
         "level": "200+",
         "place": "Otherworld (Edron)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "2.2kk",
+        "loot": "250k",
         "link" : "https://youtu.be/"
     },
     {
@@ -741,11 +741,39 @@
         "loot": "600k",
         "link" : "https://youtu.be/"
     },
+        {
+        "level": "300+",
+        "place": "Otherworld",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
     {
         "level": "350+",
         "place": "Buried Cathedral",
         "raw_exp": "5.0kk",
         "loot": "300k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "350+",
+        "place": "Iksupan Occupied Sanctuary",
+        "raw_exp": "5.3kk",
+        "loot": "800k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Falcons",
+        "raw_exp": "5.8kk",
+        "loot": "1.4kk",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Bashmu",
+        "raw_exp": "3.7kk",
+        "loot": "1.6kk",
         "link" : "https://youtu.be/"
     },
     {
@@ -785,13 +813,6 @@
     },
     {
         "level": "400+",
-        "place": "Otherworld",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "400+",
         "place": "Azzilon",
         "raw_exp": "-",
         "loot": "-",
@@ -799,14 +820,14 @@
     },
     {
         "level": "400+",
-        "place": "Falcons",
+        "place": "Sphinx/Crypt Warden",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "400+",
-        "place": "Sphinx/Crypt Warden",
+        "place": "Warzone 3",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -827,7 +848,7 @@
     },
     {
         "level": "600+",
-        "place": "Warzone 1/2/3/7/8/9 (TBD)",
+        "place": "Warzone 1/2/7/8/9 (TBD)",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
