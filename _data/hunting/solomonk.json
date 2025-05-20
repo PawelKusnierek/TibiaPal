@@ -764,9 +764,37 @@
     },
     {
         "level": "400+",
+        "place": "Marapur Nagas (Soulkamas)",
+        "raw_exp": "6.9kk",
+        "loot": "800k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Upper Roshamuul",
+        "raw_exp": "6.0kk",
+        "loot": "1.2kk",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
         "place": "Falcons",
         "raw_exp": "5.8kk",
         "loot": "1.4kk",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Floating Savants MoTA",
+        "raw_exp": "4.1kk",
+        "loot": "1.0kk",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Oramond Hideout -1",
+        "raw_exp": "3.9kk",
+        "loot": "1.0kk",
         "link" : "https://youtu.be/"
     },
     {
@@ -800,13 +828,6 @@
     {
         "level": "400+",
         "place": "Deathlings",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "400+",
-        "place": "Upper Roshamuul",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -849,6 +870,13 @@
     {
         "level": "600+",
         "place": "Warzone 1/2/7/8/9 (TBD)",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Issavi Sewers",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
