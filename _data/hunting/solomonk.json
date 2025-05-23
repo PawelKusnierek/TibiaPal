@@ -597,21 +597,21 @@
     {
         "level": "250+",
         "place": "Candia Nibblemaws",
-        "raw_exp": "3.3kk",
+        "raw_exp": "3.2kk",
         "loot": "600k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "250+",
         "place": "Oramond Fury Dungeon",
-        "raw_exp": "4.0kk",
+        "raw_exp": "3.9kk",
         "loot": "900k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "250+",
         "place": "Werelions",
-        "raw_exp": "3.2kk",
+        "raw_exp": "3.1kk",
         "loot": "900k",
         "link" : "https://youtu.be/"
     },
@@ -729,20 +729,6 @@
     },
     {
         "level": "300+",
-        "place": "Rosha West",
-        "raw_exp": "4.5kk",
-        "loot": "800k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "300+",
-        "place": "Oramond Catacombs",
-        "raw_exp": "4.0kk",
-        "loot": "600k",
-        "link" : "https://youtu.be/"
-    },
-        {
-        "level": "300+",
         "place": "Otherworld",
         "raw_exp": "-",
         "loot": "-",
@@ -785,6 +771,55 @@
     },
     {
         "level": "400+",
+        "place": "Sphinx/Crypt Warden Issavi",
+        "raw_exp": "5.4kk",
+        "loot": "700k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Deathlings",
+        "raw_exp": "5.3kk",
+        "loot": "900k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Issavi Goannas - Green Belt",
+        "raw_exp": "5.3kk",
+        "loot": "500k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Issavi Goannas - Central Steppe",
+        "raw_exp": "5.4kk",
+        "loot": "500k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Rosha West",
+        "raw_exp": "5.0kk",
+        "loot": "1.2kk",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Oramond Catacombs",
+        "raw_exp": "5.0kk",
+        "loot": "800k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Warzone 3",
+        "raw_exp": "4.7kk",
+        "loot": "800k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
         "place": "Floating Savants MoTA",
         "raw_exp": "4.1kk",
         "loot": "1.0kk",
@@ -806,28 +841,7 @@
     },
     {
         "level": "400+",
-        "place": "Issavi Surface Goannas",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "400+",
         "place": "Crypt Warriors",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "400+",
-        "place": "Girtablilu",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "400+",
-        "place": "Deathlings",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -840,15 +854,8 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "400+",
-        "place": "Sphinx/Crypt Warden",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "400+",
-        "place": "Warzone 3",
+        "level": "500+",
+        "place": "Girtablilu",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
