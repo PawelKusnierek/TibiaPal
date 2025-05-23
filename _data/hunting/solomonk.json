@@ -848,7 +848,21 @@
     },
     {
         "level": "400+",
-        "place": "Azzilon",
+        "place": "Azzilon Castle",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Flimsy Venore",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Flimsy Port Hope",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
