@@ -591,7 +591,7 @@
         "level": "250+",
         "place": "Asura Mirror",
         "raw_exp": "5.4kk",
-        "loot": "600k",
+        "loot": "500k",
         "link" : "https://youtu.be/"
     },
         {
@@ -646,7 +646,7 @@
     {
         "level": "270+",
         "place": "Gazer Spectre",
-        "raw_exp": "3.3kk",
+        "raw_exp": "3.2kk",
         "loot": "600k",
         "link" : "https://youtu.be/"
     },
@@ -771,6 +771,13 @@
     },
     {
         "level": "400+",
+        "place": "Crypt Warriors",
+        "raw_exp": "6.1kk",
+        "loot": "700k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
         "place": "Upper Roshamuul",
         "raw_exp": "6.0kk",
         "loot": "1.2kk",
@@ -795,13 +802,6 @@
         "place": "Sphinx/Crypt Warden Issavi",
         "raw_exp": "5.4kk",
         "loot": "700k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "400+",
-        "place": "Flimsy Venore -1",
-        "raw_exp": "5.2kk",
-        "loot": "500k",
         "link" : "https://youtu.be/"
     },
     {
@@ -848,13 +848,6 @@
     },
     {
         "level": "400+",
-        "place": "Crypt Warriors",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "400+",
         "place": "Azzilon Castle",
         "raw_exp": "-",
         "loot": "-",
@@ -897,7 +890,7 @@
     },
     {
         "level": "500+",
-        "place": "Warzone 8",
+        "place": "Warzone 7",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -911,7 +904,7 @@
     },
     {
         "level": "600+",
-        "place": "Flimsy Venore -1 and -2",
+        "place": "Flimsy Venore",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
