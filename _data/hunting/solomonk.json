@@ -506,7 +506,7 @@
     {
         "level": "150+",
         "place": "Deeper Banuta -6",
-        "raw_exp": "2.10kk",
+        "raw_exp": "2.0kk",
         "loot": "400k",
         "link" : "https://youtu.be/bP3pGqPJXCA"
     },
@@ -763,7 +763,7 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "600+",
+        "level": "400+",
         "place": "Cobra Bastion -1 (Basement)",
         "raw_exp": "6.6kk",
         "loot": "800k",
@@ -848,19 +848,19 @@
     },
     {
         "level": "400+",
-        "place": "Azzilon Castle",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Azzilon Walls",
+        "raw_exp": "5.4kk",
+        "loot": "500k",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "400+",
-        "place": "Azzilon Walls",
-        "raw_exp": "-",
-        "loot": "-",
+        "level": "450+",
+        "place": "Azzilon Castle",
+        "raw_exp": "6.4kk",
+        "loot": "600k",
         "link" : "https://youtu.be/"
     },
-        {
+    {
         "level": "450+",
         "place": "Flimsy Port Hope",
         "raw_exp": "5.4kk",
