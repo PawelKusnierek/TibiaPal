@@ -841,13 +841,6 @@
     },
     {
         "level": "400+",
-        "place": "Bashmu",
-        "raw_exp": "3.5kk",
-        "loot": "1.5kk",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "400+",
         "place": "Azzilon Walls",
         "raw_exp": "5.4kk",
         "loot": "500k",
@@ -865,6 +858,13 @@
         "place": "Flimsy Port Hope",
         "raw_exp": "5.4kk",
         "loot": "350k",
+        "link" : "https://youtu.be/"
+    },
+        {
+        "level": "500+",
+        "place": "Bashmu",
+        "raw_exp": "3.5kk",
+        "loot": "1.8kk",
         "link" : "https://youtu.be/"
     },
     {
