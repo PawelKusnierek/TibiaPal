@@ -291,21 +291,21 @@
         "place": "Fenrock Dragon Lords",
         "raw_exp": "950k",
         "loot": "-100k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/PxwzDs_xEjM"
     },
     {
         "level": "75+",
         "place": "POI Dragon Lords",
         "raw_exp": "900k",
         "loot": "-100k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/1Ff_F8ZCOno"
     },
     {
         "level": "75+",
         "place": "Middle Spike",
         "raw_exp": "850k",
         "loot": "-30k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/SrP08k3tUyE"
     },
         {
         "level": "80+",
@@ -326,7 +326,7 @@
         "place": "Inner Hive Stage2 (East)",
         "raw_exp": "950k",
         "loot": "300k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/T4X_MoLPa8o"
     },
     {
         "level": "80+",
@@ -557,7 +557,7 @@
         "place": "Seacrest Serpents",
         "raw_exp": "2.4kk",
         "loot": "500k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/MOoFHfbgltY"
     },
     {
         "level": "200+",
@@ -592,49 +592,42 @@
         "place": "Asura Mirror",
         "raw_exp": "5.2kk",
         "loot": "500k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/UyZPXrfogSA"
     },
         {
         "level": "250+",
         "place": "Warzone 5",
         "raw_exp": "3.8kk",
         "loot": "1kk",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/jRNXHzlcAOc"
     },
     {
         "level": "250+",
         "place": "Oramond Fury Dungeon",
         "raw_exp": "3.8kk",
         "loot": "900k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "250+",
-        "place": "Warzone 4",
-        "raw_exp": "3.4kk",
-        "loot": "800k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/N_bKqXT3Xco"
     },
     {
         "level": "250+",
         "place": "Candia Nibblemaws",
         "raw_exp": "3.1kk",
         "loot": "600k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/9505L-ZXtxU"
     },
     {
         "level": "250+",
         "place": "Werelions",
         "raw_exp": "3.0kk",
         "loot": "900k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/TcyeTVUn_Lg"
     },
     {
         "level": "250+",
         "place": "Carnivoras",
         "raw_exp": "2.0kk",
         "loot": "1kk",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/0mXEw6BijN4"
     },
     {
         "level": "250+",
@@ -648,7 +641,7 @@
         "place": "Gazer Spectre",
         "raw_exp": "3.1kk",
         "loot": "600k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/JpKuYWJnjdc"
     },
     {
         "level": "300+",
@@ -669,7 +662,7 @@
         "place": "Winter Court",
         "raw_exp": "4.8kk",
         "loot": "800k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/lky2cG7w8j8"
     },
     {
         "level": "300+",
@@ -683,7 +676,7 @@
         "place": "Oskayaat Weretigers",
         "raw_exp": "4.3kk",
         "loot": "800k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/0TKdpEhssk0"
     },
     {
         "level": "300+",
@@ -706,6 +699,13 @@
         "loot": "800k",
         "link" : "https://youtu.be/"
     },
+        {
+        "level": "300+",
+        "place": "Warzone 4",
+        "raw_exp": "3.4kk",
+        "loot": "800k",
+        "link" : "https://youtu.be/MQxUHFAYPOM"
+    },
     {
         "level": "300+",
         "place": "Warzone 6",
@@ -718,7 +718,7 @@
         "place": "Lower Rosh",
         "raw_exp": "3.2kk",
         "loot": "700k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/QI49YMtE7go"
     },
     {
         "level": "300+",
@@ -739,7 +739,7 @@
         "place": "Iksupan Occupied Sanctuary",
         "raw_exp": "5.2kk",
         "loot": "800k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/KdSJTasIm0U"
     },
     {
         "level": "350+",
