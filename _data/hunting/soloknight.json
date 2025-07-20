@@ -519,6 +519,13 @@
     },
     {
         "level": "200+",
+        "place": "Book World: Chapter I/II/III/IV",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "200+",
         "place": "Glooth Tower",
         "raw_exp": "2.05kk",
         "loot": "250k",

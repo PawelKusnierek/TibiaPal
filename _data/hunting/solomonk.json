@@ -581,6 +581,13 @@
         "link" : "https://youtu.be/vtzHQA05xC4"
     },
     {
+        "level": "200+",
+        "place": "Book World: Chapter I/II/III/IV",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "220+",
         "place": "Asura Palace",
         "raw_exp": "3.0kk",
@@ -760,7 +767,7 @@
         "place": "Cobra Bastion -1 (Basement)",
         "raw_exp": "6.5kk",
         "loot": "800k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/r1l04SEiFpo"
     },
     {
         "level": "400+",
@@ -774,14 +781,14 @@
         "place": "Upper Roshamuul",
         "raw_exp": "5.9kk",
         "loot": "1.2kk",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/gCNQ8G6hI7E"
     },
     {
         "level": "400+",
         "place": "Falcons",
         "raw_exp": "5.7kk",
         "loot": "1.4kk",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/UBCXn-gEA6o"
     },
     {
         "level": "400+",
@@ -789,6 +796,13 @@
         "raw_exp": "5.4kk",
         "loot": "800k",
         "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Azzilon Walls",
+        "raw_exp": "5.4kk",
+        "loot": "500k",
+        "link" : "https://youtu.be/J_9p5NWlcPU"
     },
     {
         "level": "400+",
@@ -802,14 +816,14 @@
         "place": "Rosha West",
         "raw_exp": "4.9kk",
         "loot": "1.2kk",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/t6iReSRaWfA"
     },
     {
         "level": "400+",
         "place": "Oramond Catacombs",
         "raw_exp": "4.8kk",
         "loot": "800k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/uf4aFM9IxeY"
     },
     {
         "level": "400+",
@@ -833,23 +847,16 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "400+",
-        "place": "Azzilon Walls",
-        "raw_exp": "5.4kk",
-        "loot": "500k",
-        "link" : "https://youtu.be/"
-    },
-    {
         "level": "450+",
         "place": "Azzilon Castle",
         "raw_exp": "6.4kk",
         "loot": "600k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/w4gaxOlvFf8"
     },
     {
         "level": "450+",
         "place": "Flimsy Port Hope",
-        "raw_exp": "5.4kk",
+        "raw_exp": "5.2kk",
         "loot": "350k",
         "link" : "https://youtu.be/"
     },
@@ -858,13 +865,27 @@
         "place": "Cobra Bastion",
         "raw_exp": "7.0kk",
         "loot": "800k",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/cOtyvzz1Htk"
     },
     {
         "level": "500+",
         "place": "Issavi Goannas - Central Steppe",
         "raw_exp": "5.8kk",
         "loot": "500k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "500+",
+        "place": "Undead Dragon Seal",
+        "raw_exp": "5.8kk",
+        "loot": "1.2kk",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "500+",
+        "place": "Juggernaut Seal",
+        "raw_exp": "5.0kk",
+        "loot": "800k",
         "link" : "https://youtu.be/"
     },
     {
@@ -890,6 +911,13 @@
     },
     {
         "level": "500+",
+        "place": "Norcferatu Castle",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "500+",
         "place": "Warzone 7",
         "raw_exp": "-",
         "loot": "-",
@@ -901,6 +929,13 @@
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "True Asuras",
+        "raw_exp": "5.5kk",
+        "loot": "1.3kk",
+        "link" : "https://youtu.be/M7-OckvO6hY"
     },
     {
         "level": "600+",
@@ -932,21 +967,7 @@
     },
     {
         "level": "600+",
-        "place": "UD Seal",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
         "place": "Wardragons",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "True Asuras",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
