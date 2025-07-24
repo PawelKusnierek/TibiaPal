@@ -247,14 +247,14 @@
     {
         "level": "70+",
         "place": "Nightmare Scions Krailos",
-        "raw_exp": "1kk",
+        "raw_exp": "900k",
         "loot": "-150k",
         "link" : "https://youtu.be/5HBGq2LeyYQ"
     },
     {
         "level": "70+",
         "place": "Quaras LB",
-        "raw_exp": "900k",
+        "raw_exp": "850k",
         "loot": "-40k",
         "link" : "https://youtu.be/npeHnaD7T78"
     },
@@ -310,21 +310,21 @@
         {
         "level": "80+",
         "place": "Edron Old Fortress Heroes",
-        "raw_exp": "1.5kk",
+        "raw_exp": "1.4kk",
         "loot": "80k",
         "link" : "https://youtu.be/sBV8GR3K-rk"
     },
     {
         "level": "80+",
         "place": "Carlin Cults",
-        "raw_exp": "1.4kk",
+        "raw_exp": "1.3kk",
         "loot": "100k",
         "link" : "https://youtu.be/Llb61wMXBP4"
     },
     {
         "level": "80+",
         "place": "Inner Hive Stage2 (East)",
-        "raw_exp": "950k",
+        "raw_exp": "900k",
         "loot": "300k",
         "link" : "https://youtu.be/T4X_MoLPa8o"
     },
@@ -345,14 +345,14 @@
     {
         "level": "90+",
         "place": "Sunken Quarter",
-        "raw_exp": "1.5kk",
+        "raw_exp": "1.4kk",
         "loot": "150k",
         "link" : "https://youtu.be/xD_W5_GCFFE"
     },
     {
         "level": "90+",
         "place": "Okolnir",
-        "raw_exp": "1.3kk",
+        "raw_exp": "1.25kk",
         "loot": "-80k",
         "link" : "https://youtu.be/oKgNT3cTnaw"
     },
@@ -408,29 +408,22 @@
     {
         "level": "100+",
         "place": "Ravenous Lava Lurkers",
-        "raw_exp": "2.2kk",
+        "raw_exp": "2.1kk",
         "loot": "-50k",
         "link" : "https://youtu.be/Pom_8ybPnZw"
     },
     {
         "level": "100+",
-        "place": "Chyllfroest (April only)",
-        "raw_exp": "1.7kk",
-        "loot": "0k",
-        "link" : "https://youtu.be/otAhSIK_QFw"
-    },
-    {
-        "level": "100+",
         "place": "Lizard Chosens",
-        "raw_exp": "1.3kk",
+        "raw_exp": "1.25kk",
         "loot": "80k",
         "link" : "https://youtu.be/7LaPIGEF4VM"
     },
     {
         "level": "100+",
         "place": "Mini Rosha",
-        "raw_exp": "1.2kk",
-        "loot": "500k",
+        "raw_exp": "1.15kk",
+        "loot": "450k",
         "link" : "https://youtu.be/"
     },
     {
@@ -443,7 +436,7 @@
     {
         "level": "100+",
         "place": "Edron Orc Cults",
-        "raw_exp": "1.05kk",
+        "raw_exp": "1.0kk",
         "loot": "250k",
         "link" : "https://youtu.be/"
     },
@@ -457,14 +450,14 @@
     {
         "level": "130+",
         "place": "Barkless Elves Ab",
-        "raw_exp": "2.3kk",
+        "raw_exp": "2.2kk",
         "loot": "-400k",
         "link" : "https://youtu.be/YXDva_Orwgs"
     },
     {
         "level": "130+",
         "place": "Elder Wyrms Drefia",
-        "raw_exp": "1.5kk",
+        "raw_exp": "1.45kk",
         "loot": "120k",
         "link" : "https://youtu.be/pv5Ro46N1qk"
     },
@@ -499,58 +492,44 @@
     {
         "level": "150+",
         "place": "Yalahar Grim Reapers",
-        "raw_exp": "3.4kk",
+        "raw_exp": "3.3kk",
         "loot": "-150k",
         "link" : "https://youtu.be/upayVKk-XYM"
     },
     {
         "level": "150+",
         "place": "Deeper Banuta -6",
-        "raw_exp": "2.0kk",
+        "raw_exp": "1.9kk",
         "loot": "400k",
         "link" : "https://youtu.be/bP3pGqPJXCA"
     },
     {
         "level": "150+",
         "place": "Glooth Tower",
-        "raw_exp": "2.0kk",
+        "raw_exp": "1.9kk",
         "loot": "200k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "200+",
         "place": "Wildlife Raid (Active)",
-        "raw_exp": "2.9kk",
+        "raw_exp": "2.8kk",
         "loot": "600k",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "200+",
-        "place": "Lower Spike",
-        "raw_exp": "2.6kk",
-        "loot": "200k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "200+",
         "place": "Werehyaenas",
-        "raw_exp": "2.6kk",
-        "loot": "600k",
+        "raw_exp": "2.5kk",
+        "loot": "550k",
         "link" : "https://youtu.be/aunNgm5-XsI"
     },
     {
         "level": "200+",
         "place": "Medusa Tower",
-        "raw_exp": "2.6kk",
+        "raw_exp": "2.4kk",
         "loot": "400k",
         "link" : "https://youtu.be/iUp7dma4WuI"
-    },
-    {
-        "level": "200+",
-        "place": "Deeper Banuta -8",
-        "raw_exp": "2.6kk",
-        "loot": "500k",
-        "link" : "https://youtu.be/i9ecWlmgObE"
     },
     {
         "level": "200+",
@@ -562,14 +541,14 @@
     {
         "level": "200+",
         "place": "Draken Walls",
-        "raw_exp": "2.2kk",
-        "loot": "500k",
+        "raw_exp": "2.1kk",
+        "loot": "450k",
         "link" : "https://youtu.be/X2gGK2LshUQ"
     },
     {
         "level": "200+",
         "place": "Otherworld (Edron)",
-        "raw_exp": "2.2kk",
+        "raw_exp": "2.1kk",
         "loot": "250k",
         "link" : "https://youtu.be/"
     },
@@ -588,32 +567,11 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "220+",
+        "level": "250+",
         "place": "Asura Palace",
-        "raw_exp": "3.0kk",
+        "raw_exp": "2.9kk",
         "loot": "400k",
         "link" : "https://youtu.be/exfl57YQCAA"
-    },
-    {
-        "level": "250+",
-        "place": "Asura Mirror",
-        "raw_exp": "5.2kk",
-        "loot": "500k",
-        "link" : "https://youtu.be/UyZPXrfogSA"
-    },
-        {
-        "level": "250+",
-        "place": "Warzone 5",
-        "raw_exp": "3.8kk",
-        "loot": "1kk",
-        "link" : "https://youtu.be/jRNXHzlcAOc"
-    },
-    {
-        "level": "250+",
-        "place": "Oramond Fury Dungeon",
-        "raw_exp": "3.8kk",
-        "loot": "900k",
-        "link" : "https://youtu.be/N_bKqXT3Xco"
     },
     {
         "level": "250+",
@@ -624,10 +582,17 @@
     },
     {
         "level": "250+",
-        "place": "Werelions",
-        "raw_exp": "3.0kk",
-        "loot": "900k",
-        "link" : "https://youtu.be/TcyeTVUn_Lg"
+        "place": "Lower Spike",
+        "raw_exp": "2.5kk",
+        "loot": "200k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "250+",
+        "place": "Deeper Banuta -8",
+        "raw_exp": "2.5kk",
+        "loot": "450k",
+        "link" : "https://youtu.be/i9ecWlmgObE"
     },
     {
         "level": "250+",
@@ -643,53 +608,67 @@
         "loot": "-",
         "link" : "https://youtu.be/"
     },
+        {
+        "level": "270+",
+        "place": "Asura Mirror",
+        "raw_exp": "5.2kk",
+        "loot": "500k",
+        "link" : "https://youtu.be/UyZPXrfogSA"
+    },
+        {
+        "level": "270+",
+        "place": "Warzone 5",
+        "raw_exp": "3.8kk",
+        "loot": "1kk",
+        "link" : "https://youtu.be/jRNXHzlcAOc"
+    },
     {
         "level": "270+",
-        "place": "Gazer Spectre",
-        "raw_exp": "3.1kk",
-        "loot": "600k",
-        "link" : "https://youtu.be/JpKuYWJnjdc"
+        "place": "Oramond Fury Dungeon",
+        "raw_exp": "3.8kk",
+        "loot": "900k",
+        "link" : "https://youtu.be/N_bKqXT3Xco"
+    },
+    {
+        "level": "270+",
+        "place": "Werelions",
+        "raw_exp": "3.0kk",
+        "loot": "900k",
+        "link" : "https://youtu.be/TcyeTVUn_Lg"
     },
     {
         "level": "300+",
         "place": "Marapur Nagas",
-        "raw_exp": "5.5kk",
-        "loot": "500k",
+        "raw_exp": "5.3kk",
+        "loot": "400k",
         "link" : "https://youtu.be/JErJMHqu9dc"
     },
     {
         "level": "300+",
         "place": "Roshamuul Mines",
-        "raw_exp": "4.9kk",
-        "loot": "800k",
+        "raw_exp": "4.8kk",
+        "loot": "750k",
         "link" : "https://youtu.be/PiIH9VhMiEc"
     },
     {
         "level": "300+",
         "place": "Winter Court",
-        "raw_exp": "4.7kk",
-        "loot": "800k",
+        "raw_exp": "4.6kk",
+        "loot": "750k",
         "link" : "https://youtu.be/lky2cG7w8j8"
     },
     {
         "level": "300+",
         "place": "Summer Court",
-        "raw_exp": "4.6kk",
-        "loot": "700k",
+        "raw_exp": "4.5kk",
+        "loot": "650k",
         "link" : "https://youtu.be/DTabKIwv04E"
     },
     {
         "level": "300+",
-        "place": "Iksupan Last Stand (Entrance)",
-        "raw_exp": "4.4kk",
-        "loot": "800k",
-        "link" : "https://youtu.be/2QHcDnyOU7c"
-    },
-    {
-        "level": "300+",
         "place": "Oskayaat Weretigers",
-        "raw_exp": "4.3kk",
-        "loot": "800k",
+        "raw_exp": "4.1kk",
+        "loot": "700k",
         "link" : "https://youtu.be/0TKdpEhssk0"
     },
     {
@@ -702,36 +681,43 @@
     {
         "level": "300+",
         "place": "Oskayaat Werecrocodiles",
-        "raw_exp": "3.7kk",
-        "loot": "800k",
+        "raw_exp": "3.6kk",
+        "loot": "750k",
         "link" : "https://youtu.be/gFjDuUjVUdE"
     },
         {
         "level": "300+",
         "place": "Warzone 4",
-        "raw_exp": "3.4kk",
-        "loot": "800k",
+        "raw_exp": "3.3kk",
+        "loot": "750k",
         "link" : "https://youtu.be/MQxUHFAYPOM"
     },
     {
         "level": "300+",
         "place": "Warzone 6",
-        "raw_exp": "3.3kk",
-        "loot": "1.1kk",
+        "raw_exp": "3.2kk",
+        "loot": "1.0kk",
         "link" : "https://youtu.be/3KuBpC4i8DU"
     },
     {
         "level": "300+",
         "place": "Lower Rosh",
-        "raw_exp": "3.2kk",
-        "loot": "700k",
+        "raw_exp": "3.1kk",
+        "loot": "600k",
         "link" : "https://youtu.be/QI49YMtE7go"
     },
     {
         "level": "300+",
+        "place": "Gazer Spectre",
+        "raw_exp": "3.0kk",
+        "loot": "600k",
+        "link" : "https://youtu.be/JpKuYWJnjdc"
+    },
+    {
+        "level": "300+",
         "place": "Marapur Turtles",
-        "raw_exp": "2.7kk",
-        "loot": "1.2kk",
+        "raw_exp": "2.6kk",
+        "loot": "1.15kk",
         "link" : "https://youtu.be/7ruc0mkSfI4"
     },
     {
@@ -744,91 +730,98 @@
     {
         "level": "350+",
         "place": "Iksupan Occupied Sanctuary",
-        "raw_exp": "5.2kk",
-        "loot": "800k",
+        "raw_exp": "5.1kk",
+        "loot": "750k",
         "link" : "https://youtu.be/KdSJTasIm0U"
     },
     {
         "level": "350+",
         "place": "Buried Cathedral",
-        "raw_exp": "5.0kk",
+        "raw_exp": "4.9kk",
         "loot": "300k",
         "link" : "https://youtu.be/KrVEDJUBnVA"
     },
     {
+        "level": "350+",
+        "place": "Iksupan Last Stand (Entrance)",
+        "raw_exp": "4.3kk",
+        "loot": "700k",
+        "link" : "https://youtu.be/2QHcDnyOU7c"
+    },
+    {
         "level": "400+",
         "place": "Marapur Nagas (Soulkamas)",
-        "raw_exp": "6.8kk",
-        "loot": "800k",
+        "raw_exp": "6.6kk",
+        "loot": "750k",
         "link" : "https://youtu.be/JErJMHqu9dc"
     },
     {
         "level": "400+",
         "place": "Cobra Bastion -1 (Basement)",
-        "raw_exp": "6.5kk",
-        "loot": "800k",
+        "raw_exp": "6.3kk",
+        "loot": "700k",
         "link" : "https://youtu.be/r1l04SEiFpo"
     },
     {
         "level": "400+",
         "place": "Crypt Warriors",
-        "raw_exp": "6.0kk",
+        "raw_exp": "5.9kk",
         "loot": "700k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "400+",
         "place": "Upper Roshamuul",
-        "raw_exp": "5.9kk",
-        "loot": "1.2kk",
+        "raw_exp": "5.8kk",
+        "loot": "1.15kk",
         "link" : "https://youtu.be/gCNQ8G6hI7E"
     },
     {
         "level": "400+",
         "place": "Falcons",
-        "raw_exp": "5.7kk",
-        "loot": "1.4kk",
+        "raw_exp": "5.6kk",
+        "loot": "1.3kk",
         "link" : "https://youtu.be/UBCXn-gEA6o"
     },
     {
         "level": "400+",
         "place": "Deathlings",
-        "raw_exp": "5.4kk",
+        "raw_exp": "5.3kk",
         "loot": "800k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "400+",
         "place": "Azzilon Walls",
-        "raw_exp": "5.4kk",
+        "raw_exp": "5.3kk",
         "loot": "500k",
         "link" : "https://youtu.be/J_9p5NWlcPU"
     },
     {
         "level": "400+",
         "place": "Sphinx/Crypt Warden Issavi",
-        "raw_exp": "5.3kk",
+        "raw_exp": "5.2kk",
         "loot": "700k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "400+",
         "place": "Rosha West",
-        "raw_exp": "4.9kk",
-        "loot": "1.2kk",
+        "raw_exp": "4.8kk",
+        "loot": "1.1kk",
         "link" : "https://youtu.be/t6iReSRaWfA"
     },
     {
         "level": "400+",
         "place": "Oramond Catacombs",
-        "raw_exp": "4.8kk",
+        "raw_exp": "4.7kk",
         "loot": "800k",
         "link" : "https://youtu.be/uf4aFM9IxeY"
     },
     {
         "level": "400+",
         "place": "Warzone 3",
-        "raw_exp": "4.8kk",
+        "raw_exp": "4.7kk",
         "loot": "800k",
         "link" : "https://youtu.be/"
     },
@@ -849,14 +842,14 @@
     {
         "level": "450+",
         "place": "Azzilon Castle",
-        "raw_exp": "6.4kk",
+        "raw_exp": "6.3kk",
         "loot": "600k",
         "link" : "https://youtu.be/w4gaxOlvFf8"
     },
     {
         "level": "450+",
         "place": "Flimsy Port Hope",
-        "raw_exp": "5.2kk",
+        "raw_exp": "5.1kk",
         "loot": "350k",
         "link" : "https://youtu.be/"
     },
@@ -864,20 +857,20 @@
         "level": "500+",
         "place": "Cobra Bastion",
         "raw_exp": "7.0kk",
-        "loot": "800k",
+        "loot": "700k",
         "link" : "https://youtu.be/cOtyvzz1Htk"
     },
     {
         "level": "500+",
         "place": "Issavi Goannas - Central Steppe",
-        "raw_exp": "5.8kk",
+        "raw_exp": "5.6kk",
         "loot": "500k",
         "link" : "https://youtu.be/"
     },
     {
         "level": "500+",
         "place": "Undead Dragon Seal",
-        "raw_exp": "5.8kk",
+        "raw_exp": "5.6kk",
         "loot": "1.2kk",
         "link" : "https://youtu.be/"
     },
