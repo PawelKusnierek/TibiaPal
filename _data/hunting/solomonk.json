@@ -869,16 +869,16 @@
     },
     {
         "level": "500+",
-        "place": "Undead Dragon Seal",
-        "raw_exp": "5.6kk",
-        "loot": "1.2kk",
+        "place": "Plague Feru Seal",
+        "raw_exp": "5.4kk",
+        "loot": "1.4kk",
         "link" : "https://youtu.be/"
     },
     {
         "level": "500+",
-        "place": "Juggernaut Seal",
+        "place": "Pumin Feru Seal",
         "raw_exp": "5.0kk",
-        "loot": "800k",
+        "loot": "1.5kk",
         "link" : "https://youtu.be/"
     },
     {
@@ -897,28 +897,14 @@
     },
     {
         "level": "500+",
-        "place": "Plague Seal",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Warzone 7",
+        "raw_exp": "3.5kk",
+        "loot": "1.5kk",
         "link" : "https://youtu.be/"
     },
     {
         "level": "500+",
         "place": "Norcferatu Castle",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "500+",
-        "place": "Warzone 7",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "500+",
-        "place": "Warzone 8",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -932,14 +918,35 @@
     },
     {
         "level": "600+",
-        "place": "Flimsy Venore",
+        "place": "Undead Dragon Feru Seal",
+        "raw_exp": "5.6kk",
+        "loot": "1.2kk",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Infernatil Feru Seal",
+        "raw_exp": "5.3kk",
+        "loot": "1kk",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Juggernaut Feru Seal",
+        "raw_exp": "5.0kk",
+        "loot": "800k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Norcferatu Dungeons West",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "600+",
-        "place": "Ingol",
+        "place": "Norcferatu Dungeons East",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -953,7 +960,14 @@
     },
     {
         "level": "600+",
-        "place": "Pumin Seal",
+        "place": "Otherworld (Sanguine Claws)",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Warzone 8",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
