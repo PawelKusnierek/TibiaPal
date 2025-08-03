@@ -1,6 +1,6 @@
 @charset "UTF-8";
 html {
-  min-width: 570px;
+  /* Removed fixed min-width for mobile responsiveness */
 }
 
 body {
@@ -1076,6 +1076,49 @@ ol, ul {
   }
   .nav-section {
     display: none;
+  }
+}
+/* Mobile-specific ad styling */
+#ads-container {
+  /* Mobile-optimized ad container */
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Mobile-specific ad styling */
+@media (max-width: 768px) {
+  #ads-container {
+    padding: 10px;
+    margin: 10px 0;
+  }
+  /* Ensure ads don't overflow on mobile */
+  #ads-container ins {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  /* Improve mobile content layout */
+  #main-content {
+    margin-left: 0 !important;
+    padding: 10px;
+    width: 100%;
+  }
+  /* Make tables responsive */
+  table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+  /* Improve form elements on mobile */
+  input, select, textarea {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  /* Better mobile typography */
+  body {
+    font-size: 16px;
+  }
+  h1, h2, h3, h4 {
+    font-size: 1.2em;
   }
 }
 #quest-boss-list h2 {
