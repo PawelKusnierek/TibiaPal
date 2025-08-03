@@ -540,13 +540,6 @@
     },
     {
         "level": "200+",
-        "place": "Book World: Chapter I/II/III/IV",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "200+",
         "place": "Goroma Demons Avalanche",
         "raw_exp": "-",
         "loot": "-",
@@ -646,6 +639,13 @@
     {
         "level": "300+",
         "place": "Oramond Wildlife Raid",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Book World: Chapter I/II/III/IV",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"

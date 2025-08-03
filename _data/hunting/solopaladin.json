@@ -672,13 +672,6 @@
         "link": "https://youtu.be/Kfg1x-TAGUY"
     },
     {
-        "level": "200+",
-        "place": "Book World: Chapter I/II/III/IV",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
         "level": "250+",
         "place": "Deeper Banuta -6",
         "raw_exp": "2kk",
@@ -810,6 +803,13 @@
         "raw_exp": "3.5kk",
         "loot": "300k",
         "link": "https://youtu.be/ZYLZJW0gnMc"
+    },
+    {
+        "level": "300+",
+        "place": "Book World: Chapter I/II/III/IV",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "350+",
