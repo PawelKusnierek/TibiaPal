@@ -1027,9 +1027,9 @@ ol, ul {
     width: 0;
     overflow: hidden;
     position: fixed;
-    top: 0;
+    top: 44px;
     left: 0;
-    height: 100vh;
+    height: calc(100vh - 44px);
     z-index: 1000;
     background-color: #061021;
     transition: width 0.3s ease;
@@ -1042,8 +1042,8 @@ ol, ul {
   /* Navigation toggle button */
   .nav-toggle {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: 0;
     z-index: 1001;
     background-color: #061021;
     border: 1px solid #1c4b9b;
@@ -1051,9 +1051,9 @@ ol, ul {
     padding: 12px 16px;
     cursor: pointer;
     font-size: 16px;
-    border-radius: 4px;
+    border-radius: 0;
     display: block !important;
-    min-width: 44px;
+    min-width: 124px;
     min-height: 44px;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
