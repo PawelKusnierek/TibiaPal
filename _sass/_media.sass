@@ -110,11 +110,13 @@
     #main-content
         margin-left: 0
         width: 100%
+        min-width: 600px
     
     /* Ensure right sidebar (with ads) is not covered */
     #right-sidebar
         margin-left: 0
         width: 100%
+        min-width: 300px
 
 /* Mobile-specific ad styling */
 #ads-container
@@ -150,3 +152,12 @@
     
     h1, h2, h3, h4
         font-size: 1.2em
+    
+    /* Ensure minimum usable widths for content */
+    #main-content
+        min-width: 600px
+        overflow-x: auto
+    
+    #right-sidebar
+        min-width: 300px
+        overflow-x: auto
