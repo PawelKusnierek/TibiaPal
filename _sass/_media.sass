@@ -48,7 +48,18 @@
 @media (max-width: 1000px)
     #left-sidebar
         width: 50px
-        overflow: hidden
+        overflow-y: auto
+        scrollbar-width: none
+        -ms-overflow-style: none
+        position: fixed
+        top: 0
+        left: 0
+        height: 100vh
+        z-index: 1000
+    
+    /* Hide Featured on TibiaTrade section when navigation becomes icons-only */
+    #tibiatrade_low_res
+        display: none
     .right-sidebar-item
         width: 50px
     .nav-item
@@ -59,6 +70,15 @@
         overflow: hidden
     .nav-section
         display: none
+    
+    /* Hide scrollbar for webkit browsers */
+    #left-sidebar::-webkit-scrollbar
+        display: none
+    
+    /* Adjust main content to account for fixed navigation */
+    #main-content
+        margin-left: 50px
+        width: calc(100% - 50px)
 
 /* Mobile-specific ad styling */
 #ads-container
