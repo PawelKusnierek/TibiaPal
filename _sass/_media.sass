@@ -77,13 +77,32 @@
 
 @media (max-width: 590px)
     #left-sidebar
-        display: none
+        width: 40px
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 1000
+        background-color: #061021
+        height: 100vh
+        overflow: hidden
+        border-right: 1px solid #1c4b9b
     .right-sidebar-item
         display: none
     .nav-item
-        display: none
+        width: 40px
+        padding: 8px 5px
+        font-size: 14px
     .nav-section
         display: none
+    /* Adjust main content to account for fixed navigation */
+    #main-content
+        margin-left: 40px
+        padding: 10px
+    
+    /* Adjust top section to account for fixed navigation */
+    #tibiatrade_low_res
+        margin-left: 40px
+        padding: 10px
 
 /* Mobile-specific ad styling */
 #ads-container
@@ -104,9 +123,14 @@
     
     /* Improve mobile content layout */
     #main-content
-        margin-left: 0 !important
+        margin-left: 40px !important
         padding: 10px
-        width: 100%
+        width: calc(100% - 40px)
+    
+    /* Adjust top section to account for fixed navigation */
+    #tibiatrade_low_res
+        margin-left: 40px !important
+        padding: 10px
     
     /* Make tables responsive */
     table
