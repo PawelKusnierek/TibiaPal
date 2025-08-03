@@ -45,64 +45,18 @@
         display: initial
         width: 100%
 
-@media (max-width: 800px)
-    #left-sidebar
-        width: 150px
-    .right-sidebar-item
-        width: 150px
-    .nav-item
-        width: 150px
-    .nav-section
-        display: none
-
-@media (max-width: 650px)
+@media (max-width: 1000px)
     #left-sidebar
         width: 50px
     .right-sidebar-item
         width: 50px
     .nav-item
         width: 50px
+        text-align: center
+        font-size: 0
+        line-height: 0
     .nav-section
         display: none
-
-@media (max-width: 620px)
-    #left-sidebar
-        width: 30px
-    .right-sidebar-item
-        width: 30px
-    .nav-item
-        width: 30px
-    .nav-section
-        display: none
-
-@media (max-width: 590px)
-    #left-sidebar
-        width: 40px
-        position: fixed
-        top: 0
-        left: 0
-        z-index: 1000
-        background-color: #061021
-        height: 100vh
-        overflow: hidden
-        border-right: 1px solid #1c4b9b
-    .right-sidebar-item
-        display: none
-    .nav-item
-        width: 40px
-        padding: 8px 5px
-        font-size: 14px
-    .nav-section
-        display: none
-    /* Adjust main content to account for fixed navigation */
-    #main-content
-        margin-left: 40px
-        padding: 10px
-    
-    /* Adjust top section to account for fixed navigation */
-    #tibiatrade_low_res
-        margin-left: 40px
-        padding: 10px
 
 /* Mobile-specific ad styling */
 #ads-container
@@ -120,17 +74,6 @@
     #ads-container ins
         max-width: 100% !important
         height: auto !important
-    
-    /* Improve mobile content layout */
-    #main-content
-        margin-left: 40px !important
-        padding: 10px
-        width: calc(100% - 40px)
-    
-    /* Adjust top section to account for fixed navigation */
-    #tibiatrade_low_res
-        margin-left: 40px !important
-        padding: 10px
     
     /* Make tables responsive */
     table
