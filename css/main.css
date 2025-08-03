@@ -1025,6 +1025,7 @@ ol, ul {
 @media (max-width: 1000px) {
   #left-sidebar {
     width: 50px;
+    overflow: hidden;
   }
   .right-sidebar-item {
     width: 50px;
@@ -1034,6 +1035,7 @@ ol, ul {
     text-align: center;
     font-size: 0;
     line-height: 0;
+    overflow: hidden;
   }
   .nav-section {
     display: none;
