@@ -1053,7 +1053,7 @@ ol, ul {
     font-size: 16px;
     border-radius: 0;
     display: block !important;
-    min-width: 124px;
+    min-width: 200px;
     min-height: 48px;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
