@@ -1060,6 +1060,11 @@ ol, ul {
     margin-left: 50px;
     width: calc(100% - 50px);
   }
+  /* Ensure ads appear alongside navigation instead of behind it */
+  #ads-container {
+    margin-left: 50px;
+    width: calc(100% - 50px);
+  }
 }
 /* Mobile-specific ad styling */
 #ads-container {
