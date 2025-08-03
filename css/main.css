@@ -1087,7 +1087,7 @@ ol, ul {
   #main-content {
     margin-left: 0;
     width: 100%;
-    min-width: 600px;
+    min-width: 100vw;
   }
   /* Ensure right sidebar (with ads) is not covered */
   #right-sidebar {
@@ -1134,7 +1134,7 @@ ol, ul {
   }
   /* Ensure minimum usable widths for content */
   #main-content {
-    min-width: 600px;
+    min-width: 100vw;
     overflow-x: auto;
   }
   #right-sidebar {
