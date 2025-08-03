@@ -1048,11 +1048,15 @@ ol, ul {
     background-color: #061021;
     border: 1px solid #1c4b9b;
     color: white;
-    padding: 8px 12px;
+    padding: 12px 16px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 4px;
     display: block !important;
+    min-width: 44px;
+    min-height: 44px;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
   /* Show text when expanded */
   #left-sidebar.expanded .nav-item {
