@@ -159,3 +159,16 @@ function initial_show_tab(tab_name) {
   // Show the current tab
   document.getElementById(tab_name).style.display = "block";
 }
+
+function toggleNavigation() {
+  var sidebar = document.getElementById('left-sidebar');
+  var toggle = document.querySelector('.nav-toggle');
+  
+  if (sidebar.classList.contains('expanded')) {
+    sidebar.classList.remove('expanded');
+    toggle.textContent = '☰ Menu';
+  } else {
+    sidebar.classList.add('expanded');
+    toggle.textContent = '✕ Close';
+  }
+}

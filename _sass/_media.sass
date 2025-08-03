@@ -47,43 +47,70 @@
 
 @media (max-width: 1000px)
     #left-sidebar
-        width: 50px
-        overflow-y: auto
-        scrollbar-width: none
-        -ms-overflow-style: none
+        width: 0
+        overflow: hidden
         position: fixed
         top: 0
         left: 0
         height: 100vh
         z-index: 1000
+        background-color: #061021
+        transition: width 0.3s ease
+        border-right: 1px solid #1c4b9b
     
-    /* Hide Featured on TibiaTrade section when navigation becomes icons-only */
+    /* Show navigation when expanded */
+    #left-sidebar.expanded
+        width: 200px
+    
+    /* Navigation toggle button */
+    .nav-toggle
+        position: fixed
+        top: 10px
+        left: 10px
+        z-index: 1001
+        background-color: #061021
+        border: 1px solid #1c4b9b
+        color: white
+        padding: 8px 12px
+        cursor: pointer
+        font-size: 14px
+        border-radius: 4px
+        display: block !important
+    
+    /* Show text when expanded */
+    #left-sidebar.expanded .nav-item
+        width: 200px
+        text-align: left
+        font-size: 12px
+        line-height: 1.2
+        overflow: visible
+        padding: 4px 15px
+        margin: 0
+    
+    #left-sidebar.expanded .nav-section
+        display: block
+        padding-top: 6px
+        padding-bottom: 4px
+        margin-bottom: 6px
+        font-size: 12px
+        text-align: center
+        font-weight: bold
+        border-bottom: 1px solid rgba(45, 140, 248, 0.7137254902)
+        margin: 0
+    
+    /* Hide Featured on TibiaTrade section when navigation is collapsed */
     #tibiatrade_low_res
         display: none
-    .right-sidebar-item
-        width: 50px
-    .nav-item
-        width: 50px
-        text-align: center
-        font-size: 0
-        line-height: 0
-        overflow: hidden
-    .nav-section
-        display: none
     
-    /* Hide scrollbar for webkit browsers */
-    #left-sidebar::-webkit-scrollbar
-        display: none
-    
-    /* Adjust main content to account for fixed navigation */
+    /* Adjust main content - no margin when collapsed */
     #main-content
-        margin-left: 50px
-        width: calc(100% - 50px)
+        margin-left: 0
+        width: 100%
     
-    /* Ensure right sidebar (with ads) is not covered by fixed navigation */
+    /* Ensure right sidebar (with ads) is not covered */
     #right-sidebar
-        margin-left: 50px
-        width: calc(100% - 50px)
+        margin-left: 0
+        width: 100%
 
 /* Mobile-specific ad styling */
 #ads-container
