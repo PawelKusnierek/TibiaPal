@@ -1083,19 +1083,27 @@ ol, ul {
   #left-sidebar.expanded .nav-item {
     width: 200px;
     text-align: left;
-    font-size: 12px;
-    line-height: 1.2;
+    font-size: 11px;
+    line-height: 1.1;
     overflow: visible;
-    padding: 4px 15px;
+    padding: 2px 12px;
     margin: 0;
     white-space: nowrap;
   }
+  #left-sidebar.expanded .nav-image {
+    height: 16px;
+    width: 16px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
   #left-sidebar.expanded .nav-section {
     display: block;
-    padding-top: 6px;
-    padding-bottom: 4px;
-    margin-bottom: 6px;
-    font-size: 12px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    margin-bottom: 4px;
+    font-size: 10px;
     text-align: center;
     font-weight: bold;
     border-bottom: 1px solid rgba(45, 140, 248, 0.7137254902);
@@ -1170,10 +1178,10 @@ ol, ul {
     padding-bottom: 20px;
   }
   #left-sidebar.expanded .nav-item {
-    padding: 6px 15px;
+    padding: 3px 12px;
   }
   #left-sidebar.expanded .nav-section {
-    padding: 8px 15px 4px 15px;
+    padding: 6px 12px 2px 12px;
   }
 }
 #quest-boss-list h2 {
