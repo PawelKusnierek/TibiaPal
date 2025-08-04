@@ -61,6 +61,27 @@
     /* Show navigation when expanded */
     #left-sidebar.expanded
         width: 200px
+        overflow-y: auto
+        overflow-x: hidden
+    
+    /* Custom scrollbar styling for mobile navigation */
+    #left-sidebar.expanded::-webkit-scrollbar
+        width: 6px
+    
+    #left-sidebar.expanded::-webkit-scrollbar-track
+        background: #061021
+    
+    #left-sidebar.expanded::-webkit-scrollbar-thumb
+        background: #1c4b9b
+        border-radius: 3px
+    
+    #left-sidebar.expanded::-webkit-scrollbar-thumb:hover
+        background: #2d8cf8
+    
+    /* Firefox scrollbar styling */
+    #left-sidebar.expanded
+        scrollbar-width: thin
+        scrollbar-color: #1c4b9b #061021
     
     /* Navigation toggle button */
     .nav-toggle
@@ -90,6 +111,7 @@
         overflow: visible
         padding: 4px 15px
         margin: 0
+        white-space: nowrap
     
     #left-sidebar.expanded .nav-section
         display: block
@@ -162,3 +184,14 @@
     #right-sidebar
         min-width: 300px
         overflow-x: auto
+    
+    /* Additional mobile navigation improvements */
+    #left-sidebar.expanded
+        max-height: calc(100vh - 48px)
+        padding-bottom: 20px
+    
+    #left-sidebar.expanded .nav-item
+        padding: 6px 15px
+    
+    #left-sidebar.expanded .nav-section
+        padding: 8px 15px 4px 15px
