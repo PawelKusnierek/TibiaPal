@@ -723,8 +723,8 @@
     {
         "level": "300+",
         "place": "Otherworld",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "3.0kk",
+        "loot": "1.0kk",
         "link" : "https://youtu.be/"
     },
     {
@@ -772,14 +772,14 @@
     {
         "level": "400+",
         "place": "Upper Roshamuul",
-        "raw_exp": "5.8kk",
-        "loot": "1.15kk",
+        "raw_exp": "5.7kk",
+        "loot": "1.1kk",
         "link" : "https://youtu.be/gCNQ8G6hI7E"
     },
     {
         "level": "400+",
         "place": "Falcons",
-        "raw_exp": "5.6kk",
+        "raw_exp": "5.5kk",
         "loot": "1.3kk",
         "link" : "https://youtu.be/UBCXn-gEA6o"
     },
@@ -821,7 +821,7 @@
     {
         "level": "400+",
         "place": "Warzone 3",
-        "raw_exp": "4.7kk",
+        "raw_exp": "4.8kk",
         "loot": "800k",
         "link" : "https://youtu.be/"
     },
@@ -840,18 +840,18 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "400+",
+        "place": "Warzone 1",
+        "raw_exp": "3.6kk",
+        "loot": "800k",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "450+",
         "place": "Azzilon Castle",
         "raw_exp": "6.3kk",
         "loot": "600k",
         "link" : "https://youtu.be/w4gaxOlvFf8"
-    },
-    {
-        "level": "450+",
-        "place": "Flimsy Port Hope",
-        "raw_exp": "5.1kk",
-        "loot": "350k",
-        "link" : "https://youtu.be/"
     },
     {
         "level": "500+",
@@ -911,10 +911,38 @@
     },
     {
         "level": "600+",
-        "place": "True Asuras",
-        "raw_exp": "5.5kk",
-        "loot": "1.3kk",
-        "link" : "https://youtu.be/M7-OckvO6hY"
+        "place": "Flimsy Lost Souls Venore",
+        "raw_exp": "6.6kk",
+        "loot": "900k",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Buried Cathedral (Sanguine)",
+        "raw_exp": "6.2kk",
+        "loot": "1.4kk",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Winter Court (Sanguine)",
+        "raw_exp": "6.0kk",
+        "loot": "1.8kk",
+        "link" : "https://youtu.be/-dt09jhiEeU"
+    },
+    {
+        "level": "600+",
+        "place": "Summer Court (Sanguine)",
+        "raw_exp": "6.0kk",
+        "loot": "1.8kk",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Flimsy Lost Souls Port Hope",
+        "raw_exp": "5.8kk",
+        "loot": "1kk",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "600+",
@@ -939,20 +967,6 @@
     },
     {
         "level": "600+",
-        "place": "Norcferatu Dungeons West",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Norcferatu Dungeons East",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
         "place": "Issavi Sewers",
         "raw_exp": "5.0kk",
         "loot": "900k",
@@ -960,9 +974,9 @@
     },
     {
         "level": "600+",
-        "place": "Otherworld (Sanguine Claws)",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Otherworld (Sanguine)",
+        "raw_exp": "4.0kk",
+        "loot": "2.0kk",
         "link" : "https://youtu.be/"
     },
     {
@@ -985,6 +999,27 @@
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
+    },
+        {
+        "level": "600+",
+        "place": "Norcferatu Dungeons West",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Norcferatu Dungeons East",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "700+",
+        "place": "True Asuras",
+        "raw_exp": "5.3kk",
+        "loot": "1.0kk",
+        "link" : "https://youtu.be/M7-OckvO6hY"
     },
     {
         "level": "800+",
