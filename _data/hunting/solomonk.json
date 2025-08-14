@@ -918,6 +918,13 @@
     },
     {
         "level": "600+",
+        "place": "Falcons (Sanguine)",
+        "raw_exp": "6.3kk",
+        "loot": "1.9kk",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
         "place": "Buried Cathedral (Sanguine)",
         "raw_exp": "6.2kk",
         "loot": "1.4kk",
@@ -974,6 +981,13 @@
     },
     {
         "level": "600+",
+        "place": "Warzone 8",
+        "raw_exp": "4.2kk",
+        "loot": "1.7kk",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
         "place": "Otherworld (Sanguine)",
         "raw_exp": "4.0kk",
         "loot": "2.0kk",
@@ -981,9 +995,9 @@
     },
     {
         "level": "600+",
-        "place": "Warzone 8",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Deep Desert (Darashia Skeletons)",
+        "raw_exp": "4.0kk",
+        "loot": "2.0kk",
         "link" : "https://youtu.be/"
     },
     {
@@ -994,13 +1008,6 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "600+",
-        "place": "Darashia Skeletons",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-        {
         "level": "600+",
         "place": "Norcferatu Dungeons West",
         "raw_exp": "-",
@@ -1015,6 +1022,13 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "600+",
+        "place": "Bulltaurs",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "700+",
         "place": "True Asuras",
         "raw_exp": "5.3kk",
@@ -1024,6 +1038,13 @@
     {
         "level": "800+",
         "place": "Warzone 9",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Podzilla Quaras",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
