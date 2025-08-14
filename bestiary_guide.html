@@ -1,7 +1,7 @@
 ---
 layout: default
 title: TibiaPal.com - Bestiary Guide
-scripts:
+scripts: <script src="scripts/bestiary_guide.js"></script>
 ---
 
 <h1>Tibia Bestiary Guide</h1>
@@ -15,7 +15,12 @@ scripts:
     </ol>
 </div>
 
-<table class="bestiary_table">
+<div style="margin: 20px 0;">
+    <label for="monsterSearch" style="color: #ebebeb; margin-right: 10px;">Search:</label>
+    <input type="text" id="monsterSearch" placeholder="Type monster name..." style="padding: 8px; width: 300px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
+</div>
+
+<table class="bestiary_table" id="bestiaryTable">
     <tr>
         <th>Monster</th>
         <th>Points</th>
