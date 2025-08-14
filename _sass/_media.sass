@@ -1,3 +1,27 @@
+/* Ensure navigation stays on the left for very wide screens */
+@media (min-width: 1401px)
+    #header
+        position: fixed
+        left: 0
+        top: 0
+        z-index: 101
+    
+    #left-sidebar
+        position: fixed
+        left: 0
+        top: 120px
+        z-index: 100
+    
+    #tibiatrade_low_res
+        margin-left: 320px
+        margin-top: 200px
+    
+    #banner
+        margin-left: 320px
+    
+    #main-content
+        margin-left: 320px
+
 @media (max-width: 1400px)
     #rashid-day
         font-size: 14px

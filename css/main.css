@@ -157,6 +157,21 @@ ol, ul {
   align-items: left;
   align-content: left;
   width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  align-items: left;
+  align-content: left;
+  width: 300px;
 }
 
 .nav-item {
@@ -969,6 +984,31 @@ ol, ul {
   width: 70px !important;
 }
 
+/* Ensure navigation stays on the left for very wide screens */
+@media (min-width: 1401px) {
+  #header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 101;
+  }
+  #left-sidebar {
+    position: fixed;
+    left: 0;
+    top: 120px;
+    z-index: 100;
+  }
+  #tibiatrade_low_res {
+    margin-left: 320px;
+    margin-top: 200px;
+  }
+  #banner {
+    margin-left: 320px;
+  }
+  #main-content {
+    margin-left: 320px;
+  }
+}
 @media (max-width: 1400px) {
   #rashid-day {
     font-size: 14px;
