@@ -1,5 +1,6 @@
 // Global variables
 let bestiaryTable = null;
+let allMonsters = []; // Store all monster data for sorting
 
 // Bestiary Guide functionality
 function initializeBestiaryGuide() {
@@ -50,6 +51,14 @@ function initializeBestiaryGuide() {
         });
     });
 
+    // Set up sort functionality
+    const sortFilters = document.querySelectorAll('.sort-filter');
+    sortFilters.forEach(radio => {
+        radio.addEventListener('change', function() {
+            applyFilters();
+        });
+    });
+
     console.log('Bestiary guide initialized successfully');
 }
 
@@ -64,6 +73,7 @@ function applyFilters() {
     const charmPointFilters = document.querySelectorAll('.charm-point-filter');
     const effortFilters = document.querySelectorAll('.effort-filter');
     const rapidFilters = document.querySelectorAll('.rapid-filter');
+    const sortFilters = document.querySelectorAll('.sort-filter');
     
     // Get selected charm point values
     const selectedCharmPoints = [];
@@ -89,33 +99,22 @@ function applyFilters() {
         }
     });
     
+    // Get selected sort option
+    let selectedSort = 'name'; // default
+    sortFilters.forEach(radio => {
+        if (radio.checked) {
+            selectedSort = radio.value;
+        }
+    });
+    
     console.log('Search term:', searchTerm);
     console.log('Selected charm points:', selectedCharmPoints);
     console.log('Selected efforts:', selectedEfforts);
     console.log('Selected rapids:', selectedRapids);
+    console.log('Selected sort:', selectedSort);
 
-    const rows = bestiaryTable.getElementsByTagName('tr');
-    
-    // Start from index 1 to skip the header row
-    for (let i = 1; i < rows.length; i++) {
-        const monsterName = rows[i].cells[0].textContent.toLowerCase();
-        const charmPoints = parseInt(rows[i].cells[2].textContent); // Points is now in column 3 (index 2)
-        const effort = rows[i].cells[3].textContent; // Effort is in column 4 (index 3)
-        const rapid = rows[i].cells[4].textContent; // Rapid is in column 5 (index 4)
-        
-        const matchesSearch = monsterName.includes(searchTerm);
-        const matchesCharmPoints = selectedCharmPoints.includes(charmPoints);
-        const matchesEffort = selectedEfforts.includes(effort);
-        const matchesRapid = selectedRapids.includes(rapid);
-        
-        if (matchesSearch && matchesCharmPoints && matchesEffort && matchesRapid) {
-            rows[i].style.display = '';
-            console.log('Showing:', monsterName, '(', charmPoints, 'points,', effort, 'effort,', rapid, 'rapid)');
-        } else {
-            rows[i].style.display = 'none';
-            console.log('Hiding:', monsterName, '(', charmPoints, 'points,', effort, 'effort,', rapid, 'rapid)');
-        }
-    }
+    // Re-populate table with sorted and filtered data
+    populateTableWithFilters(bestiaryTable, searchTerm, selectedCharmPoints, selectedEfforts, selectedRapids, selectedSort);
 }
 
 function loadMonsterData(table) {
@@ -126,13 +125,44 @@ function loadMonsterData(table) {
         .then(response => response.json())
         .then(data => {
             console.log('Loaded', data.length, 'monsters');
+            allMonsters = data; // Store data globally
             populateTable(table, data);
+            applyFilters(); // Apply filters after initial population
         })
         .catch(error => {
             console.error('Error loading monster data:', error);
             // Fallback: create some sample data
             createSampleData(table);
         });
+}
+
+function populateTableWithFilters(table, searchTerm, selectedCharmPoints, selectedEfforts, selectedRapids, selectedSort) {
+    // Filter the monsters based on criteria
+    let filteredMonsters = allMonsters.filter(monster => {
+        const matchesSearch = monster.name.toLowerCase().includes(searchTerm);
+        const matchesCharmPoints = selectedCharmPoints.includes(monster.charmPoints);
+        const matchesEffort = selectedEfforts.includes(monster.effort);
+        const matchesRapid = selectedRapids.includes(monster.rapidRecommended);
+        
+        return matchesSearch && matchesCharmPoints && matchesEffort && matchesRapid;
+    });
+    
+    // Sort the filtered monsters
+    filteredMonsters.sort((a, b) => {
+        switch (selectedSort) {
+            case 'name':
+                return a.name.localeCompare(b.name);
+            case 'level':
+                return a.minLevel - b.minLevel;
+            case 'points':
+                return b.charmPoints - a.charmPoints; // Descending order for points
+            default:
+                return a.name.localeCompare(b.name);
+        }
+    });
+    
+    // Populate the table with filtered and sorted data
+    populateTable(table, filteredMonsters);
 }
 
 function populateTable(table, monsters) {
