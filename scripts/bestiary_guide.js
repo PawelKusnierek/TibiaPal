@@ -28,6 +28,12 @@ function initializeBestiaryGuide() {
         applyFilters();
     });
 
+    // Set up level filter functionality
+    const levelFilter = document.getElementById('levelFilter');
+    levelFilter.addEventListener('input', function() {
+        applyFilters();
+    });
+
     // Set up charm point filter functionality
     const charmPointFilters = document.querySelectorAll('.charm-point-filter');
     charmPointFilters.forEach(checkbox => {
@@ -104,6 +110,8 @@ function applyFilters() {
 
     const searchInput = document.getElementById('monsterSearch');
     const searchTerm = searchInput.value.toLowerCase();
+    const levelFilter = document.getElementById('levelFilter');
+    const playerLevel = levelFilter.value ? parseInt(levelFilter.value) : null;
     const charmPointFilters = document.querySelectorAll('.charm-point-filter');
     const effortFilters = document.querySelectorAll('.effort-filter');
     const rapidFilters = document.querySelectorAll('.rapid-filter');
@@ -133,13 +141,14 @@ function applyFilters() {
     });
     
     console.log('Search term:', searchTerm);
+    console.log('Player level:', playerLevel);
     console.log('Selected charm points:', selectedCharmPoints);
     console.log('Selected efforts:', selectedEfforts);
     console.log('Selected rapids:', selectedRapids);
     console.log('Current sort:', currentSort);
 
     // Re-populate table with sorted and filtered data
-    populateTableWithFilters(bestiaryTable, searchTerm, selectedCharmPoints, selectedEfforts, selectedRapids, currentSort);
+    populateTableWithFilters(bestiaryTable, searchTerm, playerLevel, selectedCharmPoints, selectedEfforts, selectedRapids, currentSort);
 }
 
 function loadMonsterData(table) {
@@ -162,15 +171,16 @@ function loadMonsterData(table) {
         });
 }
 
-function populateTableWithFilters(table, searchTerm, selectedCharmPoints, selectedEfforts, selectedRapids, sortConfig) {
+function populateTableWithFilters(table, searchTerm, playerLevel, selectedCharmPoints, selectedEfforts, selectedRapids, sortConfig) {
     // Filter the monsters based on criteria
     let filteredMonsters = allMonsters.filter(monster => {
         const matchesSearch = monster.name.toLowerCase().includes(searchTerm);
+        const matchesLevel = playerLevel === null || monster.minLevel <= playerLevel;
         const matchesCharmPoints = selectedCharmPoints.includes(monster.charmPoints);
         const matchesEffort = selectedEfforts.includes(monster.effort);
         const matchesRapid = selectedRapids.includes(monster.rapidRecommended);
         
-        return matchesSearch && matchesCharmPoints && matchesEffort && matchesRapid;
+        return matchesSearch && matchesLevel && matchesCharmPoints && matchesEffort && matchesRapid;
     });
     
     // Sort the filtered monsters
