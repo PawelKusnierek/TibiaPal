@@ -4,6 +4,18 @@ title: TibiaPal.com - Bestiary Guide
 scripts: <script src="scripts/bestiary_guide.js"></script>
 ---
 
+<style>
+.sortable-header {
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+.sortable-header:hover {
+    background-color: rgba(45, 140, 248, 0.3) !important;
+}
+</style>
+
 <h1>Tibia Bestiary Guide</h1>
 <button type="button" class="expandable-div">Guide Assumptions & Explanations</button>
 <div class="expandable-div-content">
@@ -77,20 +89,6 @@ scripts: <script src="scripts/bestiary_guide.js"></script>
             </label>
         </div>
     </div>
-    <div style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-        <label style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 125px; text-align: left;">Sort by:</label>
-        <div style="display: inline-block;">
-            <label style="color: #ebebeb; margin-right: 15px; margin-left: 5px;">
-                <input type="radio" name="sort-by" class="sort-filter" value="name" checked> Name
-            </label>
-            <label style="color: #ebebeb; margin-right: 15px;">
-                <input type="radio" name="sort-by" class="sort-filter" value="level"> Level
-            </label>
-            <label style="color: #ebebeb; margin-right: 15px;">
-                <input type="radio" name="sort-by" class="sort-filter" value="points"> Points
-            </label>
-        </div>
-    </div>
 </div>
 
 <div style="margin: 20px 0;">
@@ -100,12 +98,12 @@ scripts: <script src="scripts/bestiary_guide.js"></script>
 
 <table class="bestiary_table" id="bestiaryTable">
     <tr>
-        <th>Monster</th>
-        <th>Min. Level</th>
-        <th>Points</th>
-        <th>Effort</th>
-        <th>Rapid Recommended?</th>
-        <th>Location</th>
+        <th class="sortable-header" data-sort="name">Monster ↕</th>
+        <th class="sortable-header" data-sort="level">Min. Level ↕</th>
+        <th class="sortable-header" data-sort="points">Points ↕</th>
+        <th class="sortable-header" data-sort="effort">Effort ↕</th>
+        <th class="sortable-header" data-sort="rapid">Rapid Recommended? ↕</th>
+        <th class="sortable-header" data-sort="location">Location ↕</th>
         <th>Notes</th>
     </tr>
 </table>

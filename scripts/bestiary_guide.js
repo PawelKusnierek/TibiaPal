@@ -1,6 +1,7 @@
 // Global variables
 let bestiaryTable = null;
 let allMonsters = []; // Store all monster data for sorting
+let currentSort = { column: 'name', direction: 'asc' }; // Track current sort state
 
 // Bestiary Guide functionality
 function initializeBestiaryGuide() {
@@ -51,15 +52,48 @@ function initializeBestiaryGuide() {
         });
     });
 
-    // Set up sort functionality
-    const sortFilters = document.querySelectorAll('.sort-filter');
-    sortFilters.forEach(radio => {
-        radio.addEventListener('change', function() {
-            applyFilters();
+    // Set up sortable headers
+    const sortableHeaders = document.querySelectorAll('.sortable-header');
+    sortableHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            const sortColumn = this.getAttribute('data-sort');
+            handleHeaderClick(sortColumn);
         });
     });
 
     console.log('Bestiary guide initialized successfully');
+}
+
+function handleHeaderClick(sortColumn) {
+    // Toggle direction if clicking the same column
+    if (currentSort.column === sortColumn) {
+        currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+    } else {
+        // New column, default to ascending
+        currentSort.column = sortColumn;
+        currentSort.direction = 'asc';
+    }
+    
+    // Update header arrows
+    updateHeaderArrows();
+    
+    // Re-apply filters with new sort
+    applyFilters();
+}
+
+function updateHeaderArrows() {
+    const sortableHeaders = document.querySelectorAll('.sortable-header');
+    sortableHeaders.forEach(header => {
+        const column = header.getAttribute('data-sort');
+        const baseText = header.textContent.replace(/[↑↓↕]/g, '').trim();
+        
+        if (column === currentSort.column) {
+            const arrow = currentSort.direction === 'asc' ? ' ↑' : ' ↓';
+            header.textContent = baseText + arrow;
+        } else {
+            header.textContent = baseText + ' ↕';
+        }
+    });
 }
 
 function applyFilters() {
@@ -73,7 +107,6 @@ function applyFilters() {
     const charmPointFilters = document.querySelectorAll('.charm-point-filter');
     const effortFilters = document.querySelectorAll('.effort-filter');
     const rapidFilters = document.querySelectorAll('.rapid-filter');
-    const sortFilters = document.querySelectorAll('.sort-filter');
     
     // Get selected charm point values
     const selectedCharmPoints = [];
@@ -99,22 +132,14 @@ function applyFilters() {
         }
     });
     
-    // Get selected sort option
-    let selectedSort = 'name'; // default
-    sortFilters.forEach(radio => {
-        if (radio.checked) {
-            selectedSort = radio.value;
-        }
-    });
-    
     console.log('Search term:', searchTerm);
     console.log('Selected charm points:', selectedCharmPoints);
     console.log('Selected efforts:', selectedEfforts);
     console.log('Selected rapids:', selectedRapids);
-    console.log('Selected sort:', selectedSort);
+    console.log('Current sort:', currentSort);
 
     // Re-populate table with sorted and filtered data
-    populateTableWithFilters(bestiaryTable, searchTerm, selectedCharmPoints, selectedEfforts, selectedRapids, selectedSort);
+    populateTableWithFilters(bestiaryTable, searchTerm, selectedCharmPoints, selectedEfforts, selectedRapids, currentSort);
 }
 
 function loadMonsterData(table) {
@@ -127,6 +152,7 @@ function loadMonsterData(table) {
             console.log('Loaded', data.length, 'monsters');
             allMonsters = data; // Store data globally
             populateTable(table, data);
+            updateHeaderArrows(); // Set initial arrow state
             applyFilters(); // Apply filters after initial population
         })
         .catch(error => {
@@ -136,7 +162,7 @@ function loadMonsterData(table) {
         });
 }
 
-function populateTableWithFilters(table, searchTerm, selectedCharmPoints, selectedEfforts, selectedRapids, selectedSort) {
+function populateTableWithFilters(table, searchTerm, selectedCharmPoints, selectedEfforts, selectedRapids, sortConfig) {
     // Filter the monsters based on criteria
     let filteredMonsters = allMonsters.filter(monster => {
         const matchesSearch = monster.name.toLowerCase().includes(searchTerm);
@@ -149,16 +175,33 @@ function populateTableWithFilters(table, searchTerm, selectedCharmPoints, select
     
     // Sort the filtered monsters
     filteredMonsters.sort((a, b) => {
-        switch (selectedSort) {
+        let comparison = 0;
+        
+        switch (sortConfig.column) {
             case 'name':
-                return a.name.localeCompare(b.name);
+                comparison = a.name.localeCompare(b.name);
+                break;
             case 'level':
-                return a.minLevel - b.minLevel;
+                comparison = a.minLevel - b.minLevel;
+                break;
             case 'points':
-                return b.charmPoints - a.charmPoints; // Descending order for points
+                comparison = a.charmPoints - b.charmPoints;
+                break;
+            case 'effort':
+                comparison = a.effort.localeCompare(b.effort);
+                break;
+            case 'rapid':
+                comparison = a.rapidRecommended.localeCompare(b.rapidRecommended);
+                break;
+            case 'location':
+                comparison = a.location.localeCompare(b.location);
+                break;
             default:
-                return a.name.localeCompare(b.name);
+                comparison = a.name.localeCompare(b.name);
         }
+        
+        // Apply direction
+        return sortConfig.direction === 'desc' ? -comparison : comparison;
     });
     
     // Populate the table with filtered and sorted data
