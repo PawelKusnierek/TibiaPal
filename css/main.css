@@ -172,6 +172,35 @@ ol, ul {
   align-items: left;
   align-content: left;
   width: 300px;
+  max-height: calc(100vh - 120px);
+  min-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar styling for desktop navigation */
+#left-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+#left-sidebar::-webkit-scrollbar-track {
+  background: #061021;
+}
+
+#left-sidebar::-webkit-scrollbar-thumb {
+  background: #1c4b9b;
+  border-radius: 3px;
+}
+
+#left-sidebar::-webkit-scrollbar-thumb:hover {
+  background: #2d8cf8;
+}
+
+/* Firefox scrollbar styling */
+#left-sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: #1c4b9b #061021;
 }
 
 .nav-item {
@@ -694,6 +723,15 @@ ol, ul {
   width: 33.33%;
 }
 
+/* Special styling for 2-tab layouts (like exercise page) */
+.hunting_tab.two-tabs button {
+  width: 50%;
+}
+
+.hunting_tab.two-tabs button.active {
+  width: 50%;
+}
+
 .tabcontent {
   padding-top: 10px;
   display: none;
@@ -1040,6 +1078,9 @@ ol, ul {
   #left-sidebar {
     margin: 0;
     padding: 0;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   #main-content {
     margin: 0;
@@ -1062,7 +1103,7 @@ ol, ul {
     width: 100%;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
   #left-sidebar {
     width: 0;
     overflow: hidden;
@@ -1074,6 +1115,12 @@ ol, ul {
     background-color: #061021;
     transition: width 0.3s ease;
     border-right: 1px solid #1c4b9b;
+    /* Override scrollbar styles for mobile */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  #left-sidebar::-webkit-scrollbar {
+    display: none;
   }
   /* Show navigation when expanded */
   #left-sidebar.expanded {
@@ -1334,7 +1381,33 @@ ol, ul {
   width: 180px;
 }
 
+#vocation_exercise_form_spend {
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+#vocation_exercise_form_spend input {
+  margin-top: 7px;
+  width: 203px;
+}
+
+#vocation_exercise_form_spend select {
+  margin-top: 7px;
+  width: 210px;
+}
+
+#vocation_exercise_form_spend label {
+  display: inline-block;
+  width: 180px;
+}
+
 #exercisesubmitbutton {
+  width: 70px !important;
+}
+
+#exercisesubmitbutton_spend {
   width: 70px !important;
 }
 
@@ -1344,6 +1417,10 @@ ol, ul {
 }
 
 #exerciseformresults {
+  padding-bottom: 15px;
+}
+
+#exerciseformresults_spend {
   padding-bottom: 15px;
 }
 

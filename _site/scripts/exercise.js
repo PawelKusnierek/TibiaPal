@@ -1,5 +1,42 @@
 //Each weapon is equivalent to 300k mana points - 600 ultimate mana potions * 500 average value, and all vocs progress their main skill at the same rate with the weapons
 function submit_exercise_form() {
+  // Get the required field values
+  const currentSkill = document.getElementById("currentskill").value;
+  const targetSkill = document.getElementById("targetskill").value;
+  
+  // Check if the fields are empty or invalid
+  if (!currentSkill || currentSkill.trim() === "") {
+    alert("Please enter your current skill level. You cannot proceed without specifying your current skill.");
+    document.getElementById("currentskill").focus();
+    return;
+  }
+  
+  if (!targetSkill || targetSkill.trim() === "") {
+    alert("Please enter your target skill level. You cannot proceed without specifying your target skill.");
+    document.getElementById("targetskill").focus();
+    return;
+  }
+  
+  // Validate that the values are numbers
+  if (isNaN(currentSkill) || currentSkill <= 0) {
+    alert("Please enter a valid current skill level (must be a positive number).");
+    document.getElementById("currentskill").focus();
+    return;
+  }
+  
+  if (isNaN(targetSkill) || targetSkill <= 0) {
+    alert("Please enter a valid target skill level (must be a positive number).");
+    document.getElementById("targetskill").focus();
+    return;
+  }
+  
+  // Check if target skill is higher than current skill
+  if (parseFloat(targetSkill) <= parseFloat(currentSkill)) {
+    alert("Your target skill must be higher than your current skill level.");
+    document.getElementById("targetskill").focus();
+    return;
+  }
+
   points_main_skill_regular_weapon = 300000;
   points_main_skill_durable_weapon = points_main_skill_regular_weapon * 3.6;
   points_main_skill_lasting_weapon = points_main_skill_regular_weapon * 28.8;
@@ -120,4 +157,35 @@ function total_skill_points_at_given_level(skill_constant, vocation_constant, sk
   exponent = Math.pow(vocation_constant, skill - skill_offset)
   total_points = skill_constant * ((exponent - 1) / (vocation_constant - 1))
   return total_points
+}
+
+function submit_exercise_form_spend() {
+  // Get the required field values
+  const weaponCount = document.getElementById("weaponcount_spend").value;
+  const currentSkill = document.getElementById("currentskill_spend").value;
+  
+  // Check if the number of weapons field is empty or invalid
+  if (!weaponCount || weaponCount <= 0) {
+    alert("Please enter a valid number of weapons. You cannot proceed without specifying how many exercise weapons you want to use.");
+    document.getElementById("weaponcount_spend").focus();
+    return;
+  }
+  
+  // Check if the current skill field is empty or invalid
+  if (!currentSkill || currentSkill.trim() === "") {
+    alert("Please enter your current skill level. You cannot proceed without specifying your current skill.");
+    document.getElementById("currentskill_spend").focus();
+    return;
+  }
+  
+  // Validate that the current skill value is a number
+  if (isNaN(currentSkill) || currentSkill <= 0) {
+    alert("Please enter a valid current skill level (must be a positive number).");
+    document.getElementById("currentskill_spend").focus();
+    return;
+  }
+  
+  // If validation passes, proceed with the calculation
+  // TODO: Implement the actual calculation logic for Target Spend mode
+  alert("Target Spend calculation will be implemented soon!");
 }

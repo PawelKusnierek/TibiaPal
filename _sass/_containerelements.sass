@@ -78,6 +78,30 @@
     align-items: left
     align-content: left
     width: 300px
+    max-height: calc(100vh - 120px)
+    min-height: 400px
+    overflow-y: auto
+    overflow-x: hidden
+    box-sizing: border-box
+
+/* Custom scrollbar styling for desktop navigation */
+#left-sidebar::-webkit-scrollbar
+    width: 6px
+
+#left-sidebar::-webkit-scrollbar-track
+    background: #061021
+
+#left-sidebar::-webkit-scrollbar-thumb
+    background: #1c4b9b
+    border-radius: 3px
+
+#left-sidebar::-webkit-scrollbar-thumb:hover
+    background: #2d8cf8
+
+/* Firefox scrollbar styling */
+#left-sidebar
+    scrollbar-width: thin
+    scrollbar-color: #1c4b9b #061021
 
 .nav-item
     width: 100%

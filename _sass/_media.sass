@@ -48,6 +48,9 @@
     #left-sidebar
         margin: 0
         padding: 0
+        max-height: calc(100vh - 120px)
+        overflow-y: auto
+        overflow-x: hidden
 
     #main-content
         margin: 0
@@ -69,7 +72,7 @@
         display: initial
         width: 100%
 
-@media (max-width: 1000px)
+@media (max-width: 768px)
     #left-sidebar
         width: 0
         overflow: hidden
@@ -81,6 +84,11 @@
         background-color: #061021
         transition: width 0.3s ease
         border-right: 1px solid #1c4b9b
+        /* Override scrollbar styles for mobile */
+        scrollbar-width: none
+        -ms-overflow-style: none
+        &::-webkit-scrollbar
+            display: none
     
     /* Show navigation when expanded */
     #left-sidebar.expanded

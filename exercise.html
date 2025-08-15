@@ -5,47 +5,107 @@ scripts: <script src="scripts/exercise.js"></script>
 
 ---
 
-<br>Calculate how many exercise weapons you have to use to get from skill X to skill Y. <br><br>
-Always buy exercise weapons for gold when the price of Tibia Coins is above 13 900 gp on
-your server. <br>
-<form id="vocation_exercise_form">
-    <label for="vocation">Vocation & skill:</label>
-    <select name="vocation" id="vocation">
-        <option value="Mage">Druid/Sorcerer - Magic</option>
-        <option value="Knight">Knight - Melee</option>
-        <option value="Paladin Magic">Paladin - Magic</option>
-        <option value="Paladin Distance">Paladin - Distance</option>
-        <option value="Monk Magic">Monk - Magic</option>
-        <option value="Monk Fist">Monk - Fist</option>
-    </select><br>
-    <label id="currentskilllabel" for="currentskill">Current skill with loyalty:</label>
-    <input type="text" id="currentskill" name="currentskill" placeholder="current skill with loyalty, e.g. 112"
-        autocomplete="off"><br>
-    <label id="currentskillpercentagelabel" for="currentskillpercentage">% to next:</label>
-    <input type="text" id="currentskillpercentage" name="currentskillpercentage" value="100"><br>
-    <label id="targetskilllabel" for="targetskill">Target skill:</label>
-    <input type="text" id="targetskill" name="targetskill" placeholder="target skill, e.g. 114" autocomplete="off"><br>
-    <label id="loyaltylabel" for="loyalty">Loyalty bonus:</label>
-    <select name="loyalty" id="loyalty">
-        <option value="0">0%</option>
-        <option value="5">5%</option>
-        <option value="10">10%</option>
-        <option value="15">15%</option>
-        <option value="20">20%</option>
-        <option value="25">25%</option>
-        <option value="30">30%</option>
-        <option value="35">35%</option>
-        <option value="40">40%</option>
-        <option value="45">45%</option>
-        <option value="50">50%</option>
-    </select><br>
-    <label id="eventlabel" for="event">Double event:</label>
-    <input type="checkbox" id="event" name="event"><br>
-    <label id="dummylabel" for="dummy">Private dummy:</label>
-    <input type="checkbox" id="dummy" name="dummy"><br>
-    <label id="tc_price_label" for="tc_price">TC over 13900 gp:</label>
-    <input type="checkbox" id="tc_price" name="tc_price" checked><br>
-    <input type="submit" id="exercisesubmitbutton" value="Submit"
-        onclick="event.preventDefault(); submit_exercise_form()" />
-</form>
-<p id="exerciseformresults"></p>
+<div class="hunting_tab two-tabs">
+    <button id="target_skill" class="tablinks active" onclick="show_tab(event, 'TargetSkill')">Target Skill</button>
+    <button id="target_spend" class="tablinks" onclick="show_tab(event, 'TargetSpend')">Target Spend</button>
+</div>
+
+<div id="TargetSkill" class="tabcontent">
+    <br>Calculate how many exercise weapons you have to use to get from skill X to skill Y. <br><br>
+    Always buy exercise weapons for gold when the price of Tibia Coins is above 13 900 gp on
+    your server. <br>
+    <form id="vocation_exercise_form">
+        <label for="vocation">Vocation & skill:</label>
+        <select name="vocation" id="vocation">
+            <option value="Mage">Druid/Sorcerer - Magic</option>
+            <option value="Knight">Knight - Melee</option>
+            <option value="Paladin Magic">Paladin - Magic</option>
+            <option value="Paladin Distance">Paladin - Distance</option>
+            <option value="Monk Magic">Monk - Magic</option>
+            <option value="Monk Fist">Monk - Fist</option>
+        </select><br>
+        <label id="currentskilllabel" for="currentskill">Current skill with loyalty:</label>
+        <input type="text" id="currentskill" name="currentskill" placeholder="current skill with loyalty, e.g. 112"
+            required autocomplete="off"><br>
+        <label id="currentskillpercentagelabel" for="currentskillpercentage">% to next:</label>
+        <input type="text" id="currentskillpercentage" name="currentskillpercentage" value="100"><br>
+        <label id="targetskilllabel" for="targetskill">Target skill:</label>
+        <input type="text" id="targetskill" name="targetskill" placeholder="target skill, e.g. 114" required autocomplete="off"><br>
+        <label id="loyaltylabel" for="loyalty">Loyalty bonus:</label>
+        <select name="loyalty" id="loyalty">
+            <option value="0">0%</option>
+            <option value="5">5%</option>
+            <option value="10">10%</option>
+            <option value="15">15%</option>
+            <option value="20">20%</option>
+            <option value="25">25%</option>
+            <option value="30">30%</option>
+            <option value="35">35%</option>
+            <option value="40">40%</option>
+            <option value="45">45%</option>
+            <option value="50">50%</option>
+        </select><br>
+        <label id="eventlabel" for="event">Double event:</label>
+        <input type="checkbox" id="event" name="event"><br>
+        <label id="dummylabel" for="dummy">Private dummy:</label>
+        <input type="checkbox" id="dummy" name="dummy"><br>
+        <label id="tc_price_label" for="tc_price">TC over 13900 gp:</label>
+        <input type="checkbox" id="tc_price" name="tc_price" checked><br>
+        <input type="submit" id="exercisesubmitbutton" value="Submit"
+            onclick="event.preventDefault(); submit_exercise_form()" />
+    </form>
+    <p id="exerciseformresults"></p>
+</div>
+
+<div id="TargetSpend" class="tabcontent">
+    <br>Calculate how much skill you will gain when using a specified number of exercise weapons. <br><br>
+    Always buy exercise weapons for gold when the price of Tibia Coins is above 13 900 gp on
+    your server. <br>
+    <form id="vocation_exercise_form_spend">
+        <label for="vocation_spend">Vocation & skill:</label>
+        <select name="vocation" id="vocation_spend">
+            <option value="Mage">Druid/Sorcerer - Magic</option>
+            <option value="Knight">Knight - Melee</option>
+            <option value="Paladin Magic">Paladin - Magic</option>
+            <option value="Paladin Distance">Paladin - Distance</option>
+            <option value="Monk Magic">Monk - Magic</option>
+            <option value="Monk Fist">Monk - Fist</option>
+        </select><br>
+        <label id="weapontypelabel_spend" for="weapontype_spend">Exercise Weapon Type:</label>
+        <select name="weapontype" id="weapontype_spend">
+            <option value="Regular">Regular</option>
+            <option value="Durable">Durable</option>
+            <option value="Lasting">Lasting</option>
+        </select><br>
+        <label id="weaponcountlabel_spend" for="weaponcount_spend">Number of Weapons:</label>
+        <input type="number" id="weaponcount_spend" name="weaponcount" placeholder="e.g. 100" min="1" required autocomplete="off"><br>
+        <label id="currentskilllabel_spend" for="currentskill_spend">Current skill with loyalty:</label>
+        <input type="text" id="currentskill_spend" name="currentskill" placeholder="current skill with loyalty, e.g. 112"
+            required autocomplete="off"><br>
+        <label id="currentskillpercentagelabel_spend" for="currentskillpercentage_spend">% to next:</label>
+        <input type="text" id="currentskillpercentage_spend" name="currentskillpercentage" value="100"><br>
+        <label id="loyaltylabel_spend" for="loyalty_spend">Loyalty bonus:</label>
+        <select name="loyalty" id="loyalty_spend">
+            <option value="0">0%</option>
+            <option value="5">5%</option>
+            <option value="10">10%</option>
+            <option value="15">15%</option>
+            <option value="20">20%</option>
+            <option value="25">25%</option>
+            <option value="30">30%</option>
+            <option value="35">35%</option>
+            <option value="40">40%</option>
+            <option value="45">45%</option>
+            <option value="50">50%</option>
+        </select><br>
+        <label id="eventlabel_spend" for="event_spend">Double event:</label>
+        <input type="checkbox" id="event_spend" name="event"><br>
+        <label id="dummylabel_spend" for="dummy_spend">Private dummy:</label>
+        <input type="checkbox" id="dummy_spend" name="dummy"><br>
+        <label id="tc_price_label_spend" for="tc_price_spend">TC over 13900 gp:</label>
+        <input type="checkbox" id="tc_price_spend" name="tc_price" checked><br>
+        <input type="submit" id="exercisesubmitbutton_spend" value="Submit"
+            onclick="event.preventDefault(); submit_exercise_form_spend()" />
+    </form>
+    <p id="exerciseformresults_spend"></p>
+</div>
