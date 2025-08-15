@@ -186,6 +186,135 @@ function submit_exercise_form_spend() {
   }
   
   // If validation passes, proceed with the calculation
-  // TODO: Implement the actual calculation logic for Target Spend mode
-  alert("Target Spend calculation will be implemented soon!");
+  calculate_skill_gain_from_weapons();
+}
+
+function calculate_skill_gain_from_weapons() {
+  // Get form values
+  const vocationAndType = document.getElementById("vocation_spend").value;
+  const weaponType = document.getElementById("weapontype_spend").value;
+  const weaponCount = parseInt(document.getElementById("weaponcount_spend").value);
+  const currentSkill = parseFloat(document.getElementById("currentskill_spend").value);
+  const currentSkillPercentage = parseFloat(document.getElementById("currentskillpercentage_spend").value);
+  const loyalty = parseFloat(document.getElementById("loyalty_spend").value);
+  const isDummy = document.getElementById("dummy_spend").checked;
+  const isEvent = document.getElementById("event_spend").checked;
+  const isTCOver13900 = document.getElementById("tc_price_spend").checked;
+  
+  // Exercise weapon skill points (same as in original function)
+  const pointsMainSkillRegularWeapon = 300000;
+  const pointsMainSkillDurableWeapon = pointsMainSkillRegularWeapon * 3.6;
+  const pointsMainSkillLastingWeapon = pointsMainSkillRegularWeapon * 28.8;
+  
+  // Costs
+  const costRegularK = 347.222;
+  const costRegularTc = 25;
+  const costDurableK = 1250;
+  const costDurableTc = 90;
+  const costLastingK = 10000;
+  const costLastingTc = 720;
+  
+  // Determine weapon type and points
+  let weaponPoints, weaponCostK, weaponCostTc, weaponTime;
+  if (weaponType === "Regular") {
+    weaponPoints = pointsMainSkillRegularWeapon;
+    weaponCostK = costRegularK;
+    weaponCostTc = costRegularTc;
+    weaponTime = weaponCount / 3.6; // hours
+  } else if (weaponType === "Durable") {
+    weaponPoints = pointsMainSkillDurableWeapon;
+    weaponCostK = costDurableK;
+    weaponCostTc = costDurableTc;
+    weaponTime = weaponCount; // hours
+  } else if (weaponType === "Lasting") {
+    weaponPoints = pointsMainSkillLastingWeapon;
+    weaponCostK = costLastingK;
+    weaponCostTc = costLastingTc;
+    weaponTime = weaponCount * 8; // hours
+  }
+  
+  // Calculate total points gained (with loyalty bonus)
+  let totalPointsGained = weaponCount * weaponPoints * (1 + (loyalty / 100));
+  
+  // Apply modifiers (reverse of the original calculation)
+  if (isEvent) {
+    totalPointsGained = totalPointsGained * 2; // Double event doubles the points
+  }
+  if (isDummy) {
+    totalPointsGained = totalPointsGained * 1.1; // Private dummy gives 10% bonus
+  }
+  
+  // Determine vocation constant
+  let vocationConstant = 1.1;
+  if (vocationAndType === "Paladin Magic") {
+    vocationConstant = 1.4;
+  } else if (vocationAndType === "Monk Magic") {
+    vocationConstant = 1.25;
+  }
+  
+  // Calculate current skill total points
+  const currentSkillTotalPoints = total_skill_points_at_given_level(1600, vocationConstant, Math.floor(currentSkill) + 1, 0);
+  const pointsToNextSkill = points_to_next_skill_level(1600, vocationConstant, Math.floor(currentSkill), 0) * (currentSkillPercentage / 100);
+  const currentSkillEffectivePoints = currentSkillTotalPoints - pointsToNextSkill;
+  
+  // Calculate new total points after using weapons
+  const newTotalPoints = currentSkillEffectivePoints + totalPointsGained;
+  
+  // Find the skill level that corresponds to these total points
+  const newSkillLevel = find_skill_level_from_points(1600, vocationConstant, newTotalPoints);
+  
+  // Calculate costs
+  let costK = weaponCount * weaponCostK;
+  let costTc = weaponCount * weaponCostTc;
+  let costUnit = "k";
+  
+  if (Math.round(costK) > 1000) {
+    costK = costK / 1000;
+    costUnit = "kk";
+    costK = Math.round(costK * 100) / 100;
+  }
+  
+  // Format time
+  let timeDisplay;
+  if (weaponType === "Regular") {
+    const hours = Math.floor(weaponTime);
+    const minutes = Math.round((weaponTime % 1) * 60);
+    timeDisplay = hours + " hours and " + minutes + " minutes";
+  } else {
+    timeDisplay = Math.round(weaponTime) + " hours";
+  }
+  
+  // Calculate precise current skill level
+  const preciseCurrentSkill = Math.floor(currentSkill) + ((100 - currentSkillPercentage) / 100);
+  
+  // Display results
+  const exerciseFormResults = document.getElementById("exerciseformresults_spend");
+  const skillGain = newSkillLevel - preciseCurrentSkill;
+  
+  if (isTCOver13900) {
+    exerciseFormResults.innerHTML = "Using " + weaponCount + " " + weaponType.toLowerCase() + " exercise weapons will give you:<br><br><b>" +
+      skillGain.toFixed(2) + " skill levels</b><br><br>" +
+      "You will go from skill " + preciseCurrentSkill.toFixed(2) + " to approximately skill " + newSkillLevel.toFixed(2) + "<br><br>" +
+      "Cost: " + costK + " " + costUnit + "<br>" +
+      "Time required: " + timeDisplay;
+  } else {
+    exerciseFormResults.innerHTML = "Using " + weaponCount + " " + weaponType.toLowerCase() + " exercise weapons will give you:<br><br><b>" +
+      skillGain.toFixed(2) + " skill levels</b><br><br>" +
+      "You will go from skill " + preciseCurrentSkill.toFixed(2) + " to approximately skill " + newSkillLevel.toFixed(2) + "<br><br>" +
+      "Cost: " + costTc + " Tibia Coins<br>" +
+      "Time required: " + timeDisplay;
+  }
+}
+
+function find_skill_level_from_points(skill_constant, vocation_constant, total_points) {
+  // This function finds the skill level that corresponds to a given total points
+  // We need to solve for skill in the equation: total_points = skill_constant * ((vocation_constant^skill - 1) / (vocation_constant - 1))
+  
+  // Rearranging: vocation_constant^skill = (total_points * (vocation_constant - 1) / skill_constant) + 1
+  // Then: skill = log_vocation_constant((total_points * (vocation_constant - 1) / skill_constant) + 1)
+  
+  const logBase = (total_points * (vocation_constant - 1) / skill_constant) + 1;
+  const skill = Math.log(logBase) / Math.log(vocation_constant);
+  
+  return skill;
 }

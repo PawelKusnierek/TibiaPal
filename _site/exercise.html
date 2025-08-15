@@ -178,7 +178,7 @@
     <section id="main-content">
     <div class="hunting_tab two-tabs">
     <button id="target_skill" class="tablinks active" onclick="show_tab(event, 'TargetSkill')">Target Skill</button>
-    <button id="target_spend" class="tablinks" onclick="show_tab(event, 'TargetSpend')">Target Spend</button>
+    <button id="target_spend" class="tablinks" onclick="show_tab(event, 'TargetSpend')">Target Weapons Used</button>
 </div>
 
 <div id="TargetSkill" class="tabcontent">
@@ -244,9 +244,9 @@
         </select><br>
         <label id="weapontypelabel_spend" for="weapontype_spend">Exercise Weapon Type:</label>
         <select name="weapontype" id="weapontype_spend">
-            <option value="Regular">Regular</option>
-            <option value="Durable">Durable</option>
             <option value="Lasting">Lasting</option>
+            <option value="Durable">Durable</option>
+            <option value="Regular">Regular</option>
         </select><br>
         <label id="weaponcountlabel_spend" for="weaponcount_spend">Number of Weapons:</label>
         <input type="number" id="weaponcount_spend" name="weaponcount" placeholder="e.g. 100" min="1" required autocomplete="off"><br>
