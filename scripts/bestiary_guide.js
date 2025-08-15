@@ -90,13 +90,9 @@ function populateTable(table, monsters) {
         const rapidCell = row.insertCell();
         rapidCell.textContent = monster.rapidRecommended;
         
-        // Rapid Location
-        const rapidLocCell = row.insertCell();
-        rapidLocCell.textContent = monster.rapidLocation;
-        
-        // Regular Location
-        const regularLocCell = row.insertCell();
-        regularLocCell.textContent = monster.regularLocation;
+        // Location
+        const locationCell = row.insertCell();
+        locationCell.textContent = monster.location;
         
         // Notes
         const notesCell = row.insertCell();
@@ -110,11 +106,11 @@ function createSampleData(table) {
     console.log('Creating sample data...');
     
     const sampleMonsters = [
-        { name: "Dragon", charmPoints: 25, minLevel: 0, effort: "Low", rapidRecommended: "No", rapidLocation: "N/A", regularLocation: "N/A", notes: "N/A" },
-        { name: "Dragon Lord", charmPoints: 25, minLevel: 0, effort: "Low", rapidRecommended: "No", rapidLocation: "N/A", regularLocation: "N/A", notes: "N/A" },
-        { name: "Frost Dragon", charmPoints: 25, minLevel: 0, effort: "Low", rapidRecommended: "No", rapidLocation: "N/A", regularLocation: "N/A", notes: "N/A" },
-        { name: "Ancient Scarab", charmPoints: 25, minLevel: 0, effort: "Low", rapidRecommended: "No", rapidLocation: "N/A", regularLocation: "N/A", notes: "N/A" },
-        { name: "Bonebeast", charmPoints: 25, minLevel: 0, effort: "Low", rapidRecommended: "No", rapidLocation: "N/A", regularLocation: "N/A", notes: "N/A" }
+        { name: "Dragon", charmPoints: 25, minLevel: 0, effort: "Low", rapidRecommended: "No", location: "N/A", notes: "N/A" },
+        { name: "Dragon Lord", charmPoints: 25, minLevel: 0, effort: "Low", rapidRecommended: "No", location: "N/A", notes: "N/A" },
+        { name: "Frost Dragon", charmPoints: 25, minLevel: 0, effort: "Low", rapidRecommended: "No", location: "N/A", notes: "N/A" },
+        { name: "Ancient Scarab", charmPoints: 25, minLevel: 0, effort: "Low", rapidRecommended: "No", location: "N/A", notes: "N/A" },
+        { name: "Bonebeast", charmPoints: 25, minLevel: 0, effort: "Low", rapidRecommended: "No", location: "N/A", notes: "N/A" }
     ];
 
     populateTable(table, sampleMonsters);
