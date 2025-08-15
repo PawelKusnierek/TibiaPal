@@ -2,6 +2,43 @@
 let bestiaryTable = null;
 let allMonsters = []; // Store all monster data for sorting
 let currentSort = { column: 'name', direction: 'asc' }; // Track current sort state
+let completedMonsters = new Set(); // Track completed monsters
+
+// Cookie management functions
+function setCookie(name, value, days = 365) {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+}
+
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+function loadCompletedMonsters() {
+    const completedData = getCookie('bestiary_completed');
+    if (completedData) {
+        try {
+            const completedArray = JSON.parse(completedData);
+            completedMonsters = new Set(completedArray);
+        } catch (e) {
+            console.error('Error parsing completed monsters cookie:', e);
+            completedMonsters = new Set();
+        }
+    }
+}
+
+function saveCompletedMonsters() {
+    const completedArray = Array.from(completedMonsters);
+    setCookie('bestiary_completed', JSON.stringify(completedArray));
+}
 
 // Bestiary Guide functionality
 function initializeBestiaryGuide() {
@@ -19,6 +56,9 @@ function initializeBestiaryGuide() {
         console.error('Table not found!');
         return;
     }
+
+    // Load completed monsters from cookie
+    loadCompletedMonsters();
 
     // Load and populate monster data
     loadMonsterData(bestiaryTable);
@@ -56,6 +96,12 @@ function initializeBestiaryGuide() {
         checkbox.addEventListener('change', function() {
             applyFilters();
         });
+    });
+
+    // Set up show completed filter functionality
+    const showCompletedFilter = document.querySelector('.show-completed-filter');
+    showCompletedFilter.addEventListener('change', function() {
+        applyFilters();
     });
 
     // Set up sortable headers
@@ -115,6 +161,7 @@ function applyFilters() {
     const charmPointFilters = document.querySelectorAll('.charm-point-filter');
     const effortFilters = document.querySelectorAll('.effort-filter');
     const rapidFilters = document.querySelectorAll('.rapid-filter');
+    const showCompletedFilter = document.querySelector('.show-completed-filter');
     
     // Get selected charm point values
     const selectedCharmPoints = [];
@@ -145,10 +192,11 @@ function applyFilters() {
     console.log('Selected charm points:', selectedCharmPoints);
     console.log('Selected efforts:', selectedEfforts);
     console.log('Selected rapids:', selectedRapids);
+    console.log('Show completed:', showCompletedFilter.checked);
     console.log('Current sort:', currentSort);
 
     // Re-populate table with sorted and filtered data
-    populateTableWithFilters(bestiaryTable, searchTerm, playerLevel, selectedCharmPoints, selectedEfforts, selectedRapids, currentSort);
+    populateTableWithFilters(bestiaryTable, searchTerm, playerLevel, selectedCharmPoints, selectedEfforts, selectedRapids, showCompletedFilter.checked, currentSort);
 }
 
 function loadMonsterData(table) {
@@ -171,7 +219,7 @@ function loadMonsterData(table) {
         });
 }
 
-function populateTableWithFilters(table, searchTerm, playerLevel, selectedCharmPoints, selectedEfforts, selectedRapids, sortConfig) {
+function populateTableWithFilters(table, searchTerm, playerLevel, selectedCharmPoints, selectedEfforts, selectedRapids, showCompleted, sortConfig) {
     // Filter the monsters based on criteria
     let filteredMonsters = allMonsters.filter(monster => {
         const matchesSearch = monster.name.toLowerCase().includes(searchTerm);
@@ -179,8 +227,9 @@ function populateTableWithFilters(table, searchTerm, playerLevel, selectedCharmP
         const matchesCharmPoints = selectedCharmPoints.includes(monster.charmPoints);
         const matchesEffort = selectedEfforts.includes(monster.effort);
         const matchesRapid = selectedRapids.includes(monster.rapidRecommended);
+        const matchesCompleted = showCompleted || !completedMonsters.has(monster.name);
         
-        return matchesSearch && matchesLevel && matchesCharmPoints && matchesEffort && matchesRapid;
+        return matchesSearch && matchesLevel && matchesCharmPoints && matchesEffort && matchesRapid && matchesCompleted;
     });
     
     // Sort the filtered monsters
@@ -256,6 +305,27 @@ function populateTable(table, monsters) {
         // Notes
         const notesCell = row.insertCell();
         notesCell.textContent = monster.notes;
+        
+        // Completed checkbox
+        const completedCell = row.insertCell();
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = completedMonsters.has(monster.name);
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                completedMonsters.add(monster.name);
+            } else {
+                completedMonsters.delete(monster.name);
+            }
+            saveCompletedMonsters();
+            
+            // If "Show Done" filter is unchecked and we just marked as completed, hide the row immediately
+            const showCompletedFilter = document.querySelector('.show-completed-filter');
+            if (this.checked && !showCompletedFilter.checked) {
+                row.style.display = 'none';
+            }
+        });
+        completedCell.appendChild(checkbox);
     });
 
     console.log('Table populated with', monsters.length, 'monsters');
