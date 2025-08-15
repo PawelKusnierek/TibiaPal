@@ -40,6 +40,19 @@ function saveCompletedMonsters() {
     setCookie('bestiary_completed', JSON.stringify(completedArray));
 }
 
+function resetAllCompleted() {
+    // Clear the completed monsters set
+    completedMonsters.clear();
+    
+    // Save the empty state to cookie
+    saveCompletedMonsters();
+    
+    // Re-apply filters to update the table
+    applyFilters();
+    
+    console.log('All monsters reset to uncompleted');
+}
+
 // Bestiary Guide functionality
 function initializeBestiaryGuide() {
     console.log('Initializing bestiary guide...');
@@ -102,6 +115,14 @@ function initializeBestiaryGuide() {
     const showCompletedFilter = document.querySelector('.show-completed-filter');
     showCompletedFilter.addEventListener('change', function() {
         applyFilters();
+    });
+
+    // Set up reset done button functionality
+    const resetDoneBtn = document.getElementById('resetDoneBtn');
+    resetDoneBtn.addEventListener('click', function() {
+        if (confirm('This will reset all monsters to uncompleted. Proceed?')) {
+            resetAllCompleted();
+        }
     });
 
     // Set up sortable headers
