@@ -299,6 +299,28 @@ function populateTable(table, monsters) {
     monsters.forEach(monster => {
         const row = table.insertRow();
         
+        // Completed checkbox (first column)
+        const completedCell = row.insertCell();
+        completedCell.style.textAlign = 'center';
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = completedMonsters.has(monster.name);
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                completedMonsters.add(monster.name);
+            } else {
+                completedMonsters.delete(monster.name);
+            }
+            saveCompletedMonsters();
+            
+            // If "Show Done" filter is unchecked and we just marked as completed, hide the row immediately
+            const showCompletedFilter = document.querySelector('.show-completed-filter');
+            if (this.checked && !showCompletedFilter.checked) {
+                row.style.display = 'none';
+            }
+        });
+        completedCell.appendChild(checkbox);
+        
         // Monster name
         const nameCell = row.insertCell();
         nameCell.textContent = monster.name;
@@ -326,27 +348,6 @@ function populateTable(table, monsters) {
         // Notes
         const notesCell = row.insertCell();
         notesCell.innerHTML = monster.notes;
-        
-        // Completed checkbox
-        const completedCell = row.insertCell();
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.checked = completedMonsters.has(monster.name);
-        checkbox.addEventListener('change', function() {
-            if (this.checked) {
-                completedMonsters.add(monster.name);
-            } else {
-                completedMonsters.delete(monster.name);
-            }
-            saveCompletedMonsters();
-            
-            // If "Show Done" filter is unchecked and we just marked as completed, hide the row immediately
-            const showCompletedFilter = document.querySelector('.show-completed-filter');
-            if (this.checked && !showCompletedFilter.checked) {
-                row.style.display = 'none';
-            }
-        });
-        completedCell.appendChild(checkbox);
     });
 
     console.log('Table populated with', monsters.length, 'monsters');
