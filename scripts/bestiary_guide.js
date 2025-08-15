@@ -325,7 +325,7 @@ function populateTable(table, monsters) {
         
         // Notes
         const notesCell = row.insertCell();
-        notesCell.textContent = monster.notes;
+        notesCell.innerHTML = monster.notes;
         
         // Completed checkbox
         const completedCell = row.insertCell();
