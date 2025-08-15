@@ -78,6 +78,10 @@ function populateTable(table, monsters) {
         const pointsCell = row.insertCell();
         pointsCell.textContent = monster.charmPoints;
         
+        // Min. Level
+        const levelCell = row.insertCell();
+        levelCell.textContent = monster.minLevel;
+        
         // Effort
         const effortCell = row.insertCell();
         effortCell.textContent = monster.effort;
@@ -106,11 +110,11 @@ function createSampleData(table) {
     console.log('Creating sample data...');
     
     const sampleMonsters = [
-        { name: "Dragon", charmPoints: 25, effort: "Low", rapidRecommended: "No", rapidLocation: "N/A", regularLocation: "N/A", notes: "N/A" },
-        { name: "Dragon Lord", charmPoints: 25, effort: "Low", rapidRecommended: "No", rapidLocation: "N/A", regularLocation: "N/A", notes: "N/A" },
-        { name: "Frost Dragon", charmPoints: 25, effort: "Low", rapidRecommended: "No", rapidLocation: "N/A", regularLocation: "N/A", notes: "N/A" },
-        { name: "Ancient Scarab", charmPoints: 25, effort: "Low", rapidRecommended: "No", rapidLocation: "N/A", regularLocation: "N/A", notes: "N/A" },
-        { name: "Bonebeast", charmPoints: 25, effort: "Low", rapidRecommended: "No", rapidLocation: "N/A", regularLocation: "N/A", notes: "N/A" }
+        { name: "Dragon", charmPoints: 25, minLevel: 0, effort: "Low", rapidRecommended: "No", rapidLocation: "N/A", regularLocation: "N/A", notes: "N/A" },
+        { name: "Dragon Lord", charmPoints: 25, minLevel: 0, effort: "Low", rapidRecommended: "No", rapidLocation: "N/A", regularLocation: "N/A", notes: "N/A" },
+        { name: "Frost Dragon", charmPoints: 25, minLevel: 0, effort: "Low", rapidRecommended: "No", rapidLocation: "N/A", regularLocation: "N/A", notes: "N/A" },
+        { name: "Ancient Scarab", charmPoints: 25, minLevel: 0, effort: "Low", rapidRecommended: "No", rapidLocation: "N/A", regularLocation: "N/A", notes: "N/A" },
+        { name: "Bonebeast", charmPoints: 25, minLevel: 0, effort: "Low", rapidRecommended: "No", rapidLocation: "N/A", regularLocation: "N/A", notes: "N/A" }
     ];
 
     populateTable(table, sampleMonsters);
