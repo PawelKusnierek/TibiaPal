@@ -1,8 +1,8 @@
 [
     {
         "name":  "Abyssal Calamary",
-        "charmPoints":  15,
         "minLevel":  100,
+        "charmPoints":  15,
         "effort":  "Medium",
         "rapidRecommended":  "Helpful",
         "location":  "Seacrest Birthing Grounds, Seacrest Central Room",
@@ -10,8 +10,8 @@
     },
     {
         "name":  "Acid Blob",
-        "charmPoints":  25,
         "minLevel":  50,
+        "charmPoints":  25,
         "effort":  "Medium",
         "rapidRecommended":  "Helpful",
         "location":  "Yalahar Alchemist +1",
@@ -19,8 +19,8 @@
     },
     {
         "name":  "Acolyte of Darkness",
-        "charmPoints":  30,
         "minLevel":  100,
+        "charmPoints":  30,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "Drefia",
@@ -28,8 +28,8 @@
     },
     {
         "name":  "Acolyte of the Cult",
-        "charmPoints":  25,
         "minLevel":  80,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "Yalahar Magician, Goroma",
@@ -37,8 +37,8 @@
     },
     {
         "name":  "Adept of the Cult",
-        "charmPoints":  25,
         "minLevel":  80,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "Yalahar Magician, Goroma",
@@ -46,8 +46,8 @@
     },
     {
         "name":  "Adult Goanna",
-        "charmPoints":  50,
         "minLevel":  500,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "Issavi Surface",
@@ -55,8 +55,8 @@
     },
     {
         "name":  "Adventurer",
-        "charmPoints":  15,
         "minLevel":  30,
+        "charmPoints":  15,
         "effort":  "Medium",
         "rapidRecommended":  "Yes",
         "location":  "Venore surroundings",
@@ -64,8 +64,8 @@
     },
     {
         "name":  "Afflicted Strider",
-        "charmPoints":  50,
         "minLevel":  500,
+        "charmPoints":  50,
         "effort":  "Medium",
         "rapidRecommended":  "No",
         "location":  "Antrum of the Fallen",
@@ -73,8 +73,8 @@
     },
     {
         "name":  "Agrestic Chicken",
-        "charmPoints":  5,
         "minLevel":  300,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "Yes",
         "location":  "Bounac",
@@ -82,8 +82,8 @@
     },
     {
         "name":  "Albino Dragon",
-        "charmPoints":  50,
         "minLevel":  200,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "Various",
@@ -91,8 +91,8 @@
     },
     {
         "name":  "Amazon",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -100,8 +100,8 @@
     },
     {
         "name":  "Ancient Scarab",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -109,8 +109,8 @@
     },
     {
         "name":  "Angry Sugar Fairy",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -118,8 +118,8 @@
     },
     {
         "name":  "Animated Feather",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -127,8 +127,8 @@
     },
     {
         "name":  "Animated Snowman",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -136,8 +136,8 @@
     },
     {
         "name":  "Arachnophobica",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -145,8 +145,8 @@
     },
     {
         "name":  "Arctic Faun",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -154,8 +154,8 @@
     },
     {
         "name":  "Armadile",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -163,8 +163,8 @@
     },
     {
         "name":  "Askarak Demon",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -172,8 +172,8 @@
     },
     {
         "name":  "Askarak Lord",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -181,8 +181,8 @@
     },
     {
         "name":  "Askarak Prince",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -190,8 +190,8 @@
     },
     {
         "name":  "Assassin",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -199,8 +199,8 @@
     },
     {
         "name":  "Azure Frog",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -208,8 +208,8 @@
     },
     {
         "name":  "Badger",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -217,8 +217,8 @@
     },
     {
         "name":  "Baleful Bunny",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -226,8 +226,8 @@
     },
     {
         "name":  "Bandit",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -235,8 +235,8 @@
     },
     {
         "name":  "Bane Bringer",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -244,8 +244,8 @@
     },
     {
         "name":  "Bane of Light",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -253,8 +253,8 @@
     },
     {
         "name":  "Banshee",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -262,8 +262,8 @@
     },
     {
         "name":  "Barbarian Bloodwalker",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -271,8 +271,8 @@
     },
     {
         "name":  "Barbarian Brutetamer",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -280,8 +280,8 @@
     },
     {
         "name":  "Barbarian Headsplitter",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -289,8 +289,8 @@
     },
     {
         "name":  "Barbarian Skullhunter",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -298,8 +298,8 @@
     },
     {
         "name":  "Barkless Devotee",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -307,8 +307,8 @@
     },
     {
         "name":  "Barkless Fanatic",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -316,8 +316,8 @@
     },
     {
         "name":  "Bashmu",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -325,8 +325,8 @@
     },
     {
         "name":  "Bat",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -334,8 +334,8 @@
     },
     {
         "name":  "Bear",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -343,8 +343,8 @@
     },
     {
         "name":  "Behemoth",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -352,8 +352,8 @@
     },
     {
         "name":  "Bellicose Orger",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -361,8 +361,8 @@
     },
     {
         "name":  "Berrypest",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -370,8 +370,8 @@
     },
     {
         "name":  "Berserker Chicken",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -379,8 +379,8 @@
     },
     {
         "name":  "Betrayed Wraith",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -388,8 +388,8 @@
     },
     {
         "name":  "Biting Book",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -397,8 +397,8 @@
     },
     {
         "name":  "Black Sheep",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -406,8 +406,8 @@
     },
     {
         "name":  "Black Sphinx Acolyte",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -415,8 +415,8 @@
     },
     {
         "name":  "Blemished Spawn",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -424,8 +424,8 @@
     },
     {
         "name":  "Blightwalker",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -433,8 +433,8 @@
     },
     {
         "name":  "Bloated Man-Maggot",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -442,8 +442,8 @@
     },
     {
         "name":  "Blood Beast",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -451,8 +451,8 @@
     },
     {
         "name":  "Blood Crab",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -460,8 +460,8 @@
     },
     {
         "name":  "Blood Hand",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -469,8 +469,8 @@
     },
     {
         "name":  "Blood Priest",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -478,8 +478,8 @@
     },
     {
         "name":  "Blue Djinn",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -487,8 +487,8 @@
     },
     {
         "name":  "Bluebeak",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -496,8 +496,8 @@
     },
     {
         "name":  "Boar",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -505,8 +505,8 @@
     },
     {
         "name":  "Boar Man",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -514,8 +514,8 @@
     },
     {
         "name":  "Bog Frog",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -523,8 +523,8 @@
     },
     {
         "name":  "Bog Raider",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -532,8 +532,8 @@
     },
     {
         "name":  "Bonebeast",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -541,8 +541,8 @@
     },
     {
         "name":  "Bonelord",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -550,8 +550,8 @@
     },
     {
         "name":  "Bony Sea Devil",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -559,8 +559,8 @@
     },
     {
         "name":  "Boogy",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -568,8 +568,8 @@
     },
     {
         "name":  "Brachiodemon",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -577,8 +577,8 @@
     },
     {
         "name":  "Brain Squid",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -586,8 +586,8 @@
     },
     {
         "name":  "Braindeath",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -595,8 +595,8 @@
     },
     {
         "name":  "Bramble Wyrmling",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -604,8 +604,8 @@
     },
     {
         "name":  "Branchy Crawler",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -613,8 +613,8 @@
     },
     {
         "name":  "Breach Brood",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -622,8 +622,8 @@
     },
     {
         "name":  "Bride of Night",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -631,8 +631,8 @@
     },
     {
         "name":  "Brimstone Bug",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -640,8 +640,8 @@
     },
     {
         "name":  "Brinebrute Inferniarch",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -649,8 +649,8 @@
     },
     {
         "name":  "Broken Shaper",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -658,8 +658,8 @@
     },
     {
         "name":  "Broodrider Inferniarch",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -667,8 +667,8 @@
     },
     {
         "name":  "Bug",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -676,8 +676,8 @@
     },
     {
         "name":  "Bulltaur Alchemist",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -685,8 +685,8 @@
     },
     {
         "name":  "Bulltaur Brute",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -694,8 +694,8 @@
     },
     {
         "name":  "Bulltaur Forgepriest",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -703,8 +703,8 @@
     },
     {
         "name":  "Burning Book",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -712,8 +712,8 @@
     },
     {
         "name":  "Burning Gladiator",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -721,8 +721,8 @@
     },
     {
         "name":  "Burster Spectre",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -730,8 +730,8 @@
     },
     {
         "name":  "Butterfly (Blue)",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -739,8 +739,8 @@
     },
     {
         "name":  "Butterfly (Purple)",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -748,8 +748,8 @@
     },
     {
         "name":  "Butterfly (Red)",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -757,8 +757,8 @@
     },
     {
         "name":  "Cake Golem",
-        "charmPoints":  30,
         "minLevel":  0,
+        "charmPoints":  30,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -766,8 +766,8 @@
     },
     {
         "name":  "Calamary",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -775,8 +775,8 @@
     },
     {
         "name":  "Candy Floss Elemental",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -784,8 +784,8 @@
     },
     {
         "name":  "Candy Horror",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -793,8 +793,8 @@
     },
     {
         "name":  "Capricious Phantom",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -802,8 +802,8 @@
     },
     {
         "name":  "Carniphila",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -811,8 +811,8 @@
     },
     {
         "name":  "Carnivostrich",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -820,8 +820,8 @@
     },
     {
         "name":  "Carrion Worm",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -829,8 +829,8 @@
     },
     {
         "name":  "Cat",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -838,8 +838,8 @@
     },
     {
         "name":  "Cave Chimera",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -847,8 +847,8 @@
     },
     {
         "name":  "Cave Devourer",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -856,8 +856,8 @@
     },
     {
         "name":  "Cave Parrot",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -865,8 +865,8 @@
     },
     {
         "name":  "Cave Rat",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -874,8 +874,8 @@
     },
     {
         "name":  "Centipede",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -883,8 +883,8 @@
     },
     {
         "name":  "Chakoya Toolshaper",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -892,8 +892,8 @@
     },
     {
         "name":  "Chakoya Tribewarden",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -901,8 +901,8 @@
     },
     {
         "name":  "Chakoya Windcaller",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -910,8 +910,8 @@
     },
     {
         "name":  "Chasm Spawn",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -919,8 +919,8 @@
     },
     {
         "name":  "Chicken",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -928,8 +928,8 @@
     },
     {
         "name":  "Chocolate Blob",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -937,8 +937,8 @@
     },
     {
         "name":  "Choking Fear",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -946,8 +946,8 @@
     },
     {
         "name":  "Cinder Wyrmling",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -955,8 +955,8 @@
     },
     {
         "name":  "Clay Guardian",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -964,8 +964,8 @@
     },
     {
         "name":  "Cliff Strider",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -973,8 +973,8 @@
     },
     {
         "name":  "Cloak of Terror",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -982,8 +982,8 @@
     },
     {
         "name":  "Clomp",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -991,8 +991,8 @@
     },
     {
         "name":  "Cobra",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1000,8 +1000,8 @@
     },
     {
         "name":  "Cobra Assassin",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1009,8 +1009,8 @@
     },
     {
         "name":  "Cobra Scout",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1018,8 +1018,8 @@
     },
     {
         "name":  "Cobra Vizier",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1027,8 +1027,8 @@
     },
     {
         "name":  "Converter",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1036,8 +1036,8 @@
     },
     {
         "name":  "Coral Frog",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1045,8 +1045,8 @@
     },
     {
         "name":  "Corym Charlatan",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1054,8 +1054,8 @@
     },
     {
         "name":  "Corym Skirmisher",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1063,8 +1063,8 @@
     },
     {
         "name":  "Corym Vanguard",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1072,8 +1072,8 @@
     },
     {
         "name":  "Courage Leech",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1081,8 +1081,8 @@
     },
     {
         "name":  "Cow",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1090,8 +1090,8 @@
     },
     {
         "name":  "Crab",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1099,8 +1099,8 @@
     },
     {
         "name":  "Crape Man",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1108,8 +1108,8 @@
     },
     {
         "name":  "Crawler",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1117,8 +1117,8 @@
     },
     {
         "name":  "Crazed Beggar",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1126,8 +1126,8 @@
     },
     {
         "name":  "Crazed Summer Rearguard",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1135,8 +1135,8 @@
     },
     {
         "name":  "Crazed Summer Vanguard",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1144,8 +1144,8 @@
     },
     {
         "name":  "Crazed Winter Rearguard",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1153,8 +1153,8 @@
     },
     {
         "name":  "Crazed Winter Vanguard",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1162,8 +1162,8 @@
     },
     {
         "name":  "Cream Blob",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1171,8 +1171,8 @@
     },
     {
         "name":  "Crimson Frog",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1180,8 +1180,8 @@
     },
     {
         "name":  "Crocodile",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1189,8 +1189,8 @@
     },
     {
         "name":  "Crusader",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1198,8 +1198,8 @@
     },
     {
         "name":  "Crustacea Gigantica",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1207,8 +1207,8 @@
     },
     {
         "name":  "Crypt Defiler",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1216,8 +1216,8 @@
     },
     {
         "name":  "Crypt Shambler",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1225,8 +1225,8 @@
     },
     {
         "name":  "Crypt Warden",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1234,8 +1234,8 @@
     },
     {
         "name":  "Crypt Warrior",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1243,8 +1243,8 @@
     },
     {
         "name":  "Crystal Spider",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1252,8 +1252,8 @@
     },
     {
         "name":  "Crystal Wolf",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1261,8 +1261,8 @@
     },
     {
         "name":  "Crystalcrusher",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1270,8 +1270,8 @@
     },
     {
         "name":  "Cult Believer",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1279,8 +1279,8 @@
     },
     {
         "name":  "Cult Enforcer",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1288,8 +1288,8 @@
     },
     {
         "name":  "Cult Scholar",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1297,8 +1297,8 @@
     },
     {
         "name":  "Cunning Werepanther",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1306,8 +1306,8 @@
     },
     {
         "name":  "Cursed Ape",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1315,8 +1315,8 @@
     },
     {
         "name":  "Cursed Book",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1324,8 +1324,8 @@
     },
     {
         "name":  "Cursed Prospector",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1333,8 +1333,8 @@
     },
     {
         "name":  "Cyclops",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1342,8 +1342,8 @@
     },
     {
         "name":  "Cyclops Drone",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1351,8 +1351,8 @@
     },
     {
         "name":  "Cyclops Smith",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1360,8 +1360,8 @@
     },
     {
         "name":  "Damaged Crystal Golem",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1369,8 +1369,8 @@
     },
     {
         "name":  "Damaged Worker Golem",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1378,8 +1378,8 @@
     },
     {
         "name":  "Dark Apprentice",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1387,8 +1387,8 @@
     },
     {
         "name":  "Dark Carnisylvan",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1396,8 +1396,8 @@
     },
     {
         "name":  "Dark Faun",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1405,8 +1405,8 @@
     },
     {
         "name":  "Dark Magician",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1414,8 +1414,8 @@
     },
     {
         "name":  "Dark Monk",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1423,8 +1423,8 @@
     },
     {
         "name":  "Dark Torturer",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1432,8 +1432,8 @@
     },
     {
         "name":  "Darklight Construct",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1441,8 +1441,8 @@
     },
     {
         "name":  "Darklight Emitter",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1450,8 +1450,8 @@
     },
     {
         "name":  "Darklight Matter",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1459,8 +1459,8 @@
     },
     {
         "name":  "Darklight Source",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1468,8 +1468,8 @@
     },
     {
         "name":  "Darklight Striker",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1477,8 +1477,8 @@
     },
     {
         "name":  "Dawnfire Asura",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1486,8 +1486,8 @@
     },
     {
         "name":  "Death Blob",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1495,8 +1495,8 @@
     },
     {
         "name":  "Death Priest",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1504,8 +1504,8 @@
     },
     {
         "name":  "Deathling Scout",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1513,8 +1513,8 @@
     },
     {
         "name":  "Deathling Spellsinger",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1522,8 +1522,8 @@
     },
     {
         "name":  "Deepling Brawler",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1531,8 +1531,8 @@
     },
     {
         "name":  "Deepling Elite",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1540,8 +1540,8 @@
     },
     {
         "name":  "Deepling Guard",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1549,8 +1549,8 @@
     },
     {
         "name":  "Deepling Master Librarian",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1558,8 +1558,8 @@
     },
     {
         "name":  "Deepling Scout",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1567,8 +1567,8 @@
     },
     {
         "name":  "Deepling Spellsinger",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1576,8 +1576,8 @@
     },
     {
         "name":  "Deepling Tyrant",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1585,8 +1585,8 @@
     },
     {
         "name":  "Deepling Warrior",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1594,8 +1594,8 @@
     },
     {
         "name":  "Deepling Worker",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1603,8 +1603,8 @@
     },
     {
         "name":  "Deepsea Blood Crab",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1612,8 +1612,8 @@
     },
     {
         "name":  "Deepworm",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1621,8 +1621,8 @@
     },
     {
         "name":  "Deer",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1630,8 +1630,8 @@
     },
     {
         "name":  "Defiler",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1639,8 +1639,8 @@
     },
     {
         "name":  "Demon",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1648,8 +1648,8 @@
     },
     {
         "name":  "Demon Outcast",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1657,8 +1657,8 @@
     },
     {
         "name":  "Demon Parrot",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1666,8 +1666,8 @@
     },
     {
         "name":  "Demon Skeleton",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1675,8 +1675,8 @@
     },
     {
         "name":  "Destroyer",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1684,8 +1684,8 @@
     },
     {
         "name":  "Devourer",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1693,8 +1693,8 @@
     },
     {
         "name":  "Diabolic Imp",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1702,8 +1702,8 @@
     },
     {
         "name":  "Diamond Servant",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1711,8 +1711,8 @@
     },
     {
         "name":  "Diamond Servant Replica",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1720,8 +1720,8 @@
     },
     {
         "name":  "Dire Penguin",
-        "charmPoints":  30,
         "minLevel":  0,
+        "charmPoints":  30,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1729,8 +1729,8 @@
     },
     {
         "name":  "Diremaw",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1738,8 +1738,8 @@
     },
     {
         "name":  "Distorted Phantom",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1747,8 +1747,8 @@
     },
     {
         "name":  "Dog",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1756,8 +1756,8 @@
     },
     {
         "name":  "Doom Deer",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1765,8 +1765,8 @@
     },
     {
         "name":  "Doomsday Cultist",
-        "charmPoints":  30,
         "minLevel":  0,
+        "charmPoints":  30,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1774,8 +1774,8 @@
     },
     {
         "name":  "Dragolisk",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1783,8 +1783,8 @@
     },
     {
         "name":  "Dragon",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1792,8 +1792,8 @@
     },
     {
         "name":  "Dragon Hatchling",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1801,8 +1801,8 @@
     },
     {
         "name":  "Dragon Lord",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1810,8 +1810,8 @@
     },
     {
         "name":  "Dragon Lord Hatchling",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1819,8 +1819,8 @@
     },
     {
         "name":  "Dragonling",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1828,8 +1828,8 @@
     },
     {
         "name":  "Draken Abomination",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1837,8 +1837,8 @@
     },
     {
         "name":  "Draken Elite",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1846,8 +1846,8 @@
     },
     {
         "name":  "Draken Spellweaver",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1855,8 +1855,8 @@
     },
     {
         "name":  "Draken Warmaster",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1864,8 +1864,8 @@
     },
     {
         "name":  "Draptor",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1873,8 +1873,8 @@
     },
     {
         "name":  "Dread Intruder",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1882,8 +1882,8 @@
     },
     {
         "name":  "Drillworm",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1891,8 +1891,8 @@
     },
     {
         "name":  "Dromedary",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1900,8 +1900,8 @@
     },
     {
         "name":  "Druid\u0027s Apparition",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1909,8 +1909,8 @@
     },
     {
         "name":  "Dryad",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1918,8 +1918,8 @@
     },
     {
         "name":  "Duskbringer",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1927,8 +1927,8 @@
     },
     {
         "name":  "Dwarf",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1936,8 +1936,8 @@
     },
     {
         "name":  "Dwarf Geomancer",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1945,8 +1945,8 @@
     },
     {
         "name":  "Dwarf Guard",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1954,8 +1954,8 @@
     },
     {
         "name":  "Dwarf Henchman",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1963,8 +1963,8 @@
     },
     {
         "name":  "Dwarf Soldier",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1972,8 +1972,8 @@
     },
     {
         "name":  "Dworc Fleshhunter",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1981,8 +1981,8 @@
     },
     {
         "name":  "Dworc Shadowstalker",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1990,8 +1990,8 @@
     },
     {
         "name":  "Dworc Venomsniper",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -1999,8 +1999,8 @@
     },
     {
         "name":  "Dworc Voodoomaster",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2008,8 +2008,8 @@
     },
     {
         "name":  "Earth Elemental",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2017,8 +2017,8 @@
     },
     {
         "name":  "Efreet",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2026,8 +2026,8 @@
     },
     {
         "name":  "Elder Bonelord",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2035,8 +2035,8 @@
     },
     {
         "name":  "Elder Forest Fury",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2044,8 +2044,8 @@
     },
     {
         "name":  "Elder Mummy",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2053,8 +2053,8 @@
     },
     {
         "name":  "Elder Wyrm",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2062,8 +2062,8 @@
     },
     {
         "name":  "Elephant",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2071,8 +2071,8 @@
     },
     {
         "name":  "Elf",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2080,8 +2080,8 @@
     },
     {
         "name":  "Elf Arcanist",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2089,8 +2089,8 @@
     },
     {
         "name":  "Elf Overseer",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2098,8 +2098,8 @@
     },
     {
         "name":  "Elf Scout",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2107,8 +2107,8 @@
     },
     {
         "name":  "Emerald Damselfly",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2116,8 +2116,8 @@
     },
     {
         "name":  "Emerald Tortoise",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2125,8 +2125,8 @@
     },
     {
         "name":  "Energetic Book",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2134,8 +2134,8 @@
     },
     {
         "name":  "Energuardian of Tales",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2143,8 +2143,8 @@
     },
     {
         "name":  "Energy Elemental",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2152,8 +2152,8 @@
     },
     {
         "name":  "Enfeebled Silencer",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2161,8 +2161,8 @@
     },
     {
         "name":  "Enlightened of the Cult",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2170,8 +2170,8 @@
     },
     {
         "name":  "Enraged Crystal Golem",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2179,8 +2179,8 @@
     },
     {
         "name":  "Enslaved Dwarf",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2188,8 +2188,8 @@
     },
     {
         "name":  "Eternal Guardian",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2197,8 +2197,8 @@
     },
     {
         "name":  "Evil Prospector",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2206,8 +2206,8 @@
     },
     {
         "name":  "Evil Sheep",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2215,8 +2215,8 @@
     },
     {
         "name":  "Evil Sheep Lord",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2224,8 +2224,8 @@
     },
     {
         "name":  "Execowtioner",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2233,8 +2233,8 @@
     },
     {
         "name":  "Exotic Bat",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2242,8 +2242,8 @@
     },
     {
         "name":  "Exotic Cave Spider",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2251,8 +2251,8 @@
     },
     {
         "name":  "Eyeless Devourer",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2260,8 +2260,8 @@
     },
     {
         "name":  "Falcon Knight",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2269,8 +2269,8 @@
     },
     {
         "name":  "Falcon Paladin",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2278,8 +2278,8 @@
     },
     {
         "name":  "Faun",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2287,8 +2287,8 @@
     },
     {
         "name":  "Feral Sphinx",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2296,8 +2296,8 @@
     },
     {
         "name":  "Feral Werecrocodile",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2305,8 +2305,8 @@
     },
     {
         "name":  "Feverish Citizen",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2314,8 +2314,8 @@
     },
     {
         "name":  "Feversleep",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2323,8 +2323,8 @@
     },
     {
         "name":  "Filth Toad",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2332,8 +2332,8 @@
     },
     {
         "name":  "Fire Devil",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2341,8 +2341,8 @@
     },
     {
         "name":  "Fire Elemental",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2350,8 +2350,8 @@
     },
     {
         "name":  "Firestarter",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2359,8 +2359,8 @@
     },
     {
         "name":  "Fish",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2368,8 +2368,8 @@
     },
     {
         "name":  "Flamingo",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2377,8 +2377,8 @@
     },
     {
         "name":  "Flimsy Lost Soul",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2386,8 +2386,8 @@
     },
     {
         "name":  "Floating Savant",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2395,8 +2395,8 @@
     },
     {
         "name":  "Flying Book",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2404,8 +2404,8 @@
     },
     {
         "name":  "Foam Stalker",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2413,8 +2413,8 @@
     },
     {
         "name":  "Forest Fury",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2422,8 +2422,8 @@
     },
     {
         "name":  "Fox",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2431,8 +2431,8 @@
     },
     {
         "name":  "Frazzlemaw",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2440,8 +2440,8 @@
     },
     {
         "name":  "Freakish Lost Soul",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2449,8 +2449,8 @@
     },
     {
         "name":  "Frost Dragon",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2458,8 +2458,8 @@
     },
     {
         "name":  "Frost Dragon Hatchling",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2467,8 +2467,8 @@
     },
     {
         "name":  "Frost Flower Asura",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2476,8 +2476,8 @@
     },
     {
         "name":  "Frost Giant",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2485,8 +2485,8 @@
     },
     {
         "name":  "Frost Giantess",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2494,8 +2494,8 @@
     },
     {
         "name":  "Frost Troll",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2503,8 +2503,8 @@
     },
     {
         "name":  "Fruit Drop",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2512,8 +2512,8 @@
     },
     {
         "name":  "Furious Fire Elemental",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2521,8 +2521,8 @@
     },
     {
         "name":  "Furious Troll",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2530,8 +2530,8 @@
     },
     {
         "name":  "Fury",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2539,8 +2539,8 @@
     },
     {
         "name":  "Gang Member",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2548,8 +2548,8 @@
     },
     {
         "name":  "Gargoyle",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2557,8 +2557,8 @@
     },
     {
         "name":  "Gazer",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2566,8 +2566,8 @@
     },
     {
         "name":  "Gazer Spectre",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2575,8 +2575,8 @@
     },
     {
         "name":  "Ghastly Dragon",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2584,8 +2584,8 @@
     },
     {
         "name":  "Ghost",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2593,8 +2593,8 @@
     },
     {
         "name":  "Ghost Wolf",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2602,8 +2602,8 @@
     },
     {
         "name":  "Ghoul",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2611,8 +2611,8 @@
     },
     {
         "name":  "Ghoulish Hyaena",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2620,8 +2620,8 @@
     },
     {
         "name":  "Giant Spider",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2629,8 +2629,8 @@
     },
     {
         "name":  "Gingerbread Man",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2638,8 +2638,8 @@
     },
     {
         "name":  "Girtablilu Warrior",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2647,8 +2647,8 @@
     },
     {
         "name":  "Gladiator",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2656,8 +2656,8 @@
     },
     {
         "name":  "Gloom Maw",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2665,8 +2665,8 @@
     },
     {
         "name":  "Gloom Wolf",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2674,8 +2674,8 @@
     },
     {
         "name":  "Glooth Anemone",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2683,8 +2683,8 @@
     },
     {
         "name":  "Glooth Bandit",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2692,8 +2692,8 @@
     },
     {
         "name":  "Glooth Blob",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2701,8 +2701,8 @@
     },
     {
         "name":  "Glooth Brigand",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2710,8 +2710,8 @@
     },
     {
         "name":  "Glooth Golem",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2719,8 +2719,8 @@
     },
     {
         "name":  "Gnarlhound",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2728,8 +2728,8 @@
     },
     {
         "name":  "Goblin",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2737,8 +2737,8 @@
     },
     {
         "name":  "Goblin Assassin",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2746,8 +2746,8 @@
     },
     {
         "name":  "Goblin Leader",
-        "charmPoints":  30,
         "minLevel":  0,
+        "charmPoints":  30,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2755,8 +2755,8 @@
     },
     {
         "name":  "Goblin Scavenger",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2764,8 +2764,8 @@
     },
     {
         "name":  "Goggle Cake",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2773,8 +2773,8 @@
     },
     {
         "name":  "Golden Servant",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2782,8 +2782,8 @@
     },
     {
         "name":  "Golden Servant Replica",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2791,8 +2791,8 @@
     },
     {
         "name":  "Goldhanded Cultist",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2800,8 +2800,8 @@
     },
     {
         "name":  "Goldhanded Cultist Bride",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2809,8 +2809,8 @@
     },
     {
         "name":  "Gore Horn",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2818,8 +2818,8 @@
     },
     {
         "name":  "Gorerilla",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2827,8 +2827,8 @@
     },
     {
         "name":  "Gorger Inferniarch",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2836,8 +2836,8 @@
     },
     {
         "name":  "Gozzler",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2845,8 +2845,8 @@
     },
     {
         "name":  "Grave Guard",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2854,8 +2854,8 @@
     },
     {
         "name":  "Grave Robber",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2863,8 +2863,8 @@
     },
     {
         "name":  "Gravedigger",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2872,8 +2872,8 @@
     },
     {
         "name":  "Green Djinn",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2881,8 +2881,8 @@
     },
     {
         "name":  "Green Frog",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2890,8 +2890,8 @@
     },
     {
         "name":  "Grim Reaper",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2899,8 +2899,8 @@
     },
     {
         "name":  "Grimeleech",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2908,8 +2908,8 @@
     },
     {
         "name":  "Grynch Clan Goblin",
-        "charmPoints":  10,
         "minLevel":  0,
+        "charmPoints":  10,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2917,8 +2917,8 @@
     },
     {
         "name":  "Gryphon",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2926,8 +2926,8 @@
     },
     {
         "name":  "Guardian of Tales",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2935,8 +2935,8 @@
     },
     {
         "name":  "Guzzlemaw",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2944,8 +2944,8 @@
     },
     {
         "name":  "Hand of Cursed Fate",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2953,8 +2953,8 @@
     },
     {
         "name":  "Harpy",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2962,8 +2962,8 @@
     },
     {
         "name":  "Haunted Dragon",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2971,8 +2971,8 @@
     },
     {
         "name":  "Haunted Treeling",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2980,8 +2980,8 @@
     },
     {
         "name":  "Hawk Hopper",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2989,8 +2989,8 @@
     },
     {
         "name":  "Headpecker",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -2998,8 +2998,8 @@
     },
     {
         "name":  "Headwalker",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3007,8 +3007,8 @@
     },
     {
         "name":  "Hellfire Fighter",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3016,8 +3016,8 @@
     },
     {
         "name":  "Hellflayer",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3025,8 +3025,8 @@
     },
     {
         "name":  "Hellhound",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3034,8 +3034,8 @@
     },
     {
         "name":  "Hellhunter Inferniarch",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3043,8 +3043,8 @@
     },
     {
         "name":  "Hellspawn",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3052,8 +3052,8 @@
     },
     {
         "name":  "Herald of Gloom",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3061,8 +3061,8 @@
     },
     {
         "name":  "Hero",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3070,8 +3070,8 @@
     },
     {
         "name":  "Hibernal Moth",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3079,8 +3079,8 @@
     },
     {
         "name":  "Hideous Fungus",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3088,8 +3088,8 @@
     },
     {
         "name":  "High Voltage Elemental",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3097,8 +3097,8 @@
     },
     {
         "name":  "Hive Overseer",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3106,8 +3106,8 @@
     },
     {
         "name":  "Honey Elemental",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3115,8 +3115,8 @@
     },
     {
         "name":  "Honour Guard",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3124,8 +3124,8 @@
     },
     {
         "name":  "Horse (Brown)",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3133,8 +3133,8 @@
     },
     {
         "name":  "Horse (Grey)",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3142,8 +3142,8 @@
     },
     {
         "name":  "Horse (Taupe)",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3151,8 +3151,8 @@
     },
     {
         "name":  "Hot Dog",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3160,8 +3160,8 @@
     },
     {
         "name":  "Hulking Carnisylvan",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3169,8 +3169,8 @@
     },
     {
         "name":  "Hulking Prehemoth",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3178,8 +3178,8 @@
     },
     {
         "name":  "Humongous Fungus",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3187,8 +3187,8 @@
     },
     {
         "name":  "Hunter",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3196,8 +3196,8 @@
     },
     {
         "name":  "Husky",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3205,8 +3205,8 @@
     },
     {
         "name":  "Hyaena",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3214,8 +3214,8 @@
     },
     {
         "name":  "Hydra",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3223,8 +3223,8 @@
     },
     {
         "name":  "Ice Dragon",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3232,8 +3232,8 @@
     },
     {
         "name":  "Ice Golem",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3241,8 +3241,8 @@
     },
     {
         "name":  "Ice Witch",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3250,8 +3250,8 @@
     },
     {
         "name":  "Icecold Book",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3259,8 +3259,8 @@
     },
     {
         "name":  "Iks Ahpututu",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3268,8 +3268,8 @@
     },
     {
         "name":  "Iks Aucar",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3277,8 +3277,8 @@
     },
     {
         "name":  "Iks Chuka",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3286,8 +3286,8 @@
     },
     {
         "name":  "Iks Churrascan",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3295,8 +3295,8 @@
     },
     {
         "name":  "Iks Pututu",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3304,8 +3304,8 @@
     },
     {
         "name":  "Iks Yapunac",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3313,8 +3313,8 @@
     },
     {
         "name":  "Infected Weeper",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3322,8 +3322,8 @@
     },
     {
         "name":  "Infernal Demon",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3331,8 +3331,8 @@
     },
     {
         "name":  "Infernal Frog",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3340,8 +3340,8 @@
     },
     {
         "name":  "Infernal Phantom",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3349,8 +3349,8 @@
     },
     {
         "name":  "Infernalist",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3358,8 +3358,8 @@
     },
     {
         "name":  "Ink Blob",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3367,8 +3367,8 @@
     },
     {
         "name":  "Ink Splash",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3376,8 +3376,8 @@
     },
     {
         "name":  "Insane Siren",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3385,8 +3385,8 @@
     },
     {
         "name":  "Insect Swarm",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3394,8 +3394,8 @@
     },
     {
         "name":  "Insectoid Scout",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3403,8 +3403,8 @@
     },
     {
         "name":  "Insectoid Worker",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3412,8 +3412,8 @@
     },
     {
         "name":  "Instable Breach Brood",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3421,8 +3421,8 @@
     },
     {
         "name":  "Instable Sparkion",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3430,8 +3430,8 @@
     },
     {
         "name":  "Iron Servant",
-        "charmPoints":  30,
         "minLevel":  0,
+        "charmPoints":  30,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3439,8 +3439,8 @@
     },
     {
         "name":  "Iron Servant Replica",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3448,8 +3448,8 @@
     },
     {
         "name":  "Ironblight",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3457,8 +3457,8 @@
     },
     {
         "name":  "Island Troll",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3466,8 +3466,8 @@
     },
     {
         "name":  "Jellyfish",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3475,8 +3475,8 @@
     },
     {
         "name":  "Juggernaut",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3484,8 +3484,8 @@
     },
     {
         "name":  "Jungle Moa",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3493,8 +3493,8 @@
     },
     {
         "name":  "Juvenile Bashmu",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3502,8 +3502,8 @@
     },
     {
         "name":  "Killer Caiman",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3511,8 +3511,8 @@
     },
     {
         "name":  "Killer Rabbit",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3520,8 +3520,8 @@
     },
     {
         "name":  "Knight\u0027s Apparition",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3529,8 +3529,8 @@
     },
     {
         "name":  "Knowledge Elemental",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3538,8 +3538,8 @@
     },
     {
         "name":  "Kollos",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3547,8 +3547,8 @@
     },
     {
         "name":  "Kongra",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3556,8 +3556,8 @@
     },
     {
         "name":  "Lacewing Moth",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3565,8 +3565,8 @@
     },
     {
         "name":  "Ladybug",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3574,8 +3574,8 @@
     },
     {
         "name":  "Lamassu",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3583,8 +3583,8 @@
     },
     {
         "name":  "Lancer Beetle",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3592,8 +3592,8 @@
     },
     {
         "name":  "Larva",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3601,8 +3601,8 @@
     },
     {
         "name":  "Lava Golem",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3610,8 +3610,8 @@
     },
     {
         "name":  "Lava Lurker",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3619,8 +3619,8 @@
     },
     {
         "name":  "Lavafungus",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3628,8 +3628,8 @@
     },
     {
         "name":  "Lavaworm",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3637,8 +3637,8 @@
     },
     {
         "name":  "Leaf Golem",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3646,8 +3646,8 @@
     },
     {
         "name":  "Lich",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3655,8 +3655,8 @@
     },
     {
         "name":  "Liodile",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3664,8 +3664,8 @@
     },
     {
         "name":  "Lion",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3673,8 +3673,8 @@
     },
     {
         "name":  "Lion Hydra",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3682,8 +3682,8 @@
     },
     {
         "name":  "Little Corym Charlatan",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3691,8 +3691,8 @@
     },
     {
         "name":  "Lizard Chosen",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3700,8 +3700,8 @@
     },
     {
         "name":  "Lizard Dragon Priest",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3709,8 +3709,8 @@
     },
     {
         "name":  "Lizard High Guard",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3718,8 +3718,8 @@
     },
     {
         "name":  "Lizard Legionnaire",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3727,8 +3727,8 @@
     },
     {
         "name":  "Lizard Magistratus",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3736,8 +3736,8 @@
     },
     {
         "name":  "Lizard Noble",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3745,8 +3745,8 @@
     },
     {
         "name":  "Lizard Sentinel",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3754,8 +3754,8 @@
     },
     {
         "name":  "Lizard Snakecharmer",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3763,8 +3763,8 @@
     },
     {
         "name":  "Lizard Templar",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3772,8 +3772,8 @@
     },
     {
         "name":  "Lizard Zaogun",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3781,8 +3781,8 @@
     },
     {
         "name":  "Loricate Orger",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3790,8 +3790,8 @@
     },
     {
         "name":  "Lost Basher",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3799,8 +3799,8 @@
     },
     {
         "name":  "Lost Berserker",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3808,8 +3808,8 @@
     },
     {
         "name":  "Lost Exile",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3817,8 +3817,8 @@
     },
     {
         "name":  "Lost Husher",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3826,8 +3826,8 @@
     },
     {
         "name":  "Lost Soul",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3835,8 +3835,8 @@
     },
     {
         "name":  "Lost Thrower",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3844,8 +3844,8 @@
     },
     {
         "name":  "Lumbering Carnivor",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3853,8 +3853,8 @@
     },
     {
         "name":  "Mad Scientist",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3862,8 +3862,8 @@
     },
     {
         "name":  "Magma Crawler",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3871,8 +3871,8 @@
     },
     {
         "name":  "Makara",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3880,8 +3880,8 @@
     },
     {
         "name":  "Mammoth",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3889,8 +3889,8 @@
     },
     {
         "name":  "Manta Ray",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3898,8 +3898,8 @@
     },
     {
         "name":  "Manticore",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3907,8 +3907,8 @@
     },
     {
         "name":  "Mantosaurus",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3916,8 +3916,8 @@
     },
     {
         "name":  "Many Faces",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3925,8 +3925,8 @@
     },
     {
         "name":  "Marid",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3934,8 +3934,8 @@
     },
     {
         "name":  "Marsh Stalker",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3943,8 +3943,8 @@
     },
     {
         "name":  "Massive Earth Elemental",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3952,8 +3952,8 @@
     },
     {
         "name":  "Massive Energy Elemental",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3961,8 +3961,8 @@
     },
     {
         "name":  "Massive Fire Elemental",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3970,8 +3970,8 @@
     },
     {
         "name":  "Massive Water Elemental",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3979,8 +3979,8 @@
     },
     {
         "name":  "Mean Lost Soul",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3988,8 +3988,8 @@
     },
     {
         "name":  "Meandering Mushroom",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -3997,8 +3997,8 @@
     },
     {
         "name":  "Medusa",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4006,8 +4006,8 @@
     },
     {
         "name":  "Mega Dragon",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4015,8 +4015,8 @@
     },
     {
         "name":  "Menacing Carnivor",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4024,8 +4024,8 @@
     },
     {
         "name":  "Mercurial Menace",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4033,8 +4033,8 @@
     },
     {
         "name":  "Mercury Blob",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4042,8 +4042,8 @@
     },
     {
         "name":  "Merlkin",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4051,8 +4051,8 @@
     },
     {
         "name":  "Metal Gargoyle",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4060,8 +4060,8 @@
     },
     {
         "name":  "Midnight Asura",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4069,8 +4069,8 @@
     },
     {
         "name":  "Midnight Panther",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4078,8 +4078,8 @@
     },
     {
         "name":  "Midnight Spawn",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4087,8 +4087,8 @@
     },
     {
         "name":  "Midnight Warrior",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4096,8 +4096,8 @@
     },
     {
         "name":  "Minotaur",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4105,8 +4105,8 @@
     },
     {
         "name":  "Minotaur Amazon",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4114,8 +4114,8 @@
     },
     {
         "name":  "Minotaur Archer",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4123,8 +4123,8 @@
     },
     {
         "name":  "Minotaur Cult Follower",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4132,8 +4132,8 @@
     },
     {
         "name":  "Minotaur Cult Prophet",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4141,8 +4141,8 @@
     },
     {
         "name":  "Minotaur Cult Zealot",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4150,8 +4150,8 @@
     },
     {
         "name":  "Minotaur Guard",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4159,8 +4159,8 @@
     },
     {
         "name":  "Minotaur Hunter",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4168,8 +4168,8 @@
     },
     {
         "name":  "Minotaur Invader",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4177,8 +4177,8 @@
     },
     {
         "name":  "Minotaur Mage",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4186,8 +4186,8 @@
     },
     {
         "name":  "Misguided Bully",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4195,8 +4195,8 @@
     },
     {
         "name":  "Misguided Thief",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4204,8 +4204,8 @@
     },
     {
         "name":  "Mitmah Scout",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4213,8 +4213,8 @@
     },
     {
         "name":  "Mitmah Seer",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4222,8 +4222,8 @@
     },
     {
         "name":  "Modified Gnarlhound",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4231,8 +4231,8 @@
     },
     {
         "name":  "Mole",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4240,8 +4240,8 @@
     },
     {
         "name":  "Monk",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4249,8 +4249,8 @@
     },
     {
         "name":  "Monk\u0027s Apparition",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4258,8 +4258,8 @@
     },
     {
         "name":  "Mooh\u0027Tah Warrior",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4267,8 +4267,8 @@
     },
     {
         "name":  "Moohtant",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4276,8 +4276,8 @@
     },
     {
         "name":  "Mould Phantom",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4285,8 +4285,8 @@
     },
     {
         "name":  "Mummy",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4294,8 +4294,8 @@
     },
     {
         "name":  "Mushroom Sniffer",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4303,8 +4303,8 @@
     },
     {
         "name":  "Mutated Bat",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4312,8 +4312,8 @@
     },
     {
         "name":  "Mutated Human",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4321,8 +4321,8 @@
     },
     {
         "name":  "Mutated Rat",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4330,8 +4330,8 @@
     },
     {
         "name":  "Mutated Tiger",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4339,8 +4339,8 @@
     },
     {
         "name":  "Mycobiontic Beetle",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4348,8 +4348,8 @@
     },
     {
         "name":  "Naga Archer",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4357,8 +4357,8 @@
     },
     {
         "name":  "Naga Warrior",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4366,8 +4366,8 @@
     },
     {
         "name":  "Necromancer",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4375,8 +4375,8 @@
     },
     {
         "name":  "Nibblemaw",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4384,8 +4384,8 @@
     },
     {
         "name":  "Nightfiend",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4393,8 +4393,8 @@
     },
     {
         "name":  "Nighthunter",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4402,8 +4402,8 @@
     },
     {
         "name":  "Nightmare",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4411,8 +4411,8 @@
     },
     {
         "name":  "Nightmare Scion",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4420,8 +4420,8 @@
     },
     {
         "name":  "Nightslayer",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4429,8 +4429,8 @@
     },
     {
         "name":  "Nightstalker",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4438,8 +4438,8 @@
     },
     {
         "name":  "Noble Lion",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4447,8 +4447,8 @@
     },
     {
         "name":  "Nomad (Basic)",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4456,8 +4456,8 @@
     },
     {
         "name":  "Nomad (Blue)",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4465,8 +4465,8 @@
     },
     {
         "name":  "Nomad (Female)",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4474,8 +4474,8 @@
     },
     {
         "name":  "Norcferatu Heartless",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4483,8 +4483,8 @@
     },
     {
         "name":  "Norcferatu Nightweaver",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4492,8 +4492,8 @@
     },
     {
         "name":  "Northern Pike",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4501,8 +4501,8 @@
     },
     {
         "name":  "Novice of the Cult",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4510,8 +4510,8 @@
     },
     {
         "name":  "Noxious Ripptor",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4519,8 +4519,8 @@
     },
     {
         "name":  "Nymph",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4528,8 +4528,8 @@
     },
     {
         "name":  "Ogre Brute",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4537,8 +4537,8 @@
     },
     {
         "name":  "Ogre Rowdy",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4546,8 +4546,8 @@
     },
     {
         "name":  "Ogre Ruffian",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4555,8 +4555,8 @@
     },
     {
         "name":  "Ogre Sage",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4564,8 +4564,8 @@
     },
     {
         "name":  "Ogre Savage",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4573,8 +4573,8 @@
     },
     {
         "name":  "Ogre Shaman",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4582,8 +4582,8 @@
     },
     {
         "name":  "Omnivora",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4591,8 +4591,8 @@
     },
     {
         "name":  "Oozing Carcass",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4600,8 +4600,8 @@
     },
     {
         "name":  "Oozing Corpus",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4609,8 +4609,8 @@
     },
     {
         "name":  "Orc",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4618,8 +4618,8 @@
     },
     {
         "name":  "Orc Berserker",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4627,8 +4627,8 @@
     },
     {
         "name":  "Orc Cult Fanatic",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4636,8 +4636,8 @@
     },
     {
         "name":  "Orc Cult Inquisitor",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4645,8 +4645,8 @@
     },
     {
         "name":  "Orc Cult Minion",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4654,8 +4654,8 @@
     },
     {
         "name":  "Orc Cult Priest",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4663,8 +4663,8 @@
     },
     {
         "name":  "Orc Cultist",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4672,8 +4672,8 @@
     },
     {
         "name":  "Orc Leader",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4681,8 +4681,8 @@
     },
     {
         "name":  "Orc Marauder",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4690,8 +4690,8 @@
     },
     {
         "name":  "Orc Rider",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4699,8 +4699,8 @@
     },
     {
         "name":  "Orc Shaman",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4708,8 +4708,8 @@
     },
     {
         "name":  "Orc Spearman",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4717,8 +4717,8 @@
     },
     {
         "name":  "Orc Warlord",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4726,8 +4726,8 @@
     },
     {
         "name":  "Orc Warrior",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4735,8 +4735,8 @@
     },
     {
         "name":  "Orchid Frog",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4744,8 +4744,8 @@
     },
     {
         "name":  "Orclops Bloodbreaker",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4753,8 +4753,8 @@
     },
     {
         "name":  "Orclops Doomhauler",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4762,8 +4762,8 @@
     },
     {
         "name":  "Orclops Ravager",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4771,8 +4771,8 @@
     },
     {
         "name":  "Orewalker",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4780,8 +4780,8 @@
     },
     {
         "name":  "Orger",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4789,8 +4789,8 @@
     },
     {
         "name":  "Paladin\u0027s Apparition",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4798,8 +4798,8 @@
     },
     {
         "name":  "Panda",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4807,8 +4807,8 @@
     },
     {
         "name":  "Parder",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4816,8 +4816,8 @@
     },
     {
         "name":  "Parrot",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4825,8 +4825,8 @@
     },
     {
         "name":  "Penguin",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4834,8 +4834,8 @@
     },
     {
         "name":  "Percht",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4843,8 +4843,8 @@
     },
     {
         "name":  "Phantasm",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4852,8 +4852,8 @@
     },
     {
         "name":  "Pig",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4861,8 +4861,8 @@
     },
     {
         "name":  "Pigeon",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4870,8 +4870,8 @@
     },
     {
         "name":  "Pirat Bombardier",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4879,8 +4879,8 @@
     },
     {
         "name":  "Pirat Cutthroat",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4888,8 +4888,8 @@
     },
     {
         "name":  "Pirat Mate",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4897,8 +4897,8 @@
     },
     {
         "name":  "Pirat Scoundrel",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4906,8 +4906,8 @@
     },
     {
         "name":  "Pirate Buccaneer",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4915,8 +4915,8 @@
     },
     {
         "name":  "Pirate Corsair",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4924,8 +4924,8 @@
     },
     {
         "name":  "Pirate Cutthroat",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4933,8 +4933,8 @@
     },
     {
         "name":  "Pirate Ghost",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4942,8 +4942,8 @@
     },
     {
         "name":  "Pirate Marauder",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4951,8 +4951,8 @@
     },
     {
         "name":  "Pirate Skeleton",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4960,8 +4960,8 @@
     },
     {
         "name":  "Pixie",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4969,8 +4969,8 @@
     },
     {
         "name":  "Plaguesmith",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4978,8 +4978,8 @@
     },
     {
         "name":  "Poacher",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4987,8 +4987,8 @@
     },
     {
         "name":  "Poison Spider",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -4996,8 +4996,8 @@
     },
     {
         "name":  "Poisonous Carnisylvan",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5005,8 +5005,8 @@
     },
     {
         "name":  "Polar Bear",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5014,8 +5014,8 @@
     },
     {
         "name":  "Pooka",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5023,8 +5023,8 @@
     },
     {
         "name":  "Priestess",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5032,8 +5032,8 @@
     },
     {
         "name":  "Priestess of the Wild Sun",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5041,8 +5041,8 @@
     },
     {
         "name":  "Putrid Mummy",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5050,8 +5050,8 @@
     },
     {
         "name":  "Quara Constrictor",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5059,8 +5059,8 @@
     },
     {
         "name":  "Quara Constrictor Scout",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5068,8 +5068,8 @@
     },
     {
         "name":  "Quara Hydromancer",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5077,8 +5077,8 @@
     },
     {
         "name":  "Quara Hydromancer Scout",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5086,8 +5086,8 @@
     },
     {
         "name":  "Quara Looter",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5095,8 +5095,8 @@
     },
     {
         "name":  "Quara Mantassin",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5104,8 +5104,8 @@
     },
     {
         "name":  "Quara Mantassin Scout",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5113,8 +5113,8 @@
     },
     {
         "name":  "Quara Pincher",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5122,8 +5122,8 @@
     },
     {
         "name":  "Quara Pincher Scout",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5131,8 +5131,8 @@
     },
     {
         "name":  "Quara Plunderer",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5140,8 +5140,8 @@
     },
     {
         "name":  "Quara Predator",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5149,8 +5149,8 @@
     },
     {
         "name":  "Quara Predator Scout",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5158,8 +5158,8 @@
     },
     {
         "name":  "Quara Raider",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5167,8 +5167,8 @@
     },
     {
         "name":  "Rabbit",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5176,8 +5176,8 @@
     },
     {
         "name":  "Rabid Wolf",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5185,8 +5185,8 @@
     },
     {
         "name":  "Rage Squid",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5194,8 +5194,8 @@
     },
     {
         "name":  "Ragged Rabid Wolf",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5203,8 +5203,8 @@
     },
     {
         "name":  "Raging Fire",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5212,8 +5212,8 @@
     },
     {
         "name":  "Rat",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5221,8 +5221,8 @@
     },
     {
         "name":  "Ravenous Lava Lurker",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5230,8 +5230,8 @@
     },
     {
         "name":  "Reality Reaver",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5239,8 +5239,8 @@
     },
     {
         "name":  "Redeemed Soul",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5248,8 +5248,8 @@
     },
     {
         "name":  "Renegade Knight",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5257,8 +5257,8 @@
     },
     {
         "name":  "Renegade Quara Constrictor",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5266,8 +5266,8 @@
     },
     {
         "name":  "Renegade Quara Hydromancer",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5275,8 +5275,8 @@
     },
     {
         "name":  "Renegade Quara Mantassin",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5284,8 +5284,8 @@
     },
     {
         "name":  "Renegade Quara Pincher",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5293,8 +5293,8 @@
     },
     {
         "name":  "Renegade Quara Predator",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5302,8 +5302,8 @@
     },
     {
         "name":  "Retching Horror",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5311,8 +5311,8 @@
     },
     {
         "name":  "Rhindeer",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5320,8 +5320,8 @@
     },
     {
         "name":  "Ripper Spectre",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5329,8 +5329,8 @@
     },
     {
         "name":  "Roaring Lion",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5338,8 +5338,8 @@
     },
     {
         "name":  "Roast Pork",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5347,8 +5347,8 @@
     },
     {
         "name":  "Rootthing Amber Shaper",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5356,8 +5356,8 @@
     },
     {
         "name":  "Rootthing Bug Tracker",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5365,8 +5365,8 @@
     },
     {
         "name":  "Rootthing Nutshell",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5374,8 +5374,8 @@
     },
     {
         "name":  "Rorc",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5383,8 +5383,8 @@
     },
     {
         "name":  "Rot Elemental",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5392,8 +5392,8 @@
     },
     {
         "name":  "Rotten Golem",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5401,8 +5401,8 @@
     },
     {
         "name":  "Rotten Man-Maggot",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5410,8 +5410,8 @@
     },
     {
         "name":  "Rotworm",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5419,8 +5419,8 @@
     },
     {
         "name":  "Rustheap Golem",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5428,8 +5428,8 @@
     },
     {
         "name":  "Sabretooth",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5437,8 +5437,8 @@
     },
     {
         "name":  "Sacred Spider",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5446,8 +5446,8 @@
     },
     {
         "name":  "Salamander",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5455,8 +5455,8 @@
     },
     {
         "name":  "Sandcrawler",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5464,8 +5464,8 @@
     },
     {
         "name":  "Sandstone Scorpion",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5473,8 +5473,8 @@
     },
     {
         "name":  "Scarab",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5482,8 +5482,8 @@
     },
     {
         "name":  "Schiach",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5491,8 +5491,8 @@
     },
     {
         "name":  "Scorpion",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5500,8 +5500,8 @@
     },
     {
         "name":  "Sea Serpent",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5509,8 +5509,8 @@
     },
     {
         "name":  "Seacrest Serpent",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5518,8 +5518,8 @@
     },
     {
         "name":  "Seagull",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5527,8 +5527,8 @@
     },
     {
         "name":  "Serpent Spawn",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5536,8 +5536,8 @@
     },
     {
         "name":  "Shaburak Demon",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5545,8 +5545,8 @@
     },
     {
         "name":  "Shaburak Lord",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5554,8 +5554,8 @@
     },
     {
         "name":  "Shaburak Prince",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5563,8 +5563,8 @@
     },
     {
         "name":  "Shadow Hound",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5572,8 +5572,8 @@
     },
     {
         "name":  "Shadow Pupil",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5581,8 +5581,8 @@
     },
     {
         "name":  "Shaper Matriarch",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5590,8 +5590,8 @@
     },
     {
         "name":  "Shark",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5599,8 +5599,8 @@
     },
     {
         "name":  "Sheep",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5608,8 +5608,8 @@
     },
     {
         "name":  "Shell Drake",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5617,8 +5617,8 @@
     },
     {
         "name":  "Shock Head",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5626,8 +5626,8 @@
     },
     {
         "name":  "Shrieking Cry-Stal",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5635,8 +5635,8 @@
     },
     {
         "name":  "Sibang",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5644,8 +5644,8 @@
     },
     {
         "name":  "Sight of Surrender",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5653,8 +5653,8 @@
     },
     {
         "name":  "Silencer",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5662,8 +5662,8 @@
     },
     {
         "name":  "Silver Rabbit",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5671,8 +5671,8 @@
     },
     {
         "name":  "Sineater Inferniarch",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5680,8 +5680,8 @@
     },
     {
         "name":  "Skeleton",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5689,8 +5689,8 @@
     },
     {
         "name":  "Skeleton Elite Warrior",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5698,8 +5698,8 @@
     },
     {
         "name":  "Skeleton Warrior",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5707,8 +5707,8 @@
     },
     {
         "name":  "Skunk",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5716,8 +5716,8 @@
     },
     {
         "name":  "Slime",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5725,8 +5725,8 @@
     },
     {
         "name":  "Slug",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5734,8 +5734,8 @@
     },
     {
         "name":  "Smuggler",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5743,8 +5743,8 @@
     },
     {
         "name":  "Snake",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5752,8 +5752,8 @@
     },
     {
         "name":  "Son of Verminor",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5761,8 +5761,8 @@
     },
     {
         "name":  "Sopping Carcass",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5770,8 +5770,8 @@
     },
     {
         "name":  "Sopping Corpus",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5779,8 +5779,8 @@
     },
     {
         "name":  "Sorcerer\u0027s Apparition",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5788,8 +5788,8 @@
     },
     {
         "name":  "Soul-Broken Harbinger",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5797,8 +5797,8 @@
     },
     {
         "name":  "Souleater",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5806,8 +5806,8 @@
     },
     {
         "name":  "Sparkion",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5815,8 +5815,8 @@
     },
     {
         "name":  "Spectre",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5824,8 +5824,8 @@
     },
     {
         "name":  "Spellreaper Inferniarch",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5833,8 +5833,8 @@
     },
     {
         "name":  "Sphinx",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5842,8 +5842,8 @@
     },
     {
         "name":  "Spider",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5851,8 +5851,8 @@
     },
     {
         "name":  "Spidris",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5860,8 +5860,8 @@
     },
     {
         "name":  "Spidris Elite",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5869,8 +5869,8 @@
     },
     {
         "name":  "Spiky Carnivor",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5878,8 +5878,8 @@
     },
     {
         "name":  "Spit Nettle",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5887,8 +5887,8 @@
     },
     {
         "name":  "Spitter",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5896,8 +5896,8 @@
     },
     {
         "name":  "Squid Warden",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5905,8 +5905,8 @@
     },
     {
         "name":  "Squidgy Slime",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5914,8 +5914,8 @@
     },
     {
         "name":  "Squirrel",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5923,8 +5923,8 @@
     },
     {
         "name":  "Stabilizing Dread Intruder",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5932,8 +5932,8 @@
     },
     {
         "name":  "Stabilizing Reality Reaver",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5941,8 +5941,8 @@
     },
     {
         "name":  "Stalker",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5950,8 +5950,8 @@
     },
     {
         "name":  "Stalking Stalk",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5959,8 +5959,8 @@
     },
     {
         "name":  "Stampor",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5968,8 +5968,8 @@
     },
     {
         "name":  "Starving Wolf",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5977,8 +5977,8 @@
     },
     {
         "name":  "Stone Devourer",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5986,8 +5986,8 @@
     },
     {
         "name":  "Stone Golem",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -5995,8 +5995,8 @@
     },
     {
         "name":  "Stone Rhino",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6004,8 +6004,8 @@
     },
     {
         "name":  "Stonerefiner",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6013,8 +6013,8 @@
     },
     {
         "name":  "Streaked Devourer",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6022,8 +6022,8 @@
     },
     {
         "name":  "Sugar Cube",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6031,8 +6031,8 @@
     },
     {
         "name":  "Sugar Cube Worker",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6040,8 +6040,8 @@
     },
     {
         "name":  "Sulphider",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6049,8 +6049,8 @@
     },
     {
         "name":  "Sulphur Spouter",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6058,8 +6058,8 @@
     },
     {
         "name":  "Swamp Troll",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6067,8 +6067,8 @@
     },
     {
         "name":  "Swampling",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6076,8 +6076,8 @@
     },
     {
         "name":  "Swan Maiden",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6085,8 +6085,8 @@
     },
     {
         "name":  "Swarmer",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6094,8 +6094,8 @@
     },
     {
         "name":  "Tainted Soul",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6103,8 +6103,8 @@
     },
     {
         "name":  "Tarantula",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6112,8 +6112,8 @@
     },
     {
         "name":  "Tarnished Spirit",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6121,8 +6121,8 @@
     },
     {
         "name":  "Terramite",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6130,8 +6130,8 @@
     },
     {
         "name":  "Terrified Elephant",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6139,8 +6139,8 @@
     },
     {
         "name":  "Terror Bird",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6148,8 +6148,8 @@
     },
     {
         "name":  "Terrorsleep",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6157,8 +6157,8 @@
     },
     {
         "name":  "Thanatursus",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6166,8 +6166,8 @@
     },
     {
         "name":  "Thornback Tortoise",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6175,8 +6175,8 @@
     },
     {
         "name":  "Thornfire Wolf",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6184,8 +6184,8 @@
     },
     {
         "name":  "Tiger",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6193,8 +6193,8 @@
     },
     {
         "name":  "Toad",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6202,8 +6202,8 @@
     },
     {
         "name":  "Tomb Servant",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6211,8 +6211,8 @@
     },
     {
         "name":  "Tortoise",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6220,8 +6220,8 @@
     },
     {
         "name":  "Tremendous Tyrant",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6229,8 +6229,8 @@
     },
     {
         "name":  "Troll",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6238,8 +6238,8 @@
     },
     {
         "name":  "Troll Champion",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6247,8 +6247,8 @@
     },
     {
         "name":  "Troll Guard",
-        "charmPoints":  30,
         "minLevel":  0,
+        "charmPoints":  30,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6256,8 +6256,8 @@
     },
     {
         "name":  "Troll Legionnaire",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6265,8 +6265,8 @@
     },
     {
         "name":  "True Dawnfire Asura",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6274,8 +6274,8 @@
     },
     {
         "name":  "True Frost Flower Asura",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6283,8 +6283,8 @@
     },
     {
         "name":  "True Midnight Asura",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6292,8 +6292,8 @@
     },
     {
         "name":  "Truffle",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6301,8 +6301,8 @@
     },
     {
         "name":  "Truffle Cook",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6310,8 +6310,8 @@
     },
     {
         "name":  "Tunnel Tyrant",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6319,8 +6319,8 @@
     },
     {
         "name":  "Turbulent Elemental",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6328,8 +6328,8 @@
     },
     {
         "name":  "Twisted Pooka",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6337,8 +6337,8 @@
     },
     {
         "name":  "Twisted Shaper",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6346,8 +6346,8 @@
     },
     {
         "name":  "Two-Headed Turtle",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6355,8 +6355,8 @@
     },
     {
         "name":  "Undead Cavebear",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6364,8 +6364,8 @@
     },
     {
         "name":  "Undead Dragon",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6373,8 +6373,8 @@
     },
     {
         "name":  "Undead Elite Gladiator",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6382,8 +6382,8 @@
     },
     {
         "name":  "Undead Gladiator",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6391,8 +6391,8 @@
     },
     {
         "name":  "Undead Jester",
-        "charmPoints":  10,
         "minLevel":  0,
+        "charmPoints":  10,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6400,8 +6400,8 @@
     },
     {
         "name":  "Undead Mine Worker",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6409,8 +6409,8 @@
     },
     {
         "name":  "Undead Prospector",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6418,8 +6418,8 @@
     },
     {
         "name":  "Undertaker",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6427,8 +6427,8 @@
     },
     {
         "name":  "Usurper Archer",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6436,8 +6436,8 @@
     },
     {
         "name":  "Usurper Knight",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6445,8 +6445,8 @@
     },
     {
         "name":  "Usurper Warlock",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6454,8 +6454,8 @@
     },
     {
         "name":  "Valkyrie",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6463,8 +6463,8 @@
     },
     {
         "name":  "Vampire",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6472,8 +6472,8 @@
     },
     {
         "name":  "Vampire Bride",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6481,8 +6481,8 @@
     },
     {
         "name":  "Vampire Pig",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6490,8 +6490,8 @@
     },
     {
         "name":  "Vampire Viscount",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6499,8 +6499,8 @@
     },
     {
         "name":  "Varg",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6508,8 +6508,8 @@
     },
     {
         "name":  "Varnished Diremaw",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6517,8 +6517,8 @@
     },
     {
         "name":  "Venerable Girtablilu",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6526,8 +6526,8 @@
     },
     {
         "name":  "Vexclaw",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6535,8 +6535,8 @@
     },
     {
         "name":  "Vibrant Phantom",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6544,8 +6544,8 @@
     },
     {
         "name":  "Vicious Manbat",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6553,8 +6553,8 @@
     },
     {
         "name":  "Vicious Squire",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6562,8 +6562,8 @@
     },
     {
         "name":  "Vile Grandmaster",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6571,8 +6571,8 @@
     },
     {
         "name":  "Vulcongra",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6580,8 +6580,8 @@
     },
     {
         "name":  "Wafer Paper Butterfly",
-        "charmPoints":  1,
         "minLevel":  0,
+        "charmPoints":  1,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6589,8 +6589,8 @@
     },
     {
         "name":  "Wailing Widow",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6598,8 +6598,8 @@
     },
     {
         "name":  "Walker",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6607,8 +6607,8 @@
     },
     {
         "name":  "Walking Pillar",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6616,8 +6616,8 @@
     },
     {
         "name":  "Wandering Pillar",
-        "charmPoints":  100,
         "minLevel":  0,
+        "charmPoints":  100,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6625,8 +6625,8 @@
     },
     {
         "name":  "War Golem",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6634,8 +6634,8 @@
     },
     {
         "name":  "War Wolf",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6643,8 +6643,8 @@
     },
     {
         "name":  "Wardragon",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6652,8 +6652,8 @@
     },
     {
         "name":  "Warlock",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6661,8 +6661,8 @@
     },
     {
         "name":  "Wasp",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6670,8 +6670,8 @@
     },
     {
         "name":  "Waspoid",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6679,8 +6679,8 @@
     },
     {
         "name":  "Water Buffalo",
-        "charmPoints":  30,
         "minLevel":  0,
+        "charmPoints":  30,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6688,8 +6688,8 @@
     },
     {
         "name":  "Water Elemental",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6697,8 +6697,8 @@
     },
     {
         "name":  "Weakened Frazzlemaw",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6706,8 +6706,8 @@
     },
     {
         "name":  "Weeper",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6715,8 +6715,8 @@
     },
     {
         "name":  "Werebadger",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6724,8 +6724,8 @@
     },
     {
         "name":  "Werebear",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6733,8 +6733,8 @@
     },
     {
         "name":  "Wereboar",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6742,8 +6742,8 @@
     },
     {
         "name":  "Werecrocodile",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6751,8 +6751,8 @@
     },
     {
         "name":  "Werefox",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6760,8 +6760,8 @@
     },
     {
         "name":  "Werehyaena",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6769,8 +6769,8 @@
     },
     {
         "name":  "Werehyaena Shaman",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6778,8 +6778,8 @@
     },
     {
         "name":  "Werelion",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6787,8 +6787,8 @@
     },
     {
         "name":  "Werelioness",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6796,8 +6796,8 @@
     },
     {
         "name":  "Werepanther",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6805,8 +6805,8 @@
     },
     {
         "name":  "Weretiger",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6814,8 +6814,8 @@
     },
     {
         "name":  "Werewolf",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6823,8 +6823,8 @@
     },
     {
         "name":  "White Deer",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6832,8 +6832,8 @@
     },
     {
         "name":  "White Lion",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6841,8 +6841,8 @@
     },
     {
         "name":  "White Shade",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6850,8 +6850,8 @@
     },
     {
         "name":  "White Tiger",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6859,8 +6859,8 @@
     },
     {
         "name":  "White Weretiger",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6868,8 +6868,8 @@
     },
     {
         "name":  "Wiggler",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6877,8 +6877,8 @@
     },
     {
         "name":  "Wild Horse",
-        "charmPoints":  10,
         "minLevel":  0,
+        "charmPoints":  10,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6886,8 +6886,8 @@
     },
     {
         "name":  "Wild Warrior",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6895,8 +6895,8 @@
     },
     {
         "name":  "Wilting Leaf Golem",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6904,8 +6904,8 @@
     },
     {
         "name":  "Winter Wolf",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6913,8 +6913,8 @@
     },
     {
         "name":  "Wisp",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6922,8 +6922,8 @@
     },
     {
         "name":  "Witch",
-        "charmPoints":  15,
         "minLevel":  0,
+        "charmPoints":  15,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6931,8 +6931,8 @@
     },
     {
         "name":  "Wolf",
-        "charmPoints":  5,
         "minLevel":  0,
+        "charmPoints":  5,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6940,8 +6940,8 @@
     },
     {
         "name":  "Worker Golem",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6949,8 +6949,8 @@
     },
     {
         "name":  "Worm Priestess",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6958,8 +6958,8 @@
     },
     {
         "name":  "Wyrm",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6967,8 +6967,8 @@
     },
     {
         "name":  "Wyvern",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6976,8 +6976,8 @@
     },
     {
         "name":  "Yeti",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6985,8 +6985,8 @@
     },
     {
         "name":  "Yielothax",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -6994,8 +6994,8 @@
     },
     {
         "name":  "Young Goanna",
-        "charmPoints":  50,
         "minLevel":  0,
+        "charmPoints":  50,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -7003,8 +7003,8 @@
     },
     {
         "name":  "Young Sea Serpent",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",
@@ -7012,8 +7012,8 @@
     },
     {
         "name":  "Zombie",
-        "charmPoints":  25,
         "minLevel":  0,
+        "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
         "location":  "-",

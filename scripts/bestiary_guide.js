@@ -1,45 +1,121 @@
+// Global variables
+let bestiaryTable = null;
+
 // Bestiary Guide functionality
 function initializeBestiaryGuide() {
     console.log('Initializing bestiary guide...');
 
     const searchInput = document.getElementById('monsterSearch');
-    const table = document.getElementById('bestiaryTable');
+    bestiaryTable = document.getElementById('bestiaryTable');
 
     if (!searchInput) {
         console.error('Search input not found!');
         return;
     }
 
-    if (!table) {
+    if (!bestiaryTable) {
         console.error('Table not found!');
         return;
     }
 
     // Load and populate monster data
-    loadMonsterData(table);
+    loadMonsterData(bestiaryTable);
 
     // Set up search functionality
     searchInput.addEventListener('input', function() {
-        const searchTerm = this.value.toLowerCase();
-        console.log('Searching for:', searchTerm);
+        applyFilters();
+    });
 
-        const rows = table.getElementsByTagName('tr');
-        
-        // Start from index 1 to skip the header row
-        for (let i = 1; i < rows.length; i++) {
-            const monsterName = rows[i].cells[0].textContent.toLowerCase();
+    // Set up charm point filter functionality
+    const charmPointFilters = document.querySelectorAll('.charm-point-filter');
+    charmPointFilters.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            applyFilters();
+        });
+    });
 
-            if (monsterName.includes(searchTerm)) {
-                rows[i].style.display = '';
-                console.log('Showing:', monsterName);
-            } else {
-                rows[i].style.display = 'none';
-                console.log('Hiding:', monsterName);
-            }
-        }
+    // Set up effort filter functionality
+    const effortFilters = document.querySelectorAll('.effort-filter');
+    effortFilters.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            applyFilters();
+        });
+    });
+
+    // Set up rapid filter functionality
+    const rapidFilters = document.querySelectorAll('.rapid-filter');
+    rapidFilters.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            applyFilters();
+        });
     });
 
     console.log('Bestiary guide initialized successfully');
+}
+
+function applyFilters() {
+    if (!bestiaryTable) {
+        console.error('Table not found in applyFilters!');
+        return;
+    }
+
+    const searchInput = document.getElementById('monsterSearch');
+    const searchTerm = searchInput.value.toLowerCase();
+    const charmPointFilters = document.querySelectorAll('.charm-point-filter');
+    const effortFilters = document.querySelectorAll('.effort-filter');
+    const rapidFilters = document.querySelectorAll('.rapid-filter');
+    
+    // Get selected charm point values
+    const selectedCharmPoints = [];
+    charmPointFilters.forEach(checkbox => {
+        if (checkbox.checked) {
+            selectedCharmPoints.push(parseInt(checkbox.value));
+        }
+    });
+    
+    // Get selected effort values
+    const selectedEfforts = [];
+    effortFilters.forEach(checkbox => {
+        if (checkbox.checked) {
+            selectedEfforts.push(checkbox.value);
+        }
+    });
+    
+    // Get selected rapid values
+    const selectedRapids = [];
+    rapidFilters.forEach(checkbox => {
+        if (checkbox.checked) {
+            selectedRapids.push(checkbox.value);
+        }
+    });
+    
+    console.log('Search term:', searchTerm);
+    console.log('Selected charm points:', selectedCharmPoints);
+    console.log('Selected efforts:', selectedEfforts);
+    console.log('Selected rapids:', selectedRapids);
+
+    const rows = bestiaryTable.getElementsByTagName('tr');
+    
+    // Start from index 1 to skip the header row
+    for (let i = 1; i < rows.length; i++) {
+        const monsterName = rows[i].cells[0].textContent.toLowerCase();
+        const charmPoints = parseInt(rows[i].cells[2].textContent); // Points is now in column 3 (index 2)
+        const effort = rows[i].cells[3].textContent; // Effort is in column 4 (index 3)
+        const rapid = rows[i].cells[4].textContent; // Rapid is in column 5 (index 4)
+        
+        const matchesSearch = monsterName.includes(searchTerm);
+        const matchesCharmPoints = selectedCharmPoints.includes(charmPoints);
+        const matchesEffort = selectedEfforts.includes(effort);
+        const matchesRapid = selectedRapids.includes(rapid);
+        
+        if (matchesSearch && matchesCharmPoints && matchesEffort && matchesRapid) {
+            rows[i].style.display = '';
+            console.log('Showing:', monsterName, '(', charmPoints, 'points,', effort, 'effort,', rapid, 'rapid)');
+        } else {
+            rows[i].style.display = 'none';
+            console.log('Hiding:', monsterName, '(', charmPoints, 'points,', effort, 'effort,', rapid, 'rapid)');
+        }
+    }
 }
 
 function loadMonsterData(table) {
@@ -74,13 +150,13 @@ function populateTable(table, monsters) {
         const nameCell = row.insertCell();
         nameCell.textContent = monster.name;
         
-        // Points (charmPoints)
-        const pointsCell = row.insertCell();
-        pointsCell.textContent = monster.charmPoints;
-        
         // Min. Level
         const levelCell = row.insertCell();
         levelCell.textContent = monster.minLevel;
+        
+        // Points (charmPoints)
+        const pointsCell = row.insertCell();
+        pointsCell.textContent = monster.charmPoints;
         
         // Effort
         const effortCell = row.insertCell();

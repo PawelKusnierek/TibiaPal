@@ -189,11 +189,66 @@
 
 <button type="button" class="expandable-div">Filters</button>
 <div class="expandable-div-content">
-    <ol id="align-left">
-        <li>Filter explanation...</li>
-        <li>Additional filter options...</li>
-        <li>Filter usage instructions...</li>
-    </ol>
+    <div style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+        <label style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 125px; text-align: left;">Charm Points:</label>
+        <div style="display: inline-block;">
+            <label style="color: #ebebeb; margin-right: 15px; margin-left: 5px;">
+                <input type="checkbox" class="charm-point-filter" value="1" checked> 1
+            </label>
+            <label style="color: #ebebeb; margin-right: 15px;">
+                <input type="checkbox" class="charm-point-filter" value="5" checked> 5
+            </label>
+            <label style="color: #ebebeb; margin-right: 15px;">
+                <input type="checkbox" class="charm-point-filter" value="10" checked> 10
+            </label>
+            <label style="color: #ebebeb; margin-right: 15px;">
+                <input type="checkbox" class="charm-point-filter" value="15" checked> 15
+            </label>
+            <label style="color: #ebebeb; margin-right: 15px;">
+                <input type="checkbox" class="charm-point-filter" value="25" checked> 25
+            </label>
+            <label style="color: #ebebeb; margin-right: 15px;">
+                <input type="checkbox" class="charm-point-filter" value="30" checked> 30
+            </label>
+            <label style="color: #ebebeb; margin-right: 15px;">
+                <input type="checkbox" class="charm-point-filter" value="50" checked> 50
+            </label>
+            <label style="color: #ebebeb; margin-right: 15px;">
+                <input type="checkbox" class="charm-point-filter" value="100" checked> 100
+            </label>
+        </div>
+    </div>
+    <div style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+        <label style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 125px; text-align: left;">Effort:</label>
+        <div style="display: inline-block;">
+            <label style="color: #ebebeb; margin-right: 15px; margin-left: 5px;">
+                <input type="checkbox" class="effort-filter" value="Low" checked> Low
+            </label>
+            <label style="color: #ebebeb; margin-right: 15px;">
+                <input type="checkbox" class="effort-filter" value="Medium" checked> Medium
+            </label>
+            <label style="color: #ebebeb; margin-right: 15px;">
+                <input type="checkbox" class="effort-filter" value="High" checked> High
+            </label>
+            <label style="color: #ebebeb; margin-right: 15px;">
+                <input type="checkbox" class="effort-filter" value="Extreme" checked> Extreme
+            </label>
+        </div>
+    </div>
+    <div style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+        <label style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 125px; text-align: left;">Rapid:</label>
+        <div style="display: inline-block;">
+            <label style="color: #ebebeb; margin-right: 15px; margin-left: 5px;">
+                <input type="checkbox" class="rapid-filter" value="No" checked> No
+            </label>
+            <label style="color: #ebebeb; margin-right: 15px;">
+                <input type="checkbox" class="rapid-filter" value="Helpful" checked> Helpful
+            </label>
+            <label style="color: #ebebeb; margin-right: 15px;">
+                <input type="checkbox" class="rapid-filter" value="Yes" checked> Yes
+            </label>
+        </div>
+    </div>
 </div>
 
 <div style="margin: 20px 0;">
@@ -204,8 +259,8 @@
 <table class="bestiary_table" id="bestiaryTable">
     <tr>
         <th>Monster</th>
-        <th>Points</th>
         <th>Min. Level</th>
+        <th>Points</th>
         <th>Effort</th>
         <th>Rapid Recommended?</th>
         <th>Location</th>
