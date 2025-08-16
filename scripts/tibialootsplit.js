@@ -672,16 +672,21 @@ function view_tibialootsplit_history() {
     );
 
     if (history.length > 5) {
-        number_of_loops = history.length / 6;
+        // Determine if we're dealing with old format (6 items) or new format (7 items)
+        const isNewFormat = history.length % 7 === 0;
+        const itemsPerRow = isNewFormat ? 7 : 6;
+        number_of_loops = history.length / itemsPerRow;
+        
         var tableRef = document
             .getElementById("tibialootsplit-history-table")
             .getElementsByTagName("tbody")[0];
         for (j = 0; j < number_of_loops; j++) {
             var newRow = tableRef.insertRow();
-            for (i = 0; i < 6; i++) {
-                index = 6 * j + i;
+            for (i = 0; i < itemsPerRow; i++) {
+                index = itemsPerRow * j + i;
+                
                 //covering 'first' result per row, i.e. the actual tibialootsplit results
-                if (index == 0 || index % 6 == 0) {
+                if (index == 0 || index % itemsPerRow == 0) {
                     let cell = newRow.insertCell(0);
                     cell.id = index;
                     cell.innerHTML =
@@ -690,7 +695,7 @@ function view_tibialootsplit_history() {
                         "' onclick='results_from_history(this.id)';>Here</button>";
                 }
                 //covering 'third' result per row, i.e. the names of players
-                else if ((index + 3) % 6 == 0) {
+                else if ((index + (itemsPerRow - 3)) % itemsPerRow == 0) {
                     let cell = newRow.insertCell(0);
                     cell.id = index;
                     players = history[index];
@@ -700,7 +705,7 @@ function view_tibialootsplit_history() {
                         player.trim();
                         cell.innerHTML = cell.innerHTML + player + "<br/>";
                     }
-                } else if ((index + 4) % 6 == 0) {
+                } else if ((index + (itemsPerRow - 2)) % itemsPerRow == 0) {
                     let cell = newRow.insertCell(0);
                     cell.id = index;
                     let formattedValue;
@@ -716,7 +721,7 @@ function view_tibialootsplit_history() {
                     cellTextBox.name = "text" + index;
                     cellTextBox.id = index;
                     cell.appendChild(cellTextBox);
-                } else if ((index + 5) % 6 == 0) {
+                } else if ((index + (itemsPerRow - 1)) % itemsPerRow == 0) {
                     let cell = newRow.insertCell(0);
                     cell.id = index;
                     let formattedValue;
@@ -732,6 +737,15 @@ function view_tibialootsplit_history() {
                     cellTextBox.name = "text" + index;
                     cellTextBox.id = index;
                     cell.appendChild(cellTextBox);
+                } else if (isNewFormat && i == 6) {
+                    // Log column - only for new format (7th column, index 6)
+                    // Insert at the end (no index parameter) so it appears in the last column
+                    let cell = newRow.insertCell();
+                    cell.id = index;
+                    cell.innerHTML =
+                        "<button id='log_" +
+                        index +
+                        "' onclick='copy_analyser_log(this.id)';>Copy</button>";
                 } else {
                     let cell = newRow.insertCell(0);
                     cell.id = index;
@@ -765,6 +779,7 @@ function update_the_history_results() {
         players_formatted,
         session_duration,
         session_date,
+        form.analyserData.value,
     ];
     const workingHistory = isHistoryMaxed
         ? history.slice(0, 90 - new_results.length)
@@ -794,4 +809,43 @@ function results_from_history(table_cell_id) {
     document.getElementById("h4_history_tls").style.display = "none";
     document.getElementById("tibialootsplit-history-table").style.display =
         "none";
+}
+
+function copy_analyser_log(button_id) {
+    const history = JSON.parse(
+        localStorage.getItem("tibialootsplitresults") || "[]"
+    );
+    
+    // Extract the index from the button ID (remove "log_" prefix)
+    const index = parseInt(button_id.replace("log_", ""));
+    
+    // Check if this index exists in the history
+    if (index >= history.length) {
+        alert("No analyser log available for this entry.");
+        return;
+    }
+    
+    const analyser_log = history[index];
+    
+    // Check if analyser log exists and is not empty
+    if (!analyser_log || analyser_log === "" || typeof analyser_log !== 'string') {
+        alert("No analyser log available for this entry.");
+        return;
+    }
+    
+    // Create a temporary input element to copy the text
+    let container = document.querySelector("#page-container");
+    let input = document.createElement("input");
+    
+    input.type = "text";
+    input.id = "temp_analyser_log";
+    input.className = "hiddeninput";
+    input.value = analyser_log;
+    container.appendChild(input);
+    
+    let text_to_copy = document.querySelector("#temp_analyser_log");
+    text_to_copy.select();
+    document.execCommand("copy");
+    
+    text_to_copy.remove();
 }
