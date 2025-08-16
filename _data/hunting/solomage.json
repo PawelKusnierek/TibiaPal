@@ -892,7 +892,7 @@
         "place": "Issavi Goannas",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "Avalanche",
+        "runes": "Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -908,7 +908,7 @@
         "place": "Marapur Nagas",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "Stoneshower",
+        "runes": "Stoneshower, Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -948,7 +948,7 @@
         "place": "Ingol",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "Avalanche",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -980,7 +980,7 @@
         "place": "Warzone 7",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "Avalanche",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     }
 ]
