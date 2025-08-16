@@ -380,7 +380,23 @@ function update_the_html(
         var copy_button = `<button type="button" onClick='copy_to_clipboard("transfer ${gp_amount} to ${copy_payee_name}", "${copy_payee_name}")';>Copy</button>`;
 
         if (amount != 0) {
-            if (amount > 1000) {
+            if (amount > 1000000) {
+                amount = (amount / 1000000).toFixed(2);
+                transfer_message = `<b> ${payer_name} </b> to pay <b> ${amount}kk </b> to <b>${payee_name} </b> (Bank: <b> transfer ${gp_amount} to ${payee_name}</b>)`;
+                transfer_array.push(transfer_message);
+                copy_button_array.push(`${copy_button}`);
+                discord_output.push(
+                    payer_name +
+                    " to pay " +
+                    amount +
+                    " kk to " +
+                    payee_name +
+                    " (Bank: transfer " +
+                    gp_amount +
+                    " to " +
+                    payee_name
+                );
+            } else if (amount > 1000) {
                 amount = Math.round(amount / 1000);
                 transfer_message = `<b> ${payer_name} </b> to pay <b> ${amount}k </b> to <b>${payee_name} </b> (Bank: <b> transfer ${gp_amount} to ${payee_name}</b>)`;
                 transfer_array.push(transfer_message);
@@ -404,7 +420,7 @@ function update_the_html(
                     payer_name +
                     " to pay " +
                     gp_amount +
-                    " k to " +
+                    " gp to " +
                     payee_name +
                     " (Bank: transfer " +
                     gp_amount +
@@ -438,13 +454,17 @@ function update_the_html(
         profit = true;
     }
 
-    if (Math.abs(total_profit) > 1000) {
+    if (Math.abs(total_profit) > 1000000) {
+        total_profit = (total_profit / 1000000).toFixed(2) + "kk~";
+    } else if (Math.abs(total_profit) > 1000) {
         total_profit = Math.round(total_profit / 1000) + "k~";
     } else {
         total_profit = total_profit + " gp";
     }
 
-    if (Math.abs(profit_per_person) > 1000) {
+    if (Math.abs(profit_per_person) > 1000000) {
+        profit_per_person = (profit_per_person / 1000000).toFixed(2) + "kk~";
+    } else if (Math.abs(profit_per_person) > 1000) {
         profit_per_person = Math.round(profit_per_person / 1000) + "k~";
     } else {
         profit_per_person = Math.round(profit_per_person);
@@ -683,9 +703,15 @@ function view_tibialootsplit_history() {
                 } else if ((index + 4) % 6 == 0) {
                     let cell = newRow.insertCell(0);
                     cell.id = index;
-                    let cellTextBox = document.createTextNode(
-                        Math.round(history[index] / 1000) + "k~"
-                    );
+                    let formattedValue;
+                    if (Math.abs(history[index]) > 1000000) {
+                        formattedValue = (history[index] / 1000000).toFixed(2) + "kk~";
+                    } else if (Math.abs(history[index]) > 1000) {
+                        formattedValue = Math.round(history[index] / 1000) + "k~";
+                    } else {
+                        formattedValue = history[index] + " gp";
+                    }
+                    let cellTextBox = document.createTextNode(formattedValue);
                     cellTextBox.type = "text";
                     cellTextBox.name = "text" + index;
                     cellTextBox.id = index;
@@ -693,9 +719,15 @@ function view_tibialootsplit_history() {
                 } else if ((index + 5) % 6 == 0) {
                     let cell = newRow.insertCell(0);
                     cell.id = index;
-                    let cellTextBox = document.createTextNode(
-                        Math.round(history[index] / 1000) + "k~"
-                    );
+                    let formattedValue;
+                    if (Math.abs(history[index]) > 1000000) {
+                        formattedValue = (history[index] / 1000000).toFixed(2) + "kk~";
+                    } else if (Math.abs(history[index]) > 1000) {
+                        formattedValue = Math.round(history[index] / 1000) + "k~";
+                    } else {
+                        formattedValue = Math.round(history[index]) + " gp";
+                    }
+                    let cellTextBox = document.createTextNode(formattedValue);
                     cellTextBox.type = "text";
                     cellTextBox.name = "text" + index;
                     cellTextBox.id = index;
