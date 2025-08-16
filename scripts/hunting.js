@@ -4,6 +4,11 @@ function apply_level_filter() {
 	const playerLevel = levelFilter.value ? parseInt(levelFilter.value) : null;
 	
 	filter_hunting_table(playerLevel, vocation);
+	
+	// Reapply color coding after filtering
+	setTimeout(() => {
+		applyColorCoding();
+	}, 10);
 }
 
 function filter_hunting_table(level_filter, vocation) {
@@ -78,6 +83,9 @@ function show_tab(event, tabName) {
 				}
 			});
 		}
+		
+		// Reapply color coding for the newly shown tab
+		applyColorCoding();
 	}, 100);
 }
 
@@ -269,5 +277,85 @@ function initializeSortingHeaders() {
 	});
 }
 
+// Color coding for runes and weapon types
+function applyColorCoding() {
+	const colorMap = {
+		// Fire/GFB - Red
+		'GFB': 'rune-fire',
+		'Fire': 'rune-fire',
+		// Ice/Avalanche - Light blue
+		'Avalanche': 'rune-ice',
+		'Ice': 'rune-ice',
+		// Energy/Thunderstorm - Purple
+		'Thunderstorm': 'rune-energy',
+		'Energy': 'rune-energy',
+		// Earth/Stoneshower - Green
+		'Stoneshower': 'rune-earth',
+		'Earth': 'rune-earth',
+		// Death - Darker shade of white
+		'Death': 'rune-death',
+		// Physical stays white (default)
+		'Physical': 'rune-physical'
+	};
+	
+	// Function to apply colors to a cell with multiple values
+	function colorizeCell(cell) {
+		const text = cell.textContent.trim();
+		if (!text) return;
+		
+		// Split by comma and clean up each part
+		const parts = text.split(',').map(part => part.trim()).filter(part => part.length > 0);
+		
+		if (parts.length === 1) {
+			// Single value - apply color class to the cell
+			const value = parts[0];
+			if (colorMap[value]) {
+				// Remove any existing color classes
+				cell.classList.remove('rune-fire', 'rune-ice', 'rune-energy', 'rune-earth', 'rune-death', 'rune-physical');
+				// Add the appropriate color class
+				cell.classList.add(colorMap[value]);
+			}
+		} else if (parts.length > 1) {
+			// Multiple values - create colored spans for each part
+			let newHTML = '';
+			parts.forEach((part, index) => {
+				const colorClass = colorMap[part] || 'rune-physical';
+				newHTML += `<span class="${colorClass}">${part}</span>`;
+				if (index < parts.length - 1) {
+					newHTML += ', ';
+				}
+			});
+			cell.innerHTML = newHTML;
+		}
+	}
+	
+	// Apply colors to all hunting tables
+	const vocations = ['knight', 'paladin', 'mage', 'monk', 'duo', 'teamhunt'];
+	
+	vocations.forEach(vocation => {
+		const table = document.getElementById("hunting_table_" + vocation);
+		if (table) {
+			const rows = table.querySelectorAll("tr");
+			
+			rows.forEach(row => {
+				// Check weapon type column (index 4 for knight and monk)
+				const weaponCell = row.cells[4];
+				if (weaponCell) {
+					colorizeCell(weaponCell);
+				}
+				
+				// Check runes column (index 4 for paladin and mage)
+				const runesCell = row.cells[4];
+				if (runesCell) {
+					colorizeCell(runesCell);
+				}
+			});
+		}
+	});
+}
+
 // Call initialization when page loads
-document.addEventListener('DOMContentLoaded', initializeSortingHeaders);
+document.addEventListener('DOMContentLoaded', function() {
+	initializeSortingHeaders();
+	applyColorCoding();
+});

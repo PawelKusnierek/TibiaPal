@@ -602,6 +602,31 @@ ol, ul {
   width: auto;
 }
 
+/* Color coding for runes and weapon types */
+.rune-fire, .weapon-fire {
+  color: #ff4444;
+}
+
+.rune-ice, .weapon-ice {
+  color: #87ceeb;
+}
+
+.rune-energy, .weapon-energy {
+  color: #9370db;
+}
+
+.rune-earth, .weapon-earth {
+  color: #90ee90;
+}
+
+.rune-death, .weapon-death {
+  color: #cccccc;
+}
+
+.rune-physical, .weapon-physical {
+  color: #ffffff;
+}
+
 .level_row {
   width: 10%;
 }
@@ -1837,4 +1862,29 @@ ol, ul {
 
 #monklist li {
   padding-bottom: 5px;
+}
+
+/* Color coding for runes and weapon types */
+.rune-fire {
+  color: #ff4444;
+}
+
+.rune-ice {
+  color: #87ceeb;
+}
+
+.rune-energy {
+  color: #9370db;
+}
+
+.rune-earth {
+  color: #90ee90;
+}
+
+.rune-death {
+  color: #cccccc;
+}
+
+.rune-physical {
+  color: #ffffff;
 }/*# sourceMappingURL=main.css.map */
