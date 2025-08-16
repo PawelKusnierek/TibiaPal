@@ -92,20 +92,12 @@ ol, ul {
   height: 100%;
   margin: auto;
   padding: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 #header {
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
   order: 1;
   -ms-flex-preferred-size: 14.9%;
   font-family: "Acme", sans-serif;
@@ -115,10 +107,7 @@ ol, ul {
 }
 
 #banner {
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
   order: 2;
-  -ms-flex-preferred-size: 50%;
   flex-basis: 53%;
   height: 90%;
   margin-left: 3%;
@@ -130,44 +119,23 @@ ol, ul {
 }
 
 #right-header {
-  -webkit-box-ordinal-group: 4;
-  -ms-flex-order: 3;
   order: 3;
-  -ms-flex-preferred-size: 15%;
   flex-basis: 20%;
 }
 
 #left-sidebar {
-  -webkit-box-ordinal-group: 5;
-  -ms-flex-order: 4;
   order: 4;
   -ms-flex-preferred-size: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
   align-items: left;
   align-content: left;
   width: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
   align-items: left;
   align-content: left;
@@ -209,7 +177,6 @@ ol, ul {
   padding-bottom: 3px;
   font-size: 15px;
   font-family: "IBM Plex Sans", sans-serif;
-  -webkit-transition: 0s;
   transition: 0s;
   text-align: left;
   max-width: 300px;
@@ -280,10 +247,7 @@ ol, ul {
 }
 
 #main-content {
-  -webkit-box-ordinal-group: 6;
-  -ms-flex-order: 5;
   order: 5;
-  -ms-flex-preferred-size: 50%;
   flex-basis: 53%;
   height: 90%;
   background-color: #061021;
@@ -296,23 +260,12 @@ ol, ul {
 }
 
 #right-sidebar {
-  -webkit-box-ordinal-group: 7;
-  -ms-flex-order: 6;
   order: 6;
   height: 100%;
-  -ms-flex-preferred-size: 25%;
   flex-basis: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
@@ -329,30 +282,20 @@ ol, ul {
 }
 
 #left-footer-space {
-  -webkit-box-ordinal-group: 8;
-  -ms-flex-order: 7;
   order: 7;
   -ms-flex-preferred-size: 15%;
   width: 300px;
 }
 
 #footer {
-  -webkit-box-ordinal-group: 9;
-  -ms-flex-order: 8;
   order: 8;
-  -ms-flex-preferred-size: 70%;
   flex-basis: 60%;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   padding-top: 10px;
 }
 
 #right-footer-space {
-  -webkit-box-ordinal-group: 10;
-  -ms-flex-order: 9;
   order: 9;
-  -ms-flex-preferred-size: 15%;
   flex-basis: 20%;
 }
 
@@ -545,28 +488,16 @@ ol, ul {
 }
 
 .house_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: flex-start;
-  -ms-flex-line-pack: center;
   align-content: center;
 }
 
 .house_img {
   margin-bottom: 20px;
-  -ms-flex-line-pack: left;
   align-content: left;
   width: 50%;
 }
@@ -663,7 +594,12 @@ ol, ul {
 
 .hunting_table {
   display: initial;
+  width: auto;
   text-align: left;
+}
+
+.hunting_table th {
+  width: auto;
 }
 
 .level_row {
@@ -690,7 +626,9 @@ ol, ul {
 .sortable-header {
   cursor: pointer;
   position: relative;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   transition: background-color 0.2s ease;
   padding-right: 20px;
 }
@@ -1899,6 +1837,4 @@ ol, ul {
 
 #monklist li {
   padding-bottom: 5px;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

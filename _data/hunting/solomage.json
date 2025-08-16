@@ -4,6 +4,7 @@
         "place": "Rotworms Liberty Bay/Darashia",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
@@ -11,6 +12,7 @@
         "place": "Swamp Trolls Port Hope/Venore",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
@@ -18,6 +20,7 @@
         "place": "Crocodiles Port Hope",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
@@ -25,6 +28,7 @@
         "place": "Larva Ankh (Sorcerer)",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
@@ -32,6 +36,7 @@
         "place": "Ankh Library Tomb (Sorcerer)",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
@@ -39,6 +44,7 @@
         "place": "Edron Forgotten Tomb",
         "raw_exp": "75k",
         "loot": "50k",
+        "runes": "N/A",
         "link" : "https://youtu.be/EDY-ReOC9EQ"
     },
     {
@@ -46,6 +52,7 @@
         "place": "Drefia Surface",
         "raw_exp": "75k",
         "loot": "50k",
+        "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
@@ -53,6 +60,7 @@
         "place": "Amazon Camp (Profit)",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
@@ -60,6 +68,7 @@
         "place": "Cormaya Dwarf Mines",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
@@ -67,6 +76,7 @@
         "place": "Cyclops Mistrock/Mount Sternum",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
@@ -74,6 +84,7 @@
         "place": "Tarantulas Port Hope",
         "raw_exp": "60k",
         "loot": "-10k",
+        "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
@@ -81,6 +92,7 @@
         "place": "Poacher's Cave (Poachers + Hunters)",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
@@ -88,6 +100,7 @@
         "place": "Coryms Port Hope (Stealth Ring)",
         "raw_exp": "100k",
         "loot": "-5k",
+        "runes": "N/A",
         "link" : "https://youtu.be/0AvNiVT6KOo"
     },
     {
@@ -95,6 +108,7 @@
         "place": "Stonerefiners (Stealth Ring)",
         "raw_exp": "135k",
         "loot": "40k",
+        "runes": "N/A",
         "link" : "https://youtu.be/WTrR8Zjvh1Y"
     },
     {
@@ -102,6 +116,7 @@
         "place": "Minotaurs Darashia (Stealth Ring)",
         "raw_exp": "95k",
         "loot": "-10k",
+        "runes": "N/A",
         "link" : "https://youtu.be/i-x5UKJdslU"
     },
     {
@@ -109,6 +124,7 @@
         "place": "Cyclopolis",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
@@ -116,6 +132,7 @@
         "place": "Elves Yalahar",
         "raw_exp": "80k",
         "loot": "150k",
+        "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
@@ -123,6 +140,7 @@
         "place": "Edron Earth Elementals",
         "raw_exp": "150k",
         "loot": "10k",
+        "runes": "N/A",
         "link" : "https://youtu.be/s7v6nfIR5wE"
     },
     {
@@ -130,6 +148,7 @@
         "place": "Mutated Humans Yala",
         "raw_exp": "120k",
         "loot": "-5k",
+        "runes": "N/A",
         "link" : "https://youtu.be/y5jPGCL_JsI"
     },
     {
@@ -137,6 +156,7 @@
         "place": "Gargoyle Cave Meriana",
         "raw_exp": "220k",
         "loot": "50k",
+        "runes": "Thunderstorm, GFB",
         "link" : "https://youtu.be/PnXNfzJcr3o"
     },
     {
@@ -144,6 +164,7 @@
         "place": "Upper Spike",
         "raw_exp": "320k",
         "loot": "75k",
+        "runes": "Thunderstorm, GFB, Avalanche",
         "link" : "https://youtu.be/qtHD2m-s5WE"
     },
     {
@@ -151,6 +172,7 @@
         "place": "Coryms Port Hope (AOE)",
         "raw_exp": "260k",
         "loot": "-100k",
+        "runes": "GFB",
         "link" : "https://youtu.be/0AvNiVT6KOo"
     },
     {
@@ -158,6 +180,7 @@
         "place": "Chor",
         "raw_exp": "290k",
         "loot": "-20k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/PgJSRyBCSzs"
     },
     {
@@ -165,6 +188,7 @@
         "place": "Laguna Islands (Profit)",
         "raw_exp": "200k",
         "loot": "400k",
+        "runes": "GFB",
         "link" : "https://youtu.be/NwrSF8TRe4s"
     },
     {
@@ -172,6 +196,7 @@
         "place": "Apes Banuta (Profit)",
         "raw_exp": "210k",
         "loot": "200k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/IRW8bc0MX7E"
     },
     {
@@ -179,6 +204,7 @@
         "place": "Stonerefiners (AOE)",
         "raw_exp": "250k",
         "loot": "25k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/WTrR8Zjvh1Y"
     },
     {
@@ -186,6 +212,7 @@
         "place": "Dryad Gardens",
         "raw_exp": "220k",
         "loot": "-30k",
+        "runes": "GFB",
         "link" : "https://youtu.be/h6frDxop6bA"
     },
     {
@@ -193,6 +220,7 @@
         "place": "Carniphilas Port Hope",
         "raw_exp": "120k",
         "loot": "-30k",
+        "runes": "GFB",
         "link" : "https://youtu.be/smLBYH4LoC4"
     },
     {
@@ -200,6 +228,7 @@
         "place": "Mummy/Bonebeasts MOSL -3",
         "raw_exp": "240k",
         "loot": "150k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/VKifdYSTD2g"
     },
     {
@@ -207,6 +236,7 @@
         "place": "LB Wyrms SD",
         "raw_exp": "600k",
         "loot": "-150k",
+        "runes": "SD",
         "link" : "https://youtu.be/GTB7xIoN3gQ"
     },
     {
@@ -214,6 +244,7 @@
         "place": "Yalahar Cults",
         "raw_exp": "290k",
         "loot": "500k",
+        "runes": "Thunderstorm",
         "link" : "https://youtu.be/Mf97YGUteV0"
     },
     {
@@ -221,6 +252,7 @@
         "place": "Peninsula Tomb",
         "raw_exp": "440k",
         "loot": "60k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/cZQncRLVp90"
     },
     {
@@ -228,6 +260,7 @@
         "place": "Haunted Treelings Vengoth",
         "raw_exp": "375k",
         "loot": "-80k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/cWH0T4hqHDQ"
     },
     {
@@ -235,6 +268,7 @@
         "place": "Water Elementals Port Hope",
         "raw_exp": "400k",
         "loot": "-50k",
+        "runes": "Thunderstorm",
         "link" : "https://youtu.be/Qjdpi5yDl0E"
     },
     {
@@ -242,6 +276,7 @@
         "place": "Nibelor Crystal Spiders",
         "raw_exp": "450k",
         "loot": "-10k",
+        "runes": "Thunderstorm",
         "link" : "https://youtu.be/Ma_T9DV5GqA"
     },
     {
@@ -249,6 +284,7 @@
         "place": "Mother of Scarabs Lair",
         "raw_exp": "680k",
         "loot": "-10k",
+        "runes": "GFB",
         "link" : "https://youtu.be/tsMl6GBByNI"
     },
     {
@@ -256,6 +292,7 @@
         "place": "Lion's Rock Lions",
         "raw_exp": "440k",
         "loot": "-20k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/JA7zsccq2Bo"
     },
     {
@@ -263,6 +300,7 @@
         "place": "Middle Spike",
         "raw_exp": "800k",
         "loot": "-20k",
+        "runes": "GFB",
         "link" : "https://youtu.be/rRADDHlUiGQ"
     },
     {
@@ -270,6 +308,7 @@
         "place": "Mutated Tigers Yalahar (Profit)",
         "raw_exp": "325k",
         "loot": "200k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/aIgGrSBSjB0"
     },
     {
@@ -277,6 +316,7 @@
         "place": "Krailos Ogres Surface",
         "raw_exp": "530k",
         "loot": "300k",
+        "runes": "Thunderstorm",
         "link" : "https://youtu.be/mCdQATL1DUs"
     },
     {
@@ -284,6 +324,7 @@
         "place": "Giant Spiders Port Hope",
         "raw_exp": "600k",
         "loot": "-25k",
+        "runes": "GFB",
         "link" : "https://youtu.be/mMDJjK0UKsU"
     },
     {
@@ -291,6 +332,7 @@
         "place": "Ice Witch Temple",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -298,6 +340,7 @@
         "place": "Muggy Plains",
         "raw_exp": "700k",
         "loot": "-50k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/y4jcvbz75Lk"
     },
     {
@@ -305,6 +348,7 @@
         "place": "Issavi Surafce (SD)",
         "raw_exp": "830k",
         "loot": "-200k",
+        "runes": "SD",
         "link" : "https://youtu.be/pVxkC4e-pus"
     },
     {
@@ -312,6 +356,7 @@
         "place": "Hive Surface",
         "raw_exp": "490k",
         "loot": "240k",
+        "runes": "GFB",
         "link" : "https://youtu.be/iEuxnXJiet4"
     },
     {
@@ -319,6 +364,7 @@
         "place": "Feyrist Surface",
         "raw_exp": "600k",
         "loot": "50k",
+        "runes": "GFB",
         "link" : "https://youtu.be/r1eAeWUm__U"
     },
     {
@@ -326,6 +372,7 @@
         "place": "Old Masonry (Death portal)",
         "raw_exp": "800k",
         "loot": "20k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -333,6 +380,7 @@
         "place": "Quaras Liberty Bay",
         "raw_exp": "1.1kk",
         "loot": "100k",
+        "runes": "Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -340,6 +388,7 @@
         "place": "Grimvale -4",
         "raw_exp": "1kk",
         "loot": "200k",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -347,6 +396,7 @@
         "place": "Krailos Bug Cave",
         "raw_exp": "600k",
         "loot": "150k",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -354,6 +404,7 @@
         "place": "Putrid Mummy",
         "raw_exp": "700k",
         "loot": "400k",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -361,6 +412,7 @@
         "place": "Calassa",
         "raw_exp": "1kk",
         "loot": "-50k",
+        "runes": "Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -368,6 +420,7 @@
         "place": "Sunken Quarter",
         "raw_exp": "1.3kk",
         "loot": "0k",
+        "runes": "Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -375,6 +428,7 @@
         "place": "Souleater Mountain",
         "raw_exp": "1kk",
         "loot": "100k",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -382,6 +436,7 @@
         "place": "Edron Vampire Crypt",
         "raw_exp": "850k",
         "loot": "400k",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -389,6 +444,7 @@
         "place": "Dragon Lords POI",
         "raw_exp": "850k",
         "loot": "-100k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -396,6 +452,7 @@
         "place": "Dragon Lords Fenrock",
         "raw_exp": "900k",
         "loot": "-50k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -403,6 +460,7 @@
         "place": "Edron Old Fortress -2",
         "raw_exp": "1.15kk",
         "loot": "100k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -410,6 +468,7 @@
         "place": "Ravenous Lava Lurkers",
         "raw_exp": "1.8kk",
         "loot": "-100k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -417,6 +476,7 @@
         "place": "Exotic Cave",
         "raw_exp": "1.2kk",
         "loot": "300k",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -424,6 +484,7 @@
         "place": "Iksupan",
         "raw_exp": "1.1kk",
         "loot": "200k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -431,6 +492,7 @@
         "place": "Edron Were South",
         "raw_exp": "1.4kk",
         "loot": "100k",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -438,6 +500,7 @@
         "place": "Lizard Chosens",
         "raw_exp": "1kk",
         "loot": "0k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -445,6 +508,7 @@
         "place": "Lizard City",
         "raw_exp": "1kk",
         "loot": "100k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -452,6 +516,7 @@
         "place": "Brimstone Bugs WOTE",
         "raw_exp": "950k",
         "loot": "600k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -459,6 +524,7 @@
         "place": "Edron Old Fortress -3",
         "raw_exp": "1.15kk",
         "loot": "0k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -466,6 +532,7 @@
         "place": "Carlin Cults",
         "raw_exp": "1.2kk",
         "loot": "-100k",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -473,6 +540,7 @@
         "place": "Goroma Medusa/Serpents (Talahu)",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "SD",
         "link" : "https://youtu.be/"
     },
     {
@@ -480,6 +548,7 @@
         "place": "Oramond East Minos",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -487,6 +556,7 @@
         "place": "Behemoths Forbidden Lands",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -494,6 +564,7 @@
         "place": "Dark Faun Cave Feyrist",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -501,6 +572,7 @@
         "place": "Glooth Bandits",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche, GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -508,6 +580,7 @@
         "place": "Elder Wyrms Drefia",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -515,6 +588,7 @@
         "place": "Deeplings Library Fiehonja",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -522,6 +596,7 @@
         "place": "Oramond West",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "GFB, Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -529,6 +604,7 @@
         "place": "Okolnir (Sorcerer)",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -536,6 +612,7 @@
         "place": "Deeper Banuta (Sorcerer)",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -543,6 +620,7 @@
         "place": "Goroma Demons Avalanche",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -550,6 +628,7 @@
         "place": "Mini Rosha",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -557,6 +636,7 @@
         "place": "Pirats",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Stoneshower",
         "link" : "https://youtu.be/"
     },
     {
@@ -564,6 +644,7 @@
         "place": "Diremaw Task Area (AOE)",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -571,6 +652,7 @@
         "place": "INQ Hellfires + Spectres",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche, Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -578,6 +660,7 @@
         "place": "Yalahar Grim Reapers",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -585,6 +668,7 @@
         "place": "Lower Spike",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -592,6 +676,7 @@
         "place": "Carnivors",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -599,6 +684,7 @@
         "place": "Draken Walls",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -606,6 +692,7 @@
         "place": "Winter Court",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -613,6 +700,7 @@
         "place": "Summer Court",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -620,6 +708,7 @@
         "place": "Werehyaenas",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -627,6 +716,7 @@
         "place": "Candia Nibblemaws",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -634,6 +724,7 @@
         "place": "Burster Spectres",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -641,6 +732,7 @@
         "place": "Oramond Wildlife Raid",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -648,6 +740,7 @@
         "place": "Book World: Chapter I/II/III/IV",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche, GFB, Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -655,6 +748,7 @@
         "place": "Gazer Spectre",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -662,6 +756,7 @@
         "place": "Drefia Grim Reapers (Sorcerer)",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Thunderstorm, GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -669,6 +764,7 @@
         "place": "Werelions",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -676,6 +772,7 @@
         "place": "Falcons",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche, GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -683,6 +780,7 @@
         "place": "Oramond Fury",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -690,6 +788,7 @@
         "place": "Ripper Spectres",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -697,6 +796,7 @@
         "place": "Warzone 4",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -704,6 +804,7 @@
         "place": "Warzone 5",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -711,6 +812,7 @@
         "place": "Warzone 6",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -718,6 +820,7 @@
         "place": "Cobras",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche, GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -725,6 +828,7 @@
         "place": "Oskayaat Weretigers",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Stoneshower",
         "link" : "https://youtu.be/"
     },
     {
@@ -732,6 +836,7 @@
         "place": "Oskayaat Werecrocodiles",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -739,6 +844,7 @@
         "place": "Iksupan",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -746,6 +852,7 @@
         "place": "Dream Labrynith",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche, GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -753,6 +860,7 @@
         "place": "Marapur Turtles",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Stoneshower",
         "link" : "https://youtu.be/"
     },
     {
@@ -760,6 +868,7 @@
         "place": "Otherworld",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Stoneshower",
         "link" : "https://youtu.be/"
     },
     {
@@ -767,6 +876,7 @@
         "place": "Oramond Catacombs",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -774,6 +884,7 @@
         "place": "Girtablilu",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -781,6 +892,7 @@
         "place": "Issavi Goannas",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -788,6 +900,7 @@
         "place": "Flimsy Lost Souls",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -795,6 +908,7 @@
         "place": "Marapur Nagas",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Stoneshower",
         "link" : "https://youtu.be/"
     },
     {
@@ -802,6 +916,7 @@
         "place": "Crypt Wardens -2",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -809,6 +924,7 @@
         "place": "Crypt Warriors",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -816,6 +932,7 @@
         "place": "Norcferatu Dungeons West",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -823,13 +940,7 @@
         "place": "Norcferatu Dungeons East",
         "raw_exp": "-",
         "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Cursed Prospector",
-        "raw_exp": "-",
-        "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -837,13 +948,31 @@
         "place": "Ingol",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     },
     {
         "level": "600+",
-        "place": "Warzone 1/2/3",
+        "place": "Warzone 1",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "GFB",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Warzone 2",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Avalanche",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Warzone 3",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -851,6 +980,7 @@
         "place": "Warzone 7",
         "raw_exp": "-",
         "loot": "-",
+        "runes": "Avalanche",
         "link" : "https://youtu.be/"
     }
 ]

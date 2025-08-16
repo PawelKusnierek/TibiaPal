@@ -40,6 +40,7 @@ scripts: <script src="../scripts/hunting.js"></script>
             <th class="place_row">Place</th>
             <th class="exp_row">Raw exp</th>
             <th class="loot_row">Loot</th>
+            <th class="weapon_row">Weapon Type</th>
         </tr>
         {% for hunt in site.data.hunting.soloknight %}
             <tr>
@@ -53,6 +54,7 @@ scripts: <script src="../scripts/hunting.js"></script>
 
                 <td>{{ hunt.raw_exp }}</td>
                 <td>{{ hunt.loot }}</td>
+                <td>{{ hunt.weapon_type }}</td>
             </tr>
         {% endfor %}
     </table>
@@ -72,6 +74,7 @@ scripts: <script src="../scripts/hunting.js"></script>
             <th class="place_row">Place</th>
             <th class="exp_row">Raw exp</th>
             <th class="loot_row">Loot</th>
+            <th class="runes_row">Runes</th>
         </tr>
         {% for hunt in site.data.hunting.solopaladin %}
             <tr>
@@ -85,6 +88,7 @@ scripts: <script src="../scripts/hunting.js"></script>
 
                 <td>{{ hunt.raw_exp }}</td>
                 <td>{{ hunt.loot }}</td>
+                <td>{{ hunt.runes }}</td>
             </tr>
         {% endfor %}
     </table>
@@ -103,6 +107,7 @@ scripts: <script src="../scripts/hunting.js"></script>
             <th class="place_row">Place</th>
             <th class="exp_row">Raw exp</th>
             <th class="loot_row">Loot</th>
+            <th class="runes_row">Runes</th>
         </tr>
         {% for hunt in site.data.hunting.solomage %}
             <tr>
@@ -116,6 +121,7 @@ scripts: <script src="../scripts/hunting.js"></script>
 
                 <td>{{ hunt.raw_exp }}</td>
                 <td>{{ hunt.loot }}</td>
+                <td>{{ hunt.runes }}</td>
             </tr>
         {% endfor %}
     </table>
@@ -134,6 +140,7 @@ scripts: <script src="../scripts/hunting.js"></script>
             <th class="place_row">Place</th>
             <th class="exp_row">Raw exp</th>
             <th class="loot_row">Loot</th>
+            <th class="weapon_row">Weapon Type</th>
         </tr>
         {% for hunt in site.data.hunting.solomonk %}
             <tr>
@@ -147,6 +154,7 @@ scripts: <script src="../scripts/hunting.js"></script>
 
                 <td>{{ hunt.raw_exp }}</td>
                 <td>{{ hunt.loot }}</td>
+                <td>{{ hunt.weapon_type }}</td>
             </tr>
         {% endfor %}
     </table>
