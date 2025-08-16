@@ -22,6 +22,45 @@
 .filter_selection label
     margin-right: 15px
 
+// New filter styles for dropdown layout
+.filter_container
+    margin-bottom: 20px
+    padding: 15px
+    background-color: #0d1e38
+    border-radius: 5px
+    border: 1px solid #1c4b9b
+
+.filter_row
+    display: flex
+    align-items: center
+    margin-bottom: 10px
+
+.filter_row:last-child
+    margin-bottom: 0
+
+.filter_row label
+    width: 140px
+    font-weight: bold
+    color: #ccc
+    margin: 0
+    text-align: left
+    flex-shrink: 0
+
+.filter_row select
+    padding: 5px 10px
+    border: 1px solid #1c4b9b
+    background-color: #14356d
+    color: #ccc
+    border-radius: 3px
+    font-size: 14px
+    min-width: 150px
+    flex-shrink: 0
+
+.filter_row select:focus
+    outline: none
+    border-color: #cbd4ff
+    box-shadow: 0 0 5px rgba(203, 212, 255, 0.3)
+
 .equipment_table tr td img
     display: block
     margin-left: auto

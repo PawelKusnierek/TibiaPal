@@ -191,99 +191,52 @@
 </div>
 
 <div id="Druid" class="tabcontent">
-    <div class="type_filter_selection">
-        <b>Type Filter</b>:<br><br>
-        <label>
-            <input value="All" type="radio" name="type_filter_choice_druid" checked onclick="apply_filters()"> All
-        </label>
-        <label>
-            <input value="Amulet" type="radio" name="type_filter_choice_druid" onclick="apply_filters()"> Amulet
-        </label>
-        <label>
-            <input value="Ring" type="radio" name="type_filter_choice_druid" onclick="apply_filters()"> Ring
-        </label>
-        <label>
-            <input value="Rod" type="radio" name="type_filter_choice_druid" onclick="apply_filters()"> Rod
-        </label>
-        <label>
-            <input value="Helmet" type="radio" name="type_filter_choice_druid" onclick="apply_filters()"> Helmet
-        </label>
-        <label>
-            <input value="Armor" type="radio" name="type_filter_choice_druid" onclick="apply_filters()"> Armor
-        </label>
-        <label>
-            <input value="Legs" type="radio" name="type_filter_choice_druid" onclick="apply_filters()"> Legs
-        </label>
-        <label>
-            <input value="Boots" type="radio" name="type_filter_choice_druid" onclick="apply_filters()"> Boots
-        </label>
-        <label>
-            <input value="Spellbook" type="radio" name="type_filter_choice_druid" onclick="apply_filters()"> Spellbook
-        </label>
-    </div><br>
-
-    <div class="protection_filter_selection">
-        <b>Protection Filter</b>:<br><br>
-        <label>
-            <input value="All" type="radio" name="protection_filter_choice_druid" checked onclick="apply_filters()"> All
-        </label>
-        <label>
-            <input value="Death" type="radio" name="protection_filter_choice_druid" onclick="apply_filters()"> Death
-        </label>
-        <label>
-            <input value="Earth" type="radio" name="protection_filter_choice_druid" onclick="apply_filters()"> Earth
-        </label>
-        <label>
-            <input value="Energy" type="radio" name="protection_filter_choice_druid" onclick="apply_filters()"> Energy
-        </label>
-        <label>
-            <input value="Fire" type="radio" name="protection_filter_choice_druid" onclick="apply_filters()"> Fire
-        </label>
-        <label>
-            <input value="Ice" type="radio" name="protection_filter_choice_druid" onclick="apply_filters()"> Ice
-        </label>
-        <label>
-            <input value="Physical" type="radio" name="protection_filter_choice_druid" onclick="apply_filters()"> Physical
-        </label>
-    </div><br>
-
-    <div class="filter_selection">
-        <b>Level Filter</b>:<br><br>
-        <label>
-            <input value="0" type="radio" name="level_filter_choice_druid" checked onclick="apply_filters()"> 150+
-        </label>
-        <label>
-            <input value="200+" type="radio" name="level_filter_choice_druid" onclick="apply_filters()"> 200+
-        </label>
-        <label>
-            <input value="250+" type="radio" name="level_filter_choice_druid" onclick="apply_filters()"> 250+
-        </label>
-        <label>
-            <input value="300+" type="radio" name="level_filter_choice_druid" onclick="apply_filters()"> 300+
-        </label>
-        <label>
-            <input value="400+" type="radio" name="level_filter_choice_druid" onclick="apply_filters()"> 400+
-        </label>
-        <label>
-            <input value="500+" type="radio" name="level_filter_choice_druid" onclick="apply_filters()"> 500+
-        </label><br><br>
-        <label>
-            <input value="<150" type="radio" name="level_filter_choice_druid" onclick="apply_filters()"> &le;150
-        </label>
-        <label>
-            <input value="<200" type="radio" name="level_filter_choice_druid" onclick="apply_filters()"> &le;200
-        </label>
-        <label>
-            <input value="<250" type="radio" name="level_filter_choice_druid" onclick="apply_filters()"> &le;250
-        </label>
-        <label>
-            <input value="<300" type="radio" name="level_filter_choice_druid" onclick="apply_filters()"> &le;300
-        </label>
-        <label>
-            <input value="<400" type="radio" name="level_filter_choice_druid" onclick="apply_filters()"> &le;400
-        </label>
-        <label>
-            <input value="<500" type="radio" name="level_filter_choice_druid" onclick="apply_filters()"> &le;500
+    <div class="filter_container">
+        <div class="filter_row">
+            <label for="type_filter_druid"><b>Type Filter:</b></label>
+            <select id="type_filter_druid" onchange="apply_filters()">
+                <option value="All">All</option>
+                <option value="Amulet">Amulet</option>
+                <option value="Ring">Ring</option>
+                <option value="Rod">Rod</option>
+                <option value="Helmet">Helmet</option>
+                <option value="Armor">Armor</option>
+                <option value="Legs">Legs</option>
+                <option value="Boots">Boots</option>
+                <option value="Spellbook">Spellbook</option>
+            </select>
+        </div>
+        
+        <div class="filter_row">
+            <label for="protection_filter_druid"><b>Protection Filter:</b></label>
+            <select id="protection_filter_druid" onchange="apply_filters()">
+                <option value="All">All</option>
+                <option value="Death">Death</option>
+                <option value="Earth">Earth</option>
+                <option value="Energy">Energy</option>
+                <option value="Fire">Fire</option>
+                <option value="Ice">Ice</option>
+                <option value="Physical">Physical</option>
+            </select>
+        </div>
+        
+        <div class="filter_row">
+            <label for="level_filter_druid"><b>Level Filter:</b></label>
+            <select id="level_filter_druid" onchange="apply_filters()">
+                <option value="0">150+</option>
+                <option value="200+">200+</option>
+                <option value="250+">250+</option>
+                <option value="300+">300+</option>
+                <option value="400+">400+</option>
+                <option value="500+">500+</option>
+                <option value="<150">≤150</option>
+                <option value="<200">≤200</option>
+                <option value="<250">≤250</option>
+                <option value="<300">≤300</option>
+                <option value="<400">≤400</option>
+                <option value="<500">≤500</option>
+            </select>
+        </div>
     </div>
 
     <table class="equipment_table" id="equipment_table_druid">
@@ -707,141 +660,76 @@
 </div>
 
 <div id="Knight" class="tabcontent">
-    <div class="type_filter_selection">
-        <b>Type Filter</b>:<br><br>
-        <label>
-            <input value="All" type="radio" name="type_filter_choice_knight" checked onclick="apply_filters()"> All
-        </label>
-        <label>
-            <input value="Amulet" type="radio" name="type_filter_choice_knight" onclick="apply_filters()"> Amulet
-        </label>
-        <label>
-            <input value="Ring" type="radio" name="type_filter_choice_knight" onclick="apply_filters()"> Ring
-        </label>
-        <label>
-            <input value="Weapon" type="radio" name="type_filter_choice_knight" onclick="apply_filters()"> Weapon
-        </label>
-        <label>
-            <input value="Helmet" type="radio" name="type_filter_choice_knight" onclick="apply_filters()"> Helmet
-        </label>
-        <label>
-            <input value="Armor" type="radio" name="type_filter_choice_knight" onclick="apply_filters()"> Armor
-        </label>
-        <label>
-            <input value="Legs" type="radio" name="type_filter_choice_knight" onclick="apply_filters()"> Legs
-        </label>
-        <label>
-            <input value="Boots" type="radio" name="type_filter_choice_knight" onclick="apply_filters()"> Boots
-        </label>
-        <label>
-            <input value="Shield" type="radio" name="type_filter_choice_knight" onclick="apply_filters()"> Shield
-        </label>
-    </div><br>
-
-    <div class="protection_filter_selection">
-        <b>Protection Filter</b>:<br><br>
-        <label>
-            <input value="All" type="radio" name="protection_filter_choice_knight" checked onclick="apply_filters()"> All
-        </label>
-        <label>
-            <input value="Death" type="radio" name="protection_filter_choice_knight" onclick="apply_filters()"> Death
-        </label>
-        <label>
-            <input value="Earth" type="radio" name="protection_filter_choice_knight" onclick="apply_filters()"> Earth
-        </label>
-        <label>
-            <input value="Energy" type="radio" name="protection_filter_choice_knight" onclick="apply_filters()"> Energy
-        </label>
-        <label>
-            <input value="Fire" type="radio" name="protection_filter_choice_knight" onclick="apply_filters()"> Fire
-        </label>
-        <label>
-            <input value="Ice" type="radio" name="protection_filter_choice_knight" onclick="apply_filters()"> Ice
-        </label>
-        <label>
-            <input value="Physical" type="radio" name="protection_filter_choice_knight" onclick="apply_filters()"> Physical
-        </label>
-    </div><br>
-
-    <div class="filter_selection">
-        <b>Level Filter</b>:<br><br>
-        <label>
-            <input value="0" type="radio" name="level_filter_choice_knight" checked onclick="apply_filters()"> 120+
-        </label>
-        <label>
-            <input value="200+" type="radio" name="level_filter_choice_knight" onclick="apply_filters()"> 200+
-        </label>
-        <label>
-            <input value="250+" type="radio" name="level_filter_choice_knight" onclick="apply_filters()"> 250+
-        </label>
-        <label>
-            <input value="300+" type="radio" name="level_filter_choice_knight" onclick="apply_filters()"> 300+
-        </label>
-        <label>
-            <input value="400+" type="radio" name="level_filter_choice_knight" onclick="apply_filters()"> 400+
-        </label>
-        <label>
-            <input value="500+" type="radio" name="level_filter_choice_knight" onclick="apply_filters()"> 500+
-        </label><br><br>
-        <label>
-            <input value="<120" type="radio" name="level_filter_choice_knight" onclick="apply_filters()"> &le;120
-        </label>
-        <label>
-            <input value="<200" type="radio" name="level_filter_choice_knight" onclick="apply_filters()"> &le;200
-        </label>
-        <label>
-            <input value="<250" type="radio" name="level_filter_choice_knight" onclick="apply_filters()"> &le;250
-        </label>
-        <label>
-            <input value="<300" type="radio" name="level_filter_choice_knight" onclick="apply_filters()"> &le;300
-        </label>
-        <label>
-            <input value="<400" type="radio" name="level_filter_choice_knight" onclick="apply_filters()"> &le;400
-        </label>
-        <label>
-            <input value="<500" type="radio" name="level_filter_choice_knight" onclick="apply_filters()"> &le;500
+    <div class="filter_container">
+        <div class="filter_row">
+            <label for="type_filter_knight"><b>Type Filter:</b></label>
+            <select id="type_filter_knight" onchange="handle_type_filter_change()">
+                <option value="All">All</option>
+                <option value="Amulet">Amulet</option>
+                <option value="Ring">Ring</option>
+                <option value="Weapon">Weapon</option>
+                <option value="Helmet">Helmet</option>
+                <option value="Armor">Armor</option>
+                <option value="Legs">Legs</option>
+                <option value="Boots">Boots</option>
+                <option value="Shield">Shield</option>
+            </select>
+        </div>
+        
+        <div class="filter_row">
+            <label for="protection_filter_knight"><b>Protection Filter:</b></label>
+            <select id="protection_filter_knight" onchange="apply_filters()">
+                <option value="All">All</option>
+                <option value="Death">Death</option>
+                <option value="Earth">Earth</option>
+                <option value="Energy">Energy</option>
+                <option value="Fire">Fire</option>
+                <option value="Ice">Ice</option>
+                <option value="Physical">Physical</option>
+            </select>
+        </div>
+        
+        <div class="filter_row">
+            <label for="level_filter_knight"><b>Level Filter:</b></label>
+            <select id="level_filter_knight" onchange="apply_filters()">
+                <option value="0">120+</option>
+                <option value="200+">200+</option>
+                <option value="250+">250+</option>
+                <option value="300+">300+</option>
+                <option value="400+">400+</option>
+                <option value="500+">500+</option>
+                <option value="<120">≤120</option>
+                <option value="<200">≤200</option>
+                <option value="<250">≤250</option>
+                <option value="<300">≤300</option>
+                <option value="<400">≤400</option>
+                <option value="<500">≤500</option>
+            </select>
+        </div>
+        
+        <div class="filter_row">
+            <label for="weapon_filter_knight"><b>Weapon Type:</b></label>
+            <select id="weapon_filter_knight" onchange="apply_filters()">
+                <option value="All">All</option>
+                <option value="Axe">Axe</option>
+                <option value="Club">Club</option>
+                <option value="Sword">Sword</option>
+            </select>
+        </div>
+        
+        <div class="filter_row">
+            <label for="weapon_damage_type_filter_knight"><b>Weapon Damage Type:</b></label>
+            <select id="weapon_damage_type_filter_knight" onchange="apply_filters()">
+                <option value="All">All</option>
+                <option value="Death">Death</option>
+                <option value="Earth">Earth</option>
+                <option value="Energy">Energy</option>
+                <option value="Fire">Fire</option>
+                <option value="Ice">Ice</option>
+                <option value="Physical">Physical</option>
+            </select>
+        </div>
     </div>
-
-    <div class="filter_selection">
-        <b>Weapon Type</b>:<br><br>
-        <label>
-            <input value="All" type="radio" name="weapon_filter_choice_knight" checked onclick="apply_filters()"> All
-        </label>
-        <label>
-            <input value="Axe" type="radio" name="weapon_filter_choice_knight" onclick="apply_filters()"> Axe
-        </label>
-        <label>
-            <input value="Club" type="radio" name="weapon_filter_choice_knight" onclick="apply_filters()"> Club
-        </label>
-        <label>
-            <input value="Sword" type="radio" name="weapon_filter_choice_knight" onclick="apply_filters()"> Sword
-        </label>
-    </div>
-
-    <div class="filter_selection">
-        <b>Weapon Damage Type</b>:<br><br>
-        <label>
-            <input value="All" type="radio" name="weapon_damage_type_choice_knight" checked onclick="apply_filters()"> All
-        </label>
-        <label>
-            <input value="Death" type="radio" name="weapon_damage_type_choice_knight" onclick="apply_filters()"> Death
-        </label>
-        <label>
-            <input value="Earth" type="radio" name="weapon_damage_type_choice_knight" onclick="apply_filters()"> Earth
-        </label>
-        <label>
-            <input value="Energy" type="radio" name="weapon_damage_type_choice_knight" onclick="apply_filters()"> Energy
-        </label>
-        <label>
-            <input value="Fire" type="radio" name="weapon_damage_type_choice_knight" onclick="apply_filters()"> Fire
-        </label>
-        <label>
-            <input value="Ice" type="radio" name="weapon_damage_type_choice_knight" onclick="apply_filters()"> Ice
-        </label>
-        <label>
-            <input value="Physical" type="radio" name="weapon_damage_type_choice_knight" onclick="apply_filters()"> Physical
-        </label>
-    </div><br>
 
     <table class="equipment_table" id="equipment_table_knight">
         <tr>
@@ -1629,102 +1517,53 @@
 </div>
 
 <div id="Paladin" class="tabcontent">
-    <div class="type_filter_selection">
-        <b>Type Filter</b>:<br><br>
-        <label>
-            <input value="All" type="radio" name="type_filter_choice_paladin" checked onclick="apply_filters()"> All
-        </label>
-        <label>
-            <input value="Amulet" type="radio" name="type_filter_choice_paladin" onclick="apply_filters()"> Amulet
-        </label>
-        <label>
-            <input value="Ring" type="radio" name="type_filter_choice_paladin" onclick="apply_filters()"> Ring
-        </label>
-        <label>
-            <input value="Bow" type="radio" name="type_filter_choice_paladin" onclick="apply_filters()"> Bow
-        </label>
-        <label>
-            <input value="Crossbow" type="radio" name="type_filter_choice_paladin" onclick="apply_filters()"> Crossbow
-        </label>
-        <label>
-            <input value="Helmet" type="radio" name="type_filter_choice_paladin" onclick="apply_filters()"> Helmet
-        </label>
-        <label>
-            <input value="Armor" type="radio" name="type_filter_choice_paladin" onclick="apply_filters()"> Armor
-        </label>
-        <label>
-            <input value="Legs" type="radio" name="type_filter_choice_paladin" onclick="apply_filters()"> Legs
-        </label>
-        <label>
-            <input value="Boots" type="radio" name="type_filter_choice_paladin" onclick="apply_filters()"> Boots
-        </label>
-        <label>
-            <input value="Quiver" type="radio" name="type_filter_choice_paladin" onclick="apply_filters()"> Quiver
-        </label>
-    </div><br>
-
-    <div class="protection_filter_selection">
-        <b>Protection Filter</b>:<br><br>
-        <label>
-            <input value="All" type="radio" name="protection_filter_choice_paladin" checked onclick="apply_filters()"> All
-        </label>
-        <label>
-            <input value="Death" type="radio" name="protection_filter_choice_paladin" onclick="apply_filters()"> Death
-        </label>
-        <label>
-            <input value="Earth" type="radio" name="protection_filter_choice_paladin" onclick="apply_filters()"> Earth
-        </label>
-        <label>
-            <input value="Energy" type="radio" name="protection_filter_choice_paladin" onclick="apply_filters()"> Energy
-        </label>
-        <label>
-            <input value="Fire" type="radio" name="protection_filter_choice_paladin" onclick="apply_filters()"> Fire
-        </label>
-        <label>
-            <input value="Ice" type="radio" name="protection_filter_choice_paladin" onclick="apply_filters()"> Ice
-        </label>
-        <label>
-            <input value="Physical" type="radio" name="protection_filter_choice_paladin" onclick="apply_filters()"> Physical
-        </label>
-    </div><br>
-
-    <div class="filter_selection">
-        <b>Level Filter</b>:<br><br>
-        <label>
-            <input value="0" type="radio" name="level_filter_choice_paladin" checked onclick="apply_filters()"> 120+
-        </label>
-        <label>
-            <input value="200+" type="radio" name="level_filter_choice_paladin" onclick="apply_filters()"> 200+
-        </label>
-        <label>
-            <input value="250+" type="radio" name="level_filter_choice_paladin" onclick="apply_filters()"> 250+
-        </label>
-        <label>
-            <input value="300+" type="radio" name="level_filter_choice_paladin" onclick="apply_filters()"> 300+
-        </label>
-        <label>
-            <input value="400+" type="radio" name="level_filter_choice_paladin" onclick="apply_filters()"> 400+
-        </label>
-        <label>
-            <input value="500+" type="radio" name="level_filter_choice_paladin" onclick="apply_filters()"> 500+
-        </label><br><br>
-        <label>
-            <input value="<120" type="radio" name="level_filter_choice_paladin" onclick="apply_filters()"> &le;120
-        </label>
-        <label>
-            <input value="<200" type="radio" name="level_filter_choice_paladin" onclick="apply_filters()"> &le;200
-        </label>
-        <label>
-            <input value="<250" type="radio" name="level_filter_choice_paladin" onclick="apply_filters()"> &le;250
-        </label>
-        <label>
-            <input value="<300" type="radio" name="level_filter_choice_paladin" onclick="apply_filters()"> &le;300
-        </label>
-        <label>
-            <input value="<400" type="radio" name="level_filter_choice_paladin" onclick="apply_filters()"> &le;400
-        </label>
-        <label>
-            <input value="<500" type="radio" name="level_filter_choice_paladin" onclick="apply_filters()"> &le;500
+    <div class="filter_container">
+        <div class="filter_row">
+            <label for="type_filter_paladin"><b>Type Filter:</b></label>
+            <select id="type_filter_paladin" onchange="apply_filters()">
+                <option value="All">All</option>
+                <option value="Amulet">Amulet</option>
+                <option value="Ring">Ring</option>
+                <option value="Bow">Bow</option>
+                <option value="Crossbow">Crossbow</option>
+                <option value="Helmet">Helmet</option>
+                <option value="Armor">Armor</option>
+                <option value="Legs">Legs</option>
+                <option value="Boots">Boots</option>
+                <option value="Quiver">Quiver</option>
+            </select>
+        </div>
+        
+        <div class="filter_row">
+            <label for="protection_filter_paladin"><b>Protection Filter:</b></label>
+            <select id="protection_filter_paladin" onchange="apply_filters()">
+                <option value="All">All</option>
+                <option value="Death">Death</option>
+                <option value="Earth">Earth</option>
+                <option value="Energy">Energy</option>
+                <option value="Fire">Fire</option>
+                <option value="Ice">Ice</option>
+                <option value="Physical">Physical</option>
+            </select>
+        </div>
+        
+        <div class="filter_row">
+            <label for="level_filter_paladin"><b>Level Filter:</b></label>
+            <select id="level_filter_paladin" onchange="apply_filters()">
+                <option value="0">120+</option>
+                <option value="200+">200+</option>
+                <option value="250+">250+</option>
+                <option value="300+">300+</option>
+                <option value="400+">400+</option>
+                <option value="500+">500+</option>
+                <option value="<120">≤120</option>
+                <option value="<200">≤200</option>
+                <option value="<250">≤250</option>
+                <option value="<300">≤300</option>
+                <option value="<400">≤400</option>
+                <option value="<500">≤500</option>
+            </select>
+        </div>
     </div>
 
     <table class="equipment_table" id="equipment_table_paladin">
@@ -2176,100 +2015,52 @@
 </div>
 
 <div id="Sorcerer" class="tabcontent">
-    <div class="type_filter_selection">
-        <b>Type Filter</b>:<br><br>
-        <label>
-            <input value="All" type="radio" name="type_filter_choice_sorcerer" checked onclick="apply_filters()"> All
-        </label>
-        <label>
-            <input value="Amulet" type="radio" name="type_filter_choice_sorcerer" onclick="apply_filters()"> Amulet
-        </label>
-        <label>
-            <input value="Ring" type="radio" name="type_filter_choice_sorcerer" onclick="apply_filters()"> Ring
-        </label>
-        <label>
-            <input value="Wand" type="radio" name="type_filter_choice_sorcerer" onclick="apply_filters()"> Wand
-        </label>
-        <label>
-            <input value="Helmet" type="radio" name="type_filter_choice_sorcerer" onclick="apply_filters()"> Helmet
-        </label>
-        <label>
-            <input value="Armor" type="radio" name="type_filter_choice_sorcerer" onclick="apply_filters()"> Armor
-        </label>
-        <label>
-            <input value="Legs" type="radio" name="type_filter_choice_sorcerer" onclick="apply_filters()"> Legs
-        </label>
-        <label>
-            <input value="Boots" type="radio" name="type_filter_choice_sorcerer" onclick="apply_filters()"> Boots
-        </label>
-        <label>
-            <input value="Spellbook" type="radio" name="type_filter_choice_sorcerer" onclick="apply_filters()">
-            Spellbook
-        </label>
-    </div><br>
-
-    <div class="protection_filter_selection">
-        <b>Protection Filter</b>:<br><br>
-        <label>
-            <input value="All" type="radio" name="protection_filter_choice_sorcerer" checked onclick="apply_filters()"> All
-        </label>
-        <label>
-            <input value="Death" type="radio" name="protection_filter_choice_sorcerer" onclick="apply_filters()"> Death
-        </label>
-        <label>
-            <input value="Earth" type="radio" name="protection_filter_choice_sorcerer" onclick="apply_filters()"> Earth
-        </label>
-        <label>
-            <input value="Energy" type="radio" name="protection_filter_choice_sorcerer" onclick="apply_filters()"> Energy
-        </label>
-        <label>
-            <input value="Fire" type="radio" name="protection_filter_choice_sorcerer" onclick="apply_filters()"> Fire
-        </label>
-        <label>
-            <input value="Ice" type="radio" name="protection_filter_choice_sorcerer" onclick="apply_filters()"> Ice
-        </label>
-        <label>
-            <input value="Physical" type="radio" name="protection_filter_choice_sorcerer" onclick="apply_filters()"> Physical
-        </label>
-    </div><br>
-
-    <div class="filter_selection">
-        <b>Level Filter</b>:<br><br>
-        <label>
-            <input value="0" type="radio" name="level_filter_choice_sorcerer" checked onclick="apply_filters()"> 140+
-        </label>
-        <label>
-            <input value="200+" type="radio" name="level_filter_choice_sorcerer" onclick="apply_filters()"> 200+
-        </label>
-        <label>
-            <input value="250+" type="radio" name="level_filter_choice_sorcerer" onclick="apply_filters()"> 250+
-        </label>
-        <label>
-            <input value="300+" type="radio" name="level_filter_choice_sorcerer" onclick="apply_filters()"> 300+
-        </label>
-        <label>
-            <input value="400+" type="radio" name="level_filter_choice_sorcerer" onclick="apply_filters()"> 400+
-        </label>
-        <label>
-            <input value="500+" type="radio" name="level_filter_choice_sorcerer" onclick="apply_filters()"> 500+
-        </label><br><br>
-        <label>
-            <input value="<140" type="radio" name="level_filter_choice_sorcerer" onclick="apply_filters()"> &le;140
-        </label>
-        <label>
-            <input value="<200" type="radio" name="level_filter_choice_sorcerer" onclick="apply_filters()"> &le;200
-        </label>
-        <label>
-            <input value="<250" type="radio" name="level_filter_choice_sorcerer" onclick="apply_filters()"> &le;250
-        </label>
-        <label>
-            <input value="<300" type="radio" name="level_filter_choice_sorcerer" onclick="apply_filters()"> &le;300
-        </label>
-        <label>
-            <input value="<400" type="radio" name="level_filter_choice_sorcerer" onclick="apply_filters()"> &le;400
-        </label>
-        <label>
-            <input value="<500" type="radio" name="level_filter_choice_sorcerer" onclick="apply_filters()"> &le;500
+    <div class="filter_container">
+        <div class="filter_row">
+            <label for="type_filter_sorcerer"><b>Type Filter:</b></label>
+            <select id="type_filter_sorcerer" onchange="apply_filters()">
+                <option value="All">All</option>
+                <option value="Amulet">Amulet</option>
+                <option value="Ring">Ring</option>
+                <option value="Wand">Wand</option>
+                <option value="Helmet">Helmet</option>
+                <option value="Armor">Armor</option>
+                <option value="Legs">Legs</option>
+                <option value="Boots">Boots</option>
+                <option value="Spellbook">Spellbook</option>
+            </select>
+        </div>
+        
+        <div class="filter_row">
+            <label for="protection_filter_sorcerer"><b>Protection Filter:</b></label>
+            <select id="protection_filter_sorcerer" onchange="apply_filters()">
+                <option value="All">All</option>
+                <option value="Death">Death</option>
+                <option value="Earth">Earth</option>
+                <option value="Energy">Energy</option>
+                <option value="Fire">Fire</option>
+                <option value="Ice">Ice</option>
+                <option value="Physical">Physical</option>
+            </select>
+        </div>
+        
+        <div class="filter_row">
+            <label for="level_filter_sorcerer"><b>Level Filter:</b></label>
+            <select id="level_filter_sorcerer" onchange="apply_filters()">
+                <option value="0">140+</option>
+                <option value="200+">200+</option>
+                <option value="250+">250+</option>
+                <option value="300+">300+</option>
+                <option value="400+">400+</option>
+                <option value="500+">500+</option>
+                <option value="<140">≤140</option>
+                <option value="<200">≤200</option>
+                <option value="<250">≤250</option>
+                <option value="<300">≤300</option>
+                <option value="<400">≤400</option>
+                <option value="<500">≤500</option>
+            </select>
+        </div>
     </div>
 
     <table class="equipment_table" id="equipment_table_sorcerer">
@@ -2703,114 +2494,67 @@
 </div>
 
 <div id="Monk" class="tabcontent">
-    <div class="type_filter_selection">
-        <b>Type Filter</b>:<br><br>
-        <label>
-            <input value="All" type="radio" name="type_filter_choice_monk" checked onclick="apply_filters()"> All
-        </label>
-        <label>
-            <input value="Amulet" type="radio" name="type_filter_choice_monk" onclick="apply_filters()"> Amulet
-        </label>
-        <label>
-            <input value="Ring" type="radio" name="type_filter_choice_monk" onclick="apply_filters()"> Ring
-        </label>
-        <label>
-            <input value="Weapon" type="radio" name="type_filter_choice_monk" onclick="apply_filters()"> Weapon
-        </label>
-        <label>
-            <input value="Helmet" type="radio" name="type_filter_choice_monk" onclick="apply_filters()"> Helmet
-        </label>
-        <label>
-            <input value="Armor" type="radio" name="type_filter_choice_monk" onclick="apply_filters()"> Armor
-        </label>
-        <label>
-            <input value="Legs" type="radio" name="type_filter_choice_monk" onclick="apply_filters()"> Legs
-        </label>
-        <label>
-            <input value="Boots" type="radio" name="type_filter_choice_monk" onclick="apply_filters()"> Boots
-        </label>
-    </div><br>
-
-    <div class="protection_filter_selection">
-        <b>Protection Filter</b>:<br><br>
-        <label>
-            <input value="All" type="radio" name="protection_filter_choice_monk" checked onclick="apply_filters()"> All
-        </label>
-        <label>
-            <input value="Death" type="radio" name="protection_filter_choice_monk" onclick="apply_filters()"> Death
-        </label>
-        <label>
-            <input value="Earth" type="radio" name="protection_filter_choice_monk" onclick="apply_filters()"> Earth
-        </label>
-        <label>
-            <input value="Energy" type="radio" name="protection_filter_choice_monk" onclick="apply_filters()"> Energy
-        </label>
-        <label>
-            <input value="Fire" type="radio" name="protection_filter_choice_monk" onclick="apply_filters()"> Fire
-        </label>
-        <label>
-            <input value="Ice" type="radio" name="protection_filter_choice_monk" onclick="apply_filters()"> Ice
-        </label>
-        <label>
-            <input value="Physical" type="radio" name="protection_filter_choice_monk" onclick="apply_filters()"> Physical
-        </label>
-    </div><br>
-
-    <div class="filter_selection">
-        <b>Level Filter</b>:<br><br>
-        <label>
-            <input value="0" type="radio" name="level_filter_choice_monk" checked onclick="apply_filters()"> 0+
-        </label>
-        <label>
-            <input value="50" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> 50+
-        </label>
-        <label>
-            <input value="100" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> 100+
-        </label>
-        <label>
-            <input value="150" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> 150+
-        </label>
-        <label>
-            <input value="200+" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> 200+
-        </label>
-        <label>
-            <input value="250+" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> 250+
-        </label>
-        <label>
-            <input value="300+" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> 300+
-        </label>
-        <label>
-            <input value="400+" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> 400+
-        </label>
-        <label>
-            <input value="500+" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> 500+
-        </label><br><br>
-        <label>
-            <input value="<0" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> &le;0
-        </label>
-        <label>
-            <input value="<50" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> &le;50
-        </label>
-        <label>
-            <input value="<100" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> &le;100
-        </label>
-        <label>
-            <input value="<150" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> &le;150
-        </label>
-        <label>
-            <input value="<200" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> &le;200
-        </label>
-        <label>
-            <input value="<250" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> &le;250
-        </label>
-        <label>
-            <input value="<300" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> &le;300
-        </label>
-        <label>
-            <input value="<400" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> &le;400
-        </label>
-        <label>
-            <input value="<500" type="radio" name="level_filter_choice_monk" onclick="apply_filters()"> &le;500
+    <div class="filter_container">
+        <div class="filter_row">
+            <label for="type_filter_monk"><b>Type Filter:</b></label>
+            <select id="type_filter_monk" onchange="handle_type_filter_change()">
+                <option value="All">All</option>
+                <option value="Amulet">Amulet</option>
+                <option value="Ring">Ring</option>
+                <option value="Weapon">Weapon</option>
+                <option value="Helmet">Helmet</option>
+                <option value="Armor">Armor</option>
+                <option value="Legs">Legs</option>
+                <option value="Boots">Boots</option>
+            </select>
+        </div>
+        
+        <div class="filter_row">
+            <label for="protection_filter_monk"><b>Protection Filter:</b></label>
+            <select id="protection_filter_monk" onchange="apply_filters()">
+                <option value="All">All</option>
+                <option value="Death">Death</option>
+                <option value="Earth">Earth</option>
+                <option value="Energy">Energy</option>
+                <option value="Fire">Fire</option>
+                <option value="Ice">Ice</option>
+                <option value="Physical">Physical</option>
+            </select>
+        </div>
+        
+        <div class="filter_row">
+            <label for="level_filter_monk"><b>Level Filter:</b></label>
+            <select id="level_filter_monk" onchange="apply_filters()">
+                <option value="0">0+</option>
+                <option value="50">50+</option>
+                <option value="100">100+</option>
+                <option value="150">150+</option>
+                <option value="200+">200+</option>
+                <option value="250+">250+</option>
+                <option value="300+">300+</option>
+                <option value="400+">400+</option>
+                <option value="500+">500+</option>
+                <option value="<0">≤0</option>
+                <option value="<50">≤50</option>
+                <option value="<100">≤100</option>
+                <option value="<150">≤150</option>
+                <option value="<200">≤200</option>
+                <option value="<250">≤250</option>
+                <option value="<300">≤300</option>
+                <option value="<400">≤400</option>
+                <option value="<500">≤500</option>
+            </select>
+        </div>
+        
+                         <div class="filter_row">
+                     <label for="weapon_damage_type_filter_monk"><b>Weapon Damage Type:</b></label>
+                     <select id="weapon_damage_type_filter_monk" onchange="apply_filters()">
+                         <option value="All">All</option>
+                         <option value="Earth">Earth</option>
+                         <option value="Energy">Energy</option>
+                         <option value="Physical">Physical</option>
+                     </select>
+                 </div>
     </div>
 
     <table class="equipment_table" id="equipment_table_monk">

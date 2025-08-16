@@ -1,47 +1,43 @@
 function apply_filters() {
 	let vocation = get_active_vocation()
 
-	let level_elements = document.getElementsByName('level_filter_choice_' + vocation);
-	let level_selection
-	for (let i = 0; i < level_elements.length; i++) {
-		if (level_elements[i].checked) {
-			level_selection = level_elements[i].value;
-		}
-	}
+	// Get level filter value from dropdown
+	let level_selection = document.getElementById('level_filter_' + vocation).value
 
-	let type_elements = document.getElementsByName('type_filter_choice_' + vocation);
-	let type_selection
-	for (let i = 0; i < type_elements.length; i++) {
-		if (type_elements[i].checked) {
-			type_selection = type_elements[i].value;
-		}
-	}
+	// Get type filter value from dropdown
+	let type_selection = document.getElementById('type_filter_' + vocation).value
 
-	let protection_elements = document.getElementsByName('protection_filter_choice_' + vocation);
-	let protection_selection
-	for (let i = 0; i < protection_elements.length; i++) {
-		if (protection_elements[i].checked) {
-			protection_selection = protection_elements[i].value;
-		}
-	}
+	// Get protection filter value from dropdown
+	let protection_selection = document.getElementById('protection_filter_' + vocation).value
 
-	let weapon_elements = document.getElementsByName('weapon_filter_choice_knight');
-	let weapon_type_selection
-	for (let i = 0; i < weapon_elements.length; i++) {
-		if (weapon_elements[i].checked) {
-			weapon_type_selection = weapon_elements[i].value;
-		}
+	// Get weapon filter values (only for knight)
+	let weapon_type_selection = "All"
+	let weapon_damage_type_selection = "All"
+	if (vocation === "knight") {
+		weapon_type_selection = document.getElementById('weapon_filter_knight').value
+		weapon_damage_type_selection = document.getElementById('weapon_damage_type_filter_knight').value
 	}
-
-	let weapon_type_elements = document.getElementsByName('weapon_damage_type_choice_knight');
-	let weapon_damage_type_selection
-	for (let i = 0; i < weapon_type_elements.length; i++) {
-		if (weapon_type_elements[i].checked) {
-			weapon_damage_type_selection = weapon_type_elements[i].value;
-		}
+	
+	// Get weapon damage type filter value (for monk)
+	if (vocation === "monk") {
+		weapon_damage_type_selection = document.getElementById('weapon_damage_type_filter_monk').value
 	}
 
 	filter_equipment_table(level_selection, type_selection, protection_selection, weapon_type_selection, weapon_damage_type_selection, vocation)
+}
+
+function handle_type_filter_change() {
+	let vocation = get_active_vocation()
+	
+	// Reset weapon damage type filter to 'All' for Knight and Monk
+	if (vocation === "knight") {
+		document.getElementById('weapon_damage_type_filter_knight').value = 'All'
+	} else if (vocation === "monk") {
+		document.getElementById('weapon_damage_type_filter_monk').value = 'All'
+	}
+	
+	// Apply the filters
+	apply_filters()
 }
 
 function filter_equipment_table(level_selection, type_selection, protection_selection, weapon_type_selection, weapon_damage_type_selection, vocation) {
@@ -99,6 +95,21 @@ function filter_equipment_table(level_selection, type_selection, protection_sele
 					}
 				}
 			}
+			if (weapon_damage_type_selection != "All") {
+				let weapon_type_value = equipment_table.rows[i].cells[3].childNodes[0].data;
+				if (!weapon_type_value.includes("Weapon")) {
+					equipment_table.rows[i].style.display = 'none'
+				}
+				else {
+					let weapon_damage_type_value = equipment_table.rows[i].cells[2].innerHTML;
+					if (!weapon_damage_type_value.includes(weapon_damage_type_selection)) {
+						equipment_table.rows[i].style.display = 'none'
+					}
+				}
+			}
+		}
+		
+		if (vocation == "monk") {
 			if (weapon_damage_type_selection != "All") {
 				let weapon_type_value = equipment_table.rows[i].cells[3].childNodes[0].data;
 				if (!weapon_type_value.includes("Weapon")) {
