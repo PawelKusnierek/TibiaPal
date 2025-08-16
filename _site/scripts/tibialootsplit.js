@@ -1,4 +1,7 @@
 function initial_submit() {
+    // Migrate old history format to new format before processing
+    migrate_old_history_format();
+    
     valid_data = validate_analyser_data(0);
     if (!valid_data) {
         return false;
@@ -14,6 +17,36 @@ function initial_submit() {
         preplootsplit();
     } else if (is_removeplayerslootsplit) {
         prepare_remove_players_lootsplit();
+    }
+}
+
+function migrate_old_history_format() {
+    const history = JSON.parse(
+        localStorage.getItem("tibialootsplitresults") || "[]"
+    );
+    
+    if (history.length === 0) {
+        return; // No history to migrate
+    }
+    
+    // Check if we need to migrate (if history length is not divisible by 7)
+    if (history.length % 7 !== 0) {
+        const migratedHistory = [];
+        const itemsPerOldRow = 6;
+        const numberOfRows = Math.floor(history.length / itemsPerOldRow);
+        
+        for (let i = 0; i < numberOfRows; i++) {
+            const startIndex = i * itemsPerOldRow;
+            // Copy the 6 existing items
+            for (let j = 0; j < itemsPerOldRow; j++) {
+                migratedHistory.push(history[startIndex + j]);
+            }
+            // Add dummy log entry for old format
+            migratedHistory.push("Log not available");
+        }
+        
+        // Save the migrated history
+        localStorage.setItem("tibialootsplitresults", JSON.stringify(migratedHistory));
     }
 }
 
@@ -894,7 +927,7 @@ function copy_analyser_log(button_id) {
     const analyser_log = history[index];
     
     // Check if analyser log exists and is not empty
-    if (!analyser_log || analyser_log === "" || typeof analyser_log !== 'string') {
+    if (!analyser_log || analyser_log === "" || typeof analyser_log !== 'string' || analyser_log === "Log not available") {
         alert("No analyser log available for this entry.");
         return;
     }
