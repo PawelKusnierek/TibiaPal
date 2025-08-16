@@ -520,16 +520,23 @@ function update_the_html(
         profit_per_person = profit_per_person + " gp";
     }
     
-    // Calculate profit per hour using raw values
-    const profitPerHour = calculate_profit_per_hour(raw_profit_per_person, session_duration);
-    let profitPerHourFormatted;
-    
-    if (Math.abs(profitPerHour) > 1000000) {
-        profitPerHourFormatted = (profitPerHour / 1000000).toFixed(2) + "kk~";
-    } else if (Math.abs(profitPerHour) > 1000) {
-        profitPerHourFormatted = Math.round(profitPerHour / 1000) + "k~";
-    } else {
-        profitPerHourFormatted = Math.round(profitPerHour) + " gp";
+    // Calculate profit per hour using raw values (only if session_duration is available)
+    let profitPerHourFormatted = null;
+    if (session_duration && session_duration !== "Log not available") {
+        try {
+            const profitPerHour = calculate_profit_per_hour(raw_profit_per_person, session_duration);
+            
+            if (Math.abs(profitPerHour) > 1000000) {
+                profitPerHourFormatted = (profitPerHour / 1000000).toFixed(2) + "kk~";
+            } else if (Math.abs(profitPerHour) > 1000) {
+                profitPerHourFormatted = Math.round(profitPerHour / 1000) + "k~";
+            } else {
+                profitPerHourFormatted = Math.round(profitPerHour) + " gp";
+            }
+        } catch (error) {
+            // If calculation fails, don't show profit per hour
+            profitPerHourFormatted = null;
+        }
     }
 
     if (profit) {
@@ -552,24 +559,26 @@ function update_the_html(
         resultsContent.innerHTML =
             resultsContent.innerHTML + '<div class="block_element"></div>';
         
-        // Add profit per hour line
-        resultsContent.innerHTML =
-            resultsContent.innerHTML +
-            "<p> Session duration: " +
-            session_duration +
-            "h, which is: " +
-            '<span id="profit_positive">' +
-            profitPerHourFormatted +
-            "</span> for each player per hour. </p >";
-        discord_output.push(
-            "Session duration: " +
-            session_duration +
-            "h, which is: " +
-            profitPerHourFormatted +
-            " for each player per hour."
-        );
-        resultsContent.innerHTML =
-            resultsContent.innerHTML + '<div class="block_element"></div>';
+        // Add profit per hour line (only if calculation was successful)
+        if (profitPerHourFormatted !== null) {
+            resultsContent.innerHTML =
+                resultsContent.innerHTML +
+                "<p> Session duration: " +
+                session_duration +
+                "h, which is: " +
+                '<span id="profit_positive">' +
+                profitPerHourFormatted +
+                "</span> for each player per hour. </p >";
+            discord_output.push(
+                "Session duration: " +
+                session_duration +
+                "h, which is: " +
+                profitPerHourFormatted +
+                " for each player per hour."
+            );
+            resultsContent.innerHTML =
+                resultsContent.innerHTML + '<div class="block_element"></div>';
+        }
     } else {
         resultsContent.innerHTML =
             resultsContent.innerHTML +
@@ -590,24 +599,26 @@ function update_the_html(
         resultsContent.innerHTML =
             resultsContent.innerHTML + '<div class="block_element"></div>';
         
-        // Add waste per hour line
-        resultsContent.innerHTML =
-            resultsContent.innerHTML +
-            "<p> Session duration: " +
-            session_duration +
-            "h, which is: " +
-            '<span id="profit_negative">' +
-            profitPerHourFormatted +
-            "</span> for each player per hour. </p >";
-        discord_output.push(
-            "Session duration: " +
-            session_duration +
-            "h, which is: " +
-            profitPerHourFormatted +
-            " for each player per hour."
-        );
-        resultsContent.innerHTML =
-            resultsContent.innerHTML + '<div class="block_element"></div>';
+        // Add waste per hour line (only if calculation was successful)
+        if (profitPerHourFormatted !== null) {
+            resultsContent.innerHTML =
+                resultsContent.innerHTML +
+                "<p> Session duration: " +
+                session_duration +
+                "h, which is: " +
+                '<span id="profit_negative">' +
+                profitPerHourFormatted +
+                "</span> for each player per hour. </p >";
+            discord_output.push(
+                "Session duration: " +
+                session_duration +
+                "h, which is: " +
+                profitPerHourFormatted +
+                " for each player per hour."
+            );
+            resultsContent.innerHTML =
+                resultsContent.innerHTML + '<div class="block_element"></div>';
+        }
     }
 
     resultsContent.innerHTML =
@@ -896,6 +907,7 @@ function results_from_history(table_cell_id) {
     who_to_pay_and_how_much = history[table_cell_id];
     total_profit = history[parseInt(table_cell_id) + 2];
     profit_per_person = history[parseInt(table_cell_id) + 1];
+    session_duration = history[parseInt(table_cell_id) + 4]; // Add session duration
 
     resultsContent = document.getElementById("results");
     update_the_html(
