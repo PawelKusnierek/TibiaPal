@@ -32,6 +32,18 @@ scripts: <script src="../scripts/hunting.js"></script>
             <label for="levelFilter_knight" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Character Level:</label>
             <input type="number" id="levelFilter_knight" class="level-filter" placeholder="Shows spawns suitable for your level..." min="0" style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
         </div>
+        <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+            <label for="weaponTypeFilter_knight" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Weapon Type:</label>
+            <select id="weaponTypeFilter_knight" onchange="apply_weapon_type_filter()" style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
+                <option value="All">All</option>
+                <option value="Physical">Physical</option>
+                <option value="Ice">Ice</option>
+                <option value="Energy">Energy</option>
+                <option value="Fire">Fire</option>
+                <option value="Earth">Earth</option>
+                <option value="Death">Death</option>
+            </select>
+        </div>
     </div>
 
     <table id="hunting_table_knight" class="hunting_table">
@@ -132,6 +144,15 @@ scripts: <script src="../scripts/hunting.js"></script>
         <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
             <label for="levelFilter_monk" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Character Level:</label>
             <input type="number" id="levelFilter_monk" class="level-filter" placeholder="Shows spawns suitable for your level..." min="0" style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
+        </div>
+        <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+            <label for="weaponTypeFilter_monk" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Weapon Type:</label>
+            <select id="weaponTypeFilter_monk" onchange="apply_weapon_type_filter()" style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
+                <option value="All">All</option>
+                <option value="Physical">Physical</option>
+                <option value="Energy">Energy</option>
+                <option value="Earth">Earth</option>
+            </select>
         </div>
     </div>
     <table id="hunting_table_monk" class="hunting_table">

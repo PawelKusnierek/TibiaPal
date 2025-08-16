@@ -1,9 +1,21 @@
 function apply_level_filter() {
 	let vocation = get_active_vocation()
+	apply_combined_filters(vocation);
+}
+
+function apply_weapon_type_filter() {
+	let vocation = get_active_vocation()
+	apply_combined_filters(vocation);
+}
+
+function apply_combined_filters(vocation) {
 	const levelFilter = document.getElementById("levelFilter_" + vocation);
-	const playerLevel = levelFilter.value ? parseInt(levelFilter.value) : null;
+	const weaponTypeFilter = document.getElementById("weaponTypeFilter_" + vocation);
 	
-	filter_hunting_table(playerLevel, vocation);
+	const playerLevel = levelFilter && levelFilter.value ? parseInt(levelFilter.value) : null;
+	const weaponType = weaponTypeFilter ? weaponTypeFilter.value : "All";
+	
+	filter_hunting_table_combined(playerLevel, weaponType, vocation);
 	
 	// Reapply color coding after filtering
 	setTimeout(() => {
@@ -11,20 +23,39 @@ function apply_level_filter() {
 	}, 10);
 }
 
-function filter_hunting_table(level_filter, vocation) {
+function filter_hunting_table_combined(level_filter, weapon_type, vocation) {
 	let hunting_table = document.getElementById("hunting_table_" + vocation);
 	let number_of_rows = hunting_table.rows.length;
 	unfilter_hunting_table(vocation);
 	
-	// If no level filter is set, show all rows
-	if (level_filter === null || level_filter === 0) {
+	// If no filters are set, show all rows
+	if ((level_filter === null || level_filter === 0) && weapon_type === "All") {
 		return;
 	}
 	
 	for (let i = number_of_rows - 1; i > 0; i--) {
-		let level_value = hunting_table.rows[i].cells[0].childNodes[0].data;
-		level_value = level_value.replace("+", "")
-		if (parseInt(level_value) > level_filter) {
+		let should_hide = false;
+		
+		// Check level filter
+		if (level_filter !== null && level_filter !== 0) {
+			let level_value = hunting_table.rows[i].cells[0].childNodes[0].data;
+			level_value = level_value.replace("+", "")
+			if (parseInt(level_value) > level_filter) {
+				should_hide = true;
+			}
+		}
+		
+		// Check weapon type filter
+		if (weapon_type !== "All") {
+			let weapon_type_value = hunting_table.rows[i].cells[4].textContent.trim();
+			// Check if the weapon type value contains the selected filter
+			// This handles both single values and multiple values separated by commas
+			if (!weapon_type_value.includes(weapon_type)) {
+				should_hide = true;
+			}
+		}
+		
+		if (should_hide) {
 			hunting_table.rows[i].style.display = 'none'
 		}
 	}
@@ -37,6 +68,8 @@ function unfilter_hunting_table(vocation) {
 		hunting_table.rows[i].style.display = 'table-row'
 	}
 }
+
+
 
 function get_active_vocation() {
 	let vocation_buttons = document.getElementsByClassName("tablinks");
