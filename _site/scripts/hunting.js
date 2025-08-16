@@ -1,23 +1,25 @@
 function apply_level_filter() {
 	let vocation = get_active_vocation()
-
-	let elements = document.getElementsByName('level_filter_choice_' + vocation);
-	for (let i = 0; i < elements.length; i++) {
-		if (elements[i].checked) {
-			filter_hunting_table(parseInt(elements[i].value), vocation);
-			return;
-		}
-	}
+	const levelFilter = document.getElementById("levelFilter_" + vocation);
+	const playerLevel = levelFilter.value ? parseInt(levelFilter.value) : null;
+	
+	filter_hunting_table(playerLevel, vocation);
 }
 
 function filter_hunting_table(level_filter, vocation) {
 	let hunting_table = document.getElementById("hunting_table_" + vocation);
 	let number_of_rows = hunting_table.rows.length;
 	unfilter_hunting_table(vocation);
+	
+	// If no level filter is set, show all rows
+	if (level_filter === null || level_filter === 0) {
+		return;
+	}
+	
 	for (let i = number_of_rows - 1; i > 0; i--) {
 		let level_value = hunting_table.rows[i].cells[0].childNodes[0].data;
 		level_value = level_value.replace("+", "")
-		if (parseInt(level_value) < level_filter) {
+		if (parseInt(level_value) > level_filter) {
 			hunting_table.rows[i].style.display = 'none'
 		}
 	}
@@ -236,6 +238,32 @@ function initializeSortingHeaders() {
 				header.style.cursor = "pointer";
 				header.classList.add("sortable-header");
 				header.addEventListener("click", () => sortTable(columnIndex, vocation));
+			});
+		}
+		
+		// Set up level filter event listeners
+		const levelFilter = document.getElementById("levelFilter_" + vocation);
+		if (levelFilter) {
+			let hasAutoSorted = false; // Track if we've already auto-sorted for this input
+			
+			levelFilter.addEventListener("input", function() {
+				apply_level_filter();
+				
+				// Auto-sort by Raw exp (column index 2) only on first input
+				if (this.value && this.value.length > 0 && !hasAutoSorted) {
+					hasAutoSorted = true; // Mark that we've auto-sorted
+					// Small delay to ensure the filter has been applied first
+					setTimeout(() => {
+						sortTable(2, vocation); // 2 is the Raw exp column index
+					}, 10);
+				}
+			});
+			
+			// Reset the auto-sort flag when the field is cleared
+			levelFilter.addEventListener("blur", function() {
+				if (!this.value || this.value.length === 0) {
+					hasAutoSorted = false;
+				}
 			});
 		}
 	});

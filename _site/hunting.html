@@ -176,7 +176,20 @@
     <button class="nav-toggle" onclick="toggleNavigation()" style="display: none;">☰ Menu</button>
     
     <section id="main-content">
-    <div class="hunting_tab">
+    <style>
+/* Remove scroll elements from number inputs */
+.level-filter::-webkit-outer-spin-button,
+.level-filter::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.level-filter[type=number] {
+    -moz-appearance: textfield;
+}
+</style>
+
+<div class="hunting_tab">
     <button id="knight" class="tablinks active" onclick="show_tab(event, 'Knight')">Knight</button>
     <button id="paladin" class="tablinks" onclick="show_tab(event, 'Paladin')">Paladin</button>
     <button id="mage" class="tablinks" onclick="show_tab(event, 'Mage')">Druid/Sorcerer</button>
@@ -187,28 +200,10 @@
 
 <div id="Knight" class="tabcontent">
     <div id="filter_selection">
-        <b>Level Filter</b>:<br><br>
-        <label>
-            <input value="0" type="radio" name="level_filter_choice_knight" checked onclick="apply_level_filter()"> All
-        </label>
-        <label>
-            <input value="50" type="radio" name="level_filter_choice_knight" onclick="apply_level_filter()"> 50+
-        </label>
-        <label>
-            <input value="100" type="radio" name="level_filter_choice_knight" onclick="apply_level_filter()"> 100+
-        </label>
-        <label>
-            <input value="130" type="radio" name="level_filter_choice_knight" onclick="apply_level_filter()"> 130+
-        </label>
-        <label>
-            <input value="200" type="radio" name="level_filter_choice_knight" onclick="apply_level_filter()"> 200+
-        </label>
-        <label>
-            <input value="300" type="radio" name="level_filter_choice_knight" onclick="apply_level_filter()"> 300+
-        </label>
-        <label>
-            <input value="400" type="radio" name="level_filter_choice_knight" onclick="apply_level_filter()"> 400+
-        </label>
+        <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+            <label for="levelFilter_knight" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Character Level:</label>
+            <input type="number" id="levelFilter_knight" class="level-filter" placeholder="Shows spawns suitable for your level..." min="0" style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
+        </div>
     </div>
 
     <table id="hunting_table_knight" class="hunting_table">
@@ -1863,28 +1858,10 @@
 
 <div id="Paladin" class="tabcontent">
     <div id="filter_selection">
-        <b>Level Filter</b>:<br><br>
-        <label>
-            <input value="0" type="radio" name="level_filter_choice_paladin" checked onclick="apply_level_filter()"> All
-        </label>
-        <label>
-            <input value="50" type="radio" name="level_filter_choice_paladin" onclick="apply_level_filter()"> 50+
-        </label>
-        <label>
-            <input value="100" type="radio" name="level_filter_choice_paladin" onclick="apply_level_filter()"> 100+
-        </label>
-        <label>
-            <input value="150" type="radio" name="level_filter_choice_paladin" onclick="apply_level_filter()"> 150+
-        </label>
-        <label>
-            <input value="200" type="radio" name="level_filter_choice_paladin" onclick="apply_level_filter()"> 200+
-        </label>
-        <label>
-            <input value="300" type="radio" name="level_filter_choice_paladin" onclick="apply_level_filter()"> 300+
-        </label>
-        <label>
-            <input value="400" type="radio" name="level_filter_choice_paladin" onclick="apply_level_filter()"> 400+
-        </label>
+        <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+            <label for="levelFilter_paladin" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Character Level:</label>
+            <input type="number" id="levelFilter_paladin" class="level-filter" placeholder="Shows spawns suitable for your level..." min="0" style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
+        </div>
     </div>
 
     <table id="hunting_table_paladin" class="hunting_table">
@@ -3759,28 +3736,10 @@
 
 <div id="Mage" class="tabcontent">
     <div id="filter_selection">
-        <b>Level Filter</b>:<br><br>
-        <label>
-            <input value="0" type="radio" name="level_filter_choice_mage" checked onclick="apply_level_filter()"> All
-        </label>
-        <label>
-            <input value="50" type="radio" name="level_filter_choice_mage" onclick="apply_level_filter()"> 50+
-        </label>
-        <label>
-            <input value="80" type="radio" name="level_filter_choice_mage" onclick="apply_level_filter()"> 80+
-        </label>
-        <label>
-            <input value="130" type="radio" name="level_filter_choice_mage" onclick="apply_level_filter()"> 130+
-        </label>
-        <label>
-            <input value="200" type="radio" name="level_filter_choice_mage" onclick="apply_level_filter()"> 200+
-        </label>
-        <label>
-            <input value="300" type="radio" name="level_filter_choice_mage" onclick="apply_level_filter()"> 300+
-        </label>
-        <label>
-            <input value="400" type="radio" name="level_filter_choice_mage" onclick="apply_level_filter()"> 400+
-        </label>
+        <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+            <label for="levelFilter_mage" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Character Level:</label>
+            <input type="number" id="levelFilter_mage" class="level-filter" placeholder="Shows spawns suitable for your level..." min="0" style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
+        </div>
     </div>
     <table id="hunting_table_mage" class="hunting_table">
         <tr>
@@ -5137,28 +5096,10 @@
 
 <div id="Monk" class="tabcontent">
     <div id="filter_selection">
-        <b>Level Filter</b>:<br><br>
-        <label>
-            <input value="0" type="radio" name="level_filter_choice_monk" checked onclick="apply_level_filter()"> All
-        </label>
-        <label>
-            <input value="50" type="radio" name="level_filter_choice_monk" onclick="apply_level_filter()"> 50+
-        </label>
-        <label>
-            <input value="100" type="radio" name="level_filter_choice_monk" onclick="apply_level_filter()"> 100+
-        </label>
-        <label>
-            <input value="150" type="radio" name="level_filter_choice_monk" onclick="apply_level_filter()"> 150+
-        </label>
-        <label>
-            <input value="200" type="radio" name="level_filter_choice_monk" onclick="apply_level_filter()"> 200+
-        </label>
-        <label>
-            <input value="300" type="radio" name="level_filter_choice_monk" onclick="apply_level_filter()"> 300+
-        </label>
-        <label>
-            <input value="400" type="radio" name="level_filter_choice_monk" onclick="apply_level_filter()"> 400+
-        </label>
+        <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+            <label for="levelFilter_monk" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Character Level:</label>
+            <input type="number" id="levelFilter_monk" class="level-filter" placeholder="Shows spawns suitable for your level..." min="0" style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
+        </div>
     </div>
     <table id="hunting_table_monk" class="hunting_table">
         <tr>
@@ -6823,28 +6764,10 @@
 
 <div id="Duo" class="tabcontent">
     <div id="filter_selection">
-        <b>Level Filter</b>:<br><br>
-        <label>
-            <input value="0" type="radio" name="level_filter_choice_duo" checked onclick="apply_level_filter()"> All
-        </label>
-        <label>
-            <input value="50" type="radio" name="level_filter_choice_duo" onclick="apply_level_filter()"> 50+
-        </label>
-        <label>
-            <input value="100" type="radio" name="level_filter_choice_duo" onclick="apply_level_filter()"> 100+
-        </label>
-        <label>
-            <input value="130" type="radio" name="level_filter_choice_duo" onclick="apply_level_filter()"> 130+
-        </label>
-        <label>
-            <input value="200" type="radio" name="level_filter_choice_duo" onclick="apply_level_filter()"> 200+
-        </label>
-        <label>
-            <input value="300" type="radio" name="level_filter_choice_duo" onclick="apply_level_filter()"> 300+
-        </label>
-        <label>
-            <input value="400" type="radio" name="level_filter_choice_duo" onclick="apply_level_filter()"> 400+
-        </label>
+        <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+            <label for="levelFilter_duo" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Character Level:</label>
+            <input type="number" id="levelFilter_duo" class="level-filter" placeholder="Shows spawns suitable for your level..." min="0" style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
+        </div>
     </div>
     <table id="hunting_table_duo" class="hunting_table">
         <tr>
@@ -7662,28 +7585,10 @@
 
 <div id="Teamhunt" class="tabcontent">
     <div id="filter_selection">
-        <b>Level Filter</b>:<br><br>
-        <label>
-            <input value="0" type="radio" name="level_filter_choice_teamhunt" checked onclick="apply_level_filter()"> All
-        </label>
-        <label>
-            <input value="50" type="radio" name="level_filter_choice_teamhunt" onclick="apply_level_filter()"> 50+
-        </label>
-        <label>
-            <input value="100" type="radio" name="level_filter_choice_teamhunt" onclick="apply_level_filter()"> 100+
-        </label>
-        <label>
-            <input value="130" type="radio" name="level_filter_choice_teamhunt" onclick="apply_level_filter()"> 130+
-        </label>
-        <label>
-            <input value="200" type="radio" name="level_filter_choice_teamhunt" onclick="apply_level_filter()"> 200+
-        </label>
-        <label>
-            <input value="300" type="radio" name="level_filter_choice_teamhunt" onclick="apply_level_filter()"> 300+
-        </label>
-        <label>
-            <input value="400" type="radio" name="level_filter_choice_teamhunt" onclick="apply_level_filter()"> 400+
-        </label>
+        <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+            <label for="levelFilter_teamhunt" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Character Level:</label>
+            <input type="number" id="levelFilter_teamhunt" class="level-filter" placeholder="Shows spawns suitable for your level..." min="0" style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
+        </div>
     </div>
     <table id="hunting_table_teamhunt" class="hunting_table">
         <tr>
