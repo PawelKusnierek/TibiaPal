@@ -631,7 +631,7 @@ function update_the_html(
             
             if (damageBreakdown && damageBreakdown.length > 0) {
                 damageBreakdownFormatted = damageBreakdown.map(player => 
-                    `${player.name} - ${player.percentage}%`
+                    `${player.name} - <b>${player.percentage}%</b>`
                 ).join(", ");
             }
         } catch (error) {
