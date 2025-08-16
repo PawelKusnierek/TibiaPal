@@ -132,6 +132,10 @@
             <div class="nav-image-container"><img class="nav-image" src=/images/Exercise_Wand.gif><span id="new-homepage">NEW!</span>Exercise
                 Weapons Calculator</div>
         </a></div>
+    <div class="active nav-item"><a href="/offlinetraining">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Skill_Trainer.gif>Training
+                Calculator<span id="new-homepage">UPDATED!</span></div>
+        </a></div>
     <div class="nav-item"><a href="/imbue">
             <div class="nav-image-container"><img class="nav-image" src=/images/Imbuing_Shrine.gif>Imbue
                 Calculator</div>
@@ -156,10 +160,6 @@
             <div class="nav-image-container"><img class="nav-image" src=/images/Demon.gif>Levelling
                 Calculator</div>
         </a></div>
-    <div class="active nav-item"><a href="/offlinetraining">
-            <div class="nav-image-container"><img class="nav-image" src=/images/Skill_Trainer.gif>Training
-                Calculator</div>
-        </a></div>
     <div class="nav-item"><a href="/leech">
             <div class="nav-image-container"><img class="nav-image" src=/images/Leech.gif>Leech Calculator
             </div>
@@ -176,41 +176,107 @@
     <button class="nav-toggle" onclick="toggleNavigation()" style="display: none;">☰ Menu</button>
     
     <section id="main-content">
-    <p id="offlinetrainingpara">This tool calculates the time it will take you to reach your target skill while
-    offline or online training.<br><br>
-    If you select 'offline' training, the tool assumes full 12h of offline training per day.<br><br>
-    The tool assumes:<br>
-    - Magic level training for mages (Druids & Sorcerers)<br>
-    - Melee (Axe/Club/Sword) training for Knights<br>
-    - Distance training for Paladins<br>
-    - Fist training for Monks<br></p>
-<form id="offlinetrainingform">
-<label for="type_of_training">Training type:</label>
-    <select id="type_of_training" name="type_of_training">
-        <option value="Offline">Offline</option>
-        <option value="Online">Online</option>
-    </select><br>
-    <label for="vocation">Vocation & skill:</label>
-    <select id="vocation" name="vocation">
-        <option value="Knight">Knight - Melee</option>
-        <option value="Paladin">Paladin - Distance</option>
-        <option value="Mage">Mage - Magic</option>
-        <option value="Monk">Monk - Fist</option>
-    </select><br>
-    <label id="currentskilllabel" for="currentskill">Current skill:</label>
-    <input type="text" id="currentskill" name="currentskill" placeholder="current skill, e.g. 112"
-        autocomplete="off"><br>
-    <label id="currentskillpercentagelabel" for="currentskillpercentage">Percentage to next skill:</label>
-    <input type="text" id="currentskillpercentage" name="currentskillpercentage" placeholder="% missing, e.g. 35"
-        autocomplete="off"><br>
-    <label id="targetskilllabel" for="targetskill">Target skill:</label>
-    <input type="text" id="targetskill" name="targetskill" placeholder="target skill, e.g. 114" autocomplete="off"><br>
-    <label id="loyaltylabel" for="loyalty">Loyalty bonus:</label>
-    <input type="text" id="loyalty" name="loyalty" placeholder="loyalty bonus, e.g. 15" autocomplete="off"><br>
-    <input type="submit" id="offlinesubmitbutton" value="Submit" onclick="event.preventDefault(); submit_form()" />
-</form>
-<div id="offlinetrainingformresults">
+    <div class="hunting_tab two-tabs">
+    <button id="target_skill" class="tablinks active" onclick="show_tab(event, 'TargetSkill')">Target Skill</button>
+    <button id="target_time" class="tablinks" onclick="show_tab(event, 'TargetTime')">Target Time</button>
+</div>
 
+<div id="TargetSkill" class="tabcontent">
+    <p id="offlinetrainingpara">This tool calculates the time it will take you to reach your target skill while
+        offline or online training.<br><br>
+        If you select 'offline' training, the tool assumes full 12h of offline training per day.<br><br>
+        The tool assumes:<br>
+        - Magic level training for mages (Druids & Sorcerers)<br>
+        - Melee (Axe/Club/Sword) training for Knights<br>
+        - Distance training for Paladins<br>
+        - Fist training for Monks<br></p>
+    <form id="offlinetrainingform">
+    <label for="type_of_training">Training type:</label>
+        <select id="type_of_training" name="type_of_training">
+            <option value="Offline">Offline</option>
+            <option value="Online">Online</option>
+        </select><br>
+        <label for="vocation">Vocation & skill:</label>
+        <select id="vocation" name="vocation">
+            <option value="Knight">Knight - Melee</option>
+            <option value="Paladin">Paladin - Distance</option>
+            <option value="Mage">Mage - Magic</option>
+            <option value="Monk">Monk - Fist</option>
+        </select><br>
+        <label id="currentskilllabel" for="currentskill">Current skill:</label>
+        <input type="text" id="currentskill" name="currentskill" placeholder="current skill, e.g. 112"
+            required autocomplete="off"><br>
+        <label id="currentskillpercentagelabel" for="currentskillpercentage">Percentage to next skill:</label>
+        <input type="text" id="currentskillpercentage" name="currentskillpercentage" placeholder="% missing, e.g. 35"
+            autocomplete="off"><br>
+        <label id="targetskilllabel" for="targetskill">Target skill:</label>
+        <input type="text" id="targetskill" name="targetskill" placeholder="target skill, e.g. 114" required autocomplete="off"><br>
+        <label id="loyaltylabel" for="loyalty">Loyalty bonus:</label>
+        <select name="loyalty" id="loyalty">
+            <option value="0">0%</option>
+            <option value="5">5%</option>
+            <option value="10">10%</option>
+            <option value="15">15%</option>
+            <option value="20">20%</option>
+            <option value="25">25%</option>
+            <option value="30">30%</option>
+            <option value="35">35%</option>
+            <option value="40">40%</option>
+            <option value="45">45%</option>
+            <option value="50">50%</option>
+        </select><br>
+        <input type="submit" id="offlinesubmitbutton" value="Submit" onclick="event.preventDefault(); submit_form()" />
+    </form>
+    <div id="offlinetrainingformresults">
+    </div>
+</div>
+
+<div id="TargetTime" class="tabcontent">
+    <p id="offlinetrainingpara_time">This tool calculates what skill level you will achieve after training for a specified amount of time.<br><br>
+        The tool assumes:<br>
+        - Magic level training for mages (Druids & Sorcerers)<br>
+        - Melee (Axe/Club/Sword) training for Knights<br>
+        - Distance training for Paladins<br>
+        - Fist training for Monks<br></p>
+    <form id="offlinetrainingform_time">
+    <label for="type_of_training_time">Training type:</label>
+        <select id="type_of_training_time" name="type_of_training">
+            <option value="Offline">Offline</option>
+            <option value="Online">Online</option>
+        </select><br>
+        <label for="vocation_time">Vocation & skill:</label>
+        <select id="vocation_time" name="vocation">
+            <option value="Knight">Knight - Melee</option>
+            <option value="Paladin">Paladin - Distance</option>
+            <option value="Mage">Mage - Magic</option>
+            <option value="Monk">Monk - Fist</option>
+        </select><br>
+        <label id="currentskilllabel_time" for="currentskill_time">Current skill:</label>
+        <input type="text" id="currentskill_time" name="currentskill" placeholder="current skill, e.g. 112"
+            required autocomplete="off"><br>
+        <label id="currentskillpercentagelabel_time" for="currentskillpercentage_time">Percentage to next skill:</label>
+        <input type="text" id="currentskillpercentage_time" name="currentskillpercentage" placeholder="% missing, e.g. 35"
+            autocomplete="off"><br>
+        <label id="trainingtimelabel_time" for="trainingtime_time">Training time (hours):</label>
+        <input type="number" id="trainingtime_time" name="trainingtime" placeholder="e.g. 100" min="1" required autocomplete="off"><br>
+        <label id="loyaltylabel_time" for="loyalty_time">Loyalty bonus:</label>
+        <select name="loyalty" id="loyalty_time">
+            <option value="0">0%</option>
+            <option value="5">5%</option>
+            <option value="10">10%</option>
+            <option value="15">15%</option>
+            <option value="20">20%</option>
+            <option value="25">25%</option>
+            <option value="30">30%</option>
+            <option value="35">35%</option>
+            <option value="40">40%</option>
+            <option value="45">45%</option>
+            <option value="50">50%</option>
+        </select><br>
+        <input type="submit" id="offlinesubmitbutton_time" value="Submit" onclick="event.preventDefault(); submit_form_time()" />
+    </form>
+    <div id="offlinetrainingformresults_time">
+    </div>
 </div>
     </section>
     

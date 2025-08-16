@@ -125,6 +125,9 @@ function enable_default_tabs() {
   else if(location.href.includes('/exercise')) {
     initial_show_tab("TargetSkill")
   }
+  else if(location.href.includes('/offlinetraining')) {
+    initial_show_tab("TargetSkill")
+  }
 
 
 }

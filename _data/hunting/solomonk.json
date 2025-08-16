@@ -1009,21 +1009,21 @@
     },
     {
         "level": "600+",
+        "place": "Bulltaurs",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "700+",
         "place": "Norcferatu Dungeons West",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "600+",
+        "level": "700+",
         "place": "Norcferatu Dungeons East",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Bulltaurs",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"

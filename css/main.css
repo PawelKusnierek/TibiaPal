@@ -1001,6 +1001,41 @@ ol, ul {
   padding-bottom: 15px;
 }
 
+#offlinetrainingform_time {
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+#offlinetrainingform_time input {
+  margin-top: 5px;
+  width: 143px;
+}
+
+#offlinetrainingform_time select {
+  margin-top: 5px;
+  width: 150px;
+}
+
+#offlinetrainingform_time label {
+  display: inline-block;
+  width: 170px;
+}
+
+#offlinesubmitbutton_time {
+  width: 70px !important;
+}
+
+#offlinetrainingpara_time {
+  text-align: left;
+  display: block;
+}
+
+#offlinetrainingformresults_time {
+  padding-bottom: 15px;
+}
+
 #leechform {
   padding-top: 20px;
   padding-left: 15px;
