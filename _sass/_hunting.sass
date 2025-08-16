@@ -19,6 +19,40 @@
 .hunting_table tbody tr:nth-child(even)
     background-color: #0d1e38
 
+// Sortable header styles
+.sortable-header
+    cursor: pointer
+    position: relative
+    user-select: none
+    transition: background-color 0.2s ease
+    padding-right: 20px // Make room for the arrow
+
+.sortable-header::after
+    content: "↕"
+    position: absolute
+    right: 5px
+    top: 50%
+    transform: translateY(-50%)
+    color: #888
+    font-size: 12px
+    transition: color 0.2s ease
+
+.sortable-header:hover
+    background-color: #14356d
+
+.sortable-header:hover::after
+    color: #4CAF50
+
+.sortable-header.sort-asc::after
+    content: " ▲"
+    color: #4CAF50
+    font-weight: bold
+
+.sortable-header.sort-desc::after
+    content: " ▼"
+    color: #4CAF50
+    font-weight: bold
+
 #filter_selection
     margin-bottom: 20px
 
