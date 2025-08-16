@@ -100,7 +100,8 @@ function regularlootsplit() {
         who_to_pay_and_how_much,
         total_profit,
         profit_per_person,
-        resultsContent
+        resultsContent,
+        undefined
     );
     update_the_history_results();
     document.getElementById("tibialootsplitform").reset();
@@ -172,7 +173,8 @@ function calculate_remove_players_click() {
         who_to_pay_and_how_much,
         total_profit,
         profit_per_person,
-        resultsContent
+        resultsContent,
+        undefined
     );
     update_the_history_results();
     document.getElementById("extra-expenses-div").innerHTML = "";
@@ -238,14 +240,17 @@ function calculate_extra_expenses_click() {
     results.setAttribute("id", "results");
     main_content.appendChild(results);
 
+    // Remove the extra expenses form before updating HTML
+    remove_old_html();
+
     update_the_html(
         who_to_pay_and_how_much,
         total_profit,
         profit_per_person,
-        resultsContent
+        resultsContent,
+        undefined
     );
     update_the_history_results();
-    remove_old_html();
 }
 
 // function to verify the integrity of the entered data
@@ -295,6 +300,75 @@ function calculate_profit_per_hour(profit_per_person, session_duration) {
     const profitPerHour = (profit_per_person / totalMinutes) * 60;
     
     return profitPerHour;
+}
+
+function calculate_damage_breakdown(analyser_data, players_and_their_balance) {
+    try {
+        const damageBreakdown = [];
+        let data = analyser_data;
+        
+        // For each player, find their damage value
+        for (let i = 0; i < players_and_their_balance.length; i++) {
+            const playerName = players_and_their_balance[i].name;
+            
+            // Find the player's name in the analyser data
+            const playerNameIndex = data.indexOf(playerName);
+            if (playerNameIndex === -1) {
+                console.log("Couldn't find player name:", playerName);
+                continue;
+            }
+            
+            // Find the "Damage:" entry that follows this player name
+            const damageIndex = data.indexOf("Damage:", playerNameIndex);
+            if (damageIndex === -1) {
+                console.log("Couldn't find Damage: for player:", playerName);
+                continue;
+            }
+            
+            // Find the "Healing:" entry that follows the Damage entry
+            const healingIndex = data.indexOf("Healing:", damageIndex);
+            if (healingIndex === -1) {
+                console.log("Couldn't find Healing: for player:", playerName);
+                continue;
+            }
+            
+            // Extract damage value
+            const damageValue = data.substring(damageIndex + 7, healingIndex).trim();
+            const damageNumber = parseInt(damageValue.replace(/,/g, ""));
+            
+            if (isNaN(damageNumber)) {
+                console.log("Invalid damage value for player:", playerName, "value:", damageValue);
+                continue;
+            }
+            
+            damageBreakdown.push({
+                name: playerName,
+                damage: damageNumber
+            });
+        }
+        
+        // Calculate total damage
+        const totalDamage = damageBreakdown.reduce((sum, player) => sum + player.damage, 0);
+        
+        if (totalDamage === 0) {
+            console.log("Total damage is 0, cannot calculate percentages");
+            return null;
+        }
+        
+        // Calculate percentages
+        const damagePercentages = damageBreakdown.map(player => ({
+            name: player.name,
+            percentage: Math.round((player.damage / totalDamage) * 1000) / 10
+        }));
+        
+        // Sort by damage percentage in descending order (highest first)
+        damagePercentages.sort((a, b) => b.percentage - a.percentage);
+        
+        return damagePercentages;
+    } catch (error) {
+        console.log("Error calculating damage breakdown:", error);
+        return null;
+    }
 }
 
 function remove_first_section(data) {
@@ -403,7 +477,8 @@ function update_the_html(
     who_to_pay_and_how_much,
     total_profit,
     profit_per_person,
-    resultsContent
+    resultsContent,
+    analyser_data_from_history
 ) {
     transfer_array = [];
     copy_button_array = [];
@@ -538,6 +613,32 @@ function update_the_html(
             profitPerHourFormatted = null;
         }
     }
+    
+    // Calculate damage breakdown (only if analyser data is available)
+    let damageBreakdownFormatted = null;
+    let analyser_data_for_damage = null;
+    
+    // Use analyser data from history if provided, otherwise use form data
+    if (analyser_data_from_history && analyser_data_from_history !== "Log not available") {
+        analyser_data_for_damage = analyser_data_from_history.replace(" (Leader)", "");
+    } else if (form && form.analyserData && form.analyserData.value && form.analyserData.value !== "Log not available") {
+        analyser_data_for_damage = form.analyserData.value.replace(" (Leader)", "");
+    }
+    
+    if (analyser_data_for_damage) {
+        try {
+            const damageBreakdown = calculate_damage_breakdown(analyser_data_for_damage, players_and_their_balance);
+            
+            if (damageBreakdown && damageBreakdown.length > 0) {
+                damageBreakdownFormatted = damageBreakdown.map(player => 
+                    `${player.name} - ${player.percentage}%`
+                ).join(", ");
+            }
+        } catch (error) {
+            // If calculation fails, don't show damage breakdown
+            damageBreakdownFormatted = null;
+        }
+    }
 
     if (profit) {
         resultsContent.innerHTML =
@@ -579,6 +680,22 @@ function update_the_html(
             resultsContent.innerHTML =
                 resultsContent.innerHTML + '<div class="block_element"></div>';
         }
+        
+        // Add damage breakdown line (only if calculation was successful)
+        if (damageBreakdownFormatted !== null) {
+            resultsContent.innerHTML =
+                resultsContent.innerHTML +
+                "<p> Damage Split: " +
+                damageBreakdownFormatted +
+                ". </p >";
+            discord_output.push(
+                "Damage Split: " +
+                damageBreakdownFormatted +
+                "."
+            );
+            resultsContent.innerHTML =
+                resultsContent.innerHTML + '<div class="block_element"></div>';
+        }
     } else {
         resultsContent.innerHTML =
             resultsContent.innerHTML +
@@ -615,6 +732,22 @@ function update_the_html(
                 "h, which is: " +
                 profitPerHourFormatted +
                 " for each player per hour."
+            );
+            resultsContent.innerHTML =
+                resultsContent.innerHTML + '<div class="block_element"></div>';
+        }
+        
+        // Add damage breakdown line (only if calculation was successful)
+        if (damageBreakdownFormatted !== null) {
+            resultsContent.innerHTML =
+                resultsContent.innerHTML +
+                "<p> Damage Breakdown: " +
+                damageBreakdownFormatted +
+                ". </p >";
+            discord_output.push(
+                "Damage Breakdown: " +
+                damageBreakdownFormatted +
+                "."
             );
             resultsContent.innerHTML =
                 resultsContent.innerHTML + '<div class="block_element"></div>';
@@ -728,12 +861,24 @@ function remove_tibialootsplit_html() {
 
 function remove_old_html() {
     main_content = document.getElementById("main-content");
+    
+    // Remove extra expenses div
     extraExpensesDiv = document.getElementById("extra-expenses-div");
-    extraExpensesDiv.innerHTML = "";
+    if (extraExpensesDiv) {
+        extraExpensesDiv.innerHTML = "";
+    }
+    
+    // Remove extra expense table if it exists
     extraExpensesTable = document.getElementById("extra-expense-table");
-    main_content.removeChild(extraExpensesTable);
+    if (extraExpensesTable && extraExpensesTable.parentNode) {
+        extraExpensesTable.parentNode.removeChild(extraExpensesTable);
+    }
+    
+    // Remove extra container if it exists
     extraContainer = document.getElementById("extra-container");
-    main_content.removeChild(extraContainer);
+    if (extraContainer && extraContainer.parentNode) {
+        extraContainer.parentNode.removeChild(extraContainer);
+    }
 }
 
 function add_players_and_checkboxes(players_and_their_balance) {
@@ -908,13 +1053,17 @@ function results_from_history(table_cell_id) {
     total_profit = history[parseInt(table_cell_id) + 2];
     profit_per_person = history[parseInt(table_cell_id) + 1];
     session_duration = history[parseInt(table_cell_id) + 4]; // Add session duration
+    
+    // Get analyser data from history (7th item in each row)
+    const analyser_data_from_history = history[parseInt(table_cell_id) + 6];
 
     resultsContent = document.getElementById("results");
     update_the_html(
         who_to_pay_and_how_much,
         total_profit,
         profit_per_person,
-        resultsContent
+        resultsContent,
+        analyser_data_from_history
     );
 
     document.getElementById("h4_history_tls").style.display = "none";
