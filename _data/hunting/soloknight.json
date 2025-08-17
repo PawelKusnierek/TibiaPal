@@ -1145,6 +1145,14 @@
     },
     {
         "level": "600+",
+        "place": "Norcferatu Fortress",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Ice, Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
         "place": "Norcferatu Dungeons West",
         "raw_exp": "-",
         "loot": "-",
@@ -1182,6 +1190,14 @@
         "loot": "-",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Cobra Bastion",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Ice, Fire, Energy, Death",
+        "link": "https://youtu.be/"
     },
     {
         "level": "900+",
