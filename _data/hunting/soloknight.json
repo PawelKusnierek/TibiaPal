@@ -1106,8 +1106,8 @@
     {
         "level": "600+",
         "place": "Warzone 3",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "5.5kk",
+        "loot": "2.0kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },
@@ -1130,8 +1130,8 @@
     {
         "level": "600+",
         "place": "Azzilon Walls",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "6.0kk",
+        "loot": "1.0kk",
         "weapon_type": "Ice, Energy",
         "link" : "https://youtu.be/"
     },
@@ -1162,8 +1162,8 @@
     {
         "level": "700+",
         "place": "Azzilon Castle",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "7.0kk",
+        "loot": "1.2kk",
         "weapon_type": "Ice, Energy",
         "link" : "https://youtu.be/"
     },
@@ -1180,7 +1180,7 @@
         "place": "Feru Plague seal",
         "raw_exp": "-",
         "loot": "-",
-        "weapon_type": "Ice",
+        "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },
     {
@@ -1192,10 +1192,18 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "800+",
-        "place": "Cobra Bastion",
+        "level": "700+",
+        "place": "Bulltaurs",
         "raw_exp": "-",
         "loot": "-",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Cobra Bastion",
+        "raw_exp": "9.0kk",
+        "loot": "1.5kk",
         "weapon_type": "Ice, Fire, Energy, Death",
         "link": "https://youtu.be/"
     },
