@@ -1113,14 +1113,6 @@
     },
     {
         "level": "600+",
-        "place": "Feru Pumin Seal -3",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Energy",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
         "place": "Oramond Mountain Hideout -1/-2",
         "raw_exp": "4kk",
         "loot": "800k",
@@ -1177,7 +1169,15 @@
     },
     {
         "level": "700+",
-        "place": "Feru DT/Vexclaw seal (Tafariel)",
+        "place": "Feru DT seal",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Ice",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "700+",
+        "place": "Feru Plague seal",
         "raw_exp": "-",
         "loot": "-",
         "weapon_type": "Ice",
@@ -1200,16 +1200,16 @@
         "link": "https://youtu.be/"
     },
     {
-        "level": "900+",
-        "place": "Pumin Feru Seal",
+        "level": "800+",
+        "place": "Feru Pumin Seal",
         "raw_exp": "-",
         "loot": "-",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "900+",
-        "place": "Infernatil Feru Seal",
+        "level": "800+",
+        "place": "Feru Infernatil Seal",
         "raw_exp": "-",
         "loot": "-",
         "weapon_type": "Ice",
