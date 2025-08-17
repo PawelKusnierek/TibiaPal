@@ -1170,8 +1170,8 @@
     {
         "level": "700+",
         "place": "Wardragons",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "7.0kk",
+        "loot": "1.0kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
@@ -1196,7 +1196,7 @@
         "place": "Norcferatu Dungeons West",
         "raw_exp": "-",
         "loot": "-",
-        "weapon_type": "Ice, Earth",
+        "weapon_type": "Ice, Earth, Fire",
         "link" : "https://youtu.be/"
     },
     {
@@ -1204,14 +1204,14 @@
         "place": "Norcferatu Dungeons East",
         "raw_exp": "-",
         "loot": "-",
-        "weapon_type": "Ice, Earth",
+        "weapon_type": "Ice, Earth, Fire",
         "link" : "https://youtu.be/"
     },
     {
         "level": "800+",
         "place": "Feru Pumin Seal",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "7.0kk",
+        "loot": "1.8kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },
