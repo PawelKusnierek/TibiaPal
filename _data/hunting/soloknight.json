@@ -1144,22 +1144,6 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "600+",
-        "place": "Norcferatu Dungeons West",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Ice, Earth",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Norcferatu Dungeons East",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Ice, Earth",
-        "link" : "https://youtu.be/"
-    },
-    {
         "level": "700+",
         "place": "Azzilon Castle",
         "raw_exp": "7.0kk",
@@ -1206,6 +1190,22 @@
         "loot": "1.5kk",
         "weapon_type": "Ice, Fire, Energy, Death",
         "link": "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Norcferatu Dungeons West",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Ice, Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Norcferatu Dungeons East",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Ice, Earth",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "800+",
