@@ -1222,5 +1222,13 @@
         "loot": "-",
         "weapon_type": "Ice",
         "link" : "https://youtu.be/"
+    },
+    {
+        "level": "1000+",
+        "place": "True Asuras",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Energy",
+        "link" : "https://youtu.be/"
     }
 ]
