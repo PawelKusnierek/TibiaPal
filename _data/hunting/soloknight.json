@@ -593,14 +593,6 @@
     },
     {
         "level": "200+",
-        "place": "Book World: Chapter I/II/III/IV",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Ice, Energy, Fire",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "200+",
         "place": "Glooth Tower",
         "raw_exp": "2.05kk",
         "loot": "250k",
@@ -701,6 +693,30 @@
         "raw_exp": "-",
         "loot": "-",
         "weapon_type": "Energy",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Book World: II",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Energy, Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Book World: III",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Book World: IV",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
     {

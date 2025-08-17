@@ -641,19 +641,27 @@
     },
     {
         "level": "200+",
-        "place": "Book World: Chapter I/II/III/IV",
+        "place": "Book World: Chapter II",
         "raw_exp": "-",
         "loot": "-",
-        "weapon_type": "Energy, Earth",
+        "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },
     {
         "level": "250+",
-        "place": "Asura Palace",
-        "raw_exp": "2.9kk",
-        "loot": "400k",
-        "weapon_type": "Physical, Energy",
-        "link" : "https://youtu.be/exfl57YQCAA"
+        "place": "Book World: Chapter IV",
+        "raw_exp": "3.6kk",
+        "loot": "700k",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "250+",
+        "place": "Book World: Chapter III",
+        "raw_exp": "3.3kk",
+        "loot": "1.0kk",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "250+",
@@ -662,6 +670,14 @@
         "loot": "600k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/9505L-ZXtxU"
+    },
+    {
+        "level": "250+",
+        "place": "Asura Palace",
+        "raw_exp": "2.9kk",
+        "loot": "400k",
+        "weapon_type": "Physical, Energy",
+        "link" : "https://youtu.be/exfl57YQCAA"
     },
     {
         "level": "250+",

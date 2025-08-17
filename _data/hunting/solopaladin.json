@@ -921,10 +921,26 @@
     },
     {
         "level": "300+",
-        "place": "Book World: Chapter I/II/III/IV",
+        "place": "Book World: Chapter II",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "Avalanche, Thunderstorm, GFB",
+        "runes": "Thunderstorm",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Book World: Chapter III",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Stoneshower",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Book World: Chapter IV",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Stoneshower",
         "link" : "https://youtu.be/"
     },
     {

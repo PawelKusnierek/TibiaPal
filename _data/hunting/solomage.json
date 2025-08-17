@@ -737,10 +737,26 @@
     },
     {
         "level": "300+",
-        "place": "Book World: Chapter I/II/III/IV",
+        "place": "Book World: Chapter II/III/IV",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "Avalanche, GFB, Thunderstorm",
+        "runes": "Thunderstorm",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Book World: Chapter III",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Stoneshower",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Book World: Chapter IV",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Stoneshower",
         "link" : "https://youtu.be/"
     },
     {
@@ -804,7 +820,7 @@
         "place": "Warzone 5",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "GFB",
+        "runes": "GFB, Avalanche",
         "link" : "https://youtu.be/"
     },
     {
