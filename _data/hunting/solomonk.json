@@ -650,16 +650,16 @@
     {
         "level": "250+",
         "place": "Book World: Chapter IV",
-        "raw_exp": "3.6kk",
-        "loot": "700k",
+        "raw_exp": "3.2kk",
+        "loot": "600k",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
     {
         "level": "250+",
         "place": "Book World: Chapter III",
-        "raw_exp": "3.3kk",
-        "loot": "1.0kk",
+        "raw_exp": "2.9kk",
+        "loot": "800k",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
@@ -1122,7 +1122,7 @@
     {
         "level": "600+",
         "place": "Juggernaut Feru Seal",
-        "raw_exp": "5.0kk",
+        "raw_exp": "5.3kk",
         "loot": "800k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
