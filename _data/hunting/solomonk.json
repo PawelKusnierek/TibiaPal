@@ -1049,6 +1049,22 @@
     },
     {
         "level": "600+",
+        "place": "Nimmersatt's Dragons -7 (Bottom Floor)",
+        "raw_exp": "8.5kk",
+        "loot": "1.4kk",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Nimmersatt's Dragons -6 (Boss Floor)",
+        "raw_exp": "8.1kk",
+        "loot": "1.3kk",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
         "place": "Norcferatu Castle",
         "raw_exp": "7.0kk",
         "loot": "1.5kk",
@@ -1156,14 +1172,6 @@
         "place": "Deep Desert (Darashia Skeletons)",
         "raw_exp": "4.0kk",
         "loot": "2.0kk",
-        "weapon_type": "Earth",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Wardragons",
-        "raw_exp": "-",
-        "loot": "-",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
