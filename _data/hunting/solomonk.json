@@ -1111,6 +1111,14 @@
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
+        {
+        "level": "600+",
+        "place": "Bulltaurs",
+        "raw_exp": "5.8kk",
+        "loot": "1.3kk",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
     {
         "level": "600+",
         "place": "Flimsy Lost Souls Port Hope",
@@ -1172,14 +1180,6 @@
         "place": "Deep Desert (Darashia Skeletons)",
         "raw_exp": "4.0kk",
         "loot": "2.0kk",
-        "weapon_type": "Earth",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Bulltaurs",
-        "raw_exp": "-",
-        "loot": "-",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
