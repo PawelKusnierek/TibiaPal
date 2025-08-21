@@ -2,94 +2,62 @@
     {
         "level": "8+",
         "place": "Rotworms Liberty Bay/Darashia",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "8+",
-        "place": "Swamp Trolls Port Hope/Venore",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "8+",
-        "place": "Crocodiles Port Hope",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "35k",
+        "loot": "5k",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/"
     },
     {
         "level": "8+",
         "place": "Larva Ankrahmun",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "30k",
+        "loot": "3k",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "20+",
-        "place": "Coryms Port Hope",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "20+",
-        "place": "Cyclopolis",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "20+",
-        "place": "Cyclops Mistrock",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "20+",
-        "place": "Elves Yalahar",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "20+",
-        "place": "Laguna Islands",
-        "raw_exp": "90k",
+        "level": "8+",
+        "place": "Swamp Trolls Port Hope/Venore",
+        "raw_exp": "25k",
         "loot": "50k",
         "weapon_type": "Physical",
-        "link": "https://youtu.be/hg5Tgj_bubU"
+        "link" : "https://youtu.be/"
     },
     {
-        "level": "20+",
+        "level": "8+",
+        "place": "Crocodiles Port Hope",
+        "raw_exp": "25k",
+        "loot": "4k",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "16+",
         "place": "Tarantulas Port Hope",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "55k",
+        "loot": "10k",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "16+",
+        "place": "Elves Yalahar",
+        "raw_exp": "50k",
+        "loot": "75k",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "16+",
+        "place": "Yalahar/Darashia Minotaurs (Stealth Ring)",
+        "raw_exp": "50k",
+        "loot": "-5k",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/"
     },
     {
         "level": "20+",
-        "place": "Blood Crabs Laguna Islands",
-        "raw_exp": "100k",
-        "loot": "150k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/3mcY_eNBThg"
-    },
-    {
-        "level": "28+",
-        "place": "Chor",
+        "place": "Stonerefiners (Stealth Ring)",
         "raw_exp": "-",
         "loot": "-",
         "weapon_type": "Physical",
@@ -102,6 +70,22 @@
         "loot": "20k",
         "weapon_type": "Physical",
         "link": "https://youtu.be/BmLScxZQ9Vk"
+    },
+    {
+        "level": "30+",
+        "place": "Blood Crabs Laguna Islands",
+        "raw_exp": "100k",
+        "loot": "150k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/3mcY_eNBThg"
+    },
+    {
+        "level": "30+",
+        "place": "Laguna Islands",
+        "raw_exp": "90k",
+        "loot": "50k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/hg5Tgj_bubU"
     },
     {
         "level": "30+",
@@ -120,15 +104,15 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "30+",
-        "place": "Upper Spike",
+        "level": "16+",
+        "place": "Coryms Port Hope/Venore (Stealth Ring)",
         "raw_exp": "-",
         "loot": "-",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "40+",
+        "level": "35+",
         "place": "Pirates Yalahar",
         "raw_exp": "-",
         "loot": "-",
@@ -136,7 +120,7 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "50+",
+        "level": "35+",
         "place": "Mother of Scarabs Lair -3",
         "raw_exp": "-",
         "loot": "-",
@@ -146,14 +130,6 @@
     {
         "level": "50+",
         "place": "Mutated Rats Alchemist Quarter",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Arena Quarter",
         "raw_exp": "-",
         "loot": "-",
         "weapon_type": "Physical",
