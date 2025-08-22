@@ -1111,14 +1111,6 @@
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
-        {
-        "level": "600+",
-        "place": "Bulltaurs",
-        "raw_exp": "5.8kk",
-        "loot": "1.3kk",
-        "weapon_type": "Earth",
-        "link" : "https://youtu.be/"
-    },
     {
         "level": "600+",
         "place": "Flimsy Lost Souls Port Hope",
@@ -1201,6 +1193,14 @@
     },
     {
         "level": "700+",
+        "place": "Bulltaurs -2",
+        "raw_exp": "6.1kk",
+        "loot": "1.2kk",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "700+",
         "place": "True Asuras",
         "raw_exp": "5.3kk",
         "loot": "1.0kk",
@@ -1218,6 +1218,14 @@
     {
         "level": "800+",
         "place": "Podzilla Quaras",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Azzilon Catacombs",
         "raw_exp": "-",
         "loot": "-",
         "weapon_type": "Earth",
