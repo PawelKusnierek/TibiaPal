@@ -1,6 +1,14 @@
 [
     {
         "level": "8+",
+        "place": "Rotworms Liberty Bay/Darashia",
+        "raw_exp": "35k",
+        "loot": "5k",
+        "weapon_type": "Energy",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "8+",
         "place": "Swamp Trolls Port Hope/Venore",
         "raw_exp": "25k",
         "loot": "50k",
@@ -17,17 +25,9 @@
     },
     {
         "level": "8+",
-        "place": "Rotworms Liberty Bay/Darashia",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Energy",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "8+",
         "place": "Crocodiles Port Hope",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "20k",
+        "loot": "0k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },
