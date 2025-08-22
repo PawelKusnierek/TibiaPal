@@ -89,14 +89,6 @@
     },
     {
         "level": "14+",
-        "place": "Poacher's Cave (Poachers + Hunters)",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "N/A",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "14+",
         "place": "Coryms Port Hope (Stealth Ring)",
         "raw_exp": "100k",
         "loot": "-5k",
@@ -118,14 +110,6 @@
         "loot": "-10k",
         "runes": "N/A",
         "link" : "https://youtu.be/i-x5UKJdslU"
-    },
-    {
-        "level": "15+",
-        "place": "Cyclopolis",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "N/A",
-        "link" : "https://youtu.be/"
     },
     {
         "level": "15+",
