@@ -81,7 +81,7 @@
     },
     {
         "level": "25+",
-        "place": "Coryms Port Hope (Royal Spears, Stealth Ring)",
+        "place": "Coryms (Royal Spears, Stealth Ring)",
         "raw_exp": "-",
         "loot": "-",
         "runes": "N/A",
@@ -113,14 +113,6 @@
     },
     {
         "level": "25+",
-        "place": "Minotaurs Darashia/Yalahar (Royal Spears, Stealth Ring)",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "N/A",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "30+",
         "place": "Zombies Yala/Treasure Island",
         "raw_exp": "-",
         "loot": "-",
@@ -128,16 +120,8 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "30+",
-        "place": "Apes Banuta",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "N/A",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "30+",
-        "place": "Carniphilas PH",
+        "level": "25+",
+        "place": "Carniphilas Port Hope",
         "raw_exp": "-",
         "loot": "-",
         "runes": "N/A",
@@ -145,7 +129,7 @@
     },
     {
         "level": "40+",
-        "place": "Mummy/Bonebeasts MOSL -3",
+        "place": "Mother of Ancient Scarabs -3",
         "raw_exp": "-",
         "loot": "-",
         "runes": "GFB",
@@ -153,7 +137,7 @@
     },
     {
         "level": "40+",
-        "place": "Pirates Yala",
+        "place": "Pirates Yalahar",
         "raw_exp": "-",
         "loot": "-",
         "runes": "N/A",
@@ -161,7 +145,7 @@
     },
     {
         "level": "40+",
-        "place": "Cults Yala",
+        "place": "Cults Yalahar",
         "raw_exp": "-",
         "loot": "-",
         "runes": "Thunderstorm",
@@ -190,14 +174,6 @@
         "loot": "-",
         "runes": "Avalanche",
         "link": "https://youtu.be/uIkClHzNg60"
-    },
-    {
-        "level": "50+",
-        "place": "Arena Quarter",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "GFB",
-        "link" : "https://youtu.be/"
     },
     {
         "level": "50+",
