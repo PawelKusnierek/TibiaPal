@@ -193,9 +193,9 @@
     },
     {
         "level": "70+",
-        "place": "Mother of Scarabs Lair",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Mother of Scarabs Lair -4/-5",
+        "raw_exp": "600k",
+        "loot": "20k",
         "weapon_type": "Physical",
         "link": "https://youtu.be/Eup4SAXdINs"
     },
@@ -514,24 +514,24 @@
     {
         "level": "200+",
         "place": "Minotaur Cults",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1kk",
+        "loot": "550k",
         "weapon_type": "Ice",
         "link" : "https://youtu.be/"
     },
     {
         "level": "200+",
         "place": "Glooth Bandits",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1.8kk",
+        "loot": "500k",
         "weapon_type": "Fire",
         "link" : "https://youtu.be/"
     },
     {
         "level": "200+",
         "place": "Pirats",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1.7kk",
+        "loot": "500k",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
@@ -561,14 +561,6 @@
     },
     {
         "level": "200+",
-        "place": "Oramond Mountain Hideout Minotaurs",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Ice",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "200+",
         "place": "Glooth Tower",
         "raw_exp": "2.05kk",
         "loot": "250k",
@@ -578,16 +570,16 @@
     {
         "level": "250+",
         "place": "Carnivora's Rock",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "2.0kk",
+        "loot": "800k",
         "weapon_type": "Fire, Ice",
         "link" : "https://youtu.be/"
     },
     {
         "level": "250+",
         "place": "Medusa Tower",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "2.2kk",
+        "loot": "400k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },
@@ -602,16 +594,16 @@
     {
         "level": "300+",
         "place": "Werelions -1",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "2.9kk",
+        "loot": "800k",
         "weapon_type": "Ice",
         "link": "https://youtu.be/7lL9Eu4gEfY"
     },
     {
         "level": "300+",
         "place": "Werelions -2",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "2.7kk",
+        "loot": "700k",
         "weapon_type": "Ice",
         "link": "https://youtu.be/4UjR7XhKo2Q"
     },
@@ -666,8 +658,8 @@
     {
         "level": "300+",
         "place": "Candia Nibblemaws",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "2.8kk",
+        "loot": "450k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },
@@ -834,8 +826,8 @@
     {
         "level": "400+",
         "place": "Roshamuul Mines",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "4.4kk",
+        "loot": "600k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },
@@ -1048,14 +1040,6 @@
         "link": "https://youtu.be/TQ6acS-sKEU"
     },
     {
-        "level": "550+",
-        "place": "Feru Way",
-        "raw_exp": "4.5kk",
-        "loot": "1.3kk",
-        "weapon_type": "Ice",
-        "link": "https://youtu.be/4oUyVfnzvAw"
-    },
-    {
         "level": "600+",
         "place": "Issavi Sewers",
         "raw_exp": "5.5kk",
@@ -1098,8 +1082,8 @@
     {
         "level": "600+",
         "place": "Girtablilus",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "3.7kk",
+        "loot": "1.4kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },
@@ -1129,17 +1113,9 @@
     },
     {
         "level": "700+",
-        "place": "Feru DT seal",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Ice",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "700+",
         "place": "Feru Plague seal",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "5.5kk",
+        "loot": "1.5kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },
@@ -1152,11 +1128,19 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "700+",
+        "level": "800+",
         "place": "Bulltaurs",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "7.0kk",
+        "loot": "1.6kk",
         "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+        {
+        "level": "800+",
+        "place": "Feru DT seal",
+        "raw_exp": "6kk",
+        "loot": "1.5kk",
+        "weapon_type": "Ice",
         "link" : "https://youtu.be/"
     },
     {
@@ -1183,6 +1167,14 @@
         "weapon_type": "Ice, Earth, Fire",
         "link" : "https://youtu.be/"
     },
+        {
+        "level": "800+",
+        "place": "Feru Way",
+        "raw_exp": "6.5kk",
+        "loot": "1.5kk",
+        "weapon_type": "Ice",
+        "link": "https://youtu.be/"
+    },
     {
         "level": "800+",
         "place": "Feru Pumin Seal",
@@ -1194,16 +1186,16 @@
     {
         "level": "800+",
         "place": "Feru Infernatil Seal",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "7.0kk",
+        "loot": "1.6kk",
         "weapon_type": "Ice",
         "link" : "https://youtu.be/"
     },
     {
         "level": "1000+",
         "place": "True Asuras",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "5.8kk",
+        "loot": "1.8kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     }
