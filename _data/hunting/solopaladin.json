@@ -1,71 +1,71 @@
 [
     {
         "level": "8+",
-        "place": "Rotworms Liberty Bay",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Swamp Trolls Port Hope/Venore (Spears)",
+        "raw_exp": "30k",
+        "loot": "55k",
         "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
         "level": "8+",
-        "place": "Swamp Trolls Port Hope/Venore",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Crocodiles Port Hope (Spears)",
+        "raw_exp": "30k",
+        "loot": "5k",
         "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
         "level": "8+",
-        "place": "Crocodiles PH",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Rotworms Liberty Bay/Darashia (Spears)",
+        "raw_exp": "30k",
+        "loot": "4k",
         "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
         "level": "8+",
-        "place": "Larva Ankh",
+        "place": "Larva Ankh (Spears)",
+        "raw_exp": "30k",
+        "loot": "2k",
+        "runes": "N/A",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "13+",
+        "place": "Amazon Camp (Spears)",
         "raw_exp": "-",
         "loot": "-",
         "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "15+",
-        "place": "Edron Tomb",
+        "level": "13+",
+        "place": "Ankrahmun City Tomb (Spears)",
         "raw_exp": "-",
         "loot": "-",
         "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "15+",
-        "place": "Larva/Mummy MOSL -1/-2",
+        "level": "13+",
+        "place": "Edron Tomb (Arrows)",
         "raw_exp": "-",
         "loot": "-",
         "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "20+",
-        "place": "Cyclopolis",
+        "level": "13+",
+        "place": "Tarantulas Port Hope (Arrows)",
         "raw_exp": "-",
         "loot": "-",
         "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "20+",
-        "place": "Cyclops Mistrock",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "N/A",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "20+",
-        "place": "Chor",
+        "level": "13+",
+        "place": "Larva/Mummy MOSL -1/-2 (Arrows)",
         "raw_exp": "-",
         "loot": "-",
         "runes": "N/A",
@@ -73,7 +73,7 @@
     },
     {
         "level": "25+",
-        "place": "Stonerefiners",
+        "place": "Stonerefiners (Royal Spears, Stealth Ring)",
         "raw_exp": "-",
         "loot": "-",
         "runes": "N/A",
@@ -81,7 +81,7 @@
     },
     {
         "level": "25+",
-        "place": "Coryms PH",
+        "place": "Coryms Port Hope (Royal Spears, Stealth Ring)",
         "raw_exp": "-",
         "loot": "-",
         "runes": "N/A",
@@ -89,7 +89,7 @@
     },
     {
         "level": "25+",
-        "place": "Elves Yalahar",
+        "place": "Elves Yalahar (Royal Spears)",
         "raw_exp": "-",
         "loot": "-",
         "runes": "N/A",
@@ -105,14 +105,6 @@
     },
     {
         "level": "25+",
-        "place": "Tarantulas PH",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "N/A",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "25+",
         "place": "Mutated Humans Yalahar",
         "raw_exp": "-",
         "loot": "-",
@@ -121,7 +113,7 @@
     },
     {
         "level": "25+",
-        "place": "Minotaur Pyramind Darashia",
+        "place": "Minotaurs Darashia/Yalahar (Royal Spears, Stealth Ring)",
         "raw_exp": "-",
         "loot": "-",
         "runes": "N/A",
