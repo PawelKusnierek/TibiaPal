@@ -32,44 +32,68 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "13+",
+        "level": "15+",
         "place": "Amazon Camp (Spears)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "35k",
+        "loot": "60k",
         "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "13+",
+        "level": "15+",
         "place": "Ankrahmun City Tomb (Spears)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "35k",
+        "loot": "5k",
         "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "13+",
+        "level": "15+",
         "place": "Edron Tomb (Arrows)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "55k",
+        "loot": "30k",
         "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "13+",
-        "place": "Tarantulas Port Hope (Arrows)",
-        "raw_exp": "-",
-        "loot": "-",
+        "level": "15+",
+        "place": "Mistrock Cyclops (Arrows, Stealth Ring)",
+        "raw_exp": "50k",
+        "loot": "0k",
         "runes": "N/A",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "13+",
-        "place": "Larva/Mummy MOSL -1/-2 (Arrows)",
+        "level": "20+",
+        "place": "Elves Yalahar (Arrows)",
+        "raw_exp": "40k",
+        "loot": "40k",
+        "runes": "N/A",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "20+",
+        "place": "Minotaurs Yalahar (Arrows)",
+        "raw_exp": "60k",
+        "loot": "0k",
+        "runes": "N/A",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "25+",
+        "place": "Tarantulas Port Hope (Royal Spears)",
+        "raw_exp": "50k",
+        "loot": "15k",
+        "runes": "N/A",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "25+",
+        "place": "Mammoths/Badgers Svargrond (Royal Spears)",
         "raw_exp": "-",
         "loot": "-",
         "runes": "N/A",
-        "link" : "https://youtu.be/"
+        "link": "https://youtu.be/"
     },
     {
         "level": "25+",
@@ -89,7 +113,7 @@
     },
     {
         "level": "25+",
-        "place": "Elves Yalahar (Royal Spears)",
+        "place": "Laguna Islands (Royal Spears)",
         "raw_exp": "-",
         "loot": "-",
         "runes": "N/A",
@@ -97,7 +121,7 @@
     },
     {
         "level": "25+",
-        "place": "Laguna Islands",
+        "place": "Mutated Humans Yalahar (Royal Spears)",
         "raw_exp": "-",
         "loot": "-",
         "runes": "N/A",
@@ -105,23 +129,7 @@
     },
     {
         "level": "25+",
-        "place": "Mutated Humans Yalahar",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "N/A",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "25+",
-        "place": "Zombies Yala/Treasure Island",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "N/A",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "25+",
-        "place": "Carniphilas Port Hope",
+        "place": "Carniphilas Port Hope (Royal Spears)",
         "raw_exp": "-",
         "loot": "-",
         "runes": "N/A",
@@ -129,7 +137,23 @@
     },
     {
         "level": "40+",
-        "place": "Mother of Ancient Scarabs -3",
+        "place": "Zombies Treasure Island (Onyx Arrows)",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "N/A",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "40+",
+        "place": "Zombies Cemetery Yalahar (Onyx Arrows)",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "N/A",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "40+",
+        "place": "MoAS -3 (Onyx Arrows)",
         "raw_exp": "-",
         "loot": "-",
         "runes": "GFB",
@@ -137,7 +161,7 @@
     },
     {
         "level": "40+",
-        "place": "Pirates Yalahar",
+        "place": "Pirates Yalahar (Royal Spears)",
         "raw_exp": "-",
         "loot": "-",
         "runes": "N/A",
@@ -145,7 +169,7 @@
     },
     {
         "level": "40+",
-        "place": "Cults Yalahar",
+        "place": "Cults Yalahar (Onyx Arrows)",
         "raw_exp": "-",
         "loot": "-",
         "runes": "Thunderstorm",
