@@ -81,11 +81,11 @@
     },
     {
         "level": "25+",
-        "place": "Tarantulas Port Hope",
-        "raw_exp": "50k",
-        "loot": "15k",
+        "place": "Stonerefiners (Stealth Ring)",
+        "raw_exp": "-",
+        "loot": "-",
         "runes": "Royal Spears",
-        "link" : "https://youtu.be/"
+        "link": "https://youtu.be/_PQb_eT6nVU"
     },
     {
         "level": "25+",
@@ -97,15 +97,23 @@
     },
     {
         "level": "25+",
-        "place": "Stonerefiners (Stealth Ring)",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Tarantulas Port Hope",
+        "raw_exp": "70k",
+        "loot": "15k",
         "runes": "Royal Spears",
-        "link": "https://youtu.be/_PQb_eT6nVU"
+        "link" : "https://youtu.be/"
     },
     {
         "level": "25+",
-        "place": "Coryms (Stealth Ring)",
+        "place": "Coryms Port Hope (Stealth Ring)",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Royal Spears",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "25+",
+        "place": "Carniphilas Port Hope",
         "raw_exp": "-",
         "loot": "-",
         "runes": "Royal Spears",
@@ -122,14 +130,6 @@
     {
         "level": "25+",
         "place": "Mutated Humans Yalahar",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Royal Spears",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "25+",
-        "place": "Carniphilas Port Hope",
         "raw_exp": "-",
         "loot": "-",
         "runes": "Royal Spears",
