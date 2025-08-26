@@ -1049,6 +1049,14 @@
     },
     {
         "level": "600+",
+        "place": "Norcferatu Fortress",
+        "raw_exp": "8.5kk",
+        "loot": "1.8kk",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
         "place": "Nimmersatt's Dragons -7 (Bottom Floor)",
         "raw_exp": "8.4kk",
         "loot": "1.4kk",
@@ -1060,14 +1068,6 @@
         "place": "Nimmersatt's Dragons -6 (Boss Floor)",
         "raw_exp": "8.1kk",
         "loot": "1.3kk",
-        "weapon_type": "Earth",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Norcferatu Castle",
-        "raw_exp": "7.0kk",
-        "loot": "1.5kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
@@ -1176,6 +1176,14 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "600+",
+        "place": "Warzone 9",
+        "raw_exp": "3.8kk",
+        "loot": "2.1kk",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "700+",
         "place": "Norcferatu Dungeons West",
         "raw_exp": "-",
@@ -1209,14 +1217,6 @@
     },
     {
         "level": "800+",
-        "place": "Warzone 9",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Earth",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "800+",
         "place": "Podzilla Quaras",
         "raw_exp": "-",
         "loot": "-",
@@ -1226,6 +1226,30 @@
     {
         "level": "800+",
         "place": "Azzilon Catacombs",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Energy Library",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "1000+",
+        "place": "Fire Library",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "1000+",
+        "place": "Ice Library",
         "raw_exp": "-",
         "loot": "-",
         "weapon_type": "Earth",
