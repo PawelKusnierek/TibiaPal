@@ -1,178 +1,178 @@
 [
     {
         "level": "8+",
-        "place": "Swamp Trolls Port Hope/Venore (Spears)",
+        "place": "Swamp Trolls Port Hope/Venore",
         "raw_exp": "30k",
         "loot": "55k",
-        "runes": "N/A",
+        "runes": "Spears",
         "link" : "https://youtu.be/"
     },
     {
         "level": "8+",
-        "place": "Crocodiles Port Hope (Spears)",
+        "place": "Crocodiles Port Hope",
         "raw_exp": "30k",
         "loot": "5k",
-        "runes": "N/A",
+        "runes": "Spears",
         "link" : "https://youtu.be/"
     },
     {
         "level": "8+",
-        "place": "Rotworms Liberty Bay/Darashia (Spears)",
+        "place": "Rotworms Liberty Bay/Darashia",
         "raw_exp": "30k",
         "loot": "4k",
-        "runes": "N/A",
+        "runes": "Spears",
         "link" : "https://youtu.be/"
     },
     {
         "level": "8+",
-        "place": "Larva Ankh (Spears)",
+        "place": "Larva Ankh",
         "raw_exp": "30k",
         "loot": "2k",
-        "runes": "N/A",
+        "runes": "Spears",
         "link" : "https://youtu.be/"
     },
     {
         "level": "15+",
-        "place": "Amazon Camp (Spears)",
+        "place": "Amazon Camp",
         "raw_exp": "35k",
         "loot": "60k",
-        "runes": "N/A",
+        "runes": "Spears",
         "link" : "https://youtu.be/"
     },
     {
         "level": "15+",
-        "place": "Ankrahmun City Tomb (Spears)",
+        "place": "Ankrahmun City Tomb",
         "raw_exp": "35k",
         "loot": "5k",
-        "runes": "N/A",
+        "runes": "Spears",
         "link" : "https://youtu.be/"
     },
     {
         "level": "15+",
-        "place": "Edron Tomb (Arrows)",
+        "place": "Edron Tomb",
         "raw_exp": "55k",
         "loot": "30k",
-        "runes": "N/A",
+        "runes": "Arrows",
         "link" : "https://youtu.be/"
     },
     {
         "level": "15+",
-        "place": "Mistrock Cyclops (Arrows, Stealth Ring)",
+        "place": "Mistrock Cyclops (Stealth Ring)",
         "raw_exp": "50k",
         "loot": "0k",
-        "runes": "N/A",
+        "runes": "Arrows",
         "link" : "https://youtu.be/"
     },
     {
         "level": "20+",
-        "place": "Elves Yalahar (Arrows)",
+        "place": "Elves Yalahar ",
         "raw_exp": "40k",
         "loot": "40k",
-        "runes": "N/A",
+        "runes": "Arrows",
         "link" : "https://youtu.be/"
     },
     {
         "level": "20+",
-        "place": "Minotaurs Yalahar (Arrows)",
+        "place": "Minotaurs Yalahar ",
         "raw_exp": "60k",
         "loot": "0k",
-        "runes": "N/A",
+        "runes": "Arrows",
         "link" : "https://youtu.be/"
     },
     {
         "level": "25+",
-        "place": "Tarantulas Port Hope (Royal Spears)",
+        "place": "Tarantulas Port Hope",
         "raw_exp": "50k",
         "loot": "15k",
-        "runes": "N/A",
+        "runes": "Royal Spears",
         "link" : "https://youtu.be/"
     },
     {
         "level": "25+",
-        "place": "Mammoths/Badgers Svargrond (Royal Spears)",
+        "place": "Mammoths/Badgers Svargrond",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "N/A",
+        "runes": "Royal Spears",
         "link": "https://youtu.be/"
     },
     {
         "level": "25+",
-        "place": "Stonerefiners (Royal Spears, Stealth Ring)",
+        "place": "Stonerefiners (Stealth Ring)",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "N/A",
+        "runes": "Royal Spears",
         "link": "https://youtu.be/_PQb_eT6nVU"
     },
     {
         "level": "25+",
-        "place": "Coryms (Royal Spears, Stealth Ring)",
+        "place": "Coryms (Stealth Ring)",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "N/A",
+        "runes": "Royal Spears",
         "link" : "https://youtu.be/"
     },
     {
         "level": "25+",
-        "place": "Laguna Islands (Royal Spears)",
+        "place": "Laguna Islands",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "N/A",
+        "runes": "Royal Spears",
         "link" : "https://youtu.be/"
     },
     {
         "level": "25+",
-        "place": "Mutated Humans Yalahar (Royal Spears)",
+        "place": "Mutated Humans Yalahar",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "N/A",
+        "runes": "Royal Spears",
         "link" : "https://youtu.be/"
     },
     {
         "level": "25+",
-        "place": "Carniphilas Port Hope (Royal Spears)",
+        "place": "Carniphilas Port Hope",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "N/A",
+        "runes": "Royal Spears",
         "link" : "https://youtu.be/"
     },
     {
         "level": "40+",
-        "place": "Zombies Treasure Island (Onyx Arrows)",
+        "place": "Zombies Treasure Island",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "N/A",
+        "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
     {
         "level": "40+",
-        "place": "Zombies Cemetery Yalahar (Onyx Arrows)",
+        "place": "Zombies Cemetery Yalahar",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "N/A",
+        "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
     {
         "level": "40+",
-        "place": "MoAS -3 (Onyx Arrows)",
+        "place": "MoAS -3",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "GFB",
+        "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
     {
         "level": "40+",
-        "place": "Pirates Yalahar (Royal Spears)",
+        "place": "Pirates Yalahar",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "N/A",
+        "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
     {
         "level": "40+",
-        "place": "Cults Yalahar (Onyx Arrows)",
+        "place": "Cults Yalahar",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "Thunderstorm",
+        "runes": "Onyx Arrows, Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -180,7 +180,7 @@
         "place": "Lion's Rock",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "Avalanche",
+        "runes": "Onyx Arrows, GFB",
         "link" : "https://youtu.be/"
     },
     {
@@ -188,7 +188,7 @@
         "place": "Mutated Rats Alchemist Quarter",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "GFB",
+        "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
     {
@@ -196,7 +196,7 @@
         "place": "Edron Vampire Crypt -3",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "Avalanche",
+        "runes": "Onyx Arrows, Avalanche",
         "link": "https://youtu.be/uIkClHzNg60"
     },
     {
@@ -204,7 +204,7 @@
         "place": "Darashia Dragon Lair",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "Avalanche",
+        "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
     {
@@ -212,7 +212,7 @@
         "place": "Yalahar Dragons",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "Avalanche",
+        "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
     {
@@ -220,7 +220,7 @@
         "place": "Old Fortress Bonebeasts",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "Avalanche",
+        "runes": "Onyx Arrows",
         "link": "https://youtu.be/Rimlz__WgqY"
     },
     {
@@ -228,7 +228,7 @@
         "place": "Krailos Surface",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "N/A",
+        "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
     {
@@ -236,23 +236,15 @@
         "place": "Werebadgers Grimvale -1",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "N/A",
+        "runes": "Onyx Arrows",
         "link": "https://youtu.be/6Bh7yIzXaZU"
-    },
-    {
-        "level": "50+",
-        "place": "Hive Surface",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "GFB",
-        "link" : "https://youtu.be/"
     },
     {
         "level": "50+",
         "place": "Peninsula Tomb (AOE)",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "Avalanche",
+        "runes": "Onyx Arrows, Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -260,7 +252,7 @@
         "place": "Bonebeast Island (AOE)",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "Avalanche",
+        "runes": "Onyx Arrows, Avalanche",
         "link" : "https://youtu.be/"
     },
     {
