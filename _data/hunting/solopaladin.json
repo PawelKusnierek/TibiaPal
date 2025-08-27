@@ -90,8 +90,8 @@
     {
         "level": "25+",
         "place": "Mammoths/Badgers Svargrond",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "60k",
+        "loot": "70k",
         "runes": "Royal Spears",
         "link": "https://youtu.be/"
     },
@@ -106,16 +106,16 @@
     {
         "level": "25+",
         "place": "Coryms Port Hope (Stealth Ring)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "95k",
+        "loot": "-15k",
         "runes": "Royal Spears",
         "link" : "https://youtu.be/"
     },
     {
         "level": "25+",
         "place": "Carniphilas Port Hope",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "75k",
+        "loot": "-5k",
         "runes": "Royal Spears",
         "link" : "https://youtu.be/"
     },
