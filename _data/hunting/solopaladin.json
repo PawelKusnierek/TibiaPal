@@ -33,22 +33,6 @@
     },
     {
         "level": "15+",
-        "place": "Amazon Camp",
-        "raw_exp": "35k",
-        "loot": "60k",
-        "runes": "Spears",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "15+",
-        "place": "Ankrahmun City Tomb",
-        "raw_exp": "35k",
-        "loot": "5k",
-        "runes": "Spears",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "15+",
         "place": "Edron Tomb",
         "raw_exp": "55k",
         "loot": "30k",
@@ -64,11 +48,19 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "20+",
-        "place": "Elves Yalahar ",
-        "raw_exp": "40k",
-        "loot": "40k",
-        "runes": "Arrows",
+        "level": "15+",
+        "place": "Amazon Camp",
+        "raw_exp": "35k",
+        "loot": "60k",
+        "runes": "Spears",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "15+",
+        "place": "Ankrahmun City Tomb",
+        "raw_exp": "35k",
+        "loot": "5k",
+        "runes": "Spears",
         "link" : "https://youtu.be/"
     },
     {
@@ -80,26 +72,26 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "20+",
+        "place": "Elves Yalahar ",
+        "raw_exp": "40k",
+        "loot": "40k",
+        "runes": "Arrows",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "25+",
         "place": "Stonerefiners (Stealth Ring)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "180k",
+        "loot": "40k",
         "runes": "Royal Spears",
         "link": "https://youtu.be/_PQb_eT6nVU"
     },
     {
         "level": "25+",
-        "place": "Mammoths/Badgers Svargrond",
-        "raw_exp": "60k",
-        "loot": "70k",
-        "runes": "Royal Spears",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "25+",
-        "place": "Tarantulas Port Hope",
-        "raw_exp": "70k",
-        "loot": "15k",
+        "place": "Mutated Humans Yalahar",
+        "raw_exp": "110k",
+        "loot": "2k",
         "runes": "Royal Spears",
         "link" : "https://youtu.be/"
     },
@@ -121,20 +113,20 @@
     },
     {
         "level": "25+",
-        "place": "Laguna Islands",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Tarantulas Port Hope",
+        "raw_exp": "70k",
+        "loot": "15k",
         "runes": "Royal Spears",
         "link" : "https://youtu.be/"
     },
     {
         "level": "25+",
-        "place": "Mutated Humans Yalahar",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Mammoths/Badgers Svargrond",
+        "raw_exp": "60k",
+        "loot": "70k",
         "runes": "Royal Spears",
-        "link" : "https://youtu.be/"
-    },
+        "link": "https://youtu.be/"
+    },    
     {
         "level": "40+",
         "place": "Zombies Treasure Island",
