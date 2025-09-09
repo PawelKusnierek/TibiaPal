@@ -177,7 +177,7 @@ function calculate_remove_players_click() {
         total_profit,
         profit_per_person,
         resultsContent,
-        undefined
+        original_analyser_data
     );
     update_the_history_results();
     document.getElementById("extra-expenses-div").innerHTML = "";
@@ -251,7 +251,7 @@ function calculate_extra_expenses_click() {
         total_profit,
         profit_per_person,
         resultsContent,
-        undefined
+        original_analyser_data
     );
     update_the_history_results();
 }
