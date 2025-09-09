@@ -65,7 +65,8 @@ function preplootsplit() {
         }
     }
 
-    //getting the raw analyser data
+    //getting the raw analyser data and storing the original for history
+    original_analyser_data = form.analyserData.value;
     analyser_data = form.analyserData.value.replace(" (Leader)", "");
 
     // Parsing the data from the log to find out profit per person and the balance of each player
@@ -108,6 +109,8 @@ function regularlootsplit() {
 }
 
 function prepare_remove_players_lootsplit() {
+    // Store the original analyser data for history
+    original_analyser_data = form.analyserData.value;
     analyser_data = form.analyserData.value.replace(" (Leader)", "");
 
     //remove all other content
@@ -1027,6 +1030,11 @@ function update_the_history_results() {
         players_formatted = players_formatted + player_names_list[i] + ", ";
     }
     players_formatted = players_formatted.slice(0, -2);
+    
+    // Use the stored original_analyser_data variable instead of form.analyserData.value
+    // This ensures we save the original analyser data even when the form gets modified
+    const analyser_data_to_save = typeof original_analyser_data !== 'undefined' ? original_analyser_data : (form.analyserData.value || "Log not available");
+    
     new_results = [
         who_to_pay_and_how_much,
         profit_per_person,
@@ -1034,7 +1042,7 @@ function update_the_history_results() {
         players_formatted,
         session_duration,
         session_date,
-        form.analyserData.value,
+        analyser_data_to_save,
     ];
     const workingHistory = isHistoryMaxed
         ? history.slice(0, 90 - new_results.length)
