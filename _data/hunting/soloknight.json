@@ -58,34 +58,18 @@
     {
         "level": "20+",
         "place": "Stonerefiners (Stealth Ring)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "100k",
+        "loot": "20k",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "30+",
-        "place": "Mutated Humans Yalahar",
+        "level": "20+",
+        "place": "Mutated Humans Yalahar (Single target)",
         "raw_exp": "135k",
         "loot": "20k",
         "weapon_type": "Physical",
-        "link": "https://youtu.be/BmLScxZQ9Vk"
-    },
-    {
-        "level": "30+",
-        "place": "Blood Crabs Laguna Islands",
-        "raw_exp": "100k",
-        "loot": "150k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/3mcY_eNBThg"
-    },
-    {
-        "level": "30+",
-        "place": "Laguna Islands",
-        "raw_exp": "90k",
-        "loot": "50k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/hg5Tgj_bubU"
+        "link": "https://youtu.be/"
     },
     {
         "level": "30+",
@@ -110,6 +94,30 @@
         "loot": "-",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/"
+    },
+    {
+        "level": "35+",
+        "place": "Mutated Humans Yalahar (Exori)",
+        "raw_exp": "135k",
+        "loot": "20k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/BmLScxZQ9Vk"
+    },
+    {
+        "level": "35+",
+        "place": "Blood Crabs Laguna Islands",
+        "raw_exp": "100k",
+        "loot": "150k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/3mcY_eNBThg"
+    },
+    {
+        "level": "35+",
+        "place": "Laguna Islands",
+        "raw_exp": "90k",
+        "loot": "50k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/hg5Tgj_bubU"
     },
     {
         "level": "35+",
