@@ -81,19 +81,19 @@
     },
     {
         "level": "14+",
-        "place": "Tarantulas Port Hope",
-        "raw_exp": "60k",
-        "loot": "-10k",
-        "runes": "N/A",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "14+",
         "place": "Coryms Port Hope (Stealth Ring)",
         "raw_exp": "100k",
         "loot": "-5k",
         "runes": "N/A",
         "link" : "https://youtu.be/0AvNiVT6KOo"
+    },
+    {
+        "level": "14+",
+        "place": "Tarantulas Port Hope",
+        "raw_exp": "60k",
+        "loot": "-10k",
+        "runes": "N/A",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "15+",
@@ -137,14 +137,6 @@
     },
     {
         "level": "28+",
-        "place": "Gargoyle Cave Meriana",
-        "raw_exp": "220k",
-        "loot": "50k",
-        "runes": "Thunderstorm, GFB",
-        "link" : "https://youtu.be/PnXNfzJcr3o"
-    },
-    {
-        "level": "28+",
         "place": "Upper Spike",
         "raw_exp": "320k",
         "loot": "75k",
@@ -152,12 +144,12 @@
         "link" : "https://youtu.be/qtHD2m-s5WE"
     },
     {
-        "level": "30+",
-        "place": "Coryms Port Hope (AOE)",
-        "raw_exp": "260k",
-        "loot": "-100k",
-        "runes": "GFB",
-        "link" : "https://youtu.be/0AvNiVT6KOo"
+        "level": "28+",
+        "place": "Gargoyle Cave Meriana",
+        "raw_exp": "220k",
+        "loot": "50k",
+        "runes": "Thunderstorm, GFB",
+        "link" : "https://youtu.be/PnXNfzJcr3o"
     },
     {
         "level": "30+",
@@ -169,19 +161,11 @@
     },
     {
         "level": "30+",
-        "place": "Laguna Islands (Profit)",
-        "raw_exp": "200k",
-        "loot": "400k",
+        "place": "Coryms Port Hope (AOE)",
+        "raw_exp": "260k",
+        "loot": "-100k",
         "runes": "GFB",
-        "link" : "https://youtu.be/NwrSF8TRe4s"
-    },
-    {
-        "level": "30+",
-        "place": "Apes Banuta (Profit)",
-        "raw_exp": "210k",
-        "loot": "200k",
-        "runes": "Avalanche",
-        "link" : "https://youtu.be/IRW8bc0MX7E"
+        "link" : "https://youtu.be/0AvNiVT6KOo"
     },
     {
         "level": "30+",
@@ -190,6 +174,14 @@
         "loot": "25k",
         "runes": "Avalanche",
         "link" : "https://youtu.be/WTrR8Zjvh1Y"
+    },    
+    {
+        "level": "30+",
+        "place": "Mummy/Bonebeasts MOSL -3",
+        "raw_exp": "240k",
+        "loot": "150k",
+        "runes": "Avalanche",
+        "link" : "https://youtu.be/VKifdYSTD2g"
     },
     {
         "level": "30+",
@@ -201,67 +193,27 @@
     },
     {
         "level": "30+",
+        "place": "Apes Banuta (Profit)",
+        "raw_exp": "210k",
+        "loot": "200k",
+        "runes": "Avalanche",
+        "link" : "https://youtu.be/IRW8bc0MX7E"
+    },
+    {
+        "level": "30+",
+        "place": "Laguna Islands (Profit)",
+        "raw_exp": "200k",
+        "loot": "400k",
+        "runes": "GFB",
+        "link" : "https://youtu.be/NwrSF8TRe4s"
+    },
+    {
+        "level": "30+",
         "place": "Carniphilas Port Hope",
         "raw_exp": "120k",
         "loot": "-30k",
         "runes": "GFB",
         "link" : "https://youtu.be/smLBYH4LoC4"
-    },
-    {
-        "level": "30+",
-        "place": "Mummy/Bonebeasts MOSL -3",
-        "raw_exp": "240k",
-        "loot": "150k",
-        "runes": "Avalanche",
-        "link" : "https://youtu.be/VKifdYSTD2g"
-    },
-    {
-        "level": "50+",
-        "place": "LB Wyrms SD",
-        "raw_exp": "600k",
-        "loot": "-150k",
-        "runes": "SD",
-        "link" : "https://youtu.be/GTB7xIoN3gQ"
-    },
-    {
-        "level": "50+",
-        "place": "Yalahar Cults",
-        "raw_exp": "290k",
-        "loot": "500k",
-        "runes": "Thunderstorm",
-        "link" : "https://youtu.be/Mf97YGUteV0"
-    },
-    {
-        "level": "50+",
-        "place": "Peninsula Tomb",
-        "raw_exp": "440k",
-        "loot": "60k",
-        "runes": "Avalanche",
-        "link" : "https://youtu.be/cZQncRLVp90"
-    },
-    {
-        "level": "50+",
-        "place": "Haunted Treelings Vengoth",
-        "raw_exp": "375k",
-        "loot": "-80k",
-        "runes": "Avalanche",
-        "link" : "https://youtu.be/cWH0T4hqHDQ"
-    },
-    {
-        "level": "50+",
-        "place": "Water Elementals Port Hope",
-        "raw_exp": "400k",
-        "loot": "-50k",
-        "runes": "Thunderstorm",
-        "link" : "https://youtu.be/Qjdpi5yDl0E"
-    },
-    {
-        "level": "50+",
-        "place": "Nibelor Crystal Spiders",
-        "raw_exp": "450k",
-        "loot": "-10k",
-        "runes": "Thunderstorm",
-        "link" : "https://youtu.be/Ma_T9DV5GqA"
     },
     {
         "level": "50+",
@@ -273,11 +225,67 @@
     },
     {
         "level": "50+",
+        "place": "LB Wyrms SD",
+        "raw_exp": "600k",
+        "loot": "-150k",
+        "runes": "SD",
+        "link" : "https://youtu.be/GTB7xIoN3gQ"
+    },
+    {
+        "level": "50+",
+        "place": "Nibelor Crystal Spiders",
+        "raw_exp": "450k",
+        "loot": "-10k",
+        "runes": "Thunderstorm",
+        "link" : "https://youtu.be/Ma_T9DV5GqA"
+    },
+    {
+        "level": "50+",
+        "place": "Darashia DLs SD",
+        "raw_exp": "450k",
+        "loot": "-200k",
+        "runes": "SD",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "50+",
+        "place": "Peninsula Tomb",
+        "raw_exp": "440k",
+        "loot": "60k",
+        "runes": "Avalanche",
+        "link" : "https://youtu.be/cZQncRLVp90"
+    },
+    {
+        "level": "50+",
         "place": "Lion's Rock Lions",
         "raw_exp": "440k",
         "loot": "-20k",
         "runes": "Avalanche",
         "link" : "https://youtu.be/JA7zsccq2Bo"
+    },
+    {
+        "level": "50+",
+        "place": "Water Elementals Port Hope",
+        "raw_exp": "400k",
+        "loot": "-50k",
+        "runes": "Thunderstorm",
+        "link" : "https://youtu.be/Qjdpi5yDl0E"
+    },
+    {
+        "level": "50+",
+        "place": "Haunted Treelings Vengoth",
+        "raw_exp": "375k",
+        "loot": "-80k",
+        "runes": "Avalanche",
+        "link" : "https://youtu.be/cWH0T4hqHDQ"
+    },
+    {
+        "level": "50+",
+        "place": "Yalahar Cults",
+        "raw_exp": "290k",
+        "loot": "500k",
+        "runes": "Thunderstorm",
+        "link" : "https://youtu.be/Mf97YGUteV0"
     },
     {
         "level": "60+",
