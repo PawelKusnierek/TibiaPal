@@ -91,7 +91,7 @@
         "level": "25+",
         "place": "Mutated Humans Yalahar",
         "raw_exp": "110k",
-        "loot": "2k",
+        "loot": "5k",
         "runes": "Royal Spears",
         "link" : "https://youtu.be/"
     },
@@ -1233,23 +1233,15 @@
     },
     {
         "level": "600+",
-        "place": "Norcferatu Dungeons West",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "GFB",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Norcferatu Dungeons East",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "GFB",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
         "place": "Venore Lost Souls",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "GFB",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Norcferatu Fortress",
         "raw_exp": "-",
         "loot": "-",
         "runes": "GFB",
@@ -1269,6 +1261,22 @@
         "raw_exp": "-",
         "loot": "-",
         "runes": "Avalanche",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Norcferatu Dungeons West",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "GFB",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Norcferatu Dungeons East",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "GFB",
         "link" : "https://youtu.be/"
     },
     {
