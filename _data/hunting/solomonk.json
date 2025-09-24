@@ -113,6 +113,14 @@
     },
     {
         "level": "30+",
+        "place": "Zombies Treasure Island",
+        "raw_exp": "120k",
+        "loot": "50k",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "30+",
         "place": "Banuta Apes (Runes)",
         "raw_exp": "110k",
         "loot": "100k",

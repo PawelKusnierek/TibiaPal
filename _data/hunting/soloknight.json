@@ -74,8 +74,8 @@
     {
         "level": "30+",
         "place": "Zombies Treasure Island",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "120k",
+        "loot": "50k",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/"
     },
