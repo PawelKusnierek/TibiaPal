@@ -73,6 +73,14 @@
     },
     {
         "level": "30+",
+        "place": "Coryms Port Hope",
+        "raw_exp": "150k",
+        "loot": "-30k",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "30+",
         "place": "Zombies Treasure Island",
         "raw_exp": "120k",
         "loot": "50k",
@@ -82,14 +90,6 @@
     {
         "level": "30+",
         "place": "Carniphilas Port Hope",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "30+",
-        "place": "Coryms Port Hope/Venore (Stealth Ring)",
         "raw_exp": "-",
         "loot": "-",
         "weapon_type": "Physical",
