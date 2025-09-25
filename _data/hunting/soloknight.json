@@ -88,10 +88,18 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "30+",
-        "place": "Carniphilas Port Hope",
-        "raw_exp": "-",
-        "loot": "-",
+        "level": "35+",
+        "place": "Mother of Scarabs Lair -3",
+        "raw_exp": "200k",
+        "loot": "150k",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "35+",
+        "place": "Pirates Yalahar",
+        "raw_exp": "180k",
+        "loot": "90k",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/"
     },
@@ -120,20 +128,28 @@
         "link": "https://youtu.be/hg5Tgj_bubU"
     },
     {
-        "level": "35+",
-        "place": "Pirates Yalahar",
-        "raw_exp": "-",
-        "loot": "-",
+        "level": "50+",
+        "place": "Lion's Rock",
+        "raw_exp": "500k",
+        "loot": "65k",
         "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
+        "link": "https://youtu.be/xTQ6dk8LvlQ"
     },
     {
-        "level": "35+",
-        "place": "Mother of Scarabs Lair -3",
-        "raw_exp": "-",
-        "loot": "-",
+        "level": "50+",
+        "place": "Nibelor Crystal Spiders",
+        "raw_exp": "400k",
+        "loot": "90k",
         "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
+        "link": "https://youtu.be/bY6IJrqDAaY"
+    },
+    {
+        "level": "50+",
+        "place": "Vengoth Haunted Treelings",
+        "raw_exp": "360k",
+        "loot": "15k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/MzHX_f4jK-0"
     },
     {
         "level": "50+",
@@ -158,30 +174,6 @@
         "loot": "-",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Lion's Rock",
-        "raw_exp": "500k",
-        "loot": "65k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/xTQ6dk8LvlQ"
-    },
-    {
-        "level": "50+",
-        "place": "Nibelor Crystal Spiders",
-        "raw_exp": "400k",
-        "loot": "90k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/bY6IJrqDAaY"
-    },
-    {
-        "level": "50+",
-        "place": "Vengoth Haunted Treelings",
-        "raw_exp": "360k",
-        "loot": "15k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/MzHX_f4jK-0"
     },
     {
         "level": "50+",
