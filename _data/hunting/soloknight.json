@@ -546,7 +546,7 @@
     {
         "level": "200+",
         "place": "Hive Stage3",
-        "raw_exp": "2kk",
+        "raw_exp": "2.0kk",
         "loot": "300k",
         "weapon_type": "Ice",
         "link": "https://youtu.be/xDwJy-iTtI0"
@@ -610,7 +610,7 @@
     {
         "level": "300+",
         "place": "Deeper Banuta (Bottom Floor)",
-        "raw_exp": "3kk",
+        "raw_exp": "3.0kk",
         "loot": "800k",
         "weapon_type": "Energy",
         "link": "https://youtu.be/C3HBF3noWV0"
@@ -754,7 +754,7 @@
     {
         "level": "400+",
         "place": "Warzone 6",
-        "raw_exp": "3kk",
+        "raw_exp": "3.0kk",
         "loot": "750k",
         "weapon_type": "Ice",
         "link": "https://youtu.be/z6fgTbeD--k"
@@ -778,7 +778,7 @@
     {
         "level": "400+",
         "place": "POI Verminor Seal",
-        "raw_exp": "3kk",
+        "raw_exp": "3.0kk",
         "loot": "650k",
         "weapon_type": "Physical",
         "link": "https://youtu.be/SwhH7mfXKWA"
@@ -794,7 +794,7 @@
     {
         "level": "400+",
         "place": "Winter Court",
-        "raw_exp": "4kk",
+        "raw_exp": "4.0kk",
         "loot": "750k",
         "weapon_type": "Fire",
         "link": "https://youtu.be/oSh1OpMdNlI"
@@ -850,7 +850,7 @@
     {
         "level": "450+",
         "place": "Prison -2",
-        "raw_exp": "4kk",
+        "raw_exp": "4.0kk",
         "loot": "850k",
         "weapon_type": "Physical, Energy",
         "link": "https://youtu.be/P2at25KY0eU"
@@ -898,7 +898,7 @@
     {
         "level": "500+",
         "place": "Otherworld",
-        "raw_exp": "3kk",
+        "raw_exp": "3.0kk",
         "loot": "1.1kk",
         "weapon_type": "Earth",
         "link": "https://youtu.be/qztNKrkX4xQ"
@@ -914,7 +914,7 @@
     {
         "level": "500+",
         "place": "INQ Dark Torturer Seal",
-        "raw_exp": "4kk",
+        "raw_exp": "4.0kk",
         "loot": "1.1kk",
         "weapon_type": "Physical",
         "link": "https://youtu.be/iNy9v0cuywY"
@@ -962,7 +962,7 @@
     {
         "level": "500+",
         "place": "Floating Savants MoTA",
-        "raw_exp": "4kk",
+        "raw_exp": "4.0kk",
         "loot": "1.0kk",
         "weapon_type": "Ice",
         "link": "https://youtu.be/XdWrKp46meE"
@@ -970,7 +970,7 @@
     {
         "level": "500+",
         "place": "Summer Court full boxing",
-        "raw_exp": "6kk",
+        "raw_exp": "6.0kk",
         "loot": "1.0kk",
         "weapon_type": "Ice",
         "link": "https://youtu.be/LgrIoKfVKMY"
@@ -1026,7 +1026,7 @@
     {
         "level": "550+",
         "place": "Flimsy Port Hope",
-        "raw_exp": "5kk",
+        "raw_exp": "5.0kk",
         "loot": "550k",
         "weapon_type": "Fire",
         "link": "https://youtu.be/R4BrdVEDcDQ"
@@ -1050,7 +1050,7 @@
     {
         "level": "600+",
         "place": "Issavi Surface (East)",
-        "raw_exp": "6kk",
+        "raw_exp": "6.0kk",
         "loot": "350k",
         "weapon_type": "Ice",
         "link": "https://youtu.be/X4C2-DFsTvM"
@@ -1074,7 +1074,7 @@
     {
         "level": "600+",
         "place": "Oramond Mountain Hideout -1/-2",
-        "raw_exp": "4kk",
+        "raw_exp": "4.0kk",
         "loot": "800k",
         "weapon_type": "Energy",
         "link": "https://youtu.be/iXCGQvGSEQA"
@@ -1138,7 +1138,7 @@
         {
         "level": "800+",
         "place": "Feru DT seal",
-        "raw_exp": "6kk",
+        "raw_exp": "6.0kk",
         "loot": "1.5kk",
         "weapon_type": "Ice",
         "link" : "https://youtu.be/"

@@ -618,7 +618,7 @@
     {
         "level": "150+",
         "place": "Ravenous Lava Lurkers",
-        "raw_exp": "2kk",
+        "raw_exp": "2.0kk",
         "loot": "-250k",
         "runes": "Avalanche",
         "link": "https://youtu.be/AOhqvO8Ghd4"
@@ -626,7 +626,7 @@
     {
         "level": "200+",
         "place": "Oramond West",
-        "raw_exp": "2kk",
+        "raw_exp": "2.0kk",
         "loot": "0",
         "runes": "Thunderstorm, GFB",
         "link": "https://youtu.be/50-_mcLKK7M"
@@ -658,7 +658,7 @@
     {
         "level": "200+",
         "place": "Werehyaenas North",
-        "raw_exp": "2kk",
+        "raw_exp": "2.0kk",
         "loot": "250k",
         "runes": "Avalanche",
         "link": "https://youtu.be/0IPVH9V7DyE"
@@ -738,7 +738,7 @@
     {
         "level": "250+",
         "place": "Deeper Banuta -6",
-        "raw_exp": "2kk",
+        "raw_exp": "2.0kk",
         "loot": "350k",
         "runes": "Thunderstorm",
         "link": "https://youtu.be/2OEJ7blT8X0"
@@ -770,7 +770,7 @@
     {
         "level": "250+",
         "place": "Diremaw Task Area",
-        "raw_exp": "2kk",
+        "raw_exp": "2.0kk",
         "loot": "500k",
         "runes": "Avalanche",
         "link": "https://youtu.be/0nYExmxEovQ"
@@ -794,7 +794,7 @@
     {
         "level": "250+",
         "place": "Hive West (Stage3)",
-        "raw_exp": "2kk",
+        "raw_exp": "2.0kk",
         "loot": "400k",
         "runes": "Avalanche",
         "link": "https://youtu.be/Qwq0wDVcmVg"
@@ -802,7 +802,7 @@
     {
         "level": "300+",
         "place": "Draken Walls",
-        "raw_exp": "2kk",
+        "raw_exp": "2.0kk",
         "loot": "300k",
         "runes": "Avalanche",
         "link": "https://youtu.be/GMIvP48ruqY"
@@ -930,7 +930,7 @@
     {
         "level": "350+",
         "place": "Ripper Spectres (EK + RP DUO)",
-        "raw_exp": "3kk",
+        "raw_exp": "3.0kk",
         "loot": "400k",
         "runes": "GFB",
         "link": "https://youtu.be/P8IRr8WbYIk"
@@ -946,7 +946,7 @@
     {
         "level": "350+",
         "place": "Warzone 4",
-        "raw_exp": "3kk",
+        "raw_exp": "3.0kk",
         "loot": "400k",
         "runes": "GFB",
         "link": "https://youtu.be/ZNXXgG_oDkU"
@@ -970,7 +970,7 @@
     {
         "level": "350+",
         "place": "Oramond Fury Dungeon",
-        "raw_exp": "3kk",
+        "raw_exp": "3.0kk",
         "loot": "500k",
         "runes": "Thunderstorm",
         "link": "https://youtu.be/PRy0uMcBUNQ"
@@ -986,7 +986,7 @@
     {
         "level": "400+",
         "place": "Wote 8 Drakens",
-        "raw_exp": "3kk",
+        "raw_exp": "3.0kk",
         "loot": "450k",
         "runes": "Avalanche",
         "link": "https://youtu.be/kg-qhJ1EkKk"
@@ -1010,7 +1010,7 @@
     {
         "level": "400+",
         "place": "Weretigers -1",
-        "raw_exp": "3kk",
+        "raw_exp": "3.0kk",
         "loot": "450k",
         "runes": "Stoneshower",
         "link": "https://youtu.be/t1UqxaBqeAE"
@@ -1058,7 +1058,7 @@
     {
         "level": "400+",
         "place": "Iksupan Occupied Sanctuary",
-        "raw_exp": "4kk",
+        "raw_exp": "4.0kk",
         "loot": "400k",
         "runes": "Thunderstorm",
         "link": "https://youtu.be/Z4UecG4KdHM"
