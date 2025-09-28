@@ -418,7 +418,7 @@
     {
         "level": "90+",
         "place": "Orclops",
-        "raw_exp": "1kk",
+        "raw_exp": "1.0kk",
         "loot": "150k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
@@ -426,7 +426,7 @@
     {
         "level": "90+",
         "place": "Dark Faun Cave",
-        "raw_exp": "1kk",
+        "raw_exp": "1.0kk",
         "loot": "100k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
@@ -707,7 +707,7 @@
         "level": "250+",
         "place": "Carnivoras",
         "raw_exp": "2.0kk",
-        "loot": "1kk",
+        "loot": "1.0kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/0mXEw6BijN4"
     },
@@ -731,7 +731,7 @@
         "level": "270+",
         "place": "Warzone 5",
         "raw_exp": "3.8kk",
-        "loot": "1kk",
+        "loot": "1.0kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/jRNXHzlcAOc"
     },
@@ -1123,7 +1123,7 @@
         "level": "600+",
         "place": "Flimsy Lost Souls Port Hope",
         "raw_exp": "5.8kk",
-        "loot": "1kk",
+        "loot": "1.0kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
@@ -1139,7 +1139,7 @@
         "level": "600+",
         "place": "Infernatil Feru Seal",
         "raw_exp": "5.3kk",
-        "loot": "1kk",
+        "loot": "1.0kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },

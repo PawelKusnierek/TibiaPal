@@ -378,7 +378,7 @@
     {
         "level": "100+",
         "place": "Grimvale -4",
-        "raw_exp": "1kk",
+        "raw_exp": "1.0kk",
         "loot": "200k",
         "runes": "GFB",
         "link": "https://youtu.be/"
@@ -402,7 +402,7 @@
     {
         "level": "100+",
         "place": "Calassa",
-        "raw_exp": "1kk",
+        "raw_exp": "1.0kk",
         "loot": "-50k",
         "runes": "Thunderstorm",
         "link": "https://youtu.be/"
@@ -418,7 +418,7 @@
     {
         "level": "100+",
         "place": "Souleater Mountain",
-        "raw_exp": "1kk",
+        "raw_exp": "1.0kk",
         "loot": "100k",
         "runes": "GFB",
         "link": "https://youtu.be/"
@@ -490,7 +490,7 @@
     {
         "level": "120+",
         "place": "Lizard Chosens",
-        "raw_exp": "1kk",
+        "raw_exp": "1.0kk",
         "loot": "0k",
         "runes": "Avalanche",
         "link": "https://youtu.be/"
@@ -498,7 +498,7 @@
     {
         "level": "120+",
         "place": "Lizard City",
-        "raw_exp": "1kk",
+        "raw_exp": "1.0kk",
         "loot": "100k",
         "runes": "Avalanche",
         "link": "https://youtu.be/"

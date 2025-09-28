@@ -594,7 +594,7 @@
     {
         "level": "150+",
         "place": "Dark Faun Cave",
-        "raw_exp": "1kk",
+        "raw_exp": "1.0kk",
         "loot": "0",
         "runes": "GFB",
         "link": "https://youtu.be/Tez8wUPL9Xw"
@@ -1107,7 +1107,7 @@
         "level": "450+",
         "place": "Rosha West",
         "raw_exp": "5.2kk",
-        "loot": "1kk",
+        "loot": "1.0kk",
         "runes": "Avalanche",
         "link": "https://youtu.be/_-kuBf_j28I"
     },
@@ -1195,7 +1195,7 @@
         "level": "550+",
         "place": "Upper Roshamuul (South)",
         "raw_exp": "6.1kk",
-        "loot": "1kk",
+        "loot": "1.0kk",
         "runes": "Avalanche",
         "link": "https://youtu.be/kvDpADO5pII"
     },

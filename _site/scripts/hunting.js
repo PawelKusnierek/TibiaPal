@@ -171,7 +171,7 @@ function sortTable(columnIndex, vocation) {
 }
 
 function extractExpValue(text) {
-	// Handle experience values like "1kk", "1000k", "6.6kk", "6500k"
+	// Handle experience values like "1.0kk", "1000k", "6.6kk", "6500k"
 	// Convert everything to a base number (thousands)
 	
 	// Handle "kk" notation (1kk = 1000k = 1,000,000)

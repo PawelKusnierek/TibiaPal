@@ -514,7 +514,7 @@
     {
         "level": "200+",
         "place": "Minotaur Cults",
-        "raw_exp": "1kk",
+        "raw_exp": "1.0kk",
         "loot": "550k",
         "weapon_type": "Ice",
         "link" : "https://youtu.be/"
@@ -763,7 +763,7 @@
         "level": "400+",
         "place": "Rosha West",
         "raw_exp": "4.3kk",
-        "loot": "1kk",
+        "loot": "1.0kk",
         "weapon_type": "Physical, Ice",
         "link": "https://youtu.be/ObUXgSt0CKY"
     },
@@ -875,7 +875,7 @@
         "level": "450+",
         "place": "Roshamuul Shockheads",
         "raw_exp": "4.3kk",
-        "loot": "1kk",
+        "loot": "1.0kk",
         "weapon_type": "Physical",
         "link": "https://youtu.be/9jrVlQdyKR0"
     },
@@ -963,7 +963,7 @@
         "level": "500+",
         "place": "Floating Savants MoTA",
         "raw_exp": "4kk",
-        "loot": "1kk",
+        "loot": "1.0kk",
         "weapon_type": "Ice",
         "link": "https://youtu.be/XdWrKp46meE"
     },
@@ -971,7 +971,7 @@
         "level": "500+",
         "place": "Summer Court full boxing",
         "raw_exp": "6kk",
-        "loot": "1kk",
+        "loot": "1.0kk",
         "weapon_type": "Ice",
         "link": "https://youtu.be/LgrIoKfVKMY"
     },
@@ -987,7 +987,7 @@
         "level": "500+",
         "place": "Warzone 1",
         "raw_exp": "3.5kk",
-        "loot": "1kk",
+        "loot": "1.0kk",
         "weapon_type": "Fire",
         "link": "https://youtu.be/-2E-eooe3NU"
     },
@@ -1019,7 +1019,7 @@
         "level": "550+",
         "place": "Flimsy Venore -1",
         "raw_exp": "5.1kk",
-        "loot": "1kk",
+        "loot": "1.0kk",
         "weapon_type": "Fire",
         "link": "https://youtu.be/CMwLp0PWqi4"
     },
@@ -1043,7 +1043,7 @@
         "level": "600+",
         "place": "Issavi Sewers",
         "raw_exp": "5.5kk",
-        "loot": "1kk",
+        "loot": "1.0kk",
         "weapon_type": "Ice",
         "link": "https://youtu.be/euMIhkrT0Mw"
     },
