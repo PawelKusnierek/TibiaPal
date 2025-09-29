@@ -126,7 +126,23 @@
         "loot": "70k",
         "runes": "Royal Spears",
         "link": "https://youtu.be/"
-    },    
+    },
+    {
+        "level": "40+",
+        "place": "Zombies Cemetery Yalahar",
+        "raw_exp": "160k",
+        "loot": "-10k",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "40+",
+        "place": "MoAS -3",
+        "raw_exp": "150k",
+        "loot": "70k",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/"
+    },
     {
         "level": "40+",
         "place": "Zombies Treasure Island",
@@ -137,25 +153,9 @@
     },
     {
         "level": "40+",
-        "place": "Zombies Cemetery Yalahar",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Onyx Arrows",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "40+",
-        "place": "MoAS -3",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Onyx Arrows",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "40+",
         "place": "Pirates Yalahar",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "110k",
+        "loot": "60k",
         "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
