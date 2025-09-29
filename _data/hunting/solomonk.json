@@ -417,9 +417,9 @@
     },
     {
         "level": "90+",
-        "place": "Orclops",
-        "raw_exp": "1.0kk",
-        "loot": "150k",
+        "place": "Orclops (Desecrated Glade)",
+        "raw_exp": "1.15kk",
+        "loot": "125k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },
@@ -450,8 +450,8 @@
     {
         "level": "90+",
         "place": "Putrid Mummy",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "850k",
+        "loot": "250k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },
