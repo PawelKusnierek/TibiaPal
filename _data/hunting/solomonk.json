@@ -449,14 +449,6 @@
     },
     {
         "level": "90+",
-        "place": "Hydras Oramond",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Energy",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "90+",
         "place": "Putrid Mummy",
         "raw_exp": "-",
         "loot": "-",
@@ -554,6 +546,14 @@
     {
         "level": "130+",
         "place": "Glooth Bandits",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Energy",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "130+",
+        "place": "Hydras Oramond",
         "raw_exp": "-",
         "loot": "-",
         "weapon_type": "Energy",
