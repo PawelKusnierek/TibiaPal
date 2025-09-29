@@ -160,14 +160,6 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "40+",
-        "place": "Cults Yalahar",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Onyx Arrows, Thunderstorm",
-        "link" : "https://youtu.be/"
-    },
-    {
         "level": "50+",
         "place": "Lion's Rock",
         "raw_exp": "-",
@@ -249,10 +241,10 @@
     },
     {
         "level": "70+",
-        "place": "Goroma Cults",
+        "place": "Cults Yalahar",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "Thunderstorm",
+        "runes": "Drill Bolts, Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
