@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TibiaPal.com - Exercise Weapons Calculator</title>
+    <title>TibiaPal.com - Kusnier & Sva duo</title>
     <meta name="author" content="Pawel Kusnierek">
     <meta name="description"
     content="Tools for MMORPG 'Tibia' - TibiaLootSplit, Charm Planner, Exercise Weapons Calculator, Offline Training Calculator and many, many more.">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href=/css/main.css>
 
     <!-- javascript files -->
-    <script src="scripts/exercise.js"></script>
+    <script src="scripts/hunting.js"></script>
     <script src=/scripts/onload.js></script>
 
     <!-- extra googleapi fonts -->
@@ -84,7 +84,7 @@
         <div class="nav-item"><a href="/monkcontest">
                 <div class="nav-image-container"><img class="nav-image" src=/images/Monk.gif>Monk Bounty Contest</div></a>
         </div>
-        <div class="nav-item"><a href="/kusniersvaduo">
+        <div class="active nav-item"><a href="/kusniersvaduo">
                 <div class="nav-image-container"><img class="nav-image" src=/images/sva.png><span id="new-homepage">NEW!</span>Kusnier & Sva duo</div></a>
         </div>
     </div>
@@ -131,7 +131,7 @@
     </div>
 
     <div class="nav-section">CALCULATORS</div>
-    <div class="active nav-item"><a href="/exercise">
+    <div class="nav-item"><a href="/exercise">
             <div class="nav-image-container"><img class="nav-image" src=/images/Exercise_Wand.gif>Exercise
                 Weapons Calculator</div>
         </a></div>
@@ -179,110 +179,438 @@
     <button class="nav-toggle" onclick="toggleNavigation()" style="display: none;">☰ Menu</button>
     
     <section id="main-content">
-    <div class="hunting_tab two-tabs">
-    <button id="target_skill" class="tablinks active" onclick="show_tab(event, 'TargetSkill')">Target Skill</button>
-    <button id="target_spend" class="tablinks" onclick="show_tab(event, 'TargetSpend')">Target Weapons Used</button>
+    <style>
+/* Remove scroll elements from number inputs */
+.level-filter::-webkit-outer-spin-button,
+.level-filter::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.level-filter[type=number] {
+    -moz-appearance: textfield;
+}
+
+.duo-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.duo-header h1 {
+    color: #2d8cf8;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.duo-description {
+    color: #ebebeb;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background-color: #061021;
+    border: 1px solid #2d8cf8b6;
+    border-radius: 4px;
+}
+</style>
+
+<div class="duo-header">
+    <h1>Kusnier & Sva Duo Tracker</h1>
 </div>
 
-<div id="TargetSkill" class="tabcontent">
-    <br>Calculate how many exercise weapons you have to use to get from skill X to skill Y. <br><br>
-    Always buy exercise weapons for gold when the price of Tibia Coins is above 13 900 gp on
-    your server. <br>
-    <form id="vocation_exercise_form">
-        <label for="vocation">Vocation & skill:</label>
-        <select name="vocation" id="vocation">
-            <option value="Mage">Druid/Sorcerer - Magic</option>
-            <option value="Knight">Knight - Melee</option>
-            <option value="Paladin Magic">Paladin - Magic</option>
-            <option value="Paladin Distance">Paladin - Distance</option>
-            <option value="Monk Magic">Monk - Magic</option>
-            <option value="Monk Fist">Monk - Fist</option>
-        </select><br>
-        <label id="currentskilllabel" for="currentskill">Current skill with loyalty:</label>
-        <input type="text" id="currentskill" name="currentskill" placeholder="current skill with loyalty, e.g. 112"
-            required autocomplete="off"><br>
-        <label id="currentskillpercentagelabel" for="currentskillpercentage">% to next:</label>
-        <input type="text" id="currentskillpercentage" name="currentskillpercentage" value="100"><br>
-        <label id="targetskilllabel" for="targetskill">Target skill:</label>
-        <input type="text" id="targetskill" name="targetskill" placeholder="target skill, e.g. 114" required autocomplete="off"><br>
-        <label id="loyaltylabel" for="loyalty">Loyalty bonus:</label>
-        <select name="loyalty" id="loyalty">
-            <option value="0">0%</option>
-            <option value="5">5%</option>
-            <option value="10">10%</option>
-            <option value="15">15%</option>
-            <option value="20">20%</option>
-            <option value="25">25%</option>
-            <option value="30">30%</option>
-            <option value="35">35%</option>
-            <option value="40">40%</option>
-            <option value="45">45%</option>
-            <option value="50">50%</option>
-        </select><br>
-        <label id="eventlabel" for="event">Double event:</label>
-        <input type="checkbox" id="event" name="event"><br>
-        <label id="dummylabel" for="dummy">Private dummy:</label>
-        <input type="checkbox" id="dummy" name="dummy"><br>
-        <label id="tc_price_label" for="tc_price">TC over 13900 gp:</label>
-        <input type="checkbox" id="tc_price" name="tc_price" checked><br>
-        <input type="submit" id="exercisesubmitbutton" value="Submit"
-            onclick="event.preventDefault(); submit_exercise_form()" />
-    </form>
-    <p id="exerciseformresults"></p>
+<div class="duo-description">
+    <p>
+        Welcome to our duo hunting collaboration! This page tracks all the hunting spots we plan to test together as a <b>Monk and a Sorcerer duo</b>. 
+        We'll be updating this page with experience rates and loot values as we test each spawn.<br>
+        Videos from each place will also be linked over time.<br><br>
+        The loot values provided are per player per hour. For example a total profit of 500k in a 2 hour hunt would be given as 125k. <br>
+        Neither of us has Charms/Animus.<br><br>
+        Follow our journey live on Kick: <br>
+        <a href="https://www.kick.com/Kusnier" target="_blank">kick.com/Kusnier</a> <br>
+        <a href="https://www.kick.com/Sva69" target="_blank">kick.com/Sva69</a> <br>
+    </p>
 </div>
 
-<div id="TargetSpend" class="tabcontent">
-    <br>Calculate how much skill you will gain when using a specified number of exercise weapons. <br><br>
-    Always buy exercise weapons for gold when the price of Tibia Coins is above 13 900 gp on
-    your server. <br>
-    <form id="vocation_exercise_form_spend">
-        <label for="vocation_spend">Vocation & skill:</label>
-        <select name="vocation" id="vocation_spend">
-            <option value="Mage">Druid/Sorcerer - Magic</option>
-            <option value="Knight">Knight - Melee</option>
-            <option value="Paladin Magic">Paladin - Magic</option>
-            <option value="Paladin Distance">Paladin - Distance</option>
-            <option value="Monk Magic">Monk - Magic</option>
-            <option value="Monk Fist">Monk - Fist</option>
-        </select><br>
-        <label id="weapontypelabel_spend" for="weapontype_spend">Exercise Weapon Type:</label>
-        <select name="weapontype" id="weapontype_spend">
-            <option value="Lasting">Lasting</option>
-            <option value="Durable">Durable</option>
-            <option value="Regular">Regular</option>
-        </select><br>
-        <label id="weaponcountlabel_spend" for="weaponcount_spend">Number of Weapons:</label>
-        <input type="number" id="weaponcount_spend" name="weaponcount" placeholder="e.g. 100" min="1" required autocomplete="off"><br>
-        <label id="currentskilllabel_spend" for="currentskill_spend">Current skill with loyalty:</label>
-        <input type="text" id="currentskill_spend" name="currentskill" placeholder="current skill with loyalty, e.g. 112"
-            required autocomplete="off"><br>
-        <label id="currentskillpercentagelabel_spend" for="currentskillpercentage_spend">% to next:</label>
-        <input type="text" id="currentskillpercentage_spend" name="currentskillpercentage" value="100"><br>
-        <label id="loyaltylabel_spend" for="loyalty_spend">Loyalty bonus:</label>
-        <select name="loyalty" id="loyalty_spend">
-            <option value="0">0%</option>
-            <option value="5">5%</option>
-            <option value="10">10%</option>
-            <option value="15">15%</option>
-            <option value="20">20%</option>
-            <option value="25">25%</option>
-            <option value="30">30%</option>
-            <option value="35">35%</option>
-            <option value="40">40%</option>
-            <option value="45">45%</option>
-            <option value="50">50%</option>
-        </select><br>
-        <label id="eventlabel_spend" for="event_spend">Double event:</label>
-        <input type="checkbox" id="event_spend" name="event"><br>
-        <label id="dummylabel_spend" for="dummy_spend">Private dummy:</label>
-        <input type="checkbox" id="dummy_spend" name="dummy"><br>
-        <label id="tc_price_label_spend" for="tc_price_spend">TC over 13900 gp:</label>
-        <input type="checkbox" id="tc_price_spend" name="tc_price" checked><br>
-        <input type="submit" id="exercisesubmitbutton_spend" value="Submit"
-            onclick="event.preventDefault(); submit_exercise_form_spend()" />
-    </form>
-    <p id="exerciseformresults_spend"></p>
-</div>
+<table id="hunting_table_kusniersvaduo" class="hunting_table">
+    <tr>
+        <th class="level_row">Level</th>
+        <th class="place_row">Place</th>
+        <th class="level_row">Monk level</th>
+        <th class="level_row">Sorc level</th>
+        <th class="exp_row">Raw exp</th>
+        <th class="loot_row">Loot</th>
+    </tr>
+    <tr>
+        <td>100+</td>
+        <td>Ravenous Lava Lurkers</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>100+</td>
+        <td>Deeplings Library</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>100+</td>
+        <td>Yalahar Grim Reapers</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>130+</td>
+        <td>Werehyaenas</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>130+</td>
+        <td>Deeper Banuta -6</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>150+</td>
+        <td>Gazer Spectres</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>150+</td>
+        <td>Lower Spike</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Werelions</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Deeper Banuta -8</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Asura Palace</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Book World: Chapter IV</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Book World: Chapter III</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Asura Mirror</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Oramond Fury Dungeon</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Nagas</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Warzone 5</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Ripper Spectres</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Burster Spectres</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Winter Court</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Summer Court</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Weretigers</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Werecrocodiles</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Roshamuul Mines</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Upper Rosha</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Prison -1</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Prison -3</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Deathlings</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Iksupan Occupied Sanctuary</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Iksupan Last Stand</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Buried Cathedral</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Cobra Bastion</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Crypt Warriors</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Falcons</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Azzilon Castle</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Issavi Surface</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Flimsies Venore</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Flimsies Port Hope</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Undead Dragons Feru</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Issavi Puzzle</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Issavi Sewers</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td>Norcferatus</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td>Nimmersatts</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>600+</td>
+        <td>Bulltaurs</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>600+</td>
+        <td>True Asuras</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>600+</td>
+        <td>Podzilla Quaras</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>600+</td>
+        <td>Azzilon Catacombs</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+</table>
+
+
     </section>
     
     <!--><div class="cookieconsent"

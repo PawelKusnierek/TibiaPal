@@ -1,0 +1,437 @@
+---
+layout: default
+title: TibiaPal.com - Kusnier & Sva duo
+scripts: <script src="scripts/hunting.js"></script>
+---
+
+<style>
+/* Remove scroll elements from number inputs */
+.level-filter::-webkit-outer-spin-button,
+.level-filter::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.level-filter[type=number] {
+    -moz-appearance: textfield;
+}
+
+.duo-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.duo-header h1 {
+    color: #2d8cf8;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.duo-description {
+    color: #ebebeb;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background-color: #061021;
+    border: 1px solid #2d8cf8b6;
+    border-radius: 4px;
+}
+</style>
+
+<div class="duo-header">
+    <h1>Kusnier & Sva Duo Tracker</h1>
+</div>
+
+<div class="duo-description">
+    <p>
+        Welcome to our duo hunting collaboration! This page tracks all the hunting spots we plan to test together as a <b>Monk and a Sorcerer duo</b>. 
+        We'll be updating this page with experience rates and loot values as we test each spawn.<br>
+        Videos from each place will also be linked over time.<br><br>
+        The loot values provided are per player per hour. For example a total profit of 500k in a 2 hour hunt would be given as 125k. <br>
+        Neither of us has Charms/Animus.<br><br>
+        Follow our journey live on Kick: <br>
+        <a href="https://www.kick.com/Kusnier" target="_blank">kick.com/Kusnier</a> <br>
+        <a href="https://www.kick.com/Sva69" target="_blank">kick.com/Sva69</a> <br>
+    </p>
+</div>
+
+<table id="hunting_table_kusniersvaduo" class="hunting_table">
+    <tr>
+        <th class="level_row">Level</th>
+        <th class="place_row">Place</th>
+        <th class="level_row">Monk level</th>
+        <th class="level_row">Sorc level</th>
+        <th class="exp_row">Raw exp</th>
+        <th class="loot_row">Loot</th>
+    </tr>
+    <tr>
+        <td>100+</td>
+        <td>Ravenous Lava Lurkers</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>100+</td>
+        <td>Deeplings Library</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>100+</td>
+        <td>Yalahar Grim Reapers</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>130+</td>
+        <td>Werehyaenas</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>130+</td>
+        <td>Deeper Banuta -6</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>150+</td>
+        <td>Gazer Spectres</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>150+</td>
+        <td>Lower Spike</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Werelions</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Deeper Banuta -8</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Asura Palace</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Book World: Chapter IV</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>200+</td>
+        <td>Book World: Chapter III</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Asura Mirror</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Oramond Fury Dungeon</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Nagas</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Warzone 5</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Ripper Spectres</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Burster Spectres</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Winter Court</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Summer Court</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Weretigers</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>250+</td>
+        <td>Werecrocodiles</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Roshamuul Mines</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Upper Rosha</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Prison -1</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Prison -3</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Deathlings</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Iksupan Occupied Sanctuary</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Iksupan Last Stand</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>300+</td>
+        <td>Buried Cathedral</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Cobra Bastion</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Crypt Warriors</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Falcons</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Azzilon Castle</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Issavi Surface</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Flimsies Venore</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Flimsies Port Hope</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Undead Dragons Feru</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Issavi Puzzle</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>400+</td>
+        <td>Issavi Sewers</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td>Norcferatus</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>500+</td>
+        <td>Nimmersatts</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>600+</td>
+        <td>Bulltaurs</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>600+</td>
+        <td>True Asuras</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>600+</td>
+        <td>Podzilla Quaras</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>600+</td>
+        <td>Azzilon Catacombs</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+</table>
+
