@@ -513,6 +513,14 @@
     },
     {
         "level": "130+",
+        "place": "Deeplings Library",
+        "raw_exp": "1.65kk",
+        "loot": "0k",
+        "weapon_type": "Energy",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "130+",
         "place": "Elder Wyrms Drefia",
         "raw_exp": "1.45kk",
         "loot": "120k",
@@ -521,33 +529,9 @@
     },
     {
         "level": "130+",
-        "place": "Brimstone Bugs WOTE",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Energy",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "130+",
-        "place": "Deeplings Library",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Energy",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "130+",
-        "place": "Glooth Bandits",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Energy",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "130+",
         "place": "Hydras Oramond",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1.2kk",
+        "loot": "100k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },
@@ -580,6 +564,14 @@
         "place": "Glooth Tower",
         "raw_exp": "1.9kk",
         "loot": "200k",
+        "weapon_type": "Energy",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "175+",
+        "place": "Brimstone Bugs WOTE",
+        "raw_exp": "-",
+        "loot": "-",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },
