@@ -650,17 +650,9 @@
     {
         "level": "250+",
         "place": "Yalahar Grim Reapers",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "3.5kk",
+        "loot": "300k",
         "runes": "GFB",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "250+",
-        "place": "Lower Spike",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Avalanche",
         "link": "https://youtu.be/"
     },
     {
@@ -676,6 +668,14 @@
         "place": "Werehyaenas North",
         "raw_exp": "2.2kk",
         "loot": "600k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Lower Spike",
+        "raw_exp": "3.5kk",
+        "loot": "300k",
         "runes": "Avalanche",
         "link": "https://youtu.be/"
     },
@@ -697,22 +697,6 @@
     },
     {
         "level": "300+",
-        "place": "Winter Court",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "GFB",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "300+",
-        "place": "Summer Court",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "300+",
         "place": "Werehyaenas South",
         "raw_exp": "-",
         "loot": "-",
@@ -722,8 +706,8 @@
     {
         "level": "300+",
         "place": "Candia Nibblemaws",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "3.2kk",
+        "loot": "600k",
         "runes": "Thunderstorm",
         "link": "https://youtu.be/"
     },
@@ -746,24 +730,24 @@
     {
         "level": "300+",
         "place": "Book World: Chapter II",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "3.0kk",
+        "loot": "600k",
         "runes": "GFB",
         "link": "https://youtu.be/"
     },
     {
         "level": "300+",
         "place": "Book World: Chapter III",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "3.5kk",
+        "loot": "800k",
         "runes": "GFB",
         "link": "https://youtu.be/"
     },
     {
         "level": "300+",
         "place": "Book World: Chapter IV",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "3.5kk",
+        "loot": "800k",
         "runes": "Avalanche",
         "link": "https://youtu.be/"
     },
@@ -784,18 +768,34 @@
         "link": "https://youtu.be/"
     },
     {
-        "level": "350+",
+        "level": "300+",
         "place": "Werelions",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "3.0kk",
+        "loot": "800k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Winter Court",
+        "raw_exp": "4.5kk",
+        "loot": "900k",
+        "runes": "GFB",
+        "link": "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Summer Court",
+        "raw_exp": "4.5kk",
+        "loot": "900k",
         "runes": "Avalanche",
         "link": "https://youtu.be/"
     },
     {
         "level": "400+",
         "place": "Falcons",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "5.5kk",
+        "loot": "1.3kk",
         "runes": "Avalanche, GFB",
         "link": "https://youtu.be/"
     },
@@ -810,8 +810,8 @@
     {
         "level": "400+",
         "place": "Ripper Spectres",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "5.0kk",
+        "loot": "1.0kk",
         "runes": "GFB",
         "link": "https://youtu.be/"
     },
@@ -826,8 +826,8 @@
     {
         "level": "400+",
         "place": "Warzone 5",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "4.5kk",
+        "loot": "800k",
         "runes": "GFB, Avalanche",
         "link": "https://youtu.be/"
     },
@@ -842,30 +842,38 @@
     {
         "level": "400+",
         "place": "Cobras",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "5.0kk",
+        "loot": "1.0kk",
         "runes": "Avalanche, GFB",
         "link": "https://youtu.be/"
     },
     {
         "level": "400+",
         "place": "Oskayaat Weretigers",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "4.8kk",
+        "loot": "1.0kk",
         "runes": "Stoneshower",
         "link": "https://youtu.be/"
     },
     {
         "level": "400+",
         "place": "Oskayaat Werecrocodiles",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "4.7kk",
+        "loot": "1kk",
         "runes": "Avalanche",
         "link": "https://youtu.be/"
     },
     {
-        "level": "500+",
-        "place": "Iksupan",
+        "level": "400+",
+        "place": "Iksupan Last Stand",
+        "raw_exp": "5.0kk",
+        "loot": "1.0kk",
+        "runes": "Thunderstorm",
+        "link": "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Iksupan Occupied Sanctuary",
         "raw_exp": "-",
         "loot": "-",
         "runes": "Thunderstorm",
@@ -890,16 +898,16 @@
     {
         "level": "500+",
         "place": "Otherworld",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "3.2kk",
+        "loot": "700k",
         "runes": "Stoneshower",
         "link": "https://youtu.be/"
     },
     {
         "level": "500+",
         "place": "Oramond Catacombs",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "5.0kk",
+        "loot": "500k",
         "runes": "Avalanche",
         "link": "https://youtu.be/"
     },
@@ -914,14 +922,22 @@
     {
         "level": "500+",
         "place": "Issavi Goannas",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "5.5kk",
+        "loot": "700k",
         "runes": "Thunderstorm",
         "link": "https://youtu.be/"
     },
     {
         "level": "500+",
-        "place": "Flimsy Lost Souls",
+        "place": "Flimsy Port Hope",
+        "raw_exp": "5.5kk",
+        "loot": "600k",
+        "runes": "GFB",
+        "link": "https://youtu.be/"
+    },
+    {
+        "level": "500+",
+        "place": "Flimsy Venore",
         "raw_exp": "-",
         "loot": "-",
         "runes": "GFB",
@@ -930,9 +946,17 @@
     {
         "level": "500+",
         "place": "Marapur Nagas",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "5.5kk",
+        "loot": "400k",
         "runes": "Stoneshower, Thunderstorm",
+        "link": "https://youtu.be/"
+    },
+    {
+        "level": "500+",
+        "place": "Crypt Warriors",
+        "raw_exp": "6.0kk",
+        "loot": "700k",
+        "runes": "GFB",
         "link": "https://youtu.be/"
     },
     {
@@ -941,14 +965,6 @@
         "raw_exp": "-",
         "loot": "-",
         "runes": "Avalanche",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Crypt Warriors",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "GFB",
         "link": "https://youtu.be/"
     },
     {
