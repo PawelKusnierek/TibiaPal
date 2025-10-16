@@ -1042,7 +1042,7 @@
     {
         "level": "600+",
         "place": "Norcferatu Fortress",
-        "raw_exp": "7.9kk",
+        "raw_exp": "8.2kk",
         "loot": "1.6kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/deJX80IGsLg"
@@ -1177,17 +1177,17 @@
     },
     {
         "level": "700+",
-        "place": "Norcferatu Dungeons West",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Norcferatu Dungeons East",
+        "raw_exp": "8.2kk",
+        "loot": "1.3kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
     {
         "level": "700+",
-        "place": "Norcferatu Dungeons East",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Norcferatu Dungeons West",
+        "raw_exp": "8.1kk",
+        "loot": "1.4kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
