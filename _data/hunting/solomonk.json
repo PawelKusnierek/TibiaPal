@@ -538,16 +538,16 @@
     {
         "level": "150+",
         "place": "Otherworld (Kazo)",
-        "raw_exp": "1.2kk",
-        "loot": "150k",
+        "raw_exp": "1.4kk",
+        "loot": "250k",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
     {
         "level": "150+",
         "place": "Yalahar Grim Reapers",
-        "raw_exp": "3.3kk",
-        "loot": "-150k",
+        "raw_exp": "3.1kk",
+        "loot": "-100k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/upayVKk-XYM"
     },
