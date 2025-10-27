@@ -265,6 +265,14 @@
     },
     {
         "level": "70+",
+        "place": "Misguided",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Drill Bolts",
+        "link": "https://youtu.be/"
+    },
+    {
+        "level": "70+",
         "place": "Wyrms Drefia/LB",
         "raw_exp": "-",
         "loot": "-",
