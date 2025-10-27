@@ -162,9 +162,9 @@
     {
         "level": "50+",
         "place": "Lion's Rock",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Onyx Arrows, GFB",
+        "raw_exp": "280k",
+        "loot": "-20k",
+        "runes": "Onyx Arrows, Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -194,20 +194,19 @@
     {
         "level": "50+",
         "place": "Darashia Dragon Lair",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "180k",
+        "loot": "10k",
         "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
     {
         "level": "50+",
         "place": "Yalahar Dragons",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "160k",
+        "loot": "10k",
         "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
-
     {
         "level": "50+",
         "place": "Krailos Surface",
