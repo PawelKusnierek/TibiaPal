@@ -153,41 +153,33 @@
     },
     {
         "level": "50+",
-        "place": "Mutated Rats Alchemist Quarter",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Old Fortress -1 (Bonebeasts)",
+        "raw_exp": "300k",
+        "loot": "10k",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/"
     },
     {
         "level": "50+",
         "place": "Darashia Dragon Lair",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "250k",
+        "loot": "20k",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+        {
+    "level": "50+",
+        "place": "Mutated Rats Alchemist Quarter",
+        "raw_exp": "240k",
+        "loot": "-10k",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/"
     },
     {
         "level": "50+",
         "place": "Yalahar Dragons",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Middle Spike",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Old Fortress (Edron) Bonebeasts",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "180k",
+        "loot": "0k",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/"
     },
@@ -222,6 +214,14 @@
         "loot": "100k",
         "weapon_type": "Physical",
         "link": "https://youtu.be/p2HPO2i4IWw"
+    },
+    {
+        "level": "70+",
+        "place": "Middle Spike",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "80+",
