@@ -169,17 +169,25 @@
     },
     {
         "level": "50+",
-        "place": "Mutated Rats Alchemist Quarter",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Old Fortress Bonebeasts",
+        "raw_exp": "270k",
+        "loot": "0k",
         "runes": "Onyx Arrows",
-        "link" : "https://youtu.be/"
+        "link": "https://youtu.be/Rimlz__WgqY"
+    },
+    {
+        "level": "50+",
+        "place": "Werebadgers Grimvale -1",
+        "raw_exp": "230k",
+        "loot": "10k",
+        "runes": "Onyx Arrows",
+        "link": "https://youtu.be/6Bh7yIzXaZU"
     },
     {
         "level": "50+",
         "place": "Edron Vampire Crypt -3",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "215k",
+        "loot": "30k",
         "runes": "Onyx Arrows, Avalanche",
         "link": "https://youtu.be/uIkClHzNg60"
     },
@@ -199,14 +207,7 @@
         "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
-    {
-        "level": "50+",
-        "place": "Old Fortress Bonebeasts",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Onyx Arrows",
-        "link": "https://youtu.be/Rimlz__WgqY"
-    },
+
     {
         "level": "50+",
         "place": "Krailos Surface",
@@ -214,14 +215,6 @@
         "loot": "-",
         "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Werebadgers Grimvale -1",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Onyx Arrows",
-        "link": "https://youtu.be/6Bh7yIzXaZU"
     },
     {
         "level": "50+",
@@ -253,7 +246,7 @@
         "raw_exp": "-",
         "loot": "-",
         "runes": "Drill Bolts",
-        "link": "https://youtu.be/R9Vg1m-_X8c"
+        "link": "https://youtu.be/"
     },
     {
         "level": "70+",
@@ -466,42 +459,42 @@
     {
         "level": "130+",
         "place": "Banuta -1 (Hydras/SS/Medusa)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "750k",
+        "loot": "200k",
         "runes": "Crystalline Arrows, Thunderstorm",
         "link": "https://youtu.be/PTu0cnRk1hQ"
     },
     {
         "level": "130+",
         "place": "Talahu Medusa/Serpents",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "730k",
+        "loot": "150k",
         "runes": "Crystalline Arrows, Thunderstorm",
         "link": "https://youtu.be/pV3kDQhMSzI"
     },
     {
         "level": "130+",
-        "place": "Edron Demons",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, Avalanche",
-        "link": "https://youtu.be/M1mQIymMIZM"
-    },
-    {
-        "level": "130+",
         "place": "Frazzlemaw Bridge",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "600k",
+        "loot": "150k",
         "runes": "Crystalline Arrows, Avalanche",
         "link": "https://youtu.be/47EEF2XqGtQ"
     },
     {
         "level": "130+",
         "place": "Ghastly Dragons",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "500k",
+        "loot": "200k",
         "runes": "Crystalline Arrows, Thunderstorm",
         "link": "https://youtu.be/5lnfVhI_FgI"
+    },
+    {
+        "level": "130+",
+        "place": "Edron Demons",
+        "raw_exp": "470k",
+        "loot": "125k",
+        "runes": "Crystalline Arrows, Avalanche",
+        "link": "https://youtu.be/M1mQIymMIZM"
     },
     {
         "level": "150+",
