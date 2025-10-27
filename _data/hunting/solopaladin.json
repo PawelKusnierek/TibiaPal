@@ -217,6 +217,14 @@
     },
     {
         "level": "50+",
+        "place": "Ankrahmun Cults & Lizards",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Onyx Arrows, Thunderstorm",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "50+",
         "place": "Peninsula Tomb (AOE)",
         "raw_exp": "-",
         "loot": "-",
@@ -249,7 +257,23 @@
     },
     {
         "level": "70+",
+        "place": "Nibelor Crystal Spiders",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Drill Bolts",
+        "link": "https://youtu.be/"
+    },
+    {
+        "level": "70+",
         "place": "Wyrms Drefia/LB",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Drill Bolts, Avalanche",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "70+",
+        "place": "Iksupan",
         "raw_exp": "-",
         "loot": "-",
         "runes": "Drill Bolts, Avalanche",
