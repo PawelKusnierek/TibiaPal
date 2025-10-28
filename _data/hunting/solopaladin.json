@@ -185,6 +185,14 @@
     },
     {
         "level": "50+",
+        "place": "Krailos Surface",
+        "raw_exp": "220k",
+        "loot": "100k",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "50+",
         "place": "Edron Vampire Crypt -3",
         "raw_exp": "215k",
         "loot": "30k",
@@ -204,14 +212,6 @@
         "place": "Yalahar Dragons",
         "raw_exp": "160k",
         "loot": "10k",
-        "runes": "Onyx Arrows",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Krailos Surface",
-        "raw_exp": "-",
-        "loot": "-",
         "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
