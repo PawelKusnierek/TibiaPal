@@ -578,7 +578,7 @@
     {
         "level": "200+",
         "place": "Wildlife Raid (Active)",
-        "raw_exp": "2.8kk",
+        "raw_exp": "2.7kk",
         "loot": "600k",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/"
@@ -586,7 +586,7 @@
     {
         "level": "200+",
         "place": "Werehyaenas",
-        "raw_exp": "2.5kk",
+        "raw_exp": "2.4kk",
         "loot": "550k",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/aunNgm5-XsI"
@@ -594,7 +594,7 @@
     {
         "level": "200+",
         "place": "Medusa Tower",
-        "raw_exp": "2.5kk",
+        "raw_exp": "2.4kk",
         "loot": "500k",
         "weapon_type": "Physical, Energy",
         "link" : "https://youtu.be/iUp7dma4WuI"
@@ -602,7 +602,7 @@
     {
         "level": "200+",
         "place": "Seacrest Serpents",
-        "raw_exp": "2.4kk",
+        "raw_exp": "2.3kk",
         "loot": "500k",
         "weapon_type": "Physical, Energy",
         "link" : "https://youtu.be/MOoFHfbgltY"
@@ -610,7 +610,7 @@
     {
         "level": "200+",
         "place": "Draken Walls",
-        "raw_exp": "2.1kk",
+        "raw_exp": "2.0kk",
         "loot": "450k",
         "weapon_type": "Physical, Energy",
         "link" : "https://youtu.be/X2gGK2LshUQ"
@@ -658,7 +658,7 @@
     {
         "level": "250+",
         "place": "Candia Nibblemaws",
-        "raw_exp": "3.1kk",
+        "raw_exp": "3.0kk",
         "loot": "600k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/9505L-ZXtxU"
@@ -666,7 +666,7 @@
     {
         "level": "250+",
         "place": "Asura Palace",
-        "raw_exp": "2.9kk",
+        "raw_exp": "2.8kk",
         "loot": "400k",
         "weapon_type": "Physical, Energy",
         "link" : "https://youtu.be/exfl57YQCAA"
@@ -682,7 +682,7 @@
     {
         "level": "250+",
         "place": "Deeper Banuta -8",
-        "raw_exp": "2.5kk",
+        "raw_exp": "2.4kk",
         "loot": "450k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/i9ecWlmgObE"
@@ -706,7 +706,7 @@
         {
         "level": "270+",
         "place": "Asura Mirror",
-        "raw_exp": "5.2kk",
+        "raw_exp": "5.1kk",
         "loot": "500k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/UyZPXrfogSA"
@@ -714,7 +714,7 @@
         {
         "level": "270+",
         "place": "Warzone 5",
-        "raw_exp": "3.8kk",
+        "raw_exp": "3.7kk",
         "loot": "1.0kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/jRNXHzlcAOc"
@@ -722,7 +722,7 @@
     {
         "level": "270+",
         "place": "Oramond Fury Dungeon",
-        "raw_exp": "3.8kk",
+        "raw_exp": "3.7kk",
         "loot": "900k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/N_bKqXT3Xco"
@@ -730,7 +730,7 @@
     {
         "level": "270+",
         "place": "Werelions",
-        "raw_exp": "3.0kk",
+        "raw_exp": "2.9kk",
         "loot": "900k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/TcyeTVUn_Lg"
@@ -738,7 +738,7 @@
     {
         "level": "300+",
         "place": "Marapur Nagas",
-        "raw_exp": "4.9kk",
+        "raw_exp": "4.8kk",
         "loot": "400k",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/JErJMHqu9dc"
@@ -746,7 +746,7 @@
     {
         "level": "300+",
         "place": "Roshamuul Mines",
-        "raw_exp": "4.8kk",
+        "raw_exp": "4.6kk",
         "loot": "750k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/PiIH9VhMiEc"
@@ -754,7 +754,7 @@
     {
         "level": "300+",
         "place": "Winter Court",
-        "raw_exp": "4.6kk",
+        "raw_exp": "4.5kk",
         "loot": "750k",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/lky2cG7w8j8"
@@ -762,15 +762,15 @@
     {
         "level": "300+",
         "place": "Summer Court",
-        "raw_exp": "4.5kk",
+        "raw_exp": "4.4kk",
         "loot": "650k",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/DTabKIwv04E"
     },
     {
         "level": "300+",
-        "place": "Oskayaat Weretigers",
-        "raw_exp": "4.1kk",
+        "place": "Oskayaat Weretigers -2",
+        "raw_exp": "4.0kk",
         "loot": "700k",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/0TKdpEhssk0"
@@ -786,7 +786,7 @@
     {
         "level": "300+",
         "place": "Oskayaat Werecrocodiles",
-        "raw_exp": "3.6kk",
+        "raw_exp": "3.5kk",
         "loot": "750k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/gFjDuUjVUdE"
@@ -794,7 +794,7 @@
         {
         "level": "300+",
         "place": "Warzone 4",
-        "raw_exp": "3.3kk",
+        "raw_exp": "3.2kk",
         "loot": "750k",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/MQxUHFAYPOM"
@@ -802,7 +802,7 @@
     {
         "level": "300+",
         "place": "Warzone 6",
-        "raw_exp": "3.2kk",
+        "raw_exp": "3.1kk",
         "loot": "1.0kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/3KuBpC4i8DU"
@@ -810,7 +810,7 @@
     {
         "level": "300+",
         "place": "Lower Rosh",
-        "raw_exp": "3.1kk",
+        "raw_exp": "3.0kk",
         "loot": "600k",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/QI49YMtE7go"
@@ -842,7 +842,7 @@
     {
         "level": "350+",
         "place": "Iksupan Occupied Sanctuary",
-        "raw_exp": "5.1kk",
+        "raw_exp": "5.0kk",
         "loot": "750k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/KdSJTasIm0U"
@@ -850,7 +850,7 @@
     {
         "level": "350+",
         "place": "Buried Cathedral",
-        "raw_exp": "4.9kk",
+        "raw_exp": "4.8kk",
         "loot": "300k",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/KrVEDJUBnVA"
@@ -858,7 +858,7 @@
     {
         "level": "350+",
         "place": "Iksupan Last Stand (Entrance)",
-        "raw_exp": "4.3kk",
+        "raw_exp": "4.2kk",
         "loot": "700k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/2QHcDnyOU7c"
@@ -866,7 +866,7 @@
     {
         "level": "400+",
         "place": "Marapur Nagas (Soulkamas)",
-        "raw_exp": "6.0kk",
+        "raw_exp": "5.9kk",
         "loot": "750k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/JErJMHqu9dc"
@@ -874,7 +874,7 @@
     {
         "level": "400+",
         "place": "Cobra Bastion -1 (Basement)",
-        "raw_exp": "6.3kk",
+        "raw_exp": "6.1kk",
         "loot": "700k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/r1l04SEiFpo"
@@ -882,7 +882,7 @@
     {
         "level": "400+",
         "place": "Crypt Warriors",
-        "raw_exp": "5.9kk",
+        "raw_exp": "5.7kk",
         "loot": "700k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/88_pGvd0rBY"
@@ -890,7 +890,7 @@
     {
         "level": "400+",
         "place": "Upper Roshamuul",
-        "raw_exp": "5.7kk",
+        "raw_exp": "5.5kk",
         "loot": "1.1kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/gCNQ8G6hI7E"
@@ -898,7 +898,7 @@
     {
         "level": "400+",
         "place": "Falcons",
-        "raw_exp": "5.5kk",
+        "raw_exp": "5.3kk",
         "loot": "1.3kk",
         "weapon_type": "Energy, Earth",
         "link" : "https://youtu.be/UBCXn-gEA6o"
@@ -906,7 +906,7 @@
     {
         "level": "400+",
         "place": "Deathlings",
-        "raw_exp": "5.3kk",
+        "raw_exp": "5.2kk",
         "loot": "800k",
         "weapon_type": "Energy, Earth",
         "link" : "https://youtu.be/bFNzCAgldp0"
@@ -914,7 +914,7 @@
     {
         "level": "400+",
         "place": "Azzilon Walls",
-        "raw_exp": "5.3kk",
+        "raw_exp": "5.2kk",
         "loot": "500k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/J_9p5NWlcPU"
@@ -922,7 +922,7 @@
     {
         "level": "400+",
         "place": "Sphinx/Crypt Warden Issavi",
-        "raw_exp": "5.2kk",
+        "raw_exp": "5.0kk",
         "loot": "700k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/ZkM1CNKSqDA"
@@ -930,7 +930,7 @@
     {
         "level": "400+",
         "place": "Rosha West",
-        "raw_exp": "4.8kk",
+        "raw_exp": "4.7kk",
         "loot": "1.1kk",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/t6iReSRaWfA"
@@ -938,7 +938,7 @@
     {
         "level": "400+",
         "place": "Oramond Catacombs",
-        "raw_exp": "4.7kk",
+        "raw_exp": "4.6kk",
         "loot": "800k",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/uf4aFM9IxeY"
@@ -946,7 +946,7 @@
     {
         "level": "400+",
         "place": "Warzone 3",
-        "raw_exp": "4.8kk",
+        "raw_exp": "4.5kk",
         "loot": "800k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/dQRNbbye61c"
@@ -954,14 +954,6 @@
     {
         "level": "400+",
         "place": "Floating Savants MoTA",
-        "raw_exp": "4.0kk",
-        "loot": "1.0kk",
-        "weapon_type": "Energy",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "400+",
-        "place": "Oramond Hideout -1",
         "raw_exp": "3.8kk",
         "loot": "1.0kk",
         "weapon_type": "Energy",
@@ -969,8 +961,16 @@
     },
     {
         "level": "400+",
+        "place": "Oramond Hideout -1",
+        "raw_exp": "3.7kk",
+        "loot": "1.0kk",
+        "weapon_type": "Energy",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
         "place": "Warzone 1",
-        "raw_exp": "3.6kk",
+        "raw_exp": "3.5kk",
         "loot": "800k",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/xrDQLDrpzkM"
@@ -978,7 +978,7 @@
     {
         "level": "450+",
         "place": "Azzilon Castle",
-        "raw_exp": "6.3kk",
+        "raw_exp": "6.0kk",
         "loot": "600k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/w4gaxOlvFf8"
@@ -986,7 +986,7 @@
     {
         "level": "500+",
         "place": "Cobra Bastion",
-        "raw_exp": "7.0kk",
+        "raw_exp": "6.7kk",
         "loot": "700k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/cOtyvzz1Htk"
@@ -994,7 +994,7 @@
     {
         "level": "500+",
         "place": "Issavi Goannas - Central Steppe",
-        "raw_exp": "5.6kk",
+        "raw_exp": "5.4kk",
         "loot": "500k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/lfuKFZjxpN8"
@@ -1002,7 +1002,7 @@
     {
         "level": "500+",
         "place": "Plague Feru Seal",
-        "raw_exp": "5.2kk",
+        "raw_exp": "5.0kk",
         "loot": "1.4kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/XMjIUHkBfSk"
@@ -1018,7 +1018,7 @@
     {
         "level": "500+",
         "place": "Girtablilu",
-        "raw_exp": "4.2kk",
+        "raw_exp": "4.1kk",
         "loot": "1.6kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/B5Xpl4CnWNs"
@@ -1026,7 +1026,7 @@
     {
         "level": "500+",
         "place": "Bashmu",
-        "raw_exp": "3.5kk",
+        "raw_exp": "3.4kk",
         "loot": "1.8kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/ZB2FpzkQZiQ"
@@ -1034,7 +1034,7 @@
     {
         "level": "500+",
         "place": "Warzone 7",
-        "raw_exp": "3.5kk",
+        "raw_exp": "3.4kk",
         "loot": "1.5kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
@@ -1042,7 +1042,7 @@
     {
         "level": "600+",
         "place": "Norcferatu Fortress",
-        "raw_exp": "8.2kk",
+        "raw_exp": "7.9kk",
         "loot": "1.6kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/deJX80IGsLg"
@@ -1050,7 +1050,7 @@
     {
         "level": "600+",
         "place": "Nimmersatt's Dragons -7 (Bottom Floor)",
-        "raw_exp": "7.8kk",
+        "raw_exp": "7.6kk",
         "loot": "1.4kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/jwvUuFTkBxo"
@@ -1058,7 +1058,7 @@
     {
         "level": "600+",
         "place": "Nimmersatt's Dragons -6 (Boss Floor)",
-        "raw_exp": "7.5kk",
+        "raw_exp": "7.3kk",
         "loot": "1.3kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/UeWUO2W_W-w"
@@ -1066,7 +1066,7 @@
     {
         "level": "600+",
         "place": "Flimsy Lost Souls Venore",
-        "raw_exp": "6.6kk",
+        "raw_exp": "6.4kk",
         "loot": "900k",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/IJJEchUI5Dk"
@@ -1074,7 +1074,7 @@
     {
         "level": "600+",
         "place": "Falcons (Sanguine)",
-        "raw_exp": "6.3kk",
+        "raw_exp": "6.1kk",
         "loot": "1.9kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
@@ -1082,7 +1082,7 @@
     {
         "level": "600+",
         "place": "Buried Cathedral (Sanguine)",
-        "raw_exp": "6.2kk",
+        "raw_exp": "6.0kk",
         "loot": "1.4kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
@@ -1090,7 +1090,7 @@
     {
         "level": "600+",
         "place": "Winter Court (Sanguine)",
-        "raw_exp": "6.0kk",
+        "raw_exp": "5.8kk",
         "loot": "1.8kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/-dt09jhiEeU"
@@ -1098,7 +1098,7 @@
     {
         "level": "600+",
         "place": "Summer Court (Sanguine)",
-        "raw_exp": "6.0kk",
+        "raw_exp": "5.8kk",
         "loot": "1.8kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
@@ -1106,7 +1106,7 @@
     {
         "level": "600+",
         "place": "Flimsy Lost Souls Port Hope",
-        "raw_exp": "5.8kk",
+        "raw_exp": "5.6kk",
         "loot": "1.0kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/fp6ERW7-PKY"
@@ -1114,7 +1114,7 @@
     {
         "level": "600+",
         "place": "Undead Dragon Feru Seal",
-        "raw_exp": "5.6kk",
+        "raw_exp": "5.4kk",
         "loot": "1.2kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/1LnqvyT9x34"
@@ -1122,7 +1122,7 @@
     {
         "level": "600+",
         "place": "Infernatil Feru Seal",
-        "raw_exp": "5.3kk",
+        "raw_exp": "5.1kk",
         "loot": "1.0kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/sJsAPHwffgk"
@@ -1130,10 +1130,18 @@
     {
         "level": "600+",
         "place": "Juggernaut Feru Seal",
-        "raw_exp": "5.3kk",
+        "raw_exp": "5.1kk",
         "loot": "800k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/dvPGSSHE5eA"
+    },
+    {
+        "level": "600+",
+        "place": "Issavi Puzzle",
+        "raw_exp": "5.5kk",
+        "loot": "1.0kk",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "600+",
@@ -1146,7 +1154,7 @@
     {
         "level": "600+",
         "place": "Warzone 8",
-        "raw_exp": "4.2kk",
+        "raw_exp": "4.1kk",
         "loot": "1.9kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/gm8sQONf2rI"
@@ -1178,7 +1186,7 @@
     {
         "level": "700+",
         "place": "Norcferatu Dungeons East",
-        "raw_exp": "8.2kk",
+        "raw_exp": "7.9kk",
         "loot": "1.3kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
@@ -1186,7 +1194,7 @@
     {
         "level": "700+",
         "place": "Norcferatu Dungeons West",
-        "raw_exp": "8.1kk",
+        "raw_exp": "7.8kk",
         "loot": "1.4kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
@@ -1194,7 +1202,7 @@
     {
         "level": "700+",
         "place": "Bulltaurs -2",
-        "raw_exp": "6.1kk",
+        "raw_exp": "6.0kk",
         "loot": "1.2kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/954Rdp8isks"
@@ -1202,7 +1210,7 @@
     {
         "level": "700+",
         "place": "True Asuras",
-        "raw_exp": "5.3kk",
+        "raw_exp": "5.2kk",
         "loot": "1.0kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/M7-OckvO6hY"
