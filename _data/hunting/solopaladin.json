@@ -161,6 +161,14 @@
     },
     {
         "level": "50+",
+        "place": "Bonebeast Island",
+        "raw_exp": "350k",
+        "loot": "0k",
+        "runes": "Onyx Arrows, Avalanche",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "50+",
         "place": "Lion's Rock",
         "raw_exp": "280k",
         "loot": "-20k",
@@ -174,6 +182,14 @@
         "loot": "0k",
         "runes": "Onyx Arrows",
         "link": "https://youtu.be/Rimlz__WgqY"
+    },
+    {
+        "level": "50+",
+        "place": "Ankrahmun Cults & Lizards",
+        "raw_exp": "230k",
+        "loot": "200k",
+        "runes": "Onyx Arrows, Thunderstorm",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "50+",
@@ -217,14 +233,6 @@
     },
     {
         "level": "50+",
-        "place": "Ankrahmun Cults & Lizards",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Onyx Arrows, Thunderstorm",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
         "place": "Peninsula Tomb (AOE)",
         "raw_exp": "-",
         "loot": "-",
@@ -233,18 +241,10 @@
     },
     {
         "level": "50+",
-        "place": "Bonebeast Island (AOE)",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Burst Arrows, Avalanche",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "70+",
         "place": "Cults Yalahar",
         "raw_exp": "-",
         "loot": "-",
-        "runes": "Drill Bolts, Thunderstorm",
+        "runes": "Onyx Arrows, Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
@@ -309,14 +309,6 @@
         "raw_exp": "-",
         "loot": "-",
         "runes": "Drill Bolts, GFB",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "90+",
-        "place": "Krailos Bug Cave",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, GFB",
         "link" : "https://youtu.be/"
     },
     {
