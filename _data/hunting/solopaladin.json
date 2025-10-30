@@ -169,6 +169,14 @@
     },
     {
         "level": "50+",
+        "place": "Peninsula Tomb",
+        "raw_exp": "340k",
+        "loot": "80k",
+        "runes": "Onyx Arrows, Avalanche",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "50+",
         "place": "Lion's Rock",
         "raw_exp": "280k",
         "loot": "-20k",
@@ -217,6 +225,14 @@
     },
     {
         "level": "50+",
+        "place": "Cults Yalahar",
+        "raw_exp": "200k",
+        "loot": "250k",
+        "runes": "Onyx Arrows, Thunderstorm",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "50+",
         "place": "Darashia Dragon Lair",
         "raw_exp": "180k",
         "loot": "10k",
@@ -229,22 +245,6 @@
         "raw_exp": "160k",
         "loot": "10k",
         "runes": "Onyx Arrows",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Peninsula Tomb (AOE)",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Burst Arrows, Avalanche",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Cults Yalahar",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Onyx Arrows, Thunderstorm",
         "link" : "https://youtu.be/"
     },
     {
