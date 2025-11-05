@@ -297,14 +297,6 @@
     },
     {
         "level": "70+",
-        "place": "Mutated Tigers Yalahar (Profit)",
-        "raw_exp": "325k",
-        "loot": "200k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/aIgGrSBSjB0"
-    },
-    {
-        "level": "70+",
         "place": "Krailos Ogres Surface",
         "raw_exp": "530k",
         "loot": "300k",
@@ -312,28 +304,12 @@
         "link": "https://youtu.be/mCdQATL1DUs"
     },
     {
-        "level": "80+",
-        "place": "Giant Spiders Port Hope",
-        "raw_exp": "600k",
-        "loot": "-25k",
-        "runes": "GFB",
-        "link": "https://youtu.be/mMDJjK0UKsU"
-    },
-    {
-        "level": "80+",
-        "place": "Ice Witch Temple",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "GFB",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "80+",
-        "place": "Muggy Plains",
-        "raw_exp": "700k",
-        "loot": "-50k",
+        "level": "70+",
+        "place": "Mutated Tigers Yalahar (Profit)",
+        "raw_exp": "325k",
+        "loot": "200k",
         "runes": "Avalanche",
-        "link": "https://youtu.be/y4jcvbz75Lk"
+        "link": "https://youtu.be/aIgGrSBSjB0"
     },
     {
         "level": "80+",
@@ -345,11 +321,11 @@
     },
     {
         "level": "80+",
-        "place": "Hive Surface",
-        "raw_exp": "490k",
-        "loot": "240k",
-        "runes": "GFB",
-        "link": "https://youtu.be/iEuxnXJiet4"
+        "place": "Muggy Plains",
+        "raw_exp": "700k",
+        "loot": "-50k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/y4jcvbz75Lk"
     },
     {
         "level": "80+",
@@ -360,99 +336,27 @@
         "link": "https://youtu.be/r1eAeWUm__U"
     },
     {
-        "level": "100+",
-        "place": "Old Masonry (Death portal)",
-        "raw_exp": "950k",
-        "loot": "0k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "100+",
-        "place": "Quaras Liberty Bay",
-        "raw_exp": "1.1kk",
-        "loot": "100k",
-        "runes": "Thunderstorm",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "100+",
-        "place": "Grimvale -4",
-        "raw_exp": "1.0kk",
-        "loot": "200k",
-        "runes": "GFB",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "100+",
-        "place": "Krailos Bug Cave",
+        "level": "80+",
+        "place": "Giant Spiders Port Hope",
         "raw_exp": "600k",
-        "loot": "150k",
+        "loot": "-25k",
         "runes": "GFB",
-        "link": "https://youtu.be/"
+        "link": "https://youtu.be/mMDJjK0UKsU"
     },
     {
-        "level": "100+",
-        "place": "Putrid Mummy",
-        "raw_exp": "700k",
-        "loot": "400k",
+        "level": "80+",
+        "place": "Hive Surface",
+        "raw_exp": "490k",
+        "loot": "240k",
         "runes": "GFB",
-        "link": "https://youtu.be/"
+        "link": "https://youtu.be/iEuxnXJiet4"
     },
     {
-        "level": "100+",
-        "place": "Calassa",
-        "raw_exp": "1.0kk",
-        "loot": "-50k",
-        "runes": "Thunderstorm",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "100+",
-        "place": "Sunken Quarter",
-        "raw_exp": "1.3kk",
-        "loot": "0k",
-        "runes": "Thunderstorm",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "100+",
-        "place": "Souleater Mountain",
-        "raw_exp": "1.0kk",
-        "loot": "100k",
+        "level": "80+",
+        "place": "Ice Witch Temple",
+        "raw_exp": "-",
+        "loot": "-",
         "runes": "GFB",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "100+",
-        "place": "Edron Vampire Crypt",
-        "raw_exp": "850k",
-        "loot": "400k",
-        "runes": "GFB",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "100+",
-        "place": "Dragon Lords POI",
-        "raw_exp": "850k",
-        "loot": "-100k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "100+",
-        "place": "Dragon Lords Fenrock",
-        "raw_exp": "900k",
-        "loot": "-50k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "100+",
-        "place": "Edron Old Fortress -2",
-        "raw_exp": "1.2kk",
-        "loot": "100k",
-        "runes": "Avalanche",
         "link": "https://youtu.be/"
     },
     {
@@ -461,23 +365,103 @@
         "raw_exp": "1.8kk",
         "loot": "-100k",
         "runes": "Avalanche",
-        "link": "https://youtu.be/"
+        "link": "https://youtu.be/2mrPpp1M7ig"
     },
     {
-        "level": "110+",
-        "place": "Exotic Cave",
+        "level": "100+",
+        "place": "Sunken Quarter",
+        "raw_exp": "1.3kk",
+        "loot": "0k",
+        "runes": "Thunderstorm",
+        "link": "https://youtu.be/98trEcIA0O8"
+    },
+    {
+        "level": "100+",
+        "place": "Edron Old Fortress -2 (Hero)",
         "raw_exp": "1.2kk",
-        "loot": "300k",
-        "runes": "GFB",
-        "link": "https://youtu.be/"
+        "loot": "100k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/nVRss8aBRHU"
     },
     {
-        "level": "110+",
-        "place": "Iksupan",
+        "level": "100+",
+        "place": "Quaras Liberty Bay",
         "raw_exp": "1.1kk",
-        "loot": "300k",
+        "loot": "100k",
+        "runes": "Thunderstorm",
+        "link": "https://youtu.be/o9LmJ4JLh0w"
+    },
+    {
+        "level": "100+",
+        "place": "Grimvale -4",
+        "raw_exp": "1.0kk",
+        "loot": "200k",
+        "runes": "GFB",
+        "link": "https://youtu.be/Xpsi2DHnPpw"
+    },
+    {
+        "level": "100+",
+        "place": "Souleater Mountain",
+        "raw_exp": "1.0kk",
+        "loot": "100k",
+        "runes": "GFB",
+        "link": "https://youtu.be/1olb1AXEu3Y"
+    },
+    {
+        "level": "100+",
+        "place": "Calassa",
+        "raw_exp": "1.0kk",
+        "loot": "-50k",
+        "runes": "Thunderstorm",
+        "link": "https://youtu.be/q3mk_Ujhk0g"
+    },
+    {
+        "level": "100+",
+        "place": "Old Masonry (Death portal)",
+        "raw_exp": "950k",
+        "loot": "0k",
         "runes": "Avalanche",
-        "link": "https://youtu.be/"
+        "link": "https://youtu.be/rDe3tllrD2E"
+    },
+    {
+        "level": "100+",
+        "place": "Dragon Lords Fenrock",
+        "raw_exp": "900k",
+        "loot": "-50k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/lKpDbZdXR_k"
+    },
+    {
+        "level": "100+",
+        "place": "Edron Vampire Crypt",
+        "raw_exp": "850k",
+        "loot": "400k",
+        "runes": "GFB",
+        "link": "https://youtu.be/d3gtCT2V7fk"
+    },
+    {
+        "level": "100+",
+        "place": "Dragon Lords POI",
+        "raw_exp": "850k",
+        "loot": "-100k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/F9RgMLn15Rk"
+    },
+    {
+        "level": "100+",
+        "place": "Putrid Mummy",
+        "raw_exp": "700k",
+        "loot": "400k",
+        "runes": "GFB",
+        "link": "https://youtu.be/nXs03u6rKBY"
+    },
+    {
+        "level": "100+",
+        "place": "Krailos Bug Cave",
+        "raw_exp": "600k",
+        "loot": "150k",
+        "runes": "GFB",
+        "link": "https://youtu.be/_0-9TW8PYk8"
     },
     {
         "level": "110+",
@@ -485,7 +469,47 @@
         "raw_exp": "1.4kk",
         "loot": "100k",
         "runes": "GFB",
-        "link": "https://youtu.be/"
+        "link": "https://youtu.be/6_EzfBFBvmM"
+    },
+    {
+        "level": "110+",
+        "place": "Exotic Cave",
+        "raw_exp": "1.2kk",
+        "loot": "300k",
+        "runes": "GFB",
+        "link": "https://youtu.be/0iAY-UvoT3I"
+    },
+    {
+        "level": "110+",
+        "place": "Iksupan",
+        "raw_exp": "1.1kk",
+        "loot": "300k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/ZTkGZX3K2GM"
+    },
+    {
+        "level": "120+",
+        "place": "Carlin Cults",
+        "raw_exp": "1.2kk",
+        "loot": "-100k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/slsPVk0xmIw"
+    },
+    {
+        "level": "120+",
+        "place": "Edron Old Fortress -3 (Hero)",
+        "raw_exp": "1.15kk",
+        "loot": "0k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/5jl99pLsAwA"
+    },
+    {
+        "level": "120+",
+        "place": "Lizard City",
+        "raw_exp": "1.0kk",
+        "loot": "100k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/luaEnTtgQyc"
     },
     {
         "level": "120+",
@@ -497,35 +521,11 @@
     },
     {
         "level": "120+",
-        "place": "Lizard City",
-        "raw_exp": "1.0kk",
-        "loot": "100k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "120+",
         "place": "Brimstone Bugs WOTE",
         "raw_exp": "950k",
         "loot": "600k",
         "runes": "Avalanche",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "120+",
-        "place": "Edron Old Fortress -3",
-        "raw_exp": "1.15kk",
-        "loot": "0k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "120+",
-        "place": "Carlin Cults",
-        "raw_exp": "1.2kk",
-        "loot": "-100k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/"
+        "link": "https://youtu.be/_fJl7LsU_7c"
     },
     {
         "level": "130+",
@@ -533,7 +533,7 @@
         "raw_exp": "800k",
         "loot": "100k",
         "runes": "SD",
-        "link": "https://youtu.be/"
+        "link": "https://youtu.be/_zZLcGS8EP0"
     },
     {
         "level": "130+",
@@ -541,7 +541,7 @@
         "raw_exp": "570k",
         "loot": "80k",
         "runes": "Avalanche",
-        "link": "https://youtu.be/"
+        "link": "https://youtu.be/ZUEILKt0-ZA"
     },
     {
         "level": "130+",
@@ -561,43 +561,35 @@
     },
     {
         "level": "150+",
-        "place": "Dark Faun Cave Feyrist",
-        "raw_exp": "1.05kk",
-        "loot": "100k",
-        "runes": "GFB",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "150+",
-        "place": "Deeplings Library Fiehonja",
-        "raw_exp": "1.3kk",
-        "loot": "100k",
-        "runes": "Thunderstorm",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "150+",
-        "place": "Oramond Minos",
-        "raw_exp": "1.1kk",
-        "loot": "100k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "150+",
         "place": "Oramond West",
         "raw_exp": "2.0kk",
         "loot": "-100k",
         "runes": "GFB, Thunderstorm",
-        "link": "https://youtu.be/"
+        "link": "https://youtu.be/s3whv09knGE"
     },
     {
-        "level": "200+",
-        "place": "Okolnir (Sorcerer)",
-        "raw_exp": "-",
-        "loot": "-",
+        "level": "150+",
+        "place": "Deeplings Library",
+        "raw_exp": "1.3kk",
+        "loot": "100k",
         "runes": "Thunderstorm",
-        "link": "https://youtu.be/"
+        "link": "https://youtu.be/XUCOeum1D_A"
+    },
+    {
+        "level": "150+",
+        "place": "Oramond Minotaur Plains",
+        "raw_exp": "1.1kk",
+        "loot": "100k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/IxwHI1oiQls"
+    },
+    {
+        "level": "150+",
+        "place": "Dark Faun Cave Feyrist",
+        "raw_exp": "1.05kk",
+        "loot": "100k",
+        "runes": "GFB",
+        "link": "https://youtu.be/fuqCQLmF9oU"
     },
     {
         "level": "200+",
@@ -624,11 +616,43 @@
         "link": "https://youtu.be/"
     },
     {
+        "level": "200+",
+        "place": "Okolnir (Sorcerer)",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Thunderstorm",
+        "link": "https://youtu.be/"
+    },
+    {
+        "level": "250+",
+        "place": "Yalahar Grim Reapers",
+        "raw_exp": "3.5kk",
+        "loot": "300k",
+        "runes": "GFB",
+        "link": "https://youtu.be/LTgilNU_48k"
+    },
+    {
+        "level": "250+",
+        "place": "Werehyaenas North",
+        "raw_exp": "2.2kk",
+        "loot": "600k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/o-mUARxYGi0"
+    },
+    {
         "level": "250+",
         "place": "Deeper Banuta -6 (Sorcerer)",
         "raw_exp": "2.0kk",
         "loot": "250k",
         "runes": "Thunderstorm",
+        "link": "https://youtu.be/"
+    },    
+    {
+        "level": "250+",
+        "place": "Carnivors",
+        "raw_exp": "2.0kk",
+        "loot": "800k",
+        "runes": "GFB",
         "link": "https://youtu.be/"
     },
     {
@@ -645,30 +669,6 @@
         "raw_exp": "-",
         "loot": "-",
         "runes": "Avalanche, Thunderstorm",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "250+",
-        "place": "Yalahar Grim Reapers",
-        "raw_exp": "3.5kk",
-        "loot": "300k",
-        "runes": "GFB",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "250+",
-        "place": "Carnivors",
-        "raw_exp": "2.0kk",
-        "loot": "800k",
-        "runes": "GFB",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "250+",
-        "place": "Werehyaenas North",
-        "raw_exp": "2.2kk",
-        "loot": "600k",
-        "runes": "Avalanche",
         "link": "https://youtu.be/"
     },
     {
