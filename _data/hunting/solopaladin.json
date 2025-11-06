@@ -249,6 +249,22 @@
     },
     {
         "level": "70+",
+        "place": "Iksupan",
+        "raw_exp": "525k",
+        "loot": "100k",
+        "runes": "Drill Bolts, Avalanche",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "70+",
+        "place": "Middle Spike",
+        "raw_exp": "425k",
+        "loot": "-100k",
+        "runes": "Drill Bolts, GFB",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "70+",
         "place": "Wyrms Liberty Bay -1",
         "raw_exp": "350k",
         "loot": "0k",
@@ -280,34 +296,18 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "70+",
-        "place": "Iksupan",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Drill Bolts, Avalanche",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "70+",
+        "level": "80+",
         "place": "Mother of Scarabs Lair",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "475k",
+        "loot": "-100k",
         "runes": "Drill Bolts, GFB",
         "link": "https://youtu.be/"
     },
     {
-        "level": "70+",
-        "place": "Middle Spike",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Drill Bolts, GFB",
-        "link" : "https://youtu.be/"
-    },
-    {
         "level": "80+",
         "place": "Giant Spiders PH",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "350k",
+        "loot": "-50k",
         "runes": "Drill Bolts, GFB",
         "link" : "https://youtu.be/"
     },
