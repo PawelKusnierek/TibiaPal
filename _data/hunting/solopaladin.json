@@ -313,19 +313,91 @@
     },
     {
         "level": "90+",
-        "place": "Muggy Plains",
-        "raw_exp": "-",
-        "loot": "-",
+        "place": "Nightmare Scions Krailos",
+        "raw_exp": "850k",
+        "loot": "0k",
+        "runes": "Crystalline Arrows, Avalanche",
+        "link": "https://youtu.be/-XQOfzhki80"
+    },
+    {
+        "level": "90+",
+        "place": "Dragon Lords Fenrock",
+        "raw_exp": "850k",
+        "loot": "0k",
         "runes": "Crystalline Arrows, Avalanche",
         "link" : "https://youtu.be/"
     },
     {
         "level": "90+",
-        "place": "Sea Serpents",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, Thunderstorm",
+        "place": "Edron South Were",
+        "raw_exp": "800k",
+        "loot": "75k",
+        "runes": "Crystalline Arrows, GFB",
+        "link": "https://youtu.be/C9Tz1wPGugY"
+    },
+    {
+        "level": "90+",
+        "place": "Grimvale -4",
+        "raw_exp": "800k",
+        "loot": "50k",
+        "runes": "Crystalline Arrows, GFB",
+        "link": "https://youtu.be/pO_RoBW3OwY"
+    },
+    {
+        "level": "90+",
+        "place": "Werehyaenas -1",
+        "raw_exp": "750k",
+        "loot": "100k",
+        "runes": "Crystalline Arrows, Avalanche",
+        "link": "https://youtu.be/wiQJULJ2sZI"
+    },
+    {
+        "level": "90+",
+        "place": "Oramond Minos",
+        "raw_exp": "700k",
+        "loot": "100k",
+        "runes": "Crystalline Arrows, Avalanche",
+        "link": "https://youtu.be/V5oa4ANRnH0"
+    },
+    {
+        "level": "90+",
+        "place": "Exotic Cave",
+        "raw_exp": "750k",
+        "loot": "100k",
+        "runes": "Crystalline Arrows, GFB",
         "link" : "https://youtu.be/"
+    },
+    {
+        "level": "90+",
+        "place": "Mini Rosha",
+        "raw_exp": "700k",
+        "loot": "200k",
+        "runes": "Crystalline Arrows, Avalanche",
+        "link": "https://youtu.be/zkCvaKdiHgs"
+    },
+    {
+        "level": "90+",
+        "place": "Yielothax",
+        "raw_exp": "600k",
+        "loot": "100k",
+        "runes": "Crystalline Arrows, Avalanche",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "90+",
+        "place": "Putrid Mummy",
+        "raw_exp": "550k",
+        "loot": "350k",
+        "runes": "Crystalline Arrows, GFB",
+        "link": "https://youtu.be/3Z_mfTJReVg"
+    },
+    {
+        "level": "90+",
+        "place": "Lizard Chosens",
+        "raw_exp": "550k",
+        "loot": "100k",
+        "runes": "Crystalline Arrows, Avalanche",
+        "link": "https://youtu.be/59Cpjs7Gaus"
     },
     {
         "level": "90+",
@@ -337,22 +409,6 @@
     },
     {
         "level": "90+",
-        "place": "Yielothax",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, Avalanche",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "90+",
-        "place": "Nightmare Scions Krailos",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, Avalanche",
-        "link": "https://youtu.be/-XQOfzhki80"
-    },
-    {
-        "level": "90+",
         "place": "Edron Vampire Crypt -4",
         "raw_exp": "-",
         "loot": "-",
@@ -360,115 +416,11 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "90+",
-        "place": "Oramond Minos",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, Avalanche",
-        "link": "https://youtu.be/V5oa4ANRnH0"
-    },
-    {
-        "level": "90+",
-        "place": "Dragon Lords Fenrock/POI",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, Avalanche",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "90+",
-        "place": "Grimvale -4",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, GFB",
-        "link": "https://youtu.be/pO_RoBW3OwY"
-    },
-    {
-        "level": "90+",
-        "place": "Exotic Cave Spiders cave",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, GFB",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "90+",
-        "place": "Mini Rosha",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, Avalanche",
-        "link": "https://youtu.be/zkCvaKdiHgs"
-    },
-    {
-        "level": "90+",
-        "place": "Werehyaenas -1",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, Avalanche",
-        "link": "https://youtu.be/wiQJULJ2sZI"
-    },
-    {
-        "level": "90+",
-        "place": "Putrid Mummy",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, GFB",
-        "link": "https://youtu.be/3Z_mfTJReVg"
-    },
-    {
-        "level": "90+",
-        "place": "Feyrist Surface",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, GFB",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "90+",
-        "place": "Edron South Were",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, GFB",
-        "link": "https://youtu.be/C9Tz1wPGugY"
-    },
-    {
-        "level": "90+",
-        "place": "Lizard Chosens",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, Avalanche",
-        "link": "https://youtu.be/59Cpjs7Gaus"
-    },
-    {
-        "level": "90+",
-        "place": "Hellspawns Yalahar",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, Avalanche",
-        "link" : "https://youtu.be/"
-    },
-    {
         "level": "100+",
         "place": "Ravenous Lava Lurkers",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, Avalanche",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "100+",
-        "place": "Nightmares Cemetery Yalahar",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, Avalanche",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "100+",
-        "place": "MoTa Fury",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Crystalline Arrows, Thunderstorm",
+        "raw_exp": "1.1kk",
+        "loot": "-200k",
+        "runes": "Burst Arrows, Avalanche",
         "link" : "https://youtu.be/"
     },
     {
@@ -502,6 +454,14 @@
         "loot": "200k",
         "runes": "Crystalline Arrows, Thunderstorm",
         "link": "https://youtu.be/5lnfVhI_FgI"
+    },
+    {
+        "level": "130+",
+        "place": "MoTa Fury",
+        "raw_exp": "500k",
+        "loot": "150k",
+        "runes": "Crystalline Arrows, Thunderstorm",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "130+",
