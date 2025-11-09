@@ -609,22 +609,6 @@
     },
     {
         "level": "200+",
-        "place": "Draken Walls",
-        "raw_exp": "2.0kk",
-        "loot": "450k",
-        "weapon_type": "Physical, Energy",
-        "link" : "https://youtu.be/X2gGK2LshUQ"
-    },
-    {
-        "level": "200+",
-        "place": "Otherworld (Edron)",
-        "raw_exp": "2.1kk",
-        "loot": "250k",
-        "weapon_type": "Earth",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "200+",
         "place": "Hive Stage3",
         "raw_exp": "2.1kk",
         "loot": "600k",
@@ -634,9 +618,33 @@
     {
         "level": "200+",
         "place": "Book World: Chapter II",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Energy, Physical",
+        "raw_exp": "2.0kk",
+        "loot": "500k",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "200+",
+        "place": "Draken Walls",
+        "raw_exp": "2.0kk",
+        "loot": "450k",
+        "weapon_type": "Physical, Energy",
+        "link" : "https://youtu.be/X2gGK2LshUQ"
+    },
+    {
+        "level": "200+",
+        "place": "Otherworld (Edron)",
+        "raw_exp": "1.9kk",
+        "loot": "200k",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "220+",
+        "place": "Book World: Chapter III",
+        "raw_exp": "2.9kk",
+        "loot": "450k",
+        "weapon_type": "Physical, Earth, Energy",
         "link" : "https://youtu.be/"
     },
     {
@@ -645,14 +653,6 @@
         "raw_exp": "3.2kk",
         "loot": "600k",
         "weapon_type": "Earth",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "250+",
-        "place": "Book World: Chapter III",
-        "raw_exp": "3.1kk",
-        "loot": "800k",
-        "weapon_type": "Earth, Energy",
         "link" : "https://youtu.be/"
     },
     {
