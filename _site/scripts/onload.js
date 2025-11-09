@@ -3,6 +3,7 @@ function initialize() {
   //find_rashid_city();
   enable_expandable_div_buttons();
   enable_default_tabs();
+  check_livestream();
 }
 
 function find_rashid_city() {
@@ -113,19 +114,19 @@ function enable_default_tabs() {
   if (location.href.split("/").slice(-1).includes('charm_planner')) {
     initial_show_tab("Major Charms")
   }
-  else if(location.href.split("/").slice(-1).includes('equipment')) {
+  else if (location.href.split("/").slice(-1).includes('equipment')) {
     initial_show_tab("Druid")
   }
-  else if(location.href.includes('/hunting')) {
+  else if (location.href.includes('/hunting')) {
     initial_show_tab("Knight")
   }
-  else if(location.href.includes('/monkcontest')) {
+  else if (location.href.includes('/monkcontest')) {
     initial_show_tab("Bounties")
   }
-  else if(location.href.includes('/exercise')) {
+  else if (location.href.includes('/exercise')) {
     initial_show_tab("TargetSkill")
   }
-  else if(location.href.includes('/offlinetraining')) {
+  else if (location.href.includes('/offlinetraining')) {
     initial_show_tab("TargetSkill")
   }
 
@@ -169,12 +170,39 @@ function initial_show_tab(tab_name) {
 function toggleNavigation() {
   var sidebar = document.getElementById('left-sidebar');
   var toggle = document.querySelector('.nav-toggle');
-  
+
   if (sidebar.classList.contains('expanded')) {
     sidebar.classList.remove('expanded');
     toggle.textContent = '☰ Menu';
   } else {
     sidebar.classList.add('expanded');
     toggle.textContent = '✕ Close';
+  }
+}
+
+async function check_livestream(channel) {
+  try {
+    // Kick’s public API endpoint for channel data
+    const response = await fetch(`https://kick.com/api/v2/channels/Kusnier`);
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+    const data = await response.json();
+
+    // Kick API includes a "livestream" object when the channel is live
+    const isLive = data.livestream !== null;
+
+    if (isLive) {
+      console.log(`${channel} is LIVE!`);
+      const live_element = document.getElementById("kick-live");
+      live_element.style.display = "initial";
+      
+      const offline_element = document.getElementById("kick-offline");
+      offline_element.style.display = "none";
+    } 
+
+    return isLive;
+  } catch (err) {
+    console.error(`Failed to check Kick live status: ${err.message}`);
+    return null;
   }
 }
