@@ -570,8 +570,8 @@
     {
         "level": "175+",
         "place": "Brimstone Bugs WOTE",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "1.25kk",
+        "loot": "800k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },
@@ -650,8 +650,16 @@
     {
         "level": "250+",
         "place": "Book World: Chapter IV",
-        "raw_exp": "3.2kk",
+        "raw_exp": "3.5kk",
         "loot": "600k",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "250+",
+        "place": "Weretigers -1",
+        "raw_exp": "3.4kk",
+        "loot": "750k",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
@@ -1200,7 +1208,7 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "700+",
+        "level": "800+",
         "place": "Bulltaurs -2",
         "raw_exp": "6.0kk",
         "loot": "1.2kk",
@@ -1208,20 +1216,12 @@
         "link" : "https://youtu.be/954Rdp8isks"
     },
     {
-        "level": "700+",
+        "level": "800+",
         "place": "True Asuras",
         "raw_exp": "5.2kk",
         "loot": "1.0kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/Y5sL8gYWMS4"
-    },
-    {
-        "level": "800+",
-        "place": "Podzilla Quaras",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Earth",
-        "link" : "https://youtu.be/"
     },
     {
         "level": "800+",
@@ -1232,7 +1232,15 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "800+",
+        "level": "1000+",
+        "place": "Podzilla Quaras",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "1000+",
         "place": "Energy Library",
         "raw_exp": "-",
         "loot": "-",

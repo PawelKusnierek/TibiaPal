@@ -224,6 +224,14 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "70+",
+        "place": "Wyrms LB -1",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "80+",
         "place": "Giant Spiders PH",
         "raw_exp": "500k",
@@ -238,6 +246,54 @@
         "loot": "75k",
         "weapon_type": "Physical",
         "link": "https://youtu.be/shFG3_qgkT0"
+    },
+    {
+        "level": "90+",
+        "place": "Nightmare Scions Krailos",
+        "raw_exp": "1.25kk",
+        "loot": "0k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/JnwY4WAKX24"
+    },
+    {
+        "level": "90+",
+        "place": "Edron Heroes -2/-3",
+        "raw_exp": "1.2kk",
+        "loot": "150k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/Blmm8zBjKRg"
+    },
+    {
+        "level": "90+",
+        "place": "Fenrock Dragon Lords",
+        "raw_exp": "950k",
+        "loot": "0k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/8XYare-fX6A"
+    },
+    {
+        "level": "90+",
+        "place": "Edron Vampire Crypt",
+        "raw_exp": "800k",
+        "loot": "200k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/F_d9LzRCACw"
+    },
+    {
+        "level": "90+",
+        "place": "Inner Hive Stage2 East",
+        "raw_exp": "750k",
+        "loot": "300k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/2bqsbJWm1og"
+    },
+    {
+        "level": "90+",
+        "place": "Krailos Bug Cave",
+        "raw_exp": "600k",
+        "loot": "150k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/-9-sCX_V1Q8"
     },
     {
         "level": "90+",
@@ -256,68 +312,44 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "90+",
-        "place": "Krailos Bug Cave",
-        "raw_exp": "600k",
-        "loot": "150k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/-9-sCX_V1Q8"
-    },
-    {
-        "level": "90+",
-        "place": "Wyrms Drefia/LB",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "90+",
-        "place": "Nightmare Scions Krailos",
-        "raw_exp": "1.25kk",
-        "loot": "0k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/JnwY4WAKX24"
-    },
-    {
-        "level": "90+",
-        "place": "Edron Vampire Crypt",
-        "raw_exp": "800k",
-        "loot": "200k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/F_d9LzRCACw"
-    },
-    {
-        "level": "90+",
-        "place": "Fenrock Dragon Lords",
-        "raw_exp": "950k",
-        "loot": "0k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/8XYare-fX6A"
-    },
-    {
-        "level": "90+",
-        "place": "Edron Heroes -2/-3",
-        "raw_exp": "1.2kk",
-        "loot": "150k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/Blmm8zBjKRg"
-    },
-    {
-        "level": "90+",
-        "place": "Inner Hive Stage2 East",
-        "raw_exp": "750k",
-        "loot": "300k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/2bqsbJWm1og"
-    },
-    {
         "level": "100+",
         "place": "Exotic Cave",
         "raw_exp": "-",
         "loot": "-",
         "weapon_type": "Physical",
         "link" : "https://youtu.be/"
+    },
+    {
+        "level": "130+",
+        "place": "Ravenous Lava Lurkers",
+        "raw_exp": "2.1kk",
+        "loot": "-200k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/caQBlOhC5vY"
+    },
+    {
+        "level": "130+",
+        "place": "Oramond West",
+        "raw_exp": "1.9kk",
+        "loot": "50k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/oPCujZNnN9k"
+    },
+    {
+        "level": "130+",
+        "place": "Yalahar Sunken Quarter",
+        "raw_exp": "1.6kk",
+        "loot": "150k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/SD2Ete6ZUpQ"
+    },
+    {
+        "level": "130+",
+        "place": "Okolnir",
+        "raw_exp": "1.55kk",
+        "loot": "-75k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/a8tJcIpDARk"
     },
     {
         "level": "130+",
@@ -329,7 +361,47 @@
     },
     {
         "level": "130+",
+        "place": "Hydras Oramond",
+        "raw_exp": "1.2kk",
+        "loot": "150k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/p0i3ivvMXFY"
+    },
+    {
+        "level": "130+",
+        "place": "Mini Rosha",
+        "raw_exp": "1.15kk",
+        "loot": "350k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/Iq47VL2AulA"
+    },
+    {
+        "level": "130+",
+        "place": "Edron Orc Cults",
+        "raw_exp": "1.15kk",
+        "loot": "200k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/4TjwgLYvmmw"
+    },
+    {
+        "level": "130+",
+        "place": "Dark Faun Cave",
+        "raw_exp": "1.1kk",
+        "loot": "150k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/VVyzX69WqqI"
+    },
+    {
+        "level": "130+",
         "place": "Replica Dungeon",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "130+",
+        "place": "Lizard Chosens",
         "raw_exp": "-",
         "loot": "-",
         "weapon_type": "Physical",
@@ -342,94 +414,6 @@
         "loot": "-",
         "weapon_type": "Physical",
         "link": "https://youtu.be/"
-    },
-    {
-        "level": "130+",
-        "place": "Okolnir",
-        "raw_exp": "1.55kk",
-        "loot": "-75k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/a8tJcIpDARk"
-    },
-    {
-        "level": "130+",
-        "place": "Yalahar Sunken Quarter",
-        "raw_exp": "1.6kk",
-        "loot": "150k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/SD2Ete6ZUpQ"
-    },
-    {
-        "level": "130+",
-        "place": "Mini Rosha",
-        "raw_exp": "1.15kk",
-        "loot": "350k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/Iq47VL2AulA"
-    },
-    {
-        "level": "130+",
-        "place": "Ravenous Lava Lurkers",
-        "raw_exp": "2.1kk",
-        "loot": "-200k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/caQBlOhC5vY"
-    },
-    {
-        "level": "130+",
-        "place": "Dark Faun Cave",
-        "raw_exp": "1.1kk",
-        "loot": "150k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/VVyzX69WqqI"
-    },
-    {
-        "level": "130+",
-        "place": "Oramond West",
-        "raw_exp": "1.9kk",
-        "loot": "50k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/oPCujZNnN9k"
-    },
-    {
-        "level": "130+",
-        "place": "Lizard Chosens",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "130+",
-        "place": "Edron Orc Cults",
-        "raw_exp": "1.15kk",
-        "loot": "200k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/4TjwgLYvmmw"
-    },
-    {
-        "level": "130+",
-        "place": "Hydras Oramond",
-        "raw_exp": "1.2kk",
-        "loot": "150k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/p0i3ivvMXFY"
-    },
-    {
-        "level": "150+",
-        "place": "Oramond Minos",
-        "raw_exp": "1.5kk",
-        "loot": "150k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/QY5J9Yv36Y8"
-    },
-    {
-        "level": "150+",
-        "place": "Elder Wyrms Drefia",
-        "raw_exp": "1.8kk",
-        "loot": "0",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/KYit9Ogcfdc"
     },
     {
         "level": "150+",
@@ -449,11 +433,11 @@
     },
     {
         "level": "150+",
-        "place": "Iksupan",
-        "raw_exp": "1.1kk",
-        "loot": "150k",
+        "place": "Elder Wyrms Drefia",
+        "raw_exp": "1.8kk",
+        "loot": "0",
         "weapon_type": "Physical",
-        "link": "https://youtu.be/zBhplhuKXIY"
+        "link": "https://youtu.be/KYit9Ogcfdc"
     },
     {
         "level": "150+",
@@ -465,11 +449,27 @@
     },
     {
         "level": "150+",
+        "place": "Oramond Minos",
+        "raw_exp": "1.5kk",
+        "loot": "150k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/QY5J9Yv36Y8"
+    },
+    {
+        "level": "150+",
         "place": "Otherworld (Kazo)",
         "raw_exp": "1.2kk",
         "loot": "100k",
         "weapon_type": "Physical",
         "link": "https://youtu.be/p84-jPg3_D8"
+    },
+    {
+        "level": "150+",
+        "place": "Iksupan",
+        "raw_exp": "1.1kk",
+        "loot": "150k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/zBhplhuKXIY"
     },
     {
         "level": "185+",
@@ -481,27 +481,11 @@
     },
     {
         "level": "200+",
-        "place": "Otherworld (Edron)",
-        "raw_exp": "1.9kk",
-        "loot": "250k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/R_6x8Ktq2TU"
-    },
-    {
-        "level": "200+",
-        "place": "Seacrest Serpents",
-        "raw_exp": "2.1kk",
-        "loot": "400k",
-        "weapon_type": "Physical, Energy",
-        "link": "https://youtu.be/wBK-Zsv4pGY"
-    },
-    {
-        "level": "200+",
-        "place": "Werehyaenas North",
-        "raw_exp": "2.2kk",
-        "loot": "250k",
-        "weapon_type": "Ice",
-        "link": "https://youtu.be/UkyGtD43cIA"
+        "place": "Yalahar Grim Reapers",
+        "raw_exp": "3.5kk",
+        "loot": "0k",
+        "weapon_type": "Fire, Energy",
+        "link": "https://youtu.be/RGjHuTgxg7k"
     },
     {
         "level": "200+",
@@ -513,11 +497,51 @@
     },
     {
         "level": "200+",
-        "place": "Minotaur Cults",
-        "raw_exp": "1.0kk",
-        "loot": "550k",
+        "place": "Werehyaenas North",
+        "raw_exp": "2.2kk",
+        "loot": "250k",
         "weapon_type": "Ice",
-        "link" : "https://youtu.be/"
+        "link": "https://youtu.be/UkyGtD43cIA"
+    },
+    {
+        "level": "200+",
+        "place": "Seacrest Serpents",
+        "raw_exp": "2.1kk",
+        "loot": "400k",
+        "weapon_type": "Physical, Energy",
+        "link": "https://youtu.be/wBK-Zsv4pGY"
+    },
+    {
+        "level": "200+",
+        "place": "Draken Walls",
+        "raw_exp": "2.1kk",
+        "loot": "350k",
+        "weapon_type": "Physical, Ice, Energy",
+        "link": "https://youtu.be/_Nl5iLP_ysw"
+    },
+    {
+        "level": "200+",
+        "place": "Glooth Tower",
+        "raw_exp": "2.05kk",
+        "loot": "250k",
+        "weapon_type": "Physical, Energy",
+        "link": "https://youtu.be/Jo0b8yTfkjg"
+    },
+    {
+        "level": "200+",
+        "place": "Hive Stage3",
+        "raw_exp": "2.0kk",
+        "loot": "300k",
+        "weapon_type": "Ice",
+        "link": "https://youtu.be/xDwJy-iTtI0"
+    },
+    {
+        "level": "200+",
+        "place": "Otherworld (Edron)",
+        "raw_exp": "1.9kk",
+        "loot": "250k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/R_6x8Ktq2TU"
     },
     {
         "level": "200+",
@@ -537,42 +561,10 @@
     },
     {
         "level": "200+",
-        "place": "Yalahar Grim Reapers",
-        "raw_exp": "3.5kk",
-        "loot": "0k",
-        "weapon_type": "Fire, Energy",
-        "link": "https://youtu.be/RGjHuTgxg7k"
-    },
-    {
-        "level": "200+",
-        "place": "Hive Stage3",
-        "raw_exp": "2.0kk",
-        "loot": "300k",
+        "place": "Minotaur Cults",
+        "raw_exp": "1.0kk",
+        "loot": "550k",
         "weapon_type": "Ice",
-        "link": "https://youtu.be/xDwJy-iTtI0"
-    },
-    {
-        "level": "200+",
-        "place": "Draken Walls",
-        "raw_exp": "2.1kk",
-        "loot": "350k",
-        "weapon_type": "Physical, Ice, Energy",
-        "link": "https://youtu.be/_Nl5iLP_ysw"
-    },
-    {
-        "level": "200+",
-        "place": "Glooth Tower",
-        "raw_exp": "2.05kk",
-        "loot": "250k",
-        "weapon_type": "Physical, Energy",
-        "link": "https://youtu.be/Jo0b8yTfkjg"
-    },
-    {
-        "level": "250+",
-        "place": "Carnivora's Rock",
-        "raw_exp": "2.0kk",
-        "loot": "800k",
-        "weapon_type": "Fire, Ice",
         "link" : "https://youtu.be/"
     },
     {
@@ -584,12 +576,36 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "250+",
+        "place": "Carnivora's Rock",
+        "raw_exp": "2.0kk",
+        "loot": "800k",
+        "weapon_type": "Fire, Ice",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Warzone 4",
+        "raw_exp": "3.5kk",
+        "loot": "600k",
+        "weapon_type": "Fire",
+        "link": "https://youtu.be/w0XLvF35jCY"
+    },
+    {
         "level": "300+",
         "place": "Asura Palace",
-        "raw_exp": "3.5kk",
+        "raw_exp": "3.4kk",
         "loot": "550k",
         "weapon_type": "Energy",
         "link": "https://youtu.be/D-tKd-2-aP8"
+    },
+    {
+        "level": "300+",
+        "place": "Deeper Banuta (Bottom Floor)",
+        "raw_exp": "3.0kk",
+        "loot": "800k",
+        "weapon_type": "Energy",
+        "link": "https://youtu.be/C3HBF3noWV0"
     },
     {
         "level": "300+",
@@ -601,19 +617,27 @@
     },
     {
         "level": "300+",
+        "place": "Candia Nibblemaws",
+        "raw_exp": "2.8kk",
+        "loot": "450k",
+        "weapon_type": "Energy",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Drefia Grim Reapers",
+        "raw_exp": "2.8kk",
+        "loot": "200k",
+        "weapon_type": "Fire",
+        "link": "https://youtu.be/sUyHb_pEeRQ"
+    },
+    {
+        "level": "300+",
         "place": "Werelions -2",
         "raw_exp": "2.7kk",
         "loot": "700k",
         "weapon_type": "Ice",
         "link": "https://youtu.be/4UjR7XhKo2Q"
-    },
-    {
-        "level": "300+",
-        "place": "Deeper Banuta (Bottom Floor)",
-        "raw_exp": "3.0kk",
-        "loot": "800k",
-        "weapon_type": "Energy",
-        "link": "https://youtu.be/C3HBF3noWV0"
     },
     {
         "level": "300+",
@@ -633,35 +657,11 @@
     },
     {
         "level": "300+",
-        "place": "Drefia Grim Reapers",
-        "raw_exp": "2.8kk",
-        "loot": "200k",
-        "weapon_type": "Fire",
-        "link": "https://youtu.be/sUyHb_pEeRQ"
-    },
-    {
-        "level": "300+",
         "place": "Diremaw Task Area",
         "raw_exp": "2.4kk",
         "loot": "700k",
         "weapon_type": "Ice",
         "link": "https://youtu.be/8J9jVBLu8ik"
-    },
-    {
-        "level": "300+",
-        "place": "Warzone 4",
-        "raw_exp": "3.5kk",
-        "loot": "600k",
-        "weapon_type": "Fire",
-        "link": "https://youtu.be/w0XLvF35jCY"
-    },
-    {
-        "level": "300+",
-        "place": "Candia Nibblemaws",
-        "raw_exp": "2.8kk",
-        "loot": "450k",
-        "weapon_type": "Energy",
-        "link" : "https://youtu.be/"
     },
     {
         "level": "300+",
@@ -689,43 +689,11 @@
     },
     {
         "level": "350+",
-        "place": "POI Dark Torturer Seal",
-        "raw_exp": "1.5kk",
-        "loot": "550k",
-        "weapon_type": "Ice",
-        "link": "https://youtu.be/vlOWwyJpEZI"
-    },
-    {
-        "level": "350+",
-        "place": "Winter Court behind TP/Portal",
-        "raw_exp": "3.3kk",
-        "loot": "600k",
-        "weapon_type": "Fire",
-        "link": "https://youtu.be/pI6rwhbkRE4"
-    },
-    {
-        "level": "350+",
         "place": "Asura Mirror -1",
         "raw_exp": "5.7kk",
         "loot": "800k",
         "weapon_type": "Energy, Ice",
         "link": "https://youtu.be/nd95xvmtIUc"
-    },
-    {
-        "level": "350+",
-        "place": "Oramond Wildlife Raid",
-        "raw_exp": "3.8kk",
-        "loot": "600k",
-        "weapon_type": "Ice",
-        "link": "https://youtu.be/zZv9XYnpF_U"
-    },
-    {
-        "level": "350+",
-        "place": "Lower Rosha",
-        "raw_exp": "3.5kk",
-        "loot": "750k",
-        "weapon_type": "Physical, Ice",
-        "link": "https://youtu.be/xEV7rp0YQ8g"
     },
     {
         "level": "350+",
@@ -737,11 +705,35 @@
     },
     {
         "level": "350+",
+        "place": "Oramond Wildlife Raid",
+        "raw_exp": "3.8kk",
+        "loot": "600k",
+        "weapon_type": "Ice",
+        "link": "https://youtu.be/zZv9XYnpF_U"
+    },
+    {
+        "level": "350+",
         "place": "Gazer Spectre",
         "raw_exp": "3.7kk",
         "loot": "700k",
         "weapon_type": "Ice",
         "link": "https://youtu.be/kTMrNwPKebg"
+    },
+    {
+        "level": "350+",
+        "place": "Lower Rosha",
+        "raw_exp": "3.5kk",
+        "loot": "750k",
+        "weapon_type": "Physical, Ice",
+        "link": "https://youtu.be/xEV7rp0YQ8g"
+    },
+    {
+        "level": "350+",
+        "place": "Winter Court behind TP/Portal",
+        "raw_exp": "3.3kk",
+        "loot": "600k",
+        "weapon_type": "Fire",
+        "link": "https://youtu.be/pI6rwhbkRE4"
     },
     {
         "level": "350+",
@@ -752,36 +744,12 @@
         "link": "https://youtu.be/ZjtdCId8l_M"
     },
     {
-        "level": "400+",
-        "place": "Warzone 6",
-        "raw_exp": "3.0kk",
-        "loot": "750k",
+        "level": "350+",
+        "place": "POI Dark Torturer Seal",
+        "raw_exp": "1.5kk",
+        "loot": "550k",
         "weapon_type": "Ice",
-        "link": "https://youtu.be/z6fgTbeD--k"
-    },
-    {
-        "level": "400+",
-        "place": "Rosha West",
-        "raw_exp": "4.3kk",
-        "loot": "1.0kk",
-        "weapon_type": "Physical, Ice",
-        "link": "https://youtu.be/ObUXgSt0CKY"
-    },
-    {
-        "level": "400+",
-        "place": "POI Infernatil + DT Seals",
-        "raw_exp": "2.2kk",
-        "loot": "900k",
-        "weapon_type": "Ice",
-        "link": "https://youtu.be/p_Fy4LA8UaI"
-    },
-    {
-        "level": "400+",
-        "place": "POI Verminor Seal",
-        "raw_exp": "3.0kk",
-        "loot": "650k",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/SwhH7mfXKWA"
+        "link": "https://youtu.be/vlOWwyJpEZI"
     },
     {
         "level": "400+",
@@ -793,11 +761,11 @@
     },
     {
         "level": "400+",
-        "place": "Winter Court",
-        "raw_exp": "4.0kk",
-        "loot": "750k",
+        "place": "Burster Spectre",
+        "raw_exp": "4.5kk",
+        "loot": "400k",
         "weapon_type": "Fire",
-        "link": "https://youtu.be/oSh1OpMdNlI"
+        "link": "https://youtu.be/UyBEeDVkh8Y"
     },
     {
         "level": "400+",
@@ -809,27 +777,51 @@
     },
     {
         "level": "400+",
-        "place": "Burster Spectre",
-        "raw_exp": "4.5kk",
-        "loot": "400k",
-        "weapon_type": "Fire",
-        "link": "https://youtu.be/UyBEeDVkh8Y"
-    },
-    {
-        "level": "400+",
-        "place": "Roshamuul Depot",
-        "raw_exp": "3.5kk",
-        "loot": "750k",
-        "weapon_type": "Energy",
-        "link": "https://youtu.be/nt7sNGSzkDM"
-    },
-    {
-        "level": "400+",
         "place": "Roshamuul Mines",
         "raw_exp": "4.4kk",
         "loot": "600k",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Rosha West",
+        "raw_exp": "4.3kk",
+        "loot": "1.0kk",
+        "weapon_type": "Physical, Ice",
+        "link": "https://youtu.be/ObUXgSt0CKY"
+    },
+    {
+        "level": "400+",
+        "place": "Prison -1",
+        "raw_exp": "4.1kk",
+        "loot": "850k",
+        "weapon_type": "Physical, Energy",
+        "link": "https://youtu.be/F09eddj6M54"
+    },
+    {
+        "level": "400+",
+        "place": "Winter Court",
+        "raw_exp": "4.0kk",
+        "loot": "750k",
+        "weapon_type": "Fire",
+        "link": "https://youtu.be/oSh1OpMdNlI"
+    },
+    {
+        "level": "400+",
+        "place": "Warzone 6",
+        "raw_exp": "3.0kk",
+        "loot": "750k",
+        "weapon_type": "Ice",
+        "link": "https://youtu.be/z6fgTbeD--k"
+    },
+    {
+        "level": "400+",
+        "place": "POI Verminor Seal",
+        "raw_exp": "3.0kk",
+        "loot": "650k",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/SwhH7mfXKWA"
     },
     {
         "level": "400+",
@@ -841,27 +833,11 @@
     },
     {
         "level": "400+",
-        "place": "Prison -1",
-        "raw_exp": "4.1kk",
-        "loot": "850k",
-        "weapon_type": "Physical, Energy",
-        "link": "https://youtu.be/F09eddj6M54"
-    },
-    {
-        "level": "450+",
-        "place": "Prison -2",
-        "raw_exp": "4.0kk",
-        "loot": "850k",
-        "weapon_type": "Physical, Energy",
-        "link": "https://youtu.be/P2at25KY0eU"
-    },
-    {
-        "level": "450+",
-        "place": "Summer Court for first timers (half boxes)",
-        "raw_exp": "4.8kk",
+        "place": "POI Infernatil + DT Seals",
+        "raw_exp": "2.2kk",
         "loot": "900k",
         "weapon_type": "Ice",
-        "link": "https://youtu.be/aIa1rppOhBg"
+        "link": "https://youtu.be/p_Fy4LA8UaI"
     },
     {
         "level": "450+",
@@ -873,11 +849,51 @@
     },
     {
         "level": "450+",
+        "place": "Summer Court for first timers (half boxes)",
+        "raw_exp": "4.8kk",
+        "loot": "900k",
+        "weapon_type": "Ice",
+        "link": "https://youtu.be/aIa1rppOhBg"
+    },
+    {
+        "level": "450+",
         "place": "Roshamuul Shockheads",
         "raw_exp": "4.3kk",
         "loot": "1.0kk",
         "weapon_type": "Physical",
         "link": "https://youtu.be/9jrVlQdyKR0"
+    },
+    {
+        "level": "450+",
+        "place": "Prison -2",
+        "raw_exp": "4.0kk",
+        "loot": "850k",
+        "weapon_type": "Physical, Energy",
+        "link": "https://youtu.be/P2at25KY0eU"
+    },
+    {
+        "level": "500+",
+        "place": "Issavi Crypts (Sphinx, Wardens)",
+        "raw_exp": "6.2kk",
+        "loot": "500k",
+        "weapon_type": "Death",
+        "link": "https://youtu.be/p-kD2EpGF8g"
+    },
+    {
+        "level": "500+",
+        "place": "Summer Court full boxing",
+        "raw_exp": "6.0kk",
+        "loot": "1.0kk",
+        "weapon_type": "Ice",
+        "link": "https://youtu.be/LgrIoKfVKMY"
+    },
+    {
+        "level": "500+",
+        "place": "Cobra Bastion for Beginners",
+        "raw_exp": "5.5kk",
+        "loot": "700k",
+        "weapon_type": "Ice, Fire, Energy, Death",
+        "link": "https://youtu.be/9UPypZPCjg4"
     },
     {
         "level": "500+",
@@ -897,51 +913,11 @@
     },
     {
         "level": "500+",
-        "place": "Otherworld",
-        "raw_exp": "3.0kk",
-        "loot": "1.1kk",
-        "weapon_type": "Earth",
-        "link": "https://youtu.be/qztNKrkX4xQ"
-    },
-    {
-        "level": "500+",
         "place": "Deathlings",
         "raw_exp": "4.9kk",
         "loot": "700k",
         "weapon_type": "Earth, Energy",
         "link": "https://youtu.be/c5AQnTF3W1I"
-    },
-    {
-        "level": "500+",
-        "place": "INQ Dark Torturer Seal",
-        "raw_exp": "4.0kk",
-        "loot": "1.1kk",
-        "weapon_type": "Physical",
-        "link": "https://youtu.be/iNy9v0cuywY"
-    },
-    {
-        "level": "500+",
-        "place": "Nightmare Isles",
-        "raw_exp": "4.2kk",
-        "loot": "800k",
-        "weapon_type": "Energy",
-        "link": "https://youtu.be/Qg59I8UENT8"
-    },
-    {
-        "level": "500+",
-        "place": "Warzone 7",
-        "raw_exp": "2.4kk",
-        "loot": "1.1kk",
-        "weapon_type": "Fire",
-        "link": "https://youtu.be/u3J4bu9CYi4"
-    },
-    {
-        "level": "500+",
-        "place": "Warzone 8",
-        "raw_exp": "3.7kk",
-        "loot": "1.6kk",
-        "weapon_type": "Ice",
-        "link": "https://youtu.be/rVoJo4yPoyE"
     },
     {
         "level": "500+",
@@ -953,11 +929,27 @@
     },
     {
         "level": "500+",
-        "place": "Cobra Bastion for Beginners",
-        "raw_exp": "5.5kk",
-        "loot": "700k",
-        "weapon_type": "Ice, Fire, Energy, Death",
-        "link": "https://youtu.be/9UPypZPCjg4"
+        "place": "Warzone 2",
+        "raw_exp": "4.3kk",
+        "loot": "900k",
+        "weapon_type": "Ice",
+        "link": "https://youtu.be/43CrzKHwN_A"
+    },
+    {
+        "level": "500+",
+        "place": "Nightmare Isles",
+        "raw_exp": "4.2kk",
+        "loot": "800k",
+        "weapon_type": "Energy",
+        "link": "https://youtu.be/Qg59I8UENT8"
+    },
+    {
+        "level": "500+",
+        "place": "INQ Dark Torturer Seal",
+        "raw_exp": "4.0kk",
+        "loot": "1.1kk",
+        "weapon_type": "Physical",
+        "link": "https://youtu.be/iNy9v0cuywY"
     },
     {
         "level": "500+",
@@ -969,19 +961,11 @@
     },
     {
         "level": "500+",
-        "place": "Summer Court full boxing",
-        "raw_exp": "6.0kk",
-        "loot": "1.0kk",
+        "place": "Warzone 8",
+        "raw_exp": "3.7kk",
+        "loot": "1.6kk",
         "weapon_type": "Ice",
-        "link": "https://youtu.be/LgrIoKfVKMY"
-    },
-    {
-        "level": "500+",
-        "place": "Carnisylvans",
-        "raw_exp": "3.2kk",
-        "loot": "1.5kk",
-        "weapon_type": "Fire",
-        "link": "https://youtu.be/eYww7TEtxxA"
+        "link": "https://youtu.be/rVoJo4yPoyE"
     },
     {
         "level": "500+",
@@ -993,19 +977,27 @@
     },
     {
         "level": "500+",
-        "place": "Warzone 2",
-        "raw_exp": "4.3kk",
-        "loot": "900k",
-        "weapon_type": "Ice",
-        "link": "https://youtu.be/43CrzKHwN_A"
+        "place": "Carnisylvans",
+        "raw_exp": "3.2kk",
+        "loot": "1.5kk",
+        "weapon_type": "Fire",
+        "link": "https://youtu.be/eYww7TEtxxA"
     },
     {
         "level": "500+",
-        "place": "Issavi Crypts (Sphinx, Wardens)",
-        "raw_exp": "6.2kk",
-        "loot": "500k",
-        "weapon_type": "Death",
-        "link": "https://youtu.be/p-kD2EpGF8g"
+        "place": "Otherworld",
+        "raw_exp": "3.0kk",
+        "loot": "1.1kk",
+        "weapon_type": "Earth",
+        "link": "https://youtu.be/qztNKrkX4xQ"
+    },
+    {
+        "level": "500+",
+        "place": "Warzone 7",
+        "raw_exp": "2.4kk",
+        "loot": "1.1kk",
+        "weapon_type": "Fire",
+        "link": "https://youtu.be/u3J4bu9CYi4"
     },
     {
         "level": "550+",
@@ -1041,11 +1033,11 @@
     },
     {
         "level": "600+",
-        "place": "Issavi Sewers",
-        "raw_exp": "5.5kk",
+        "place": "Azzilon Walls",
+        "raw_exp": "6.0kk",
         "loot": "1.0kk",
-        "weapon_type": "Ice",
-        "link": "https://youtu.be/euMIhkrT0Mw"
+        "weapon_type": "Ice, Energy",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "600+",
@@ -1057,19 +1049,27 @@
     },
     {
         "level": "600+",
-        "place": "Temple of the Sun and Sea",
-        "raw_exp": "5.2kk",
-        "loot": "650k",
-        "weapon_type": "Ice",
-        "link": "https://youtu.be/bqSzm8ueGzc"
-    },
-    {
-        "level": "600+",
         "place": "Warzone 3",
         "raw_exp": "5.5kk",
         "loot": "2.0kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Issavi Sewers",
+        "raw_exp": "5.5kk",
+        "loot": "1.0kk",
+        "weapon_type": "Ice",
+        "link": "https://youtu.be/euMIhkrT0Mw"
+    },
+    {
+        "level": "600+",
+        "place": "Temple of the Sun and Sea",
+        "raw_exp": "5.2kk",
+        "loot": "650k",
+        "weapon_type": "Ice",
+        "link": "https://youtu.be/bqSzm8ueGzc"
     },
     {
         "level": "600+",
@@ -1089,18 +1089,18 @@
     },
     {
         "level": "600+",
-        "place": "Azzilon Walls",
-        "raw_exp": "6.0kk",
-        "loot": "1.0kk",
-        "weapon_type": "Ice, Energy",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
         "place": "Norcferatu Fortress",
         "raw_exp": "-",
         "loot": "-",
         "weapon_type": "Ice, Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Bulltaurs",
+        "raw_exp": "7.0kk",
+        "loot": "1.6kk",
+        "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
     {
@@ -1113,14 +1113,6 @@
     },
     {
         "level": "700+",
-        "place": "Feru Plague seal",
-        "raw_exp": "5.5kk",
-        "loot": "1.5kk",
-        "weapon_type": "Energy",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "700+",
         "place": "Wardragons",
         "raw_exp": "7.0kk",
         "loot": "1.0kk",
@@ -1128,19 +1120,11 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "800+",
-        "place": "Bulltaurs",
-        "raw_exp": "7.0kk",
-        "loot": "1.6kk",
-        "weapon_type": "Earth",
-        "link" : "https://youtu.be/"
-    },
-        {
-        "level": "800+",
-        "place": "Feru DT seal",
-        "raw_exp": "6.0kk",
+        "level": "700+",
+        "place": "Feru Plague seal",
+        "raw_exp": "5.5kk",
         "loot": "1.5kk",
-        "weapon_type": "Ice",
+        "weapon_type": "Energy",
         "link" : "https://youtu.be/"
     },
     {
@@ -1149,30 +1133,6 @@
         "raw_exp": "9.0kk",
         "loot": "1.5kk",
         "weapon_type": "Ice, Fire, Energy, Death",
-        "link": "https://youtu.be/"
-    },
-    {
-        "level": "800+",
-        "place": "Norcferatu Dungeons West",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Ice, Earth, Fire",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "800+",
-        "place": "Norcferatu Dungeons East",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Ice, Earth, Fire",
-        "link" : "https://youtu.be/"
-    },
-        {
-        "level": "800+",
-        "place": "Feru Way",
-        "raw_exp": "6.5kk",
-        "loot": "1.5kk",
-        "weapon_type": "Ice",
         "link": "https://youtu.be/"
     },
     {
@@ -1189,6 +1149,38 @@
         "raw_exp": "7.0kk",
         "loot": "1.6kk",
         "weapon_type": "Ice",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Feru Way",
+        "raw_exp": "6.5kk",
+        "loot": "1.5kk",
+        "weapon_type": "Ice",
+        "link": "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Feru DT seal",
+        "raw_exp": "6.0kk",
+        "loot": "1.5kk",
+        "weapon_type": "Ice",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Norcferatu Dungeons West",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Ice, Earth, Fire",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Norcferatu Dungeons East",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Ice, Earth, Fire",
         "link" : "https://youtu.be/"
     },
     {

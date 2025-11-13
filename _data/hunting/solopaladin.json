@@ -481,11 +481,35 @@
     },
     {
         "level": "150+",
+        "place": "Exotic Cave",
+        "raw_exp": "1.5kk",
+        "loot": "200k",
+        "runes": "GFB",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "150+",
+        "place": "Yalahar Sunken Quarter",
+        "raw_exp": "1.5kk",
+        "loot": "80k",
+        "runes": "Thunderstorm",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "150+",
         "place": "Deeplings Library",
         "raw_exp": "1.4kk",
         "loot": "0",
         "runes": "Thunderstorm",
         "link": "https://youtu.be/LvdeHKM5Zho"
+    },
+    {
+        "level": "150+",
+        "place": "Mini Rosha (AOE)",
+        "raw_exp": "1.1kk",
+        "loot": "300k",
+        "runes": "Avalanche",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "150+",
@@ -553,38 +577,6 @@
     },
     {
         "level": "150+",
-        "place": "Yalahar Sunken Quarter",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Thunderstorm",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "150+",
-        "place": "Mini Rosha (AOE)",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Avalanche",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "150+",
-        "place": "Lizard Chosens",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Avalanche",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "150+",
-        "place": "Exotic Cave",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "GFB",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "150+",
         "place": "Misguided",
         "raw_exp": "-",
         "loot": "-",
@@ -593,35 +585,11 @@
     },
     {
         "level": "200+",
-        "place": "Oramond West",
-        "raw_exp": "2.0kk",
-        "loot": "0",
-        "runes": "Thunderstorm, GFB",
-        "link": "https://youtu.be/50-_mcLKK7M"
-    },
-    {
-        "level": "200+",
-        "place": "Grimvale -4",
-        "raw_exp": "1.5kk",
-        "loot": "125k",
-        "runes": "GFB",
-        "link": "https://youtu.be/0z6er7Xf4iQ"
-    },
-    {
-        "level": "200+",
-        "place": "Werelions -2 East",
-        "raw_exp": "1.7kk",
-        "loot": "150k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/X1Cqg7GD_VQ"
-    },
-    {
-        "level": "200+",
-        "place": "Mino Cults",
-        "raw_exp": "1.05kk",
-        "loot": "450k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/jxn1hdU_5G8"
+        "place": "Barkless Elves",
+        "raw_exp": "2.2kk",
+        "loot": "-300k",
+        "runes": "Stoneshower",
+        "link": "https://youtu.be/Kfg1x-TAGUY"
     },
     {
         "level": "200+",
@@ -633,19 +601,27 @@
     },
     {
         "level": "200+",
-        "place": "Brimstone Bugs WOTE",
-        "raw_exp": "1.1kk",
-        "loot": "600k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/gqmBnR8tnwI"
+        "place": "Oramond West",
+        "raw_exp": "2.0kk",
+        "loot": "0",
+        "runes": "Thunderstorm, GFB",
+        "link": "https://youtu.be/50-_mcLKK7M"
     },
     {
         "level": "200+",
-        "place": "Otherworld Kazordoon (Dwarf Bridge)",
-        "raw_exp": "1.3kk",
-        "loot": "100k",
-        "runes": "Stoneshower",
-        "link": "https://youtu.be/RSLx2-truP0"
+        "place": "Glooth Tower",
+        "raw_exp": "1.7kk",
+        "loot": "200k",
+        "runes": "Thunderstorm",
+        "link": "https://youtu.be/06YRKlTrbXU"
+    },
+    {
+        "level": "200+",
+        "place": "Werelions -2 East",
+        "raw_exp": "1.7kk",
+        "loot": "150k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/X1Cqg7GD_VQ"
     },
     {
         "level": "200+",
@@ -665,11 +641,11 @@
     },
     {
         "level": "200+",
-        "place": "Werecreatures Edron",
-        "raw_exp": "1.35kk",
-        "loot": "50k",
+        "place": "Grimvale -4",
+        "raw_exp": "1.5kk",
+        "loot": "125k",
         "runes": "GFB",
-        "link": "https://youtu.be/eyemOlt2wCA"
+        "link": "https://youtu.be/0z6er7Xf4iQ"
     },
     {
         "level": "200+",
@@ -681,11 +657,35 @@
     },
     {
         "level": "200+",
-        "place": "Glooth Tower",
-        "raw_exp": "1.7kk",
-        "loot": "200k",
-        "runes": "Thunderstorm",
-        "link": "https://youtu.be/06YRKlTrbXU"
+        "place": "Werecreatures Edron",
+        "raw_exp": "1.35kk",
+        "loot": "50k",
+        "runes": "GFB",
+        "link": "https://youtu.be/eyemOlt2wCA"
+    },
+    {
+        "level": "200+",
+        "place": "Otherworld Kazordoon (Dwarf Bridge)",
+        "raw_exp": "1.3kk",
+        "loot": "100k",
+        "runes": "Stoneshower",
+        "link": "https://youtu.be/RSLx2-truP0"
+    },
+    {
+        "level": "200+",
+        "place": "Brimstone Bugs WOTE",
+        "raw_exp": "1.1kk",
+        "loot": "600k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/gqmBnR8tnwI"
+    },
+    {
+        "level": "200+",
+        "place": "Mino Cults",
+        "raw_exp": "1.05kk",
+        "loot": "450k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/jxn1hdU_5G8"
     },
     {
         "level": "200+",
@@ -694,30 +694,6 @@
         "loot": "-",
         "runes": "GFB",
         "link" : "https://youtu.be/"
-    },
-    {
-        "level": "200+",
-        "place": "Barkless Elves",
-        "raw_exp": "2.2kk",
-        "loot": "-300k",
-        "runes": "Stoneshower",
-        "link": "https://youtu.be/Kfg1x-TAGUY"
-    },
-    {
-        "level": "250+",
-        "place": "Deeper Banuta -6",
-        "raw_exp": "2.0kk",
-        "loot": "350k",
-        "runes": "Thunderstorm",
-        "link": "https://youtu.be/2OEJ7blT8X0"
-    },
-    {
-        "level": "250+",
-        "place": "Deeper Banuta -8",
-        "raw_exp": "2.3kk",
-        "loot": "400k",
-        "runes": "Thunderstorm",
-        "link": "https://youtu.be/eWChoPnU8Eg"
     },
     {
         "level": "250+",
@@ -729,11 +705,19 @@
     },
     {
         "level": "250+",
-        "place": "Seacrest Serpents Birthing Grounds",
-        "raw_exp": "1.65kk",
+        "place": "Medusa Tower",
+        "raw_exp": "2.4kk",
         "loot": "450k",
+        "runes": "Thunderstorm, GFB",
+        "link": "https://youtu.be/RuA-mm0weAM"
+    },
+    {
+        "level": "250+",
+        "place": "Deeper Banuta -8",
+        "raw_exp": "2.3kk",
+        "loot": "400k",
         "runes": "Thunderstorm",
-        "link": "https://youtu.be/OqV3NWN5fo8"
+        "link": "https://youtu.be/eWChoPnU8Eg"
     },
     {
         "level": "250+",
@@ -745,11 +729,19 @@
     },
     {
         "level": "250+",
-        "place": "Medusa Tower",
-        "raw_exp": "2.4kk",
-        "loot": "450k",
-        "runes": "Thunderstorm, GFB",
-        "link": "https://youtu.be/RuA-mm0weAM"
+        "place": "Hive West (Stage3)",
+        "raw_exp": "2.0kk",
+        "loot": "400k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/Qwq0wDVcmVg"
+    },
+    {
+        "level": "250+",
+        "place": "Deeper Banuta -6",
+        "raw_exp": "2.0kk",
+        "loot": "350k",
+        "runes": "Thunderstorm",
+        "link": "https://youtu.be/2OEJ7blT8X0"
     },
     {
         "level": "250+",
@@ -761,51 +753,11 @@
     },
     {
         "level": "250+",
-        "place": "Hive West (Stage3)",
-        "raw_exp": "2.0kk",
-        "loot": "400k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/Qwq0wDVcmVg"
-    },
-    {
-        "level": "300+",
-        "place": "Draken Walls",
-        "raw_exp": "2.0kk",
-        "loot": "300k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/GMIvP48ruqY"
-    },
-    {
-        "level": "300+",
-        "place": "Drefia Grim Reapers",
-        "raw_exp": "2.6kk",
-        "loot": "0k",
-        "runes": "GFB, Thunderstorm",
-        "link": "https://youtu.be/uTBkrfVRZ_c"
-    },
-    {
-        "level": "300+",
-        "place": "Werelions -1",
-        "raw_exp": "2.75kk",
-        "loot": "700k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/DWTVf9DLcAw"
-    },
-    {
-        "level": "300+",
-        "place": "Werelions -2",
-        "raw_exp": "2.55kk",
-        "loot": "650k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/TtzhdO5v33g"
-    },
-    {
-        "level": "300+",
-        "place": "Asura Palace",
-        "raw_exp": "3.1kk",
-        "loot": "350k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/M89Pq5NI9ho"
+        "place": "Seacrest Serpents Birthing Grounds",
+        "raw_exp": "1.65kk",
+        "loot": "450k",
+        "runes": "Thunderstorm",
+        "link": "https://youtu.be/OqV3NWN5fo8"
     },
     {
         "level": "300+",
@@ -817,6 +769,14 @@
     },
     {
         "level": "300+",
+        "place": "Asura Palace",
+        "raw_exp": "3.1kk",
+        "loot": "350k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/M89Pq5NI9ho"
+    },
+    {
+        "level": "300+",
         "place": "Oramond Minotaur Raid",
         "raw_exp": "2.8kk",
         "loot": "700k",
@@ -825,11 +785,27 @@
     },
     {
         "level": "300+",
-        "place": "Candia Nibblemaws",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Thunderstorm",
-        "link" : "https://youtu.be/"
+        "place": "Werelions -1",
+        "raw_exp": "2.75kk",
+        "loot": "700k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/DWTVf9DLcAw"
+    },
+    {
+        "level": "300+",
+        "place": "Drefia Grim Reapers",
+        "raw_exp": "2.6kk",
+        "loot": "0k",
+        "runes": "GFB, Thunderstorm",
+        "link": "https://youtu.be/uTBkrfVRZ_c"
+    },
+    {
+        "level": "300+",
+        "place": "Werelions -2",
+        "raw_exp": "2.55kk",
+        "loot": "650k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/TtzhdO5v33g"
     },
     {
         "level": "300+",
@@ -849,11 +825,19 @@
     },
     {
         "level": "300+",
-        "place": "Oramond Catacombs (EK + RP DUO)",
-        "raw_exp": "3.5kk",
+        "place": "Draken Walls",
+        "raw_exp": "2.0kk",
         "loot": "300k",
         "runes": "Avalanche",
-        "link": "https://youtu.be/ZYLZJW0gnMc"
+        "link": "https://youtu.be/GMIvP48ruqY"
+    },
+    {
+        "level": "300+",
+        "place": "Candia Nibblemaws",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Thunderstorm",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "300+",
@@ -881,43 +865,11 @@
     },
     {
         "level": "350+",
-        "place": "Buried Cathedral -1 (EK + RP DUO)",
-        "raw_exp": "3.2kk",
-        "loot": "400k",
+        "place": "Asura Mirror",
+        "raw_exp": "4.5kk",
+        "loot": "300k",
         "runes": "Avalanche",
-        "link": "https://youtu.be/UNnw06Z2lIA"
-    },
-    {
-        "level": "350+",
-        "place": "Prison -1 (EK + RP DUO)",
-        "raw_exp": "3.2kk",
-        "loot": "400k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/3NFxjm9lMmU"
-    },
-    {
-        "level": "350+",
-        "place": "Ripper Spectres (EK + RP DUO)",
-        "raw_exp": "3.0kk",
-        "loot": "400k",
-        "runes": "GFB",
-        "link": "https://youtu.be/P8IRr8WbYIk"
-    },
-    {
-        "level": "350+",
-        "place": "Lower Roshamuul",
-        "raw_exp": "2.7kk",
-        "loot": "450k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/AV7LlzEg4tQ"
-    },
-    {
-        "level": "350+",
-        "place": "Warzone 4",
-        "raw_exp": "3.0kk",
-        "loot": "400k",
-        "runes": "GFB",
-        "link": "https://youtu.be/ZNXXgG_oDkU"
+        "link": "https://youtu.be/S5RJ4oootAU"
     },
     {
         "level": "350+",
@@ -929,14 +881,6 @@
     },
     {
         "level": "350+",
-        "place": "Asura Mirror",
-        "raw_exp": "4.5kk",
-        "loot": "300k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/S5RJ4oootAU"
-    },
-    {
-        "level": "350+",
         "place": "Oramond Fury Dungeon",
         "raw_exp": "3.0kk",
         "loot": "500k",
@@ -944,60 +888,20 @@
         "link": "https://youtu.be/PRy0uMcBUNQ"
     },
     {
-        "level": "400+",
-        "place": "Oramond Abandoned Sewers",
-        "raw_exp": "2.9kk",
-        "loot": "450k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/ZdfZEC39DgY"
-    },
-    {
-        "level": "400+",
-        "place": "Wote 8 Drakens",
+        "level": "350+",
+        "place": "Warzone 4",
         "raw_exp": "3.0kk",
-        "loot": "450k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/kg-qhJ1EkKk"
-    },
-    {
-        "level": "400+",
-        "place": "Marapur Turtles and Foam Stalkers",
-        "raw_exp": "2.2kk",
-        "loot": "800k",
-        "runes": "Stoneshower",
-        "link": "https://youtu.be/C4IrR9dSdeQ"
-    },
-    {
-        "level": "400+",
-        "place": "Winter Court for beginners",
-        "raw_exp": "3.7kk",
-        "loot": "650k",
+        "loot": "400k",
         "runes": "GFB",
-        "link": "https://youtu.be/yLHrCeITFZA"
+        "link": "https://youtu.be/ZNXXgG_oDkU"
     },
     {
-        "level": "400+",
-        "place": "Weretigers -1",
-        "raw_exp": "3.0kk",
+        "level": "350+",
+        "place": "Lower Roshamuul",
+        "raw_exp": "2.7kk",
         "loot": "450k",
-        "runes": "Stoneshower",
-        "link": "https://youtu.be/t1UqxaBqeAE"
-    },
-    {
-        "level": "400+",
-        "place": "Weretigers -2",
-        "raw_exp": "3.3kk",
-        "loot": "600k",
-        "runes": "Stoneshower",
-        "link": "https://youtu.be/rXnyo2hcFxI"
-    },
-    {
-        "level": "400+",
-        "place": "Werecrocodiles -1",
-        "raw_exp": "3.3kk",
-        "loot": "550k",
         "runes": "Avalanche",
-        "link": "https://youtu.be/HucVgt-7y54"
+        "link": "https://youtu.be/AV7LlzEg4tQ"
     },
     {
         "level": "400+",
@@ -1006,22 +910,6 @@
         "loot": "850k",
         "runes": "Avalanche",
         "link": "https://youtu.be/GZghOWmypUI"
-    },
-    {
-        "level": "400+",
-        "place": "Burster Spectres Solo (Bestiary)",
-        "raw_exp": "3.0kk",
-        "loot": "400k",
-        "runes": "GFB",
-        "link": "https://youtu.be/gm18bfC8slI"
-    },
-    {
-        "level": "400+",
-        "place": "Gazer Spectres Solo (Bestiary)",
-        "raw_exp": "3.0kk",
-        "loot": "400k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/5-HfnAMHYA0"
     },
     {
         "level": "400+",
@@ -1041,6 +929,70 @@
     },
     {
         "level": "400+",
+        "place": "Winter Court for beginners",
+        "raw_exp": "3.7kk",
+        "loot": "650k",
+        "runes": "GFB",
+        "link": "https://youtu.be/yLHrCeITFZA"
+    },
+    {
+        "level": "400+",
+        "place": "Weretigers -2",
+        "raw_exp": "3.3kk",
+        "loot": "600k",
+        "runes": "Stoneshower",
+        "link": "https://youtu.be/rXnyo2hcFxI"
+    },
+    {
+        "level": "400+",
+        "place": "Werecrocodiles -1",
+        "raw_exp": "3.3kk",
+        "loot": "550k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/HucVgt-7y54"
+    },
+    {
+        "level": "400+",
+        "place": "Wote 8 Drakens",
+        "raw_exp": "3.0kk",
+        "loot": "450k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/kg-qhJ1EkKk"
+    },
+    {
+        "level": "400+",
+        "place": "Weretigers -1",
+        "raw_exp": "3.0kk",
+        "loot": "450k",
+        "runes": "Stoneshower",
+        "link": "https://youtu.be/t1UqxaBqeAE"
+    },
+    {
+        "level": "400+",
+        "place": "Burster Spectres Solo (Bestiary)",
+        "raw_exp": "3.0kk",
+        "loot": "400k",
+        "runes": "GFB",
+        "link": "https://youtu.be/gm18bfC8slI"
+    },
+    {
+        "level": "400+",
+        "place": "Gazer Spectres Solo (Bestiary)",
+        "raw_exp": "3.0kk",
+        "loot": "400k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/5-HfnAMHYA0"
+    },
+    {
+        "level": "400+",
+        "place": "Oramond Abandoned Sewers",
+        "raw_exp": "2.9kk",
+        "loot": "450k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/ZdfZEC39DgY"
+    },
+    {
+        "level": "400+",
         "place": "Verminor Seal",
         "raw_exp": "2.6kk",
         "loot": "400k",
@@ -1048,12 +1000,12 @@
         "link": "https://www.youtube.com/watch?v=aHc3iL329-U"
     },
     {
-        "level": "450+",
-        "place": "Nightmare Isles",
-        "raw_exp": "2.9kk",
-        "loot": "550k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/s8CVPJ_Ixow"
+        "level": "400+",
+        "place": "Marapur Turtles and Foam Stalkers",
+        "raw_exp": "2.2kk",
+        "loot": "800k",
+        "runes": "Stoneshower",
+        "link": "https://youtu.be/C4IrR9dSdeQ"
     },
     {
         "level": "450+",
@@ -1062,14 +1014,6 @@
         "loot": "700k",
         "runes": "Avalanche",
         "link": "https://youtu.be/hp33ndIft8A"
-    },
-    {
-        "level": "450+",
-        "place": "Rosha Bones",
-        "raw_exp": "4.5kk",
-        "loot": "850k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/55eG2wJBtGE"
     },
     {
         "level": "450+",
@@ -1089,6 +1033,14 @@
     },
     {
         "level": "450+",
+        "place": "Rosha Bones",
+        "raw_exp": "4.5kk",
+        "loot": "850k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/55eG2wJBtGE"
+    },
+    {
+        "level": "450+",
         "place": "Otherworld",
         "raw_exp": "2.9kk",
         "loot": "850k",
@@ -1096,20 +1048,20 @@
         "link": "https://youtu.be/4ECe-O6pP34"
     },
     {
-        "level": "500+",
-        "place": "Upper Roshamuul (North)",
-        "raw_exp": "4.2kk",
-        "loot": "500k",
+        "level": "450+",
+        "place": "Nightmare Isles",
+        "raw_exp": "2.9kk",
+        "loot": "550k",
         "runes": "Avalanche",
-        "link": "https://youtu.be/nt3aFsOTC7U"
+        "link": "https://youtu.be/s8CVPJ_Ixow"
     },
     {
         "level": "500+",
-        "place": "Winter Court (Advanced)",
-        "raw_exp": "5.2kk",
-        "loot": "850k",
+        "place": "Bounac Crypt Warriors",
+        "raw_exp": "5.7kk",
+        "loot": "500k",
         "runes": "GFB",
-        "link": "https://www.youtube.com/watch?v=USrHT1lDNsQ"
+        "link" : "https://youtu.be/SrQtQZjq66w"
     },
     {
         "level": "500+",
@@ -1121,11 +1073,11 @@
     },
     {
         "level": "500+",
-        "place": "Bashmu",
-        "raw_exp": "3.4kk",
-        "loot": "900k",
-        "runes": "Avalanche",
-        "link": "https://youtu.be/LpAlf5v4rjc"
+        "place": "Winter Court (Advanced)",
+        "raw_exp": "5.2kk",
+        "loot": "850k",
+        "runes": "GFB",
+        "link": "https://www.youtube.com/watch?v=USrHT1lDNsQ"
     },
     {
         "level": "500+",
@@ -1145,19 +1097,19 @@
     },
     {
         "level": "500+",
-        "place": "Bounac Crypt Warriors",
-        "raw_exp": "5.7kk",
+        "place": "Upper Roshamuul (North)",
+        "raw_exp": "4.2kk",
         "loot": "500k",
-        "runes": "GFB",
-        "link" : "https://youtu.be/SrQtQZjq66w"
+        "runes": "Avalanche",
+        "link": "https://youtu.be/nt3aFsOTC7U"
     },
     {
-        "level": "550+",
-        "place": "Falcon's Eagle",
-        "raw_exp": "5.6kk",
-        "loot": "1.1kk",
-        "runes": "Avalanche, GFB",
-        "link" : "https://youtu.be/w9Vp1ayH_Vo"
+        "level": "500+",
+        "place": "Bashmu",
+        "raw_exp": "3.4kk",
+        "loot": "900k",
+        "runes": "Avalanche",
+        "link": "https://youtu.be/LpAlf5v4rjc"
     },
     {
         "level": "550+",
@@ -1166,6 +1118,14 @@
         "loot": "1.0kk",
         "runes": "Avalanche",
         "link": "https://youtu.be/kvDpADO5pII"
+    },
+    {
+        "level": "550+",
+        "place": "Falcon's Eagle",
+        "raw_exp": "5.6kk",
+        "loot": "1.1kk",
+        "runes": "Avalanche, GFB",
+        "link" : "https://youtu.be/w9Vp1ayH_Vo"
     },
     {
         "level": "600+",
