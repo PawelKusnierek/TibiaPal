@@ -585,6 +585,14 @@
     },
     {
         "level": "200+",
+        "place": "Yalahar Grim Reapers",
+        "raw_exp": "2.7kk",
+        "loot": "-300k",
+        "runes": "GFB",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "200+",
         "place": "Barkless Elves",
         "raw_exp": "2.2kk",
         "loot": "-300k",
@@ -686,14 +694,6 @@
         "loot": "450k",
         "runes": "Avalanche",
         "link": "https://youtu.be/jxn1hdU_5G8"
-    },
-    {
-        "level": "200+",
-        "place": "Yalahar Grim Reapers",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "GFB",
-        "link" : "https://youtu.be/"
     },
     {
         "level": "250+",
