@@ -1,7 +1,7 @@
 <nav id="left-sidebar">
     <div class="nav-section">GENERAL</div>
         <div class="{% if page.url == "/" %}active {% endif %}nav-item"> <a href="/">
-                <div class="nav-image-container"><img class="nav-image" src={{"images/icon-news.gif" | relative_url}}>Latest News</div>
+                <div class="nav-image-container"><img class="nav-image" src={{"images/icon-news.gif" | relative_url}}><span id="new-homepage">NEW!</span>WLatest News</div>
                 </a>
         </div>
         <div class="{% if page.url == "/about.html" %}active {% endif %}nav-item"><a href="/about">
@@ -92,6 +92,11 @@
     <div class="{% if page.url == "/imbue.html" %}active {% endif %}nav-item"><a href="/imbue">
             <div class="nav-image-container"><img class="nav-image" src={{"images/Imbuing_Shrine.gif" |
             relative_url}}>Imbue
+                Calculator</div>
+        </a></div>
+    <div class="{% if page.url == "/weekly_task_calculator.html" %}active {% endif %}nav-item"><a href="/weekly_tasks">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/Weekly.png" |
+            relative_url}}><span id="new-homepage">NEW!</span>Weekly Task
                 Calculator</div>
         </a></div>
     <div class="{% if page.url == "/charm_calculator.html" %}active {% endif %}nav-item"><a href="/charm_calculator">

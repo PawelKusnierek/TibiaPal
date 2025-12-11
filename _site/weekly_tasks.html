@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TibiaPal.com - Solo Paladin AOE</title>
+    <title>TibiaPal.com - Weekly Task Calculator</title>
     <meta name="author" content="Pawel Kusnierek">
     <meta name="description"
     content="Tools for MMORPG 'Tibia' - TibiaLootSplit, Charm Planner, Exercise Weapons Calculator, Offline Training Calculator and many, many more.">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href=/css/main.css>
 
     <!-- javascript files -->
-    <script src="../scripts/hunting.js"></script>
+    <script src="scripts/experience.js"></script><script src="scripts/weekly_task_calculator.js"></script>
     <script src=/scripts/onload.js></script>
 
     <!-- extra googleapi fonts -->
@@ -183,7 +183,16 @@
     <button class="nav-toggle" onclick="toggleNavigation()" style="display: none;">☰ Menu</button>
     
     <section id="main-content">
-    <br><br>This page has moved to: <a href="https://www.tibiapal.com/hunting">tibiapal.com/hunting<br><br><br></a>
+    <p id="weekly_task_paragraph"> Calculate your weekly task rewards based on your level & task difficulty. Supports levels up to 3499. <br></p>
+<form id="weekly_task_form">
+    <input type="text" id="level" name="level" placeholder="Enter your level" autocomplete="off" required>
+    <input type="submit" id="submit_button" value="Submit"
+        onclick="event.preventDefault(); submit_weekly_task()" />
+</form>
+<div id="weekly_task_results">
+</div>
+
+
     </section>
     
     <!--><div class="cookieconsent"
