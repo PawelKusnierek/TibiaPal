@@ -465,6 +465,14 @@
     },
     {
         "level": "100+",
+        "place": "Edron Orc Cults",
+        "raw_exp": "1.25kk",
+        "loot": "400k",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "100+",
         "place": "Lizard Chosens",
         "raw_exp": "1.25kk",
         "loot": "80k",
@@ -485,14 +493,6 @@
         "raw_exp": "1.1kk",
         "loot": "-50k",
         "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "100+",
-        "place": "Edron Orc Cults",
-        "raw_exp": "1.0kk",
-        "loot": "250k",
-        "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
     {
