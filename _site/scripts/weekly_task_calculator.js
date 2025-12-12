@@ -63,7 +63,7 @@ function submit_weekly_task() {
     // Master is never capped, so no need to check
 
     // Generate message and table with weekly task information
-    var messageHTML = "<p>Level " + levelNum + " receives <b>" + expValue.toLocaleString() + "</b> (" + percentageValue.toFixed(2) + "% of level) experience per delivery task. <br><br>Kill task rewards depend on difficulty:</p>";
+    var messageHTML = "<p>Level " + levelNum + " receives <b>" + expValue.toLocaleString() + "</b> (" + percentageValue.toFixed(2) + "% of level) experience per delivery task. <br><br>Kill task reward depends on difficulty:</p>";
     var tableHTML = "<table class='weekly_task_table'>";
     tableHTML += "<tr><th>Difficulty</th><th>Kill Tasks</th></tr>";
     tableHTML += "<tr><td>Beginner</td><td>" + beginnerKillsFormatted + "</td></tr>";
