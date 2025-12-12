@@ -29,6 +29,7 @@ function submit_weekly_task() {
 
     // Get experience value for this level (level 1 = index 0, level 2 = index 1, etc.)
     var expValue = experience[levelNum - 1];
+    var percentageValue = percentages[levelNum - 1];
     
     if (typeof expValue === 'undefined') {
         content.innerHTML = "<p class='orange'><b>Error!</b> Experience data not found for level " + levelNum + ".</p>";
@@ -36,7 +37,7 @@ function submit_weekly_task() {
     }
 
     // Apply caps for Kills values based on difficulty
-    var beginnerKills = Math.min(expValue, 400000);
+    var beginnerKills = Math.min(expValue, 200000);
     var adeptKills = Math.min(expValue, 800000);
     var expertKills = Math.min(expValue, 3000000);
     var masterKills = expValue; // No cap for Master
@@ -50,7 +51,7 @@ function submit_weekly_task() {
     var maxExpFormatted = formatNumber(expValue);
 
     // Add "(cap)" suffix if values are capped
-    if (expValue > 400000) {
+    if (expValue > 200000) {
         beginnerKillsFormatted += " (cap)";
     }
     if (expValue > 800000) {
@@ -62,13 +63,13 @@ function submit_weekly_task() {
     // Master is never capped, so no need to check
 
     // Generate message and table with weekly task information
-    var messageHTML = "<p>Level " + levelNum + " can get up to <b>" + maxExpFormatted + "</b> (" + expValue + ") experience per task.</p>";
+    var messageHTML = "<p>Level " + levelNum + " receives <b>" + expValue.toLocaleString() + "</b> (" + percentageValue.toFixed(2) + "% of level) experience per delivery task. <br><br>Kill task rewards depend on difficulty:</p>";
     var tableHTML = "<table class='weekly_task_table'>";
-    tableHTML += "<tr><th>Difficulty</th><th>Kill Tasks</th><th>Delivery Tasks</th></tr>";
-    tableHTML += "<tr><td>Beginner</td><td>" + beginnerKillsFormatted + "</td><td>" + deliveriesFormatted + "</td></tr>";
-    tableHTML += "<tr><td>Adept</td><td>" + adeptKillsFormatted + "</td><td>" + deliveriesFormatted + "</td></tr>";
-    tableHTML += "<tr><td>Expert</td><td>" + expertKillsFormatted + "</td><td>" + deliveriesFormatted + "</td></tr>";
-    tableHTML += "<tr><td>Master</td><td>" + masterKillsFormatted + "</td><td>" + deliveriesFormatted + "</td></tr>";
+    tableHTML += "<tr><th>Difficulty</th><th>Kill Tasks</th></tr>";
+    tableHTML += "<tr><td>Beginner</td><td>" + beginnerKillsFormatted + "</td></tr>";
+    tableHTML += "<tr><td>Adept</td><td>" + adeptKillsFormatted + "</td></tr>";
+    tableHTML += "<tr><td>Expert</td><td>" + expertKillsFormatted + "</td></tr>";
+    tableHTML += "<tr><td>Master</td><td>" + masterKillsFormatted + "</td></tr>";
     tableHTML += "</table>";
 
     content.innerHTML = messageHTML + tableHTML;
