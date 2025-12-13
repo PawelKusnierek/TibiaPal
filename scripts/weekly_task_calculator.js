@@ -63,13 +63,13 @@ function submit_weekly_task() {
     // Master is never capped, so no need to check
 
     // Generate message and table with weekly task information
-    var messageHTML = "<p>Level " + levelNum + " receives <b>" + expValue.toLocaleString() + "</b> (" + percentageValue.toFixed(2) + "% of level) experience per delivery task. <br><br>Kill task reward depends on difficulty:</p>";
+    var messageHTML = "<p>Level " + levelNum + " receives <b>" + expValue.toLocaleString() + "</b> (" + percentageValue.toFixed(2) + "% of level) experience per delivery task. <br>Each delivery task will also give 75 Hunting Task Points (HTPs).<br><br>Kill task rewards depend on difficulty:</p>";
     var tableHTML = "<table class='weekly_task_table'>";
-    tableHTML += "<tr><th>Difficulty</th><th>Kill Tasks</th></tr>";
-    tableHTML += "<tr><td>Beginner</td><td>" + beginnerKillsFormatted + "</td></tr>";
-    tableHTML += "<tr><td>Adept</td><td>" + adeptKillsFormatted + "</td></tr>";
-    tableHTML += "<tr><td>Expert</td><td>" + expertKillsFormatted + "</td></tr>";
-    tableHTML += "<tr><td>Master</td><td>" + masterKillsFormatted + "</td></tr>";
+    tableHTML += "<tr><th>Difficulty</th><th>Experience</th><th>HTPs</th></tr>";
+    tableHTML += "<tr><td>Beginner</td><td>" + beginnerKillsFormatted + "</td><td>25</td></tr>";
+    tableHTML += "<tr><td>Adept</td><td>" + adeptKillsFormatted + "</td><td>50</td></tr>";
+    tableHTML += "<tr><td>Expert</td><td>" + expertKillsFormatted + "</td><td>100</td></tr>";
+    tableHTML += "<tr><td>Master</td><td>" + masterKillsFormatted + "</td><td>110</td></tr>";
     tableHTML += "</table>";
 
     content.innerHTML = messageHTML + tableHTML;
