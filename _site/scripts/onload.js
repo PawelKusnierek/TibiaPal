@@ -3,7 +3,7 @@ function initialize() {
   //find_rashid_city();
   enable_expandable_div_buttons();
   enable_default_tabs();
-  check_livestream();
+  //check_livestream();
 }
 
 function find_rashid_city() {
