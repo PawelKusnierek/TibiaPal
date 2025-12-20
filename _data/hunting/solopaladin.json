@@ -1192,30 +1192,6 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "800+",
-        "place": "Norcferatu Dungeons West",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "GFB",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "800+",
-        "place": "Norcferatu Dungeons East",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "GFB",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "800+",
-        "place": "Ferumbras Way",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Avalanche",
-        "link" : "https://youtu.be/"
-    },
-    {
         "level": "700+",
         "place": "Thais Floating Savants",
         "raw_exp": "-",
@@ -1240,7 +1216,31 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "850+",
+        "level": "800+",
+        "place": "Norcferatu Dungeons West",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "GFB",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Norcferatu Dungeons East",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "GFB",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Ferumbras Way",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Avalanche",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
         "place": "Issavi Crypts (Wardens/Sphinx)",
         "raw_exp": "-",
         "loot": "-",
