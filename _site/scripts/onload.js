@@ -3,6 +3,7 @@ function initialize() {
   //find_rashid_city();
   enable_expandable_div_buttons();
   enable_default_tabs();
+  enable_tablinks();
   //check_livestream();
 }
 
@@ -129,6 +130,9 @@ function enable_default_tabs() {
   else if (location.href.includes('/offlinetraining')) {
     initial_show_tab("TargetSkill")
   }
+  else if (location.href.includes('/deliveries')) {
+    initial_show_tab("RashidTab")
+  }
 
 
 }
@@ -165,6 +169,14 @@ function initial_show_tab(tab_name) {
 
   // Show the current tab
   document.getElementById(tab_name).style.display = "block";
+}
+
+function enable_tablinks() {
+  // Enable all tablinks after page is fully loaded
+  var tablinks = document.getElementsByClassName("tablinks");
+  for (var i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.add("enabled");
+  }
 }
 
 function toggleNavigation() {

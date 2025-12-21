@@ -478,6 +478,18 @@ ol, ul {
   float: right;
 }
 
+.tablinks {
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tablinks.enabled {
+  pointer-events: auto;
+  opacity: 1;
+  cursor: pointer;
+}
+
 #rashid-city {
   font-size: 16px;
   text-shadow: black 1px 1px 3px;
@@ -1996,6 +2008,61 @@ ol, ul {
   border: 1px solid grey;
   padding: 5px;
   margin: 0px;
+}
+
+.deliveries_tab {
+  overflow: hidden;
+}
+
+.deliveries_tab button {
+  border: 1px solid #cbd4ff;
+  background-color: inherit;
+  float: left;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  width: 33.33%;
+  color: #ccc;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Verdana, Arial, Times New Roman, sans-serif;
+  box-sizing: border-box;
+}
+
+.deliveries_tab button:hover {
+  background-color: #14356d;
+}
+
+.deliveries_tab button.active {
+  background-color: #1c4b9b;
+}
+
+.deliveries_table {
+  display: initial;
+  width: auto;
+  text-align: left;
+}
+
+.deliveries_table th {
+  width: auto;
+  padding: 8px;
+}
+
+.deliveries_table td {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding: 8px;
+}
+
+.deliveries_table tbody tr:nth-child(even) {
+  background-color: #0d1e38;
+}
+
+.tabcontent {
+  padding-top: 10px;
+  display: none;
+  border-top: none;
 }
 
 /*# sourceMappingURL=main.css.map */

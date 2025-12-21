@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TibiaPal.com - Deliveries</title>
+    <meta name="author" content="Pawel Kusnierek">
+    <meta name="description"
+    content="Tools for MMORPG 'Tibia' - TibiaLootSplit, Charm Planner, Exercise Weapons Calculator, Offline Training Calculator and many, many more.">
+    <meta name="keywords"
+        content="Tibia calculators, Tibia tools, TibiaLootSplit, Tibia Loot Analyser,
+          Tibia fansite, Exercise Weapons Calculator, Stamina Calculator, Imbue Calculator, Exp Share Calculator, Charm Planner, Tibia Charm Guide ">
+    <link rel="shortcut icon" href=/images/crystalcoin.ico type="image/x-icon">
+
+    <!-- css files -->
+    <link rel="stylesheet" href=/css/main.css>
+
+    <!-- javascript files -->
+    <script src="../scripts/deliveries.js"></script>
+    <script src=/scripts/onload.js></script>
+
+    <!-- extra googleapi fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+    <!-- Analytics and ad related section-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164338286-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-164338286-3');
+    </script>
+    <script data-ad-client="ca-pub-2936542406889680" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body onload="initialize()">
+    <main id="page-container">
+        <div id="tibiatrade_low_res">
+            <div class="tibiatrade_span">
+                Featured on <a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank"><b>TibiaTrade</b>:</a>
+            </div>
+            <iframe id="tibiatrade" src="https://tibiatrade.gg/iframe/highlighted/" title="TibiaTrade" loading="lazy" scrolling="no"></iframe>
+        </div>
+    
+        <div id="header">
+            <a href="https://tibiapal.com"> 
+                <img src=/images/mainlogo.png style="width:100px" alt="TibiaPal beaver logo">
+            </a>
+        </div>
+
+        <div id="banner">
+            <span class="tibiatrade_span">Featured on <a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank"><b>TibiaTrade</b>:</a></span>
+            <iframe id="tibiatrade" src="https://tibiatrade.gg/iframe/highlighted/" title="TibiaTrade" loading="lazy" scrolling="no"></iframe>
+                <!--<a href="https://store.steampowered.com/app/2948410/Talus/" target="_blank"> 
+                    <img src=/images/talus/small_capsule.png style="width:300px"  alt="Logo of upcoming ARPG 'Talus'">
+                </a>-->
+        </div>
+        <div id="right-header">
+
+        </div>
+    <nav id="left-sidebar">
+    <div class="nav-section">GENERAL</div>
+        <div class="nav-item"> <a href="/">
+                <div class="nav-image-container"><img class="nav-image" src=/images/icon-news.gif>Latest News</div>
+                </a>
+        </div>
+        <div class="nav-item"><a href="/about">
+                <div class="nav-image-container"><img class="nav-image" src=/images/icon-abouttibia.gif>About & Contact
+                </div>
+                </a>
+        </div>
+        <div class="nav-item"><a href="/donators">
+                <div class="nav-image-container"><img class="nav-image" src=/images/Heart_Pillow.gif>Donators</div></a>
+        </div>
+        <div class="nav-item"><a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank">
+                <div class="nav-image-container"><img class="nav-image" src=/images/tibiatrade_favicon.png>TibiaTrade.gg - Partner Fansite</div>
+                </a>
+        </div>
+        <div class="nav-item"><a href="/monkcontest">
+                <div class="nav-image-container"><img class="nav-image" src=/images/Monk.gif>Monk Bounty Contest</div></a>
+        </div>
+        <div class="nav-item"><a href="/kusniersvaduo">
+                <div class="nav-image-container"><img class="nav-image" src=/images/sva.png>Kusnier & Sva duo</div></a>
+        </div>
+    </div>
+
+    <div class="nav-section">TOOLS</div>
+    <div class="nav-item"><a href="/tibialootsplit">
+            <div class="nav-image-container"><img class="nav-image" src=/images/crystalcoin.ico>TibiaLootSplit</div>
+        </a></div>
+    <div class="nav-item"><a href="/charm_planner">
+            <div class="nav-image-container"><img class="nav-image" src=/images/charms/vampiric_embrace.png>Charm Planner</div>
+        </a></div>
+    <div class="nav-item"><a href="https://tibiatrade.gg/wheel-of-destiny/?ref=tibiapal" target="_blank">
+        <div class="nav-image-container"><img class="nav-image" src=/images/tibiatrade_favicon.png>Wheel of Destiny Examples</div>
+        </a></div>
+    </div>
+    <!--<div class="nav-item"><a href="../wheelpresets">
+                    <div class="nav-image-container"><img class="nav-image" src=/images/Wheel.gif><span id="new-homepage">NEW!</span>Wheel Presets</div>
+                </a></div>-->
+
+    <div class="nav-section">GUIDES / REFERENCES</div>
+    <div class="nav-item"><a href="/hunting">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Sword.gif>Hunting
+                Places</div>
+        </a></div>
+<div class="nav-item"><a href="/equipment">
+        <div class="nav-image-container"><img class="nav-image" src=/images/equipment.gif>Vocation Equipment Reference
+        </div></a> </div>
+    <div class="nav-item"><a href="/bestiary">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bestiary_Betterment.gif>Bestiary
+                Reference</div>
+        </a> </div>
+    <!--<div class="nav-item"><a href="/bestiary_guide">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bestiary_Betterment.gif>Bestiary Guide</div>
+        </a> </div>-->
+
+    <div class="nav-item"><a href="/bosstiary">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Falcon_Greaves.gif>Bosstiary Reference
+            </div>
+        </a> </div>
+    <div class="nav-item"><a href="https://www.youtube.com/kusnierr" target="_blank">
+            <div class="nav-image-container"><img class="nav-image" src=/images/youtube-icon.png>YouTube Videos &
+                Guides</div>
+        </a></div>
+    </div>
+
+    <div class="nav-section">CALCULATORS</div>
+    <div class="nav-item"><a href="/exercise">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Exercise_Wand.gif>Exercise
+                Weapons Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/offlinetraining">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Skill_Trainer.gif>Training
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/imbue">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Imbuing_Shrine.gif>Imbue
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/weekly_tasks">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Weekly.png>Weekly Task Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/charm_calculator">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Overpower.png>Charms Damage
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/expshare">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bricklayers.gif>Exp Share
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/stamina">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Staminafull.png>Stamina
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/bless">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Solitude_Charm.gif>Bless
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/expcalculator">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Demon.gif>Levelling
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/leech">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Leech.gif>Leech Calculator
+            </div>
+        </a></div>
+
+    <div class="right-sidebar-item" id="Rashid">
+        <!--<img src=/images/Rashid.gif style="width:45%" alt="Rashid NPC">
+        <br>
+        <div id="rashid-city">Unavailable...</div>!-->
+    </div>
+</nav>
+    
+    <!-- Navigation toggle button for mobile -->
+    <button class="nav-toggle" onclick="toggleNavigation()" style="display: none;">☰ Menu</button>
+    
+    <section id="main-content">
+    <p id="equipment_info">
+    <span style="color: gold"><b>PURPOSE:</b></span> Simple reference to help decide which items are best sold on the market vs. directly to NPCs.<br><br>
+    <span style="color: red"><b>High</b></span> value items should <b>always</b> be sold on the market.<br>
+    <span style="color: orange"><b>Medium</b></span> value items should generally be sold on the market, unless you need money immediately.<br>
+    <span style="color: green"><b>Low</b></span> value items can be safely sold to NPCs, unless the supply is really low on your server.<br><br>
+</p>
+<div class="deliveries_tab">
+    <button id="rashid" class="tablinks active" onclick="show_tab(event, 'RashidTab')">Rashid</button>
+    <button id="djinn" class="tablinks" onclick="show_tab(event, 'Djinn')">Djinns</button>
+    <button id="yasir" class="tablinks" onclick="show_tab(event, 'Yasir')">Yasir</button>
+    <button id="telas" class="tablinks" onclick="show_tab(event, 'Telas')">Telas</button>
+    <button id="gladys" class="tablinks" onclick="show_tab(event, 'Gladys')">Gladys</button>
+    <button id="edron_academy" class="tablinks" onclick="show_tab(event, 'Edron Academy')">Edron Academy</button>
+    <button id="esrik" class="tablinks" onclick="show_tab(event, 'Esrik')">Esrik</button>
+    <button id="flint" class="tablinks" onclick="show_tab(event, 'Flint')">Flint</button>
+    <button id="others" class="tablinks" onclick="show_tab(event, 'Others')">Others</button>
+</div>
+
+<div id="RashidTab" class="tabcontent">
+    <table id="deliveries_table_rashid" class="deliveries_table">
+        <tr>
+            <th>Icon</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Value</th>
+        </tr>
+        
+            <tr>
+                <td><img src="/images/Marapur_Nagas.gif" height="32" width="32"></td>
+                
+                <td><a href="https://youtu.be/JErJMHqu9dc" target="_blank">Marapur Nagas</a></td>
+                
+                <td>12.1k</td>
+                
+                <td style="color: red"><b>High</b></td>
+                
+            </tr>
+        
+    </table>
+</div>
+
+<div id="Djinn" class="tabcontent">
+    <table id="deliveries_table_djinn" class="deliveries_table">
+        <tr>
+            <th>Icon</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Value</th>
+        </tr>
+        
+    </table>
+</div>
+
+<div id="Yasir" class="tabcontent">
+    <table id="deliveries_table_yasir" class="deliveries_table">
+        <tr>
+            <th>Icon</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Value</th>
+        </tr>
+        
+    </table>
+</div>
+
+<div id="Telas" class="tabcontent">
+    <table id="deliveries_table_telas" class="deliveries_table">
+        <tr>
+            <th>Icon</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Value</th>
+        </tr>
+        
+    </table>
+</div>
+
+<div id="Gladys" class="tabcontent">
+    <table id="deliveries_table_gladys" class="deliveries_table">
+        <tr>
+            <th>Icon</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Value</th>
+        </tr>
+        
+    </table>
+</div>
+
+<div id="Edron Academy" class="tabcontent">
+    <table id="deliveries_table_edron_academy" class="deliveries_table">
+        <tr>
+            <th>Icon</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Value</th>
+        </tr>
+        
+    </table>
+</div>
+
+<div id="Esrik" class="tabcontent">
+    <table id="deliveries_table_esrik" class="deliveries_table">
+        <tr>
+            <th>Icon</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Value</th>
+        </tr>
+        
+    </table>
+</div>
+
+<div id="Flint" class="tabcontent">
+    <table id="deliveries_table_flint" class="deliveries_table">
+        <tr>
+            <th>Icon</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Value</th>
+        </tr>
+        
+    </table>
+</div>
+
+<div id="Others" class="tabcontent">
+    <table id="deliveries_table_others" class="deliveries_table">
+        <tr>
+            <th>Icon</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Value</th>
+        </tr>
+        
+    </table>
+</div>
+
+
+    </section>
+    
+    <!--><div class="cookieconsent"
+        style="display:none;position:fixed;padding:20px;left:0;bottom:0;background-color:#000;color:#FFF;text-align:center;width:100%;z-index:99999;">
+        TibiaPal.com uses cookies to ensure you get the best experience possible. By continuing to use this website, you
+        agree to their use. You can find more information about our cookies on our <a href="https://tibiapal.com/about"
+            target="_blank">Privacy Policy</a> page.
+        <a href="" style="color:#CCCCCC;" onclick="event.preventDefault(); cookieConsentClicked()">I Understand</a>
+    </div><!-->
+
+    <!--><div class="adblockpopup"
+        style="display:none;position:fixed;padding:0px;padding-bottom:5px;left:30%;right:40%;top:0;background-color:red;color:#FFF;text-align:center;width:30%;z-index:99999;">
+        Please consider disabling AdBlock or donating a few TCs to 'Kusnierr' to support the site/server costs <3 <br> Thank you! <br>This pop-up will appear once every 30 days.
+        <a href="" style="color:white;" onclick="event.preventDefault(); adBlockPopupClicked()"><br><br>CLOSE</a>
+    </div> <!-->
+
+    <aside id="right-sidebar">
+            <section id="banner-paragraph">
+                <p class="donationparagraph">Join our <b>Discord</b> channel to stay up-to-date!<br>
+                    <a href="https://discord.gg/kbjqY2VRa9" target="_blank">discord.gg/kbjqY2VRa9</a>
+                </p>
+                <br>
+
+                <div id="kick-offline">
+                    <p class="donationparagraph">Follow me on <b>Kick</b>:<br>
+                        <a href="https://www.kick.com/Kusnier" target="_blank">kick.com/Kusnier</a>
+                    </p>
+
+                    <h4><br>Latest <a href="https://www.youtube.com/kusnierr" target="_blank">YouTube</a> Video:</h4>
+                    <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLC0KAO2SnwlREgB3ScVsAK9OeAqwLXq8-" allowfullscreen></iframe>
+                </div>
+
+                
+                <br>
+                <h4><h4>Browser-based idle Tibia: <a href="https://bestiaryarena.com/?t=tibiapal" target="_blank">Bestiary Arena</a></h4>
+                <iframe src="https://bestiaryarena.com/iframe-obs-4?tag=tibiapal" width="277" height="313" scrolling="no" loading="lazy" frameborder="0" title="Bestiary Arena"></iframe>
+
+                <!--<iframe src="https://www.youtube.com/embed?listType=playlist&list=PLC0KAO2SnwlREgB3ScVsAK9OeAqwLXq8-" allowfullscreen></iframe>!-->
+                <!--
+                <div><h2>Wishlist Talus on <a href="https://store.steampowered.com/app/2948410/Talus/" target="_blank">Steam:</a><h2>
+                    <a href="https://store.steampowered.com/app/2948410/Talus/" target="_blank"> 
+                    <img src=/images/talus/classes_showcase.gif style="width:300px" alt="Gif of gameplay from upcoming ARPG 'Talus'">
+                    </a>
+                    <h3><img src=/images/talus/english-flag.png style="width:16px" alt="English Flag"> Talus is a Tibia-like ARPG I'm developing. <br>Visit the Steam page or join our Discord to find out more!<br><br>
+                    <img src=/images/talus/polish-flag.png style="width:16px" alt="Polish Flag"> Talus to Tibijsko-podobna gra ARPG którą dewelopuje. <br>Wejdź na Steam-a lub dołącz do naszego Discorda po więcej info!<br><br>
+                    <img src=/images/talus/portuguese-flag.png style="width:16px" alt="Portuguese Flag"> Talus é um ARPG estilo Tibia que estou desenvolvendo.<br> Visite a página do Steam ou entre no nosso Discord para saber mais!<br><br>
+                    <img src=/images/talus/spanish-flag.png style="width:16px" alt="Spanish Flag"> Talus es un ARPG similar a Tibia que estoy desarrollando.<br> ¡Visite la página de Steam o únase a nuestro Discord para obtener más información!<h3>
+                </div>
+                !--><br><br>
+            </section>
+            <div id="ads-container">
+                
+                <br>
+            </div>
+            <br>
+        </aside>
+        <aside id="left-footer-space"></aside>
+        <footer id="footer">
+            <p id="footerParagraph">
+                Tibia and all products related to Tibia are copyrighted by <a href="https://www.cipsoft.com"
+                    target="_blank">CipSoft GmbH</a>. The official
+                website of Tibia is <a href="https://www.tibia.com" target="_blank">tibia.com</a>.<br><br>
+                Created by Kusnier.
+            </p><br><br>
+        </footer>
+        <aside id="right-footer-space"></aside>
+        </main>
+            <script>
+                //showAdblockPopup(); bump
+            </script>
+</body>
+</html>
