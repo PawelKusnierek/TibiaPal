@@ -4,6 +4,7 @@ function initialize() {
   enable_expandable_div_buttons();
   enable_default_tabs();
   enable_tablinks();
+  //kick embed temporarily disabled - without the check it will never be visible/active
   //check_livestream();
 }
 
