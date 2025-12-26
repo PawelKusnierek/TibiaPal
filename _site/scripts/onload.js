@@ -203,19 +203,22 @@ async function check_livestream(channel) {
 
     // Kick API includes a "livestream" object when the channel is live
     const isLive = data.livestream !== null;
-
+    const live_element = document.getElementById("kick-live");
     if (isLive) {
       // Disable embed to prevent excessive/inflated viewer count especially during 2x events/peak traffic etc.
       // TODO: Investigate Kick API to see if there's a way to Embed Kick stream without including viewers/inflating viewer count (AFAIK currently not possible)
       // This would be the best solution and would prevent any potential complaints etc.
       if (data.livestream.viewer_count <= 400) {
         console.log(`${channel} is LIVE!`);
-        const live_element = document.getElementById("kick-live");
         live_element.style.display = "initial";
 
         const offline_element = document.getElementById("kick-offline");
         offline_element.style.display = "none";
       }
+    }
+    else {
+      console.log(`Not live, removing the embed element.`);
+      if (live_element) live_element.remove();
     }
 
     return isLive;
