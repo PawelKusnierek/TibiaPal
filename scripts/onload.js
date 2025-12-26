@@ -4,8 +4,8 @@ function initialize() {
   enable_expandable_div_buttons();
   enable_default_tabs();
   enable_tablinks();
-  //kick embed temporarily disabled - without the check it will never be visible/active
-  //check_livestream();
+  //comment out below to disable kick embed - without the check it will never be visible/active
+  check_livestream();
 }
 
 function find_rashid_city() {
@@ -205,13 +205,18 @@ async function check_livestream(channel) {
     const isLive = data.livestream !== null;
 
     if (isLive) {
-      console.log(`${channel} is LIVE!`);
-      const live_element = document.getElementById("kick-live");
-      live_element.style.display = "initial";
-      
-      const offline_element = document.getElementById("kick-offline");
-      offline_element.style.display = "none";
-    } 
+      // Disable embed to prevent excessive/inflated viewer count especially during 2x events/peak traffic etc.
+      // TODO: Investigate Kick API to see if there's a way to Embed Kick stream without including viewers/inflating viewer count (AFAIK currently not possible)
+      // This would be the best solution and would prevent any potential complaints etc.
+      if (data.livestream.viewer_count <= 400) {
+        console.log(`${channel} is LIVE!`);
+        const live_element = document.getElementById("kick-live");
+        live_element.style.display = "initial";
+
+        const offline_element = document.getElementById("kick-offline");
+        offline_element.style.display = "none";
+      }
+    }
 
     return isLive;
   } catch (err) {
