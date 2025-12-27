@@ -204,11 +204,18 @@ async function check_livestream(channel) {
     // Kick API includes a "livestream" object when the channel is live
     const isLive = data.livestream !== null;
     const live_element = document.getElementById("kick-live");
-    if (isLive) {
+    // Removing embed for small devices/mobiles, as right navbar is not visible anyways
+    if (window.innerWidth < 1401) {
+      console.log(`Mobile device, removing the embed element.`);
+      if (live_element) {
+        live_element.remove();
+      }
+    }
+    else if (isLive) {
       // Disable embed to prevent excessive/inflated viewer count especially during 2x events/peak traffic etc.
       // TODO: Investigate Kick API to see if there's a way to Embed Kick stream without including viewers/inflating viewer count (AFAIK currently not possible)
-      // This would be the best solution and would prevent any potential complaints etc.
-      if (data.livestream.viewer_count <= 400) {
+      // This would be the best solution and would prevent any potential complaints about viewership etc. while still exposing channel to TibiaPal audience
+      if (data.livestream.viewer_count <= 200) {
         console.log(`${channel} is LIVE!`);
         live_element.style.display = "initial";
 
