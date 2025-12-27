@@ -5,7 +5,7 @@ function initialize() {
   enable_default_tabs();
   enable_tablinks();
   //comment out below to disable kick embed - without the check it will never be visible/active
-  //check_livestream();
+  check_livestream();
 }
 
 function find_rashid_city() {
@@ -193,7 +193,7 @@ function toggleNavigation() {
   }
 }
 
-async function check_livestream(channel) {
+async function check_livestream() {
   try {
     // Kick’s public API endpoint for channel data
     const response = await fetch(`https://kick.com/api/v2/channels/Kusnier`);
@@ -204,33 +204,45 @@ async function check_livestream(channel) {
     // Kick API includes a "livestream" object when the channel is live
     const isLive = data.livestream !== null;
     const live_element = document.getElementById("kick-live");
+    const embed_iframe = live_element.querySelector('iframe');
     // Removing embed for small devices/mobiles, as right navbar is not visible anyways
     if (window.innerWidth < 1401) {
       console.log(`Mobile device, removing the embed element.`);
-      if (live_element) {
-        live_element.remove();
-      }
+      remove_embed(live_element, embed_iframe)
     }
     else if (isLive) {
       // Disable embed to prevent excessive/inflated viewer count especially during 2x events/peak traffic etc.
       // TODO: Investigate Kick API to see if there's a way to Embed Kick stream without including viewers/inflating viewer count (AFAIK currently not possible)
       // This would be the best solution and would prevent any potential complaints about viewership etc. while still exposing channel to TibiaPal audience
-      if (data.livestream.viewer_count <= 200) {
-        console.log(`${channel} is LIVE!`);
+      if (data.livestream.viewer_count <= 300) {
+        console.log(`Stream is LIVE!`);
         live_element.style.display = "initial";
 
         const offline_element = document.getElementById("kick-offline");
         offline_element.style.display = "none";
       }
+      else {
+        remove_embed(live_element, embed_iframe)
+      }
+      return isLive;
     }
     else {
       console.log(`Not live, removing the embed element.`);
-      if (live_element) live_element.remove();
+      remove_embed(live_element, embed_iframe)
     }
-
-    return isLive;
   } catch (err) {
     console.error(`Failed to check Kick live status: ${err.message}`);
     return null;
+  }
+}
+
+function remove_embed(live_element, embed_iframe) {
+  if (live_element) {
+    if (embed_iframe) {
+      embed_iframe.src = '';
+      embed_iframe.remove();
+    }
+    live_element.innerHTML = '';
+    live_element.remove();
   }
 }
