@@ -5,7 +5,7 @@ function initialize() {
   enable_default_tabs();
   enable_tablinks();
   //comment out below to disable kick embed - without the check it will never be visible/active
-  check_livestream();
+  //check_livestream();
 }
 
 function find_rashid_city() {
