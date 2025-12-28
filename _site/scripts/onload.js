@@ -217,6 +217,7 @@ async function check_livestream() {
       if (data.livestream.viewer_count <= 300) {
         console.log(`Stream is LIVE!`);
         live_element.style.display = "initial";
+        embed_iframe.src = 'https://player.kick.com/Kusnier?autoplay=true&?muted=true'
 
         const offline_element = document.getElementById("kick-offline");
         offline_element.style.display = "none";
