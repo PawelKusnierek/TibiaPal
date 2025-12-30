@@ -5,6 +5,7 @@
 function sortDeliveriesTables() {
     // List of all delivery table IDs
     const tableIds = [
+        'deliveries_table_everything',
         'deliveries_table_rashid',
         'deliveries_table_djinn',
         'deliveries_table_yasir',
@@ -12,8 +13,7 @@ function sortDeliveriesTables() {
         'deliveries_table_gladys',
         'deliveries_table_edron_academy',
         'deliveries_table_esrik',
-        'deliveries_table_flint',
-        'deliveries_table_others'
+        'deliveries_table_flint'
     ];
     
     // Value order: High = 0, Medium = 1, Low = 2

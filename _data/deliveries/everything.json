@@ -1,0 +1,3152 @@
+[
+    {
+        "icon": "nighthunter_wing.gif",
+        "name": "Nighthunter Wing",
+        "price": "2 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Nighthunter_Wing"
+    },
+    {
+        "icon": "sulphur_powder.gif",
+        "name": "Sulphur Powder",
+        "price": "1 900",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Sulphur_Powder"
+    },
+    {
+        "icon": "mino_shield.gif",
+        "name": "Mino Shield",
+        "price": "3 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Mino_Shield"
+    },
+    {
+        "icon": "silken_bookmark.gif",
+        "name": "Silken Bookmark",
+        "price": "1 300",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Silken_Bookmark"
+    },
+    {
+        "icon": "giant_tusk.gif",
+        "name": "Giant Tusk",
+        "price": "6 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Giant_Tusk"
+    },
+    {
+        "icon": "brinebrute_claw.gif",
+        "name": "Brinebrute Claw",
+        "price": "2 600",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Brinebrute_Claw"
+    },
+    {
+        "icon": "deadly_fangs.gif",
+        "name": "Deadly Fangs",
+        "price": "5 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Deadly_Fangs"
+    },
+    {
+        "icon": "crystal_crossbow.gif",
+        "name": "Crystal Crossbow",
+        "price": "35 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Crystal_Crossbow"
+    },
+    {
+        "icon": "terra_hood.gif",
+        "name": "Terra Hood",
+        "price": "2 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Terra_Hood"
+    },
+    {
+        "icon": "undertaker_fangs.gif",
+        "name": "Undertaker Fangs",
+        "price": "2 700",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Undertaker_Fangs"
+    },
+    {
+        "icon": "terra_boots.gif",
+        "name": "Terra Boots",
+        "price": "2 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Terra_Boots"
+    },
+    {
+        "icon": "magma_coat.gif",
+        "name": "Magma Coat",
+        "price": "11 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Magma_Coat"
+    },
+    {
+        "icon": "necromantic_core.gif",
+        "name": "Necromantic Core",
+        "price": "10 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Necromantic_Core"
+    },
+    {
+        "icon": "relic_sword.gif",
+        "name": "Relic Sword",
+        "price": "25 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Relic_Sword"
+    },
+    {
+        "icon": "vile_axe.gif",
+        "name": "Vile Axe",
+        "price": "30 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Vile_Axe"
+    },
+    {
+        "icon": "chasm_spawn_head.gif",
+        "name": "Chasm Spawn Head",
+        "price": "850",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Chasm_Spawn_Head"
+    },
+    {
+        "icon": "stalking_seeds.gif",
+        "name": "Stalking Seeds",
+        "price": "1 800",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Stalking_Seeds"
+    },
+    {
+        "icon": "diamond_sceptre.gif",
+        "name": "Diamond Sceptre",
+        "price": "3 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Diamond_Sceptre"
+    },
+    {
+        "icon": "inkwell_black.gif",
+        "name": "Inkwell",
+        "price": "720",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Inkwell"
+    },
+    {
+        "icon": "sulphider_shell.gif",
+        "name": "Sulphider Shell",
+        "price": "2 200",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Sulphider_Shell"
+    },
+    {
+        "icon": "skullcracker_armor.gif",
+        "name": "Skullcracker Armor",
+        "price": "18 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Skullcracker_Armor"
+    },
+    {
+        "icon": "crystallized_death.gif",
+        "name": "Crystallized Death",
+        "price": "3 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Crystallized_Death"
+    },
+    {
+        "icon": "book_page.gif",
+        "name": "Book Page",
+        "price": "640",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Book_Page"
+    },
+    {
+        "icon": "crystalline_armor.gif",
+        "name": "Crystalline Armor",
+        "price": "16 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Crystalline_Armor"
+    },
+    {
+        "icon": "gore_horn.gif",
+        "name": "Gore Horn",
+        "price": "2 900",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Gore_Horn"
+    },
+    {
+        "icon": "golden_legs.gif",
+        "name": "Golden Legs",
+        "price": "30 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Golden_Legs"
+    },
+    {
+        "icon": "zaoan_armor.gif",
+        "name": "Zaoan Armor",
+        "price": "14 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Zaoan_Armor"
+    },
+    {
+        "icon": "knight_legs.gif",
+        "name": "Knight Legs",
+        "price": "5 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Knight_Legs"
+    },
+    {
+        "icon": "sabretooth_fur.gif",
+        "name": "Sabretooth Fur",
+        "price": "2 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Sabretooth_Fur"
+    },
+    {
+        "icon": "night_harpy_feathers.gif",
+        "name": "Night Harpy Feathers",
+        "price": "5 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Night_Harpy_Feathers"
+    },
+    {
+        "icon": "prehemoth_claw.gif",
+        "name": "Prehemoth Claw",
+        "price": "2 300",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Prehemoth_Claw"
+    },
+    {
+        "icon": "war_axe.gif",
+        "name": "War Axe",
+        "price": "12 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/War_Axe"
+    },
+    {
+        "icon": "mercenary_sword.gif",
+        "name": "Mercenary Sword",
+        "price": "12 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Mercenary_Sword"
+    },
+    {
+        "icon": "zaoan_robe.gif",
+        "name": "Zaoan Robe",
+        "price": "12 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Zaoan_Robe"
+    },
+    {
+        "icon": "mercurial_wing.gif",
+        "name": "Mercurial Wing",
+        "price": "2 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Mercurial_Wing"
+    },
+    {
+        "icon": "toe_nails.gif",
+        "name": "Toe Nails",
+        "price": "4 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Toe_Nails"
+    },
+    {
+        "icon": "glacier_mask.gif",
+        "name": "Glacier Mask",
+        "price": "2 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Glacier_Mask"
+    },
+    {
+        "icon": "glacier_robe.gif",
+        "name": "Glacier Robe",
+        "price": "11 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Glacier_Robe"
+    },
+    {
+        "icon": "spellweavers_robe.gif",
+        "name": "Spellweaver's Robe",
+        "price": "12 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Spellweaver's_Robe"
+    },
+    {
+        "icon": "dark_obsidian_splinter.gif",
+        "name": "Dark Obsidian Splinter",
+        "price": "4 400",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Dark_Obsidian_Splinter"
+    },
+    {
+        "icon": "silver_moon_coin.gif",
+        "name": "Silver Moon Coin",
+        "price": "11 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Silver_Moon_Coin"
+    },
+    {
+        "icon": "spellbook_of_mind_control.gif",
+        "name": "Spellbook of Mind Control",
+        "price": "13 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Spellbook_Of_Mind_Control"
+    },
+    {
+        "icon": "terra_mantle.gif",
+        "name": "Terra Mantle",
+        "price": "11 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Terra_Mantle"
+    },
+    {
+        "icon": "lightning_robe.gif",
+        "name": "Lightning Robe",
+        "price": "11 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lightning_Robe"
+    },
+    {
+        "icon": "dragon_slayer.gif",
+        "name": "Dragon Slayer",
+        "price": "15 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Dragon_Slayer"
+    },
+    {
+        "icon": "rubber_cap.gif",
+        "name": "Rubber Cap",
+        "price": "11 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Rubber_Cap"
+    },
+    {
+        "icon": "wooden_spellbook.gif",
+        "name": "Wooden Spellbook",
+        "price": "12 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Wooden_Spellbook"
+    },
+    {
+        "icon": "unholy_bone.gif",
+        "name": "Unholy Bone",
+        "price": "480",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Unholy_Bone"
+    },
+    {
+        "icon": "darklight_core.gif",
+        "name": "Darklight Core",
+        "price": "4 100",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Darklight_Core"
+    },
+    {
+        "icon": "golden_sun_coin.gif",
+        "name": "Golden Sun Coin",
+        "price": "11 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Golden_Sun_Coin"
+    },
+    {
+        "icon": "glowing_rune.gif",
+        "name": "Glowing Rune",
+        "price": "350",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Glowing_Rune"
+    },
+    {
+        "icon": "crystal_mace.gif",
+        "name": "Crystal Mace",
+        "price": "12 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Crystal_Mace"
+    },
+    {
+        "icon": "emerald_tortoise_shell.gif",
+        "name": "Emerald Tortoise Shell",
+        "price": "2 150",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Emerald_Tortoise_Shell"
+    },
+    {
+        "icon": "darklight_basalt_chunk.gif",
+        "name": "Darklight Basalt Chunk",
+        "price": "3 800",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Darklight_Basalt_Chunk"
+    },
+    {
+        "icon": "naga_archer_scales.gif",
+        "name": "Naga Archer Scales",
+        "price": "340",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Naga_Archer_Scales"
+    },
+    {
+        "icon": "alloy_legs.gif",
+        "name": "Alloy Legs",
+        "price": "11 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Alloy_Legs"
+    },
+    {
+        "icon": "titan_axe.gif",
+        "name": "Titan Axe",
+        "price": "4 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Titan_Axe"
+    },
+    {
+        "icon": "trapped_bad_dream_monster.gif",
+        "name": "Trapped Bad Dream Monster",
+        "price": "900",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Trapped_Bad_Dream_Monster"
+    },
+    {
+        "icon": "ice_flower.gif",
+        "name": "Ice Flower",
+        "price": "370",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Ice_Flower"
+    },
+    {
+        "icon": "bonebreaker.gif",
+        "name": "Bonebreaker",
+        "price": "10 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bonebreaker"
+    },
+    {
+        "icon": "chaos_mace.gif",
+        "name": "Chaos Mace",
+        "price": "9 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Chaos_Mace"
+    },
+    {
+        "icon": "guardian_shield.gif",
+        "name": "Guardian Shield",
+        "price": "2 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Guardian_Shield"
+    },
+    {
+        "icon": "ornate_crossbow.gif",
+        "name": "Ornate Crossbow",
+        "price": "12 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Ornate_Crossbow"
+    },
+    {
+        "icon": "metal_bat.gif",
+        "name": "Metal Bat",
+        "price": "9 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Metal_Bat"
+    },
+    {
+        "icon": "bundle_of_cursed_straw.gif",
+        "name": "Bundle of Cursed Straw",
+        "price": "800",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bundle_Of_Cursed_Straw"
+    },
+    {
+        "icon": "vein_of_ore.gif",
+        "name": "Vein of Ore",
+        "price": "330",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Vein_Of_Ore"
+    },
+    {
+        "icon": "cluster_of_crystallized_death.gif",
+        "name": "Cluster of Crystallized Death",
+        "price": "9 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Cluster_Of_Crystallized_Death"
+    },
+    {
+        "icon": "rotten_roots.gif",
+        "name": "Rotten Roots",
+        "price": "3 800",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Rotten_Roots"
+    },
+    {
+        "icon": "cry-stal.gif",
+        "name": "Cry-Stal",
+        "price": "3 200",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Cry-Stal"
+    },
+    {
+        "icon": "naga_warrior_scales.gif",
+        "name": "Naga Warrior Scales",
+        "price": "340",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Naga_Warrior_Scales"
+    },
+    {
+        "icon": "essence_of_a_bad_dream.gif",
+        "name": "Essence of A Bad Dream",
+        "price": "360",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Essence_Of_A_Bad_Dream"
+    },
+    {
+        "icon": "mantosaurus_jaw.gif",
+        "name": "Mantosaurus Jaw",
+        "price": "2 800",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Mantosaurus_Jaw"
+    },
+    {
+        "icon": "badger_boots.gif",
+        "name": "Badger Boots",
+        "price": "7 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Badger_Boots"
+    },
+    {
+        "icon": "stag_parchment.gif",
+        "name": "Stag Parchment",
+        "price": "3 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Stag_Parchment"
+    },
+    {
+        "icon": "gorerilla_mane.gif",
+        "name": "Gorerilla Mane",
+        "price": "2 750",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Gorerilla_Mane"
+    },
+    {
+        "icon": "buckle.gif",
+        "name": "Buckle",
+        "price": "7 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Buckle"
+    },
+    {
+        "icon": "glorious_axe.gif",
+        "name": "Glorious Axe",
+        "price": "3 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Glorious_Axe"
+    },
+    {
+        "icon": "glooth_cape.gif",
+        "name": "Glooth Cape",
+        "price": "7 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Glooth_Cape"
+    },
+    {
+        "icon": "mino_lance.gif",
+        "name": "Mino Lance",
+        "price": "7 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Mino_Lance"
+    },
+    {
+        "icon": "headpecker_beak.gif",
+        "name": "Headpecker Beak",
+        "price": "2 800",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Headpecker_Beak"
+    },
+    {
+        "icon": "tunnel_tyrant_shell.gif",
+        "name": "Tunnel Tyrant Shell",
+        "price": "700",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Tunnel_Tyrant_Shell"
+    },
+    {
+        "icon": "headpecker_feather.gif",
+        "name": "Headpecker Feather",
+        "price": "1 300",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Headpecker_Feather"
+    },
+    {
+        "icon": "gorerilla_tail.gif",
+        "name": "Gorerilla Tail",
+        "price": "2 650",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Gorerilla_Tail"
+    },
+    {
+        "icon": "fire_axe.gif",
+        "name": "Fire Axe",
+        "price": "8 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Fire_Axe"
+    },
+    {
+        "icon": "deepworm_spike_roots.gif",
+        "name": "Deepworm Spike Roots",
+        "price": "650",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Deepworm_Spike_Roots"
+    },
+    {
+        "icon": "carnisylvan_finger.gif",
+        "name": "Carnisylvan Finger",
+        "price": "250",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Carnisylvan_Finger"
+    },
+    {
+        "icon": "glacier_shoes.gif",
+        "name": "Glacier Shoes",
+        "price": "2 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Glacier_Shoes"
+    },
+    {
+        "icon": "ripptor_claw.gif",
+        "name": "Ripptor Claw",
+        "price": "2 600",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Ripptor_Claw"
+    },
+    {
+        "icon": "darklight_matter.gif",
+        "name": "Darklight Matter",
+        "price": "5 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Darklight_Matter"
+    },
+    {
+        "icon": "wood_cape.gif",
+        "name": "Wood Cape",
+        "price": "5 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Wood_Cape"
+    },
+    {
+        "icon": "magma_clump.gif",
+        "name": "Magma Clump",
+        "price": "570",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Magma_Clump"
+    },
+    {
+        "icon": "focus_cape.gif",
+        "name": "Focus Cape",
+        "price": "6 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Focus_Cape"
+    },
+    {
+        "icon": "magma_boots.gif",
+        "name": "Magma Boots",
+        "price": "2 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Magma_Boots"
+    },
+    {
+        "icon": "pair_of_hellflayer_horns.gif",
+        "name": "Pair of Hellflayer Horns",
+        "price": "1 300",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Pair_of_Hellflayer_Horns"
+    },
+    {
+        "icon": "cuirass_plate.gif",
+        "name": "Cuirass Plate",
+        "price": "1 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Cuirass_Plate"
+    },
+    {
+        "icon": "werecrocodile_tongue.gif",
+        "name": "Werecrocodile Tongue",
+        "price": "570",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Werecrocodile_Tongue"
+    },
+    {
+        "icon": "angelic_axe.gif",
+        "name": "Angelic Axe",
+        "price": "5 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Angelic_Axe"
+    },
+    {
+        "icon": "golden_sickle.gif",
+        "name": "Golden Sickle",
+        "price": "1 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Golden_Sickle"
+    },
+    {
+        "icon": "cave_devourer_maw.gif",
+        "name": "Cave Devourer Maw",
+        "price": "600",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Cave_Devourer_Maw"
+    },
+    {
+        "icon": "carnisylvan_bark.gif",
+        "name": "Carnisylvan Bark",
+        "price": "230",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Carnisylvan_Bark"
+    },
+    {
+        "icon": "prehemoth_horns.gif",
+        "name": "Prehemoth Horns",
+        "price": "3 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Prehemoth_Horns"
+    },
+    {
+        "icon": "knight_axe.gif",
+        "name": "Knight Axe",
+        "price": "2 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Knight_Axe"
+    },
+    {
+        "icon": "hellhound_slobber.gif",
+        "name": "Hellhound Slobber",
+        "price": "500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Hellhound_Slobber"
+    },
+    {
+        "icon": "single_human_eye.gif",
+        "name": "Single Human Eye",
+        "price": "1 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Single_Human_Eye"
+    },
+    {
+        "icon": "zaoan_shoes.gif",
+        "name": "Zaoan Shoes",
+        "price": "5 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Zaoan_Shoes"
+    },
+    {
+        "icon": "weretiger_tooth.gif",
+        "name": "Weretiger Tooth",
+        "price": "490",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Weretiger_Tooth"
+    },
+    {
+        "icon": "lightning_headband.gif",
+        "name": "Lightning Headband",
+        "price": "2 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lightning_Headband"
+    },
+    {
+        "icon": "tunnel_tyrant_head.gif",
+        "name": "Tunnel Tyrant Head",
+        "price": "500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Tunnel_Tyrant_Head"
+    },
+    {
+        "icon": "cave_devourer_eyes.gif",
+        "name": "Cave Devourer Eyes",
+        "price": "550",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Cave_Devourer_Eyes"
+    },
+    {
+        "icon": "book_with_a_dragon.gif",
+        "name": "Book With A Dragon",
+        "price": "1 800",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Book_With_A_Dragon"
+    },
+    {
+        "icon": "bulltaur_armor_scrap.gif",
+        "name": "Bulltaur Armor Scrap",
+        "price": "480",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bulltaur_Armor_Scrap"
+    },
+    {
+        "icon": "frazzle_tongue.gif",
+        "name": "Frazzle Tongue",
+        "price": "700",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Frazzle_Tongue"
+    },
+    {
+        "icon": "fur_armor.gif",
+        "name": "Fur Armor",
+        "price": "5 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Fur_Armor"
+    },
+    {
+        "icon": "streaked_devourer_maw.gif",
+        "name": "Streaked Devourer Maw",
+        "price": "400",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Streaked_Devourer_Maw"
+    },
+    {
+        "icon": "bloodshot_giant_eye.gif",
+        "name": "Bloodshot Giant Eye",
+        "price": "1 820",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bloodshot_Giant_Eye"
+    },
+    {
+        "icon": "worm_sponge.gif",
+        "name": "Worm Sponge",
+        "price": "4 200",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Worm_Sponge"
+    },
+    {
+        "icon": "strange_substance.gif",
+        "name": "Strange Substance",
+        "price": "810",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Strange_Substance"
+    },
+    {
+        "icon": "wardragon_tooth.gif",
+        "name": "Wardragon Tooth",
+        "price": "730",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Wardragon_Tooth"
+    },
+    {
+        "icon": "crystalline_spikes.gif",
+        "name": "Crystalline Spikes",
+        "price": "440",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Crystalline_Spikes"
+    },
+    {
+        "icon": "blood_hood.gif",
+        "name": "Blood Hood",
+        "price": "1 550",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Blood_Hood"
+    },
+    {
+        "icon": "basalt_crumbs.gif",
+        "name": "Basalt Crumbs",
+        "price": "3 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Basalt_Crumbs"
+    },
+    {
+        "icon": "lavafungus_ring.gif",
+        "name": "Lavafungus Ring",
+        "price": "390",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lavafungus_Ring"
+    },
+    {
+        "icon": "decayed_finger_bone.gif",
+        "name": "Decayed Finger Bone",
+        "price": "5 100",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Decayed_Finger_Bone"
+    },
+    {
+        "icon": "cave_devourer_legs.gif",
+        "name": "Cave Devourer Legs",
+        "price": "350",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Cave_Devourer_Legs"
+    },
+    {
+        "icon": "quara_pincers.gif",
+        "name": "Quara Pincers",
+        "price": "410",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Quara_Pincers"
+    },
+    {
+        "icon": "quara_eye.gif",
+        "name": "Quara Eye",
+        "price": "350",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Quara_Eye"
+    },
+    {
+        "icon": "slimy_leaf_tentacle.gif",
+        "name": "Slimy Leaf Tentacle",
+        "price": "320",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Slimy_Leaf_Tentacle"
+    },
+    {
+        "icon": "glooth_injection_tube.gif",
+        "name": "Glooth Injection Tube",
+        "price": "350",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Glooth_Injection_Tube"
+    },
+    {
+        "icon": "crawlers_essence.gif",
+        "name": "Crawler's Essence",
+        "price": "3 700",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Crawler's_Essence"
+    },
+    {
+        "icon": "dragolisk_eye.gif",
+        "name": "Dragolisk Eye",
+        "price": "690",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Dragolisk_Eye"
+    },
+    {
+        "icon": "crystal_of_the_mitmah.gif",
+        "name": "Crystal of The Mitmah",
+        "price": "280",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Crystal_of_The_Mitmah"
+    },
+    {
+        "icon": "lavaworm_spike_roots.gif",
+        "name": "Lavaworm Spike Roots",
+        "price": "600",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lavaworm_Spike_Roots"
+    },
+    {
+        "icon": "crab_man_claws.gif",
+        "name": "Crab Man Claws",
+        "price": "550",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Crab_Man_Claws"
+    },
+    {
+        "icon": "bloated_maggot.gif",
+        "name": "Bloated Maggot",
+        "price": "5 200",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bloated_Maggot"
+    },
+    {
+        "icon": "necromantic_rust.gif",
+        "name": "Necromantic Rust",
+        "price": "390",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Necromantic_Rust"
+    },
+    {
+        "icon": "lump_of_earth.gif",
+        "name": "Lump of Earth",
+        "price": "130",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lump_of_Earth"
+    },
+    {
+        "icon": "cobra_crest.gif",
+        "name": "Cobra Crest",
+        "price": "650",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Cobra_Crest"
+    },
+    {
+        "icon": "spiked_bracers.gif",
+        "name": "Spiked Bracers",
+        "price": "1 360",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Spiked_Bracers"
+    },
+    {
+        "icon": "deepling_ridge.gif",
+        "name": "Deepling Ridge",
+        "price": "360",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Deepling_Ridge"
+    },
+    {
+        "icon": "paper_plane.gif",
+        "name": "Paper Plane",
+        "price": "480",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Paper_Plane"
+    },
+    {
+        "icon": "pot_of_orcish_warpaint.gif",
+        "name": "Pot of Orcish Warpaint",
+        "price": "1 150",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Pot_of_Orcish_Warpaint"
+    },
+    {
+        "icon": "blemished_spawn_abdomen.gif",
+        "name": "Blemished Spawn Abdomen",
+        "price": "550",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Blemished_Spawn_Abdomen"
+    },
+    {
+        "icon": "roots.gif",
+        "name": "Roots",
+        "price": "1 200",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Roots"
+    },
+    {
+        "icon": "blood_amulet.gif",
+        "name": "Blood Amulet",
+        "price": "1 230",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Blood_Amulet"
+    },
+    {
+        "icon": "piece_of_draconian_steel.gif",
+        "name": "Piece of Draconian Steel",
+        "price": "3 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Piece_of_Draconian_Steel"
+    },
+    {
+        "icon": "hibiscus_dress.gif",
+        "name": "Hibiscus Dress",
+        "price": "3 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Hibiscus_Dress"
+    },
+    {
+        "icon": "ripptor_scales.gif",
+        "name": "Ripptor Scales",
+        "price": "1 200",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Ripptor_Scales"
+    },
+    {
+        "icon": "dragon_tongue.gif",
+        "name": "Dragon Tongue",
+        "price": "550",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Dragon_Tongue"
+    },
+    {
+        "icon": "deeptags.gif",
+        "name": "Deeptags",
+        "price": "290",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Deeptags"
+    },
+    {
+        "icon": "lamassu_hoof.gif",
+        "name": "Lamassu Hoof",
+        "price": "330",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lamassu_Hoof"
+    },
+    {
+        "icon": "star_ink.gif",
+        "name": "Star Ink",
+        "price": "1 250",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Star_Ink"
+    },
+    {
+        "icon": "chasm_spawn_tail.gif",
+        "name": "Chasm Spawn Tail",
+        "price": "120",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Chasm_Spawn_Tail"
+    },
+    {
+        "icon": "broodrider_saddle.gif",
+        "name": "Broodrider Saddle",
+        "price": "2 800",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Broodrider_Saddle"
+    },
+    {
+        "icon": "silver_poniard.gif",
+        "name": "Silver Poniard",
+        "price": "2 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Silver_Poniard"
+    },
+    {
+        "icon": "brigadeiro.gif",
+        "name": "Brigadeiro",
+        "price": "2 640",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Brigadeiro"
+    },
+    {
+        "icon": "pirate_coin.gif",
+        "name": "Pirate Coin",
+        "price": "110",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Pirate_Coin"
+    },
+    {
+        "icon": "idol_of_the_forge.gif",
+        "name": "Idol of The Forge",
+        "price": "950",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Idol_of_The_Forge"
+    },
+    {
+        "icon": "bowl_of_terror_sweat.gif",
+        "name": "Bowl of Terror Sweat",
+        "price": "500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bowl_of_Terror_Sweat"
+    },
+    {
+        "icon": "dragolisk_poison_gland.gif",
+        "name": "Dragolisk Poison Gland",
+        "price": "475",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Dragolisk_Poison_Gland"
+    },
+    {
+        "icon": "magma_monocle.gif",
+        "name": "Magma Monocle",
+        "price": "2 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Magma_Monocle"
+    },
+    {
+        "icon": "deepworm_jaws.gif",
+        "name": "Deepworm Jaws",
+        "price": "500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Deepworm_Jaws"
+    },
+    {
+        "icon": "chain_leash.gif",
+        "name": "Chain Leash",
+        "price": "970",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Chain_Leash"
+    },
+    {
+        "icon": "human_teeth.gif",
+        "name": "Human Teeth",
+        "price": "2 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Human_Teeth"
+    },
+    {
+        "icon": "curious_matter.gif",
+        "name": "Curious Matter",
+        "price": "430",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Curious_Matter"
+    },
+    {
+        "icon": "draken_wristbands.gif",
+        "name": "Draken Wristbands",
+        "price": "430",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Draken_Wristbands"
+    },
+    {
+        "icon": "lightning_boots.gif",
+        "name": "Lightning Boots",
+        "price": "2 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lightning_Boots"
+    },
+    {
+        "icon": "elven_astral_observer.gif",
+        "name": "Elven Astral Observer",
+        "price": "90",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Elven_Astral_Observer"
+    },
+    {
+        "icon": "werefox_tail.gif",
+        "name": "Werefox Tail",
+        "price": "200",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Werefox_Tail"
+    },
+    {
+        "icon": "fafnar_symbol.gif",
+        "name": "Fafnar Symbol",
+        "price": "950",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Fafnar_Symbol"
+    },
+    {
+        "icon": "lavafungus_head.gif",
+        "name": "Lavafungus Head",
+        "price": "900",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lavafungus_Head"
+    },
+    {
+        "icon": "ensouled_essence.gif",
+        "name": "Ensouled Essence",
+        "price": "820",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Ensouled_Essence"
+    },
+    {
+        "icon": "mould_heart.gif",
+        "name": "Mould Heart",
+        "price": "2 100",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Mould_Heart"
+    },
+    {
+        "icon": "dead_weight.gif",
+        "name": "Dead Weight",
+        "price": "450",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Dead_Weight"
+    },
+    {
+        "icon": "heart_amphora.gif",
+        "name": "Heart Amphora",
+        "price": "930",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Heart_Amphora"
+    },
+    {
+        "icon": "spiked_gorget.gif",
+        "name": "Spiked Gorget",
+        "price": "850",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Spiked_Gorget"
+    },
+    {
+        "icon": "pool_of_chitinous_glue.gif",
+        "name": "Pool of Chitinous Glue",
+        "price": "480",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Pool_of_Chitinous_Glue"
+    },
+    {
+        "icon": "nimmersatts_seal.gif",
+        "name": "Nimmersatt's Seal",
+        "price": "520",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Nimmersatt's_Seal"
+    },
+    {
+        "icon": "deepworm_spikes.gif",
+        "name": "Deepworm Spikes",
+        "price": "800",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Deepworm_Spikes"
+    },
+    {
+        "icon": "odd_organ.gif",
+        "name": "Odd Organ",
+        "price": "410",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Odd_Organ"
+    },
+    {
+        "icon": "molten_dragon_essence.gif",
+        "name": "Molten Dragon Essence",
+        "price": "840",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Molten_Dragon_Essence"
+    },
+    {
+        "icon": "sineater_wing.gif",
+        "name": "Sineater Wing",
+        "price": "2 100",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Sineater_Wing"
+    },
+    {
+        "icon": "gorger_antlers.gif",
+        "name": "Gorger Antlers",
+        "price": "2 250",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Gorger_Antlers"
+    },
+    {
+        "icon": "amber_souvenir.gif",
+        "name": "Amber Souvenir",
+        "price": "850",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Amber_Souvenir"
+    },
+    {
+        "icon": "spitter_nose.gif",
+        "name": "Spitter Nose",
+        "price": "340",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Spitter_Nose"
+    },
+    {
+        "icon": "scale_of_corruption.gif",
+        "name": "Scale of Corruption",
+        "price": "680",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Scale_of_Corruption"
+    },
+    {
+        "icon": "halberd.gif",
+        "name": "Halberd",
+        "price": "400",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Halberd"
+    },
+    {
+        "icon": "werebadger_skull.gif",
+        "name": "Werebadger Skull",
+        "price": "185",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Werebadger_Skull"
+    },
+    {
+        "icon": "ritual_bone_knife.gif",
+        "name": "Ritual Bone Knife",
+        "price": "820",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Ritual_Bone_Knife"
+    },
+    {
+        "icon": "shiny_stone.gif",
+        "name": "Shiny Stone",
+        "price": "500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Shiny_Stone"
+    },
+    {
+        "icon": "wardragon_claw.gif",
+        "name": "Wardragon Claw",
+        "price": "550",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Wardragon_Claw"
+    },
+    {
+        "icon": "ancient_stone.gif",
+        "name": "Ancient Stone",
+        "price": "200",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Ancient_Stone"
+    },
+    {
+        "icon": "heavy_trident.gif",
+        "name": "Heavy Trident",
+        "price": "2 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Heavy_Trident"
+    },
+    {
+        "icon": "pulverized_ore.gif",
+        "name": "Pulverized Ore",
+        "price": "400",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Pulverized_Ore"
+    },
+    {
+        "icon": "eye_of_a_deepling.gif",
+        "name": "Eye of A Deepling",
+        "price": "150",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Eye_of_A_Deepling"
+    },
+    {
+        "icon": "eyeless_devourer_legs.gif",
+        "name": "Eyeless Devourer Legs",
+        "price": "650",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Eyeless_Devourer_Legs"
+    },
+    {
+        "icon": "eye_of_corruption.gif",
+        "name": "Eye of Corruption",
+        "price": "390",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Eye_of_Corruption"
+    },
+    {
+        "icon": "dragon_hammer.gif",
+        "name": "Dragon Hammer",
+        "price": "2 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Dragon_Hammer"
+    },
+    {
+        "icon": "cats_paw.gif",
+        "name": "Cat's Paw",
+        "price": "2 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Cats_Paw"
+    },
+    {
+        "icon": "ogre_ear_stud.gif",
+        "name": "Ogre Ear Stud",
+        "price": "180",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Ogre_Ear_Stud"
+    },
+    {
+        "icon": "werebear_fur.gif",
+        "name": "Werebear Fur",
+        "price": "185",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Werebear_Fur"
+    },
+    {
+        "icon": "bulltaur_horn.gif",
+        "name": "Bulltaur Horn",
+        "price": "385",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bulltaur_Horn"
+    },
+    {
+        "icon": "lavaworm_spikes.gif",
+        "name": "Lavaworm Spikes",
+        "price": "750",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lavaworm_Spikes"
+    },
+    {
+        "icon": "orcish_toothbrush.gif",
+        "name": "Orcish Toothbrush",
+        "price": "750",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Orcish_Toothbrush"
+    },
+    {
+        "icon": "goanna_meat.gif",
+        "name": "Goanna Meat",
+        "price": "190",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Goanna_Meat"
+    },
+    {
+        "icon": "ghastly_dragon_head.gif",
+        "name": "Ghastly Dragon Head",
+        "price": "700",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Ghastly_Dragon_Head"
+    },
+    {
+        "icon": "bone_rattle.gif",
+        "name": "Bone Rattle",
+        "price": "790",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bone_Rattle"
+    },
+    {
+        "icon": "werewolf_fur.gif",
+        "name": "Werewolf Fur",
+        "price": "380",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Werewolf_Fur"
+    },
+    {
+        "icon": "rhindeer_antlers.gif",
+        "name": "Rhindeer Antlers",
+        "price": "680",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Rhindeer_Antlers"
+    },
+    {
+        "icon": "diremaw_brainpan.gif",
+        "name": "Diremaw Brainpan",
+        "price": "350",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Diremaw_Brainpan"
+    },
+    {
+        "icon": "harpy_feathers.gif",
+        "name": "Harpy Feathers",
+        "price": "730",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Harpy_Feathers"
+    },
+    {
+        "icon": "streaked_devourer_eyes.gif",
+        "name": "Streaked Devourer Eyes",
+        "price": "500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Streaked_Devourer_Eyes"
+    },
+    {
+        "icon": "werebear_skull.gif",
+        "name": "Werebear Skull",
+        "price": "195",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Werebear_Skull"
+    },
+    {
+        "icon": "flotsam.gif",
+        "name": "Flotsam",
+        "price": "330",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Flotsam"
+    },
+    {
+        "icon": "old_girtablilu_carapace.gif",
+        "name": "Old Girtablilu Carapace",
+        "price": "570",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Old_Girtablilu_Carapace"
+    },
+    {
+        "icon": "lime_tart.gif",
+        "name": "Lime Tart",
+        "price": "1 870",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lime_Tart"
+    },
+    {
+        "icon": "hydrophytes.gif",
+        "name": "Hydrophytes",
+        "price": "220",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Hydrophytes"
+    },
+    {
+        "icon": "paper_boat.gif",
+        "name": "Paper Boat",
+        "price": "800",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Paper_Boat"
+    },
+    {
+        "icon": "spark_sphere.gif",
+        "name": "Spark Sphere",
+        "price": "350",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Spark_Sphere"
+    },
+    {
+        "icon": "scarab_pincers.gif",
+        "name": "Scarab Pincers",
+        "price": "280",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Scarab_Pincers"
+    },
+    {
+        "icon": "hemp_rope.gif",
+        "name": "Hemp Rope",
+        "price": "350",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Hemp_Rope"
+    },
+    {
+        "icon": "carnivostrich_feather.gif",
+        "name": "Carnivostrich Feather",
+        "price": "630",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Carnivostrich_Feather"
+    },
+    {
+        "icon": "sparkion_tail.gif",
+        "name": "Sparkion Tail",
+        "price": "300",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Sparkion_Tail"
+    },
+    {
+        "icon": "broken_draken_mail.gif",
+        "name": "Broken Draken Mail",
+        "price": "340",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Broken_Draken_Mail"
+    },
+    {
+        "icon": "sealing_wax.gif",
+        "name": "Sealing Wax",
+        "price": "620",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Sealing_Wax"
+    },
+    {
+        "icon": "naga_earring.gif",
+        "name": "Naga Earring",
+        "price": "380",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Naga_Earring"
+    },
+    {
+        "icon": "piece_of_frozen_night.gif",
+        "name": "Piece of Frozen Night",
+        "price": "680",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Piece_of_Frozen_Night"
+    },
+    {
+        "icon": "holy_ash.gif",
+        "name": "Holy Ash",
+        "price": "160",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Holy_Ash"
+    },
+    {
+        "icon": "eye_of_a_weeper.gif",
+        "name": "Eye of A Weeper",
+        "price": "650",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Eye_of_A_Weeper"
+    },
+    {
+        "icon": "metal_spats.gif",
+        "name": "Metal Spats",
+        "price": "2 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Metal_Spats"
+    },
+    {
+        "icon": "telescope_eye.gif",
+        "name": "Telescope Eye",
+        "price": "1 600",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Telescope_Eye"
+    },
+    {
+        "icon": "encrypted_notes.gif",
+        "name": "Encrypted Notes",
+        "price": "620",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Encrypted_Notes"
+    },
+    {
+        "icon": "eyeless_devourer_maw.gif",
+        "name": "Eyeless Devourer Maw",
+        "price": "420",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Eyeless_Devourer_Maw"
+    },
+    {
+        "icon": "zaogun_flag.gif",
+        "name": "Zaogun Flag",
+        "price": "600",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Zaogun_Flag"
+    },
+    {
+        "icon": "blemished_spawn_head.gif",
+        "name": "Blemished Spawn Head",
+        "price": "800",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Blemished_Spawn_Head"
+    },
+    {
+        "icon": "resin_parasite.gif",
+        "name": "Resin Parasite",
+        "price": "1 450",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Resin_Parasite"
+    },
+    {
+        "icon": "wereboar_tusks.gif",
+        "name": "Wereboar Tusks",
+        "price": "165",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Wereboar_Tusks"
+    },
+    {
+        "icon": "golden_lotus_brooch.gif",
+        "name": "Golden Lotus Brooch",
+        "price": "270",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Golden_Lotus_Brooch"
+    },
+    {
+        "icon": "instable_proto_matter.gif",
+        "name": "Instable Proto Matter",
+        "price": "300",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Instable_Proto_Matter"
+    },
+    {
+        "icon": "werepanther_claw.gif",
+        "name": "Werepanther Claw",
+        "price": "280",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Werepanther_Claw"
+    },
+    {
+        "icon": "volatile_proto_matter.gif",
+        "name": "Volatile Proto Matter",
+        "price": "300",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Volatile_Proto_Matter"
+    },
+    {
+        "icon": "boar_man_hoof.gif",
+        "name": "Boar Man Hoof",
+        "price": "600",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Boar_Man_Hoof"
+    },
+    {
+        "icon": "torn_page.gif",
+        "name": "Torn Page",
+        "price": "340",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Torn_Page"
+    },
+    {
+        "icon": "crystal_sword.gif",
+        "name": "Crystal Sword",
+        "price": "600",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Crystal_Sword"
+    },
+    {
+        "icon": "glooth_club.gif",
+        "name": "Glooth Club",
+        "price": "1 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Glooth_Club"
+    },
+    {
+        "icon": "sparkion_claw.gif",
+        "name": "Sparkion Claw",
+        "price": "290",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Sparkion_Claw"
+    },
+    {
+        "icon": "book_with_an_hourglass.gif",
+        "name": "Book With An Hourglass",
+        "price": "1 450",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Book_With_An_Hourglass"
+    },
+    {
+        "icon": "dangerous_proto_matter.gif",
+        "name": "Dangerous Proto Matter",
+        "price": "300",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Dangerous_Proto_Matter"
+    },
+    {
+        "icon": "sparkion_legs.gif",
+        "name": "Sparkion Legs",
+        "price": "310",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Sparkion_Legs"
+    },
+    {
+        "icon": "ivory_carving.gif",
+        "name": "Ivory Carving",
+        "price": "300",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Ivory_Carving"
+    },
+    {
+        "icon": "bulltaur_hoof.gif",
+        "name": "Bulltaur Hoof",
+        "price": "540",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bulltaur_Hoof"
+    },
+    {
+        "icon": "frozen_lightning.gif",
+        "name": "Frozen Lightning",
+        "price": "270",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Frozen_Lightning"
+    },
+    {
+        "icon": "high_guard_flag.gif",
+        "name": "High Guard Flag",
+        "price": "550",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/High_Guard_Flag"
+    },
+    {
+        "icon": "glooth_axe.gif",
+        "name": "Glooth Axe",
+        "price": "1 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Glooth_Axe"
+    },
+    {
+        "icon": "wereboar_loincloth.gif",
+        "name": "Wereboar Loincloth",
+        "price": "1 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Wereboar_Loincloth"
+    },
+    {
+        "icon": "energy_ball.gif",
+        "name": "Energy Ball",
+        "price": "300",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Energy_Ball"
+    },
+    {
+        "icon": "humongous_chunk.gif",
+        "name": "Humongous Chunk",
+        "price": "540",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Humongous_Chunk"
+    },
+    {
+        "icon": "plasmatic_lightning.gif",
+        "name": "Plasmatic Lightning",
+        "price": "270",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Plasmatic_Lightning"
+    },
+    {
+        "icon": "hideous_chunk.gif",
+        "name": "Hideous Chunk",
+        "price": "510",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Hideous_Chunk"
+    },
+    {
+        "icon": "streaked_devourer_legs.gif",
+        "name": "Streaked Devourer Legs",
+        "price": "600",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Streaked_Devourer_Legs"
+    },
+    {
+        "icon": "colourful_snail_shell.gif",
+        "name": "Colourful Snail Shell",
+        "price": "250",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Colourful_Snail_Shell"
+    },
+    {
+        "icon": "shimmering_beetles.gif",
+        "name": "Shimmering Beetles",
+        "price": "150",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Shimmering_Beetles"
+    },
+    {
+        "icon": "plasma_pearls.gif",
+        "name": "Plasma Pearls",
+        "price": "250",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Plasma_Pearls"
+    },
+    {
+        "icon": "red_goanna_scale.gif",
+        "name": "Red Goanna Scale",
+        "price": "270",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Red_Goanna_Scale"
+    },
+    {
+        "icon": "glooth_blade.gif",
+        "name": "Glooth Blade",
+        "price": "1 500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Glooth_Blade"
+    },
+    {
+        "icon": "shark_fins.gif",
+        "name": "Shark Fins",
+        "price": "250",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Shark_Fins"
+    },
+    {
+        "icon": "lamassu_horn.gif",
+        "name": "Lamassu Horn",
+        "price": "240",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lamassu_Horn"
+    },
+    {
+        "icon": "diremaw_legs.gif",
+        "name": "Diremaw Legs",
+        "price": "270",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Diremaw_Legs"
+    },
+    {
+        "icon": "metal_jaw.gif",
+        "name": "Metal Jaw",
+        "price": "260",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Metal_Jaw"
+    },
+    {
+        "icon": "weavers_wandtip.gif",
+        "name": "Weaver's Wandtip",
+        "price": "250",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Weaver's_Wandtip"
+    },
+    {
+        "icon": "quara_tentacle.gif",
+        "name": "Quara Tentacle",
+        "price": "140",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Quara_Tentacle"
+    },
+    {
+        "icon": "werebadger_claws.gif",
+        "name": "Werebadger Claws",
+        "price": "160",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Werebadger_Claws"
+    },
+    {
+        "icon": "yapunac_dagger.gif",
+        "name": "Yapunac Dagger",
+        "price": "240",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Yapunac_Dagger"
+    },
+    {
+        "icon": "skull_fetish.gif",
+        "name": "Skull Fetish",
+        "price": "250",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Skull_Fetish"
+    },
+    {
+        "icon": "basalt_fetish.gif",
+        "name": "Basalt Fetish",
+        "price": "210",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Basalt_Fetish"
+    },
+    {
+        "icon": "chasm_spawn_abdomen.gif",
+        "name": "Chasm Spawn Abdomen",
+        "price": "240",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Chasm_Spawn_Abdomen"
+    },
+    {
+        "icon": "staff_piece.gif",
+        "name": "Staff Piece",
+        "price": "560",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Staff_Piece"
+    },
+    {
+        "icon": "scythe_leg.gif",
+        "name": "Scythe Leg",
+        "price": "450",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Scythe_Leg"
+    },
+    {
+        "icon": "spellsingers_seal.gif",
+        "name": "Spellsinger's Seal",
+        "price": "280",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Spellsinger's_Seal"
+    },
+    {
+        "icon": "resinous_fish_fin.gif",
+        "name": "Resinous Fish Fin",
+        "price": "1 250",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Resinous_Fish_Fin"
+    },
+    {
+        "icon": "ratana.gif",
+        "name": "Ratana",
+        "price": "500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Ratana"
+    },
+    {
+        "icon": "ancient_belt_buckle.gif",
+        "name": "Ancient Belt Buckle",
+        "price": "260",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Ancient_Belt_Buckle"
+    },
+    {
+        "icon": "fox_paw.gif",
+        "name": "Fox Paw",
+        "price": "100",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Fox_Paw"
+    },
+    {
+        "icon": "manticore_tail.gif",
+        "name": "Manticore Tail",
+        "price": "220",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Manticore_Tail"
+    },
+    {
+        "icon": "thorn.gif",
+        "name": "Thorn",
+        "price": "100",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Thorn"
+    },
+    {
+        "icon": "werehyaena_nose.gif",
+        "name": "Werehyaena Nose",
+        "price": "220",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Werehyaena_Nose"
+    },
+    {
+        "icon": "bashmu_tongue.gif",
+        "name": "Bashmu Tongue",
+        "price": "400",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bashmu_Tongue"
+    },
+    {
+        "icon": "liodile_fang.gif",
+        "name": "Liodile Fang",
+        "price": "480",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Liodile_Fang"
+    },
+    {
+        "icon": "bone_fibula.gif",
+        "name": "Bone Fibula",
+        "price": "580",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bone_Fibula"
+    },
+    {
+        "icon": "plate_legs.gif",
+        "name": "Plate Legs",
+        "price": "115",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Plate_Legs"
+    },
+    {
+        "icon": "cowbell.gif",
+        "name": "Cowbell",
+        "price": "210",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Cowbell"
+    },
+    {
+        "icon": "lavaworm_jaws.gif",
+        "name": "Lavaworm Jaws",
+        "price": "1 100",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lavaworm_Jaws"
+    },
+    {
+        "icon": "mega_dragon_heart.gif",
+        "name": "Mega Dragon Heart",
+        "price": "1 100",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Mega_Dragon_Heart"
+    },
+    {
+        "icon": "stonerefiners_skull.gif",
+        "name": "Stonerefiner's Skull",
+        "price": "100",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Stonerefiner's_Skull"
+    },
+    {
+        "icon": "half-digested_stones.gif",
+        "name": "Half-Digested Stones",
+        "price": "40",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Half-Digested_Stones"
+    },
+    {
+        "icon": "broken_mitmah_necklace.gif",
+        "name": "Broken Mitmah Necklace",
+        "price": "210",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Broken_Mitmah_Necklace"
+    },
+    {
+        "icon": "deepling_claw.gif",
+        "name": "Deepling Claw",
+        "price": "430",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Deepling_Claw"
+    },
+    {
+        "icon": "poisoned_fang.gif",
+        "name": "Poisoned Fang",
+        "price": "130",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Poisoned_Fang"
+    },
+    {
+        "icon": "broken_slicer.gif",
+        "name": "Broken Slicer",
+        "price": "120",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Broken_Slicer"
+    },
+    {
+        "icon": "dream_essence_egg.gif",
+        "name": "Dream Essence Egg",
+        "price": "205",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Dream_Essence_Egg"
+    },
+    {
+        "icon": "quara_bone.gif",
+        "name": "Quara Bone",
+        "price": "500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Quara_Bone"
+    },
+    {
+        "icon": "blemished_spawn_tail.gif",
+        "name": "Blemished Spawn Tail",
+        "price": "1 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Blemished_Spawn_Tail"
+    },
+    {
+        "icon": "afflicted_strider_worms.gif",
+        "name": "Afflicted Strider Worms",
+        "price": "500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Afflicted_Strider_Worms"
+    },
+    {
+        "icon": "manticore_ear.gif",
+        "name": "Manticore Ear",
+        "price": "310",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Manticore_Ear"
+    },
+    {
+        "icon": "kongras_shoulderpad.gif",
+        "name": "Kongra's Shoulderpad",
+        "price": "100",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Kongra's_Shoulderpad"
+    },
+    {
+        "icon": "sparkion_stings.gif",
+        "name": "Sparkion Stings",
+        "price": "280",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Sparkion_Stings"
+    },
+    {
+        "icon": "pirats_tail.gif",
+        "name": "Pirat's Tail",
+        "price": "180",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Pirat's_Tail"
+    },
+    {
+        "icon": "dark_shield.gif",
+        "name": "Dark Shield",
+        "price": "400",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Dark_Shield"
+    },
+    {
+        "icon": "luminous_orb.gif",
+        "name": "Luminous Orb",
+        "price": "1 000",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Luminous_Orb"
+    },
+    {
+        "icon": "dandelion_seeds.gif",
+        "name": "Dandelion Seeds",
+        "price": "200",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Dandelion_Seeds"
+    },
+    {
+        "icon": "mutated_bat_ear.gif",
+        "name": "Mutated Bat Ear",
+        "price": "420",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Mutated_Bat_Ear"
+    },
+    {
+        "icon": "two-headed_turtle_heads.gif",
+        "name": "Two-Headed Turtle Heads",
+        "price": "460",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Two-Headed_Turtle_Heads"
+    },
+    {
+        "icon": "key_to_the_drowned_library.gif",
+        "name": "Key To The Drowned Library",
+        "price": "330",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Key_To_The_Drowned_Library"
+    },
+    {
+        "icon": "lion_cloak_patch.gif",
+        "name": "Lion Cloak Patch",
+        "price": "190",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lion_Cloak_Patch"
+    },
+    {
+        "icon": "afflicted_strider_head.gif",
+        "name": "Afflicted Strider Head",
+        "price": "900",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Afflicted_Strider_Head"
+    },
+    {
+        "icon": "cookbook_fairy.gif",
+        "name": "Cookbook",
+        "price": "870",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Cookbook"
+    },
+    {
+        "icon": "cracked_alabaster_vase.gif",
+        "name": "Cracked Alabaster Vase",
+        "price": "180",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Cracked_Alabaster_Vase"
+    },
+    {
+        "icon": "makara_fin.gif",
+        "name": "Makara Fin",
+        "price": "350",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Makara_Fin"
+    },
+    {
+        "icon": "elder_bonelord_tentacle.gif",
+        "name": "Elder Bonelord Tentacle",
+        "price": "150",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Elder_Bonelord_Tentacle"
+    },
+    {
+        "icon": "naga_armring.gif",
+        "name": "Naga Armring",
+        "price": "390",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Naga_Armring"
+    },
+    {
+        "icon": "eyeless_devourer_tongue.gif",
+        "name": "Eyeless Devourer Tongue",
+        "price": "900",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Eyeless_Devourer_Tongue"
+    },
+    {
+        "icon": "sphinx_tiara.gif",
+        "name": "Sphinx Tiara",
+        "price": "360",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Sphinx_Tiara"
+    },
+    {
+        "icon": "winged_tail.gif",
+        "name": "Winged Tail",
+        "price": "800",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Winged_Tail"
+    },
+    {
+        "icon": "basalt_figurine.gif",
+        "name": "Basalt Figurine",
+        "price": "160",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Basalt_Figurine"
+    },
+    {
+        "icon": "bashmu_feather.gif",
+        "name": "Bashmu Feather",
+        "price": "350",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bashmu_Feather"
+    },
+    {
+        "icon": "zaogun_shoulderplates.gif",
+        "name": "Zaogun Shoulderplates",
+        "price": "150",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Zaogun_Shoulderplates"
+    },
+    {
+        "icon": "waspoid_claw.gif",
+        "name": "Waspoid Claw",
+        "price": "320",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Waspoid_Claw"
+    },
+    {
+        "icon": "black_shield.gif",
+        "name": "Black Shield",
+        "price": "800",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Black_Shield"
+    },
+    {
+        "icon": "blood_tincture_in_a_vial.gif",
+        "name": "Blood Tincture In A Vial",
+        "price": "360",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Blood_Tincture_In_A_Vial"
+    },
+    {
+        "icon": "mouldy_powder.gif",
+        "name": "Mouldy Powder",
+        "price": "200",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Mouldy_Powder"
+    },
+    {
+        "icon": "bone_fetish.gif",
+        "name": "Bone Fetish",
+        "price": "150",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bone_Fetish"
+    },
+    {
+        "icon": "compound_eye.gif",
+        "name": "Compound Eye",
+        "price": "150",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Compound_Eye"
+    },
+    {
+        "icon": "scroll_of_heroic_deeds.gif",
+        "name": "Scroll of Heroic Deeds",
+        "price": "230",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Scroll_of_Heroic_Deeds"
+    },
+    {
+        "icon": "book_of_necromantic_rituals.gif",
+        "name": "Book of Necromantic Rituals",
+        "price": "180",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Book_of_Necromantic_Rituals"
+    },
+    {
+        "icon": "bone_toothpick.gif",
+        "name": "Bone Toothpick",
+        "price": "150",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bone_Toothpick"
+    },
+    {
+        "icon": "coral_branch.gif",
+        "name": "Coral Branch",
+        "price": "360",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Coral_Branch"
+    },
+    {
+        "icon": "makara_tongue.gif",
+        "name": "Makara Tongue",
+        "price": "320",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Makara_Tongue"
+    },
+    {
+        "icon": "grappling_hook.gif",
+        "name": "Grappling Hook",
+        "price": "150",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Grappling_Hook"
+    },
+    {
+        "icon": "stone_wing.gif",
+        "name": "Stone Wing",
+        "price": "120",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Stone_Wing"
+    },
+    {
+        "icon": "cheesy_figurine.gif",
+        "name": "Cheesy Figurine",
+        "price": "150",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Cheesy_Figurine"
+    },
+    {
+        "icon": "lost_bashers_spike.gif",
+        "name": "Lost Basher's Spike",
+        "price": "280",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lost_Basher's_Spike"
+    },
+    {
+        "icon": "cursed_shoulder_spikes.gif",
+        "name": "Cursed Shoulder Spikes",
+        "price": "320",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Cursed_Shoulder_Spikes"
+    },
+    {
+        "icon": "bone_shoulderplate.gif",
+        "name": "Bone Shoulderplate",
+        "price": "150",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bone_Shoulderplate"
+    },
+    {
+        "icon": "lion_crest.gif",
+        "name": "Lion Crest",
+        "price": "270",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lion_Crest"
+    },
+    {
+        "icon": "falcon_crest.gif",
+        "name": "Falcon Crest",
+        "price": "650",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Falcon_Crest"
+    },
+    {
+        "icon": "strange_helmet.gif",
+        "name": "Strange Helmet",
+        "price": "500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Strange_Helmet"
+    },
+    {
+        "icon": "boggy_dreads.gif",
+        "name": "Boggy Dreads",
+        "price": "200",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Boggy_Dreads"
+    },
+    {
+        "icon": "mummified_demon_finger.gif",
+        "name": "Mummified Demon Finger",
+        "price": "800",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Mummified_Demon_Finger"
+    },
+    {
+        "icon": "demon_root.gif",
+        "name": "Demon Root",
+        "price": "950",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Demon_Root"
+    },
+    {
+        "icon": "glob_of_glooth.gif",
+        "name": "Glob of Glooth",
+        "price": "125",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Glob_of_Glooth"
+    },
+    {
+        "icon": "scorpion_charm.gif",
+        "name": "Scorpion Charm",
+        "price": "620",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Scorpion_Charm"
+    },
+    {
+        "icon": "orcish_axe.gif",
+        "name": "Orcish Axe",
+        "price": "350",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Orcish_Axe"
+    },
+    {
+        "icon": "pressed_flower.gif",
+        "name": "Pressed Flower",
+        "price": "570",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Pressed_Flower"
+    },
+    {
+        "icon": "execowtioner_mask.gif",
+        "name": "Execowtioner Mask",
+        "price": "240",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Execowtioner_Mask"
+    },
+    {
+        "icon": "wimp_tooth_chain.gif",
+        "name": "Wimp Tooth Chain",
+        "price": "120",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Wimp_Tooth_Chain"
+    },
+    {
+        "icon": "blue_goanna_scale.gif",
+        "name": "Blue Goanna Scale",
+        "price": "230",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Blue_Goanna_Scale"
+    },
+    {
+        "icon": "double_axe.gif",
+        "name": "Double Axe",
+        "price": "260",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Double_Axe"
+    },
+    {
+        "icon": "tail_of_corruption.gif",
+        "name": "Tail of Corruption",
+        "price": "240",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Tail_of_Corruption"
+    },
+    {
+        "icon": "deepling_guard_belt_buckle.gif",
+        "name": "Deepling Guard Belt Buckle",
+        "price": "230",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Deepling_Guard_Belt_Buckle"
+    },
+    {
+        "icon": "crystal_bone.gif",
+        "name": "Crystal Bone",
+        "price": "250",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Crystal_Bone"
+    },
+    {
+        "icon": "fig_leaf.gif",
+        "name": "Fig Leaf",
+        "price": "200",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Fig_Leaf"
+    },
+    {
+        "icon": "widows_mandibles.gif",
+        "name": "Widow's Mandibles",
+        "price": "110",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Widow's_Mandibles"
+    },
+    {
+        "icon": "dung_ball.gif",
+        "name": "Dung Ball",
+        "price": "130",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Dung_Ball"
+    },
+    {
+        "icon": "high_guard_shoulderplates.gif",
+        "name": "High Guard Shoulderplates",
+        "price": "130",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/High_Guard_Shoulderplates"
+    },
+    {
+        "icon": "wild_flowers.gif",
+        "name": "Wild Flowers",
+        "price": "120",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Wild_Flowers"
+    },
+    {
+        "icon": "swarmer_antenna.gif",
+        "name": "Swarmer Antenna",
+        "price": "130",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Swarmer_Antenna"
+    },
+    {
+        "icon": "girtablilu_warrior_carapace.gif",
+        "name": "Girtablilu Warrior Carapace",
+        "price": "520",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Girtablilu_Warrior_Carapace"
+    },
+    {
+        "icon": "mammoth_tusk.gif",
+        "name": "Mammoth Tusk",
+        "price": "100",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Mammoth_Tusk"
+    },
+    {
+        "icon": "bashmu_fang.gif",
+        "name": "Bashmu Fang",
+        "price": "600",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bashmu_Fang"
+    },
+    {
+        "icon": "small_treasure_chest.gif",
+        "name": "Small Treasure Chest",
+        "price": "500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Small_Treasure_Chest"
+    },
+    {
+        "icon": "broken_throwing_axe.gif",
+        "name": "Broken Throwing Axe",
+        "price": "230",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Broken_Throwing_Axe"
+    },
+    {
+        "icon": "green_bandage.gif",
+        "name": "Green Bandage",
+        "price": "180",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Green_Bandage"
+    },
+    {
+        "icon": "bonecarving_knife.gif",
+        "name": "Bonecarving Knife",
+        "price": "190",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bonecarving_Knife"
+    },
+    {
+        "icon": "ripper_lance.gif",
+        "name": "Ripper Lance",
+        "price": "500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Ripper_Lance"
+    },
+    {
+        "icon": "taurus_mace.gif",
+        "name": "Taurus Mace",
+        "price": "500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Taurus_Mace"
+    },
+    {
+        "icon": "dragon_priests_wandtip.gif",
+        "name": "Dragon Priest's Wandtip",
+        "price": "175",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Dragon_Priest's_Wandtip"
+    },
+    {
+        "icon": "striped_fur.gif",
+        "name": "Striped Fur",
+        "price": "50",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Striped_Fur"
+    },
+    {
+        "icon": "sulphurous_stone.gif",
+        "name": "Sulphurous Stone",
+        "price": "100",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Sulphurous_Stone"
+    },
+    {
+        "icon": "bony_tail.gif",
+        "name": "Bony Tail",
+        "price": "210",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bony_Tail"
+    },
+    {
+        "icon": "small_notebook.gif",
+        "name": "Small Notebook",
+        "price": "480",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Small_Notebook"
+    },
+    {
+        "icon": "dragons_tail.gif",
+        "name": "Dragon's Tail",
+        "price": "100",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Dragon's_Tail"
+    },
+    {
+        "icon": "shamanic_talisman.gif",
+        "name": "Shamanic Talisman",
+        "price": "200",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Shamanic_Talisman"
+    },
+    {
+        "icon": "mad_froth.gif",
+        "name": "Mad Froth",
+        "price": "80",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Mad_Froth"
+    },
+    {
+        "icon": "broken_halberd.gif",
+        "name": "Broken Halberd",
+        "price": "100",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Broken_Halberd"
+    },
+    {
+        "icon": "deepling_breaktime_snack.gif",
+        "name": "Deepling Breaktime Snack",
+        "price": "90",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Deepling_Breaktime_Snack"
+    },
+    {
+        "icon": "broadsword.gif",
+        "name": "Broadsword",
+        "price": "500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Broadsword"
+    },
+    {
+        "icon": "giant_pacifier.gif",
+        "name": "Giant Pacifier",
+        "price": "170",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Giant_Pacifier"
+    },
+    {
+        "icon": "scimitar.gif",
+        "name": "Scimitar",
+        "price": "150",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Scimitar"
+    },
+    {
+        "icon": "lancer_beetle_shell.gif",
+        "name": "Lancer Beetle Shell",
+        "price": "80",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lancer_Beetle_Shell"
+    },
+    {
+        "icon": "stampor_talons.gif",
+        "name": "Stampor Talons",
+        "price": "150",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Stampor_Talons"
+    },
+    {
+        "icon": "vampires_cape_chain.gif",
+        "name": "Vampire's Cape Chain",
+        "price": "150",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Vampire's_Cape_Chain"
+    },
+    {
+        "icon": "gauze_bandage.gif",
+        "name": "Gauze Bandage",
+        "price": "90",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Gauze_Bandage"
+    },
+    {
+        "icon": "small_tropical_fish.gif",
+        "name": "Small Tropical Fish",
+        "price": "380",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Small_Tropical_Fish"
+    },
+    {
+        "icon": "orcish_gear.gif",
+        "name": "Orcish Gear",
+        "price": "85",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Orcish_Gear"
+    },
+    {
+        "icon": "ritual_tooth.gif",
+        "name": "Ritual Tooth",
+        "price": "135",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Ritual_Tooth"
+    },
+    {
+        "icon": "witch_broom.gif",
+        "name": "Witch Broom",
+        "price": "60",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Witch_Broom"
+    },
+    {
+        "icon": "blood_preservation.gif",
+        "name": "Blood Preservation",
+        "price": "320",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Blood_Preservation"
+    },
+    {
+        "icon": "mutated_rat_tail.gif",
+        "name": "Mutated Rat Tail",
+        "price": "150",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Mutated_Rat_Tail"
+    },
+    {
+        "icon": "werehyaena_talisman.gif",
+        "name": "Werehyaena Talisman",
+        "price": "350",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Werehyaena_Talisman"
+    },
+    {
+        "icon": "lost_bracers.gif",
+        "name": "Lost Bracers",
+        "price": "140",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lost_Bracers"
+    },
+    {
+        "icon": "dirty_turban.gif",
+        "name": "Dirty Turban",
+        "price": "120",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Dirty_Turban"
+    },
+    {
+        "icon": "mammoth_whopper.gif",
+        "name": "Mammoth Whopper",
+        "price": "300",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Mammoth_Whopper"
+    },
+    {
+        "icon": "empty_honey_glass.gif",
+        "name": "Empty Honey Glass",
+        "price": "270",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Empty_Honey_Glass"
+    },
+    {
+        "icon": "rotten_piece_of_cloth.gif",
+        "name": "Rotten Piece of Cloth",
+        "price": "30",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Rotten_Piece_of_Cloth"
+    },
+    {
+        "icon": "goanna_claw.gif",
+        "name": "Goanna Claw",
+        "price": "260",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Goanna_Claw"
+    },
+    {
+        "icon": "spiky_club.gif",
+        "name": "Spiky Club",
+        "price": "300",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Spiky_Club"
+    },
+    {
+        "icon": "spiked_iron_ball.gif",
+        "name": "Spiked Iron Ball",
+        "price": "100",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Spiked_Iron_Ball"
+    },
+    {
+        "icon": "venison.gif",
+        "name": "Venison",
+        "price": "55",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Venison"
+    },
+    {
+        "icon": "damaged_armor_plates.gif",
+        "name": "Damaged Armor Plates",
+        "price": "280",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Damaged_Armor_Plates"
+    },
+    {
+        "icon": "terramite_legs.gif",
+        "name": "Terramite Legs",
+        "price": "60",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Terramite_Legs"
+    },
+    {
+        "icon": "small_flask_of_eyedrops.gif",
+        "name": "Small Flask of Eyedrops",
+        "price": "95",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Small_Flask_of_Eyedrops"
+    },
+    {
+        "icon": "cheese_cutter.gif",
+        "name": "Cheese Cutter",
+        "price": "50",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Cheese_Cutter"
+    },
+    {
+        "icon": "mutated_flesh.gif",
+        "name": "Mutated Flesh",
+        "price": "50",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Mutated_Flesh"
+    },
+    {
+        "icon": "deepling_scales.gif",
+        "name": "Deepling Scales",
+        "price": "80",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Deepling_Scales"
+    },
+    {
+        "icon": "half-eaten_brain.gif",
+        "name": "Half-Eaten Brain",
+        "price": "85",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Half-Eaten_Brain"
+    },
+    {
+        "icon": "lancet.gif",
+        "name": "Lancet",
+        "price": "90",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Lancet"
+    },
+    {
+        "icon": "red_hair_dye.gif",
+        "name": "Red Hair Dye",
+        "price": "40",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Red_Hair_Dye"
+    },
+    {
+        "icon": "battle_shield.gif",
+        "name": "Battle Shield",
+        "price": "95",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Battle_Shield"
+    },
+    {
+        "icon": "broken_gladiator_shield.gif",
+        "name": "Broken Gladiator Shield",
+        "price": "190",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Broken_Gladiator_Shield"
+    },
+    {
+        "icon": "dowser.gif",
+        "name": "Dowser",
+        "price": "35",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Dowser"
+    },
+    {
+        "icon": "glob_of_tar.gif",
+        "name": "Glob of Tar",
+        "price": "30",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Glob_of_Tar"
+    },
+    {
+        "icon": "earflap.gif",
+        "name": "Earflap",
+        "price": "40",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Earflap"
+    },
+    {
+        "icon": "bola.gif",
+        "name": "Bola",
+        "price": "35",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bola"
+    },
+    {
+        "icon": "fir_cone.gif",
+        "name": "Fir Cone",
+        "price": "25",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Fir_Cone"
+    },
+    {
+        "icon": "rotten_feather.gif",
+        "name": "Rotten Feather",
+        "price": "120",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Rotten_Feather"
+    },
+    {
+        "icon": "dark_rosary.gif",
+        "name": "Dark Rosary",
+        "price": "48",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Dark_Rosary"
+    },
+    {
+        "icon": "glob_of_acid_slime.gif",
+        "name": "Glob of Acid Slime",
+        "price": "25",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Glob_of_Acid_Slime"
+    },
+    {
+        "icon": "colourful_feather.gif",
+        "name": "Colourful Feather",
+        "price": "110",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Colourful_Feather"
+    },
+    {
+        "icon": "damselfly_eye.gif",
+        "name": "Damselfly Eye",
+        "price": "25",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Damselfly_Eye"
+    },
+    {
+        "icon": "shaggy_tail.gif",
+        "name": "Shaggy Tail",
+        "price": "25",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Shaggy_Tail"
+    },
+    {
+        "icon": "heavy_machete.gif",
+        "name": "Heavy Machete",
+        "price": "90",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Heavy_Machete"
+    },
+    {
+        "icon": "horoscope.gif",
+        "name": "Horoscope",
+        "price": "40",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Horoscope"
+    },
+    {
+        "icon": "swampling_club.gif",
+        "name": "Swampling Club",
+        "price": "40",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Swampling_Club"
+    },
+    {
+        "icon": "girlish_hair_decoration.gif",
+        "name": "Girlish Hair Decoration",
+        "price": "30",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Girlish_Hair_Decoration"
+    },
+    {
+        "icon": "centipede_leg.gif",
+        "name": "Centipede Leg",
+        "price": "28",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Centipede_Leg"
+    },
+    {
+        "icon": "tooth_file.gif",
+        "name": "Tooth File",
+        "price": "60",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Tooth_File"
+    },
+    {
+        "icon": "piece_of_warrior_armor.gif",
+        "name": "Piece of Warrior Armor",
+        "price": "50",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Piece_of_Warrior_Armor"
+    },
+    {
+        "icon": "banana_sash.gif",
+        "name": "Banana Sash",
+        "price": "55",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Banana_Sash"
+    },
+    {
+        "icon": "sandcrawler_shell.gif",
+        "name": "Sandcrawler Shell",
+        "price": "20",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Sandcrawler_Shell"
+    },
+    {
+        "icon": "bone_club.gif",
+        "name": "Bone Club",
+        "price": "5",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Bone_Club"
+    },
+    {
+        "icon": "knife.gif",
+        "name": "Knife",
+        "price": "1",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Knife"
+    },
+    {
+        "icon": "combat_knife.gif",
+        "name": "Combat Knife",
+        "price": "1",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Combat_Knife"
+    },
+    {
+        "icon": "piece_of_hell_steel.gif",
+        "name": "Piece of Hell Steel",
+        "price": "500",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Piece_of_Hell_Steel"
+    },
+    {
+        "icon": "hydra_head.gif",
+        "name": "Hydra Head",
+        "price": "600",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Hydra_Head"
+    },
+    {
+        "icon": "silencer_resonating_chamber.gif",
+        "name": "Silencer Resonating Chamber",
+        "price": "600",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Silencer_Resonating_Chamber"
+    },
+    {
+        "icon": "flask_of_demonic_blood.gif",
+        "name": "Flask of Demonic Blood",
+        "price": "0",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Flask_of_Demonic_Blood"
+    },
+    {
+        "icon": "crystalline_sword.gif",
+        "name": "Crystalline Sword",
+        "price": "0",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Crystalline_Sword"
+    },
+    {
+        "icon": "raw_meat.gif",
+        "name": "Raw Meat",
+        "price": "0",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Raw_Meat"
+    },
+    {
+        "icon": "sliver.gif",
+        "name": "Sliver",
+        "price": "0",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Sliver"
+    },
+    {
+        "icon": "exalted_core.gif",
+        "name": "Exalted Core",
+        "price": "0",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Exalted_Core"
+    },
+    {
+        "icon": "demonic_matter.gif",
+        "name": "Demonic Matter",
+        "price": "0",
+        "value": "TBD",
+        "link": "https://tibia.fandom.com/wiki/Demonic_Matter"
+    }
+]

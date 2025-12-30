@@ -132,7 +132,7 @@ function enable_default_tabs() {
     initial_show_tab("TargetSkill")
   }
   else if (location.href.includes('/deliveries')) {
-    initial_show_tab("RashidTab")
+    initial_show_tab("Everything")
   }
 
 
