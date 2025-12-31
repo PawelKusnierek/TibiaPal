@@ -12,7 +12,7 @@ function sortDeliveriesTables() {
         'deliveries_table_yasir',
         'deliveries_table_telas',
         'deliveries_table_gladys',
-        'deliveries_table_edron_academy',
+        'deliveries_table_others',
         'deliveries_table_esrik',
         'deliveries_table_flint'
     ];
@@ -121,7 +121,7 @@ function get_table_id_from_tab(tabName) {
         'Yasir': 'deliveries_table_yasir',
         'Telas': 'deliveries_table_telas',
         'Gladys': 'deliveries_table_gladys',
-        'Edron Academy': 'deliveries_table_edron_academy',
+        'Others': 'deliveries_table_others',
         'Esrik': 'deliveries_table_esrik',
         'Flint': 'deliveries_table_flint'
     };
@@ -272,7 +272,7 @@ function initializeDeliverySortingHeaders() {
         'deliveries_table_yasir',
         'deliveries_table_telas',
         'deliveries_table_gladys',
-        'deliveries_table_edron_academy',
+        'deliveries_table_others',
         'deliveries_table_esrik',
         'deliveries_table_flint'
     ];

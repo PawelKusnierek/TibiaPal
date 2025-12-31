@@ -17,9 +17,9 @@ scripts: <script src="../scripts/deliveries.js"></script>
     <button id="yasir" class="tablinks" onclick="show_tab(event, 'Yasir')">Yasir</button>
     <button id="telas" class="tablinks" onclick="show_tab(event, 'Telas')">Telas</button>
     <button id="gladys" class="tablinks" onclick="show_tab(event, 'Gladys')">Gladys</button>
-    <button id="edron_academy" class="tablinks" onclick="show_tab(event, 'Edron Academy')">Edron Academy</button>
     <button id="esrik" class="tablinks" onclick="show_tab(event, 'Esrik')">Esrik/Pompan</button>
     <button id="flint" class="tablinks" onclick="show_tab(event, 'Flint')">Flint</button>
+    <button id="others" class="tablinks" onclick="show_tab(event, 'Others')">Others</button>
 </div>
 
 <div id="filter_selection" style="margin-top: 20px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
@@ -228,15 +228,15 @@ scripts: <script src="../scripts/deliveries.js"></script>
     </table>
 </div>
 
-<div id="Edron Academy" class="tabcontent">
-    <table id="deliveries_table_edron_academy" class="deliveries_table">
+<div id="Others" class="tabcontent">
+    <table id="deliveries_table_others" class="deliveries_table">
         <tr>
             <th>Icon</th>
             <th>Name</th>
             <th>NPC Price</th>
             <th>Market Value</th>
         </tr>
-        {% for item_name in site.data.deliveries.edron_academy %}
+        {% for item_name in site.data.deliveries.others %}
             {% assign delivery = site.data.deliveries.everything | where: "name", item_name | first %}
             {% if delivery %}
             <tr>
