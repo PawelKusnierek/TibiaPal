@@ -174,10 +174,169 @@ function apply_name_filter() {
     }
 }
 
+// Helper function to parse NPC price (handles formats like "2 000", "35 000", etc.)
+function parsePrice(priceText) {
+    if (!priceText) return 0;
+    // Remove spaces and parse as integer
+    const cleaned = priceText.replace(/\s/g, '');
+    const parsed = parseInt(cleaned, 10);
+    return isNaN(parsed) ? 0 : parsed;
+}
+
+// Helper function to get Market Value order
+function getMarketValueOrder(valueText) {
+    const valueOrder = {
+        'Very High': 0,
+        'High': 1,
+        'Medium': 2,
+        'Low': 3
+    };
+    return valueOrder[valueText] !== undefined ? valueOrder[valueText] : 999;
+}
+
+// Helper function to extract name text from cell (handles links)
+function extractName(cell) {
+    if (cell.querySelector('a')) {
+        return cell.querySelector('a').textContent.trim();
+    } else {
+        return cell.textContent.trim();
+    }
+}
+
+// Sort delivery table by column
+function sortDeliveryTable(columnIndex, tableId) {
+    const table = document.getElementById(tableId);
+    if (!table) return;
+    
+    const tbody = table.querySelector('tbody') || table;
+    const rows = Array.from(tbody.querySelectorAll('tr')).slice(1); // Skip header row
+    
+    // Get current sort direction
+    const header = table.querySelector('tr').cells[columnIndex];
+    const currentDirection = header.getAttribute('data-sort-direction') || 'asc';
+    const newDirection = currentDirection === 'asc' ? 'desc' : 'asc';
+    
+    // Update sort direction on all headers
+    const headers = table.querySelector('tr').cells;
+    for (let i = 0; i < headers.length; i++) {
+        headers[i].setAttribute('data-sort-direction', '');
+        headers[i].classList.remove('delivery-sort-asc', 'delivery-sort-desc');
+    }
+    header.setAttribute('data-sort-direction', newDirection);
+    header.classList.add('delivery-sort-' + newDirection);
+    
+    // Sort rows
+    rows.sort((a, b) => {
+        let aValue, bValue;
+        
+        if (columnIndex === 1) {
+            // Name column - alphabetical
+            aValue = extractName(a.cells[columnIndex]);
+            bValue = extractName(b.cells[columnIndex]);
+        } else if (columnIndex === 2) {
+            // NPC Price column - numeric
+            aValue = parsePrice(a.cells[columnIndex].textContent.trim());
+            bValue = parsePrice(b.cells[columnIndex].textContent.trim());
+        } else if (columnIndex === 3) {
+            // Market Value column - categorical
+            aValue = getMarketValueOrder(a.cells[columnIndex].textContent.trim());
+            bValue = getMarketValueOrder(b.cells[columnIndex].textContent.trim());
+        } else {
+            // Default to text comparison
+            aValue = a.cells[columnIndex].textContent.trim();
+            bValue = b.cells[columnIndex].textContent.trim();
+        }
+        
+        // Compare values
+        let comparison = 0;
+        if (typeof aValue === 'string' && typeof bValue === 'string') {
+            comparison = aValue.localeCompare(bValue);
+        } else {
+            comparison = aValue > bValue ? 1 : (aValue < bValue ? -1 : 0);
+        }
+        
+        // Apply sort direction
+        return newDirection === 'asc' ? comparison : -comparison;
+    });
+    
+    // Reorder rows in the table
+    rows.forEach(row => tbody.appendChild(row));
+}
+
+// Initialize sortable headers for delivery tables
+function initializeDeliverySortingHeaders() {
+    const tableIds = [
+        'deliveries_table_everything',
+        'deliveries_table_rashid',
+        'deliveries_table_djinn',
+        'deliveries_table_yasir',
+        'deliveries_table_telas',
+        'deliveries_table_gladys',
+        'deliveries_table_edron_academy',
+        'deliveries_table_esrik',
+        'deliveries_table_flint'
+    ];
+    
+    tableIds.forEach(tableId => {
+        const table = document.getElementById(tableId);
+        if (!table) return;
+        
+        const headerRow = table.querySelector('tr');
+        if (!headerRow) return;
+        
+        const headers = headerRow.cells;
+        
+        // Make Name (1), NPC Price (2), and Market Value (3) headers clickable
+        [1, 2, 3].forEach(columnIndex => {
+            const header = headers[columnIndex];
+            if (header && !header.classList.contains('delivery-sortable-header')) {
+                header.classList.add('delivery-sortable-header');
+                header.addEventListener('click', () => sortDeliveryTable(columnIndex, tableId));
+            }
+        });
+    });
+}
+
+// Reinitialize sorting headers when tabs are switched
+function reinitializeDeliverySortingOnTabSwitch() {
+    const tabButtons = document.querySelectorAll('.deliveries_tab .tablinks');
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Small delay to ensure tab content is shown
+            setTimeout(() => {
+                const activeTab = get_active_delivery_tab();
+                const tableId = get_table_id_from_tab(activeTab);
+                const table = document.getElementById(tableId);
+                
+                if (table) {
+                    const headerRow = table.querySelector('tr');
+                    if (headerRow) {
+                        const headers = headerRow.cells;
+                        // Make Name, NPC Price, and Market Value headers clickable
+                        [1, 2, 3].forEach(columnIndex => {
+                            const header = headers[columnIndex];
+                            if (header && !header.classList.contains('delivery-sortable-header')) {
+                                header.classList.add('delivery-sortable-header');
+                                header.addEventListener('click', () => sortDeliveryTable(columnIndex, tableId));
+                            }
+                        });
+                    }
+                }
+                
+                // Reapply filter
+                apply_name_filter();
+            }, 50);
+        });
+    });
+}
+
 // Sort tables when page loads
 document.addEventListener('DOMContentLoaded', function() {
     // Small delay to ensure all content is rendered
-    setTimeout(sortDeliveriesTables, 100);
+    setTimeout(() => {
+        sortDeliveriesTables();
+        initializeDeliverySortingHeaders();
+    }, 100);
     
     // Set up name filter event listener
     const nameFilter = document.getElementById('nameFilter');
@@ -187,16 +346,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Reapply filter when tabs are switched
-    // Add event listeners to all tab buttons
-    const tabButtons = document.querySelectorAll('.deliveries_tab .tablinks');
-    tabButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Small delay to ensure tab content is shown before filtering
-            setTimeout(() => {
-                apply_name_filter();
-            }, 50);
-        });
-    });
+    // Reinitialize sorting headers and reapply filter when tabs are switched
+    reinitializeDeliverySortingOnTabSwitch();
 });
 
