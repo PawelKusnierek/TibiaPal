@@ -6,9 +6,9 @@ scripts: <script src="../scripts/deliveries.js"></script>
 <p id="equipment_info">
     <span style="color: purple"><b>PURPOSE:</b></span> All Weekly delivery items list. Can help in deciding which items are best sold on the market vs. safely directly to NPCs.<br><br>
     <span style="color: red"><b>Very High</b></span> value items should <b>always</b> be sold on the market.<br>
-    <span style="color: orange"><b>High</b></span> value items should always be sold on the market, unless you desperately need money fast.<br>
-    <span style="color: yellow"><b>Medium</b></span> items should generally be sold on the market, but usually not for much more than the NPC price.<br>
-    <span style="color: green"><b>Low</b></span> value items can be safely sold to NPCs, unless the supply is really low on your server.<br><br>
+    <span style="color: orange"><b>High</b></span> value items should <b>always</b> be sold on the market, unless you desperately need money fast.<br>
+    <span style="color: yellow"><b>Medium</b></span> items should <b>generally</b> be sold on the market, but usually not for much more than the NPC price.<br>
+    <span style="color: green"><b>Low</b></span> value items can be <b>safely sold to NPCs</b>, unless the supply is really low on your server.<br><br>
 </p>
 <div class="deliveries_tab">
     <button id="everything" class="tablinks active" onclick="show_tab(event, 'Everything')">Everything</button>
@@ -20,6 +20,11 @@ scripts: <script src="../scripts/deliveries.js"></script>
     <button id="edron_academy" class="tablinks" onclick="show_tab(event, 'Edron Academy')">Edron Academy</button>
     <button id="esrik" class="tablinks" onclick="show_tab(event, 'Esrik')">Esrik/Pompan</button>
     <button id="flint" class="tablinks" onclick="show_tab(event, 'Flint')">Flint</button>
+</div>
+
+<div id="filter_selection" style="margin-top: 20px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+    <label for="nameFilter" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Item Name:</label>
+    <input type="text" id="nameFilter" placeholder="Filter items by name..." style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
 </div>
 
 <div id="Everything" class="tabcontent">

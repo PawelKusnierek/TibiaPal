@@ -214,7 +214,7 @@ async function check_livestream() {
       // Disable embed to prevent excessive/inflated viewer count especially during 2x events/peak traffic etc.
       // TODO: Investigate Kick API to see if there's a way to Embed Kick stream without including viewers/inflating viewer count (AFAIK currently not possible)
       // This would be the best solution and would prevent any potential complaints about viewership etc. while still exposing channel to TibiaPal audience
-      if (data.livestream.viewer_count <= 300) {
+      if (data.livestream.viewer_count <= 350) {
         console.log(`Stream is LIVE!`);
         live_element.style.display = "initial";
         embed_iframe.src = 'https://player.kick.com/Kusnier?autoplay=true&?muted=true'
