@@ -4,7 +4,7 @@ title: TibiaPal.com - Deliveries
 scripts: <script src="../scripts/deliveries.js"></script>
 ---
 <p id="equipment_info">
-    <span style="color: purple"><b>PURPOSE:</b></span> All Weekly delivery items list. Can help in deciding which items are best sold on the market vs. safely directly to NPCs.<br><br>
+    <span style="color: purple"><b>PURPOSE:</b></span> All Weekly delivery items list. Can help in deciding which items are best sold on the market vs. directly to NPCs.<br><br>
     <span style="color: red"><b>Very High</b></span> value items should <b>always</b> be sold on the market.<br>
     <span style="color: orange"><b>High</b></span> value items should <b>always</b> be sold on the market, unless you desperately need money fast.<br>
     <span style="color: yellow"><b>Medium</b></span> items should <b>generally</b> be sold on the market, but usually not for much more than the NPC price.<br>
@@ -44,10 +44,12 @@ scripts: <script src="../scripts/deliveries.js"></script>
                 <td>{{ delivery.name }}</td>
                 {% endif %}
                 <td>{{ delivery.price }}</td>
-                {% if delivery.value == "High" %}
+                {% if delivery.value == "Very High" %}
                 <td style="color: red"><b>{{ delivery.value }}</b></td>
-                {% elsif delivery.value == "Medium" %}
+                {% elsif delivery.value == "High" %}
                 <td style="color: orange"><b>{{ delivery.value }}</b></td>
+                {% elsif delivery.value == "Medium" %}
+                <td style="color: yellow"><b>{{ delivery.value }}</b></td>
                 {% elsif delivery.value == "Low" %}
                 <td style="color: green"><b>{{ delivery.value }}</b></td>
                 {% else %}
@@ -77,10 +79,12 @@ scripts: <script src="../scripts/deliveries.js"></script>
                 <td>{{ delivery.name }}</td>
                 {% endif %}
                 <td>{{ delivery.price }}</td>
-                {% if delivery.value == "High" %}
+                {% if delivery.value == "Very High" %}
                 <td style="color: red"><b>{{ delivery.value }}</b></td>
-                {% elsif delivery.value == "Medium" %}
+                {% elsif delivery.value == "High" %}
                 <td style="color: orange"><b>{{ delivery.value }}</b></td>
+                {% elsif delivery.value == "Medium" %}
+                <td style="color: yellow"><b>{{ delivery.value }}</b></td>
                 {% elsif delivery.value == "Low" %}
                 <td style="color: green"><b>{{ delivery.value }}</b></td>
                 {% else %}
@@ -111,10 +115,12 @@ scripts: <script src="../scripts/deliveries.js"></script>
                 <td>{{ delivery.name }}</td>
                 {% endif %}
                 <td>{{ delivery.price }}</td>
-                {% if delivery.value == "High" %}
+                {% if delivery.value == "Very High" %}
                 <td style="color: red"><b>{{ delivery.value }}</b></td>
-                {% elsif delivery.value == "Medium" %}
+                {% elsif delivery.value == "High" %}
                 <td style="color: orange"><b>{{ delivery.value }}</b></td>
+                {% elsif delivery.value == "Medium" %}
+                <td style="color: yellow"><b>{{ delivery.value }}</b></td>
                 {% elsif delivery.value == "Low" %}
                 <td style="color: green"><b>{{ delivery.value }}</b></td>
                 {% else %}
@@ -145,10 +151,12 @@ scripts: <script src="../scripts/deliveries.js"></script>
                 <td>{{ delivery.name }}</td>
                 {% endif %}
                 <td>{{ delivery.price }}</td>
-                {% if delivery.value == "High" %}
+                {% if delivery.value == "Very High" %}
                 <td style="color: red"><b>{{ delivery.value }}</b></td>
-                {% elsif delivery.value == "Medium" %}
+                {% elsif delivery.value == "High" %}
                 <td style="color: orange"><b>{{ delivery.value }}</b></td>
+                {% elsif delivery.value == "Medium" %}
+                <td style="color: yellow"><b>{{ delivery.value }}</b></td>
                 {% elsif delivery.value == "Low" %}
                 <td style="color: green"><b>{{ delivery.value }}</b></td>
                 {% else %}
@@ -179,10 +187,12 @@ scripts: <script src="../scripts/deliveries.js"></script>
                 <td>{{ delivery.name }}</td>
                 {% endif %}
                 <td>{{ delivery.price }}</td>
-                {% if delivery.value == "High" %}
+                {% if delivery.value == "Very High" %}
                 <td style="color: red"><b>{{ delivery.value }}</b></td>
-                {% elsif delivery.value == "Medium" %}
+                {% elsif delivery.value == "High" %}
                 <td style="color: orange"><b>{{ delivery.value }}</b></td>
+                {% elsif delivery.value == "Medium" %}
+                <td style="color: yellow"><b>{{ delivery.value }}</b></td>
                 {% elsif delivery.value == "Low" %}
                 <td style="color: green"><b>{{ delivery.value }}</b></td>
                 {% else %}
@@ -213,10 +223,12 @@ scripts: <script src="../scripts/deliveries.js"></script>
                 <td>{{ delivery.name }}</td>
                 {% endif %}
                 <td>{{ delivery.price }}</td>
-                {% if delivery.value == "High" %}
+                {% if delivery.value == "Very High" %}
                 <td style="color: red"><b>{{ delivery.value }}</b></td>
-                {% elsif delivery.value == "Medium" %}
+                {% elsif delivery.value == "High" %}
                 <td style="color: orange"><b>{{ delivery.value }}</b></td>
+                {% elsif delivery.value == "Medium" %}
+                <td style="color: yellow"><b>{{ delivery.value }}</b></td>
                 {% elsif delivery.value == "Low" %}
                 <td style="color: green"><b>{{ delivery.value }}</b></td>
                 {% else %}
@@ -247,10 +259,12 @@ scripts: <script src="../scripts/deliveries.js"></script>
                 <td>{{ delivery.name }}</td>
                 {% endif %}
                 <td>{{ delivery.price }}</td>
-                {% if delivery.value == "High" %}
+                {% if delivery.value == "Very High" %}
                 <td style="color: red"><b>{{ delivery.value }}</b></td>
-                {% elsif delivery.value == "Medium" %}
+                {% elsif delivery.value == "High" %}
                 <td style="color: orange"><b>{{ delivery.value }}</b></td>
+                {% elsif delivery.value == "Medium" %}
+                <td style="color: yellow"><b>{{ delivery.value }}</b></td>
                 {% elsif delivery.value == "Low" %}
                 <td style="color: green"><b>{{ delivery.value }}</b></td>
                 {% else %}
@@ -281,10 +295,12 @@ scripts: <script src="../scripts/deliveries.js"></script>
                 <td>{{ delivery.name }}</td>
                 {% endif %}
                 <td>{{ delivery.price }}</td>
-                {% if delivery.value == "High" %}
+                {% if delivery.value == "Very High" %}
                 <td style="color: red"><b>{{ delivery.value }}</b></td>
-                {% elsif delivery.value == "Medium" %}
+                {% elsif delivery.value == "High" %}
                 <td style="color: orange"><b>{{ delivery.value }}</b></td>
+                {% elsif delivery.value == "Medium" %}
+                <td style="color: yellow"><b>{{ delivery.value }}</b></td>
                 {% elsif delivery.value == "Low" %}
                 <td style="color: green"><b>{{ delivery.value }}</b></td>
                 {% else %}
@@ -315,10 +331,12 @@ scripts: <script src="../scripts/deliveries.js"></script>
                 <td>{{ delivery.name }}</td>
                 {% endif %}
                 <td>{{ delivery.price }}</td>
-                {% if delivery.value == "High" %}
+                {% if delivery.value == "Very High" %}
                 <td style="color: red"><b>{{ delivery.value }}</b></td>
-                {% elsif delivery.value == "Medium" %}
+                {% elsif delivery.value == "High" %}
                 <td style="color: orange"><b>{{ delivery.value }}</b></td>
+                {% elsif delivery.value == "Medium" %}
+                <td style="color: yellow"><b>{{ delivery.value }}</b></td>
                 {% elsif delivery.value == "Low" %}
                 <td style="color: green"><b>{{ delivery.value }}</b></td>
                 {% else %}
