@@ -1009,11 +1009,11 @@
     },
     {
         "level": "500+",
-        "place": "Plague Feru Seal",
+        "place": "Warzone 2",
         "raw_exp": "5.0kk",
-        "loot": "1.4kk",
-        "weapon_type": "Energy",
-        "link" : "https://youtu.be/XMjIUHkBfSk"
+        "loot": "2.0kk",
+        "weapon_type": "Physical, Energy",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "500+",
@@ -1022,6 +1022,14 @@
         "loot": "1.5kk",
         "weapon_type": "Energy",
         "link" : "https://youtu.be/5nJaAyBsLCs"
+    },
+    {
+        "level": "500+",
+        "place": "Plague Feru Seal",
+        "raw_exp": "5.0kk",
+        "loot": "1.4kk",
+        "weapon_type": "Energy",
+        "link" : "https://youtu.be/XMjIUHkBfSk"
     },
     {
         "level": "500+",
@@ -1192,6 +1200,86 @@
         "link" : "https://youtu.be/BJm7AcIniWc"
     },
     {
+        "level": "600+",
+        "place": "Roshamuul West (Crypt Strike P7)",
+        "raw_exp": "7.4kk",
+        "loot": "2.3kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Upper Roshamuul (Crypt Strike P7)",
+        "raw_exp": "7.3kk",
+        "loot": "2.5kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Feru Undead Dragon Seal (Crypt Strike P7)",
+        "raw_exp": "7.1kk",
+        "loot": "2.0kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Oramond Catacombs (Crypt Strike P7)",
+        "raw_exp": "6.5kk",
+        "loot": "2.0kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Feru Mazoran Seal (Crypt Strike P7)",
+        "raw_exp": "6.5kk",
+        "loot": "2.0kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Feru DT Seal -1 (Crypt Strike P7)",
+        "raw_exp": "6.0kk",
+        "loot": "2.0kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Feru Way (Crypt Strike P7)",
+        "raw_exp":"5.9kk",
+        "loot": "1.6kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Feru DT Seal -2 (Crypt Strike P7)",
+        "raw_exp": "5.6kk",
+        "loot": "1.8kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Prison -3 (Crypt Strike P7)",
+        "raw_exp": "5.4kk",
+        "loot": "1.5kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Warzone 7 (Crypt Strike P7)",
+        "raw_exp": "4.0kk",
+        "loot": "3.5kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level": "700+",
         "place": "Norcferatu Dungeons East",
         "raw_exp": "7.9kk",
@@ -1206,6 +1294,22 @@
         "loot": "1.0kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/u-QffonCijI"
+    },
+    {
+        "level": "800+",
+        "place": "Raubritters Bloodfire Gorge",
+        "raw_exp": "8.0kk",
+        "loot": "1.5kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Raubritters Ada Outskirts",
+        "raw_exp": "7.5kk",
+        "loot": "1.4kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "800+",
@@ -1231,6 +1335,22 @@
         "weapon_type": "Earth",
         "link" : "https://youtu.be/"
     },
+    {
+        "level": "800+",
+        "place": "Ingol Surface (Crypt Strike P7)",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Ingol -3 (Crypt Strike P7)",
+        "raw_exp": "-",
+        "loot": "-",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },    
     {
         "level": "1000+",
         "place": "Podzilla Quaras",
