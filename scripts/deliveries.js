@@ -128,7 +128,26 @@ function get_table_id_from_tab(tabName) {
     return tabToTableMap[tabName] || 'deliveries_table_everything';
 }
 
-// Filter delivery table by name
+// Get selected market value filters
+function get_selected_market_values() {
+    const selectedValues = [];
+    const checkboxes = [
+        document.getElementById('filter_veryhigh'),
+        document.getElementById('filter_high'),
+        document.getElementById('filter_medium'),
+        document.getElementById('filter_low')
+    ];
+    
+    checkboxes.forEach(checkbox => {
+        if (checkbox && checkbox.checked) {
+            selectedValues.push(checkbox.value);
+        }
+    });
+    
+    return selectedValues;
+}
+
+// Filter delivery table by name and market value
 function filter_delivery_table_by_name(filterText) {
     const activeTab = get_active_delivery_tab();
     const tableId = get_table_id_from_tab(activeTab);
@@ -136,13 +155,15 @@ function filter_delivery_table_by_name(filterText) {
     
     if (!table) return;
     
-    const filter = filterText.toLowerCase().trim();
+    const nameFilter = filterText.toLowerCase().trim();
+    const selectedMarketValues = get_selected_market_values();
     const rows = table.querySelectorAll('tr');
     
     // Skip header row (index 0)
     for (let i = 1; i < rows.length; i++) {
         const row = rows[i];
         const nameCell = row.cells[1]; // Name column is at index 1
+        const valueCell = row.cells[3]; // Market Value column is at index 3
         
         if (!nameCell) {
             row.style.display = 'none';
@@ -157,8 +178,21 @@ function filter_delivery_table_by_name(filterText) {
             nameText = nameCell.textContent.trim().toLowerCase();
         }
         
-        // Show row if name contains filter text, hide otherwise
-        if (filter === '' || nameText.includes(filter)) {
+        // Extract market value text
+        let marketValue = '';
+        if (valueCell) {
+            marketValue = valueCell.textContent.trim();
+        }
+        
+        // Check if row matches name filter
+        const nameMatches = nameFilter === '' || nameText.includes(nameFilter);
+        
+        // Check if row matches market value filter
+        // If no checkboxes are selected, hide all rows (empty selection means show nothing)
+        const valueMatches = selectedMarketValues.length > 0 && selectedMarketValues.includes(marketValue);
+        
+        // Show row if both filters match, hide otherwise
+        if (nameMatches && valueMatches) {
             row.style.display = 'table-row';
         } else {
             row.style.display = 'none';
@@ -166,12 +200,16 @@ function filter_delivery_table_by_name(filterText) {
     }
 }
 
-// Apply name filter
-function apply_name_filter() {
+// Apply all filters (name and market value)
+function apply_all_filters() {
     const nameFilter = document.getElementById('nameFilter');
-    if (nameFilter) {
-        filter_delivery_table_by_name(nameFilter.value);
-    }
+    const filterText = nameFilter ? nameFilter.value : '';
+    filter_delivery_table_by_name(filterText);
+}
+
+// Apply market value filter
+function apply_market_value_filter() {
+    apply_all_filters();
 }
 
 // Helper function to parse NPC price (handles formats like "2 000", "35 000", etc.)
@@ -323,8 +361,8 @@ function reinitializeDeliverySortingOnTabSwitch() {
                     }
                 }
                 
-                // Reapply filter
-                apply_name_filter();
+                // Reapply filters
+                apply_all_filters();
             }, 50);
         });
     });
@@ -342,11 +380,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const nameFilter = document.getElementById('nameFilter');
     if (nameFilter) {
         nameFilter.addEventListener('input', function() {
-            apply_name_filter();
+            apply_all_filters();
         });
     }
     
-    // Reinitialize sorting headers and reapply filter when tabs are switched
+    // Set up market value checkbox event listeners
+    const marketValueCheckboxes = [
+        document.getElementById('filter_veryhigh'),
+        document.getElementById('filter_high'),
+        document.getElementById('filter_medium'),
+        document.getElementById('filter_low')
+    ];
+    
+    marketValueCheckboxes.forEach(checkbox => {
+        if (checkbox) {
+            checkbox.addEventListener('change', function() {
+                apply_market_value_filter();
+            });
+        }
+    });
+    
+    // Reinitialize sorting headers and reapply filters when tabs are switched
     reinitializeDeliverySortingOnTabSwitch();
 });
 

@@ -177,11 +177,12 @@
     
     <section id="main-content">
     <p id="equipment_info">
-    <span style="color: purple"><b>PURPOSE:</b></span> All Weekly delivery items list. Can help in deciding which items are best sold on the market vs. directly to NPCs.<br><br>
-    <span style="color: red"><b>Very High</b></span> value items should <b>always</b> be sold on the market.<br>
-    <span style="color: orange"><b>High</b></span> value items should <b>always</b> be sold on the market, unless you desperately need money fast.<br>
-    <span style="color: yellow"><b>Medium</b></span> items should <b>generally</b> be sold on the market, but usually not for much more than the NPC price.<br>
-    <span style="color: green"><b>Low</b></span> value items can be <b>safely sold to NPCs</b>, unless the supply is really low on your server.<br><br>
+    <span style="color: purple"><b>PURPOSE:</b></span> Complete Weekly Deliveries item list with approximate Market Value.<br><br> The '<b>Market Values</b>' will never be 100% accurate and <b>WILL VARY BETWEEN WORLDS</b>, use as an approximation only.<br><br>
+    <span style="color: red"><b>Very High</b></span> & <span style="color: orange"><b>High</b></span> value items should <b>always</b> be sold on the market.<br>
+    <span style="color: yellow"><b>Medium</b></span> items should be sold on the market, but usually only for a little bit more than the NPC price.<br>
+    <span style="color: green"><b>Low</b></span> value items can generally be <b>safely sold to NPCs</b>, unless the supply is really low on your server.<br><br>
+
+    
 </p>
 <div class="deliveries_tab">
     <button id="everything" class="tablinks active" onclick="show_tab(event, 'Everything')">Everything</button>
@@ -195,9 +196,32 @@
     <button id="others" class="tablinks" onclick="show_tab(event, 'Others')">Others</button>
 </div>
 
-<div id="filter_selection" style="margin-top: 20px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-    <label for="nameFilter" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Item Name:</label>
-    <input type="text" id="nameFilter" placeholder="Filter items by name..." style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
+<div id="filter_selection" style="margin-top: 20px; margin-bottom: 20px; display: flex; flex-direction: column; align-items: center;">
+    <div style="display: flex; align-items: center; margin-bottom: 15px; width: 370px;">
+        <label for="nameFilter" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Item Name:</label>
+        <input type="text" id="nameFilter" placeholder="Filter items by name..." style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
+    </div>
+    <div style="display: flex; align-items: center; gap: 20px; width: 370px;">
+        <label style="color: #ebebeb; font-weight: bold; min-width: 120px;">Market Value:</label>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+            <label style="color: #ebebeb; cursor: pointer; display: flex; align-items: center;">
+                <input type="checkbox" id="filter_veryhigh" value="Very High" checked style="margin-right: 5px; cursor: pointer;">
+                <span><b>Very High</b></span>
+            </label>
+            <label style="color: #ebebeb; cursor: pointer; display: flex; align-items: center;">
+                <input type="checkbox" id="filter_high" value="High" checked style="margin-right: 5px; cursor: pointer;">
+                <span><b>High</b></span>
+            </label>
+            <label style="color: #ebebeb; cursor: pointer; display: flex; align-items: center;">
+                <input type="checkbox" id="filter_medium" value="Medium" checked style="margin-right: 5px; cursor: pointer;">
+                <span><b>Medium</b></span>
+            </label>
+            <label style="color: #ebebeb; cursor: pointer; display: flex; align-items: center;">
+                <input type="checkbox" id="filter_low" value="Low" checked style="margin-right: 5px; cursor: pointer;">
+                <span><b>Low</b></span>
+            </label>
+        </div>
+    </div>
 </div>
 
 <div id="Everything" class="tabcontent">
@@ -821,7 +845,7 @@
                 
                 <td>11 000</td>
                 
-                <td style="color: orange"><b>High</b></td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -1514,7 +1538,7 @@
                 
                 <td>440</td>
                 
-                <td style="color: red"><b>Very High</b></td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -1866,7 +1890,7 @@
                 
                 <td>1 250</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -1877,7 +1901,7 @@
                 
                 <td>120</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -1888,7 +1912,7 @@
                 
                 <td>2 800</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -1899,7 +1923,7 @@
                 
                 <td>2 000</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -1910,7 +1934,7 @@
                 
                 <td>2 640</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -1921,7 +1945,7 @@
                 
                 <td>110</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -1932,7 +1956,7 @@
                 
                 <td>950</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -1943,7 +1967,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -1954,7 +1978,7 @@
                 
                 <td>475</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -1965,7 +1989,7 @@
                 
                 <td>2 500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -1976,7 +2000,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -1987,7 +2011,7 @@
                 
                 <td>970</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -1998,7 +2022,7 @@
                 
                 <td>2 000</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -2009,7 +2033,7 @@
                 
                 <td>430</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2020,7 +2044,7 @@
                 
                 <td>430</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2031,7 +2055,7 @@
                 
                 <td>2 500</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2042,7 +2066,7 @@
                 
                 <td>90</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2053,7 +2077,7 @@
                 
                 <td>200</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2064,7 +2088,7 @@
                 
                 <td>950</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2075,7 +2099,7 @@
                 
                 <td>900</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -2086,7 +2110,7 @@
                 
                 <td>820</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2097,7 +2121,7 @@
                 
                 <td>2 100</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -2108,7 +2132,7 @@
                 
                 <td>450</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2119,7 +2143,7 @@
                 
                 <td>930</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2130,7 +2154,7 @@
                 
                 <td>850</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2141,7 +2165,7 @@
                 
                 <td>480</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2152,7 +2176,7 @@
                 
                 <td>520</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2163,7 +2187,7 @@
                 
                 <td>800</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2174,7 +2198,7 @@
                 
                 <td>410</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2185,7 +2209,7 @@
                 
                 <td>840</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2196,7 +2220,7 @@
                 
                 <td>2 100</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2207,7 +2231,7 @@
                 
                 <td>2 250</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -2218,7 +2242,7 @@
                 
                 <td>850</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -2229,7 +2253,7 @@
                 
                 <td>340</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2240,7 +2264,7 @@
                 
                 <td>680</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2251,7 +2275,7 @@
                 
                 <td>400</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2262,7 +2286,7 @@
                 
                 <td>185</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2273,7 +2297,7 @@
                 
                 <td>820</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2284,7 +2308,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2295,7 +2319,7 @@
                 
                 <td>550</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2306,7 +2330,7 @@
                 
                 <td>200</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2317,7 +2341,7 @@
                 
                 <td>2 000</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2328,7 +2352,7 @@
                 
                 <td>400</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2339,7 +2363,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2350,7 +2374,7 @@
                 
                 <td>650</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -2361,7 +2385,7 @@
                 
                 <td>390</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2372,7 +2396,7 @@
                 
                 <td>2 000</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2383,7 +2407,7 @@
                 
                 <td>2 000</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2394,7 +2418,7 @@
                 
                 <td>180</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2405,7 +2429,7 @@
                 
                 <td>185</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2416,7 +2440,7 @@
                 
                 <td>385</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2427,7 +2451,7 @@
                 
                 <td>750</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -2438,7 +2462,7 @@
                 
                 <td>750</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2449,7 +2473,7 @@
                 
                 <td>190</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2460,7 +2484,7 @@
                 
                 <td>700</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2471,7 +2495,7 @@
                 
                 <td>790</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2482,7 +2506,7 @@
                 
                 <td>380</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2493,7 +2517,7 @@
                 
                 <td>680</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2504,7 +2528,7 @@
                 
                 <td>350</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2515,7 +2539,7 @@
                 
                 <td>730</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2526,7 +2550,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -2537,7 +2561,7 @@
                 
                 <td>195</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2548,7 +2572,7 @@
                 
                 <td>330</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -2559,7 +2583,7 @@
                 
                 <td>570</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -2570,7 +2594,7 @@
                 
                 <td>1 870</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -2581,7 +2605,7 @@
                 
                 <td>220</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2592,7 +2616,7 @@
                 
                 <td>800</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2603,7 +2627,7 @@
                 
                 <td>350</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2614,7 +2638,7 @@
                 
                 <td>280</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2625,7 +2649,7 @@
                 
                 <td>350</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2636,7 +2660,7 @@
                 
                 <td>630</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2647,7 +2671,7 @@
                 
                 <td>300</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2658,7 +2682,7 @@
                 
                 <td>340</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2669,7 +2693,7 @@
                 
                 <td>620</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2680,7 +2704,7 @@
                 
                 <td>380</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2691,7 +2715,7 @@
                 
                 <td>680</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2702,7 +2726,7 @@
                 
                 <td>160</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2713,7 +2737,7 @@
                 
                 <td>650</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -2724,7 +2748,7 @@
                 
                 <td>2 000</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -2735,7 +2759,7 @@
                 
                 <td>1 600</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -2746,7 +2770,7 @@
                 
                 <td>620</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2757,7 +2781,7 @@
                 
                 <td>420</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -2768,7 +2792,7 @@
                 
                 <td>600</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -2779,7 +2803,7 @@
                 
                 <td>800</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -2790,7 +2814,7 @@
                 
                 <td>1 450</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2801,7 +2825,7 @@
                 
                 <td>165</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2812,7 +2836,7 @@
                 
                 <td>270</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2823,7 +2847,7 @@
                 
                 <td>300</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2834,7 +2858,7 @@
                 
                 <td>280</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2845,7 +2869,7 @@
                 
                 <td>300</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2856,7 +2880,7 @@
                 
                 <td>600</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2867,7 +2891,7 @@
                 
                 <td>340</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2878,7 +2902,7 @@
                 
                 <td>600</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2889,7 +2913,7 @@
                 
                 <td>1 500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2900,7 +2924,7 @@
                 
                 <td>290</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2911,7 +2935,7 @@
                 
                 <td>1 450</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2922,7 +2946,7 @@
                 
                 <td>300</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2933,7 +2957,7 @@
                 
                 <td>310</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2944,7 +2968,7 @@
                 
                 <td>300</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2955,7 +2979,7 @@
                 
                 <td>540</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -2966,7 +2990,7 @@
                 
                 <td>270</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2977,7 +3001,7 @@
                 
                 <td>550</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -2988,7 +3012,7 @@
                 
                 <td>1 500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -2999,7 +3023,7 @@
                 
                 <td>1 500</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3010,7 +3034,7 @@
                 
                 <td>300</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3021,7 +3045,7 @@
                 
                 <td>540</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3032,7 +3056,7 @@
                 
                 <td>270</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3043,7 +3067,7 @@
                 
                 <td>510</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3054,7 +3078,7 @@
                 
                 <td>600</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -3065,7 +3089,7 @@
                 
                 <td>250</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3076,7 +3100,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3087,7 +3111,7 @@
                 
                 <td>250</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3098,7 +3122,7 @@
                 
                 <td>270</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3109,7 +3133,7 @@
                 
                 <td>1 500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3120,7 +3144,7 @@
                 
                 <td>250</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3131,7 +3155,7 @@
                 
                 <td>240</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3142,7 +3166,7 @@
                 
                 <td>270</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3153,7 +3177,7 @@
                 
                 <td>260</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -3164,7 +3188,7 @@
                 
                 <td>250</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3175,7 +3199,7 @@
                 
                 <td>140</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3186,7 +3210,7 @@
                 
                 <td>160</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3197,7 +3221,7 @@
                 
                 <td>240</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3208,7 +3232,7 @@
                 
                 <td>250</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3219,7 +3243,7 @@
                 
                 <td>210</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -3230,7 +3254,7 @@
                 
                 <td>240</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3241,7 +3265,7 @@
                 
                 <td>560</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3252,7 +3276,7 @@
                 
                 <td>450</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3263,7 +3287,7 @@
                 
                 <td>280</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3274,7 +3298,7 @@
                 
                 <td>1 250</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -3285,7 +3309,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3296,7 +3320,7 @@
                 
                 <td>260</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3307,7 +3331,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3318,7 +3342,7 @@
                 
                 <td>220</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -3329,7 +3353,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3340,7 +3364,7 @@
                 
                 <td>220</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3351,7 +3375,7 @@
                 
                 <td>400</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3362,7 +3386,7 @@
                 
                 <td>480</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3373,7 +3397,7 @@
                 
                 <td>580</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3384,7 +3408,7 @@
                 
                 <td>115</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3395,7 +3419,7 @@
                 
                 <td>210</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3406,7 +3430,7 @@
                 
                 <td>1 100</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -3417,7 +3441,7 @@
                 
                 <td>1 100</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -3428,7 +3452,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3439,7 +3463,7 @@
                 
                 <td>40</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3450,7 +3474,7 @@
                 
                 <td>210</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3461,7 +3485,7 @@
                 
                 <td>430</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3472,7 +3496,7 @@
                 
                 <td>130</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3483,7 +3507,7 @@
                 
                 <td>120</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3494,7 +3518,7 @@
                 
                 <td>205</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3505,7 +3529,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3516,7 +3540,7 @@
                 
                 <td>1 000</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -3527,7 +3551,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -3538,7 +3562,7 @@
                 
                 <td>310</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -3549,7 +3573,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3560,7 +3584,7 @@
                 
                 <td>280</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3571,7 +3595,7 @@
                 
                 <td>180</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3582,7 +3606,7 @@
                 
                 <td>400</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3593,7 +3617,7 @@
                 
                 <td>1 000</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3604,7 +3628,7 @@
                 
                 <td>200</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3615,7 +3639,7 @@
                 
                 <td>420</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3626,7 +3650,7 @@
                 
                 <td>460</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3637,7 +3661,7 @@
                 
                 <td>330</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3648,7 +3672,7 @@
                 
                 <td>190</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3659,7 +3683,7 @@
                 
                 <td>900</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -3670,7 +3694,7 @@
                 
                 <td>870</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3681,7 +3705,7 @@
                 
                 <td>180</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3692,7 +3716,7 @@
                 
                 <td>350</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3703,7 +3727,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3714,7 +3738,7 @@
                 
                 <td>390</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3725,7 +3749,7 @@
                 
                 <td>900</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -3736,7 +3760,7 @@
                 
                 <td>360</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3747,7 +3771,7 @@
                 
                 <td>800</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3758,7 +3782,7 @@
                 
                 <td>160</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3769,7 +3793,7 @@
                 
                 <td>350</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3780,7 +3804,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3791,7 +3815,7 @@
                 
                 <td>320</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3802,7 +3826,7 @@
                 
                 <td>800</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3813,7 +3837,7 @@
                 
                 <td>360</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3824,7 +3848,7 @@
                 
                 <td>200</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3835,7 +3859,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3846,7 +3870,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3857,7 +3881,7 @@
                 
                 <td>230</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -3868,7 +3892,7 @@
                 
                 <td>180</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3879,7 +3903,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3890,7 +3914,7 @@
                 
                 <td>360</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -3901,7 +3925,7 @@
                 
                 <td>320</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3912,7 +3936,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3923,7 +3947,7 @@
                 
                 <td>120</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3934,7 +3958,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3945,7 +3969,7 @@
                 
                 <td>280</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3956,7 +3980,7 @@
                 
                 <td>320</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -3967,7 +3991,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -3978,7 +4002,7 @@
                 
                 <td>270</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -3989,7 +4013,7 @@
                 
                 <td>650</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4000,7 +4024,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4011,7 +4035,7 @@
                 
                 <td>200</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4022,7 +4046,7 @@
                 
                 <td>800</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4033,7 +4057,7 @@
                 
                 <td>950</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -4044,7 +4068,7 @@
                 
                 <td>125</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -4055,7 +4079,7 @@
                 
                 <td>620</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4066,7 +4090,7 @@
                 
                 <td>350</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -4077,7 +4101,7 @@
                 
                 <td>570</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4088,7 +4112,7 @@
                 
                 <td>240</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -4099,7 +4123,7 @@
                 
                 <td>120</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4110,7 +4134,7 @@
                 
                 <td>230</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4121,7 +4145,7 @@
                 
                 <td>260</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4132,7 +4156,7 @@
                 
                 <td>240</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -4143,7 +4167,7 @@
                 
                 <td>230</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4154,7 +4178,7 @@
                 
                 <td>250</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4165,7 +4189,7 @@
                 
                 <td>200</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4176,7 +4200,7 @@
                 
                 <td>110</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4187,7 +4211,7 @@
                 
                 <td>130</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4198,7 +4222,7 @@
                 
                 <td>130</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4209,7 +4233,7 @@
                 
                 <td>120</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4220,7 +4244,7 @@
                 
                 <td>130</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4231,7 +4255,7 @@
                 
                 <td>520</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -4242,7 +4266,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4253,7 +4277,7 @@
                 
                 <td>600</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4264,7 +4288,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4275,7 +4299,7 @@
                 
                 <td>230</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4286,7 +4310,7 @@
                 
                 <td>180</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4297,7 +4321,7 @@
                 
                 <td>190</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4308,7 +4332,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4319,7 +4343,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4330,7 +4354,7 @@
                 
                 <td>175</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -4341,7 +4365,7 @@
                 
                 <td>50</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -4352,7 +4376,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -4363,7 +4387,7 @@
                 
                 <td>210</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -4374,7 +4398,7 @@
                 
                 <td>480</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -4385,7 +4409,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -4396,7 +4420,7 @@
                 
                 <td>200</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4407,7 +4431,7 @@
                 
                 <td>80</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4418,7 +4442,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4429,7 +4453,7 @@
                 
                 <td>90</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4440,7 +4464,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -4451,7 +4475,7 @@
                 
                 <td>170</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -4462,7 +4486,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4473,7 +4497,7 @@
                 
                 <td>80</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4484,7 +4508,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4495,7 +4519,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4506,7 +4530,7 @@
                 
                 <td>90</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4517,7 +4541,7 @@
                 
                 <td>380</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4528,7 +4552,7 @@
                 
                 <td>85</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -4539,7 +4563,7 @@
                 
                 <td>135</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4550,7 +4574,7 @@
                 
                 <td>60</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4561,7 +4585,7 @@
                 
                 <td>320</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -4572,7 +4596,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4583,7 +4607,7 @@
                 
                 <td>350</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4594,7 +4618,7 @@
                 
                 <td>140</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4605,7 +4629,7 @@
                 
                 <td>120</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4616,7 +4640,7 @@
                 
                 <td>300</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4627,7 +4651,7 @@
                 
                 <td>270</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4638,7 +4662,7 @@
                 
                 <td>30</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4649,7 +4673,7 @@
                 
                 <td>260</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4660,7 +4684,7 @@
                 
                 <td>300</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -4671,7 +4695,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -4682,7 +4706,7 @@
                 
                 <td>55</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4693,7 +4717,7 @@
                 
                 <td>280</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4704,7 +4728,7 @@
                 
                 <td>60</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4715,7 +4739,7 @@
                 
                 <td>95</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4726,7 +4750,7 @@
                 
                 <td>50</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4737,7 +4761,7 @@
                 
                 <td>50</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -4748,7 +4772,7 @@
                 
                 <td>80</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4759,7 +4783,7 @@
                 
                 <td>85</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4770,7 +4794,7 @@
                 
                 <td>90</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -4781,7 +4805,7 @@
                 
                 <td>40</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4792,7 +4816,7 @@
                 
                 <td>95</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4803,7 +4827,7 @@
                 
                 <td>190</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4814,7 +4838,7 @@
                 
                 <td>35</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4825,7 +4849,7 @@
                 
                 <td>30</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4836,7 +4860,7 @@
                 
                 <td>40</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4847,7 +4871,7 @@
                 
                 <td>35</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4858,7 +4882,7 @@
                 
                 <td>25</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4869,7 +4893,7 @@
                 
                 <td>120</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4880,7 +4904,7 @@
                 
                 <td>48</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4891,7 +4915,7 @@
                 
                 <td>25</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -4902,7 +4926,7 @@
                 
                 <td>110</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4913,7 +4937,7 @@
                 
                 <td>25</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4924,7 +4948,7 @@
                 
                 <td>25</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4935,7 +4959,7 @@
                 
                 <td>90</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4946,7 +4970,7 @@
                 
                 <td>40</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4957,7 +4981,7 @@
                 
                 <td>40</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -4968,7 +4992,7 @@
                 
                 <td>30</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -4979,7 +5003,7 @@
                 
                 <td>28</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -4990,7 +5014,7 @@
                 
                 <td>60</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -5001,7 +5025,7 @@
                 
                 <td>50</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -5012,7 +5036,7 @@
                 
                 <td>55</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -5023,7 +5047,7 @@
                 
                 <td>20</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -5034,7 +5058,7 @@
                 
                 <td>5</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -5045,7 +5069,7 @@
                 
                 <td>1</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -5056,7 +5080,7 @@
                 
                 <td>1</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -5067,7 +5091,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -5078,7 +5102,7 @@
                 
                 <td>600</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -5089,7 +5113,7 @@
                 
                 <td>600</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
         
@@ -5100,7 +5124,7 @@
                 
                 <td>0</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -5111,7 +5135,7 @@
                 
                 <td>0</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -5122,7 +5146,7 @@
                 
                 <td>0</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
         
@@ -5133,7 +5157,7 @@
                 
                 <td>0</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -5144,7 +5168,7 @@
                 
                 <td>0</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
         
@@ -5155,7 +5179,7 @@
                 
                 <td>0</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
         
@@ -5180,7 +5204,7 @@
                 
                 <td>2 500</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -5278,7 +5302,7 @@
                 
                 <td>600</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -5306,7 +5330,7 @@
                 
                 <td>400</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -5404,7 +5428,7 @@
                 
                 <td>90</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -5418,7 +5442,7 @@
                 
                 <td>2 000</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -5474,7 +5498,7 @@
                 
                 <td>2 500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -5488,7 +5512,7 @@
                 
                 <td>300</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -5544,7 +5568,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -5654,7 +5678,7 @@
                 
                 <td>800</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -5682,7 +5706,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -5696,7 +5720,7 @@
                 
                 <td>2 000</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -5780,7 +5804,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -5794,7 +5818,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -5834,7 +5858,7 @@
                 
                 <td>900</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -5848,7 +5872,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -5862,7 +5886,7 @@
                 
                 <td>850</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -5876,7 +5900,7 @@
                 
                 <td>260</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -5890,7 +5914,7 @@
                 
                 <td>55</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -5918,7 +5942,7 @@
                 
                 <td>210</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -5932,7 +5956,7 @@
                 
                 <td>160</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -5946,7 +5970,7 @@
                 
                 <td>600</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -5960,7 +5984,7 @@
                 
                 <td>350</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -5974,7 +5998,7 @@
                 
                 <td>400</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6002,7 +6026,7 @@
                 
                 <td>800</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -6016,7 +6040,7 @@
                 
                 <td>1 000</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -6072,7 +6096,7 @@
                 
                 <td>320</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -6086,7 +6110,7 @@
                 
                 <td>360</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -6114,7 +6138,7 @@
                 
                 <td>230</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6128,7 +6152,7 @@
                 
                 <td>600</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -6142,7 +6166,7 @@
                 
                 <td>200</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6156,7 +6180,7 @@
                 
                 <td>35</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6170,7 +6194,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -6184,7 +6208,7 @@
                 
                 <td>580</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6198,7 +6222,7 @@
                 
                 <td>790</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -6212,7 +6236,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6226,7 +6250,7 @@
                 
                 <td>190</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6240,7 +6264,7 @@
                 
                 <td>210</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -6282,7 +6306,7 @@
                 
                 <td>1 450</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -6296,7 +6320,7 @@
                 
                 <td>180</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6310,7 +6334,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -6324,7 +6348,7 @@
                 
                 <td>2 640</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -6352,7 +6376,7 @@
                 
                 <td>210</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6366,7 +6390,7 @@
                 
                 <td>230</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6380,7 +6404,7 @@
                 
                 <td>2 800</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -6408,7 +6432,7 @@
                 
                 <td>540</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6422,7 +6446,7 @@
                 
                 <td>385</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -6478,7 +6502,7 @@
                 
                 <td>630</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -6492,7 +6516,7 @@
                 
                 <td>2 000</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -6548,7 +6572,7 @@
                 
                 <td>28</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -6562,7 +6586,7 @@
                 
                 <td>970</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6576,7 +6600,7 @@
                 
                 <td>240</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6604,7 +6628,7 @@
                 
                 <td>120</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6618,7 +6642,7 @@
                 
                 <td>50</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6632,7 +6656,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6674,7 +6698,7 @@
                 
                 <td>110</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -6688,7 +6712,7 @@
                 
                 <td>250</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6702,7 +6726,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -6716,7 +6740,7 @@
                 
                 <td>870</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6730,7 +6754,7 @@
                 
                 <td>360</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -6744,7 +6768,7 @@
                 
                 <td>210</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -6772,7 +6796,7 @@
                 
                 <td>180</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -6814,7 +6838,7 @@
                 
                 <td>250</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -6870,7 +6894,7 @@
                 
                 <td>430</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6884,7 +6908,7 @@
                 
                 <td>280</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -6898,7 +6922,7 @@
                 
                 <td>25</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -6912,7 +6936,7 @@
                 
                 <td>200</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -6926,7 +6950,7 @@
                 
                 <td>300</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -6954,7 +6978,7 @@
                 
                 <td>48</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -7010,7 +7034,7 @@
                 
                 <td>450</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -7052,7 +7076,7 @@
                 
                 <td>90</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7066,7 +7090,7 @@
                 
                 <td>430</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7080,7 +7104,7 @@
                 
                 <td>230</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7108,7 +7132,7 @@
                 
                 <td>80</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7136,7 +7160,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -7164,7 +7188,7 @@
                 
                 <td>800</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7178,7 +7202,7 @@
                 
                 <td>950</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -7192,7 +7216,7 @@
                 
                 <td>350</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -7206,7 +7230,7 @@
                 
                 <td>270</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -7220,7 +7244,7 @@
                 
                 <td>120</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7234,7 +7258,7 @@
                 
                 <td>35</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -7262,7 +7286,7 @@
                 
                 <td>475</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -7276,7 +7300,7 @@
                 
                 <td>175</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -7304,7 +7328,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -7318,7 +7342,7 @@
                 
                 <td>430</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7332,7 +7356,7 @@
                 
                 <td>205</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -7346,7 +7370,7 @@
                 
                 <td>130</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7360,7 +7384,7 @@
                 
                 <td>40</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -7374,7 +7398,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7388,7 +7412,7 @@
                 
                 <td>90</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -7416,7 +7440,7 @@
                 
                 <td>270</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7430,7 +7454,7 @@
                 
                 <td>620</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7444,7 +7468,7 @@
                 
                 <td>300</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -7458,7 +7482,7 @@
                 
                 <td>820</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -7486,7 +7510,7 @@
                 
                 <td>240</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -7500,7 +7524,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7514,7 +7538,7 @@
                 
                 <td>650</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -7528,7 +7552,7 @@
                 
                 <td>390</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7542,7 +7566,7 @@
                 
                 <td>650</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -7556,7 +7580,7 @@
                 
                 <td>420</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -7570,7 +7594,7 @@
                 
                 <td>900</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -7584,7 +7608,7 @@
                 
                 <td>950</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7598,7 +7622,7 @@
                 
                 <td>650</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7612,7 +7636,7 @@
                 
                 <td>200</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -7626,7 +7650,7 @@
                 
                 <td>25</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -7640,7 +7664,7 @@
                 
                 <td>330</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -7668,7 +7692,7 @@
                 
                 <td>270</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -7682,7 +7706,7 @@
                 
                 <td>90</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -7696,7 +7720,7 @@
                 
                 <td>700</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7710,7 +7734,7 @@
                 
                 <td>170</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -7738,7 +7762,7 @@
                 
                 <td>30</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -7752,7 +7776,7 @@
                 
                 <td>520</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -7766,7 +7790,7 @@
                 
                 <td>25</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -7780,7 +7804,7 @@
                 
                 <td>125</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -7794,7 +7818,7 @@
                 
                 <td>30</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7836,7 +7860,7 @@
                 
                 <td>260</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -7850,7 +7874,7 @@
                 
                 <td>190</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -7864,7 +7888,7 @@
                 
                 <td>270</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -7934,7 +7958,7 @@
                 
                 <td>2 250</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -7948,7 +7972,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -7962,7 +7986,7 @@
                 
                 <td>180</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -7976,7 +8000,7 @@
                 
                 <td>40</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -7990,7 +8014,7 @@
                 
                 <td>85</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -8004,7 +8028,7 @@
                 
                 <td>730</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -8046,7 +8070,7 @@
                 
                 <td>930</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -8074,7 +8098,7 @@
                 
                 <td>350</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -8088,7 +8112,7 @@
                 
                 <td>510</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -8102,7 +8126,7 @@
                 
                 <td>160</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -8116,7 +8140,7 @@
                 
                 <td>40</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -8130,7 +8154,7 @@
                 
                 <td>2 000</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -8144,7 +8168,7 @@
                 
                 <td>540</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -8158,7 +8182,7 @@
                 
                 <td>600</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -8172,7 +8196,7 @@
                 
                 <td>220</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -8200,7 +8224,7 @@
                 
                 <td>950</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -8228,7 +8252,7 @@
                 
                 <td>300</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -8242,7 +8266,7 @@
                 
                 <td>300</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -8256,7 +8280,7 @@
                 
                 <td>330</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -8270,7 +8294,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -8298,7 +8322,7 @@
                 
                 <td>240</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -8312,7 +8336,7 @@
                 
                 <td>80</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -8326,7 +8350,7 @@
                 
                 <td>90</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -8340,7 +8364,7 @@
                 
                 <td>900</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -8368,7 +8392,7 @@
                 
                 <td>1 100</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -8396,7 +8420,7 @@
                 
                 <td>750</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -8410,7 +8434,7 @@
                 
                 <td>1 870</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -8424,7 +8448,7 @@
                 
                 <td>480</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -8438,7 +8462,7 @@
                 
                 <td>190</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -8452,7 +8476,7 @@
                 
                 <td>270</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -8466,7 +8490,7 @@
                 
                 <td>280</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -8480,7 +8504,7 @@
                 
                 <td>140</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -8494,7 +8518,7 @@
                 
                 <td>1 000</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -8522,7 +8546,7 @@
                 
                 <td>80</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -8536,7 +8560,7 @@
                 
                 <td>350</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -8550,7 +8574,7 @@
                 
                 <td>320</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -8564,7 +8588,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -8578,7 +8602,7 @@
                 
                 <td>310</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -8592,7 +8616,7 @@
                 
                 <td>220</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -8620,7 +8644,7 @@
                 
                 <td>1 100</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -8648,7 +8672,7 @@
                 
                 <td>260</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -8662,7 +8686,7 @@
                 
                 <td>840</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -8676,7 +8700,7 @@
                 
                 <td>2 100</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -8690,7 +8714,7 @@
                 
                 <td>200</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -8704,7 +8728,7 @@
                 
                 <td>800</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -8718,7 +8742,7 @@
                 
                 <td>420</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -8732,7 +8756,7 @@
                 
                 <td>50</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -8746,7 +8770,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -8774,7 +8798,7 @@
                 
                 <td>390</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -8788,7 +8812,7 @@
                 
                 <td>380</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -8872,7 +8896,7 @@
                 
                 <td>520</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -8886,7 +8910,7 @@
                 
                 <td>410</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -8900,7 +8924,7 @@
                 
                 <td>180</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -8914,7 +8938,7 @@
                 
                 <td>570</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -8928,7 +8952,7 @@
                 
                 <td>85</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -8942,7 +8966,7 @@
                 
                 <td>750</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -8970,7 +8994,7 @@
                 
                 <td>800</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -8998,7 +9022,7 @@
                 
                 <td>680</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -9012,7 +9036,7 @@
                 
                 <td>50</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9026,7 +9050,7 @@
                 
                 <td>180</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -9040,7 +9064,7 @@
                 
                 <td>110</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -9054,7 +9078,7 @@
                 
                 <td>250</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -9068,7 +9092,7 @@
                 
                 <td>270</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -9082,7 +9106,7 @@
                 
                 <td>130</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9096,7 +9120,7 @@
                 
                 <td>480</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9152,7 +9176,7 @@
                 
                 <td>570</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -9166,7 +9190,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -9208,7 +9232,7 @@
                 
                 <td>140</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9222,7 +9246,7 @@
                 
                 <td>270</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -9236,7 +9260,7 @@
                 
                 <td>40</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9250,7 +9274,7 @@
                 
                 <td>1 450</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -9264,7 +9288,7 @@
                 
                 <td>1 250</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -9278,7 +9302,7 @@
                 
                 <td>680</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -9320,7 +9344,7 @@
                 
                 <td>820</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -9334,7 +9358,7 @@
                 
                 <td>135</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9362,7 +9386,7 @@
                 
                 <td>120</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9376,7 +9400,7 @@
                 
                 <td>30</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9418,7 +9442,7 @@
                 
                 <td>20</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -9432,7 +9456,7 @@
                 
                 <td>680</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9446,7 +9470,7 @@
                 
                 <td>280</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9460,7 +9484,7 @@
                 
                 <td>620</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -9474,7 +9498,7 @@
                 
                 <td>230</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -9488,7 +9512,7 @@
                 
                 <td>450</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -9502,7 +9526,7 @@
                 
                 <td>620</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9516,7 +9540,7 @@
                 
                 <td>25</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -9530,7 +9554,7 @@
                 
                 <td>200</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -9544,7 +9568,7 @@
                 
                 <td>250</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9558,7 +9582,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9572,7 +9596,7 @@
                 
                 <td>600</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -9614,7 +9638,7 @@
                 
                 <td>2 000</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -9628,7 +9652,7 @@
                 
                 <td>2 100</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -9656,7 +9680,7 @@
                 
                 <td>250</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9684,7 +9708,7 @@
                 
                 <td>95</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9698,7 +9722,7 @@
                 
                 <td>480</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -9712,7 +9736,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -9726,7 +9750,7 @@
                 
                 <td>380</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9740,7 +9764,7 @@
                 
                 <td>350</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9754,7 +9778,7 @@
                 
                 <td>290</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -9768,7 +9792,7 @@
                 
                 <td>310</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -9782,7 +9806,7 @@
                 
                 <td>280</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -9796,7 +9820,7 @@
                 
                 <td>300</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9810,7 +9834,7 @@
                 
                 <td>280</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -9824,7 +9848,7 @@
                 
                 <td>360</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9852,7 +9876,7 @@
                 
                 <td>850</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -9866,7 +9890,7 @@
                 
                 <td>340</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -9880,7 +9904,7 @@
                 
                 <td>560</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -9922,7 +9946,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -9936,7 +9960,7 @@
                 
                 <td>1 250</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -9950,7 +9974,7 @@
                 
                 <td>120</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -9964,7 +9988,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -9992,7 +10016,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -10006,7 +10030,7 @@
                 
                 <td>600</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -10034,7 +10058,7 @@
                 
                 <td>50</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -10076,7 +10100,7 @@
                 
                 <td>130</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -10090,7 +10114,7 @@
                 
                 <td>240</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -10104,7 +10128,7 @@
                 
                 <td>1 600</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -10118,7 +10142,7 @@
                 
                 <td>60</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10132,7 +10156,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10160,7 +10184,7 @@
                 
                 <td>60</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -10174,7 +10198,7 @@
                 
                 <td>340</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -10230,7 +10254,7 @@
                 
                 <td>460</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10272,7 +10296,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -10286,7 +10310,7 @@
                 
                 <td>55</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -10300,7 +10324,7 @@
                 
                 <td>300</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -10314,7 +10338,7 @@
                 
                 <td>550</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10342,7 +10366,7 @@
                 
                 <td>320</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10356,7 +10380,7 @@
                 
                 <td>250</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -10384,7 +10408,7 @@
                 
                 <td>220</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -10398,7 +10422,7 @@
                 
                 <td>350</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10412,7 +10436,7 @@
                 
                 <td>280</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -10440,7 +10464,7 @@
                 
                 <td>110</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10454,7 +10478,7 @@
                 
                 <td>120</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10468,7 +10492,7 @@
                 
                 <td>120</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10482,7 +10506,7 @@
                 
                 <td>800</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -10496,7 +10520,7 @@
                 
                 <td>60</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10524,7 +10548,7 @@
                 
                 <td>240</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10550,7 +10574,7 @@
                 
                 <td>200</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10567,7 +10591,7 @@
                 
                 <td>190</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10581,7 +10605,7 @@
                 
                 <td>440</td>
                 
-                <td style="color: red"><b>Very High</b></td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -10623,7 +10647,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -10637,7 +10661,7 @@
                 
                 <td>400</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10651,7 +10675,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10665,7 +10689,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -10719,7 +10743,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10747,7 +10771,7 @@
                 
                 <td>160</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10761,7 +10785,7 @@
                 
                 <td>185</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10775,7 +10799,7 @@
                 
                 <td>185</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -10789,7 +10813,7 @@
                 
                 <td>195</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -10803,7 +10827,7 @@
                 
                 <td>1 500</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -10817,7 +10841,7 @@
                 
                 <td>165</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10831,7 +10855,7 @@
                 
                 <td>200</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10845,7 +10869,7 @@
                 
                 <td>380</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -10983,7 +11007,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -10997,7 +11021,7 @@
                 
                 <td>500</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -11011,7 +11035,7 @@
                 
                 <td>400</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -11025,7 +11049,7 @@
                 
                 <td>350</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -11039,7 +11063,7 @@
                 
                 <td>300</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -11053,7 +11077,7 @@
                 
                 <td>260</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -11067,7 +11091,7 @@
                 
                 <td>115</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -11081,7 +11105,7 @@
                 
                 <td>95</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -11095,7 +11119,7 @@
                 
                 <td>40</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -11109,7 +11133,7 @@
                 
                 <td>5</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -11123,7 +11147,7 @@
                 
                 <td>1</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -11137,7 +11161,7 @@
                 
                 <td>1</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -11151,7 +11175,7 @@
                 
                 <td>0</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -11165,7 +11189,7 @@
                 
                 <td>0</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -11179,7 +11203,7 @@
                 
                 <td>0</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -11193,7 +11217,7 @@
                 
                 <td>0</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -11207,7 +11231,7 @@
                 
                 <td>0</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -11221,7 +11245,7 @@
                 
                 <td>0</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -11247,7 +11271,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -11261,7 +11285,7 @@
                 
                 <td>340</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -11275,7 +11299,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -11289,7 +11313,7 @@
                 
                 <td>120</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -11303,7 +11327,7 @@
                 
                 <td>320</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -11317,7 +11341,7 @@
                 
                 <td>130</td>
                 
-                <td>TBD</td>
+                <td style="color: yellow"><b>Medium</b></td>
                 
             </tr>
             
@@ -11331,7 +11355,7 @@
                 
                 <td>100</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -11373,7 +11397,7 @@
                 
                 <td>150</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -11387,7 +11411,7 @@
                 
                 <td>550</td>
                 
-                <td>TBD</td>
+                <td style="color: orange"><b>High</b></td>
                 
             </tr>
             
@@ -11401,7 +11425,7 @@
                 
                 <td>600</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -11427,7 +11451,7 @@
                 
                 <td>11 000</td>
                 
-                <td style="color: orange"><b>High</b></td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -11441,7 +11465,7 @@
                 
                 <td>1 500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -11455,7 +11479,7 @@
                 
                 <td>1 500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -11483,7 +11507,7 @@
                 
                 <td>1 500</td>
                 
-                <td>TBD</td>
+                <td style="color: green"><b>Low</b></td>
                 
             </tr>
             
@@ -11511,7 +11535,7 @@
                 
                 <td>2 000</td>
                 
-                <td>TBD</td>
+                <td style="color: red"><b>Very High</b></td>
                 
             </tr>
             
@@ -11561,6 +11585,8 @@
     </table>
 </div>
 
+*The '<b>Market Values</b>' were manually derived based on a number of factors: absolute value (500gp vs 50k market value), 
+relative value compared to NPC price (50% vs 5000% more than NPC), market availability and demand (5 buy offers vs 500 buy offers).<br>
 
     </section>
     
