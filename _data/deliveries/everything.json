@@ -52,7 +52,7 @@
         "icon": "crystal_crossbow.gif",
         "name": "Crystal Crossbow",
         "price": "35 000",
-        "value": "Medium",
+        "value": "High",
         "link": "https://tibia.fandom.com/wiki/Crystal_Crossbow"
     },
     {
@@ -164,7 +164,7 @@
         "icon": "crystalline_armor.gif",
         "name": "Crystalline Armor",
         "price": "16 000",
-        "value": "Medium",
+        "value": "High",
         "link": "https://tibia.fandom.com/wiki/Crystalline_Armor"
     },
     {

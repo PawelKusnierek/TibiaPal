@@ -1,7 +1,7 @@
 [
     {
         "level": "8+",
-        "place": "Rotworms Liberty Bay",
+        "place": "Rotworms Liberty Bay/Darashia",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -28,13 +28,6 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "15+",
-        "place": "Cyclopolis",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
         "level": "25+",
         "place": "Upper Spike",
         "raw_exp": "-",
@@ -42,8 +35,8 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "30+",
-        "place": "Killer Caimans",
+        "level": "28+",
+        "place": "Chor",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -71,14 +64,7 @@
     },
     {
         "level": "50+",
-        "place": "Krailos Bug Cave",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Wyrms Drefia/LB",
+        "place": "Wyrms Liberty Bay",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -141,35 +127,35 @@
     },
     {
         "level": "100+",
-        "place": "Hellspawns Yalahar",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "100+",
-        "place": "Vengoth Castle",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "100+",
         "place": "Inner Hive",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "110+",
-        "place": "Deeplings",
+        "level": "100+",
+        "place": "Ravenous Lava Lurkers",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "100+",
+        "place": "Oramond West",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "100+",
+        "place": "Edron Were South (150+ with EK)",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "130+",
-        "place": "Lizard Chosens",
+        "place": "Deeplings Library",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -182,29 +168,22 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "130+",
-        "place": "Ravenous Lava Lurkers",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "130+",
+        "level": "150+",
         "place": "Werehyaenas",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "130+",
-        "place": "Formorgar Mines",
+        "level": "150+",
+        "place": "Lower Spike",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "150+",
-        "place": "Deeper Banuta",
+        "place": "Deeper Banuta -6",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -218,21 +197,21 @@
     },
     {
         "level": "150+",
-        "place": "Edron Were South",
+        "place": "Diremaws Task Area",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "150+",
-        "place": "Oramond East Minos",
+        "place": "Gazer Spectre",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
-    {
-        "level": "180+",
-        "place": "Gazer Spectre",
+        {
+        "level": "200+",
+        "place": "Deeper Banuta -8",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -258,9 +237,37 @@
         "loot": "-",
         "link" : "https://youtu.be/"
     },
+        {
+        "level": "200+",
+        "place": "Warzone 5",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "200+",
+        "place": "Warzone 4",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
     {
         "level": "200+",
         "place": "Lower Rosha",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "200+",
+        "place": "Book World: Chapter III",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "200+",
+        "place": "Book World: Chapter IV",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -274,14 +281,21 @@
     },
     {
         "level": "250+",
-        "place": "Oramond Wildlife Raid",
+        "place": "Oskayaat Weretigers",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "250+",
-        "place": "Ripper Spectres + Arachnophobica",
+        "place": "Oskayaat Werecrocodiles",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "250+",
+        "place": "Ripper Spectres Venore",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -295,14 +309,7 @@
     },
     {
         "level": "250+",
-        "place": "POI Seals",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "250+",
-        "place": "Diremaws Task Area",
+        "place": "Asura Mirror",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -316,21 +323,42 @@
     },
     {
         "level": "250+",
-        "place": "West Roshamuul",
+        "place": "Marapur Nagas",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "250+",
-        "place": "Warzone 5",
+        "place": "Summer Court",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "250+",
+        "place": "Nightmare Isles",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "250+",
+        "place": "Oramond Fury Dungeon",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "300+",
-        "place": "Summer Court",
+        "place": "Roshamuul West",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Roshamuul Mines",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -344,14 +372,14 @@
     },
     {
         "level": "300+",
-        "place": "Deathlings",
+        "place": "Buried Cathedral -8",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "300+",
-        "place": "Lower Spike",
+        "place": "Deathlings",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -365,35 +393,28 @@
     },
     {
         "level": "300+",
-        "place": "Nightmare Isles",
+        "place": "Oramond Catacombs",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "300+",
-        "place": "Warzone 4",
+        "place": "Iksupan Occupied Sanctuary",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "300+",
+        "place": "Iksupan Last Stand",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "350+",
-        "place": "Lost Souls (Flimsy etc.)",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "350+",
-        "place": "Catacombs",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "350+",
-        "place": "Marapur Nagas",
+        "place": "Upper Rosh",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -407,13 +428,20 @@
     },
     {
         "level": "350+",
-        "place": "Buried Cathedral -7/-8",
+        "place": "Cobra Basement",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "350+",
+        "level": "400+",
+        "place": "Flimsies Venore/PH",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
         "place": "Falcons Eagle",
         "raw_exp": "-",
         "loot": "-",
@@ -421,49 +449,35 @@
     },
     {
         "level": "400+",
-        "place": "Falcons Castle",
+        "place": "Crypt Warriors",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "400+",
-        "place": "Kilmaresh Catacombs",
+        "place": "Issavi Crypt Wardens/Sphinx",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "400+",
-        "place": "Warzone 2",
+        "place": "Cobra Bastion",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "400+",
-        "place": "Warzone 3",
+        "place": "Azzilon Castle",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "400+",
-        "place": "Issavi Crypt Wardens",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "400+",
-        "place": "Cobras",
-        "raw_exp": "-",
-        "loot": "-",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "400+",
-        "place": "Prison -1",
+        "place": "Prison -1/-3",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -483,15 +497,43 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "450+",
-        "place": "Ferumbras Way",
+        "level": "400+",
+        "place": "Ferumbras Undead Dragon Seal",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "500+",
-        "place": "Feru DT/Vexclaw seal (Tafariel)",
+        "level": "400+",
+        "place": "Ferumbras DT Seal",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Darashia Skeletons/Gladiators",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Issavi Goannas",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Bulltaurs",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "400+",
+        "place": "Ferumbras Jugg Seal",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
@@ -504,15 +546,71 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "600+",
-        "place": "Issavi Goannas",
+        "level": "500+",
+        "place": "Norcferatu Fortress",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "500+",
+        "place": "Nimmersatt Bottom Floor",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "500+",
+        "place": "Nimmersatt Boss Floor",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
     },
     {
         "level": "600+",
-        "place": "Norcferatus",
+        "place": "Norcferatu Dungeons West",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Norcferatu Dungeons East",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Podzilla Quaras",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Raubritters Ada Surroundings",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Raubritters Castle",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "700+",
+        "place": "Raubritters Bloodfire Gorge",
+        "raw_exp": "-",
+        "loot": "-",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "800+",
+        "place": "Azzilon Catacombs",
         "raw_exp": "-",
         "loot": "-",
         "link" : "https://youtu.be/"
