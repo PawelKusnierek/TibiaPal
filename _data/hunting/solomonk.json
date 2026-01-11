@@ -1073,11 +1073,51 @@
     },
     {
         "level": "600+",
+        "place": "Roshamuul West (Crypt Strike P7)",
+        "raw_exp": "7.4kk",
+        "loot": "2.3kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Upper Roshamuul (Crypt Strike P7)",
+        "raw_exp": "7.3kk",
+        "loot": "2.5kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
         "place": "Nimmersatt's Dragons -6 (Boss Floor)",
         "raw_exp": "7.3kk",
         "loot": "1.3kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/UeWUO2W_W-w"
+    },
+    {
+        "level": "600+",
+        "place": "Feru Undead Dragon Seal (Crypt Strike P7)",
+        "raw_exp": "7.1kk",
+        "loot": "2.0kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Oramond Catacombs (Crypt Strike P7)",
+        "raw_exp": "6.5kk",
+        "loot": "2.0kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Feru Mazoran Seal (Crypt Strike P7)",
+        "raw_exp": "6.5kk",
+        "loot": "2.0kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
     },
     {
         "level": "600+",
@@ -1097,10 +1137,26 @@
     },
     {
         "level": "600+",
+        "place": "Feru DT Seal -1 (Crypt Strike P7)",
+        "raw_exp": "6.0kk",
+        "loot": "2.0kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
         "place": "Buried Cathedral (Sanguine)",
         "raw_exp": "6.0kk",
         "loot": "1.4kk",
         "weapon_type": "Earth",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Feru Way (Crypt Strike P7)",
+        "raw_exp":"5.9kk",
+        "loot": "1.6kk",
+        "weapon_type": "Physical",
         "link" : "https://youtu.be/"
     },
     {
@@ -1129,6 +1185,30 @@
     },
     {
         "level": "600+",
+        "place": "Feru DT Seal -2 (Crypt Strike P7)",
+        "raw_exp": "5.6kk",
+        "loot": "1.8kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
+        "place": "Issavi Puzzle",
+        "raw_exp": "5.5kk",
+        "loot": "1.0kk",
+        "weapon_type": "Earth",
+        "link" : "https://youtu.be/hr5BRBPQ4N4"
+    },
+    {
+        "level": "600+",
+        "place": "Prison -3 (Crypt Strike P7)",
+        "raw_exp": "5.4kk",
+        "loot": "1.5kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
         "place": "Undead Dragon Feru Seal",
         "raw_exp": "5.4kk",
         "loot": "1.2kk",
@@ -1145,22 +1225,6 @@
     },
     {
         "level": "600+",
-        "place": "Juggernaut Feru Seal",
-        "raw_exp": "5.1kk",
-        "loot": "800k",
-        "weapon_type": "Energy",
-        "link" : "https://youtu.be/dvPGSSHE5eA"
-    },
-    {
-        "level": "600+",
-        "place": "Issavi Puzzle",
-        "raw_exp": "5.5kk",
-        "loot": "1.0kk",
-        "weapon_type": "Earth",
-        "link" : "https://youtu.be/hr5BRBPQ4N4"
-    },
-    {
-        "level": "600+",
         "place": "Issavi Sewers",
         "raw_exp": "5.0kk",
         "loot": "900k",
@@ -1169,17 +1233,33 @@
     },
     {
         "level": "600+",
+        "place": "Juggernaut Feru Seal",
+        "raw_exp": "5.1kk",
+        "loot": "800k",
+        "weapon_type": "Energy",
+        "link" : "https://youtu.be/dvPGSSHE5eA"
+    },
+        {
+        "level": "600+",
         "place": "Warzone 8",
         "raw_exp": "4.1kk",
-        "loot": "1.9kk",
+        "loot": "2.5kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/gm8sQONf2rI"
     },
     {
         "level": "600+",
+        "place": "Warzone 7 (Crypt Strike P7)",
+        "raw_exp": "4.0kk",
+        "loot": "3.5kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "600+",
         "place": "Otherworld (Sanguine)",
         "raw_exp": "4.0kk",
-        "loot": "2.0kk",
+        "loot": "2.3kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/K-nW0dIrHPE"
     },
@@ -1187,7 +1267,7 @@
         "level": "600+",
         "place": "Deep Desert (Darashia Skeletons)",
         "raw_exp": "4.0kk",
-        "loot": "2.0kk",
+        "loot": "2.2kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/MxcMPFSzNMg"
     },
@@ -1198,86 +1278,6 @@
         "loot": "2.2kk",
         "weapon_type": "Earth",
         "link" : "https://youtu.be/BJm7AcIniWc"
-    },
-    {
-        "level": "600+",
-        "place": "Roshamuul West (Crypt Strike P7)",
-        "raw_exp": "7.4kk",
-        "loot": "2.3kk",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Upper Roshamuul (Crypt Strike P7)",
-        "raw_exp": "7.3kk",
-        "loot": "2.5kk",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Feru Undead Dragon Seal (Crypt Strike P7)",
-        "raw_exp": "7.1kk",
-        "loot": "2.0kk",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Oramond Catacombs (Crypt Strike P7)",
-        "raw_exp": "6.5kk",
-        "loot": "2.0kk",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Feru Mazoran Seal (Crypt Strike P7)",
-        "raw_exp": "6.5kk",
-        "loot": "2.0kk",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Feru DT Seal -1 (Crypt Strike P7)",
-        "raw_exp": "6.0kk",
-        "loot": "2.0kk",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Feru Way (Crypt Strike P7)",
-        "raw_exp":"5.9kk",
-        "loot": "1.6kk",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Feru DT Seal -2 (Crypt Strike P7)",
-        "raw_exp": "5.6kk",
-        "loot": "1.8kk",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Prison -3 (Crypt Strike P7)",
-        "raw_exp": "5.4kk",
-        "loot": "1.5kk",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "600+",
-        "place": "Warzone 7 (Crypt Strike P7)",
-        "raw_exp": "4.0kk",
-        "loot": "3.5kk",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
     },
     {
         "level": "700+",
