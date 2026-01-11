@@ -1,27 +1,133 @@
+// Remove scroll elements from number inputs
+#forge_form input[type=number]::-webkit-outer-spin-button,
+#forge_form input[type=number]::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+
+#forge_form input[type=number]
+    -moz-appearance: textfield
+
 #forge_form
-    padding-top: 20px
-    padding-left: 15px
-    padding-bottom: 20px
+    max-width: 600px
+    margin: 0 auto
+    padding: 15px 20px
 
-#forge_form input
-    margin-top: 7px
-    width: 203px
-
-#forge_form select
-    margin-top: 7px
-    width: 210px
+#forge_form .form-group
+    display: flex
+    align-items: center
+    margin-bottom: 12px
+    gap: 10px
 
 #forge_form label
-    display: inline-block
-    width: 225px
+    color: #ebebeb
+    font-weight: bold
+    width: 250px
+    min-width: 250px
+    max-width: 250px
+    text-align: right
+    flex: 0 0 250px
+
+#forge_form select
+    flex: 0 0 120px !important
+    max-width: 120px !important
+    width: 120px !important
+    box-sizing: border-box !important
+    padding: 8px
+    background-color: #061021
+    color: #ebebeb
+    border: 1px solid #2d8cf8b6
+    border-radius: 4px
+    font-size: 14px
+    transition: border-color 0.3s ease
+
+#forge_form input[type="number"]
+    width: 120px !important
+    max-width: 120px !important
+    flex: 0 0 120px !important
+    box-sizing: border-box !important
+    padding: 8px
+    background-color: #061021
+    color: #ebebeb
+    border: 1px solid #2d8cf8b6
+    border-radius: 4px
+    font-size: 14px
+    transition: border-color 0.3s ease
+
+#forge_form select:disabled
+    background-color: #0a1525
+    color: #666
+    cursor: not-allowed
+    opacity: 0.6
+
+#forge_form select:hover
+    border-color: #2d8cf8
+
+#forge_form input[type="number"]:hover
+    border-color: #2d8cf8
+
+#forge_form select:focus
+    outline: none
+    border-color: #2d8cf8
+    box-shadow: 0 0 5px rgba(45, 140, 248, 0.3)
+
+#forge_form input[type="number"]:focus
+    outline: none
+    border-color: #2d8cf8
+    box-shadow: 0 0 5px rgba(45, 140, 248, 0.3)
+
+#forge_form select option
+    background-color: #061021
+    color: #ebebeb
 
 #forgesubmitbutton
-    margin-top: 20px !important
-    width: 70px !important
+    width: 120px !important
+    max-width: 120px !important
+    flex: 0 0 120px !important
+    box-sizing: border-box !important
+    padding: 10px
+    background-color: #2d8cf8
+    color: #ebebeb
+    border: none
+    border-radius: 4px
+    font-size: 16px
+    font-weight: bold
+    cursor: pointer
+    transition: background-color 0.3s ease, transform 0.1s ease
 
-#exercisepara
-    text-align: left
-    display: block
+#forgesubmitbutton:hover
+    background-color: #1d6fd8
+    transform: translateY(-1px)
 
-#exerciseformresults
-    padding-bottom: 15px
+#forgesubmitbutton:active
+    transform: translateY(0)
+
+#forge_info
+    max-width: 600px
+    margin: 0 auto 18px
+    padding: 15px
+    background-color: rgba(45, 140, 248, 0.1)
+    border: 1px solid #2d8cf8b6
+    border-radius: 4px
+    color: #ebebeb
+    line-height: 1.5
+
+#forge_info h1
+    color: #ebebeb
+    margin-bottom: 10px
+    margin-top: 0
+    font-size: 26px
+
+#forge_info p
+    margin: 8px 0
+
+#forge_info p:not(:first-child)
+    margin-top: 6px
+    font-style: italic
+    color: #b0b0b0
+
+#forge_results
+    max-width: 600px
+    margin: 18px auto 0
+    padding: 15px
+    color: #ebebeb
+    line-height: 1.5
