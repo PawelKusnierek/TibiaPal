@@ -222,8 +222,14 @@ function calculate_single_tier_fusion(feeder_price_gold, fusion_tier, exalted_pr
   // Get fusion cost for the tier
   var fusion_cost_gold = fusion_cost[item_classification][fusion_tier]
   
-  // Cost per fusion attempt
-  var cost_per_attempt = fusion_cost_gold + (2 * exalted_price_gold)
+  // Special events: 1% chance gold refund, 1% chance item kept
+  var gold_refund_chance = 0.01
+  var item_kept_chance = 0.01
+  
+  // Expected fusion cost per attempt (1% chance of refund)
+  // Fusion cost is refunded 1% of the time, but exalted cores are still paid
+  var expected_fusion_cost_per_attempt = fusion_cost_gold * (1 - gold_refund_chance)
+  var cost_per_attempt = expected_fusion_cost_per_attempt + (2 * exalted_price_gold)
   
   // Fusion probabilities
   var success_rate = 0.65
@@ -231,19 +237,25 @@ function calculate_single_tier_fusion(feeder_price_gold, fusion_tier, exalted_pr
   var tier_loss_on_failure = 0.50  // 50% chance of tier loss on failure
   
   // Expected outcomes per attempt:
-  // Success (65%): Get 1 next tier, lose 2 feeder items
+  // Success (65%): Get 1 next tier, lose 2 feeder items (or 1 if item kept event)
   // Failure (35%): 
-  //   - 50% chance: lose 1 feeder item (tier loss)
+  //   - 50% chance: lose 1 feeder item (tier loss) (or 0 if item kept event)
   //   - 50% chance: lose 0 feeder items (no tier loss)
   
   // Expected next tier items produced per attempt
   var expected_output_per_attempt = success_rate * 1
   
-  // Expected feeder items consumed per attempt
-  var expected_feeder_per_attempt = 
-    success_rate * 2 +                           // Success: lose 2 feeder items
-    failure_rate * tier_loss_on_failure * 1 +     // Failure with tier loss: lose 1 feeder item
-    failure_rate * (1 - tier_loss_on_failure) * 0 // Failure without tier loss: lose 0 feeder items
+  // Expected feeder items consumed per attempt (accounting for 1% item kept chance)
+  // Success case: 99% lose 2, 1% lose 1 (keep one back)
+  var success_item_loss = success_rate * ((1 - item_kept_chance) * 2 + item_kept_chance * 1)
+  
+  // Failure with tier loss: 99% lose 1, 1% lose 0 (keep the item)
+  var failure_tier_loss_item_loss = failure_rate * tier_loss_on_failure * ((1 - item_kept_chance) * 1 + item_kept_chance * 0)
+  
+  // Failure without tier loss: always lose 0
+  var failure_no_tier_loss_item_loss = failure_rate * (1 - tier_loss_on_failure) * 0
+  
+  var expected_feeder_per_attempt = success_item_loss + failure_tier_loss_item_loss + failure_no_tier_loss_item_loss
   
   // To get 1 output item, we need 1 / expected_output_per_attempt attempts
   var attempts_needed = 1 / expected_output_per_attempt
