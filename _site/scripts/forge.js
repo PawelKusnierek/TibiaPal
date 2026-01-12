@@ -3,7 +3,6 @@ var target_tier
 var target_price
 var feeder_price
 var exalted_price
-var sliver_price
 
 var fusion_cost = {
   1: {
@@ -105,13 +104,8 @@ function submit_forge_form() {
     return
   }
   calculate_fusion()
-  calculate_transfer()
   if (item_classification == 4) {
     calculate_convergence_fusion()
-    calculate_convergence_transfer()
-  }
-  else {
-    pass
   }
 }
 
@@ -121,8 +115,6 @@ function read_form_values() {
   target_price = document.getElementById("main_item_price").value
   feeder_price = document.getElementById("feeder_item_price").value
   exalted_price = document.getElementById("exalted_core_price").value
-  const sliverInput = document.getElementById("sliver_price")
-  sliver_price = sliverInput ? sliverInput.value : ''
 }
 
 function verify_entered_values() {
@@ -224,236 +216,140 @@ function clear_forge_results() {
   }
 }
 
-// Display Regular Fusion results
-function display_fusion_results(results) {
-  var resultsDiv = document.getElementById('forge_results')
-  if (!resultsDiv) {
-    console.error('Results div not found')
-    return
+// Helper function to calculate fusion for a single tier step
+// Returns: { total_cost, attempts_needed, total_exalted_cores, feeder_items_consumed }
+function calculate_single_tier_fusion(feeder_price_gold, fusion_tier, exalted_price_gold) {
+  // Get fusion cost for the tier
+  var fusion_cost_gold = fusion_cost[item_classification][fusion_tier]
+  
+  // Cost per fusion attempt
+  var cost_per_attempt = fusion_cost_gold + (2 * exalted_price_gold)
+  
+  // Fusion probabilities
+  var success_rate = 0.65
+  var failure_rate = 0.35
+  var tier_loss_on_failure = 0.50  // 50% chance of tier loss on failure
+  
+  // Expected outcomes per attempt:
+  // Success (65%): Get 1 next tier, lose 2 feeder items
+  // Failure (35%): 
+  //   - 50% chance: lose 1 feeder item (tier loss)
+  //   - 50% chance: lose 0 feeder items (no tier loss)
+  
+  // Expected next tier items produced per attempt
+  var expected_output_per_attempt = success_rate * 1
+  
+  // Expected feeder items consumed per attempt
+  var expected_feeder_per_attempt = 
+    success_rate * 2 +                           // Success: lose 2 feeder items
+    failure_rate * tier_loss_on_failure * 1 +     // Failure with tier loss: lose 1 feeder item
+    failure_rate * (1 - tier_loss_on_failure) * 0 // Failure without tier loss: lose 0 feeder items
+  
+  // To get 1 output item, we need 1 / expected_output_per_attempt attempts
+  var attempts_needed = 1 / expected_output_per_attempt
+  
+  // Total cost to get 1 output item
+  var total_fusion_cost = attempts_needed * cost_per_attempt
+  var total_feeder_cost = attempts_needed * expected_feeder_per_attempt * feeder_price_gold
+  var total_cost = total_fusion_cost + total_feeder_cost
+  
+  // Total exalted cores used
+  var total_exalted_cores = attempts_needed * 2
+  
+  return {
+    total_cost: total_cost,
+    attempts_needed: attempts_needed,
+    total_exalted_cores: total_exalted_cores,
+    feeder_items_consumed: expected_feeder_per_attempt * attempts_needed
   }
-  
-  // Clear previous results
-  resultsDiv.innerHTML = ''
-  
-  // Validate results
-  if (!results || typeof results.totalCost !== 'number' || isNaN(results.totalCost)) {
-    var errorMsg = document.createElement('div')
-    errorMsg.style.color = '#ff6b6b'
-    errorMsg.style.padding = '10px'
-    errorMsg.textContent = 'Error calculating fusion results. Please check your inputs.'
-    resultsDiv.appendChild(errorMsg)
-    return
-  }
-  
-  // Create results container
-  var container = document.createElement('div')
-  container.style.marginTop = '20px'
-  container.style.padding = '20px'
-  container.style.backgroundColor = '#061021'
-  container.style.border = '1px solid #2d8cf8b6'
-  container.style.borderRadius = '4px'
-  
-  // Title
-  var title = document.createElement('h2')
-  title.textContent = 'Expected Regular Fusion Results'
-  title.style.color = '#ebebeb'
-  title.style.marginTop = '0'
-  title.style.marginBottom = '20px'
-  container.appendChild(title)
-  
-  // Create results table
-  var table = document.createElement('table')
-  table.style.width = '100%'
-  table.style.borderCollapse = 'collapse'
-  table.style.color = '#ebebeb'
-  
-  // Helper function to create a table row
-  function createRow(label, value, isTotal) {
-    var row = document.createElement('tr')
-    if (isTotal) {
-      row.style.borderTop = '2px solid #2d8cf8b6'
-      row.style.fontWeight = 'bold'
-    }
-    
-    var labelCell = document.createElement('td')
-    labelCell.textContent = label
-    labelCell.style.padding = '10px'
-    labelCell.style.textAlign = 'left'
-    if (isTotal) {
-      labelCell.style.color = '#2d8cf8'
-    }
-    
-    var valueCell = document.createElement('td')
-    valueCell.textContent = value
-    valueCell.style.padding = '10px'
-    valueCell.style.textAlign = 'right'
-    if (isTotal) {
-      valueCell.style.color = '#2d8cf8'
-      valueCell.style.fontSize = '1.1em'
-    }
-    
-    row.appendChild(labelCell)
-    row.appendChild(valueCell)
-    return row
-  }
-  
-  // Add rows
-  table.appendChild(createRow('Gold Cost:', format_gold(results.gold)))
-  table.appendChild(createRow('Expected Item Cost:', format_gold(results.itemCost) + ' (' + format_decimal(results.itemsConsumed) + ' items)'))
-  table.appendChild(createRow('Expected Exalted Core Cost:', format_gold(results.exaltedCost) + ' (' + format_decimal(results.exaltedCores) + ' cores)'))
-  table.appendChild(createRow('Expected Total Cost:', format_gold(results.totalCost), true))
-  
-  container.appendChild(table)
-  
-  // Add note about the calculation
-  var note = document.createElement('p')
-  note.style.marginTop = '15px'
-  note.style.color = '#999'
-  note.style.fontSize = '0.9em'
-  note.style.fontStyle = 'italic'
-  note.textContent = 'Note: Calculations assume 65% success rate and 50% tier loss chance on failure (using 2 Exalted Cores per fusion). Regular Fusion uses target items (not feeder items).'
-  container.appendChild(note)
-  
-  resultsDiv.appendChild(container)
 }
 
+// Calculate fusion for T0 to T1 or T1 to T2
 function calculate_fusion() {
-  try {
-    // Convert prices to numbers (prices are in kk/k, so multiply by 1,000,000 or 1,000)
-    // Regular Fusion uses target items (not feeder items)
-    var targetPriceNum = parseFloat(target_price) * 1000000 // kk to actual gold
-    var exaltedPriceNum = parseFloat(exalted_price) * 1000 // k to actual gold
+  // Only handle T1 and T2 cases for now
+  if (target_tier !== 1 && target_tier !== 2) {
+    return
+  }
+  
+  // Convert prices from kk/k to gold
+  var exalted_price_gold = parseFloat(exalted_price) * 1000   // k to gold
+  
+  if (target_tier === 1) {
+    // T0 to T1 case
+    var feeder_price_gold = parseFloat(feeder_price) * 1000000  // kk to gold
     
-    // Validate price inputs
-    if (isNaN(targetPriceNum) || isNaN(exaltedPriceNum) || targetPriceNum < 0 || exaltedPriceNum < 0) {
-      throw new Error('Invalid price values')
-    }
-    
-    // Fusion parameters
-    var SUCCESS_RATE = 0.65 // 65% with 2 Exalted Cores
-    var FAILURE_RATE = 0.35 // 35%
-    var TIER_LOSS_CHANCE = 0.5 // 50% chance of tier loss on failure
-    
-    // Calculate expected items and fusions needed at each tier
-    // Work backwards from target_tier to tier 0
-    // Key: To produce 1 item at tier+1, we need 2 items at tier to fuse
-    // Expected fusions to get 1 success = 1 / successRate
-    
-    // Track base items needed (without tier loss adjustments) for cost calculations
-    var baseItemsAtTier = {}
-    baseItemsAtTier[target_tier] = 1 // We want 1 item at target_tier
-    
-    // Track total items needed (including tier losses) for final item count
-    var totalItemsAtTier = {}
-    totalItemsAtTier[target_tier] = 1
-    
-    // Work backwards to calculate items needed at each tier
-    for (var tier = target_tier - 1; tier >= 0; tier--) {
-      var itemsNeededAtNextTier = baseItemsAtTier[tier + 1] || 0
-      
-      // To get itemsNeededAtNextTier items at tier+1, we need to fuse items at tier
-      // Each successful fusion requires 2 items at tier and produces 1 item at tier+1
-      // So minimum items needed = itemsNeededAtNextTier * 2
-      // But we need to account for failures, so expected fusion attempts = itemsNeededAtNextTier / successRate
-      var expectedFusions = itemsNeededAtNextTier / SUCCESS_RATE
-      
-      // Base items consumed in fusion attempts (each attempt uses 2 items)
-      var baseItemsConsumed = expectedFusions * 2
-      baseItemsAtTier[tier] = baseItemsConsumed
-      
-      // Account for tier losses: when fusion fails, 50% chance one item loses a tier
-      var expectedTierLosses = expectedFusions * FAILURE_RATE * TIER_LOSS_CHANCE
-      
-      var additionalItemsNeeded = 0
-      if (tier === 0) {
-        // Tier 0: items are destroyed on tier loss, just need replacements
-        additionalItemsNeeded = expectedTierLosses
-      } else {
-        // Tier > 0: items are downgraded to tier-1, need to rebuild them
-        // To rebuild 1 item at tier, we need items at tier-1
-        // Use base calculation: 2 / successRate (avoids feedback loop)
-        // This is the expected items at tier-1 needed to produce 1 item at tier
-        var itemsNeededPerRebuild = 2 / SUCCESS_RATE
-        additionalItemsNeeded = expectedTierLosses * itemsNeededPerRebuild
-      }
-      
-      totalItemsAtTier[tier] = baseItemsConsumed + additionalItemsNeeded
-    }
-    
-    // Calculate costs for each tier transition using base items (actual fusions performed)
-    var totalGold = 0
-    var totalExaltedCores = 0
-    var totalItemsConsumed = 0
-    
-    for (var currentTier = 0; currentTier < target_tier; currentTier++) {
-      var nextTier = currentTier + 1
-      
-      // Get fusion cost for this tier transition
-      var fusionGoldCost = get_fusion_gold_cost(item_classification, currentTier)
-      if (fusionGoldCost === 0) {
-        continue // Invalid tier transition for this classification
-      }
-      
-      // Base items needed at nextTier (this is what we're trying to produce)
-      var baseItemsNeededAtNextTier = baseItemsAtTier[nextTier] || 0
-      
-      // Expected fusions needed = baseItemsNeeded / successRate
-      var expectedFusions = baseItemsNeededAtNextTier / SUCCESS_RATE
-      
-      // Each fusion uses 2 Exalted Cores and consumes 2 items
-      var exaltedCoresForTier = expectedFusions * 2
-      var itemsConsumedForTier = expectedFusions * 2
-      var goldForTier = expectedFusions * fusionGoldCost
-      
-      totalGold += goldForTier
-      totalExaltedCores += exaltedCoresForTier
-      totalItemsConsumed += itemsConsumedForTier
-    }
-    
-    // Total items consumed should be the total items needed at tier 0 (includes tier loss replacements)
-    totalItemsConsumed = totalItemsAtTier[0] || 0
-    
-    // Calculate total cost including item prices
-    // Regular Fusion uses target items (all items consumed are target items)
-    var itemCost = totalItemsConsumed * targetPriceNum
-    var exaltedCost = totalExaltedCores * exaltedPriceNum
-    var totalCost = totalGold + itemCost + exaltedCost
-    
-    // Store results for display
-    var fusionResults = {
-      gold: totalGold,
-      exaltedCores: totalExaltedCores,
-      itemsConsumed: totalItemsConsumed,
-      itemCost: itemCost,
-      exaltedCost: exaltedCost,
-      totalCost: totalCost
-    }
+    var result = calculate_single_tier_fusion(feeder_price_gold, 1, exalted_price_gold)
     
     // Display results
-    display_fusion_results(fusionResults)
-    return fusionResults
-  } catch (error) {
-    console.error('Error in calculate_fusion:', error)
-    var resultsDiv = document.getElementById('forge_results')
-    if (resultsDiv) {
-      var errorMsg = document.createElement('div')
-      errorMsg.style.color = '#ff6b6b'
-      errorMsg.style.padding = '10px'
-      errorMsg.textContent = 'Error calculating fusion: ' + error.message
-      resultsDiv.appendChild(errorMsg)
-    }
-    return null
+    display_fusion_results(result.total_cost, result.attempts_needed, result.total_exalted_cores, 
+                          result.feeder_items_consumed, 0, 1)
+  } else if (target_tier === 2) {
+    // T1 to T2 case
+    // First calculate T0 to T1
+    var t0_price_gold = parseFloat(feeder_price) * 1000000  // kk to gold
+    var t0_to_t1_result = calculate_single_tier_fusion(t0_price_gold, 1, exalted_price_gold)
+    
+    // Use T0→T1 total cost as the feeder price for T1→T2
+    var t1_price_gold = t0_to_t1_result.total_cost
+    
+    // Calculate T1 to T2 (this already accounts for failures, so it tells us how many T1 items we need)
+    var t1_to_t2_result = calculate_single_tier_fusion(t1_price_gold, 2, exalted_price_gold)
+    
+    // Calculate totals:
+    // - Total T1 items needed = t1_to_t2_result.feeder_items_consumed (accounts for failures)
+    // - Total T0 items needed = t1_to_t2_result.feeder_items_consumed * t0_to_t1_result.feeder_items_consumed
+    // - Total attempts = t1_to_t2_result.attempts_needed (T1→T2 attempts) + (T0→T1 attempts for each T1 needed)
+    // - Total cost = t1_to_t2_result.total_cost (which already includes T1 costs)
+    // - Total exalted cores = t1_to_t2_result.total_exalted_cores + (T0→T1 cores for each T1 needed)
+    
+    var total_t0_items = t1_to_t2_result.feeder_items_consumed * t0_to_t1_result.feeder_items_consumed
+    var total_attempts = t1_to_t2_result.attempts_needed + (t1_to_t2_result.feeder_items_consumed * t0_to_t1_result.attempts_needed)
+    var total_exalted_cores = t1_to_t2_result.total_exalted_cores + (t1_to_t2_result.feeder_items_consumed * t0_to_t1_result.total_exalted_cores)
+    
+    display_fusion_results(t1_to_t2_result.total_cost, total_attempts, total_exalted_cores, 
+                          total_t0_items, t1_to_t2_result.feeder_items_consumed, 2)
   }
 }
 
-// Get the gold cost for fusing from currentTier to nextTier
-function get_fusion_gold_cost(classification, currentTier) {
-  var nextTier = currentTier + 1
+// Display fusion calculation results
+function display_fusion_results(total_cost, attempts_needed, total_exalted_cores, total_t0_items, t1_items_consumed, target_tier) {
+  var resultsDiv = document.getElementById('forge_results')
+  if (!resultsDiv) return
   
-  // Check if this tier transition is valid for this classification
-  if (fusion_cost[classification] && fusion_cost[classification][nextTier]) {
-    return fusion_cost[classification][nextTier]
+  var title = target_tier === 1 ? 'Expected Fusion Results (T0 → T1)' : 'Expected Fusion Results (T0 → T2)'
+  
+  var html = '<div style="background-color: rgba(45, 140, 248, 0.1); border: 1px solid #2d8cf8b6; border-radius: 4px; padding: 15px;">'
+  html += '<h2 style="color: #ebebeb; margin-top: 0;">' + title + '</h2>'
+  html += '<div style="color: #ebebeb; display: flex; flex-direction: column;">'
+  
+  html += '<div style="display: block; margin-bottom: 12px;">'
+  html += '<div style="font-weight: bold; margin-bottom: 4px;">Expected Attempts Needed:</div>'
+  html += '<div style="margin-left: 20px;">' + format_decimal(attempts_needed) + '</div>'
+  html += '</div>'
+  
+  html += '<div style="display: block; margin-bottom: 12px;">'
+  html += '<div style="font-weight: bold; margin-bottom: 4px;">T0 Items Consumed:</div>'
+  html += '<div style="margin-left: 20px;">' + format_decimal(total_t0_items) + '</div>'
+  html += '</div>'
+  
+  if (target_tier === 2 && t1_items_consumed) {
+    html += '<div style="display: block; margin-bottom: 12px;">'
+    html += '<div style="font-weight: bold; margin-bottom: 4px;">T1 Items Consumed:</div>'
+    html += '<div style="margin-left: 20px;">' + format_decimal(t1_items_consumed) + '</div>'
+    html += '</div>'
   }
   
-  return 0 // Invalid tier transition
+  html += '<div style="display: block; margin-bottom: 12px;">'
+  html += '<div style="font-weight: bold; margin-bottom: 4px;">Exalted Cores Used:</div>'
+  html += '<div style="margin-left: 20px;">' + format_decimal(total_exalted_cores) + '</div>'
+  html += '</div>'
+  
+  html += '<div style="display: block; margin-bottom: 12px;">'
+  html += '<div style="font-weight: bold; margin-bottom: 4px;">Total Cost:</div>'
+  html += '<div style="margin-left: 20px;">' + format_gold(total_cost) + '</div>'
+  html += '</div>'
+  
+  html += '</div></div>'
+  
+  resultsDiv.innerHTML = html
 }
