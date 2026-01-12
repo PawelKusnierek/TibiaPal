@@ -264,59 +264,61 @@ function calculate_single_tier_fusion(feeder_price_gold, fusion_tier, exalted_pr
   }
 }
 
-// Calculate fusion for T0 to T1 or T1 to T2
+// Calculate fusion for T0 to target tier (T1 through T10)
 function calculate_fusion() {
-  // Only handle T1 and T2 cases for now
-  if (target_tier !== 1 && target_tier !== 2) {
+  // Only handle T1 through T10 cases
+  if (target_tier < 1 || target_tier > 10) {
     return
   }
   
   // Convert prices from kk/k to gold
   var exalted_price_gold = parseFloat(exalted_price) * 1000   // k to gold
+  var t0_price_gold = parseFloat(feeder_price) * 1000000  // kk to gold
   
+  // Calculate T0 to T1 first (needed for all tiers)
+  var previous_result = calculate_single_tier_fusion(t0_price_gold, 1, exalted_price_gold)
+  
+  // If target is T1, we're done
   if (target_tier === 1) {
-    // T0 to T1 case
-    var feeder_price_gold = parseFloat(feeder_price) * 1000000  // kk to gold
-    
-    var result = calculate_single_tier_fusion(feeder_price_gold, 1, exalted_price_gold)
-    
-    // Display results
-    display_fusion_results(result.total_cost, result.attempts_needed, result.total_exalted_cores, 
-                          result.feeder_items_consumed, 0, 1)
-  } else if (target_tier === 2) {
-    // T1 to T2 case
-    // First calculate T0 to T1
-    var t0_price_gold = parseFloat(feeder_price) * 1000000  // kk to gold
-    var t0_to_t1_result = calculate_single_tier_fusion(t0_price_gold, 1, exalted_price_gold)
-    
-    // Use T0→T1 total cost as the feeder price for T1→T2
-    var t1_price_gold = t0_to_t1_result.total_cost
-    
-    // Calculate T1 to T2 (this already accounts for failures, so it tells us how many T1 items we need)
-    var t1_to_t2_result = calculate_single_tier_fusion(t1_price_gold, 2, exalted_price_gold)
-    
-    // Calculate totals:
-    // - Total T1 items needed = t1_to_t2_result.feeder_items_consumed (accounts for failures)
-    // - Total T0 items needed = t1_to_t2_result.feeder_items_consumed * t0_to_t1_result.feeder_items_consumed
-    // - Total attempts = t1_to_t2_result.attempts_needed (T1→T2 attempts) + (T0→T1 attempts for each T1 needed)
-    // - Total cost = t1_to_t2_result.total_cost (which already includes T1 costs)
-    // - Total exalted cores = t1_to_t2_result.total_exalted_cores + (T0→T1 cores for each T1 needed)
-    
-    var total_t0_items = t1_to_t2_result.feeder_items_consumed * t0_to_t1_result.feeder_items_consumed
-    var total_attempts = t1_to_t2_result.attempts_needed + (t1_to_t2_result.feeder_items_consumed * t0_to_t1_result.attempts_needed)
-    var total_exalted_cores = t1_to_t2_result.total_exalted_cores + (t1_to_t2_result.feeder_items_consumed * t0_to_t1_result.total_exalted_cores)
-    
-    display_fusion_results(t1_to_t2_result.total_cost, total_attempts, total_exalted_cores, 
-                          total_t0_items, t1_to_t2_result.feeder_items_consumed, 2)
+    display_fusion_results(previous_result.total_cost, previous_result.attempts_needed, 
+                          previous_result.total_exalted_cores, previous_result.feeder_items_consumed, target_tier)
+    return
   }
+  
+  // For T2 and above, calculate each tier step sequentially
+  var total_t0_items = previous_result.feeder_items_consumed  // T0 items for T0→T1
+  var total_attempts = previous_result.attempts_needed
+  var total_exalted_cores = previous_result.total_exalted_cores
+  
+  // Calculate each tier from T1 to target_tier
+  for (var tier = 2; tier <= target_tier; tier++) {
+    // Use previous tier's total cost as feeder price for current tier
+    var current_feeder_price = previous_result.total_cost
+    
+    // Calculate current tier fusion
+    var current_result = calculate_single_tier_fusion(current_feeder_price, tier, exalted_price_gold)
+    
+    // Accumulate totals
+    // Total T0 items = current tier feeder items * accumulated T0 items from previous tiers
+    total_t0_items = current_result.feeder_items_consumed * total_t0_items
+    total_attempts = current_result.attempts_needed + (current_result.feeder_items_consumed * total_attempts)
+    total_exalted_cores = current_result.total_exalted_cores + (current_result.feeder_items_consumed * total_exalted_cores)
+    
+    // Update previous_result for next iteration
+    previous_result = current_result
+  }
+  
+  // Display results
+  display_fusion_results(previous_result.total_cost, total_attempts, total_exalted_cores, 
+                        total_t0_items, target_tier)
 }
 
 // Display fusion calculation results
-function display_fusion_results(total_cost, attempts_needed, total_exalted_cores, total_t0_items, t1_items_consumed, target_tier) {
+function display_fusion_results(total_cost, attempts_needed, total_exalted_cores, total_t0_items, target_tier) {
   var resultsDiv = document.getElementById('forge_results')
   if (!resultsDiv) return
   
-  var title = target_tier === 1 ? 'Expected Fusion Results (T0 → T1)' : 'Expected Fusion Results (T0 → T2)'
+  var title = 'Expected Fusion Results (T0 → T' + target_tier + ')'
   
   var html = '<div style="background-color: rgba(45, 140, 248, 0.1); border: 1px solid #2d8cf8b6; border-radius: 4px; padding: 15px;">'
   html += '<h2 style="color: #ebebeb; margin-top: 0;">' + title + '</h2>'
@@ -331,13 +333,6 @@ function display_fusion_results(total_cost, attempts_needed, total_exalted_cores
   html += '<div style="font-weight: bold; margin-bottom: 4px;">T0 Items Consumed:</div>'
   html += '<div style="margin-left: 20px;">' + format_decimal(total_t0_items) + '</div>'
   html += '</div>'
-  
-  if (target_tier === 2 && t1_items_consumed) {
-    html += '<div style="display: block; margin-bottom: 12px;">'
-    html += '<div style="font-weight: bold; margin-bottom: 4px;">T1 Items Consumed:</div>'
-    html += '<div style="margin-left: 20px;">' + format_decimal(t1_items_consumed) + '</div>'
-    html += '</div>'
-  }
   
   html += '<div style="display: block; margin-bottom: 12px;">'
   html += '<div style="font-weight: bold; margin-bottom: 4px;">Exalted Cores Used:</div>'
