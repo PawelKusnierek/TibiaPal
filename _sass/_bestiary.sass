@@ -23,3 +23,95 @@
     margin-right: auto
     width: 425px
     height: 300px
+
+// Sortable header styles for bestiary (override hunting styles to prevent duplicate arrows)
+.bestiary_table .sortable-header
+    cursor: pointer
+    user-select: none
+    transition: background-color 0.2s
+    position: relative
+    padding-right: 0 // Remove padding that was for CSS arrows
+
+    &:hover
+        background-color: rgba(45, 140, 248, 0.3) !important
+
+    // Disable CSS arrows from hunting.sass
+    &::after
+        content: none !important
+
+// Filter button container
+.bestiary-filter-buttons
+    margin-bottom: 15px
+    display: flex
+    align-items: flex-start
+    gap: 10px
+
+// Filter buttons
+.bestiary-filter-btn
+    padding: 8px 16px
+    background-color: #061021
+    color: #ebebeb
+    border: 1px solid #2d8cf8b6
+    border-radius: 4px
+    cursor: pointer
+    font-size: 14px
+    font-weight: bold
+
+// Filter row container
+.bestiary-filter-row
+    margin-bottom: 15px
+    display: flex
+    align-items: flex-start
+
+// Filter label (main label)
+.bestiary-filter-label
+    color: #ebebeb
+    margin-right: 10px
+    font-weight: bold
+    min-width: 125px
+    text-align: left
+
+// Filter checkbox container
+.bestiary-checkbox-container
+    display: inline-block
+
+// Filter checkbox label
+.bestiary-checkbox-label
+    color: #ebebeb
+    margin-right: 15px
+
+.bestiary-checkbox-container > .bestiary-checkbox-label:first-child
+    margin-left: 5px
+
+// Search/Level row container
+.bestiary-input-row
+    margin: 20px 0
+    display: flex
+    align-items: center
+
+// Search/Level label
+.bestiary-input-label
+    color: #ebebeb
+    margin-right: 10px
+    min-width: 60px
+
+// Search/Level input
+.bestiary-input
+    padding: 8px
+    width: 300px
+    background-color: #061021
+    color: #ebebeb
+    border: 1px solid #2d8cf8b6
+    border-radius: 4px
+
+// Remove scroll elements from number inputs
+#levelFilter
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+
+    &[type=number]
+        -moz-appearance: textfield
+        -webkit-appearance: textfield
+        appearance: textfield

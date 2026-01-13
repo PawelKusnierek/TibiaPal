@@ -4,30 +4,7 @@ title: TibiaPal.com - Bestiary Guide
 scripts: <script src="scripts/bestiary_guide.js"></script>
 ---
 
-<style>
-.sortable-header {
-    cursor: pointer;
-    user-select: none;
-    transition: background-color 0.2s;
-}
-
-.sortable-header:hover {
-    background-color: rgba(45, 140, 248, 0.3) !important;
-}
-
-/* Remove scroll elements from number inputs */
-#levelFilter::-webkit-outer-spin-button,
-#levelFilter::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-#levelFilter[type=number] {
-    -moz-appearance: textfield;
-}
-</style>
-
-<button type="button" class="expandable-div">Guide Assumptions & Explanations</button>
+<button type="button" class="expandable-div">How to use this guide</button>
 <div class="expandable-div-content">
     <ol id="align-left">
         <li>'Min. Level' column explanation...</li>
@@ -37,100 +14,89 @@ scripts: <script src="scripts/bestiary_guide.js"></script>
     </ol>
 </div>
 
-<button type="button" class="expandable-div">Filters & Options</button>
-<div class="expandable-div-content">
-    <div style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-        <label style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 125px; text-align: left;">Charm Points:</label>
-        <div style="display: inline-block;">
-            <label style="color: #ebebeb; margin-right: 15px; margin-left: 5px;">
-                <input type="checkbox" class="charm-point-filter" value="1" checked> 1
-            </label>
-            <label style="color: #ebebeb; margin-right: 15px;">
-                <input type="checkbox" class="charm-point-filter" value="5" checked> 5
-            </label>
-            <label style="color: #ebebeb; margin-right: 15px;">
-                <input type="checkbox" class="charm-point-filter" value="10" checked> 10
-            </label>
-            <label style="color: #ebebeb; margin-right: 15px;">
-                <input type="checkbox" class="charm-point-filter" value="15" checked> 15
-            </label>
-            <label style="color: #ebebeb; margin-right: 15px;">
-                <input type="checkbox" class="charm-point-filter" value="25" checked> 25
-            </label>
-            <label style="color: #ebebeb; margin-right: 15px;">
-                <input type="checkbox" class="charm-point-filter" value="30" checked> 30
-            </label>
-            <label style="color: #ebebeb; margin-right: 15px;">
-                <input type="checkbox" class="charm-point-filter" value="50" checked> 50
-            </label>
-            <label style="color: #ebebeb; margin-right: 15px;">
-                <input type="checkbox" class="charm-point-filter" value="100" checked> 100
-            </label>
-        </div>
-    </div>
-    <div style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-        <label style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 125px; text-align: left;">Effort:</label>
-        <div style="display: inline-block;">
-            <label style="color: #ebebeb; margin-right: 15px; margin-left: 5px;">
-                <input type="checkbox" class="effort-filter" value="Low" checked> Low
-            </label>
-            <label style="color: #ebebeb; margin-right: 15px;">
-                <input type="checkbox" class="effort-filter" value="Medium" checked> Medium
-            </label>
-            <label style="color: #ebebeb; margin-right: 15px;">
-                <input type="checkbox" class="effort-filter" value="High" checked> High
-            </label>
-            <label style="color: #ebebeb; margin-right: 15px;">
-                <input type="checkbox" class="effort-filter" value="Extreme" checked> Extreme
-            </label>
-        </div>
-    </div>
-    <div style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-        <label style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 125px; text-align: left;">Rapid:</label>
-        <div style="display: inline-block;">
-            <label style="color: #ebebeb; margin-right: 15px; margin-left: 5px;">
-                <input type="checkbox" class="rapid-filter" value="No" checked> No
-            </label>
-            <label style="color: #ebebeb; margin-right: 15px;">
-                <input type="checkbox" class="rapid-filter" value="Helpful" checked> Helpful
-            </label>
-            <label style="color: #ebebeb; margin-right: 15px;">
-                <input type="checkbox" class="rapid-filter" value="Yes" checked> Yes
-            </label>
-        </div>
-    </div>
-    <div style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-        <label style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 125px; text-align: left;">Show Done:</label>
-        <div style="display: inline-block;">
-            <label style="color: #ebebeb; margin-right: 15px; margin-left: 5px;">
-                <input type="checkbox" class="show-completed-filter" checked>
-            </label>
-        </div>
-    </div>
-    <div style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-        <button type="button" id="resetDoneBtn" style="padding: 8px 16px; background-color: #ebebeb; color: #061021; border: 1px solid #2d8cf8b6; border-radius: 4px; cursor: pointer; font-size: 14px;">Reset Done</button>
-    </div>
+<div class="bestiary-filter-buttons">
+    <button type="button" id="selectAllFiltersBtn" class="bestiary-filter-btn">Select All Filters</button>
+    <button type="button" id="unselectAllFiltersBtn" class="bestiary-filter-btn">Unselect All Filters</button>
 </div>
 
-<div style="margin: 20px 0; display: flex; align-items: center;">
-    <label for="monsterSearch" style="color: #ebebeb; margin-right: 10px; min-width: 60px;">Search:</label>
-    <input type="text" id="monsterSearch" placeholder="Filter by monster name..." style="padding: 8px; width: 300px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
+<div class="bestiary-filter-row">
+    <label class="bestiary-filter-label">Charm Points:</label>
+    <div class="bestiary-checkbox-container">
+        <label class="bestiary-checkbox-label">
+            <input type="checkbox" class="charm-point-filter" value="1" checked> 1
+        </label>
+        <label class="bestiary-checkbox-label">
+            <input type="checkbox" class="charm-point-filter" value="5" checked> 5
+        </label>
+        <label class="bestiary-checkbox-label">
+            <input type="checkbox" class="charm-point-filter" value="10" checked> 10
+        </label>
+        <label class="bestiary-checkbox-label">
+            <input type="checkbox" class="charm-point-filter" value="15" checked> 15
+        </label>
+        <label class="bestiary-checkbox-label">
+            <input type="checkbox" class="charm-point-filter" value="25" checked> 25
+        </label>
+        <label class="bestiary-checkbox-label">
+            <input type="checkbox" class="charm-point-filter" value="30" checked> 30
+        </label>
+        <label class="bestiary-checkbox-label">
+            <input type="checkbox" class="charm-point-filter" value="50" checked> 50
+        </label>
+        <label class="bestiary-checkbox-label">
+            <input type="checkbox" class="charm-point-filter" value="100" checked> 100
+        </label>
+    </div>
+</div>
+<div class="bestiary-filter-row">
+    <label class="bestiary-filter-label">Effort:</label>
+    <div class="bestiary-checkbox-container">
+        <label class="bestiary-checkbox-label">
+            <input type="checkbox" class="effort-filter" value="Low" checked> Low
+        </label>
+        <label class="bestiary-checkbox-label">
+            <input type="checkbox" class="effort-filter" value="Medium" checked> Medium
+        </label>
+        <label class="bestiary-checkbox-label">
+            <input type="checkbox" class="effort-filter" value="High" checked> High
+        </label>
+        <label class="bestiary-checkbox-label">
+            <input type="checkbox" class="effort-filter" value="Extreme" checked> Extreme
+        </label>
+    </div>
+</div>
+<div class="bestiary-filter-row">
+    <label class="bestiary-filter-label">Rapid:</label>
+    <div class="bestiary-checkbox-container">
+        <label class="bestiary-checkbox-label">
+            <input type="checkbox" class="rapid-filter" value="No" checked> No
+        </label>
+        <label class="bestiary-checkbox-label">
+            <input type="checkbox" class="rapid-filter" value="Helpful" checked> Helpful
+        </label>
+        <label class="bestiary-checkbox-label">
+            <input type="checkbox" class="rapid-filter" value="Yes" checked> Yes
+        </label>
+    </div>
+</div>
+<div class="bestiary-input-row">
+    <label for="monsterSearch" class="bestiary-input-label">Search:</label>
+    <input type="text" id="monsterSearch" class="bestiary-input" placeholder="Filter by monster name...">
 </div>
 
-<div style="margin: 20px 0; display: flex; align-items: center;">
-    <label for="levelFilter" style="color: #ebebeb; margin-right: 10px; min-width: 60px;">Level:</label>
-    <input type="number" id="levelFilter" placeholder="Enter your level to filter anything higher..." min="0" style="padding: 8px; width: 300px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px; -moz-appearance: textfield; -webkit-appearance: textfield; appearance: textfield;">
+<div class="bestiary-input-row">
+    <label for="levelFilter" class="bestiary-input-label">Level:</label>
+    <input type="number" id="levelFilter" class="bestiary-input" placeholder="Enter your level to filter anything higher..." min="0">
 </div>
 
 <table class="bestiary_table" id="bestiaryTable">
     <tr>
-        <th>Done</th>
-        <th class="sortable-header" data-sort="name">Monster ↕</th>
-        <th class="sortable-header" data-sort="level">Min. Level ↕</th>
-        <th class="sortable-header" data-sort="points">Points ↕</th>
-        <th class="sortable-header" data-sort="effort">Effort ↕</th>
-        <th class="sortable-header" data-sort="rapid">Rapid Recommended? ↕</th>
-        <th class="sortable-header" data-sort="location">Location ↕</th>
+        <th class="sortable-header" data-sort="name">Monster</th>
+        <th class="sortable-header" data-sort="level">Min. Level</th>
+        <th class="sortable-header" data-sort="points">Points</th>
+        <th class="sortable-header" data-sort="effort">Effort</th>
+        <th class="sortable-header" data-sort="rapid">Rapid Recommended?</th>
+        <th class="sortable-header" data-sort="location">Location</th>
         <th>Notes</th>
     </tr>
 </table>

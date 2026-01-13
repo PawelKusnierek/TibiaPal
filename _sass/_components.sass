@@ -30,7 +30,8 @@
     cursor: pointer
     padding: 18px
     width: 100%
-    border: none
+    border: 2px solid #2d8cf8b6 !important
+    border-radius: 6px !important
     outline: none
     text-align: left
     font-size: 18px
@@ -38,22 +39,44 @@
     line-height: 130%
     color: #ebebeb
     font-family: Verdana, Arial, Times New Roman, sans-serif
+    transition: all 0.3s ease !important
+    position: relative
+    margin-bottom: 10px
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
 
-.active-expanded-div, .expandable-div:hover
+    &:hover
+        background-color: rgba(15, 35, 68, 0.95) !important
+        border-color: #2d8cf8 !important
+        box-shadow: 0 4px 8px rgba(45, 140, 248, 0.3)
+        transform: translateY(-1px)
+
+    &:active
+        transform: translateY(0)
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
+
+    &:after
+        content: '\002B'
+        font-size: 20px !important
+        font-weight: bold
+        margin-left: 10px
+        float: right
+        transition: transform 0.3s ease
+
+    &:hover:after
+        transform: scale(1.2)
+
+.active-expanded-div
     background-color: #0f2344e8
+    border-color: #2d8cf8 !important
+    box-shadow: 0 4px 8px rgba(45, 140, 248, 0.4)
 
-.active-expanded-div:after
-    content: '\2212' !important
+    &:after
+        content: '\2212' !important
 
 .expandable-div-content
     padding: 0 18px
     display: none
     overflow: hidden
-
-.expandable-div:after
-    content: '\002B'
-    font-size: 14px
-    float: right
 
 // Disable tablinks until page is fully loaded to prevent content appearing in wrong tab
 .tablinks
