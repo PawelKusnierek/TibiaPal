@@ -1073,19 +1073,19 @@
     },
     {
         "level": "600+",
-        "place": "Roshamuul West (Crypt Strike P7)",
+        "place": "Roshamuul West",
         "raw_exp": "7.4kk",
         "loot": "2.3kk",
         "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/noqSwSvzvH0"
     },
     {
         "level": "600+",
-        "place": "Upper Roshamuul (Crypt Strike P7)",
+        "place": "Upper Roshamuul",
         "raw_exp": "7.3kk",
         "loot": "2.5kk",
         "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/Z6WlD6EQhTw"
     },
     {
         "level": "600+",
@@ -1097,27 +1097,27 @@
     },
     {
         "level": "600+",
-        "place": "Feru Undead Dragon Seal (Crypt Strike P7)",
+        "place": "Feru Undead Dragon Seal",
         "raw_exp": "7.1kk",
         "loot": "2.0kk",
         "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/c6tH1VzM9Q4"
     },
     {
         "level": "600+",
-        "place": "Oramond Catacombs (Crypt Strike P7)",
+        "place": "Oramond Catacombs",
         "raw_exp": "6.5kk",
         "loot": "2.0kk",
         "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/hmFibWlYL3w"
     },
     {
         "level": "600+",
-        "place": "Feru Mazoran Seal (Crypt Strike P7)",
+        "place": "Feru Mazoran Seal",
         "raw_exp": "6.5kk",
         "loot": "2.0kk",
         "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/FlhEn-mO5HY"
     },
     {
         "level": "600+",
@@ -1137,11 +1137,11 @@
     },
     {
         "level": "600+",
-        "place": "Feru DT Seal -1 (Crypt Strike P7)",
+        "place": "Feru DT Seal -1",
         "raw_exp": "6.0kk",
         "loot": "2.0kk",
         "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/RTJRfQ5F8XE"
     },
     {
         "level": "600+",
@@ -1153,11 +1153,11 @@
     },
     {
         "level": "600+",
-        "place": "Feru Way (Crypt Strike P7)",
+        "place": "Feru Way",
         "raw_exp":"5.9kk",
         "loot": "1.6kk",
         "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/P6_wCXeZrnQ"
     },
     {
         "level": "600+",
@@ -1185,11 +1185,11 @@
     },
     {
         "level": "600+",
-        "place": "Feru DT Seal -2 (Crypt Strike P7)",
+        "place": "Feru DT Seal -2",
         "raw_exp": "5.6kk",
         "loot": "1.8kk",
         "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/cARH0cz56Rg"
     },
     {
         "level": "600+",
@@ -1201,11 +1201,11 @@
     },
     {
         "level": "600+",
-        "place": "Prison -3 (Crypt Strike P7)",
+        "place": "Prison -3",
         "raw_exp": "5.4kk",
         "loot": "1.5kk",
         "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/Boknh-GYvnE"
     },
     {
         "level": "600+",
@@ -1249,11 +1249,11 @@
     },
     {
         "level": "600+",
-        "place": "Warzone 7 (Crypt Strike P7)",
+        "place": "Warzone 7",
         "raw_exp": "4.0kk",
         "loot": "3.5kk",
         "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
+        "link" : "https://youtu.be/pijs4JxL2p8"
     },
     {
         "level": "600+",
@@ -1321,10 +1321,18 @@
     },
     {
         "level": "800+",
+        "place": "Ingol Surface",
+        "raw_exp": "5.3kk",
+        "loot": "1.5kk",
+        "weapon_type": "Physical",
+        "link" : "https://youtu.be/tUQ1dM4_OiE"
+    },
+    {
+        "level": "800+",
         "place": "True Asuras",
         "raw_exp": "5.2kk",
         "loot": "1.0kk",
-        "weapon_type": "Energy",
+        "weapon_type": "Physical, Energy, Earth",
         "link" : "https://youtu.be/Y5sL8gYWMS4"
     },
     {
@@ -1337,15 +1345,7 @@
     },
     {
         "level": "800+",
-        "place": "Ingol Surface (Crypt Strike P7)",
-        "raw_exp": "-",
-        "loot": "-",
-        "weapon_type": "Physical",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "800+",
-        "place": "Ingol -3 (Crypt Strike P7)",
+        "place": "Ingol -3",
         "raw_exp": "-",
         "loot": "-",
         "weapon_type": "Physical",
