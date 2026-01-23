@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TibiaPal.com - Fiendish Hunter Map</title>
+    <meta name="author" content="Pawel Kusnierek">
+    <meta name="description"
+    content="Tools for MMORPG 'Tibia' - TibiaLootSplit, Charm Planner, Exercise Weapons Calculator, Offline Training Calculator and many, many more.">
+    <meta name="keywords"
+        content="Tibia calculators, Tibia tools, TibiaLootSplit, Tibia Loot Analyser,
+          Tibia fansite, Exercise Weapons Calculator, Stamina Calculator, Imbue Calculator, Exp Share Calculator, Charm Planner, Tibia Charm Guide ">
+    <link rel="shortcut icon" href=/images/crystalcoin.ico type="image/x-icon">
+
+    <!-- css files -->
+    <link rel="stylesheet" href=/css/main.css>
+    <link rel="stylesheet" href="css/hunter.css"><link rel="stylesheet" href="/css/map.css"><link rel="stylesheet" href="/css/dropdown.css">
+
+    <!-- javascript files -->
+    <script type="module" src="scripts/hunter.js"></script>
+    <script src=/scripts/onload.js></script>
+
+    <!-- extra googleapi fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+    <!-- Analytics and ad related section-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164338286-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-164338286-3');
+    </script>
+    <script data-ad-client="ca-pub-2936542406889680" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+    <main id="page-container">
+        <div id="tibiatrade_low_res">
+            <div class="tibiatrade_span">
+                Featured on <a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank"><b>TibiaTrade</b>:</a>
+            </div>
+            <iframe id="tibiatrade" src="https://tibiatrade.gg/iframe/highlighted/" title="TibiaTrade" loading="lazy" scrolling="no"></iframe>
+        </div>
+    
+        <div id="header">
+            <a href="https://tibiapal.com"> 
+                <img src=/images/mainlogo.png style="width:100px" alt="TibiaPal beaver logo">
+            </a>
+        </div>
+
+        <div id="banner">
+            <span class="tibiatrade_span">Featured on <a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank"><b>TibiaTrade</b>:</a></span>
+            <iframe id="tibiatrade" src="https://tibiatrade.gg/iframe/highlighted/" title="TibiaTrade" loading="lazy" scrolling="no"></iframe>
+                <!--<a href="https://store.steampowered.com/app/2948410/Talus/" target="_blank"> 
+                    <img src=/images/talus/small_capsule.png style="width:300px"  alt="Logo of upcoming ARPG 'Talus'">
+                </a>-->
+        </div>
+        <div id="right-header">
+
+        </div>
+    <nav id="left-sidebar">
+    <div class="nav-section">GENERAL</div>
+        <div class="nav-item"> <a href="/">
+                <div class="nav-image-container"><img class="nav-image" src=/images/icon-news.gif>Latest News</div>
+                </a>
+        </div>
+        <div class="nav-item"><a href="/about">
+                <div class="nav-image-container"><img class="nav-image" src=/images/icon-abouttibia.gif>About & Contact
+                </div>
+                </a>
+        </div>
+        <div class="nav-item"><a href="/donators">
+                <div class="nav-image-container"><img class="nav-image" src=/images/Heart_Pillow.gif>Donators</div></a>
+        </div>
+        <div class="nav-item"><a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank">
+                <div class="nav-image-container"><img class="nav-image" src=/images/tibiatrade_favicon.png>TibiaTrade.gg - Partner Fansite</div>
+                </a>
+        </div>
+    </div>
+
+    <div class="nav-section">TOOLS</div>
+    <div class="nav-item"><a href="/tibialootsplit">
+            <div class="nav-image-container"><img class="nav-image" src=/images/crystalcoin.ico>TibiaLootSplit</div>
+        </a></div>
+    <div class="nav-item"><a href="/charm_planner">
+            <div class="nav-image-container"><img class="nav-image" src=/images/charms/vampiric_embrace.png>Charm Planner</div>
+        </a></div>
+    <div class="nav-item"><a href="https://tibiatrade.gg/wheel-of-destiny/?ref=tibiapal" target="_blank">
+        <div class="nav-image-container"><img class="nav-image" src=/images/tibiatrade_favicon.png>Wheel of Destiny Examples</div>
+        </a></div>
+    <div class="active nav-item"><a href="/fiendish_hunter">
+        <div class="nav-image-container"><img class="nav-image" src=/images/old_map.gif>Fiendish Hunter Map</div>
+        </a></div>
+    </div>
+    <!--<div class="nav-item"><a href="../wheelpresets">
+                    <div class="nav-image-container"><img class="nav-image" src=/images/Wheel.gif><span id="new-homepage">NEW!</span>Wheel Presets</div>
+                </a></div>-->
+
+    <div class="nav-section">GUIDES / REFERENCES</div>
+    <div class="nav-item"><a href="/hunting">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Sword.gif>Hunting
+                Places</div>
+        </a></div>
+<div class="nav-item"><a href="/equipment">
+        <div class="nav-image-container"><img class="nav-image" src=/images/equipment.gif>Vocation Equipment Reference
+        </div></a> </div>
+<div class="nav-item"><a href="/deliveries">
+        <div class="nav-image-container"><img class="nav-image" src=/images/Weekly.png>Weekly Deliveries
+        </div></a> </div>
+    <div class="nav-item"><a href="/bestiary">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bestiary_Betterment.gif>Bestiary
+                Reference</div>
+        </a> </div>
+    <!--<div class="nav-item"><a href="/bestiary_guide">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bestiary_Betterment.gif>Bestiary Guide</div>
+        </a> </div>-->
+
+    <div class="nav-item"><a href="/bosstiary">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Falcon_Greaves.gif>Bosstiary Reference
+            </div>
+        </a> </div>
+    <div class="nav-item"><a href="https://www.youtube.com/kusnierr" target="_blank">
+            <div class="nav-image-container"><img class="nav-image" src=/images/youtube-icon.png>YouTube Videos &
+                Guides</div>
+        </a></div>
+    </div>
+
+    <div class="nav-section">CALCULATORS</div>
+    <div class="nav-item"><a href="/exercise">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Exercise_Wand.gif>Exercise
+                Weapons Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/offlinetraining">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Skill_Trainer.gif>Training
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/imbue">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Imbuing_Shrine.gif>Imbue
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/weekly_tasks">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Weekly.png>Weekly Task Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/charm_calculator">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Overpower.png>Charms Damage
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/expshare">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bricklayers.gif>Exp Share
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/stamina">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Staminafull.png>Stamina
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/bless">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Solitude_Charm.gif>Bless
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/expcalculator">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Demon.gif>Levelling
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/leech">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Leech.gif>Leech Calculator
+            </div>
+        </a></div>
+
+    <div class="right-sidebar-item" id="Rashid">
+        <!--<img src=/images/Rashid.gif style="width:45%" alt="Rashid NPC">
+        <br>
+        <div id="rashid-city">Unavailable...</div>!-->
+    </div>
+</nav>
+    
+    <!-- Navigation toggle button for mobile -->
+    <button class="nav-toggle" onclick="toggleNavigation()" style="display: none;">☰ Menu</button>
+    
+    <section id="main-content">
+    		<div>
+            <br><br>
+			<!-- Fiendish Hunter Map page and all imported scripts made by kucerman (in Tibia: Lyria Zniwiarka Swiatla) 2026 -->
+			<div class="pageTitle txtcenter">Fiendish Hunter</div> <br><br>
+			<div style="display:flex;justify-content: center;">
+						
+    					
+						<div class="flex column" style="height:100%; width:85%; ">
+							<span><b style="color: purple">PURPOSE:</b>Help in finding fiend monsters based on exiva spell outputs.</span> <br>
+							<button type="button" class="expandable-div">How to Use:</button>
+							<div class="expandable-div-content">
+							<ol id="align-left">
+								<li>Cast exiva in game.
+								</li>
+								<li>Choose place on map where spell was casted by doing <b>right-click</b>, or choose from dropdown list. You can search list by typing in field.
+								</li>
+								<li>Either use buttons to choose what spell is pointing to, or paste exiva output.
+								</li>
+								<li>Click Add Exiva Point to add data to map. Possible area where fiendish is present will be displayed on map, and table bellow map will be updated with data of added spell.
+								</li>
+								<li>When another spell is added, map is updated to reflect combined area of spells (if applicable). 
+								</li>
+								<li>Combined area is calculated for spells with same monster difficulty level. Areas with most overlaps is highlighted. In case multiple areas have same number of overlaps, all are highlighted.</li>
+								<li>To move around map use drag-drop and mouse scroll. Choose floor of map using floor buttons on left side of the map.</li>
+								<li>Monster difficulty is colorcoded on map and in table.</li>
+							</ol>
+							</div>
+							<div id="fiendish-hunter-dropdown-container" class="dropdown-container">
+							  <input id="fiendish-hunter-input-places" type="text" class="dropdown-input" placeholder="Choose point..." readonly>
+							  <span class="dropdown-arrow">▼</span>
+							  <div id="fiendish-hunter-dropdown-places" class="dropdown-list">
+							  </div>
+							</div>
+
+							<div class="hunting_tab two-tabs">
+								<button id="target_skill" class="tablinks active" onclick="show_tab(event, 'input-type-buttons')">Buttons input</button>
+								<button id="target_spend" class="tablinks" onclick="show_tab(event, 'input-type-paste')">Paste Exiva input</button>
+							</div>
+							<div id="input-type-buttons" class="tabcontent" style="display: block;">
+
+								<div style="display: grid;grid-template-columns: repeat(3, 1fr);gap: 0.5rem;">
+								<div style="margin: 1rem 0rem 0rem 0rem;">
+									<labeldiv>Distance:</labeldiv>
+									<div class="button-group" id="fiendish-hunter-isostat-distance" style="grid-template-rows: repeat(3, 1fr);">
+									<button data-value="near">Near</button>
+									<button data-value="far">Far</button>
+									<button data-value="veryfar">Very Far</button>
+									</div>
+								</div>
+
+								<div style="margin: 1rem 0rem 0rem 0rem;">
+									<labeldiv>Direction:</labeldiv>
+									<div class="button-group" id="fiendish-hunter-isostat-direction" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr);">
+									<button data-value="north-west">North-West</button>
+									<button data-value="north">North</button>
+									<button data-value="north-east">North-East</button>
+									<button data-value="west">West</button>
+									<button disabled></button>
+									<button data-value="east">East</button>
+									<button data-value="south-west">South-West</button>
+									<button data-value="south">South</button>
+									<button data-value="south-east">South-East</button>
+									</div>
+								</div>
+								
+								<div style="margin: 1rem 0rem 1rem 0rem;">
+									<labeldiv>Difficulty:</labeldiv>
+									<div class="button-group" id="fiendish-hunter-isostat-difficulty" style="grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr);">
+									<button data-value="unknown">Unknown</button>
+									<button data-value="medium">Medium</button>
+									<button data-value="trivial">Trivial</button>
+									<button data-value="hard">Hard</button>
+									<button data-value="easy">Easy</button>
+									<button data-value="challenging">Challenging</button>
+									</div>
+								</div>
+
+								</div>
+							</div>
+							<div id="input-type-paste" class="tabcontent">
+								<input id="fiendish-hunter-input-spell" type="text" style="width:98%;" placeholder="Paste exiva spell output here..."/>
+							</div>
+							<div class="button-group" style="margin: 1rem 0rem 1rem 0rem; grid-template-columns: repeat(2, 1fr);">
+									<button id="fiendish-hunter-button-delete" class="fiendish-hunter-button" >Delete all</button>
+									<button id="fiendish-hunter-button-add" class="fiendish-hunter-button" disabled>Add Exiva Point</button>
+							</div>
+							
+							
+						</div>
+
+
+			</div>
+			<div id="tibia-map"></div>
+			<br>
+			<table id="fiendish-hunter-point-table" border="1" cellspacing="0" cellpadding="6" style="width:100%; border-collapse: collapse;">
+				<thead>
+					<tr>
+					<th>#</th>
+					<th>Coordinates</th>
+					<th>Name</th>
+					<th>Distance</th>
+					<th>Direction</th>
+					<th>Difficulty</th>
+					<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- rows will be added here -->
+				</tbody>
+				</table>
+		</div>
+    </section>
+    
+    <!--><div class="cookieconsent"
+        style="display:none;position:fixed;padding:20px;left:0;bottom:0;background-color:#000;color:#FFF;text-align:center;width:100%;z-index:99999;">
+        TibiaPal.com uses cookies to ensure you get the best experience possible. By continuing to use this website, you
+        agree to their use. You can find more information about our cookies on our <a href="https://tibiapal.com/about"
+            target="_blank">Privacy Policy</a> page.
+        <a href="" style="color:#CCCCCC;" onclick="event.preventDefault(); cookieConsentClicked()">I Understand</a>
+    </div><!-->
+
+    <!--><div class="adblockpopup"
+        style="display:none;position:fixed;padding:0px;padding-bottom:5px;left:30%;right:40%;top:0;background-color:red;color:#FFF;text-align:center;width:30%;z-index:99999;">
+        Please consider disabling AdBlock or donating a few TCs to 'Kusnierr' to support the site/server costs <3 <br> Thank you! <br>This pop-up will appear once every 30 days.
+        <a href="" style="color:white;" onclick="event.preventDefault(); adBlockPopupClicked()"><br><br>CLOSE</a>
+    </div> <!-->
+
+    <aside id="right-sidebar">
+            <section id="banner-paragraph">
+                <p class="donationparagraph">Join our <b>Discord</b> channel to stay up-to-date!<br>
+                    <a href="https://discord.gg/kbjqY2VRa9" target="_blank">discord.gg/kbjqY2VRa9</a>
+                </p>
+                <br>
+
+                <div id="kick-offline">
+                    <p class="donationparagraph">Follow me on <b>Kick</b>:<br>
+                        <a href="https://www.kick.com/Kusnier" target="_blank">kick.com/Kusnier</a>
+                    </p>
+
+                    <h4><br>Latest <a href="https://www.youtube.com/kusnierr" target="_blank">YouTube</a> Video:</h4>
+                    <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLC0KAO2SnwlREgB3ScVsAK9OeAqwLXq8-" allowfullscreen></iframe>
+                </div>
+                <div id="kick-live" style="display: none">
+                    <h4><br>Live right now on <a href="https://www.kick.com/Kusnier" target="_blank">Kick</a>:</h4>
+                    <iframe src="" height="168" width="300" frameborder="0" scrolling="no" allowfullscreen="true"> </iframe>
+                </div>
+                <br>
+                <h4><h4>Browser-based idle Tibia: <a href="https://bestiaryarena.com/?t=tibiapal" target="_blank">Bestiary Arena</a></h4>
+                <iframe src="https://bestiaryarena.com/iframe-obs-4?tag=tibiapal" width="277" height="313" scrolling="no" loading="lazy" frameborder="0" title="Bestiary Arena"></iframe>
+
+                <!--<iframe src="https://www.youtube.com/embed?listType=playlist&list=PLC0KAO2SnwlREgB3ScVsAK9OeAqwLXq8-" allowfullscreen></iframe>!-->
+                <!--
+                <div><h2>Wishlist Talus on <a href="https://store.steampowered.com/app/2948410/Talus/" target="_blank">Steam:</a><h2>
+                    <a href="https://store.steampowered.com/app/2948410/Talus/" target="_blank"> 
+                    <img src=/images/talus/classes_showcase.gif style="width:300px" alt="Gif of gameplay from upcoming ARPG 'Talus'">
+                    </a>
+                    <h3><img src=/images/talus/english-flag.png style="width:16px" alt="English Flag"> Talus is a Tibia-like ARPG I'm developing. <br>Visit the Steam page or join our Discord to find out more!<br><br>
+                    <img src=/images/talus/polish-flag.png style="width:16px" alt="Polish Flag"> Talus to Tibijsko-podobna gra ARPG którą dewelopuje. <br>Wejdź na Steam-a lub dołącz do naszego Discorda po więcej info!<br><br>
+                    <img src=/images/talus/portuguese-flag.png style="width:16px" alt="Portuguese Flag"> Talus é um ARPG estilo Tibia que estou desenvolvendo.<br> Visite a página do Steam ou entre no nosso Discord para saber mais!<br><br>
+                    <img src=/images/talus/spanish-flag.png style="width:16px" alt="Spanish Flag"> Talus es un ARPG similar a Tibia que estoy desarrollando.<br> ¡Visite la página de Steam o únase a nuestro Discord para obtener más información!<h3>
+                </div>
+                !--><br><br>
+            </section>
+            <div id="ads-container">
+                
+                <br>
+            </div>
+            <br>
+        </aside>
+        <aside id="left-footer-space"></aside>
+        <footer id="footer">
+            <p id="footerParagraph">
+                Tibia and all products related to Tibia are copyrighted by <a href="https://www.cipsoft.com"
+                    target="_blank">CipSoft GmbH</a>. The official
+                website of Tibia is <a href="https://www.tibia.com" target="_blank">tibia.com</a>.<br><br>
+                Created by Kusnier.
+            </p><br><br>
+        </footer>
+        <aside id="right-footer-space"></aside>
+        </main>
+            <script>
+                //showAdblockPopup(); bump
+            </script>
+            <script type="module" src="scripts/hunter.js"></script>
+</body>
+</html>
