@@ -44,9 +44,11 @@ scripts: <script type="module" src="scripts/hunter.js"></script>
 								<button id="target_spend" class="tablinks" onclick="show_tab(event, 'input-type-paste')">Paste Exiva input</button>
 							</div>
 							<div id="input-type-buttons" class="tabcontent" style="display: block;">
+
+								<div style="display: grid;grid-template-columns: repeat(3, 1fr);gap: 0.5rem;">
 								<div style="margin: 1rem 0rem 0rem 0rem;">
 									<labeldiv>Distance:</labeldiv>
-									<div class="button-group" id="fiendish-hunter-isostat-distance">
+									<div class="button-group" id="fiendish-hunter-isostat-distance" style="grid-template-rows: repeat(3, 1fr);">
 									<button data-value="near">Near</button>
 									<button data-value="far">Far</button>
 									<button data-value="veryfar">Very Far</button>
@@ -55,12 +57,13 @@ scripts: <script type="module" src="scripts/hunter.js"></script>
 
 								<div style="margin: 1rem 0rem 0rem 0rem;">
 									<labeldiv>Direction:</labeldiv>
-									<div class="button-group" id="fiendish-hunter-isostat-direction">
-									<button data-value="east">East</button>
-									<button data-value="north-east">North-East</button>
-									<button data-value="north">North</button>
+									<div class="button-group" id="fiendish-hunter-isostat-direction" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr);">
 									<button data-value="north-west">North-West</button>
+									<button data-value="north">North</button>
+									<button data-value="north-east">North-East</button>
 									<button data-value="west">West</button>
+									<button disabled></button>
+									<button data-value="east">East</button>
 									<button data-value="south-west">South-West</button>
 									<button data-value="south">South</button>
 									<button data-value="south-east">South-East</button>
@@ -69,20 +72,22 @@ scripts: <script type="module" src="scripts/hunter.js"></script>
 								
 								<div style="margin: 1rem 0rem 1rem 0rem;">
 									<labeldiv>Difficulty:</labeldiv>
-									<div class="button-group" id="fiendish-hunter-isostat-difficulty">
+									<div class="button-group" id="fiendish-hunter-isostat-difficulty" style="grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr);">
 									<button data-value="unknown">Unknown</button>
-									<button data-value="trivial">Trivial</button>
-									<button data-value="easy">Easy</button>
 									<button data-value="medium">Medium</button>
+									<button data-value="trivial">Trivial</button>
 									<button data-value="hard">Hard</button>
+									<button data-value="easy">Easy</button>
 									<button data-value="challenging">Challenging</button>
 									</div>
+								</div>
+
 								</div>
 							</div>
 							<div id="input-type-paste" class="tabcontent">
 								<input id="fiendish-hunter-input-spell" type="text" style="width:98%;" placeholder="Paste exiva spell output here..."/>
 							</div>
-							<div class="button-group" style="margin: 1rem 0rem 1rem 0rem;">
+							<div class="button-group" style="margin: 1rem 0rem 1rem 0rem; grid-template-columns: repeat(2, 1fr);">
 									<button id="fiendish-hunter-button-delete" class="fiendish-hunter-button" >Delete all</button>
 									<button id="fiendish-hunter-button-add" class="fiendish-hunter-button" disabled>Add Exiva Point</button>
 							</div>
