@@ -1,6 +1,113 @@
 ---
 layout: default
-title: TibiaPal.com - Charm Damage Calculator
-scripts: <script src="scripts/charm_calculator.js"></script>
+title: TibiaPal.com - Fiendish Hunter Map
+css: <link rel="stylesheet" href="css/hunter.css"><link rel="stylesheet" href="/css/map.css"><link rel="stylesheet" href="/css/dropdown.css">
+scripts: <script type="module" src="scripts/hunter.js"></script>
 ---
 
+		<div>
+            <br><br>
+			<!-- Fiendish Hunter Map page and all imported scripts made by kucerman (in Tibia: Lyria Zniwiarka Swiatla) 2026 -->
+			<div class="pageTitle txtcenter">Fiendish Hunter</div> <br><br>
+			<div style="display:flex;justify-content: center;">
+						
+    					
+						<div class="flex column" style="height:100%; width:85%; ">
+							<span><b style="color: purple">PURPOSE:</b>Help in finding fiend monsters based on exiva spell outputs.</span> <br>
+							<button type="button" class="expandable-div">How to Use:</button>
+							<div class="expandable-div-content">
+							<ol id="align-left">
+								<li>Cast exiva in game.
+								</li>
+								<li>Choose place on map where spell was casted by doing <b>right-click</b>, or choose from dropdown list. You can search list by typing in field.
+								</li>
+								<li>Either use buttons to choose what spell is pointing to, or paste exiva output.
+								</li>
+								<li>Click Add Exiva Point to add data to map. Possible area where fiendish is present will be displayed on map, and table bellow map will be updated with data of added spell.
+								</li>
+								<li>When another spell is added, map is updated to reflect combined area of spells (if applicable). 
+								</li>
+								<li>Combined area is calculated for spells with same monster difficulty level. Areas with most overlaps is highlighted. In case multiple areas have same number of overlaps, all are highlighted.</li>
+								<li>To move around map use drag-drop and mouse scroll. Choose floor of map using floor buttons on left side of the map.</li>
+								<li>Monster difficulty is colorcoded on map and in table.</li>
+							</ol>
+							</div>
+							<div id="fiendish-hunter-dropdown-container" class="dropdown-container">
+							  <input id="fiendish-hunter-input-places" type="text" class="dropdown-input" placeholder="Choose point..." readonly>
+							  <span class="dropdown-arrow">▼</span>
+							  <div id="fiendish-hunter-dropdown-places" class="dropdown-list">
+							  </div>
+							</div>
+
+							<div class="hunting_tab two-tabs">
+								<button id="target_skill" class="tablinks active" onclick="show_tab(event, 'input-type-buttons')">Buttons input</button>
+								<button id="target_spend" class="tablinks" onclick="show_tab(event, 'input-type-paste')">Paste Exiva input</button>
+							</div>
+							<div id="input-type-buttons" class="tabcontent" style="display: block;">
+								<div style="margin: 1rem 0rem 0rem 0rem;">
+									<labeldiv>Distance:</labeldiv>
+									<div class="button-group" id="fiendish-hunter-isostat-distance">
+									<button data-value="near">Near</button>
+									<button data-value="far">Far</button>
+									<button data-value="veryfar">Very Far</button>
+									</div>
+								</div>
+
+								<div style="margin: 1rem 0rem 0rem 0rem;">
+									<labeldiv>Direction:</labeldiv>
+									<div class="button-group" id="fiendish-hunter-isostat-direction">
+									<button data-value="east">East</button>
+									<button data-value="north-east">North-East</button>
+									<button data-value="north">North</button>
+									<button data-value="north-west">North-West</button>
+									<button data-value="west">West</button>
+									<button data-value="south-west">South-West</button>
+									<button data-value="south">South</button>
+									<button data-value="south-east">South-East</button>
+									</div>
+								</div>
+								
+								<div style="margin: 1rem 0rem 1rem 0rem;">
+									<labeldiv>Difficulty:</labeldiv>
+									<div class="button-group" id="fiendish-hunter-isostat-difficulty">
+									<button data-value="unknown">Unknown</button>
+									<button data-value="trivial">Trivial</button>
+									<button data-value="easy">Easy</button>
+									<button data-value="medium">Medium</button>
+									<button data-value="hard">Hard</button>
+									<button data-value="challenging">Challenging</button>
+									</div>
+								</div>
+							</div>
+							<div id="input-type-paste" class="tabcontent">
+								<input id="fiendish-hunter-input-spell" type="text" style="width:98%;" placeholder="Paste exiva spell output here..."/>
+							</div>
+							<div class="button-group" style="margin: 1rem 0rem 1rem 0rem;">
+									<button id="fiendish-hunter-button-delete" class="fiendish-hunter-button" >Delete all</button>
+									<button id="fiendish-hunter-button-add" class="fiendish-hunter-button" disabled>Add Exiva Point</button>
+							</div>
+							
+							
+						</div>
+
+
+			</div>
+			<div id="tibia-map"></div>
+			<br>
+			<table id="fiendish-hunter-point-table" border="1" cellspacing="0" cellpadding="6" style="width:100%; border-collapse: collapse;">
+				<thead>
+					<tr>
+					<th>#</th>
+					<th>Coordinates</th>
+					<th>Name</th>
+					<th>Distance</th>
+					<th>Direction</th>
+					<th>Difficulty</th>
+					<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- rows will be added here -->
+				</tbody>
+				</table>
+		</div>
