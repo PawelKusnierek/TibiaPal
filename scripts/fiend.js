@@ -1232,32 +1232,48 @@ class FiendishHunter {
 			const navToggle = document.querySelector('.nav-toggle');
 			const mainContent = document.getElementById('main-content');
 			const pageContainer = document.getElementById('page-container');
+			const mapContainer = document.getElementById('tibia-map');
 			let originalMainContentStyle = null;
 			let originalPageContainerStyle = null;
 			let originalNavToggleDisplay = null;
+			let originalMapContainerStyle = null;
 
 			fullscreenButton.addEventListener('click', () => {
 				if (!isFullscreen) {
-					// Store original styles
+					// Store original inline styles (only if they were set inline)
 					if (mainContent) {
 						originalMainContentStyle = {
-							flexBasis: mainContent.style.flexBasis || getComputedStyle(mainContent).flexBasis,
-							marginLeft: mainContent.style.marginLeft || getComputedStyle(mainContent).marginLeft,
-							marginRight: mainContent.style.marginRight || getComputedStyle(mainContent).marginRight,
-							width: mainContent.style.width || getComputedStyle(mainContent).width
+							flexBasis: mainContent.style.flexBasis || '',
+							marginLeft: mainContent.style.marginLeft || '',
+							marginRight: mainContent.style.marginRight || '',
+							width: mainContent.style.width || '',
+							height: mainContent.style.height || ''
 						};
 						// Apply fullscreen styles
 						mainContent.style.flexBasis = '100%';
 						mainContent.style.width = '100%';
+						mainContent.style.height = '100vh';
 						mainContent.style.marginLeft = '0';
 						mainContent.style.marginRight = '0';
 					}
 
 					if (pageContainer) {
 						originalPageContainerStyle = {
-							display: pageContainer.style.display || getComputedStyle(pageContainer).display
+							display: pageContainer.style.display || '',
+							height: pageContainer.style.height || ''
 						};
 						pageContainer.style.display = 'block';
+						pageContainer.style.height = '100vh';
+					}
+
+					// Store and set map container height to fill viewport minus button area
+					if (mapContainer) {
+						originalMapContainerStyle = {
+							height: mapContainer.style.height || '',
+							minHeight: mapContainer.style.minHeight || ''
+						};
+						mapContainer.style.height = 'calc(100vh - 185px)';
+						mapContainer.style.minHeight = 'calc(100vh - 185px)';
 					}
 
 					// Hide other elements
@@ -1269,24 +1285,68 @@ class FiendishHunter {
 					});
 
 					if (navToggle) {
-						// Store original display value (or computed style if no inline style)
-						originalNavToggleDisplay = navToggle.style.display || getComputedStyle(navToggle).display;
+						// Store original display value (only if it was set inline)
+						originalNavToggleDisplay = navToggle.style.display || '';
 						navToggle.style.display = 'none';
 					}
 
 					isFullscreen = true;
 					fullscreenButton.classList.add('active');
 				} else {
-					// Restore original styles
+					// Restore original styles - remove inline styles if they weren't originally set
 					if (mainContent && originalMainContentStyle) {
-						mainContent.style.flexBasis = originalMainContentStyle.flexBasis;
-						mainContent.style.marginLeft = originalMainContentStyle.marginLeft;
-						mainContent.style.marginRight = originalMainContentStyle.marginRight;
-						mainContent.style.width = originalMainContentStyle.width;
+						if (originalMainContentStyle.flexBasis) {
+							mainContent.style.flexBasis = originalMainContentStyle.flexBasis;
+						} else {
+							mainContent.style.removeProperty('flex-basis');
+						}
+						if (originalMainContentStyle.marginLeft) {
+							mainContent.style.marginLeft = originalMainContentStyle.marginLeft;
+						} else {
+							mainContent.style.removeProperty('margin-left');
+						}
+						if (originalMainContentStyle.marginRight) {
+							mainContent.style.marginRight = originalMainContentStyle.marginRight;
+						} else {
+							mainContent.style.removeProperty('margin-right');
+						}
+						if (originalMainContentStyle.width) {
+							mainContent.style.width = originalMainContentStyle.width;
+						} else {
+							mainContent.style.removeProperty('width');
+						}
+						if (originalMainContentStyle.height) {
+							mainContent.style.height = originalMainContentStyle.height;
+						} else {
+							mainContent.style.removeProperty('height');
+						}
 					}
 
 					if (pageContainer && originalPageContainerStyle) {
-						pageContainer.style.display = originalPageContainerStyle.display;
+						if (originalPageContainerStyle.display) {
+							pageContainer.style.display = originalPageContainerStyle.display;
+						} else {
+							pageContainer.style.removeProperty('display');
+						}
+						if (originalPageContainerStyle.height) {
+							pageContainer.style.height = originalPageContainerStyle.height;
+						} else {
+							pageContainer.style.removeProperty('height');
+						}
+					}
+
+					// Restore map container height - remove inline styles if they weren't originally set
+					if (mapContainer && originalMapContainerStyle) {
+						if (originalMapContainerStyle.height) {
+							mapContainer.style.height = originalMapContainerStyle.height;
+						} else {
+							mapContainer.style.removeProperty('height');
+						}
+						if (originalMapContainerStyle.minHeight) {
+							mapContainer.style.minHeight = originalMapContainerStyle.minHeight;
+						} else {
+							mapContainer.style.removeProperty('min-height');
+						}
 					}
 
 					// Show other elements
@@ -1299,11 +1359,7 @@ class FiendishHunter {
 
 					if (navToggle) {
 						// Restore original display, or remove inline style if it was empty (let CSS handle it)
-						if (originalNavToggleDisplay) {
-							navToggle.style.display = originalNavToggleDisplay;
-						} else {
-							navToggle.style.display = '';
-						}
+						navToggle.style.display = originalNavToggleDisplay || '';
 						// On desktop, ensure it's hidden (CSS should handle this, but force it if needed)
 						if (window.innerWidth > 768) {
 							navToggle.style.display = 'none';
