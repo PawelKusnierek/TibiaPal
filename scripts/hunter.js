@@ -56,6 +56,7 @@ export class FiendishHunter {
 			const pageContainer = document.getElementById('page-container');
 			let originalMainContentStyle = null;
 			let originalPageContainerStyle = null;
+			let originalNavToggleDisplay = null;
 
 			fullscreenButton.addEventListener('click', () => {
 				if (!isFullscreen) {
@@ -90,6 +91,8 @@ export class FiendishHunter {
 					});
 
 					if (navToggle) {
+						// Store original display value (or computed style if no inline style)
+						originalNavToggleDisplay = navToggle.style.display || getComputedStyle(navToggle).display;
 						navToggle.style.display = 'none';
 					}
 
@@ -117,7 +120,16 @@ export class FiendishHunter {
 					});
 
 					if (navToggle) {
-						navToggle.style.display = '';
+						// Restore original display, or remove inline style if it was empty (let CSS handle it)
+						if (originalNavToggleDisplay) {
+							navToggle.style.display = originalNavToggleDisplay;
+						} else {
+							navToggle.style.display = '';
+						}
+						// On desktop, ensure it's hidden (CSS should handle this, but force it if needed)
+						if (window.innerWidth > 768) {
+							navToggle.style.display = 'none';
+						}
 					}
 
 					isFullscreen = false;
