@@ -1,101 +1,80 @@
 ---
 layout: default
-title: TibiaPal.com - Fiendish Hunter Map
+title: TibiaPal.com - Fiend Hunter Map
 css: <link rel="stylesheet" href="css/hunter.css"><link rel="stylesheet" href="/css/map.css"><link rel="stylesheet" href="/css/dropdown.css">
 scripts: <script type="module" src="scripts/hunter.js"></script>
 ---
-
 		<div>
-            <br><br>
 			<!-- Fiendish Hunter Map page and all imported scripts made by kucerman (in Tibia: Lyria Zniwiarka Swiatla) 2026 -->
-			<div class="pageTitle txtcenter">Fiendish Hunter</div> <br><br>
+			<span style="color: gold"><b>How to use:</b></span><br>
+			<ol id="align-left">
+			<li>Select exiva location with Left or Right click</li>
+			<li>Triangulate the Fiend position via Manually selected directions or by pasting the Exiva Log</li>
+			<li>Click 'Add Exiva Point'
+			</ol>
+    	
 			<div style="display:flex;justify-content: center;">
-						
-    					
-						<div class="flex column" style="height:100%; width:85%; ">
-							<span><b style="color: purple">PURPOSE:</b>Help in finding fiend monsters based on exiva spell outputs.</span> <br>
-							<button type="button" class="expandable-div">How to Use:</button>
-							<div class="expandable-div-content">
-							<ol id="align-left">
-								<li>Cast exiva in game.
-								</li>
-								<li>Choose place on map where spell was casted by doing <b>right-click</b>, or choose from dropdown list. You can search list by typing in field.
-								</li>
-								<li>Either use buttons to choose what spell is pointing to, or paste exiva output.
-								</li>
-								<li>Click Add Exiva Point to add data to map. Possible area where fiend is present will be displayed on map, and table bellow map will be updated with data of added spell.
-								</li>
-								<li>When another spell is added, map is updated to reflect combined area of spells (if applicable). 
-								</li>
-								<li>Combined area is calculated for spells with same monster difficulty level. Areas with most overlaps is highlighted. In case multiple areas have same number of overlaps, all are highlighted.</li>
-								<li>To move around map use drag-drop and mouse scroll. Choose floor of map using floor buttons on left side of the map.</li>
-								<li>Monster difficulty is colorcoded on map and in table.</li>
-							</ol>
-							</div>
-							<div id="fiend-hunter-dropdown-container" class="dropdown-container">
-							  <input id="fiend-hunter-input-places" type="text" class="dropdown-input" placeholder="Choose point..." readonly>
-							  <span class="dropdown-arrow">▼</span>
-							  <div id="fiend-hunter-dropdown-places" class="dropdown-list">
-							  </div>
-							</div>
+			<div class="flex column" style="height:100%; width:85%; ">
+				<div id="fiend-hunter-dropdown-container" class="dropdown-container">
+					<input id="fiend-hunter-input-places" type="text" class="dropdown-input" placeholder="Choose point..." readonly>
+					<span class="dropdown-arrow">▼</span>
+					<div id="fiend-hunter-dropdown-places" class="dropdown-list">
+					</div>
+				</div>
 
-							<div class="hunting_tab two-tabs">
-								<button id="target_skill" class="tablinks active" onclick="show_tab(event, 'input-type-buttons')">Buttons input</button>
-								<button id="target_spend" class="tablinks" onclick="show_tab(event, 'input-type-paste')">Paste Exiva input</button>
-							</div>
-							<div id="input-type-buttons" class="tabcontent" style="display: block;">
+				<div class="hunting_tab two-tabs">
+					<button id="target_skill" class="tablinks active" onclick="show_tab(event, 'input-type-buttons')">Manual input</button>
+					<button id="target_spend" class="tablinks" onclick="show_tab(event, 'input-type-paste')">Exiva input</button>
+				</div>
+				<div id="input-type-buttons" class="tabcontent" style="display: block;">
 
-								<div style="display: grid;grid-template-columns: repeat(3, 1fr);gap: 0.5rem;">
-								<div style="margin: 1rem 0rem 0rem 0rem;">
-									<labeldiv>Distance:</labeldiv>
-									<div class="button-group" id="fiend-hunter-isostat-distance" style="grid-template-rows: repeat(3, 1fr);">
-									<button data-value="near">Near</button>
-									<button data-value="far">Far</button>
-									<button data-value="veryfar">Very Far</button>
-									</div>
-								</div>
-
-								<div style="margin: 1rem 0rem 0rem 0rem;">
-									<labeldiv>Direction:</labeldiv>
-									<div class="button-group" id="fiend-hunter-isostat-direction" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr);">
-									<button data-value="north-west">North-West</button>
-									<button data-value="north">North</button>
-									<button data-value="north-east">North-East</button>
-									<button data-value="west">West</button>
-									<button disabled></button>
-									<button data-value="east">East</button>
-									<button data-value="south-west">South-West</button>
-									<button data-value="south">South</button>
-									<button data-value="south-east">South-East</button>
-									</div>
-								</div>
-								
-								<div style="margin: 1rem 0rem 1rem 0rem;">
-									<labeldiv>Difficulty:</labeldiv>
-									<div class="button-group" id="fiend-hunter-isostat-difficulty" style="grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr);">
-									<button data-value="unknown">Unknown</button>
-									<button data-value="medium">Medium</button>
-									<button data-value="trivial">Trivial</button>
-									<button data-value="hard">Hard</button>
-									<button data-value="easy">Easy</button>
-									<button data-value="challenging">Challenging</button>
-									</div>
-								</div>
-
-								</div>
-							</div>
-							<div id="input-type-paste" class="tabcontent">
-								<input id="fiend-hunter-input-spell" type="text" style="width:98%;" placeholder="Paste exiva spell output here..."/>
-							</div>
-							<div class="button-group" style="margin: 1rem 0rem 1rem 0rem; grid-template-columns: repeat(2, 1fr);">
-									<button id="fiend-hunter-button-delete" class="fiend-hunter-button" >Delete all</button>
-									<button id="fiend-hunter-button-add" class="fiend-hunter-button" disabled>Add Exiva Point</button>
-							</div>
-							
-							
+					<div style="display: grid;grid-template-columns: repeat(3, 1fr);gap: 0.5rem;">
+					<div style="margin: 1rem 0rem 0rem 0rem;">
+						<labeldiv>Distance:</labeldiv>
+						<div class="button-group" id="fiend-hunter-isostat-distance" style="grid-template-rows: repeat(3, 1fr);">
+						<button data-value="near">Near</button>
+						<button data-value="far">Far</button>
+						<button data-value="veryfar">Very Far</button>
 						</div>
+					</div>
 
+					<div style="margin: 1rem 0rem 0rem 0rem;">
+						<labeldiv>Direction:</labeldiv>
+						<div class="button-group" id="fiend-hunter-isostat-direction" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr);">
+						<button data-value="north-west">North-West</button>
+						<button data-value="north">North</button>
+						<button data-value="north-east">North-East</button>
+						<button data-value="west">West</button>
+						<button disabled></button>
+						<button data-value="east">East</button>
+						<button data-value="south-west">South-West</button>
+						<button data-value="south">South</button>
+						<button data-value="south-east">South-East</button>
+						</div>
+					</div>
+					
+					<div style="margin: 1rem 0rem 1rem 0rem;">
+						<labeldiv>Difficulty:</labeldiv>
+						<div class="button-group" id="fiend-hunter-isostat-difficulty" style="grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr);">
+						<button data-value="unknown">Unknown</button>
+						<button data-value="medium">Medium</button>
+						<button data-value="trivial">Trivial</button>
+						<button data-value="hard">Hard</button>
+						<button data-value="easy">Easy</button>
+						<button data-value="challenging">Challenging</button>
+						</div>
+					</div>
 
+					</div>
+				</div>
+				<div id="input-type-paste" class="tabcontent">
+					<input id="fiend-hunter-input-spell" type="text" style="width:98%;" placeholder="Paste exiva spell output here..."/>
+				</div>
+				<div class="button-group" style="margin: 1rem 0rem 1rem 0rem; grid-template-columns: repeat(2, 1fr);">
+						<button id="fiend-hunter-button-delete" class="fiend-hunter-button" >Delete all</button>
+						<button id="fiend-hunter-button-add" class="fiend-hunter-button" disabled>Add Exiva Point</button>
+				</div>
+			</div>
 			</div>
 			<div id="tibia-map"></div>
 			<br>

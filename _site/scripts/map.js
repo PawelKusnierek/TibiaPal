@@ -17,7 +17,7 @@ gridSizeY = 0;
 point = null;
 #cross; 
 
-imageStore = [];scale = 1; isDragging = false;originX = 0; originY =0; startX = 0; startY = 0;container;mapWrapper;floorloaded = -1; moveCallabck = null;
+imageStore = [];scale = 1; isDragging = false;originX = 0; originY =0; startX = 0; startY = 0;container;mapWrapper;floorloaded = -1; moveCallabck = null; #clickCallback = null; #hasMoved = false;
 
 init()
 {	
@@ -99,6 +99,35 @@ init()
 					    this.point = point;
 					}
 				});
+				// Single click handler for coordinate selection
+				this.mapWrapper.addEventListener('click', (e) => {
+					if (this.#hasMoved) {
+						this.#hasMoved = false;
+						return; // Don't handle click if user was dragging
+					}					
+					e.preventDefault();
+					let pointUnrounded = this.#getMouseCoordMap(e);
+					let point = pointUnrounded.round();
+					// Always set (no toggle) to avoid flicker / undo on double-click.
+					this.#cross.draw(point);
+					this.point = point;
+					// Call the callback with unrounded point (matching registerCallback behavior)
+					// The callback (rightClickHandler) will round it internally
+					if(this.#clickCallback) {
+						this.#clickCallback(pointUnrounded);
+					}
+				});
+				// Double click handler for zooming
+				this.mapWrapper.addEventListener('dblclick', (e) => {
+					e.preventDefault();
+					let point = this.#getMouseCoordMap(e);
+					let view = this.#getMouseCoordViewPort(e);
+					// Zoom in
+					if(this.#manageScale(true)) {
+						this.#movePointToPoint(view, point);
+						this.#applyNewCoords(true);
+					}
+				});
 			}
 			if (loadedCount === 16) {
 				//when all images loaded, enable buttons
@@ -112,6 +141,7 @@ init()
 	this.mapWrapper.addEventListener('mousedown', (e) => {
             e.preventDefault();
             this.isDragging = true;
+            this.#hasMoved = false;
             this.startX = e.clientX;
             this.startY = e.clientY;
             this.container.style.cursor = "grabbing";
@@ -121,6 +151,10 @@ init()
 				if (!this.isDragging) return;
 				let dx = e.clientX - this.startX;
 				let dy = e.clientY - this.startY;
+				// Track if mouse moved significantly (more than 5 pixels)
+				if (Math.abs(dx) > 5 || Math.abs(dy) > 5) {
+					this.#hasMoved = true;
+				}
 				this.originX = this.originX - dx;
 				this.originY = this.originY - dy;
 				this.startX = e.clientX;
@@ -128,7 +162,7 @@ init()
 				this.#applyNewCoords(false); 
 	});
 
-	document.addEventListener('mouseup', () => {
+	document.addEventListener('mouseup', (e) => {
 				this.isDragging = false;
 				this.container.style.cursor = "default";
 	});
@@ -266,6 +300,7 @@ registerCallback(callback)
 	this.mapWrapper.addEventListener('contextmenu', (e) => {
 		e.preventDefault();
 		if(callback) callback(this.#getMouseCoordMap(e));
-});
+	});
+	this.#clickCallback = callback;
 }
 }

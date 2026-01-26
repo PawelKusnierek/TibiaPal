@@ -1,20 +1,9 @@
-.txtcenter {
-	text-align:center;
-}
-
 .flex {
 	display: flex;
 }
 
 .flex.column {
 	flex-direction: column;
-}
-
-.pageTitle {
-	font-size: 3em;
-	color:white;
-	padding-bottom: 0.5em;
-	border-bottom: 8px solid rgba(45, 140, 248, 0.7137254902); 
 }
 
 .button-group {
