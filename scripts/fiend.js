@@ -401,7 +401,7 @@ init()
 	// Up arrow button
 	const upButton = document.createElement("button");
 	upButton.id = "button-floor-up";
-	upButton.textContent = "▲";
+	upButton.textContent = "↑";
 	upButton.disabled = true;
 	upButton.classList.add("tibia-map-button");
 	upButton.addEventListener('click', () => {
@@ -413,6 +413,7 @@ init()
 	const floorDisplayButton = document.createElement("button");
 	floorDisplayButton.id = "button-floor-display";
 	floorDisplayButton.textContent = "0";
+	floorDisplayButton.disabled = true;
 	floorDisplayButton.classList.add("tibia-map-button");
 	floorDisplayButton.classList.add("tibia-map-button-highlight");
 	this.#floorDisplayButton = floorDisplayButton;
@@ -421,7 +422,7 @@ init()
 	// Down arrow button
 	const downButton = document.createElement("button");
 	downButton.id = "button-floor-down";
-	downButton.textContent = "▼";
+	downButton.textContent = "↓";
 	downButton.disabled = true;
 	downButton.classList.add("tibia-map-button");
 	downButton.addEventListener('click', () => {
@@ -623,8 +624,12 @@ getFloorLoaded() {
 	{
 		this.mapWrapper.style.transition = "";
 	}
-	// Removed constraints to allow infinite scrolling/panning
-	// No longer clamping originX and originY to image boundaries
+	const minX = 0;
+	const maxX = this.gridSizeX*this.scale - this.container.clientWidth;
+	const maxY = this.gridSizeY*this.scale - this.container.clientHeight;
+
+    this.originX = Math.max(minX, Math.min(maxX, this.originX));
+    this.originY = Math.max(minX, Math.min(maxY, this.originY));
 
 	this.mapWrapper.style.transform = `translate(${-this.originX}px, ${-this.originY}px) scale(${this.scale})`;
 	
@@ -1572,6 +1577,32 @@ document.addEventListener('DOMContentLoaded', () => {
 						if (!isInputFocused) {
 							exivaInput.focus();
 						}
+					}
+				}
+			}
+		});
+	}
+	
+	// Add Enter key handler to trigger "Add Exiva Point" button
+	const addButton = document.getElementById('fiend-hunter-button-add');
+	if (addButton) {
+		document.addEventListener('keydown', (e) => {
+			// Check for Enter key
+			if (e.key === 'Enter') {
+				// Only trigger if button is enabled and not disabled
+				if (!addButton.disabled && addButton.classList.contains('active')) {
+					// Don't trigger if user is typing in an input/textarea (unless it's the Exiva input)
+					const activeElement = document.activeElement;
+					const isInputFocused = activeElement && (
+						activeElement.tagName === 'INPUT' || 
+						activeElement.tagName === 'TEXTAREA' ||
+						activeElement.isContentEditable
+					);
+					
+					// Allow Enter to work if no input is focused, or if Exiva input is focused
+					if (!isInputFocused || activeElement === exivaInput) {
+						e.preventDefault();
+						addButton.click();
 					}
 				}
 			}
