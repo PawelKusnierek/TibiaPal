@@ -401,7 +401,7 @@ init()
 	// Up arrow button
 	const upButton = document.createElement("button");
 	upButton.id = "button-floor-up";
-	upButton.textContent = "↑";
+	upButton.textContent = "▲";
 	upButton.disabled = true;
 	upButton.classList.add("tibia-map-button");
 	upButton.addEventListener('click', () => {
@@ -413,7 +413,6 @@ init()
 	const floorDisplayButton = document.createElement("button");
 	floorDisplayButton.id = "button-floor-display";
 	floorDisplayButton.textContent = "0";
-	floorDisplayButton.disabled = true;
 	floorDisplayButton.classList.add("tibia-map-button");
 	floorDisplayButton.classList.add("tibia-map-button-highlight");
 	this.#floorDisplayButton = floorDisplayButton;
@@ -422,7 +421,7 @@ init()
 	// Down arrow button
 	const downButton = document.createElement("button");
 	downButton.id = "button-floor-down";
-	downButton.textContent = "↓";
+	downButton.textContent = "▼";
 	downButton.disabled = true;
 	downButton.classList.add("tibia-map-button");
 	downButton.addEventListener('click', () => {
