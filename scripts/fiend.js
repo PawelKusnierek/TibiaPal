@@ -624,12 +624,8 @@ getFloorLoaded() {
 	{
 		this.mapWrapper.style.transition = "";
 	}
-	const minX = 0;
-	const maxX = this.gridSizeX*this.scale - this.container.clientWidth;
-	const maxY = this.gridSizeY*this.scale - this.container.clientHeight;
-
-    this.originX = Math.max(minX, Math.min(maxX, this.originX));
-    this.originY = Math.max(minX, Math.min(maxY, this.originY));
+	// Removed boundary constraints to allow infinite scrolling
+	// No longer limiting originX and originY to grid boundaries
 
 	this.mapWrapper.style.transform = `translate(${-this.originX}px, ${-this.originY}px) scale(${this.scale})`;
 	
