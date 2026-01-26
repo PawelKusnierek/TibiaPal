@@ -45,6 +45,86 @@ export class FiendishHunter {
 		document.getElementById(deletebutton).addEventListener('click', () => {
 			this.pointsmanager.deleteAll();
 		});
+
+		// Fullscreen functionality
+		const fullscreenButton = document.getElementById('fiend-hunter-button-fullscreen');
+		if (fullscreenButton) {
+			let isFullscreen = false;
+			const elementsToHide = ['header', 'banner', 'right-header', 'left-sidebar', 'right-sidebar', 'tibiatrade_low_res', 'fiend-hunter-how-to-use', 'footer', 'left-footer-space', 'right-footer-space'];
+			const navToggle = document.querySelector('.nav-toggle');
+			const mainContent = document.getElementById('main-content');
+			const pageContainer = document.getElementById('page-container');
+			let originalMainContentStyle = null;
+			let originalPageContainerStyle = null;
+
+			fullscreenButton.addEventListener('click', () => {
+				if (!isFullscreen) {
+					// Store original styles
+					if (mainContent) {
+						originalMainContentStyle = {
+							flexBasis: mainContent.style.flexBasis || getComputedStyle(mainContent).flexBasis,
+							marginLeft: mainContent.style.marginLeft || getComputedStyle(mainContent).marginLeft,
+							marginRight: mainContent.style.marginRight || getComputedStyle(mainContent).marginRight,
+							width: mainContent.style.width || getComputedStyle(mainContent).width
+						};
+						// Apply fullscreen styles
+						mainContent.style.flexBasis = '100%';
+						mainContent.style.width = '100%';
+						mainContent.style.marginLeft = '0';
+						mainContent.style.marginRight = '0';
+					}
+
+					if (pageContainer) {
+						originalPageContainerStyle = {
+							display: pageContainer.style.display || getComputedStyle(pageContainer).display
+						};
+						pageContainer.style.display = 'block';
+					}
+
+					// Hide other elements
+					elementsToHide.forEach(id => {
+						const element = document.getElementById(id);
+						if (element) {
+							element.style.display = 'none';
+						}
+					});
+
+					if (navToggle) {
+						navToggle.style.display = 'none';
+					}
+
+					isFullscreen = true;
+					fullscreenButton.classList.add('active');
+				} else {
+					// Restore original styles
+					if (mainContent && originalMainContentStyle) {
+						mainContent.style.flexBasis = originalMainContentStyle.flexBasis;
+						mainContent.style.marginLeft = originalMainContentStyle.marginLeft;
+						mainContent.style.marginRight = originalMainContentStyle.marginRight;
+						mainContent.style.width = originalMainContentStyle.width;
+					}
+
+					if (pageContainer && originalPageContainerStyle) {
+						pageContainer.style.display = originalPageContainerStyle.display;
+					}
+
+					// Show other elements
+					elementsToHide.forEach(id => {
+						const element = document.getElementById(id);
+						if (element) {
+							element.style.display = '';
+						}
+					});
+
+					if (navToggle) {
+						navToggle.style.display = '';
+					}
+
+					isFullscreen = false;
+					fullscreenButton.classList.remove('active');
+				}
+			});
+		}
 	}
 
 	get map(){

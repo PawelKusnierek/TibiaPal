@@ -91,3 +91,24 @@
 	background-color: rgba(45, 140, 248, 0.8);
 	border-color: #2d8cf8;
 }
+
+#fiend-hunter-button-fullscreen {
+	background-color: #8b2a2a;
+	border-color: #b83d3d;
+}
+
+#fiend-hunter-button-fullscreen:hover {
+	background-color: #a83a3a;
+	border-color: #d14a4a;
+}
+
+#fiend-hunter-button-fullscreen.active {
+	background-color: #b83d3d;
+	border-color: #d14a4a;
+	box-shadow: 0 0 5px rgba(184, 61, 61, 0.4);
+}
+
+#fiend-hunter-button-fullscreen.active:hover {
+	background-color: #c84d4d;
+	border-color: #d14a4a;
+}

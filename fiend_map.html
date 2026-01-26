@@ -6,17 +6,19 @@ scripts: <script type="module" src="scripts/hunter.js"></script>
 ---
 		<div>
 			<!-- Fiendish Hunter Map page and all imported scripts made by kucerman (in Tibia: Lyria Zniwiarka Swiatla) 2026 -->
-			<span style="color: gold"><b>How to use:</b></span><br>
-			<ol id="align-left">
-			<li>Select Exiva location on the map with Left or Right click</li>
-			<li>Choose the Exiva output manually or by pasting the log</li>
-			<li>Click 'Add Exiva Point'
-			</ol>
+			<div id="fiend-hunter-how-to-use">
+				<span style="color: gold"><b>How to use:</b></span><br>
+				<ol id="align-left">
+				<li>Select Exiva location on the map with Left or Right click</li>
+				<li>Choose the Exiva output manually or by pasting the log</li>
+				<li>Click 'Add Exiva Point'
+				</ol>
+			</div>
     	
 			<div style="display:flex;justify-content: center;">
 			<div class="flex column" style="height:100%; width:85%; ">
 				<div style="margin-bottom: 1rem;">
-					<div style="display: grid; grid-template-columns: auto auto auto; gap: 2rem; justify-content: center; align-items: start;">
+					<div style="display: grid; grid-template-columns: auto auto auto auto; gap: 2rem; justify-content: center; align-items: start;">
 						<div>
 							<labeldiv><b>Distance</b></labeldiv>
 							<div class="button-group" id="fiend-hunter-isostat-distance" style="grid-template-rows: repeat(3, 1fr); width: 140px;">
@@ -41,17 +43,13 @@ scripts: <script type="module" src="scripts/hunter.js"></script>
 							</div>
 						</div>
 
-						<div style="display: flex; flex-direction: column;">
-							<labeldiv><b>Exiva Log (optional)</b></labeldiv>
-							<input id="fiend-hunter-input-spell" type="text" class="bestiary-input" style="width: 140px;" placeholder="Paste exiva log here..."/>
+						<div style="display: flex; flex-direction: column;gap: 0.3rem;margin-top: 1.1rem;">
+							<input id="fiend-hunter-input-spell" type="text" class="bestiary-input" style="width: 140px;" placeholder="(Optional) Exiva log..."/>
+							<button id="fiend-hunter-button-add" class="fiend-hunter-button" disabled style="padding: 8px 16px; font-size: 14px;">Add Exiva Point</button>
+							<button id="fiend-hunter-button-delete" class="fiend-hunter-button" style="padding: 8px 16px; font-size: 14px;">Delete All Points</button>
+							<button id="fiend-hunter-button-fullscreen" class="fiend-hunter-button" style="padding: 8px 16px; font-size: 14px;">Fullscreen</button>
 						</div>
 					</div>
-				</div>
-				
-
-				<div style="display: flex; gap: 1rem; justify-content: center; margin: 1rem 0rem 1rem 0rem;">
-					<button id="fiend-hunter-button-delete" class="fiend-hunter-button" style="padding: 8px 16px; font-size: 14px;">Delete All Points</button>
-					<button id="fiend-hunter-button-add" class="fiend-hunter-button" disabled style="padding: 8px 16px; font-size: 14px;">Add Exiva Point</button>
 				</div>
 			</div>
 			</div>
