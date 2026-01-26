@@ -1272,8 +1272,8 @@ class FiendishHunter {
 							height: mapContainer.style.height || '',
 							minHeight: mapContainer.style.minHeight || ''
 						};
-						mapContainer.style.height = 'calc(100vh - 185px)';
-						mapContainer.style.minHeight = 'calc(100vh - 185px)';
+						mapContainer.style.height = 'calc(100vh - 190px)';
+						mapContainer.style.minHeight = 'calc(100vh - 190px)';
 					}
 
 					// Hide other elements
@@ -1544,5 +1544,42 @@ document.addEventListener('DOMContentLoaded', () => {
 		addbutton: 'fiend-hunter-button-add',
 		deletebutton: 'fiend-hunter-button-delete',
 		exivaInput: 'fiend-hunter-input-spell'
-	});	
+	});
+	
+	// Add global paste handler for Exiva Log input
+	const exivaInput = document.getElementById('fiend-hunter-input-spell');
+	if (exivaInput) {
+		document.addEventListener('keydown', async (e) => {
+			// Check for Ctrl+V (Windows/Linux) or Cmd+V (Mac)
+			if ((e.ctrlKey || e.metaKey) && e.key === 'v') {
+				// Only handle if not already focused on an input/textarea
+				const activeElement = document.activeElement;
+				const isInputFocused = activeElement && (
+					activeElement.tagName === 'INPUT' || 
+					activeElement.tagName === 'TEXTAREA' ||
+					activeElement.isContentEditable
+				);
+				
+				// If no input is focused, or if the Exiva input is focused, handle paste
+				if (!isInputFocused || activeElement === exivaInput) {
+					e.preventDefault();
+					try {
+						const text = await navigator.clipboard.readText();
+						if (text) {
+							exivaInput.value = text;
+							exivaInput.focus();
+							// Trigger input event to parse the text
+							exivaInput.dispatchEvent(new Event('input', { bubbles: true }));
+						}
+					} catch (err) {
+						// Fallback: if clipboard API fails, let default paste behavior happen
+						// but focus the input first
+						if (!isInputFocused) {
+							exivaInput.focus();
+						}
+					}
+				}
+			}
+		});
+	}
 });
