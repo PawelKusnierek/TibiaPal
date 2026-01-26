@@ -15,6 +15,7 @@
 
     <!-- css files -->
     <link rel="stylesheet" href={{"css/main.css" | relative_url}}>
+    {{ page.css }}
 
     <!-- javascript files -->
     {{ page.scripts }}
@@ -38,7 +39,7 @@
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
-<body onload="initialize()">
+<body>
     <main id="page-container">
         <div id="tibiatrade_low_res">
             <div class="tibiatrade_span">
@@ -142,5 +143,6 @@
             <script>
                 //showAdblockPopup(); bump
             </script>
+            {{ page.scripts }}
 </body>
 </html>

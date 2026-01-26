@@ -1,4 +1,4 @@
-function initialize() {
+document.addEventListener('DOMContentLoaded', () => {
   //cookie_notice();
   //find_rashid_city();
   enable_expandable_div_buttons();
@@ -6,7 +6,7 @@ function initialize() {
   enable_tablinks();
   //comment out below to disable kick embed - without the check it will never be visible/active
   check_livestream();
-}
+});
 
 function find_rashid_city() {
   time = new Intl.DateTimeFormat("en-GB", {
