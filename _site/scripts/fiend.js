@@ -1388,23 +1388,30 @@ class Manager{
 		newData.score = 1;
 		this.#childs.set(newData.id, new Set());
 		let intersections = [];
+		
+		// Only intersect with base polygons (score = 1) to prevent exponential growth
+		// Intersections of intersections would create too many polygons and cause memory issues
+		const MAX_INTERSECTIONS = 100; // Safety limit to prevent memory issues
+		let intersectionCount = 0;
+		
 		for (const [key,point] of this.#polygons) {
-			let intersection = new PolygonIntersector(point.poly, newData.poly).doMagic();
-			if(intersection != null){
-				let newIntersecion = new HunterDataContainer(intersection, this.#svg);
-				newIntersecion.score = this.getScore(point, newData);
-				this.#childs.set(newIntersecion.id, new Set());
-				this.#childs.get(newIntersecion.id).add(point.id);
-				this.#childs.get(newIntersecion.id).add(newData.id);
-				intersections.push(newIntersecion);
+			// Only intersect with base polygons (score = 1) to prevent combinatorial explosion
+			if(point.score === 1 && intersectionCount < MAX_INTERSECTIONS){
+				let intersection = new PolygonIntersector(point.poly, newData.poly).doMagic();
+				if(intersection != null){
+					let newIntersection = new HunterDataContainer(intersection, this.#svg);
+					newIntersection.score = this.getScore(point, newData);
+					this.#childs.set(newIntersection.id, new Set());
+					this.#childs.get(newIntersection.id).add(point.id);
+					this.#childs.get(newIntersection.id).add(newData.id);
+					intersections.push(newIntersection);
+					intersectionCount++;
+				}
 			}
 		}
 
 		this.#polygons.set(newData.id, newData);
-		if(intersections.length == 0){
-
-		}
-		else{
+		if(intersections.length > 0){
 			intersections.forEach(element => this.#polygons.set(element.id, element));
 		}
 		this.#updateDisplay();
