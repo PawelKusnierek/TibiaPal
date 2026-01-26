@@ -1608,4 +1608,34 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 	}
+	
+	// Add arrow key handlers for floor navigation
+	document.addEventListener('keydown', (e) => {
+		// Check for Up or Down arrow keys
+		if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+			// Don't trigger if user is typing in an input/textarea
+			const activeElement = document.activeElement;
+			const isInputFocused = activeElement && (
+				activeElement.tagName === 'INPUT' || 
+				activeElement.tagName === 'TEXTAREA' ||
+				activeElement.isContentEditable
+			);
+			
+			// Only handle arrow keys if no input is focused
+			if (!isInputFocused) {
+				e.preventDefault();
+				if (e.key === 'ArrowUp') {
+					const upButton = document.getElementById('button-floor-up');
+					if (upButton && !upButton.disabled) {
+						hunter.map.goUpOneFloor();
+					}
+				} else if (e.key === 'ArrowDown') {
+					const downButton = document.getElementById('button-floor-down');
+					if (downButton && !downButton.disabled) {
+						hunter.map.goDownOneFloor();
+					}
+				}
+			}
+		}
+	});
 });
