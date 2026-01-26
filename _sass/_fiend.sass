@@ -146,6 +146,88 @@
     font-style: bold
     font-size: 1.5em
 
+.tibia-map-arrow-up,
+.tibia-map-arrow-down
+    position: relative
+    border: 2px solid rgba(45, 140, 248, 0.7137254902)
+    background-color: #0f1f3a
+    padding: 0.5rem
+    border-radius: 4px
+    cursor: pointer
+    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s
+    min-width: 2.5rem
+    min-height: 2.5rem
+    &::before
+        content: ""
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        width: 0
+        height: 0
+
+.tibia-map-arrow-up::before
+    border-left: 8px solid transparent
+    border-right: 8px solid transparent
+    border-bottom: 10px solid #ebebeb
+    margin-top: -2px
+
+.tibia-map-arrow-down::before
+    border-left: 8px solid transparent
+    border-right: 8px solid transparent
+    border-top: 10px solid #ebebeb
+    margin-top: 2px
+
+.tibia-map-arrow-up:hover,
+.tibia-map-arrow-down:hover
+    background-color: #1a2f4f
+    border-color: #2d8cf8
+    box-shadow: 0 0 5px rgba(45, 140, 248, 0.3)
+
+.tibia-map-arrow-up:hover::before,
+.tibia-map-arrow-down:hover::before
+    border-bottom-color: #2d8cf8
+    border-top-color: #2d8cf8
+
+.tibia-map-arrow-up:active,
+.tibia-map-arrow-down:active
+    background-color: rgba(45, 140, 248, 0.2)
+
+.tibia-map-arrow-up:disabled,
+.tibia-map-arrow-down:disabled
+    background-color: #0a1525
+    border-color: rgba(45, 140, 248, 0.3)
+    cursor: not-allowed
+    opacity: 0.6
+
+.tibia-map-arrow-up:disabled::before,
+.tibia-map-arrow-down:disabled::before
+    border-bottom-color: #666
+    border-top-color: #666
+
+.tibia-map-floor-display
+    border: 2px solid rgba(45, 140, 248, 0.7137254902)
+    background-color: #0f1f3a
+    padding: 0.5rem
+    border-radius: 4px
+    cursor: default
+    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s
+    min-width: 2.5rem
+    min-height: 2.5rem
+    color: #ebebeb
+    font-weight: bold
+    font-size: 1.2em
+
+.tibia-map-floor-display:hover
+    background-color: #1a2f4f
+    border-color: #2d8cf8
+    box-shadow: 0 0 5px rgba(45, 140, 248, 0.3)
+
+.tibia-map-floor-display:disabled
+    background-color: #0a1525
+    border-color: rgba(45, 140, 248, 0.3)
+    opacity: 0.6
+
 .tibia-map-svg
     position: absolute
     top: 0
