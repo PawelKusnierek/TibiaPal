@@ -101,21 +101,7 @@ function show_tab(event, tabName) {
 	// Reinitialize sorting headers for the newly shown tab
 	setTimeout(() => {
 		const vocation = event.currentTarget.id;
-		const table = document.getElementById("hunting_table_" + vocation);
-		if (table) {
-			const headerRow = table.querySelector("tr");
-			const headers = headerRow.cells;
-			
-			// Make Level, Raw exp, and Loot headers clickable
-			[0, 2, 3].forEach(columnIndex => { // Level, Raw exp, Loot columns
-				const header = headers[columnIndex];
-				if (!header.classList.contains("sortable-header")) {
-					header.style.cursor = "pointer";
-					header.classList.add("sortable-header");
-					header.addEventListener("click", () => sortTable(columnIndex, vocation));
-				}
-			});
-		}
+		setupSortingHeaders(vocation);
 		
 		// Reapply color coding for the newly shown tab
 		applyColorCoding();
@@ -142,8 +128,10 @@ function sortTable(columnIndex, vocation) {
 	header.setAttribute("data-sort-direction", newDirection);
 	header.classList.add("sort-" + newDirection);
 	
-	// Sort rows
+	// Sort rows - get text content before any innerHTML modifications
 	rows.sort((a, b) => {
+		// Get the original text content from cells
+		// For cells with innerHTML modifications (spans), we need to get the combined text
 		let aValue = a.cells[columnIndex].textContent.trim();
 		let bValue = b.cells[columnIndex].textContent.trim();
 		
@@ -168,6 +156,11 @@ function sortTable(columnIndex, vocation) {
 	
 	// Reorder rows in the table
 	rows.forEach(row => tbody.appendChild(row));
+	
+	// Reapply color coding after sorting to restore any color formatting
+	setTimeout(() => {
+		applyColorCoding();
+	}, 10);
 }
 
 function extractExpValue(text) {
@@ -257,6 +250,37 @@ function extractLootValue(text) {
 	return 0;
 }
 
+// Setup sorting headers for a specific vocation
+function setupSortingHeaders(vocation) {
+	const table = document.getElementById("hunting_table_" + vocation);
+	if (table) {
+		const headerRow = table.querySelector("tr");
+		const headers = headerRow.cells;
+		
+		// Make Level, Raw exp, and Loot headers clickable
+		[0, 2, 3].forEach(columnIndex => { // Level, Raw exp, Loot columns
+			const header = headers[columnIndex];
+			if (header) {
+				header.style.cursor = "pointer";
+				header.classList.add("sortable-header");
+				
+				// Remove existing listener if it exists to prevent duplicates
+				if (header._sortHandler) {
+					header.removeEventListener("click", header._sortHandler);
+				}
+				
+				// Create and store the sort handler function
+				header._sortHandler = function() {
+					sortTable(columnIndex, vocation);
+				};
+				
+				// Add the event listener
+				header.addEventListener("click", header._sortHandler);
+			}
+		});
+	}
+}
+
 // Initialize sorting headers when page loads
 function initializeSortingHeaders() {
 	const vocations = ['knight', 'paladin', 'mage', 'monk', 'duo', 'teamhunt'];
@@ -268,19 +292,7 @@ function initializeSortingHeaders() {
 	}
 	
 	vocations.forEach(vocation => {
-		const table = document.getElementById("hunting_table_" + vocation);
-		if (table) {
-			const headerRow = table.querySelector("tr");
-			const headers = headerRow.cells;
-			
-			// Make Level, Raw exp, and Loot headers clickable
-			[0, 2, 3].forEach(columnIndex => { // Level, Raw exp, Loot columns
-				const header = headers[columnIndex];
-				header.style.cursor = "pointer";
-				header.classList.add("sortable-header");
-				header.addEventListener("click", () => sortTable(columnIndex, vocation));
-			});
-		}
+		setupSortingHeaders(vocation);
 		
 		// Set up level filter event listeners
 		const levelFilter = document.getElementById("levelFilter_" + vocation);
@@ -370,7 +382,9 @@ function applyColorCoding() {
 		if (table) {
 			const rows = table.querySelectorAll("tr");
 			
-			rows.forEach(row => {
+			// Skip the first row (header row) and process data rows only
+			for (let i = 1; i < rows.length; i++) {
+				const row = rows[i];
 				// Check weapon type column (index 4 for knight and monk)
 				const weaponCell = row.cells[4];
 				if (weaponCell) {
@@ -382,7 +396,7 @@ function applyColorCoding() {
 				if (runesCell) {
 					colorizeCell(runesCell);
 				}
-			});
+			}
 		}
 	});
 }
