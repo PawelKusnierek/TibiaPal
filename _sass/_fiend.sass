@@ -1,0 +1,154 @@
+.flex
+    display: flex
+
+.flex.column
+    flex-direction: column
+
+.button-group
+    display: grid
+    min-height: 2rem
+
+.button-group button
+    font-size: 1em
+    flex: 1 1 0
+    flex-grow: 1
+    padding: 8px
+    border: 1px solid rgba(45, 140, 248, 0.7137254902)
+    background-color: #0f1f3a
+    color: #ebebeb
+    border-radius: 4px
+    cursor: pointer
+    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s
+
+.button-group button.active
+    background-color: rgba(45, 140, 248, 0.7137254902)
+    color: #ebebeb
+    border-color: #2d8cf8
+    box-shadow: 0 0 5px rgba(45, 140, 248, 0.3)
+
+.button-group button.active:hover
+    background-color: rgba(45, 140, 248, 0.8)
+    border-color: #2d8cf8
+
+.button-group button:hover
+    background-color: #1a2f4f
+    border-color: #2d8cf8
+
+.button-group button:disabled
+    background-color: #0a1525
+    color: #666
+    cursor: not-allowed
+    opacity: 0.6
+
+#fiend-hunter-isostat-direction button
+    width: 100%
+    min-width: 0
+
+.fiend-hunter-button
+    padding: 8px
+    border: 1px solid rgba(45, 140, 248, 0.7137254902)
+    background-color: #0f1f3a
+    color: #ebebeb
+    border-radius: 4px
+    font-size: 1em
+    cursor: pointer
+    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s
+
+.fiend-hunter-button:hover
+    background-color: #1a2f4f
+    border-color: #2d8cf8
+
+.fiend-hunter-button:active
+    background-color: #1a2f4f
+
+.fiend-hunter-button:disabled
+    background-color: #0a1525
+    color: #666
+    cursor: not-allowed
+    opacity: 0.6
+
+.fiend-hunter-button.active
+    background-color: rgba(45, 140, 248, 0.7137254902)
+    color: #ebebeb
+    border-color: #2d8cf8
+    box-shadow: 0 0 5px rgba(45, 140, 248, 0.3)
+    // Prevent size changes when active
+    flex: 0 0 auto
+    width: auto
+    min-width: 0
+
+.fiend-hunter-button.active:hover
+    background-color: rgba(45, 140, 248, 0.8)
+    border-color: #2d8cf8
+
+#fiend-hunter-button-fullscreen
+    background-color: #8b2a2a
+    border-color: #b83d3d
+
+#fiend-hunter-button-fullscreen:hover
+    background-color: #a83a3a
+    border-color: #d14a4a
+
+#fiend-hunter-button-fullscreen.active
+    background-color: #b83d3d
+    border-color: #d14a4a
+    box-shadow: 0 0 5px rgba(184, 61, 61, 0.4)
+
+#fiend-hunter-button-fullscreen.active:hover
+    background-color: #c84d4d
+    border-color: #d14a4a
+
+.tibia-map
+    overflow: hidden
+    border: 2px solid white
+    position: relative
+    cursor: grab
+    margin-right: 0.5%
+    min-height: 600px
+
+.tibia-map-wrapper
+    position: absolute
+    transform-origin: top left
+
+.tibia-map-buttons
+    flex: 0 0 5%
+
+.tibia-map-grid
+    display: grid
+    top: 0
+    left: 0
+    width: 2560px
+    height: 2308px
+    position: absolute
+    z-index: 0
+    transform-origin: center
+
+.tibia-map-tile
+    background-color: rgba(0, 0, 0, 1)
+    image-rendering: pixelated
+
+.tibia-map-button-container
+    position: absolute
+    z-index: 2
+
+.tibia-map-button
+    align-items: center
+    justify-content: center
+    height: 2rem
+    width: 2rem
+    margin: 0.2rem
+    font-style: bold
+    font-size: 1rem
+    display: flex
+    flex-direction: column
+
+.tibia-map-button-highlight
+    font-style: bold
+    font-size: 1.5em
+
+.tibia-map-svg
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    pointer-events: none
