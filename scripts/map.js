@@ -17,7 +17,7 @@ gridSizeY = 0;
 point = null;
 #cross; 
 
-imageStore = [];scale = 1; isDragging = false;originX = 0; originY =0; startX = 0; startY = 0;container;mapWrapper;floorloaded = -1; moveCallabck = null; #clickCallback = null; #hasMoved = false;
+imageStore = [];scale = 1; isDragging = false;originX = 0; originY =0; startX = 0; startY = 0;container;mapWrapper;floorloaded = -1; moveCallabck = null; #clickCallback = null; #hasMoved = false; currentFloor = 0; #floorDisplayButton = null;
 
 init()
 {	
@@ -29,17 +29,37 @@ init()
 	buttons.classList.add("tibia-map-button-container");
 	this.container.appendChild(buttons);
 	
-	for (let i = 0; i < 15; i++) {
-		const button = document.createElement("button");
-		button.id = "buttonfloor"+ (-i + 7);
-		button.textContent = -i + 7;
-		button.disabled = true;
-		button.classList.add("tibia-map-button");
-		button.addEventListener('click', () => {
-			this.loadFloor(i);
-		}); 
-		buttons.appendChild(button);
-	}
+	// Up arrow button
+	const upButton = document.createElement("button");
+	upButton.id = "button-floor-up";
+	upButton.textContent = "↑";
+	upButton.disabled = true;
+	upButton.classList.add("tibia-map-button");
+	upButton.addEventListener('click', () => {
+		this.goUpOneFloor();
+	});
+	buttons.appendChild(upButton);
+	
+	// Current floor display button
+	const floorDisplayButton = document.createElement("button");
+	floorDisplayButton.id = "button-floor-display";
+	floorDisplayButton.textContent = "0";
+	floorDisplayButton.disabled = true;
+	floorDisplayButton.classList.add("tibia-map-button");
+	floorDisplayButton.classList.add("tibia-map-button-highlight");
+	this.#floorDisplayButton = floorDisplayButton;
+	buttons.appendChild(floorDisplayButton);
+	
+	// Down arrow button
+	const downButton = document.createElement("button");
+	downButton.id = "button-floor-down";
+	downButton.textContent = "↓";
+	downButton.disabled = true;
+	downButton.classList.add("tibia-map-button");
+	downButton.addEventListener('click', () => {
+		this.goDownOneFloor();
+	});
+	buttons.appendChild(downButton);
 
 	//create map wrapper; this is where zoom and pan happens
 	const wrapper = document.createElement("div");
@@ -130,10 +150,11 @@ init()
 				});
 			}
 			if (loadedCount === 16) {
-				//when all images loaded, enable buttons
-				this.container.querySelectorAll('button').forEach(button => {
-					button.disabled = false;
-				});
+				//when all images loaded, enable navigation buttons (but keep floor display disabled)
+				const upButton = document.getElementById('button-floor-up');
+				const downButton = document.getElementById('button-floor-down');
+				if (upButton) upButton.disabled = false;
+				if (downButton) downButton.disabled = false;
 			}
 		});
 	}
@@ -184,31 +205,42 @@ loadFloor(imageIndex) {
 	}
     grid.appendChild(tile);
 	this.floorloaded = imageIndex;
-	this.container.querySelectorAll('button').forEach(button => {
-				button.classList.remove('tibia-map-button-highlight');
-			});
-	document.getElementById('buttonfloor'+ this.getFloorLoaded()).classList.add('tibia-map-button-highlight');
-}
-
-#loadNextFloor(floor){
-	let desiredfloor = Math.max(0, Math.min(14, floor));
-	if (desiredfloor != this.floorloaded) {
-		loadFloor(desiredfloor);
+	// Update current floor number (imageIndex 7 = floor 0)
+	this.currentFloor = 7 - imageIndex;
+	// Update floor display button
+	if(this.#floorDisplayButton) {
+		this.#floorDisplayButton.textContent = this.currentFloor.toString();
 	}
 }
 
-loadNextFloorUp(){
-	let floor = this.floorloaded - 1;
-	loadNextFloor(floor);
+goUpOneFloor() {
+	// Floor 0 = imageIndex 7, Floor 1 = imageIndex 6, etc.
+	// Formula: imageIndex = 7 - floorNumber
+	const newFloor = this.currentFloor + 1;
+	const maxFloor = 7; // Can go up to floor 7
+	if (newFloor <= maxFloor) {
+		const imageIndex = 7 - newFloor;
+		if (imageIndex >= 0 && imageIndex < 16) {
+			this.loadFloor(imageIndex);
+		}
+	}
 }
 
-loadNextFloorDown(){
-	let floor = this.floorloaded + 1;
-	loadNextFloor(floor);
+goDownOneFloor() {
+	// Floor 0 = imageIndex 7, Floor -1 = imageIndex 8, etc.
+	// Formula: imageIndex = 7 - floorNumber
+	const newFloor = this.currentFloor - 1;
+	const minFloor = -7; // Can go down to floor -7
+	if (newFloor >= minFloor) {
+		const imageIndex = 7 - newFloor;
+		if (imageIndex >= 0 && imageIndex < 16) {
+			this.loadFloor(imageIndex);
+		}
+	}
 }
 
 getFloorLoaded() {
-	return -this.floorloaded+7;
+	return this.currentFloor;
 }
 
 #configurePTPZoom() {

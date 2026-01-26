@@ -187,19 +187,18 @@
 			<!-- Fiendish Hunter Map page and all imported scripts made by kucerman (in Tibia: Lyria Zniwiarka Swiatla) 2026 -->
 			<span style="color: gold"><b>How to use:</b></span><br>
 			<ol id="align-left">
-			<li>Select exiva location with Left or Right click</li>
-			<li>Triangulate the Fiend position via Manually selected directions or by pasting the Exiva Log</li>
+			<li>Select Exiva location on the map with Left or Right click</li>
+			<li>Choose the Exiva output manually or by pasting the log</li>
 			<li>Click 'Add Exiva Point'
 			</ol>
     	
 			<div style="display:flex;justify-content: center;">
 			<div class="flex column" style="height:100%; width:85%; ">
 				<div style="margin-bottom: 1rem;">
-					<labeldiv style="font-weight: bold; margin-bottom: 0.5rem; display: block;">Manual Input</labeldiv>
-					<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+					<div style="display: grid; grid-template-columns: auto auto auto; gap: 3rem; justify-content: center; align-items: start;">
 						<div>
 							<labeldiv><b>Distance</b></labeldiv>
-							<div class="button-group" id="fiend-hunter-isostat-distance" style="grid-template-rows: repeat(3, 1fr);">
+							<div class="button-group" id="fiend-hunter-isostat-distance" style="grid-template-rows: repeat(3, 1fr); width: 120px;">
 								<button data-value="near">Near</button>
 								<button data-value="far">Far</button>
 								<button data-value="veryfar">Very Far</button>
@@ -208,7 +207,7 @@
 
 						<div>
 							<labeldiv><b>Direction</b></labeldiv>
-							<div class="button-group" id="fiend-hunter-isostat-direction" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr);">
+							<div class="button-group" id="fiend-hunter-isostat-direction" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); width: 200px;">
 								<button data-value="north-west">North-West</button>
 								<button data-value="north">North</button>
 								<button data-value="north-east">North-East</button>
@@ -220,17 +219,18 @@
 								<button data-value="south-east">South-East</button>
 							</div>
 						</div>
+
+						<div style="display: flex; flex-direction: column;">
+							<labeldiv><b>Exiva Input (optional)</b></labeldiv>
+							<input id="fiend-hunter-input-spell" type="text" class="bestiary-input" style="width: 200px;" placeholder="Paste exiva log here..."/>
+						</div>
 					</div>
 				</div>
+				
 
-				<div style="margin-bottom: 1rem;">
-					<labeldiv style="font-weight: bold; margin-bottom: 0.5rem; display: block;">Exiva Input</labeldiv>
-					<input id="fiend-hunter-input-spell" type="text" class="bestiary-input" style="width: 50%; max-width: 300px;" placeholder="Paste exiva log here..."/>
-				</div>
-
-				<div class="button-group" style="margin: 1rem 0rem 1rem 0rem; grid-template-columns: repeat(2, 1fr);">
-					<button id="fiend-hunter-button-delete" class="fiend-hunter-button" >Delete all</button>
-					<button id="fiend-hunter-button-add" class="fiend-hunter-button" disabled>Add Exiva Point</button>
+				<div style="display: flex; gap: 1rem; justify-content: center; margin: 1rem 0rem 1rem 0rem;">
+					<button id="fiend-hunter-button-delete" class="fiend-hunter-button" style="padding: 8px 16px; font-size: 14px;">Delete All Points</button>
+					<button id="fiend-hunter-button-add" class="fiend-hunter-button" disabled style="padding: 8px 16px; font-size: 14px;">Add Exiva Point</button>
 				</div>
 			</div>
 			</div>
