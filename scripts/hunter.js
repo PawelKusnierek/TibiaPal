@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
 const hunter = new FiendishHunter({
 			map: 'tibia-map',
-			pointspane: 'fiendish-hunter-point-table',
-			places: 'fiendish-hunter-dropdown-places',
-			input: 'fiendish-hunter-dropdown-container',
-			isodirection: 'fiendish-hunter-isostat-direction',
-			isodistance: 'fiendish-hunter-isostat-distance',
-			isodifficulty: 'fiendish-hunter-isostat-difficulty',
-			addbutton: 'fiendish-hunter-button-add',
-			deletebutton: 'fiendish-hunter-button-delete',
-			exivaInput: 'fiendish-hunter-input-spell'
+			pointspane: 'fiend-hunter-point-table',
+			places: 'fiend-hunter-dropdown-places',
+			input: 'fiend-hunter-dropdown-container',
+			isodirection: 'fiend-hunter-isostat-direction',
+			isodistance: 'fiend-hunter-isostat-distance',
+			isodifficulty: 'fiend-hunter-isostat-difficulty',
+			addbutton: 'fiend-hunter-button-add',
+			deletebutton: 'fiend-hunter-button-delete',
+			exivaInput: 'fiend-hunter-input-spell'
 		});	
 	});
 

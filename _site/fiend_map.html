@@ -94,9 +94,9 @@
     <div class="nav-item"><a href="https://tibiatrade.gg/wheel-of-destiny/?ref=tibiapal" target="_blank">
         <div class="nav-image-container"><img class="nav-image" src=/images/tibiatrade_favicon.png>Wheel of Destiny Examples</div>
         </a></div>
-    <div class="active nav-item"><a href="/fiendish_hunter">
-        <div class="nav-image-container"><img class="nav-image" src=/images/old_map.gif>Fiendish Hunter Map</div>
-        </a></div>
+    <!--<div class="nav-item"><a href="/fiend_map">
+        <div class="nav-image-container"><img class="nav-image" src=/images/old_map.gif>Fiend Map</div>
+        </a></div>-->
     </div>
     <!--<div class="nav-item"><a href="../wheelpresets">
                     <div class="nav-image-container"><img class="nav-image" src=/images/Wheel.gif><span id="new-homepage">NEW!</span>Wheel Presets</div>
@@ -201,7 +201,7 @@
 								</li>
 								<li>Either use buttons to choose what spell is pointing to, or paste exiva output.
 								</li>
-								<li>Click Add Exiva Point to add data to map. Possible area where fiendish is present will be displayed on map, and table bellow map will be updated with data of added spell.
+								<li>Click Add Exiva Point to add data to map. Possible area where fiend is present will be displayed on map, and table bellow map will be updated with data of added spell.
 								</li>
 								<li>When another spell is added, map is updated to reflect combined area of spells (if applicable). 
 								</li>
@@ -210,10 +210,10 @@
 								<li>Monster difficulty is colorcoded on map and in table.</li>
 							</ol>
 							</div>
-							<div id="fiendish-hunter-dropdown-container" class="dropdown-container">
-							  <input id="fiendish-hunter-input-places" type="text" class="dropdown-input" placeholder="Choose point..." readonly>
+							<div id="fiend-hunter-dropdown-container" class="dropdown-container">
+							  <input id="fiend-hunter-input-places" type="text" class="dropdown-input" placeholder="Choose point..." readonly>
 							  <span class="dropdown-arrow">▼</span>
-							  <div id="fiendish-hunter-dropdown-places" class="dropdown-list">
+							  <div id="fiend-hunter-dropdown-places" class="dropdown-list">
 							  </div>
 							</div>
 
@@ -226,7 +226,7 @@
 								<div style="display: grid;grid-template-columns: repeat(3, 1fr);gap: 0.5rem;">
 								<div style="margin: 1rem 0rem 0rem 0rem;">
 									<labeldiv>Distance:</labeldiv>
-									<div class="button-group" id="fiendish-hunter-isostat-distance" style="grid-template-rows: repeat(3, 1fr);">
+									<div class="button-group" id="fiend-hunter-isostat-distance" style="grid-template-rows: repeat(3, 1fr);">
 									<button data-value="near">Near</button>
 									<button data-value="far">Far</button>
 									<button data-value="veryfar">Very Far</button>
@@ -235,7 +235,7 @@
 
 								<div style="margin: 1rem 0rem 0rem 0rem;">
 									<labeldiv>Direction:</labeldiv>
-									<div class="button-group" id="fiendish-hunter-isostat-direction" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr);">
+									<div class="button-group" id="fiend-hunter-isostat-direction" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr);">
 									<button data-value="north-west">North-West</button>
 									<button data-value="north">North</button>
 									<button data-value="north-east">North-East</button>
@@ -250,7 +250,7 @@
 								
 								<div style="margin: 1rem 0rem 1rem 0rem;">
 									<labeldiv>Difficulty:</labeldiv>
-									<div class="button-group" id="fiendish-hunter-isostat-difficulty" style="grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr);">
+									<div class="button-group" id="fiend-hunter-isostat-difficulty" style="grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr);">
 									<button data-value="unknown">Unknown</button>
 									<button data-value="medium">Medium</button>
 									<button data-value="trivial">Trivial</button>
@@ -263,11 +263,11 @@
 								</div>
 							</div>
 							<div id="input-type-paste" class="tabcontent">
-								<input id="fiendish-hunter-input-spell" type="text" style="width:98%;" placeholder="Paste exiva spell output here..."/>
+								<input id="fiend-hunter-input-spell" type="text" style="width:98%;" placeholder="Paste exiva spell output here..."/>
 							</div>
 							<div class="button-group" style="margin: 1rem 0rem 1rem 0rem; grid-template-columns: repeat(2, 1fr);">
-									<button id="fiendish-hunter-button-delete" class="fiendish-hunter-button" >Delete all</button>
-									<button id="fiendish-hunter-button-add" class="fiendish-hunter-button" disabled>Add Exiva Point</button>
+									<button id="fiend-hunter-button-delete" class="fiend-hunter-button" >Delete all</button>
+									<button id="fiend-hunter-button-add" class="fiend-hunter-button" disabled>Add Exiva Point</button>
 							</div>
 							
 							
@@ -277,7 +277,7 @@
 			</div>
 			<div id="tibia-map"></div>
 			<br>
-			<table id="fiendish-hunter-point-table" border="1" cellspacing="0" cellpadding="6" style="width:100%; border-collapse: collapse;">
+			<table id="fiend-hunter-point-table" border="1" cellspacing="0" cellpadding="6" style="width:100%; border-collapse: collapse;">
 				<thead>
 					<tr>
 					<th>#</th>
