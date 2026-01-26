@@ -1,16 +1,15 @@
-import { Dropdown } from "./dropdown.js";
 import * as places from "./places.js";
 
-export class CoordPicker extends Dropdown {
+export class CoordPicker {
     #point;
     #callback;
-    constructor(containerid) {
-        super(containerid);
+    #value;
+    constructor() {
+        // No DOM input needed - coordinates stored internally
     }
     
     init(callback) {
-        this.#callback = callback
-        super.init(this.internalcallback.bind(this));
+        this.#callback = callback;
         this.resetChoosen();
     }
     
@@ -34,19 +33,30 @@ export class CoordPicker extends Dropdown {
     }
 
     resetChoosen(){
-        super.resetChoosen();
+        this.#value = "";
+        this.#point = null;
+        this.internalcallback();
+    }
+
+    isSet(){
+        return !!(this.#value && this.#value.trim() !== "");
+    }
+
+    setValue(val){
+        this.#value = val;
+        this.internalcallback();
+    }
+
+    getRawValue(){
+        return this.#value || "";
     }
 
     getValue() {
         let result = {};
-        let raw = super.getRawValue();
+        let raw = this.getRawValue();
         if (raw == "") return null; 
-        let coord = places.getValuesFromKey(raw)
-        if(coord != null){result.name = raw; result.point = coord;}
-        else { 
-            result.name = null;
-            result.point = places.getValues(raw);
-        }
+        result.name = null;
+        result.point = places.getValues(raw);
         if(result.point == null) return null;
         return result;
     }

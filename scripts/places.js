@@ -39,23 +39,6 @@ export function fromTibiaCoord(point){
 	return ret;
 }
 
-export function createDropdownItems(id, classname){
-	const parentdiv = document.getElementById(id);
-	for (const [key, values] of Object.entries(places)) {
-		const div = document.createElement("div");
-		div.classList.add(classname);
-		div.innerHTML=key;
-		parentdiv.appendChild(div);
-	}
-}
-
-export function getValuesFromKey(key){
-	if (key in places) {
-        return new Point (places[key].x, places[key].y);
-    }
-    return null;
-}
-
 export function getValues(key){
 	if (key in places) {
         return new Point (places[key].x, places[key].y);

@@ -1,12 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 const hunter = new FiendishHunter({
 			map: 'tibia-map',
-			pointspane: 'fiend-hunter-point-table',
-			places: 'fiend-hunter-dropdown-places',
-			input: 'fiend-hunter-dropdown-container',
 			isodirection: 'fiend-hunter-isostat-direction',
 			isodistance: 'fiend-hunter-isostat-distance',
-			isodifficulty: 'fiend-hunter-isostat-difficulty',
 			addbutton: 'fiend-hunter-button-add',
 			deletebutton: 'fiend-hunter-button-delete',
 			exivaInput: 'fiend-hunter-input-spell'
@@ -23,19 +19,16 @@ export class FiendishHunter {
 	#map;
 	#pointpicker;
 	
-	constructor({map, pointspane, places, input, isodirection, isodifficulty, isodistance, addbutton, deletebutton, exivaInput}){
+	constructor({map, isodirection, isodistance, addbutton, deletebutton, exivaInput}){
 		this.#map = new TibiaMap(map);
 		this.#map.init();
 		this.#pointpicker = new PointPicker(
-			{	coord: input, 
-				isodirection:isodirection, 
-				isodifficulty:isodifficulty, 
+			{	isodirection:isodirection, 
 				isodistance:isodistance, 
 				addbutton:addbutton, 
-				places:places, 
 				svg:this.#map.getSvgContainer(),
 				pasteInput:exivaInput});
-		this.pointsmanager = new Manager(pointspane, this.#map.getSvgContainer());
+		this.pointsmanager = new Manager(this.#map.getSvgContainer());
 
 		this.#map.registerCallback(this.#pointpicker.GetRightClickHandler());
 
@@ -63,25 +56,20 @@ export class FiendishHunter {
 class Manager{
 	#childs = new Map(); 
 	#polygons = new Map();
-	#pointsTable;
 	#svg;
-	constructor(pointtable, svg){
-		this.#pointsTable = pointtable;
+	constructor(svg){
 		this.#svg = svg;
 	}
 
 	addPoint(value){
-		let newData = new HunterDataContainer(new ExivaPolygon(value.distance, value.direction, places.fromTibiaCoord(value.point)), value.difficulty, this.#svg);
+		let newData = new HunterDataContainer(new ExivaPolygon(value.distance, value.direction, places.fromTibiaCoord(value.point)), this.#svg);
 		newData.score = 1;
 		this.#childs.set(newData.id, new Set());
 		let intersections = [];
 		for (const [key,point] of this.#polygons) {
-			if(newData.difficulty != point.difficulty) {
-				continue;
-			}
 			let intersection = new PolygonIntersector(point.poly, newData.poly).doMagic();
 			if(intersection != null){
-				let newIntersecion = new HunterDataContainer(intersection, point.difficulty, this.#svg);
+				let newIntersecion = new HunterDataContainer(intersection, this.#svg);
 				newIntersecion.score = this.getScore(point, newData);
 				this.#childs.set(newIntersecion.id, new Set());
 				this.#childs.get(newIntersecion.id).add(point.id);
@@ -98,7 +86,6 @@ class Manager{
 			intersections.forEach(element => this.#polygons.set(element.id, element));
 		}
 		this.#updateDisplay();
-		this.addRow(value, newData);
 	}
 
 	#updateDisplay(){
@@ -118,42 +105,6 @@ class Manager{
 		}
 		return maxScore;
 	}
-
-	addRow(data, object){ 
-		const tableBody = document.querySelector(`#${this.#pointsTable} tbody`);
-		const rowNumber = tableBody.rows.length + 1;
-
-		const row = document.createElement("tr");
-		let name = "";
-		if(data.name != null) name = data.name;
-		// create cells
-		row.innerHTML = `
-		<td>${rowNumber}</td>
-		<td>(${data.point.x},${data.point.y})</td>
-		<td>${name}</td>
-		<td>${data.distance}</td>
-		<td>${data.direction}</td>
-		<td><span style="color:${object.getColor()}">${data.difficulty}</span></td>
-		<td style="text-align:center; cursor:pointer;">🗑️</td>
-		`;
-
-		// attach delete handler
-		const deleteCell = row.lastElementChild;
-		deleteCell.addEventListener("click", () => {
-			this.removePoint(object.id);
-			row.remove();
-			this.renumberRows();
-		});
-
-		tableBody.appendChild(row);
-  	}
-
-	renumberRows() {
-    const rows = document.querySelectorAll(`#${this.#pointsTable} tbody tr`);
-    rows.forEach((row, index) => {
-      row.cells[0].textContent = index + 1;
-    });
-  }
 
 	removePoint(id){
 		const childsSet = this.#childs.get(id);
@@ -176,8 +127,6 @@ class Manager{
 		});
 		this.#polygons = new Map();
 		this.#childs = new Map();
-		const tableBody = document.querySelector(`#${this.#pointsTable} tbody`);
-		tableBody.innerHTML = '';
 	}
 
 	getScore(HunterDataContainer1, HunterDataContainer2){
@@ -210,12 +159,10 @@ class HunterDataContainer {
 	#id;
 	#svgpolygon;
 	score = 0;
-	difficulty = "unknown";
 	poly;
-	constructor(polygon, difficulty, svg){
+	constructor(polygon, svg){
 		this.#id = HunterDataContainer.counter++;
 		this.poly = polygon;
-		this.difficulty = difficulty;
 		this.#svgpolygon = new SVGPolygon(svg);
 		this.#svgpolygon.draw(this.poly.points);
 		this.#setBaseLook();
@@ -223,24 +170,6 @@ class HunterDataContainer {
 	set id(value){}	
 	get id (){
 		return this.#id;
-	}
-
-	getColor()
-	{
-		switch(this.difficulty){
-			case "unknown":
-				return "#1b1b1b";
-			case "trivial":
-				return "#edf1ec";
-			case "easy":
-				return "#a1ff09";
-			case "medium":
-				return "#E0B32D";
-			case "hard":
-				return "#b6570a";
-			case "challenging":
-				return "#8b1021";
-		}
 	}
 
 	static clearCounter(){
@@ -253,7 +182,7 @@ class HunterDataContainer {
 
 	#setBaseLook(){
 		this.#svgpolygon.setStrokeColor('black');
-		this.#svgpolygon.setFillColor(this.getColor());
+		this.#svgpolygon.setFillColor("#E0B32D"); // Default color
 	}
 
 	updateLooksBasedOnMaxScore(maxScore)
