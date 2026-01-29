@@ -59,6 +59,11 @@ function filter_hunting_table_combined(level_filter, weapon_type, vocation) {
 			hunting_table.rows[i].style.display = 'none'
 		}
 	}
+	
+	// When level filter is active, sort by Raw exp descending (highest at top)
+	if (level_filter !== null && level_filter !== 0) {
+		sortTable(2, vocation, "desc");
+	}
 }
 
 function unfilter_hunting_table(vocation) {
@@ -109,15 +114,16 @@ function show_tab(event, tabName) {
 }
 
 // Table sorting functionality
-function sortTable(columnIndex, vocation) {
+// forceDirection: optional 'asc' or 'desc' to use that direction instead of toggling (e.g. when level filter is applied)
+function sortTable(columnIndex, vocation, forceDirection) {
 	const table = document.getElementById("hunting_table_" + vocation);
 	const tbody = table.querySelector("tbody") || table;
 	const rows = Array.from(tbody.querySelectorAll("tr")).slice(1); // Skip header row
 	
-	// Get current sort direction
+	// Get current sort direction (or use forced direction)
 	const header = table.querySelector("tr").cells[columnIndex];
 	const currentDirection = header.getAttribute("data-sort-direction") || "asc";
-	const newDirection = currentDirection === "asc" ? "desc" : "asc";
+	const newDirection = (forceDirection === "asc" || forceDirection === "desc") ? forceDirection : (currentDirection === "asc" ? "desc" : "asc");
 	
 	// Update sort direction on all headers
 	const headers = table.querySelector("tr").cells;
@@ -297,26 +303,8 @@ function initializeSortingHeaders() {
 		// Set up level filter event listeners
 		const levelFilter = document.getElementById("levelFilter_" + vocation);
 		if (levelFilter) {
-			let hasAutoSorted = false; // Track if we've already auto-sorted for this input
-			
 			levelFilter.addEventListener("input", function() {
 				apply_level_filter();
-				
-				// Auto-sort by Raw exp (column index 2) only on first input
-				if (this.value && this.value.length > 0 && !hasAutoSorted) {
-					hasAutoSorted = true; // Mark that we've auto-sorted
-					// Small delay to ensure the filter has been applied first
-					setTimeout(() => {
-						sortTable(2, vocation); // 2 is the Raw exp column index
-					}, 10);
-				}
-			});
-			
-			// Reset the auto-sort flag when the field is cleared
-			levelFilter.addEventListener("blur", function() {
-				if (!this.value || this.value.length === 0) {
-					hasAutoSorted = false;
-				}
 			});
 		}
 	});
