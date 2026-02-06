@@ -1376,58 +1376,79 @@ class FiendishHunter {
 }
 
 class Manager{
-	#childs = new Map(); 
-	#polygons = new Map();
+	#basePolygons = new Map();
+	#intersections = new Map();
 	#svg;
 	constructor(svg){
 		this.#svg = svg;
 	}
 
 	addPoint(value){
+		const maxPolyCount = 100;
+		//limit nr of base polygons
+		if(this.#basePolygons.size >= maxPolyCount) return;
 		let newData = new HunterDataContainer(new ExivaPolygon(value.distance, value.direction, fromTibiaCoord(value.point)), this.#svg);
 		newData.score = 1;
-		this.#childs.set(newData.id, new Set());
+		
+		//lets assume that if new polygon intersects with old intersection polygon, old one can be deleted
+		//and we do not need to calculate any intersections with other base polygons because result will always have lower score anyway
 		let intersections = [];
-		
-		// Only intersect with base polygons (score = 1) to prevent exponential growth
-		// Intersections of intersections would create too many polygons and cause memory issues
-		const MAX_INTERSECTIONS = 100; // Safety limit to prevent memory issues
-		let intersectionCount = 0;
-		
-		for (const [key,point] of this.#polygons) {
-			// Only intersect with base polygons (score = 1) to prevent combinatorial explosion
-			if(point.score === 1 && intersectionCount < MAX_INTERSECTIONS){
+		let forDeletion = [];
+		for (const [key,point] of this.#intersections) {
+			let intersection = new PolygonIntersector(point.poly, newData.poly).doMagic();
+			if(intersection != null){
+				let newIntersection = new HunterDataContainer(intersection, this.#svg);
+				newIntersection.score = this.getScore(point, newData);
+				intersections.push(newIntersection);
+				forDeletion.push(point);
+			}
+		}
+		if(intersections.length == 0)
+		{
+			for (const [key,point] of this.#basePolygons) {
 				let intersection = new PolygonIntersector(point.poly, newData.poly).doMagic();
 				if(intersection != null){
 					let newIntersection = new HunterDataContainer(intersection, this.#svg);
 					newIntersection.score = this.getScore(point, newData);
-					this.#childs.set(newIntersection.id, new Set());
-					this.#childs.get(newIntersection.id).add(point.id);
-					this.#childs.get(newIntersection.id).add(newData.id);
 					intersections.push(newIntersection);
-					intersectionCount++;
 				}
 			}
 		}
+		//limit nr of intersections
+		if(intersections.length + this.#intersections.size - forDeletion.length
+			>= maxPolyCount) return;
 
-		this.#polygons.set(newData.id, newData);
-		if(intersections.length > 0){
-			intersections.forEach(element => this.#polygons.set(element.id, element));
+		if(forDeletion.length > 0){
+			forDeletion.forEach(element => {
+				element.destroy();
+				this.#intersections.delete(element.id);
+			});
 		}
+
+		if(intersections.length > 0){
+			intersections.forEach(element => this.#intersections.set(element.id, element));
+		}
+
+		this.#basePolygons.set(newData.id, newData);
+		
 		this.#updateDisplay();
 	}
 
 	#updateDisplay(){
 		const maxScore = this.#getMaxScore();
-		this.#polygons.forEach((value, key) => 
+		this.#basePolygons.forEach((value, key) => 
+		{
+			value.updateLooksBasedOnMaxScore(maxScore);
+		});
+		this.#intersections.forEach((value, key) => 
 		{
 			value.updateLooksBasedOnMaxScore(maxScore);
 		});
 	}
 
 	#getMaxScore(){
-		let maxScore = 0;
-		for (const [key, point] of this.#polygons) {
+		let maxScore = 1; //we can skip basePolygons, have always score 1
+		for (const [key, point] of this.#intersections) {
 			if(point.score > maxScore){
 				maxScore = point.score;
 			}
@@ -1435,51 +1456,22 @@ class Manager{
 		return maxScore;
 	}
 
-	removePoint(id){
-		const childsSet = this.#childs.get(id);
-
-		if (childsSet && childsSet.size != 0) {
-			childsSet.forEach(child => {
-				this.removePoint(child);
-			});
-		}
-		this.#polygons.get(id).destroy();
-		this.#polygons.delete(id);
-		this.#updateDisplay();
-	}
-
 	deleteAll(){
 		HunterDataContainer.clearCounter();
-		this.#polygons.forEach((value, key) => 
+		this.#basePolygons.forEach((value, key) => 
 		{
 			value.destroy();
 		});
-		this.#polygons = new Map();
-		this.#childs = new Map();
+		this.#intersections.forEach((value, key) => 
+		{
+			value.destroy();
+		});
+		this.#basePolygons = new Map();
+		this.#intersections = new Map();
 	}
 
 	getScore(HunterDataContainer1, HunterDataContainer2){
-		//if((HunterDataContainer2.poly instanceof ExivaPolygon && HunterDataContainer2.poly.distance == 'Very Far') || 
-		//(HunterDataContainer1.poly instanceof ExivaPolygon && HunterDataContainer1.poly.distance == 'Very Far')){
-		//	return this.getDistanceScore(HunterDataContainer1.poly, HunterDataContainer2.poly);
-		//}
 		return Math.max(HunterDataContainer1.score,HunterDataContainer2.score) + 1;
-	}
-
-	getDistanceScore(poly1, poly2){
-		let p1 = poly1.getAvgPont();
-		let p2 = poly2.getAvgPont();
-		let dist = Math.max(Math.abs(p1.x - p2.x), Math.abs(p1.y - p2.y)) - 450;
-		if(dist < 0){
-			return Math.max(poly1.score,poly2.score) + 1;
-		}
-		const A = 1;       // Starting value
-		const B = 0.1;    // Asymptotic value as x → ∞
-		const x0 = 300;    // Transition center point
-		const k = 0.01;    // Steepness of the transition
-	  
-		const raw = A - (A - B) / (1 + Math.exp(-k * (dist - x0)));
-  		return (Math.round(raw * 10) / 10) + Math.max(poly1.score,poly2.score) ;
 	}
 }
 
