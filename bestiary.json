@@ -1063,12 +1063,12 @@
     },
     {
         "name":  "Corym Vanguard",
-        "minLevel":  0,
+        "minLevel":  50,
         "charmPoints":  25,
         "effort":  "Low",
         "rapidRecommended":  "No",
-        "location":  "-",
-        "notes":  "-"
+        "location":  "Venore",
+        "notes":  "https://imgur.com/W6hPLXL"
     },
     {
         "name":  "Courage Leech",
