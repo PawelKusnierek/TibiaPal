@@ -204,7 +204,7 @@ function calculate_skill_gain_from_time() {
     }
     
     const currentSkillTotalPoints = total_skill_points_at_given_level(skillConstant, vocationConstant, Math.floor(currentSkill) + 1, skillOffset);
-    const pointsToNextSkill = points_to_next_skill_level(skillConstant, vocationConstant, Math.floor(currentSkill), 10) * (currentSkillPercentage / 100);
+    const pointsToNextSkill = points_to_next_skill_level(skillConstant, vocationConstant, Math.floor(currentSkill), skillOffset) * (currentSkillPercentage / 100);
     const currentSkillEffectivePoints = currentSkillTotalPoints - pointsToNextSkill;
     
     // Calculate new total points after training
@@ -268,7 +268,7 @@ function calculate_skill_gain_from_time() {
 
 function calculate_mage_skill(currentskill, currentskillpercentage, targetskill, loyalty) {
     current_skill_total_points = total_skill_points_at_given_level(magic_skill_constant, mage_magic_constant, parseInt(currentskill) + 1, 0)
-    points_to_next_skill = points_to_next_skill_level(magic_skill_constant, mage_magic_constant, parseInt(currentskill), 10) * (currentskillpercentage / 100)
+    points_to_next_skill = points_to_next_skill_level(magic_skill_constant, mage_magic_constant, parseInt(currentskill), 0) * (currentskillpercentage / 100)
     target_skill_total_points = total_skill_points_at_given_level(magic_skill_constant, mage_magic_constant, targetskill, 0)
 
     total_points_needed_for_target = (target_skill_total_points - (current_skill_total_points - points_to_next_skill)) / (1 + (loyalty / 100))
