@@ -130,10 +130,10 @@ function toggleNavigation() {
 async function check_livestream() {
   try {
     const live_element = document.getElementById("kick-live");
-    const offline_element = document.getElementById("kick-offline");
+    const igla_element = document.getElementById("iglaots-card");
 
     // If the advert cards are missing, nothing to do
-    if (!live_element || !offline_element) {
+    if (!live_element || !igla_element) {
       return null;
     }
 
@@ -142,7 +142,7 @@ async function check_livestream() {
       console.log(`Mobile / narrow viewport detected, disabling Kick embed.`);
       remove_embed(live_element);
       live_element.style.display = "none";
-      offline_element.style.display = "";
+      igla_element.style.display = "";
       return null;
     }
 
@@ -158,9 +158,9 @@ async function check_livestream() {
 
     if (isLive && data.livestream.viewer_count <= 400) {
       console.log(`Stream is LIVE!`);
-      // Show the live advert card and hide the offline (YouTube) card
+      // Show the live advert card and hide the IgłaOTS card
       live_element.style.display = "block";
-      offline_element.style.display = "none";
+      igla_element.style.display = "none";
 
       if (embed_iframe) {
         embed_iframe.src = 'https://player.kick.com/Kusnier?autoplay=true&muted=true';
@@ -172,18 +172,18 @@ async function check_livestream() {
     console.log(`Stream not live or viewer cap exceeded, hiding Kick embed.`);
     remove_embed(live_element);
     live_element.style.display = "none";
-    offline_element.style.display = "";
+    igla_element.style.display = "";
     return false;
   } catch (err) {
     console.error(`Failed to check Kick live status: ${err.message}`);
 
     const live_element = document.getElementById("kick-live");
-    const offline_element = document.getElementById("kick-offline");
+    const igla_element = document.getElementById("iglaots-card");
 
-    if (live_element && offline_element) {
+    if (live_element && igla_element) {
       remove_embed(live_element);
       live_element.style.display = "none";
-      offline_element.style.display = "";
+      igla_element.style.display = "";
     }
     return null;
   }
