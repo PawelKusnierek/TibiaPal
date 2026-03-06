@@ -918,39 +918,59 @@
         <a href="" style="color:white;" onclick="event.preventDefault(); adBlockPopupClicked()"><br><br>CLOSE</a>
     </div> <!-->
 
-    <aside id="right-sidebar">
-            <section id="banner-paragraph">
-                <p class="donationparagraph">Join the biggest English-speaking Tibian <b>Discord</b> server:<br>
-                    <a href="https://discord.gg/kbjqY2VRa9" target="_blank">discord.gg/kbjqY2VRa9</a>
-                </p>
-                <br>
-
-                <div id="kick-offline">
-                    <h4><br>Latest <a href="https://www.youtube.com/kusnierr" target="_blank">YouTube</a> Video:</h4>
-                    <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLC0KAO2SnwlREgB3ScVsAK9OeAqwLXq8-" allowfullscreen></iframe>
-                </div>
-                <div id="kick-live" style="display: none">
-                    <h4><br>Live right now on <a href="https://www.kick.com/Kusnier" target="_blank">Kick</a>:</h4>
-                    <iframe src="" height="168" width="300" style="border: none; overflow: hidden;" allow="autoplay; fullscreen" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"> </iframe>
-                </div>
-                <br>
-                <h4><h4>Browser-based idle Tibia: <a href="https://bestiaryarena.com/?t=tibiapal" target="_blank">Bestiary Arena</a></h4>
-                <iframe src="https://bestiaryarena.com/iframe-obs-4?tag=tibiapal" width="277" height="313" scrolling="no" loading="lazy" frameborder="0" title="Bestiary Arena"></iframe>
-
-                <!--<iframe src="https://www.youtube.com/embed?listType=playlist&list=PLC0KAO2SnwlREgB3ScVsAK9OeAqwLXq8-" allowfullscreen></iframe>!-->
-                <!--
-                <div><h2>Wishlist Talus on <a href="https://store.steampowered.com/app/2948410/Talus/" target="_blank">Steam:</a><h2>
-                    <a href="https://store.steampowered.com/app/2948410/Talus/" target="_blank"> 
-                    <img src=/images/talus/classes_showcase.gif style="width:300px" alt="Gif of gameplay from upcoming ARPG 'Talus'">
+    <aside id="right-sidebar" class="ad-sidebar">
+            <section id="banner-paragraph" class="ad-sidebar__inner">
+                <article class="ad-card ad-card--discord">
+                    <header class="ad-card__header">
+                        <span class="ad-card__eyebrow">Community</span>
+                        <h4 class="ad-card__title">Join the TibiaPal Discord</h4>
+                    </header>
+                    <p class="ad-card__body">
+                        The biggest English-speaking Tibian <b>Discord</b> server.
+                    </p>
+                    <a class="ad-card__cta" href="https://discord.gg/kbjqY2VRa9" target="_blank" rel="noopener">
+                        discord.gg/kbjqY2VRa9
                     </a>
-                    <h3><img src=/images/talus/english-flag.png style="width:16px" alt="English Flag"> Talus is a Tibia-like ARPG I'm developing. <br>Visit the Steam page or join our Discord to find out more!<br><br>
-                    <img src=/images/talus/polish-flag.png style="width:16px" alt="Polish Flag"> Talus to Tibijsko-podobna gra ARPG którą dewelopuje. <br>Wejdź na Steam-a lub dołącz do naszego Discorda po więcej info!<br><br>
-                    <img src=/images/talus/portuguese-flag.png style="width:16px" alt="Portuguese Flag"> Talus é um ARPG estilo Tibia que estou desenvolvendo.<br> Visite a página do Steam ou entre no nosso Discord para saber mais!<br><br>
-                    <img src=/images/talus/spanish-flag.png style="width:16px" alt="Spanish Flag"> Talus es un ARPG similar a Tibia que estoy desarrollando.<br> ¡Visite la página de Steam o únase a nuestro Discord para obtener más información!<h3>
-                </div>
-                !--><br><br>
+                </article>
+
+                <article id="kick-offline" class="ad-card ad-card--video">
+                    <header class="ad-card__header">
+                        <span class="ad-card__eyebrow">Content</span>
+                        <h4 class="ad-card__title">
+                            Watch the latest <a href="https://www.youtube.com/kusnierr" target="_blank" rel="noopener">YouTube</a> video!
+                        </h4>
+                    </header>
+                    <div class="ad-card__frame ad-card__frame--16x9">
+                        <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLC0KAO2SnwlREgB3ScVsAK9OeAqwLXq8-" title="Latest Kusnierr YouTube video" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </article>
+
+                <article id="kick-live" class="ad-card ad-card--live" style="display: none">
+                    <header class="ad-card__header">
+                        <span class="ad-card__eyebrow">Live now</span>
+                        <h4 class="ad-card__title">
+                            Live on <a href="https://www.kick.com/Kusnier" target="_blank" rel="noopener">Kick</a>
+                        </h4>
+                    </header>
+                    <div class="ad-card__frame ad-card__frame--16x9">
+                        <iframe src="" height="168" width="300" style="border: none; overflow: hidden;" allow="autoplay; fullscreen" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+                    </div>
+                </article>
+
+                <article class="ad-card ad-card--bestiary">
+                    <header class="ad-card__header">
+                        <span class="ad-card__eyebrow">Partner</span>
+                        <h4 class="ad-card__title">
+                            Browser-based idle Tibia:
+                            <a href="https://bestiaryarena.com/?t=tibiapal" target="_blank" rel="noopener">Bestiary Arena</a>
+                        </h4>
+                    </header>
+                    <div class="ad-card__frame">
+                        <iframe src="https://bestiaryarena.com/iframe-obs-4?tag=tibiapal" width="277" height="313" scrolling="no" loading="lazy" frameborder="0" title="Bestiary Arena"></iframe>
+                    </div>
+                </article>
             </section>
-            <div id="ads-container">
+            <div id="ads-container" class="ad-sidebar__ads">
                 
                 <br>
             </div>
