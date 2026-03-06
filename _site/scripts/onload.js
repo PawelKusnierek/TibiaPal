@@ -129,6 +129,23 @@ function toggleNavigation() {
 
 async function check_livestream() {
   try {
+    const live_element = document.getElementById("kick-live");
+    const offline_element = document.getElementById("kick-offline");
+
+    // If the advert cards are missing, nothing to do
+    if (!live_element || !offline_element) {
+      return null;
+    }
+
+    // On smaller viewports the right sidebar is hidden; avoid loading the embed and keep layout clean
+    if (window.innerWidth < 1401) {
+      console.log(`Mobile / narrow viewport detected, disabling Kick embed.`);
+      remove_embed(live_element);
+      live_element.style.display = "none";
+      offline_element.style.display = "";
+      return null;
+    }
+
     // Kick’s public API endpoint for channel data
     const response = await fetch(`https://kick.com/api/v2/channels/Kusnier`);
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -137,47 +154,46 @@ async function check_livestream() {
 
     // Kick API includes a "livestream" object when the channel is live
     const isLive = data.livestream !== null;
-    const live_element = document.getElementById("kick-live");
     const embed_iframe = live_element.querySelector('iframe');
-    // Removing embed for small devices/mobiles, as right navbar is not visible anyways
-    if (window.innerWidth < 1401) {
-      console.log(`Mobile device, removing the embed element.`);
-      remove_embed(live_element, embed_iframe)
-    }
-    else if (isLive) {
-      // Disable embed to prevent excessive/inflated viewer count especially during 2x events/peak traffic etc.
-      // TODO: Investigate Kick API to see if there's a way to Embed Kick stream without including viewers/inflating viewer count (AFAIK currently not possible)
-      // This would be the best solution and would prevent any potential complaints about viewership etc. while still exposing channel to TibiaPal audience
-      if (data.livestream.viewer_count <= 400) {
-        console.log(`Stream is LIVE!`);
-        live_element.style.display = "initial";
-        embed_iframe.src = 'https://player.kick.com/Kusnier?autoplay=true&muted=true'
 
-        const offline_element = document.getElementById("kick-offline");
-        offline_element.style.display = "none";
+    if (isLive && data.livestream.viewer_count <= 400) {
+      console.log(`Stream is LIVE!`);
+      // Show the live advert card and hide the offline (YouTube) card
+      live_element.style.display = "block";
+      offline_element.style.display = "none";
+
+      if (embed_iframe) {
+        embed_iframe.src = 'https://player.kick.com/Kusnier?autoplay=true&muted=true';
       }
-      else {
-        remove_embed(live_element, embed_iframe)
-      }
-      return isLive;
+      return true;
     }
-    else {
-      console.log(`Not live, removing the embed element.`);
-      remove_embed(live_element, embed_iframe)
-    }
+
+    // Not live or viewer cap exceeded – fall back to offline advert card
+    console.log(`Stream not live or viewer cap exceeded, hiding Kick embed.`);
+    remove_embed(live_element);
+    live_element.style.display = "none";
+    offline_element.style.display = "";
+    return false;
   } catch (err) {
     console.error(`Failed to check Kick live status: ${err.message}`);
+
+    const live_element = document.getElementById("kick-live");
+    const offline_element = document.getElementById("kick-offline");
+
+    if (live_element && offline_element) {
+      remove_embed(live_element);
+      live_element.style.display = "none";
+      offline_element.style.display = "";
+    }
     return null;
   }
 }
 
-function remove_embed(live_element, embed_iframe) {
+function remove_embed(live_element) {
   if (live_element) {
-    if (embed_iframe) {
-      embed_iframe.src = '';
-      embed_iframe.remove();
+    const iframe = live_element.querySelector('iframe');
+    if (iframe) {
+      iframe.src = '';
     }
-    live_element.innerHTML = '';
-    live_element.remove();
   }
 }
