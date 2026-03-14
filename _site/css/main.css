@@ -353,21 +353,21 @@ ol, ul {
   box-sizing: border-box;
 }
 
-.ad-sidebar {
+.right-sidebar {
   width: 100%;
 }
 
-.ad-sidebar__inner {
+.right-sidebar__inner {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.ad-sidebar__ads {
+.right-sidebar__ads {
   margin-top: 16px;
 }
 
-.ad-card {
+.feature-item {
   background-color: rgba(6, 16, 33, 0.98);
   border: 1px solid rgba(45, 140, 248, 0.45);
   border-radius: 8px;
@@ -377,11 +377,11 @@ ol, ul {
   font-size: 12px;
 }
 
-.ad-card__header {
+.content-top {
   margin-bottom: 6px;
 }
 
-.ad-card__eyebrow {
+.feature-item__eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 10px;
@@ -390,16 +390,16 @@ ol, ul {
   margin-bottom: 2px;
 }
 
-.ad-card__title {
+.feature-item__title {
   font-size: 14px;
   margin: 0;
 }
 
-.ad-card__body {
+.feature-item__body {
   margin: 6px 0 0 0;
 }
 
-.ad-card__cta {
+.feature-item__cta {
   display: inline-block;
   margin-top: 8px;
   padding: 6px 10px;
@@ -409,12 +409,12 @@ ol, ul {
   background: linear-gradient(135deg, rgba(45, 140, 248, 0.2), rgba(11, 36, 80, 0.9));
   cursor: pointer;
 }
-.ad-card__cta:hover {
+.feature-item__cta:hover {
   border-color: #2d8cf8;
   background: linear-gradient(135deg, rgba(45, 140, 248, 0.35), rgb(11, 36, 80));
 }
 
-.ad-card__frame {
+.feature-item__frame {
   position: relative;
   border-radius: 6px;
   overflow: hidden;
@@ -422,18 +422,18 @@ ol, ul {
   margin-top: 8px;
 }
 
-.ad-card--igla .ad-card__frame {
+.feature-item--igla .feature-item__frame {
   max-width: 320px;
   margin-left: auto;
   margin-right: auto;
   background-color: transparent;
 }
 
-.ad-card__frame--16x9 {
+.feature-item__frame--16x9 {
   padding-top: 56.25%;
 }
 
-.ad-card__frame iframe {
+.feature-item__frame iframe {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -441,13 +441,13 @@ ol, ul {
   border: 0;
 }
 
-.ad-card__frame img {
+.feature-item__frame img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.ad-card__frame video {
+.feature-item__frame video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -457,10 +457,10 @@ ol, ul {
      object-fit: contain;
 }
 
-.ad-card--bestiary .ad-card__frame {
+.feature-item--bestiary .feature-item__frame {
   padding-top: 0;
 }
-.ad-card--bestiary .ad-card__frame iframe {
+.feature-item--bestiary .feature-item__frame iframe {
   position: static;
   display: block;
   width: auto;

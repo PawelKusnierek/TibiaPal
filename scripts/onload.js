@@ -129,8 +129,8 @@ function toggleNavigation() {
 
 async function check_livestream() {
   try {
-    const live_element = document.getElementById("kick-live");
-    const igla_element = document.getElementById("iglaots-card");
+    const live_element = document.getElementById("stream-status");
+    const igla_element = document.getElementById("iglaots-display");
 
     // If the advert cards are missing, nothing to do
     if (!live_element || !igla_element) {
@@ -177,8 +177,8 @@ async function check_livestream() {
   } catch (err) {
     console.error(`Failed to check Kick live status: ${err.message}`);
 
-    const live_element = document.getElementById("kick-live");
-    const igla_element = document.getElementById("iglaots-card");
+    const live_element = document.getElementById("stream-status");
+    const igla_element = document.getElementById("iglaots-display");
 
     if (live_element && igla_element) {
       remove_embed(live_element);
