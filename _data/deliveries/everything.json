@@ -675,7 +675,7 @@
         "icon": "angelic_axe.gif",
         "name": "Angelic Axe",
         "price": "5 000",
-        "value": "Low",
+        "value": "Medium",
         "link": "https://tibia.fandom.com/wiki/Angelic_Axe"
     },
     {
@@ -2691,7 +2691,7 @@
         "icon": "broadsword.gif",
         "name": "Broadsword",
         "price": "500",
-        "value": "Low",
+        "value": "High",
         "link": "https://tibia.fandom.com/wiki/Broadsword"
     },
     {
