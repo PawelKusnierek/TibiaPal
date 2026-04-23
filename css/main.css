@@ -2678,7 +2678,7 @@ ol, ul {
 
 .quest_table th {
   width: auto;
-  padding: 6px 16px;
+  padding: 6px 16px 6px 0;
 }
 
 .quest_table td {
