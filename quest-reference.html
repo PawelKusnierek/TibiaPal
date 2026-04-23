@@ -1,0 +1,78 @@
+---
+layout: default
+title: TibiaPal.com - Quest Reference
+scripts: <script src="scripts/quest_reference.js"></script>
+---
+
+<p id="quest_info">
+    <span style="color: gold"><b>PURPOSE:</b></span> List of most important Tibia quests that reward shortcuts, boss and hunting ground accesses.<br><br>
+    Start Level column is based on the earliest level you may want to start the quest for a particular access, not necessarily when you can complete the whole questline. <br><br>
+    <span style="color: green"><b>UPDATED:</b></span> Winter Update 2025.
+</p>
+<br>
+
+<div class="filter_container">
+    <div class="filter_row">
+        <label for="level_filter"><b>Level Filter:</b></label>
+        <select id="level_filter" onchange="apply_filters()">
+            <option value="8+">8+</option>
+            <option value="20+">20+</option>
+            <option value="50+">50+</option>
+            <option value="100+">100+</option>
+            <option value="200+">200+</option>
+            <option value="300+">300+</option>
+            <option value="400+">400+</option>
+            <option value="500+">500+</option>
+        </select>
+    </div>
+    <div class="filter_row">
+        <label for="team_filter"><b>Doable Solo:</b></label>
+        <select id="team_filter" onchange="apply_filters()">
+            <option value="All">All</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+    <div class="filter_row">
+        <label for="boss_filter"><b>Boss Access:</b></label>
+        <select id="boss_filter" onchange="apply_filters()">
+            <option value="All">All</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+    <div class="filter_row">
+        <label for="hunt_filter"><b>Hunt Access:</b></label>
+        <select id="hunt_filter" onchange="apply_filters()">
+            <option value="All">All</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+</div>
+
+<table class="quest_table" id="quest_table">
+    <thead>
+        <tr>
+            <th class="rec_level_row">Start Level</th>
+            <th class="quest_name_row">Quest</th>
+            <th class="team_row">Doable Solo</th>
+            <th class="check_row">Boss Access</th>
+            <th class="check_row">Hunt Access</th>
+            <th class="other_row">Other Reward/Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% assign sorted_quests = site.data.quests.allquests | sort: "rec_level" %}
+        {% for quest in sorted_quests %}
+        <tr>
+            <td class="rec_level_cell">{{ quest.rec_level }}</td>
+            <td>{% if quest.link != "" %}<a href="{{ quest.link }}" target="_blank">{{ quest.name }}</a>{% else %}{{ quest.name }}{% endif %}</td>
+            <td class="check_cell" data-value="{{ quest.doable_solo }}">{% if quest.doable_solo == "Yes" %}<span class="quest-check">✓</span>{% else %}<span class="quest-cross">✗</span>{% endif %}</td>
+            <td class="check_cell" data-value="{{ quest.boss_access }}">{% if quest.boss_access == "Yes" %}<span class="quest-check">✓</span>{% else %}<span class="quest-cross">✗</span>{% endif %}</td>
+            <td class="check_cell" data-value="{{ quest.hunt_access }}">{% if quest.hunt_access == "Yes" %}<span class="quest-check">✓</span>{% else %}<span class="quest-cross">✗</span>{% endif %}</td>
+            <td>{{ quest.other }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

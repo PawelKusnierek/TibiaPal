@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TibiaPal.com - Quest Reference</title>
+    <meta name="author" content="Pawel Kusnierek">
+    <meta name="description"
+    content="Tools for MMORPG 'Tibia' - TibiaLootSplit, Charm Planner, Exercise Weapons Calculator, Offline Training Calculator and many, many more.">
+    <meta name="keywords"
+        content="Tibia calculators, Tibia tools, TibiaLootSplit, Tibia Loot Analyser,
+          Tibia fansite, Exercise Weapons Calculator, Stamina Calculator, Imbue Calculator, Exp Share Calculator, Charm Planner, Tibia Charm Guide ">
+    <link rel="shortcut icon" href=/images/crystalcoin.ico type="image/x-icon">
+
+    <!-- css files -->
+    <link rel="stylesheet" href=/css/main.css>
+    
+
+    <!-- javascript files -->
+    <script src="scripts/quest_reference.js"></script>
+    <script src=/scripts/onload.js></script>
+
+    <!-- extra googleapi fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+    <!-- Analytics and ad related section-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164338286-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-164338286-3');
+    </script>
+    <script data-ad-client="ca-pub-2936542406889680" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+    <main id="page-container">
+        <div id="tibiatrade_low_res">
+            <div class="tibiatrade_span">
+                Featured on <a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank"><b>TibiaTrade</b>:</a>
+            </div>
+            <iframe id="tibiatrade" src="https://tibiatrade.gg/iframe/highlighted/" title="TibiaTrade" loading="lazy" scrolling="no"></iframe>
+        </div>
+    
+        <div id="header">
+            <a href="https://tibiapal.com"> 
+                <img src=/images/mainlogo.png style="width:100px" alt="TibiaPal beaver logo">
+            </a>
+        </div>
+
+        <div id="banner">
+            <span class="tibiatrade_span">Featured on <a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank"><b>TibiaTrade</b>:</a></span>
+            <iframe id="tibiatrade" src="https://tibiatrade.gg/iframe/highlighted/" title="TibiaTrade" loading="lazy" scrolling="no"></iframe>
+                <!--<a href="https://store.steampowered.com/app/2948410/Talus/" target="_blank"> 
+                    <img src=/images/talus/small_capsule.png style="width:300px"  alt="Logo of upcoming ARPG 'Talus'">
+                </a>-->
+        </div>
+        <div id="right-header">
+
+        </div>
+    <nav id="left-sidebar">
+    <div class="nav-section">GENERAL</div>
+        <div class="nav-item"> <a href="/">
+                <div class="nav-image-container"><img class="nav-image" src=/images/icon-news.gif>Latest News</div>
+                </a>
+        </div>
+        <div class="nav-item"><a href="/about">
+                <div class="nav-image-container"><img class="nav-image" src=/images/icon-abouttibia.gif>About & Contact
+                </div>
+                </a>
+        </div>
+        <div class="nav-item"><a href="/donators">
+                <div class="nav-image-container"><img class="nav-image" src=/images/Heart_Pillow.gif>Donators</div></a>
+        </div>
+        <div class="nav-item"><a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank">
+                <div class="nav-image-container"><img class="nav-image" src=/images/tibiatrade_favicon.png>TibiaTrade.gg - Partner Fansite</div>
+                </a>
+        </div>
+    </div>
+
+    <div class="nav-section">TOOLS</div>
+    <div class="nav-item"><a href="/tibialootsplit">
+            <div class="nav-image-container"><img class="nav-image" src=/images/crystalcoin.ico>TibiaLootSplit</div>
+        </a></div>
+    <div class="nav-item"><a href="/charm_planner">
+            <div class="nav-image-container"><img class="nav-image" src=/images/charms/vampiric_embrace.png>Charm Planner</div>
+        </a></div>
+    <div class="nav-item"><a href="https://tibiatrade.gg/wheel-of-destiny/?ref=tibiapal" target="_blank">
+        <div class="nav-image-container"><img class="nav-image" src=/images/tibiatrade_favicon.png>Wheel of Destiny Examples</div>
+        </a></div>
+    <!--<div class="nav-item"><a href="/fiend_map">
+        <div class="nav-image-container"><img class="nav-image" src=/images/old_map.gif>Fiend Map</div>
+        </a></div>-->
+    </div>
+    <!--<div class="nav-item"><a href="../wheelpresets">
+                    <div class="nav-image-container"><img class="nav-image" src=/images/Wheel.gif><span id="new-homepage">NEW!</span>Wheel Presets</div>
+                </a></div>-->
+
+    <div class="nav-section">GUIDES / REFERENCES</div>
+    <div class="nav-item"><a href="/hunting">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Sword.gif>Hunting
+                Places</div>
+        </a></div>
+<div class="nav-item"><a href="/equipment">
+        <div class="nav-image-container"><img class="nav-image" src=/images/equipment.gif>Vocation Equipment Reference
+        </div></a> </div>
+<div class="active nav-item"><a href="/quest-reference">
+            <div class="nav-image-container"><img class="nav-image" src=/images/old_map.gif><span id="new-homepage">NEW!</span>Quest Reference</div>
+        </a></div>
+<div class="nav-item"><a href="/deliveries">
+        <div class="nav-image-container"><img class="nav-image" src=/images/Weekly.png>Weekly Deliveries
+        </div></a> </div>
+    <div class="nav-item"><a href="/bestiary">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bestiary_Betterment.gif>Bestiary
+                Reference</div>
+        </a> </div>
+    <!--<div class="nav-item"><a href="/bestiary_guide">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bestiary_Betterment.gif>Bestiary Guide</div>
+        </a> </div>-->
+    <div class="nav-item"><a href="/bosstiary">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Falcon_Greaves.gif>Bosstiary Reference
+            </div>
+        </a> </div>
+    <div class="nav-item"><a href="https://www.youtube.com/kusnierr" target="_blank">
+            <div class="nav-image-container"><img class="nav-image" src=/images/youtube-icon.png>YouTube Videos &
+                Guides</div>
+        </a></div>
+    </div>
+
+    <div class="nav-section">CALCULATORS</div>
+    <div class="nav-item"><a href="/exercise">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Exercise_Wand.gif>Exercise
+                Weapons Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/offlinetraining">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Skill_Trainer.gif>Training
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/imbue">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Imbuing_Shrine.gif>Imbue
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/weekly_tasks">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Weekly.png>Weekly Task Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/charm_calculator">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Overpower.png>Charms Damage
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/expshare">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bricklayers.gif>Exp Share
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/stamina">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Staminafull.png>Stamina
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/bless">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Solitude_Charm.gif>Bless
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/expcalculator">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Demon.gif>Levelling
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/leech">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Leech.gif>Leech Calculator
+            </div>
+        </a></div>
+
+    <div class="right-sidebar-item" id="Rashid">
+        <!--<img src=/images/Rashid.gif style="width:45%" alt="Rashid NPC">
+        <br>
+        <div id="rashid-city">Unavailable...</div>!-->
+    </div>
+</nav>
+    
+    <!-- Navigation toggle button for mobile -->
+    <button class="nav-toggle" onclick="toggleNavigation()" style="display: none;">☰ Menu</button>
+    
+    <section id="main-content">
+    <p id="quest_info">
+    <span style="color: gold"><b>PURPOSE:</b></span> List of most important Tibia quests that reward shortcuts, boss and hunting ground accesses.<br><br>
+    Start Level column is based on the earliest level you may want to start the quest for a particular access, not necessarily when you can complete the whole questline. <br><br>
+    <span style="color: green"><b>UPDATED:</b></span> Winter Update 2025.
+</p>
+<br>
+
+<div class="filter_container">
+    <div class="filter_row">
+        <label for="level_filter"><b>Level Filter:</b></label>
+        <select id="level_filter" onchange="apply_filters()">
+            <option value="8+">8+</option>
+            <option value="20+">20+</option>
+            <option value="50+">50+</option>
+            <option value="100+">100+</option>
+            <option value="200+">200+</option>
+            <option value="300+">300+</option>
+            <option value="400+">400+</option>
+            <option value="500+">500+</option>
+        </select>
+    </div>
+    <div class="filter_row">
+        <label for="team_filter"><b>Doable Solo:</b></label>
+        <select id="team_filter" onchange="apply_filters()">
+            <option value="All">All</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+    <div class="filter_row">
+        <label for="boss_filter"><b>Boss Access:</b></label>
+        <select id="boss_filter" onchange="apply_filters()">
+            <option value="All">All</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+    <div class="filter_row">
+        <label for="hunt_filter"><b>Hunt Access:</b></label>
+        <select id="hunt_filter" onchange="apply_filters()">
+            <option value="All">All</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+</div>
+
+<table class="quest_table" id="quest_table">
+    <thead>
+        <tr>
+            <th class="rec_level_row">Start Level</th>
+            <th class="quest_name_row">Quest</th>
+            <th class="team_row">Doable Solo</th>
+            <th class="check_row">Boss Access</th>
+            <th class="check_row">Hunt Access</th>
+            <th class="other_row">Other Reward/Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        <tr>
+            <td class="rec_level_cell">8</td>
+            <td><a href="https://tibia.fandom.com/wiki/Killing_in_the_Name_of..._Quest" target="_blank">Killing in the Name of... Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td>Boat Shortcuts</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">20</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Explorer_Society_Quest" target="_blank">The Explorer Society Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td>20+ for Yalahar access, 80+ for rest of missions</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">30</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Ice_Islands_Quest" target="_blank">The Ice Islands Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">30</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Travelling_Trader_Quest" target="_blank">The Travelling Trader Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td>Trader NPC (Rashid)</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">30</td>
+            <td><a href="https://tibia.fandom.com/wiki/Barbarian_Test_Quest" target="_blank">Barbarian Test Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td>Pre-requisite</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">50</td>
+            <td><a href="https://tibia.fandom.com/wiki/Lion%27s_Rock_Quest" target="_blank">Lion's Rock Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">50</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Djinn_War_-_Marid_Faction" target="_blank">The Djinn War</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td>Trader NPCs (Choose Green or Blue)</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">50</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Shattered_Isles_Quest" target="_blank">The Shattered Isles Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">50</td>
+            <td><a href="https://tibia.fandom.com/wiki/In_Service_of_Yalahar_Quest" target="_blank">In Service of Yalahar Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">50</td>
+            <td><a href="https://tibia.fandom.com/wiki/Blood_Brothers_Quest" target="_blank">Blood Brothers Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">70</td>
+            <td><a href="https://tibia.fandom.com/wiki/Adventures_of_Galthen_Quest#Galthen_and_the_City_of_Gold" target="_blank">Galthen and the City of Gold</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td>Upper Iksupan Access</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">80</td>
+            <td><a href="https://tibia.fandom.com/wiki/Threatened_Dreams_Quest" target="_blank">Threatened Dreams Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td>Candia and Dream Courts Pre-requisite</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">80</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Thieves_Guild_Quest" target="_blank">The Thieves Guild Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td>Trader NPC (Black Bert)</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">80</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_New_Frontier_Quest" target="_blank">The New Frontier Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td>Soloable until final</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">80</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Pits_of_Inferno_Quest" target="_blank">The Pits of Inferno Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td>Inq Pre-requisite</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">100</td>
+            <td><a href="https://tibia.fandom.com/wiki/Oramond_Quest" target="_blank">Oramond Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">100</td>
+            <td><a href="https://tibia.fandom.com/wiki/Grimvale_Quest" target="_blank">Grimvale Quest - The Curse Spreads</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">100</td>
+            <td><a href="https://tibia.fandom.com/wiki/Dangerous_Depths_Quest" target="_blank">Dangerous Depths Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td>Tasks from 100+, Bosses from 300+</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">100</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Inquisition_Quest" target="_blank">The Inquisition Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td>Blessing of the Inquisition</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">100</td>
+            <td><a href="https://tibia.fandom.com/wiki/A_Pirate%27s_Tail_Quest" target="_blank">A Pirate's Tail Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">100</td>
+            <td><a href="https://tibia.fandom.com/wiki/Children_of_the_Revolution_Quest" target="_blank">Children of the Revolution Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td>WOTE Pre-requisite, Soloable until final</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">100</td>
+            <td><a href="https://tibia.fandom.com/wiki/Cults_of_Tibia_Quest" target="_blank">Cults of Tibia Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td>Accesses from 100+, Bosses from 250+</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">130</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Ape_City_Quest" target="_blank">The Ape City Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">130</td>
+            <td><a href="https://tibia.fandom.com/wiki/Wrath_of_the_Emperor_Quest" target="_blank">Wrath of the Emperor Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">130</td>
+            <td><a href="https://tibia.fandom.com/wiki/Liquid_Black_Quest" target="_blank">Liquid Black Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">150</td>
+            <td><a href="https://tibia.fandom.com/wiki/Bigfoot%27s_Burden_Quest" target="_blank">Bigfoot's Burden Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td>Warzone 1/2/3 Access</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">200</td>
+            <td><a href="https://tibia.fandom.com/wiki/Grimvale_Quest" target="_blank">Grimvale Quest - An Ancient Feud</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">200</td>
+            <td><a href="https://tibia.fandom.com/wiki/Twenty_Miles_Beneath_the_Sea_Quest" target="_blank">Twenty Miles Beneath the Sea Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">250</td>
+            <td><a href="https://tibia.fandom.com/wiki/Grave_Danger_Quest" target="_blank">Grave Danger Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">250</td>
+            <td><a href="https://tibia.fandom.com/wiki/Dark_Trails_Quest" target="_blank">Dark Trails Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">250</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Dream_Courts_Quest" target="_blank">The Dream Courts Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td>Soloable outside of Bosses</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">250</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Secret_Library_Quest" target="_blank">The Secret Library Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">250</td>
+            <td><a href="https://tibia.fandom.com/wiki/Asura_Palace_Quest" target="_blank">Asura Palace Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td>Marapur Pre-requisite</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">250</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Lost_Brother_Quest" target="_blank">The Lost Brother Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td>Trader NPC (Tarun), Marapur Pre-requisite</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">250</td>
+            <td><a href="https://tibia.fandom.com/wiki/Within_the_Tides_Quest" target="_blank">Within the Tides Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">250</td>
+            <td><a href="https://tibia.fandom.com/wiki/Between_the_Lines_Quest" target="_blank">Between the Lines Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">250</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Order_of_the_Lion_Quest" target="_blank">The Order of the Lion Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">250</td>
+            <td><a href="https://tibia.fandom.com/wiki/Forgotten_Knowledge_Quest" target="_blank">Forgotten Knowledge Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td>Powerful Imbue Access</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">250</td>
+            <td><a href="https://tibia.fandom.com/wiki/Heart_of_Destruction_Quest" target="_blank">Heart of Destruction Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td>Powerful Imbue Access</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">275</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Way_of_the_Monk_Quest" target="_blank">The Way of the Monk Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td>10 Wheel of Destiny Points</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">300</td>
+            <td><a href="https://tibia.fandom.com/wiki/Grimvale_Quest" target="_blank">Grimvale Quest - Paradise Lost</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">300</td>
+            <td><a href="https://tibia.fandom.com/wiki/Adventures_of_Galthen_Quest#Galthen_and_the_Lost_Queen" target="_blank">Galthen and the Lost Queen</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">300</td>
+            <td><a href="https://tibia.fandom.com/wiki/Ferumbras%27_Ascension_Quest" target="_blank">Ferumbras' Ascendant Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">300</td>
+            <td><a href="https://tibia.fandom.com/wiki/Feaster_of_Souls_Quest" target="_blank">Feaster of Souls Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">300</td>
+            <td><a href="https://tibia.fandom.com/wiki/Opticording_Sphere_Quest" target="_blank">Opticording Sphere Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td>Supreme Cube, Soloable from 500+</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">300</td>
+            <td><a href="https://tibia.fandom.com/wiki/Adventures_of_Galthen_Quest#Galthen_and_the_City_of_Gold_Part_II" target="_blank">Galthen and the City of Gold Part II</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td>Deeper Iksupan Access</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">400</td>
+            <td><a href="https://tibia.fandom.com/wiki/Too_Hot_to_Handle_Quest" target="_blank">Too Hot to Handle Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">400</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Cradle_of_Monsters_Quest" target="_blank">The Cradle of Monsters Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">400</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Order_of_the_Stag_Quest" target="_blank">The Order of the Stag Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">400</td>
+            <td><a href="https://tibia.fandom.com/wiki/No_Rest_for_the_Wicked_Quest" target="_blank">No Rest for the Wicked Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">400</td>
+            <td><a href="https://tibia.fandom.com/wiki/20_Years_a_Cook_Quest" target="_blank">20 Years a Cook Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">400</td>
+            <td><a href="https://tibia.fandom.com/wiki/Bloody_Tusks_Quest" target="_blank">Bloody Tusks Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">400</td>
+            <td><a href="https://tibia.fandom.com/wiki/Kilmaresh_Quest" target="_blank">Kilmaresh Quest</a></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">500</td>
+            <td><a href="https://tibia.fandom.com/wiki/Soul_War_Quest" target="_blank">Soul War Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td>Random Soul-set Item</td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">500</td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Roost_of_the_Graveborn_Quest" target="_blank">The Roost of the Graveborn Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">500</td>
+            <td><a href="https://tibia.fandom.com/wiki/Podzilla_Quest" target="_blank">Podzilla Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">500</td>
+            <td><a href="https://tibia.fandom.com/wiki/Primal_Ordeal_Quest" target="_blank">Primal Ordeal Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td class="rec_level_cell">500</td>
+            <td><a href="https://tibia.fandom.com/wiki/Rotten_Blood_Quest" target="_blank">Rotten Blood Quest</a></td>
+            <td class="check_cell" data-value="No"><span class="quest-cross">✗</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td class="check_cell" data-value="Yes"><span class="quest-check">✓</span></td>
+            <td></td>
+        </tr>
+        
+    </tbody>
+</table>
+
+    </section>
+    
+    <!--><div class="cookieconsent"
+        style="display:none;position:fixed;padding:20px;left:0;bottom:0;background-color:#000;color:#FFF;text-align:center;width:100%;z-index:99999;">
+        TibiaPal.com uses cookies to ensure you get the best experience possible. By continuing to use this website, you
+        agree to their use. You can find more information about our cookies on our <a href="https://tibiapal.com/about"
+            target="_blank">Privacy Policy</a> page.
+        <a href="" style="color:#CCCCCC;" onclick="event.preventDefault(); cookieConsentClicked()">I Understand</a>
+    </div><!-->
+
+    <!--><div class="adblockpopup"
+        style="display:none;position:fixed;padding:0px;padding-bottom:5px;left:30%;right:40%;top:0;background-color:red;color:#FFF;text-align:center;width:30%;z-index:99999;">
+        Please consider disabling AdBlock or donating a few TCs to 'Kusnierr' to support the site/server costs <3 <br> Thank you! <br>This pop-up will appear once every 30 days.
+        <a href="" style="color:white;" onclick="event.preventDefault(); adBlockPopupClicked()"><br><br>CLOSE</a>
+    </div> <!-->
+
+    <aside id="right-sidebar" class="right-sidebar">
+            <section id="banner-paragraph" class="right-sidebar__inner">
+                <article class="feature-item feature-item--discord">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Community</span>
+                        <h4 class="feature-item__title">Join the TibiaPal Discord</h4>
+                    </header>
+                    <p class="feature-item__body">
+                        The biggest English-speaking Tibian <b>Discord</b> server.
+                    </p><br>
+                    <a class="feature-item__cta" href="https://discord.gg/kbjqY2VRa9" target="_blank" rel="noopener">
+                        discord.gg/kbjqY2VRa9
+                    </a>
+                </article>
+
+                <!--<article id="kick-offline" class="feature-item feature-item--youtube">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Content</span>
+                        <h4 class="feature-item__title">
+                            Watch the latest <a href="https://www.youtube.com/kusnierr" target="_blank" rel="noopener">YouTube</a> video!
+                        </h4>
+                    </header>
+                    <div class="feature-item__frame feature-item__frame--16x9">
+                        <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLC0KAO2SnwlREgB3ScVsAK9OeAqwLXq8-" title="Latest Kusnierr YouTube video" loading="lazy" allowfullscreen></iframe> 
+                    </div>
+                </article><!-->
+
+                <article id="stream-status" class="feature-item feature-item--stream-status" style="display: none">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Live now</span>
+                        <h4 class="feature-item__title">
+                            Live on <a href="https://www.kick.com/Kusnier" target="_blank" rel="noopener">Kick</a>
+                        </h4>
+                    </header>
+                    <div class="feature-item__frame feature-item__frame--16x9">
+                        <iframe src="" title="Kusnier Kick livestream" loading="lazy" allow="autoplay; fullscreen" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+                    </div>
+                </article>
+
+                <article id="iglaots-display" class="feature-item feature-item--igla">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Partner</span>
+                        <h4 class="feature-item__title">
+                            Join <a href="https://iglaots.net/?view=register&refcode=Kusnier" target="_blank" rel="noopener">IgłaOTS</a> on 27th March, 19:00 CET!
+                        </h4>
+                    </header>
+                    <p class="feature-item__body">
+                        Register with below link to receive a custom Beaver backpack!
+                    </p><br>
+                    <div class="feature-item__frame feature-item__frame--16x9">
+                        <a href="https://iglaots.net/?view=register&refcode=Kusnier" target="_blank" rel="noopener">
+                            <video src=/images/iglaots.webm autoplay muted loop playsinline>
+                                Your browser does not support the video tag.
+                            </video>
+                        </a>
+                    </div>
+                </article>
+
+
+                <article class="feature-item feature-item--bestiary">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Partner</span>
+                        <h4 class="feature-item__title">
+                            Browser-based idle Tibia:
+                            <a href="https://bestiaryarena.com/?t=tibiapal" target="_blank" rel="noopener">Bestiary Arena</a>
+                        </h4>
+                    </header>
+                    <div class="feature-item__frame">
+                        <iframe src="https://bestiaryarena.com/iframe-obs-4?tag=tibiapal" width="277" height="313" scrolling="no" loading="lazy" frameborder="0" title="Bestiary Arena"></iframe>
+                    </div>
+                </article>
+            </section>
+           <!-- <div id="ads-container" class="right-sidebar__ads">
+                
+                <br>
+            </div>!-->
+            <br>
+        </aside>
+        <aside id="left-footer-space"></aside>
+        <footer id="footer"><!--
+            <p id="footerParagraph">
+                Tibia and all products related to Tibia are copyrighted by <a href="https://www.cipsoft.com"
+                    target="_blank">CipSoft GmbH</a>. The official
+                website of Tibia is <a href="https://www.tibia.com" target="_blank">tibia.com</a>.<br><br>
+                Created by Kusnier.
+            </p><br><br>!-->
+        </footer>
+        <aside id="right-footer-space"></aside>
+        </main>
+            <script>
+                //showAdblockPopup(); bump
+            </script>
+</body>
+</html>

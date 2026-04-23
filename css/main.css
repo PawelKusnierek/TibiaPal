@@ -2666,4 +2666,73 @@ ol, ul {
   left: 0;
   z-index: 1;
   pointer-events: none;
+}
+
+.quest_table {
+  text-align: left;
+  table-layout: auto;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quest_table th {
+  width: auto;
+  padding: 6px 16px;
+}
+
+.quest_table td {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  word-wrap: break-word;
+}
+
+.quest_table tbody tr {
+  background-color: #0d1e38;
+}
+
+.rec_level_row {
+  width: 110px;
+  text-align: center;
+}
+
+.quest_table td.rec_level_cell {
+  text-align: center;
+}
+
+.quest_name_row {
+  width: 280px;
+}
+
+.team_row {
+  width: 110px;
+}
+
+.team_row {
+  text-align: center;
+}
+
+.check_row {
+  width: 100px;
+  text-align: center;
+}
+
+.quest_table td.check_cell {
+  text-align: center;
+}
+
+.other_row {
+  width: 220px;
+}
+
+.quest-check {
+  color: #4caf50;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.quest-cross {
+  color: #e53935;
+  font-size: 18px;
+  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */

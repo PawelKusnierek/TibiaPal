@@ -1,0 +1,524 @@
+[
+  {
+    "rec_level": 8,
+    "name": "Killing in the Name of... Quest",
+    "doable_solo": "Yes",
+    "boss_access": "No",
+    "hunt_access": "No",
+    "other": "Boat Shortcuts",
+    "link": "https://tibia.fandom.com/wiki/Killing_in_the_Name_of..._Quest"
+  },
+  {
+    "rec_level": 20,
+    "name": "The Explorer Society Quest",
+    "doable_solo": "Yes",
+    "boss_access": "No",
+    "hunt_access": "Yes",
+    "other": "20+ for Yalahar access, 80+ for rest of missions",
+    "link": "https://tibia.fandom.com/wiki/The_Explorer_Society_Quest"
+  },
+  {
+    "rec_level": 30,
+    "name": "Barbarian Test Quest",
+    "doable_solo": "Yes",
+    "boss_access": "No",
+    "hunt_access": "No",
+    "other": "Pre-requisite",
+    "link": "https://tibia.fandom.com/wiki/Barbarian_Test_Quest"
+  },
+  {
+    "rec_level": 30,
+    "name": "The Ice Islands Quest",
+    "doable_solo": "Yes",
+    "boss_access": "No",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/The_Ice_Islands_Quest"
+  },
+  {
+    "rec_level": 130,
+    "name": "The Ape City Quest",
+    "doable_solo": "Yes",
+    "boss_access": "No",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/The_Ape_City_Quest"
+  },
+  {
+    "rec_level": 50,
+    "name": "Lion's Rock Quest",
+    "doable_solo": "Yes",
+    "boss_access": "No",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Lion%27s_Rock_Quest"
+  },
+  {
+    "rec_level": 200,
+    "name": "Twenty Miles Beneath the Sea Quest",
+    "doable_solo": "Yes",
+    "boss_access": "No",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Twenty_Miles_Beneath_the_Sea_Quest"
+  },
+  {
+    "rec_level": 50,
+    "name": "The Shattered Isles Quest",
+    "doable_solo": "Yes",
+    "boss_access": "No",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/The_Shattered_Isles_Quest"
+  },
+  {
+    "rec_level": 130,
+    "name": "Liquid Black Quest",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Liquid_Black_Quest"
+  },
+  {
+    "rec_level": 100,
+    "name": "Grimvale Quest - The Curse Spreads",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Grimvale_Quest"
+  },
+  {
+    "rec_level": 200,
+    "name": "Grimvale Quest - An Ancient Feud",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Grimvale_Quest"
+  },
+  {
+    "rec_level": 300,
+    "name": "Grimvale Quest - Paradise Lost",
+    "doable_solo": "Yes",
+    "boss_access": "No",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Grimvale_Quest"
+  },
+  {
+    "rec_level": 50,
+    "name": "Blood Brothers Quest",
+    "doable_solo": "No",
+    "boss_access": "No",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Blood_Brothers_Quest"
+  },
+  {
+    "rec_level": 80,
+    "name": "The New Frontier Quest",
+    "doable_solo": "No",
+    "boss_access": "No",
+    "hunt_access": "Yes",
+    "other": "Soloable until final",
+    "link": "https://tibia.fandom.com/wiki/The_New_Frontier_Quest"
+  },
+  {
+    "rec_level": 100,
+    "name": "Children of the Revolution Quest",
+    "doable_solo": "No",
+    "boss_access": "No",
+    "hunt_access": "No",
+    "other": "WOTE Pre-requisite, Soloable until final",
+    "link": "https://tibia.fandom.com/wiki/Children_of_the_Revolution_Quest"
+  },
+  {
+    "rec_level": 130,
+    "name": "Wrath of the Emperor Quest",
+    "doable_solo": "No",
+    "boss_access": "No",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Wrath_of_the_Emperor_Quest"
+  },
+  {
+    "rec_level": 100,
+    "name": "Oramond Quest",
+    "doable_solo": "Yes",
+    "boss_access": "No",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Oramond_Quest"
+  },
+  {
+    "rec_level": 250,
+    "name": "Dark Trails Quest",
+    "doable_solo": "No",
+    "boss_access": "No",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Dark_Trails_Quest"
+  },
+  {
+    "rec_level": 80,
+    "name": "Threatened Dreams Quest",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "Candia and Dream Courts Pre-requisite",
+    "link": "https://tibia.fandom.com/wiki/Threatened_Dreams_Quest"
+  },
+  {
+    "rec_level": 400,
+    "name": "Too Hot to Handle Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Too_Hot_to_Handle_Quest"
+  },
+  {
+    "rec_level": 250,
+    "name": "Asura Palace Quest",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "No",
+    "other": "Marapur Pre-requisite",
+    "link": "https://tibia.fandom.com/wiki/Asura_Palace_Quest"
+  },
+  {
+    "rec_level": 250,
+    "name": "Within the Tides Quest",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Within_the_Tides_Quest"
+  },
+  {
+    "rec_level": 250,
+    "name": "Between the Lines Quest",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Between_the_Lines_Quest"
+  },
+  {
+    "rec_level": 250,
+    "name": "Grave Danger Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Grave_Danger_Quest"
+  },
+  {
+    "rec_level": 250,
+    "name": "The Order of the Lion Quest",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "No",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/The_Order_of_the_Lion_Quest"
+  },
+  {
+    "rec_level": 250,
+    "name": "The Secret Library Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/The_Secret_Library_Quest"
+  },
+  {
+    "rec_level": 300,
+    "name": "Galthen and the Lost Queen",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Adventures_of_Galthen_Quest#Galthen_and_the_Lost_Queen"
+  },
+  {
+    "rec_level": 70,
+    "name": "Galthen and the City of Gold",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "Upper Iksupan Access",
+    "link": "https://tibia.fandom.com/wiki/Adventures_of_Galthen_Quest#Galthen_and_the_City_of_Gold"
+  },
+  {
+    "rec_level": 300,
+    "name": "Galthen and the City of Gold Part II",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "Deeper Iksupan Access",
+    "link": "https://tibia.fandom.com/wiki/Adventures_of_Galthen_Quest#Galthen_and_the_City_of_Gold_Part_II"
+  },
+  {
+    "rec_level": 400,
+    "name": "The Order of the Stag Quest",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/The_Order_of_the_Stag_Quest"
+  },
+  {
+    "rec_level": 250,
+    "name": "The Dream Courts Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "Soloable outside of Bosses",
+    "link": "https://tibia.fandom.com/wiki/The_Dream_Courts_Quest"
+  },
+  {
+    "rec_level": 250,
+    "name": "Forgotten Knowledge Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "Powerful Imbue Access",
+    "link": "https://tibia.fandom.com/wiki/Forgotten_Knowledge_Quest"
+  },
+  {
+    "rec_level": 400,
+    "name": "20 Years a Cook Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/20_Years_a_Cook_Quest"
+  },
+  {
+    "rec_level": 400,
+    "name": "Bloody Tusks Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Bloody_Tusks_Quest"
+  },
+  {
+    "rec_level": 500,
+    "name": "Primal Ordeal Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Primal_Ordeal_Quest"
+  },
+  {
+    "rec_level": 400,
+    "name": "No Rest for the Wicked Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/No_Rest_for_the_Wicked_Quest"
+  },
+  {
+    "rec_level": 500,
+    "name": "Podzilla Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Podzilla_Quest"
+  },
+  {
+    "rec_level": 500,
+    "name": "Soul War Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "Random Soul-set Item",
+    "link": "https://tibia.fandom.com/wiki/Soul_War_Quest"
+  },
+  {
+    "rec_level": 300,
+    "name": "Feaster of Souls Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Feaster_of_Souls_Quest"
+  },
+  {
+    "rec_level": 500,
+    "name": "Rotten Blood Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Rotten_Blood_Quest"
+  },
+  {
+    "rec_level": 50,
+    "name": "The Djinn War",
+    "doable_solo": "Yes",
+    "boss_access": "No",
+    "hunt_access": "No",
+    "other": "Trader NPCs (Choose Green or Blue)",
+    "link": "https://tibia.fandom.com/wiki/The_Djinn_War_-_Marid_Faction"
+  },
+  {
+    "rec_level": 30,
+    "name": "The Travelling Trader Quest",
+    "doable_solo": "Yes",
+    "boss_access": "No",
+    "hunt_access": "No",
+    "other": "Trader NPC (Rashid)",
+    "link": "https://tibia.fandom.com/wiki/The_Travelling_Trader_Quest"
+  },
+  {
+    "rec_level": 80,
+    "name": "The Thieves Guild Quest",
+    "doable_solo": "Yes",
+    "boss_access": "No",
+    "hunt_access": "No",
+    "other": "Trader NPC (Black Bert)",
+    "link": "https://tibia.fandom.com/wiki/The_Thieves_Guild_Quest"
+  },
+  {
+    "rec_level": 400,
+    "name": "The Cradle of Monsters Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/The_Cradle_of_Monsters_Quest"
+  },
+  {
+    "rec_level": 250,
+    "name": "The Lost Brother Quest",
+    "doable_solo": "Yes",
+    "boss_access": "No",
+    "hunt_access": "No",
+    "other": "Trader NPC (Tarun), Marapur Pre-requisite",
+    "link": "https://tibia.fandom.com/wiki/The_Lost_Brother_Quest"
+  },
+  {
+    "rec_level": 300,
+    "name": "Opticording Sphere Quest",
+    "doable_solo": "No",
+    "boss_access": "No",
+    "hunt_access": "No",
+    "other": "Supreme Cube, Soloable from 500+",
+    "link": "https://tibia.fandom.com/wiki/Opticording_Sphere_Quest"
+  },
+  {
+    "rec_level": 80,
+    "name": "The Pits of Inferno Quest",
+    "doable_solo": "No",
+    "boss_access": "No",
+    "hunt_access": "Yes",
+    "other": "Inq Pre-requisite",
+    "link": "https://tibia.fandom.com/wiki/The_Pits_of_Inferno_Quest"
+  },
+  {
+    "rec_level": 100,
+    "name": "The Inquisition Quest",
+    "doable_solo": "No",
+    "boss_access": "No",
+    "hunt_access": "Yes",
+    "other": "Blessing of the Inquisition",
+    "link": "https://tibia.fandom.com/wiki/The_Inquisition_Quest"
+  },
+  {
+    "rec_level": 275,
+    "name": "The Way of the Monk Quest",
+    "doable_solo": "Yes",
+    "boss_access": "No",
+    "hunt_access": "No",
+    "other": "10 Wheel of Destiny Points",
+    "link": "https://tibia.fandom.com/wiki/The_Way_of_the_Monk_Quest"
+  },
+  {
+    "rec_level": 150,
+    "name": "Bigfoot's Burden Quest",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "Warzone 1/2/3 Access",
+    "link": "https://tibia.fandom.com/wiki/Bigfoot%27s_Burden_Quest"
+  },
+  {
+    "rec_level": 100,
+    "name": "Dangerous Depths Quest",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "Tasks from 100+, Bosses from 300+",
+    "link": "https://tibia.fandom.com/wiki/Dangerous_Depths_Quest"
+  },
+  {
+    "rec_level": 100,
+    "name": "Cults of Tibia Quest",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "Accesses from 100+, Bosses from 250+",
+    "link": "https://tibia.fandom.com/wiki/Cults_of_Tibia_Quest"
+  },
+  {
+    "rec_level": 400,
+    "name": "Kilmaresh Quest",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Kilmaresh_Quest"
+  },
+  {
+    "rec_level": 250,
+    "name": "Heart of Destruction Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "Powerful Imbue Access",
+    "link": "https://tibia.fandom.com/wiki/Heart_of_Destruction_Quest"
+  },
+  {
+    "rec_level": 300,
+    "name": "Ferumbras' Ascendant Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Ferumbras%27_Ascension_Quest"
+  },
+  {
+    "rec_level": 500,
+    "name": "The Roost of the Graveborn Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/The_Roost_of_the_Graveborn_Quest"
+  },
+  {
+    "rec_level": 100,
+    "name": "A Pirate's Tail Quest",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/A_Pirate%27s_Tail_Quest"
+  },
+  {
+    "rec_level": 50,
+    "name": "In Service of Yalahar Quest",
+    "doable_solo": "Yes",
+    "boss_access": "No",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/In_Service_of_Yalahar_Quest"
+  }
+]
