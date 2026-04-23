@@ -3148,5 +3148,47 @@
         "price": "0",
         "value": "High",
         "link": "https://tibia.fandom.com/wiki/Demonic_Matter"
+    },
+    {
+        "icon": "Cave_Chimera_Head.gif",
+        "name": "Cave Chimera Head",
+        "price": "1200",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Cave_Chimera_Head"
+    },
+    {
+        "icon": "Cave_Chimera_Leg.gif",
+        "name": "Cave Chimera Leg",
+        "price": "650",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Cave_Chimera_Leg"
+    },
+    {
+        "icon": "Varnished_Diremaw_Brainpan.gif",
+        "name": "Varnished Diremaw Brainpan",
+        "price": "750",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Varnished_Diremaw_Brainpan"
+    },
+    {
+        "icon": "Varnished_Diremaw_Legs.gif",
+        "name": "Varnished Diremaw Legs",
+        "price": "670",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Varnished_Diremaw_Legs"
+    },
+    {
+        "icon": "Tremendous_Tyrant_Shell.gif",
+        "name": "Tremendous Tyrant Shell",
+        "price": "740",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Tremendous_Tyrant_Shell"
+    },
+    {
+        "icon": "Tremendous_Tyrant_Head.gif",
+        "name": "Tremendous Tyrant Head",
+        "price": "930",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Tremendous_Tyrant_Head"
     }
 ]
