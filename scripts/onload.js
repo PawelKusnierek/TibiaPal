@@ -25,27 +25,6 @@ function enable_expandable_div_buttons() {
   }
 }
 
-function cookieConsentClicked() {
-  document.querySelector(".cookieconsent").style.display = "none";
-  localStorage.setItem("cookieconsent", true);
-}
-
-function showAdblockPopup() {
-  last_confirm_time = localStorage.getItem("adblockconfirm");
-  if (last_confirm_time === undefined) {
-    document.querySelector(".adblockpopup").style.display = "initial";
-  }
-  // checking if last pop-up was more than 30 days ago (in epoch time)
-  else if (Date.now() - localStorage.getItem("adblockconfirm") > 2592000000) {
-    document.querySelector(".adblockpopup").style.display = "initial";
-  }
-}
-
-function adBlockPopupClicked() {
-  document.querySelector(".adblockpopup").style.display = "none";
-  localStorage.setItem("adblockconfirm", Date.now());
-}
-
 function enable_default_tabs() {
   if (location.href.split("/").slice(-1).includes('charm_planner')) {
     initial_show_tab("Major Charms")
@@ -130,10 +109,10 @@ function toggleNavigation() {
 async function check_livestream() {
   try {
     const live_element = document.getElementById("stream-status");
-    const igla_element = document.getElementById("iglaots-display");
+    const yt_element = document.getElementById("kick-offline");
 
     // If the advert cards are missing, nothing to do
-    if (!live_element || !igla_element) {
+    if (!live_element || !yt_element) {
       return null;
     }
 
@@ -142,7 +121,7 @@ async function check_livestream() {
       console.log(`Mobile / narrow viewport detected, disabling Kick embed.`);
       remove_embed(live_element);
       live_element.style.display = "none";
-      igla_element.style.display = "";
+      yt_element.style.display = "";
       return null;
     }
 
@@ -160,7 +139,7 @@ async function check_livestream() {
       console.log(`Stream is LIVE!`);
       // Show the live advert card and hide the IgłaOTS card
       live_element.style.display = "block";
-      igla_element.style.display = "none";
+      yt_element.style.display = "none";
 
       if (embed_iframe) {
         embed_iframe.src = 'https://player.kick.com/Kusnier?autoplay=true&muted=true';
@@ -168,22 +147,21 @@ async function check_livestream() {
       return true;
     }
 
-    // Not live or viewer cap exceeded – fall back to offline advert card
-    console.log(`Stream not live or viewer cap exceeded, hiding Kick embed.`);
+    // Not live – fall back to offline advert card
     remove_embed(live_element);
     live_element.style.display = "none";
-    igla_element.style.display = "";
+    yt_element.style.display = "";
     return false;
   } catch (err) {
     console.error(`Failed to check Kick live status: ${err.message}`);
 
     const live_element = document.getElementById("stream-status");
-    const igla_element = document.getElementById("iglaots-display");
+    const yt_element = document.getElementById("iglaots-display");
 
-    if (live_element && igla_element) {
+    if (live_element && yt_element) {
       remove_embed(live_element);
       live_element.style.display = "none";
-      igla_element.style.display = "";
+      yt_element.style.display = "";
     }
     return null;
   }
