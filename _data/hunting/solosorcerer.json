@@ -1,6 +1,30 @@
 ﻿[
     {
         "level":  "8+",
+        "place":  "Targuna Lizards",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "N/A"
+    },
+    {
+        "level":  "8+",
+        "place":  "Targuna Pirates",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "N/A"
+    },
+    {
+        "level":  "8+",
+        "place":  "Targuna Infernoids",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "N/A"
+    },
+    {
+        "level":  "8+",
         "place":  "Rotworms Liberty Bay/Darashia",
         "raw_exp":  "-",
         "loot":  "-",
@@ -1001,11 +1025,35 @@
     },
     {
         "level":  "400+",
-        "place":  "Crypt Wardens -2",
+        "place":  "Issavi Sphinx & Crypt Wardens",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
+    },
+    {
+        "level":  "400+",
+        "place":  "Warzone 1",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
+    },
+    {
+        "level":  "500+",
+        "place":  "Warzone 2",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
+    },
+    {
+        "level":  "500+",
+        "place":  "Warzone 3",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
     },
     {
         "level":  "500+",
@@ -1166,30 +1214,6 @@
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
-    },
-    {
-        "level":  "600+",
-        "place":  "Warzone 1",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
-    },
-    {
-        "level":  "600+",
-        "place":  "Warzone 2",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
-    },
-    {
-        "level":  "600+",
-        "place":  "Warzone 3",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
     },
     {
         "level":  "600+",
