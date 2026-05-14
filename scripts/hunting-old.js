@@ -11,12 +11,12 @@ function apply_weapon_type_filter() {
 function apply_combined_filters(vocation) {
 	const levelFilter = document.getElementById("levelFilter_" + vocation);
 	const weaponTypeFilter = document.getElementById("weaponTypeFilter_" + vocation);
-	
+
 	const playerLevel = levelFilter && levelFilter.value ? parseInt(levelFilter.value) : null;
 	const weaponType = weaponTypeFilter ? weaponTypeFilter.value : "All";
-	
+
 	filter_hunting_table_combined(playerLevel, weaponType, vocation);
-	
+
 	// Reapply color coding after filtering
 	setTimeout(() => {
 		applyColorCoding();
@@ -27,15 +27,15 @@ function filter_hunting_table_combined(level_filter, weapon_type, vocation) {
 	let hunting_table = document.getElementById("hunting_table_" + vocation);
 	let number_of_rows = hunting_table.rows.length;
 	unfilter_hunting_table(vocation);
-	
+
 	// If no filters are set, show all rows
 	if ((level_filter === null || level_filter === 0) && weapon_type === "All") {
 		return;
 	}
-	
+
 	for (let i = number_of_rows - 1; i > 0; i--) {
 		let should_hide = false;
-		
+
 		// Check level filter
 		if (level_filter !== null && level_filter !== 0) {
 			let level_value = hunting_table.rows[i].cells[0].childNodes[0].data;
@@ -44,7 +44,7 @@ function filter_hunting_table_combined(level_filter, weapon_type, vocation) {
 				should_hide = true;
 			}
 		}
-		
+
 		// Check weapon type filter
 		if (weapon_type !== "All") {
 			let weapon_type_value = hunting_table.rows[i].cells[4].textContent.trim();
@@ -54,12 +54,12 @@ function filter_hunting_table_combined(level_filter, weapon_type, vocation) {
 				should_hide = true;
 			}
 		}
-		
+
 		if (should_hide) {
 			hunting_table.rows[i].style.display = 'none'
 		}
 	}
-	
+
 	// When level filter is active, sort by Raw exp descending (highest at top)
 	if (level_filter !== null && level_filter !== 0) {
 		sortTable(2, vocation, "desc");
@@ -102,12 +102,12 @@ function show_tab(event, tabName) {
 	// Show the selected tab content and mark button as active
 	document.getElementById(tabName).style.display = "block";
 	event.currentTarget.classList.add("active");
-	
+
 	// Reinitialize sorting headers for the newly shown tab
 	setTimeout(() => {
 		const vocation = event.currentTarget.id;
 		setupSortingHeaders(vocation);
-		
+
 		// Reapply color coding for the newly shown tab
 		applyColorCoding();
 	}, 100);
@@ -119,12 +119,12 @@ function sortTable(columnIndex, vocation, forceDirection) {
 	const table = document.getElementById("hunting_table_" + vocation);
 	const tbody = table.querySelector("tbody") || table;
 	const rows = Array.from(tbody.querySelectorAll("tr")).slice(1); // Skip header row
-	
+
 	// Get current sort direction (or use forced direction)
 	const header = table.querySelector("tr").cells[columnIndex];
 	const currentDirection = header.getAttribute("data-sort-direction") || "asc";
 	const newDirection = (forceDirection === "asc" || forceDirection === "desc") ? forceDirection : (currentDirection === "asc" ? "desc" : "asc");
-	
+
 	// Update sort direction on all headers
 	const headers = table.querySelector("tr").cells;
 	for (let i = 0; i < headers.length; i++) {
@@ -133,14 +133,14 @@ function sortTable(columnIndex, vocation, forceDirection) {
 	}
 	header.setAttribute("data-sort-direction", newDirection);
 	header.classList.add("sort-" + newDirection);
-	
+
 	// Sort rows - get text content before any innerHTML modifications
 	rows.sort((a, b) => {
 		// Get the original text content from cells
 		// For cells with innerHTML modifications (spans), we need to get the combined text
 		let aValue = a.cells[columnIndex].textContent.trim();
 		let bValue = b.cells[columnIndex].textContent.trim();
-		
+
 		// Handle numeric values (remove + and parse)
 		if (columnIndex === 0) { // Level column
 			aValue = parseInt(aValue.replace("+", "")) || 0;
@@ -152,17 +152,17 @@ function sortTable(columnIndex, vocation, forceDirection) {
 			aValue = extractLootValue(aValue);
 			bValue = extractLootValue(bValue);
 		}
-		
+
 		if (newDirection === "asc") {
 			return aValue > bValue ? 1 : -1;
 		} else {
 			return aValue < bValue ? 1 : -1;
 		}
 	});
-	
+
 	// Reorder rows in the table
 	rows.forEach(row => tbody.appendChild(row));
-	
+
 	// Reapply color coding after sorting to restore any color formatting
 	setTimeout(() => {
 		applyColorCoding();
@@ -172,25 +172,25 @@ function sortTable(columnIndex, vocation, forceDirection) {
 function extractExpValue(text) {
 	// Handle experience values like "1.0kk", "1000k", "6.6kk", "6500k"
 	// Convert everything to a base number (thousands)
-	
+
 	// Handle "kk" notation (1kk = 1000k = 1,000,000)
 	const kkMatch = text.match(/(\d+(?:\.\d+)?)kk/i);
 	if (kkMatch) {
 		return parseFloat(kkMatch[1]) * 1000; // Convert to thousands
 	}
-	
+
 	// Handle "k" notation
 	const kMatch = text.match(/(\d+(?:\.\d+)?)k/i);
 	if (kMatch) {
 		return parseFloat(kMatch[1]);
 	}
-	
+
 	// Handle plain numbers
 	const numMatch = text.match(/(\d+(?:\.\d+)?)/);
 	if (numMatch) {
 		return parseFloat(numMatch[1]);
 	}
-	
+
 	return 0;
 }
 
@@ -199,10 +199,10 @@ function extractLootValue(text) {
 	if (text === "-" || text === "" || text === "—") {
 		return 0;
 	}
-	
+
 	// Handle negative values
 	const isNegative = text.includes("-") && !text.match(/\d+\s*-\s*\d+/); // Not a range like "50k-100k"
-	
+
 	// Handle "kk" notation first (1kk = 1000k = 1,000,000)
 	const kkMatch = text.match(/(\d+(?:\.\d+)?)kk/i);
 	if (kkMatch) {
@@ -212,7 +212,7 @@ function extractLootValue(text) {
 		}
 		return value;
 	}
-	
+
 	// Handle "k" notation
 	const kMatch = text.match(/(\d+(?:\.\d+)?)k/i);
 	if (kMatch) {
@@ -222,7 +222,7 @@ function extractLootValue(text) {
 		}
 		return value;
 	}
-	
+
 	// Handle "m" notation
 	const mMatch = text.match(/(\d+(?:\.\d+)?)m/i);
 	if (mMatch) {
@@ -232,7 +232,7 @@ function extractLootValue(text) {
 		}
 		return value;
 	}
-	
+
 	// Handle "b" notation
 	const bMatch = text.match(/(\d+(?:\.\d+)?)b/i);
 	if (bMatch) {
@@ -242,7 +242,7 @@ function extractLootValue(text) {
 		}
 		return value;
 	}
-	
+
 	// Handle plain numbers
 	const numMatch = text.match(/(\d+(?:\.\d+)?)/);
 	if (numMatch) {
@@ -252,7 +252,7 @@ function extractLootValue(text) {
 		}
 		return value;
 	}
-	
+
 	return 0;
 }
 
@@ -262,24 +262,24 @@ function setupSortingHeaders(vocation) {
 	if (table) {
 		const headerRow = table.querySelector("tr");
 		const headers = headerRow.cells;
-		
+
 		// Make Level, Raw exp, and Loot headers clickable
 		[0, 2, 3].forEach(columnIndex => { // Level, Raw exp, Loot columns
 			const header = headers[columnIndex];
 			if (header) {
 				header.style.cursor = "pointer";
 				header.classList.add("sortable-header");
-				
+
 				// Remove existing listener if it exists to prevent duplicates
 				if (header._sortHandler) {
 					header.removeEventListener("click", header._sortHandler);
 				}
-				
+
 				// Create and store the sort handler function
 				header._sortHandler = function() {
 					sortTable(columnIndex, vocation);
 				};
-				
+
 				// Add the event listener
 				header.addEventListener("click", header._sortHandler);
 			}
@@ -289,17 +289,17 @@ function setupSortingHeaders(vocation) {
 
 // Initialize sorting headers when page loads
 function initializeSortingHeaders() {
-	const vocations = ['knight', 'paladin', 'sorcerer', 'druid', 'monk', 'teamhunt'];
+	const vocations = ['knight', 'paladin', 'mage', 'monk', 'duo', 'teamhunt'];
 
 	// Show the first tab by default
 	const firstTab = document.getElementById('Knight');
 	if (firstTab) {
 		firstTab.style.display = "block";
 	}
-	
+
 	vocations.forEach(vocation => {
 		setupSortingHeaders(vocation);
-		
+
 		// Set up level filter event listeners
 		const levelFilter = document.getElementById("levelFilter_" + vocation);
 		if (levelFilter) {
@@ -330,56 +330,46 @@ function applyColorCoding() {
 		// Physical stays white (default)
 		'Physical': 'rune-physical'
 	};
-	
+
 	// Function to apply colors to a cell with multiple values
 	function colorizeCell(cell) {
 		const text = cell.textContent.trim();
 		if (!text) return;
 
-		// Split by comma or slash, preserving which separator was used
-		const tokens = text.split(/([,\/])/);
-		const parts = [];
-		const separators = [];
-		for (let i = 0; i < tokens.length; i++) {
-			if (i % 2 === 0) {
-				const part = tokens[i].trim();
-				if (part.length > 0) parts.push(part);
-			} else {
-				separators.push(tokens[i]);
-			}
-		}
-
-		if (parts.length === 0) return;
+		// Split by comma and clean up each part
+		const parts = text.split(',').map(part => part.trim()).filter(part => part.length > 0);
 
 		if (parts.length === 1) {
 			// Single value - apply color class to the cell
 			const value = parts[0];
 			if (colorMap[value]) {
+				// Remove any existing color classes
 				cell.classList.remove('rune-fire', 'rune-ice', 'rune-energy', 'rune-earth', 'rune-death', 'rune-physical');
+				// Add the appropriate color class
 				cell.classList.add(colorMap[value]);
 			}
-		} else {
-			// Multiple values - create colored spans, preserving original separator (/ or ,)
+		} else if (parts.length > 1) {
+			// Multiple values - create colored spans for each part
 			let newHTML = '';
 			parts.forEach((part, index) => {
 				const colorClass = colorMap[part] || 'rune-physical';
 				newHTML += `<span class="${colorClass}">${part}</span>`;
 				if (index < parts.length - 1) {
-					newHTML += separators[index] === '/' ? '/' : ', ';
+					newHTML += ', ';
 				}
 			});
 			cell.innerHTML = newHTML;
 		}
 	}
-	
+
 	// Apply colors to all hunting tables
-	const vocations = ['knight', 'paladin', 'sorcerer', 'druid', 'monk', 'teamhunt'];
-	
+	const vocations = ['knight', 'paladin', 'mage', 'monk', 'duo', 'teamhunt'];
+
 	vocations.forEach(vocation => {
 		const table = document.getElementById("hunting_table_" + vocation);
 		if (table) {
 			const rows = table.querySelectorAll("tr");
-			
+
 			// Skip the first row (header row) and process data rows only
 			for (let i = 1; i < rows.length; i++) {
 				const row = rows[i];
@@ -388,7 +378,7 @@ function applyColorCoding() {
 				if (weaponCell) {
 					colorizeCell(weaponCell);
 				}
-				
+
 				// Check runes column (index 4 for paladin and mage)
 				const runesCell = row.cells[4];
 				if (runesCell) {

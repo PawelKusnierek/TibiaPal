@@ -1,7 +1,7 @@
 ---
 layout: default
-title: TibiaPal.com - Hunting Places
-scripts: <script src="../scripts/hunting.js"></script>
+title: TibiaPal.com - Hunting Places (Old)
+scripts: <script src="../scripts/hunting-old.js"></script>
 ---
 
 <style>
@@ -18,16 +18,16 @@ scripts: <script src="../scripts/hunting.js"></script>
 </style>
 
 <p style="text-align: center; margin-bottom: 20px; color: #ebebeb;">
-    Data from before Vocation Rebalance 2026: <a href="/hunting-old" style="color: #2d8cf8;">tibiapal.com/hunting-old</a><br>
-    All places will be re-tested and updated results added here over time.
+    All results here are outdated (from before Vocation Rebalance 2026 and Winter Update 2025 Weeklies) so use as a rough reference only.<br>
+    Updated results will be added here: <a href="/hunting" style="color: #2d8cf8;">tibiapal.com/hunting</a><br>
 </p>
 
 <div class="hunting_tab">
     <button id="knight" class="tablinks active" onclick="show_tab(event, 'Knight')">Knight</button>
     <button id="paladin" class="tablinks" onclick="show_tab(event, 'Paladin')">Paladin</button>
+    <button id="mage" class="tablinks" onclick="show_tab(event, 'Mage')">Druid/Sorcerer</button>
     <button id="monk" class="tablinks" onclick="show_tab(event, 'Monk')">Monk</button>
-    <button id="sorcerer" class="tablinks" onclick="show_tab(event, 'Sorcerer')">Sorcerer</button>
-    <button id="druid" class="tablinks" onclick="show_tab(event, 'Druid')">Druid</button>
+    <button id="duo" class="tablinks" onclick="show_tab(event, 'Duo')">Duos</button>
     <button id="teamhunt" class="tablinks" onclick="show_tab(event, 'Teamhunt')">Teamhunts</button>
 </div>
 
@@ -59,7 +59,7 @@ scripts: <script src="../scripts/hunting.js"></script>
             <th class="loot_row">Loot</th>
             <th class="weapon_row">Weapon Type</th>
         </tr>
-        {% for hunt in site.data.hunting.soloknight %}
+        {% for hunt in site.data.hunting_old.soloknight %}
             <tr>
                 <td>{{ hunt.level }}</td>
 
@@ -93,7 +93,40 @@ scripts: <script src="../scripts/hunting.js"></script>
             <th class="loot_row">Loot</th>
             <th class="runes_row">Runes/Low Level Ammo</th>
         </tr>
-        {% for hunt in site.data.hunting.solopaladin %}
+        {% for hunt in site.data.hunting_old.solopaladin %}
+            <tr>
+                <td>{{ hunt.level }}</td>
+
+                {% if hunt.link != "https://youtu.be/" %}
+                <td><a href="{{ hunt.link }}" target="_blank">{{ hunt.place }}</a></td>
+                {% else %}
+                <td>{{ hunt.place }}</td>
+                {% endif %}
+
+                <td>{{ hunt.raw_exp }}</td>
+                <td>{{ hunt.loot }}</td>
+                <td>{{ hunt.runes }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div id="Mage" class="tabcontent">
+    <div id="filter_selection">
+        <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+            <label for="levelFilter_mage" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Character Level:</label>
+            <input type="number" id="levelFilter_mage" class="level-filter" placeholder="Shows spawns suitable for your level..." min="0" style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
+        </div>
+    </div>
+    <table id="hunting_table_mage" class="hunting_table">
+        <tr>
+            <th class="level_row">Level</th>
+            <th class="place_row">Place</th>
+            <th class="exp_row">Raw exp</th>
+            <th class="loot_row">Loot</th>
+            <th class="runes_row">Runes</th>
+        </tr>
+        {% for hunt in site.data.hunting_old.solomage %}
             <tr>
                 <td>{{ hunt.level }}</td>
 
@@ -135,7 +168,7 @@ scripts: <script src="../scripts/hunting.js"></script>
             <th class="loot_row">Loot</th>
             <th class="weapon_row">Weapon Type</th>
         </tr>
-        {% for hunt in site.data.hunting.solomonk %}
+        {% for hunt in site.data.hunting_old.solomonk %}
             <tr>
                 <td>{{ hunt.level }}</td>
 
@@ -153,31 +186,21 @@ scripts: <script src="../scripts/hunting.js"></script>
     </table>
 </div>
 
-<div id="Sorcerer" class="tabcontent">
+<div id="Duo" class="tabcontent">
     <div id="filter_selection">
         <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-            <label for="levelFilter_sorcerer" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Character Level:</label>
-            <input type="number" id="levelFilter_sorcerer" class="level-filter" placeholder="Shows spawns suitable for your level..." min="0" style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
-        </div>
-        <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-            <label for="weaponTypeFilter_sorcerer" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Mastery:</label>
-            <select id="weaponTypeFilter_sorcerer" onchange="apply_weapon_type_filter()" style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
-                <option value="All">All</option>
-                <option value="Fire">Fire</option>
-                <option value="Energy">Energy</option>
-                <option value="Death">Death</option>
-            </select>
+            <label for="levelFilter_duo" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Character Level:</label>
+            <input type="number" id="levelFilter_duo" class="level-filter" placeholder="Shows spawns suitable for your level..." min="0" style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
         </div>
     </div>
-    <table id="hunting_table_sorcerer" class="hunting_table">
+    <table id="hunting_table_duo" class="hunting_table">
         <tr>
             <th class="level_row">Level</th>
             <th class="place_row">Place</th>
             <th class="exp_row">Raw exp</th>
             <th class="loot_row">Loot</th>
-            <th class="mastery_row">Mastery</th>
         </tr>
-        {% for hunt in site.data.hunting.solosorcerer %}
+        {% for hunt in site.data.hunting_old.duos %}
             <tr>
                 <td>{{ hunt.level }}</td>
 
@@ -189,40 +212,6 @@ scripts: <script src="../scripts/hunting.js"></script>
 
                 <td>{{ hunt.raw_exp }}</td>
                 <td>{{ hunt.loot }}</td>
-                <td>{{ hunt.mastery }}</td>
-            </tr>
-        {% endfor %}
-    </table>
-</div>
-
-<div id="Druid" class="tabcontent">
-    <div id="filter_selection">
-        <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-            <label for="levelFilter_druid" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Character Level:</label>
-            <input type="number" id="levelFilter_druid" class="level-filter" placeholder="Shows spawns suitable for your level..." min="0" style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
-        </div>
-    </div>
-    <table id="hunting_table_druid" class="hunting_table">
-        <tr>
-            <th class="level_row">Level</th>
-            <th class="place_row">Place</th>
-            <th class="exp_row">Raw exp</th>
-            <th class="loot_row">Loot</th>
-            <th class="runes_row">Runes</th>
-        </tr>
-        {% for hunt in site.data.hunting.solodruid %}
-            <tr>
-                <td>{{ hunt.level }}</td>
-
-                {% if hunt.link != "https://youtu.be/" %}
-                <td><a href="{{ hunt.link }}" target="_blank">{{ hunt.place }}</a></td>
-                {% else %}
-                <td>{{ hunt.place }}</td>
-                {% endif %}
-
-                <td>{{ hunt.raw_exp }}</td>
-                <td>{{ hunt.loot }}</td>
-                <td>{{ hunt.runes }}</td>
             </tr>
         {% endfor %}
     </table>
@@ -242,7 +231,7 @@ scripts: <script src="../scripts/hunting.js"></script>
             <th class="exp_row">Raw exp</th>
             <th class="loot_row">Loot</th>
         </tr>
-        {% for hunt in site.data.hunting.teamhunt %}
+        {% for hunt in site.data.hunting_old.teamhunt %}
             <tr>
                 <td>{{ hunt.level }}</td>
 

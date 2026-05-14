@@ -289,8 +289,8 @@ function setupSortingHeaders(vocation) {
 
 // Initialize sorting headers when page loads
 function initializeSortingHeaders() {
-	const vocations = ['knight', 'paladin', 'mage', 'monk', 'duo', 'teamhunt'];
-	
+	const vocations = ['knight', 'paladin', 'sorcerer', 'druid', 'monk', 'teamhunt'];
+
 	// Show the first tab by default
 	const firstTab = document.getElementById('Knight');
 	if (firstTab) {
@@ -335,27 +335,37 @@ function applyColorCoding() {
 	function colorizeCell(cell) {
 		const text = cell.textContent.trim();
 		if (!text) return;
-		
-		// Split by comma and clean up each part
-		const parts = text.split(',').map(part => part.trim()).filter(part => part.length > 0);
-		
+
+		// Split by comma or slash, preserving which separator was used
+		const tokens = text.split(/([,\/])/);
+		const parts = [];
+		const separators = [];
+		for (let i = 0; i < tokens.length; i++) {
+			if (i % 2 === 0) {
+				const part = tokens[i].trim();
+				if (part.length > 0) parts.push(part);
+			} else {
+				separators.push(tokens[i]);
+			}
+		}
+
+		if (parts.length === 0) return;
+
 		if (parts.length === 1) {
 			// Single value - apply color class to the cell
 			const value = parts[0];
 			if (colorMap[value]) {
-				// Remove any existing color classes
 				cell.classList.remove('rune-fire', 'rune-ice', 'rune-energy', 'rune-earth', 'rune-death', 'rune-physical');
-				// Add the appropriate color class
 				cell.classList.add(colorMap[value]);
 			}
-		} else if (parts.length > 1) {
-			// Multiple values - create colored spans for each part
+		} else {
+			// Multiple values - create colored spans, preserving original separator (/ or ,)
 			let newHTML = '';
 			parts.forEach((part, index) => {
 				const colorClass = colorMap[part] || 'rune-physical';
 				newHTML += `<span class="${colorClass}">${part}</span>`;
 				if (index < parts.length - 1) {
-					newHTML += ', ';
+					newHTML += separators[index] === '/' ? '/' : ', ';
 				}
 			});
 			cell.innerHTML = newHTML;
@@ -363,7 +373,7 @@ function applyColorCoding() {
 	}
 	
 	// Apply colors to all hunting tables
-	const vocations = ['knight', 'paladin', 'mage', 'monk', 'duo', 'teamhunt'];
+	const vocations = ['knight', 'paladin', 'sorcerer', 'druid', 'monk', 'teamhunt'];
 	
 	vocations.forEach(vocation => {
 		const table = document.getElementById("hunting_table_" + vocation);
