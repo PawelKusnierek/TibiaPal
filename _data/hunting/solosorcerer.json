@@ -705,6 +705,14 @@
     },
     {
         "level":  "200+",
+        "place":  "Crumbling Caverns",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
+    },
+    {
+        "level":  "200+",
         "place":  "Seacrest Serpents",
         "raw_exp":  "-",
         "loot":  "-",
@@ -968,6 +976,14 @@
         "mastery":  "Death"
     },
     {
+        "level":  "300+",
+        "place":  "Crypt Warriors",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire/Energy"
+    },
+    {
         "level":  "400+",
         "place":  "Cobras",
         "raw_exp":  "-",
@@ -1001,19 +1017,19 @@
     },
     {
         "level":  "400+",
+        "place":  "Buried Cathedral -8",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
+    },
+    {
+        "level":  "400+",
         "place":  "Nightmare Isles",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
-    },
-    {
-        "level":  "400+",
-        "place":  "Crypt Warriors",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
     },
     {
         "level":  "400+",
@@ -1137,6 +1153,14 @@
     },
     {
         "level":  "500+",
+        "place":  "Usurpers",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Death"
+    },
+    {
+        "level":  "500+",
         "place":  "Nimmersatt's Bottom Floor (-7)",
         "raw_exp":  "-",
         "loot":  "-",
@@ -1209,11 +1233,19 @@
     },
     {
         "level":  "600+",
-        "place":  "Ingol -3",
+        "place":  "Ingol -1",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
-        "mastery":  "Fire"
+        "mastery":  "Death"
+    },
+    {
+        "level":  "600+",
+        "place":  "Ingol -2",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Death"
     },
     {
         "level":  "600+",
@@ -1278,6 +1310,14 @@
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
+    },
+    {
+        "level":  "800+",
+        "place":  "Ingol -3",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
     },
     {
         "level":  "800+",
