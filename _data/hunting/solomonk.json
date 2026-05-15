@@ -1,6 +1,30 @@
 ﻿[
     {
         "level":  "8+",
+        "place":  "Targuna Lizards",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "weapon_type":  "Energy"
+    },
+    {
+        "level":  "8+",
+        "place":  "Targuna Pirates",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "weapon_type":  "Energy"
+    },
+    {
+        "level":  "8+",
+        "place":  "Targuna Infernoids",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "weapon_type":  "Energy"
+    },
+    {
+        "level":  "8+",
         "place":  "Rotworms Liberty Bay/Darashia",
         "raw_exp":  "-",
         "loot":  "-",

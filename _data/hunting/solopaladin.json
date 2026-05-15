@@ -1,6 +1,30 @@
 ﻿[
     {
         "level":  "8+",
+        "place":  "Targuna Lizards",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "runes":  "Arrows"
+    },
+    {
+        "level":  "8+",
+        "place":  "Targuna Pirates",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "runes":  "Arrows"
+    },
+    {
+        "level":  "8+",
+        "place":  "Targuna Infernoids",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "runes":  "Arrows"
+    },
+    {
+        "level":  "8+",
         "place":  "Swamp Trolls Port Hope/Venore",
         "raw_exp":  "-",
         "loot":  "-",
@@ -177,7 +201,7 @@
     },
     {
         "level":  "50+",
-        "place":  "Lion\u0027s Rock",
+        "place":  "Lion's Rock",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Onyx Arrows, Avalanche",
@@ -193,7 +217,7 @@
     },
     {
         "level":  "50+",
-        "place":  "Ankrahmun Cults \u0026 Lizards",
+        "place":  "Ankrahmun Cults Lizards",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Onyx Arrows, Thunderstorm",
