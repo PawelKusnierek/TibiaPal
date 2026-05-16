@@ -1,18 +1,16 @@
-@echo off
-powershell -NoProfile -ExecutionPolicy Bypass -Command "& {
-    $targetPath = 'C:\Users\' + $env:USERNAME + '\AppData\Local\Tibia\packages\Tibia\characterdata'
+$targetPath = 'C:\Users\' + $env:USERNAME + '\AppData\Local\Tibia\packages\Tibia\characterdata'
 
-    if (-not (Test-Path $targetPath)) {
-        Write-Host 'Cannot find Tibia characterdata path:'
-        Write-Host $targetPath
-        Write-Host 'Please make sure Tibia is installed and has been launched at least once.'
-        exit 1
-    }
+if (-not (Test-Path $targetPath)) {
+    Write-Host 'Cannot find Tibia characterdata path:'
+    Write-Host $targetPath
+    Write-Host 'Please make sure Tibia is installed and has been launched at least once.'
+    exit 1
+}
 
-    Write-Host ('Found Tibia characterdata path: ' + $targetPath)
-    Write-Host ''
+Write-Host ('Found Tibia characterdata path: ' + $targetPath)
+Write-Host ''
 
-    $plvs = @'
+$plvs = @'
 {
     "10196": "market",
     "10276": "market",
@@ -667,14 +665,13 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "& {
 }
 '@ | ConvertFrom-Json
 
-    Get-ChildItem -Path $targetPath -Directory | ForEach-Object {
-        $itemPricesPath = Join-Path $_.FullName 'itemprices.json'
-        if (Test-Path $itemPricesPath) {
-            $target = Get-Content -Raw -Path $itemPricesPath | ConvertFrom-Json
-            $target.primaryLootValueSources = $plvs
-            $json = $target | ConvertTo-Json -Depth 10
-            [System.IO.File]::WriteAllText($itemPricesPath, $json, [System.Text.UTF8Encoding]::new($false))
-            Write-Host ('Updated: ' + $itemPricesPath)
-        }
+Get-ChildItem -Path $targetPath -Directory | ForEach-Object {
+    $itemPricesPath = Join-Path $_.FullName 'itemprices.json'
+    if (Test-Path $itemPricesPath) {
+        $target = Get-Content -Raw -Path $itemPricesPath | ConvertFrom-Json
+        $target.primaryLootValueSources = $plvs
+        $json = $target | ConvertTo-Json -Depth 10
+        [System.IO.File]::WriteAllText($itemPricesPath, $json, [System.Text.UTF8Encoding]::new($false))
+        Write-Host ('Updated: ' + $itemPricesPath)
     }
-}"
+}
