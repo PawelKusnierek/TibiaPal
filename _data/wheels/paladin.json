@@ -1,0 +1,11 @@
+{
+    "lesser_gems": ["Mitigation", "Hit Points", "Any Elemental Resistance"],
+    "greater_gems": ["Divine Caldera Base Damage", "Divine Empowerment Mastery", "Grenade Mastery", "Salvation Healing"],
+    "builds": [
+        {
+            "points": 50,
+            "description": "x1 Gem",
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2DAAoxQuf-RAAA"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "lesser_gems": ["Mitigation", "Hit Points", "Any Elemental Resistance", "Mana"],
+    "greater_gems": ["Beam Mastery Mastery", "Great Energy Beam Base Damage", "Great Fire Wave Base Damage", "UE Base Damage"],
+    "builds": [
+        {
+            "points": 50,
+            "description": "x1 Gem",
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2DAAoxQuf-RAAA"
+        }
+    ]
+}

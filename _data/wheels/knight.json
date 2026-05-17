@@ -1,0 +1,11 @@
+{
+    "lesser_gems": ["Mitigation", "Hit Points", "Any Elemental Resistance"],
+    "greater_gems": ["Fierce Berserk Base Damage", "Front Sweep Base Damage", "Fair Wound Cleansing", "Combat Mastery Mastery"],
+    "builds": [
+        {
+            "points": 50,
+            "description": "T1 Front Sweep",
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=K0Y2DABEZo_P9IAAA"
+        }
+    ]
+}

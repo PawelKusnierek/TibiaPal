@@ -1,0 +1,163 @@
+---
+layout: default
+title: TibiaPal.com - Wheels
+---
+
+<p id="wheels_info">
+    <span style="color: gold"><b>PURPOSE:</b></span> List of key Wheel of Destiny builds per vocation (up to 1000~ wheel points).<br>
+    Make adjustments based on your specific needs, spawn, gems and exact number of points.<br><br>
+    To ask for further advice/clarifications or make wheel suggestions - join our <a href="https://discord.gg/kbjqY2VRa9" target="_blank" rel="noopener">Discord</a>. <br><br>
+</p>
+<br>
+<div class="equipment_tab">
+    <button id="druid" class="tablinks active" onclick="show_tab(event, 'Druid')">Druid</button>
+    <button id="knight" class="tablinks" onclick="show_tab(event, 'Knight')">Knight</button>
+    <button id="paladin" class="tablinks" onclick="show_tab(event, 'Paladin')">Paladin</button>
+    <button id="sorcerer" class="tablinks" onclick="show_tab(event, 'Sorcerer')">Sorcerer</button>
+    <button id="monk" class="tablinks" onclick="show_tab(event, 'Monk')">Monk</button>
+</div>
+
+<div id="Druid" class="tabcontent">
+    <div class="wheels_gems_section">
+        <div class="wheels_gems_row">
+            <span class="wheels_gems_label">Best Lesser Gems:</span>
+            <ul class="wheels_gems_list">
+                {% for gem in site.data.wheels.druid.lesser_gems %}<li>{{ gem }}</li>{% endfor %}
+            </ul>
+        </div>
+        <div class="wheels_gems_row">
+            <span class="wheels_gems_label">Best Greater Gems:</span>
+            <ul class="wheels_gems_list">
+                {% for gem in site.data.wheels.druid.greater_gems %}<li>{{ gem }}</li>{% endfor %}
+            </ul>
+        </div>
+    </div>
+    <table class="equipment_table wheels_table" id="wheels_table_druid">
+        <tr>
+            <th class="points_row">Points</th>
+            <th class="description_row">Description</th>
+        </tr>
+        {% for build in site.data.wheels.druid.builds %}
+        <tr>
+            <td><a href="{{ build.link }}" target="_blank">{{ build.points }}</a></td>
+            <td>{{ build.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div id="Knight" class="tabcontent">
+    <div class="wheels_gems_section">
+        <div class="wheels_gems_row">
+            <span class="wheels_gems_label">Best Lesser Gems:</span>
+            <ul class="wheels_gems_list">
+                {% for gem in site.data.wheels.knight.lesser_gems %}<li>{{ gem }}</li>{% endfor %}
+            </ul>
+        </div>
+        <div class="wheels_gems_row">
+            <span class="wheels_gems_label">Best Greater Gems:</span>
+            <ul class="wheels_gems_list">
+                {% for gem in site.data.wheels.knight.greater_gems %}<li>{{ gem }}</li>{% endfor %}
+            </ul>
+        </div>
+    </div>
+    <table class="equipment_table wheels_table" id="wheels_table_knight">
+        <tr>
+            <th class="points_row">Points</th>
+            <th class="description_row">Description</th>
+        </tr>
+        {% for build in site.data.wheels.knight.builds %}
+        <tr>
+            <td><a href="{{ build.link }}" target="_blank">{{ build.points }}</a></td>
+            <td>{{ build.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div id="Paladin" class="tabcontent">
+    <div class="wheels_gems_section">
+        <div class="wheels_gems_row">
+            <span class="wheels_gems_label">Best Lesser Gems:</span>
+            <ul class="wheels_gems_list">
+                {% for gem in site.data.wheels.paladin.lesser_gems %}<li>{{ gem }}</li>{% endfor %}
+            </ul>
+        </div>
+        <div class="wheels_gems_row">
+            <span class="wheels_gems_label">Best Greater Gems:</span>
+            <ul class="wheels_gems_list">
+                {% for gem in site.data.wheels.paladin.greater_gems %}<li>{{ gem }}</li>{% endfor %}
+            </ul>
+        </div>
+    </div>
+    <table class="equipment_table wheels_table" id="wheels_table_paladin">
+        <tr>
+            <th class="points_row">Points</th>
+            <th class="description_row">Description</th>
+        </tr>
+        {% for build in site.data.wheels.paladin.builds %}
+        <tr>
+            <td><a href="{{ build.link }}" target="_blank">{{ build.points }}</a></td>
+            <td>{{ build.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div id="Sorcerer" class="tabcontent">
+    <div class="wheels_gems_section">
+        <div class="wheels_gems_row">
+            <span class="wheels_gems_label">Best Lesser Gems:</span>
+            <ul class="wheels_gems_list">
+                {% for gem in site.data.wheels.sorcerer.lesser_gems %}<li>{{ gem }}</li>{% endfor %}
+            </ul>
+        </div>
+        <div class="wheels_gems_row">
+            <span class="wheels_gems_label">Best Greater Gems:</span>
+            <ul class="wheels_gems_list">
+                {% for gem in site.data.wheels.sorcerer.greater_gems %}<li>{{ gem }}</li>{% endfor %}
+            </ul>
+        </div>
+    </div>
+    <table class="equipment_table wheels_table" id="wheels_table_sorcerer">
+        <tr>
+            <th class="points_row">Points</th>
+            <th class="description_row">Description</th>
+        </tr>
+        {% for build in site.data.wheels.sorcerer.builds %}
+        <tr>
+            <td><a href="{{ build.link }}" target="_blank">{{ build.points }}</a></td>
+            <td>{{ build.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div id="Monk" class="tabcontent">
+    <div class="wheels_gems_section">
+        <div class="wheels_gems_row">
+            <span class="wheels_gems_label">Best Lesser Gems:</span>
+            <ul class="wheels_gems_list">
+                {% for gem in site.data.wheels.monk.lesser_gems %}<li>{{ gem }}</li>{% endfor %}
+            </ul>
+        </div>
+        <div class="wheels_gems_row">
+            <span class="wheels_gems_label">Best Greater Gems:</span>
+            <ul class="wheels_gems_list">
+                {% for gem in site.data.wheels.monk.greater_gems %}<li>{{ gem }}</li>{% endfor %}
+            </ul>
+        </div>
+    </div>
+    <table class="equipment_table wheels_table" id="wheels_table_monk">
+        <tr>
+            <th class="points_row">Points</th>
+            <th class="description_row">Description</th>
+        </tr>
+        {% for build in site.data.wheels.monk.builds %}
+        <tr>
+            <td><a href="{{ build.link }}" target="_blank">{{ build.points }}</a></td>
+            <td>{{ build.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>

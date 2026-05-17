@@ -38,6 +38,9 @@ function enable_default_tabs() {
   else if (location.href.includes('/monkcontest')) {
     initial_show_tab("Bounties")
   }
+  else if (location.href.includes('/wheels')) {
+    initial_show_tab("Druid")
+  }
   else if (location.href.includes('/exercise')) {
     initial_show_tab("TargetSkill")
   }
