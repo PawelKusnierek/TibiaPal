@@ -1,0 +1,84 @@
+---
+layout: default
+title: TibiaPal.com - Bestiary Tasks
+scripts: <script src="../scripts/tasks.js"></script>
+---
+<p id="equipment_info">
+    <span style="color: purple"><b>PURPOSE:</b></span> Bestiary task reference sorted by difficulty. Use the filter to quickly find a creature and its suggested hunting location.<br><br>
+</p>
+
+<div class="tasks_tab">
+    <button id="easy_tab_btn" class="tablinks active" onclick="show_tab(event, 'EasyTab')">Easy</button>
+    <button id="medium_tab_btn" class="tablinks" onclick="show_tab(event, 'MediumTab')">Medium</button>
+    <button id="hard_tab_btn" class="tablinks" onclick="show_tab(event, 'HardTab')">Hard</button>
+</div>
+
+<div id="filter_selection" style="margin-top: 20px; margin-bottom: 20px; display: flex; justify-content: center;">
+    <div style="display: flex; align-items: center; width: 370px;">
+        <label for="nameFilter" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 130px;">Creature Name:</label>
+        <input type="text" id="nameFilter" placeholder="Filter by name..." style="padding: 8px; width: 230px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
+    </div>
+</div>
+
+<div id="EasyTab" class="tabcontent">
+    <table id="tasks_table_easy" class="tasks_table">
+        <tr>
+            <th>Level</th>
+            <th>Monster</th>
+            <th>Rating</th>
+            <th>Suggested Spawn</th>
+            <th>Extra</th>
+        </tr>
+        {% for pair in site.data.tasks.easy %}
+        <tr>
+            <td>{{ pair[1].level }}</td>
+            <td>{{ pair[0] }}</td>
+            <td>{{ pair[1].rating }}</td>
+            <td>{{ pair[1].where }}</td>
+            <td>{{ pair[1].extra }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div id="MediumTab" class="tabcontent">
+    <table id="tasks_table_medium" class="tasks_table">
+        <tr>
+            <th>Level</th>
+            <th>Monster</th>
+            <th>Rating</th>
+            <th>Suggested Spawn</th>
+            <th>Extra</th>
+        </tr>
+        {% for pair in site.data.tasks.medium %}
+        <tr>
+            <td>{{ pair[1].level }}</td>
+            <td>{{ pair[0] }}</td>
+            <td>{{ pair[1].rating }}</td>
+            <td>{{ pair[1].where }}</td>
+            <td>{{ pair[1].extra }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div id="HardTab" class="tabcontent">
+    <table id="tasks_table_hard" class="tasks_table">
+        <tr>
+            <th>Level</th>
+            <th>Monster</th>
+            <th>Rating</th>
+            <th>Suggested Spawn</th>
+            <th>Extra</th>
+        </tr>
+        {% for pair in site.data.tasks.hard %}
+        <tr>
+            <td>{{ pair[1].level }}</td>
+            <td>{{ pair[0] }}</td>
+            <td>{{ pair[1].rating }}</td>
+            <td>{{ pair[1].where }}</td>
+            <td>{{ pair[1].extra }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>

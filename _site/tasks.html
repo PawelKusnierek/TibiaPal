@@ -1,0 +1,2752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TibiaPal.com - Bestiary Tasks</title>
+    <meta name="author" content="Pawel Kusnierek">
+    <meta name="description"
+        content="TibiaPal — tools and calculators for the MMORPG Tibia. Includes TibiaLootSplit, Hunting Places guide, Quest Reference and many more.">
+    <meta name="keywords"
+        content="Tibia tools, Tibia calculators, Tibia fansite, TibiaPal,
+          TibiaLootSplit, Tibia loot split, Tibia loot analyser,
+          Tibia hunting places, Tibia hunting guide, Tibia spawn guide,
+          Tibia quest reference, Tibia quest guide, Tibia quest list, Tibia quest levels, Tibia boss access quests, Tibia hunting ground quests,
+          Tibia equipment reference, Tibia vocation equipment, Tibia best equipment,
+          Tibia bestiary reference, Tibia bestiary guide, Tibia bosstiary guide,
+          Tibia charm planner, Tibia charm guide, Tibia charm damage calculator,
+          Tibia weekly deliveries, Tibia NPC deliveries,
+          Tibia experience calculator, Tibia levelling calculator,
+          Tibia exp share calculator, Tibia party exp,
+          Tibia stamina calculator, Tibia bless calculator, Tibia bless cost,
+          Tibia imbue calculator, Tibia imbuement cost,
+          Tibia leech calculator, Tibia life leech, Tibia mana leech,
+          Tibia exercise weapons calculator, Tibia exercise training,
+          Tibia offline training calculator, Tibia training calculator,
+          Tibia weekly task calculator, Tibia weekly tasks">
+    <link rel="shortcut icon" href=/images/crystalcoin.ico type="image/x-icon">
+
+    <!-- css files -->
+    <link rel="stylesheet" href=/css/main.css>
+    
+
+    <!-- javascript files -->
+    <script src="../scripts/tasks.js"></script>
+    <script src=/scripts/onload.js></script>
+
+    <!-- extra googleapi fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+    <!-- Analytics and ad related section-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164338286-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-164338286-3');
+    </script>
+    <script data-ad-client="ca-pub-2936542406889680" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+    <main id="page-container">
+        <div id="tibiatrade_low_res">
+            <div class="tibiatrade_span">
+                Featured on <a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank"><b>TibiaTrade</b>:</a>
+            </div>
+            <iframe id="tibiatrade" src="https://tibiatrade.gg/iframe/highlighted/" title="TibiaTrade" loading="lazy" scrolling="no"></iframe>
+        </div>
+    
+        <div id="header">
+            <a href="https://tibiapal.com"> 
+                <img src=/images/mainlogo.png style="width:100px" alt="TibiaPal beaver logo">
+            </a>
+        </div>
+
+        <div id="banner">
+            <span class="tibiatrade_span">Featured on <a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank"><b>TibiaTrade</b>:</a></span>
+            <iframe id="tibiatrade" src="https://tibiatrade.gg/iframe/highlighted/" title="TibiaTrade" loading="lazy" scrolling="no"></iframe>
+                <!--<a href="https://store.steampowered.com/app/2948410/Talus/" target="_blank"> 
+                    <img src=/images/talus/small_capsule.png style="width:300px"  alt="Logo of upcoming ARPG 'Talus'">
+                </a>-->
+        </div>
+        <div id="right-header">
+
+        </div>
+    <nav id="left-sidebar">
+    <div class="nav-section">GENERAL</div>
+        <div class="nav-item"> <a href="/">
+                <div class="nav-image-container"><img class="nav-image" src=/images/icon-news.gif>Latest News</div>
+                </a>
+        </div>
+        <div class="nav-item"><a href="/about">
+                <div class="nav-image-container"><img class="nav-image" src=/images/icon-abouttibia.gif>About & Contact
+                </div>
+                </a>
+        </div>
+        <!--<div class="nav-item"><a href="/donators">
+                <div class="nav-image-container"><img class="nav-image" src=/images/Heart_Pillow.gif>Donators</div></a>
+        </div>-->
+        <div class="nav-item"><a href="https://iglaots.net/?view=register&refcode=Kusnier" target="_blank">
+                <div class="nav-image-container"><img class="nav-image" src=/images/iglaots.png>IglaOTS.net - Partner OTS</div>
+                </a>
+        </div>
+        <div class="nav-item"><a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank">
+                <div class="nav-image-container"><img class="nav-image" src=/images/tibiatrade_favicon.png>TibiaTrade.gg - Partner Fansite</div>
+                </a>
+        </div>
+    </div>
+
+    <div class="nav-section">TOOLS</div>
+    <div class="nav-item"><a href="/tibialootsplit">
+            <div class="nav-image-container"><img class="nav-image" src=/images/crystalcoin.ico>TibiaLootSplit</div>
+        </a></div>
+    <div class="nav-item"><a href="/charm_planner">
+            <div class="nav-image-container"><img class="nav-image" src=/images/charms/vampiric_embrace.png>Charm Planner</div>
+        </a></div>
+    <!--<div class="nav-item"><a href="/fiend_map">
+        <div class="nav-image-container"><img class="nav-image" src=/images/old_map.gif>Fiend Map</div>
+        </a></div>-->
+    </div>
+
+    <div class="nav-section">GUIDES / REFERENCES</div>
+    <div class="nav-item"><a href="/hunting">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Sword.gif>Hunting
+                Places</div>
+        </a></div>
+<!--<div class="nav-item"><a href="/wheels">
+        <div class="nav-image-container"><img class="nav-image" src=/images/Wheel.gif><span id="new-homepage">NEW!</span>Wheel of Destiny Builds
+        </div></a> </div>-->
+<div class="nav-item"><a href="/equipment">
+        <div class="nav-image-container"><img class="nav-image" src=/images/equipment.gif>Vocation Equipment Reference
+        </div></a> </div>
+<div class="nav-item"><a href="/quest-reference">
+            <div class="nav-image-container"><img class="nav-image" src=/images/old_map.gif>Quest Reference</div>
+        </a></div>
+<div class="nav-item"><a href="/deliveries">
+        <div class="nav-image-container"><img class="nav-image" src=/images/Weekly.png>Weekly Deliveries
+        </div></a> </div>
+    <!--<div class="active nav-item"><a href="/tasks">
+        <div class="nav-image-container"><img class="nav-image" src=/images/Bestiary_Betterment.gif>Bestiary Tasks
+        </div></a> </div>-->
+    <div class="nav-item"><a href="/bestiary">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bestiary_Betterment.gif>Bestiary
+                Reference</div>
+        </a> </div>
+    <!--<div class="nav-item"><a href="/bestiary_guide">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bestiary_Betterment.gif>Bestiary Guide</div>
+        </a> </div>-->
+    <div class="nav-item"><a href="/bosstiary">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Falcon_Greaves.gif>Bosstiary Reference
+            </div>
+        </a> </div>
+    <div class="nav-item"><a href="https://www.youtube.com/kusnierr" target="_blank">
+            <div class="nav-image-container"><img class="nav-image" src=/images/youtube-icon.png>YouTube Videos &
+                Guides</div>
+        </a></div>
+    </div>
+
+    <div class="nav-section">CALCULATORS</div>
+    <div class="nav-item"><a href="/exercise">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Exercise_Wand.gif>Exercise
+                Weapons Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/offlinetraining">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Skill_Trainer.gif>Training
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/imbue">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Imbuing_Shrine.gif>Imbue
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/weekly_tasks">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Weekly.png>Weekly Task Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/charm_calculator">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Overpower.png>Charms Damage
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/expshare">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bricklayers.gif>Exp Share
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/stamina">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Staminafull.png>Stamina
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/bless">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Solitude_Charm.gif>Bless
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/expcalculator">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Demon.gif>Levelling
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/leech">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Leech.gif>Leech Calculator
+            </div>
+        </a></div>
+
+    <div class="right-sidebar-item" id="Rashid">
+        <!--<img src=/images/Rashid.gif style="width:45%" alt="Rashid NPC">
+        <br>
+        <div id="rashid-city">Unavailable...</div>!-->
+    </div>
+</nav>
+    
+    <!-- Navigation toggle button for mobile -->
+    <button class="nav-toggle" onclick="toggleNavigation()" style="display: none;">☰ Menu</button>
+    
+    <section id="main-content">
+    <p id="equipment_info">
+    <span style="color: purple"><b>PURPOSE:</b></span> Bestiary task reference sorted by difficulty. Use the filter to quickly find a creature and its suggested hunting location.<br><br>
+</p>
+
+<div class="tasks_tab">
+    <button id="easy_tab_btn" class="tablinks active" onclick="show_tab(event, 'EasyTab')">Easy</button>
+    <button id="medium_tab_btn" class="tablinks" onclick="show_tab(event, 'MediumTab')">Medium</button>
+    <button id="hard_tab_btn" class="tablinks" onclick="show_tab(event, 'HardTab')">Hard</button>
+</div>
+
+<div id="filter_selection" style="margin-top: 20px; margin-bottom: 20px; display: flex; justify-content: center;">
+    <div style="display: flex; align-items: center; width: 370px;">
+        <label for="nameFilter" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 130px;">Creature Name:</label>
+        <input type="text" id="nameFilter" placeholder="Filter by name..." style="padding: 8px; width: 230px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
+    </div>
+</div>
+
+<div id="EasyTab" class="tabcontent">
+    <table id="tasks_table_easy" class="tasks_table">
+        <tr>
+            <th>Level</th>
+            <th>Monster</th>
+            <th>Rating</th>
+            <th>Suggested Spawn</th>
+            <th>Extra</th>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Toad</td>
+            <td></td>
+            <td>Laguna Islands, Tainted Soul Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Larva</td>
+            <td></td>
+            <td>Ankrahmun Larva Caves, Mother of Scarabs Lair -1/-2</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Scarab</td>
+            <td></td>
+            <td>Ankrahmun Larva Caves, Mother of Scarabs Lair -4/-5</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Blood Crab</td>
+            <td></td>
+            <td>Laguna Blood Crab Caves</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Deepsea Blood Crab</td>
+            <td></td>
+            <td>Sea Serpent Area Svargrond</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Salamander</td>
+            <td></td>
+            <td>Venore Salamander Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Emerald Damselfly</td>
+            <td></td>
+            <td>Venore Salamander Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Stalker</td>
+            <td></td>
+            <td>Peninsula Tomb</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Ghost</td>
+            <td></td>
+            <td>Peninsula Tomb</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Mummy</td>
+            <td></td>
+            <td>Peninsula Tomb</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Marsh Stalker</td>
+            <td></td>
+            <td>Venore Salamander Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Gargoyle</td>
+            <td></td>
+            <td>Meriana Gargoyle Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Hunter</td>
+            <td></td>
+            <td>Poacher's Cave (Hunter stage)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Poacher</td>
+            <td></td>
+            <td>Poacher's Cave (Hunter stage)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Boar</td>
+            <td></td>
+            <td>Poacher's Cave (Wildlife stage)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Bear</td>
+            <td></td>
+            <td>Poacher's Cave (Wildlife stage)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Wild Warrior</td>
+            <td></td>
+            <td>Dark Cathedral</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Bandit</td>
+            <td></td>
+            <td>Dark Cathedral</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Dark Monk</td>
+            <td></td>
+            <td>Dark Cathedral</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Smuggler</td>
+            <td></td>
+            <td>Dark Cathedral</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Assassin</td>
+            <td></td>
+            <td>Dark Cathedral</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Pirate Marauder</td>
+            <td></td>
+            <td>Yalahar Pirates</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Novice of the Cult</td>
+            <td></td>
+            <td>Liberty Bay Cults -1/-2</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Swamp Troll</td>
+            <td></td>
+            <td>Port Hope Swamp Trolls Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Corym Charlatan</td>
+            <td></td>
+            <td>Coryms PH, Coryms Venore</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Mammoth</td>
+            <td></td>
+            <td>Svargrond Mammoth Mountain (South west from depot)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Winter Wolf</td>
+            <td></td>
+            <td>Svargrond Mammoth Mountain (South west from depot)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Kongra</td>
+            <td></td>
+            <td>Port Hope Ape City</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Sibang</td>
+            <td></td>
+            <td>Port Hope Ape City</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Ghoul</td>
+            <td></td>
+            <td>Yalahar Cemetery, Mount Sternum, Edron Vampire Crypt -1/-2</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Skeleton</td>
+            <td></td>
+            <td>Yalahar Cemetery, Mount Sternum, Edron Vampire Crypt -1/-2</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Slime</td>
+            <td></td>
+            <td>Vengoth Surface</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Gnarlhound</td>
+            <td></td>
+            <td>Zao Gnarlhound Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Lizard Templar</td>
+            <td></td>
+            <td>Chor</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Lizard Sentinel</td>
+            <td></td>
+            <td>Chor</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Crocodile</td>
+            <td></td>
+            <td>Port Hope Crocodile Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Rotworm</td>
+            <td></td>
+            <td>Darashia Rotworms, Liberty Bay Rotworms</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Tortoise</td>
+            <td></td>
+            <td>Laguna Islands Tortoise Caves</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Thornback Tortoise</td>
+            <td></td>
+            <td>Laguna Islands Tortoise Caves</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Leaf Golem</td>
+            <td></td>
+            <td>Dryad Gardens</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Terramite</td>
+            <td></td>
+            <td>Darashia Terramite Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Terror Bird</td>
+            <td></td>
+            <td>Southern Tiquanda Coast</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Crypt Shambler</td>
+            <td></td>
+            <td>Yalahar Cemetery, Mount Sternum, Ramoa -1/-2</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Frost Giant</td>
+            <td></td>
+            <td>Nibelor</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Carrion Worm</td>
+            <td></td>
+            <td>Liberty Bay Rotworms</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Merlkin</td>
+            <td></td>
+            <td>Port Hope Ape City</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Frost Giantess</td>
+            <td></td>
+            <td>Nibelor</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Panda</td>
+            <td></td>
+            <td>Southern Tiquanda Coast</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Deepling Worker</td>
+            <td></td>
+            <td>Fiehonja</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Fire Devil</td>
+            <td></td>
+            <td>Spike Sword Quest</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Swampling</td>
+            <td></td>
+            <td>Tiquanda Laboratory, Venore Salamander Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Spit Nettle</td>
+            <td></td>
+            <td>Tiquanda Laboratory</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Insect Swarm</td>
+            <td></td>
+            <td>Horestis Tomb (World Change inactive)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Gozzler</td>
+            <td></td>
+            <td>Farmine Mines</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Cyclops</td>
+            <td></td>
+            <td>Venore Cyclops, Mistrock</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Valkyrie</td>
+            <td></td>
+            <td>Amazon Camp</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Nomad</td>
+            <td></td>
+            <td>Nomad Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Barbarian Skullhunter</td>
+            <td></td>
+            <td>Barbarian Camp</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Barbarian Headhunter</td>
+            <td></td>
+            <td>Barbarian Camp</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Barbarian Brutetamer</td>
+            <td></td>
+            <td>Barbarian Camp</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Gladiator</td>
+            <td></td>
+            <td>Yalahar Arena Quarter</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Gang Member</td>
+            <td></td>
+            <td>Yalahar Trade Quarter</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Crazed Beggar</td>
+            <td></td>
+            <td>Yalahar Trade Quarter, Yalahar Factory Quarter</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Monk</td>
+            <td></td>
+            <td>Edron, Isle of Kings</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Witch</td>
+            <td></td>
+            <td>Dark Cathedral -2, Libery Bay Cults</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Amazon</td>
+            <td></td>
+            <td>Amazon Camp</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Stone Golem</td>
+            <td></td>
+            <td>Goroma Volcano</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Damaged Worker Golem</td>
+            <td></td>
+            <td>Yalahar Factory Surface</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Elf</td>
+            <td></td>
+            <td>Yalahar Elves</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Elf Scout</td>
+            <td></td>
+            <td>Yalahar Elves</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Elf Arcanist</td>
+            <td></td>
+            <td>Yalahar Elves</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Minotaur Mage</td>
+            <td></td>
+            <td>Dark Pyramid Darashia</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Scorpion</td>
+            <td></td>
+            <td>Drefia Entrance, Venore Dragon Lair</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Dworc Voodoomaster</td>
+            <td></td>
+            <td>Port Hope Dworcs</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Dworc Fleshhunter</td>
+            <td></td>
+            <td>Port Hope Dworcs</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Dworc Venomsniper</td>
+            <td></td>
+            <td>Port Hope Dworcs</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Chakoya Tribewarden</td>
+            <td></td>
+            <td>Nibelor Chakoyas</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Chakoya Toolshaper</td>
+            <td></td>
+            <td>Nibelor Chakoyas</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Chakoya Windcaller</td>
+            <td></td>
+            <td>Nibelor Chakoyas</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Skeleton Warrior</td>
+            <td></td>
+            <td>Carlin Ghostland, Edron Vampire Crypt -1/-2</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Pirate Skeleton</td>
+            <td></td>
+            <td>Treasure Island, Nargor</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Goblin Assassin</td>
+            <td></td>
+            <td>Edron Goblin Cave, Femor Hills</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Goblin Scavenger</td>
+            <td></td>
+            <td>Edron Goblin Cave, Femor Hills</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Dwarf</td>
+            <td></td>
+            <td>Cormaya Dwarves</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Dwarf Guard</td>
+            <td></td>
+            <td>Dwarven Axe Quest (Circle Room)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Dwarf Soldier</td>
+            <td></td>
+            <td>Dwarven Axe Quest (Circle Room)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Minotaur Guard</td>
+            <td></td>
+            <td>Dark Pyramid Darashia</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Minotaur Archer</td>
+            <td></td>
+            <td>Dark Pyramid Darashia</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Minotaur</td>
+            <td></td>
+            <td>Dark Pyramid Darashia</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Bat</td>
+            <td></td>
+            <td>Bat Cave South of Thais</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Orc</td>
+            <td></td>
+            <td>Edron Orcs</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Orc Shaman</td>
+            <td></td>
+            <td>Orc Fortress Tower</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>War Wolf</td>
+            <td></td>
+            <td>Orc Fortress Tower</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Ragged Rabid Wolf</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Rabid Wolf</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Gloom Wolf</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Lion</td>
+            <td></td>
+            <td>Jakundaf Desert, Darama Desert</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Orc Spearman</td>
+            <td></td>
+            <td>Orc Fortress Tower, Edron Orcs</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Orc Warrior</td>
+            <td></td>
+            <td>Orc Fortress Surface</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Bonelord</td>
+            <td></td>
+            <td>Liberty Bay Bonelord Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Gazer</td>
+            <td></td>
+            <td>Liberty Bay Bonelords</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Rorc</td>
+            <td></td>
+            <td>Orc Fortress Surroundings</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Hyaena</td>
+            <td></td>
+            <td>Green Djinn Ankrahmun Entrance, Oasis Tomb</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Mercury Blob</td>
+            <td></td>
+            <td>Yalahar Alchemist Quarter</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Cobra</td>
+            <td></td>
+            <td>Talahu Surface (Hydra Island)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Troll Champion</td>
+            <td></td>
+            <td>Edron Troll Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Centipede</td>
+            <td></td>
+            <td>Port Hope Dworcs, Deeper Banuta, Tiquanda</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Orc Rider</td>
+            <td></td>
+            <td>Orc Fortress Quest</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Polar Bear</td>
+            <td></td>
+            <td>Nibelor</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Damaged Crystal Golem</td>
+            <td></td>
+            <td>Golem Workshop</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Quara Mantassin Scout</td>
+            <td></td>
+            <td>Malada</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Dark Magician</td>
+            <td></td>
+            <td>Yalahar Magician Quarter</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Dark Apprentice</td>
+            <td></td>
+            <td>Yalahar Magician Quarter</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Mad Scientist</td>
+            <td></td>
+            <td>Yalahar Magician Quarter</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Elephant</td>
+            <td></td>
+            <td>Tiquanda near Asura Palace</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Tiger</td>
+            <td></td>
+            <td>Meriana, Tiquanda</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Crab</td>
+            <td></td>
+            <td>Treasure Island -1/-2</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Pirate Ghost</td>
+            <td></td>
+            <td>Treasure Island, Nargor</td>
+            <td></td>
+        </tr>
+        
+    </table>
+</div>
+
+<div id="MediumTab" class="tabcontent">
+    <table id="tasks_table_medium" class="tasks_table">
+        <tr>
+            <th>Level</th>
+            <th>Monster</th>
+            <th>Rating</th>
+            <th>Suggested Spawn</th>
+            <th>Extra</th>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Haunted Treeling</td>
+            <td></td>
+            <td>Vengoth Surface</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Bonebeast</td>
+            <td></td>
+            <td>Mother of Scarabs Lair -4/-5, Edron Old Fortress -1</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Ancient Scarab</td>
+            <td></td>
+            <td>Mother of Scarabs Lair -4/-5</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Worker Golem</td>
+            <td></td>
+            <td>Oramond Catacombs - Golem stage</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>War Golem</td>
+            <td></td>
+            <td>Oramond Catacombs - Golem stage</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Exotic Bat</td>
+            <td></td>
+            <td>Exotic Cave Spider Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Exotic Cave Spider</td>
+            <td></td>
+            <td>Exotic Cave Spider Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Metal Gargoyle</td>
+            <td></td>
+            <td>Oramond Surface, Abandoned Sewers</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Wilting Leaf Golem</td>
+            <td></td>
+            <td>Dryad Gardens</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Vampire</td>
+            <td></td>
+            <td>Edron Vampire Crypt, Peninsula Tomb</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Vampire Bride</td>
+            <td></td>
+            <td>Edron Vampire Crypt</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Vampire Viscount</td>
+            <td></td>
+            <td>Edron Vampire Crypt</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Weakened Frazzlemaw</td>
+            <td></td>
+            <td>Feyrist Mini Rosha</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Enfeebled Silencer</td>
+            <td></td>
+            <td>Feyrist Mini Rosha</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Lumbering Carnivor</td>
+            <td></td>
+            <td>Carnivora's Rock</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Putrid Mummy</td>
+            <td></td>
+            <td>Caverna Exanima</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Ice Golem</td>
+            <td></td>
+            <td>Nibelor Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Bog Raider</td>
+            <td></td>
+            <td>Oramond Hydra Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Stonerefiner</td>
+            <td></td>
+            <td>Corym Mines Venore</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Sea Serpent</td>
+            <td></td>
+            <td>Svargrond Sea Serpent Area</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Young Sea Serpent</td>
+            <td></td>
+            <td>Svargrond Sea Serpent Area</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Stampor</td>
+            <td></td>
+            <td>Stampor Cave Muggy Plains</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Giant Spider</td>
+            <td></td>
+            <td>Port Hope Spider Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Lizard Zaogun</td>
+            <td></td>
+            <td>Lower Draken Walls</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Lizard Chosen</td>
+            <td></td>
+            <td>Temple of Equilibrium</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Lizard High Guard</td>
+            <td></td>
+            <td>Lizard City</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Lizard Legionnaire</td>
+            <td></td>
+            <td>Lizard City</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Lizard Dragon Priest</td>
+            <td></td>
+            <td>Lizard City (South mostly)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Eternal Guardian</td>
+            <td></td>
+            <td>Deeper Banuta</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Dragon</td>
+            <td></td>
+            <td>Yalahar Dragons, Edron Dragons</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Pirate Cutthroat</td>
+            <td></td>
+            <td>Yalahar Pirates</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Acolyte of the Cult</td>
+            <td></td>
+            <td>Yalahar Cults, Goroma Volcano</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Adept of the Cult</td>
+            <td></td>
+            <td>Yalahar Cults, Goroma Volcano</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Enlightened of the Cult</td>
+            <td></td>
+            <td>Yalahar Cults</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Dragon Lord</td>
+            <td></td>
+            <td>Fenrock DLs, POI DLs</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Frost Dragon</td>
+            <td></td>
+            <td>Chyllfroest</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Frost Dragon Hatchling</td>
+            <td></td>
+            <td>Chyllfroest</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Quara Predator</td>
+            <td></td>
+            <td>Sunken Quarter, Calassa</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Quara Pincher</td>
+            <td></td>
+            <td>Sunken Quarter, Calassa</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Quara Hydromancer</td>
+            <td></td>
+            <td>Sunken Quarter, Calassa</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Orc Cultist</td>
+            <td></td>
+            <td>Edron Orc Cults</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Orc Cult Priest</td>
+            <td></td>
+            <td>Edron Orc Cults</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Orc Cult Inquisitor</td>
+            <td></td>
+            <td>Edron Orc Cults</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Orc Cult Fanatic</td>
+            <td></td>
+            <td>Edron Orc Cults</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Orc Cult Minion</td>
+            <td></td>
+            <td>Edron Orc Cults</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Barkless Devotee</td>
+            <td></td>
+            <td>Ab'Dendriel Cults</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Barkless Fanatic</td>
+            <td></td>
+            <td>Ab'Dendriel Cults</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Minotaur Cult Follower</td>
+            <td></td>
+            <td>Mintwallin Cults</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Minotaur Cult Propher</td>
+            <td></td>
+            <td>Mintwallin Cults</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Minotaur Cult Zealot</td>
+            <td></td>
+            <td>Mintwallin Cults</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Mutated Bat</td>
+            <td></td>
+            <td>Farmine Mutated Bat/Tiger Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Souleater</td>
+            <td></td>
+            <td>Souleater Mountains</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Death Blob</td>
+            <td></td>
+            <td>Souleater Mountains</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Glooth Blob</td>
+            <td></td>
+            <td>Oramond West</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Blood Beast</td>
+            <td></td>
+            <td>Oramond West</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Rot Elemental</td>
+            <td></td>
+            <td>Oramond West</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Devourer</td>
+            <td></td>
+            <td>Oramond West</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Glooth Anemone</td>
+            <td></td>
+            <td>Oramond Wildlife Raid</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Pirat Cutthroat</td>
+            <td></td>
+            <td>The Wreckoning</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Pirat Bombardier</td>
+            <td></td>
+            <td>The Wreckoning</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Pirat Scoundrel</td>
+            <td></td>
+            <td>The Wreckoning</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Pirat Mate</td>
+            <td></td>
+            <td>The Wreckoning</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Faun</td>
+            <td></td>
+            <td>Feyrist Surface</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Pooka</td>
+            <td></td>
+            <td>Feyrist Surface</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Swan Maiden</td>
+            <td></td>
+            <td>Feyrist Surface</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Pixie</td>
+            <td></td>
+            <td>Feyrist Surface</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Nymph</td>
+            <td></td>
+            <td>Feyrist Surface</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Boogy</td>
+            <td></td>
+            <td>Dark Faun Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Twisted Pooka</td>
+            <td></td>
+            <td>Dark Faun Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Drillworm</td>
+            <td></td>
+            <td>Warzone 4</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Mutated Human</td>
+            <td></td>
+            <td>Yalahar Alchemist Quarter</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Undead Gladiator</td>
+            <td></td>
+            <td>Krailos Nightmare Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Clomp</td>
+            <td></td>
+            <td>Krailos Surface</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Ogre Brute</td>
+            <td></td>
+            <td>Krailos Surface</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Ogre Savage</td>
+            <td></td>
+            <td>Krailos Surface</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Ogre Shaman</td>
+            <td></td>
+            <td>Krailos Surface</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Orclops Ravager</td>
+            <td></td>
+            <td>Desecrated Glade</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Orclops Doomhauler</td>
+            <td></td>
+            <td>Desecrated Glade</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Crawler</td>
+            <td></td>
+            <td>Inner Hive</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Spidris</td>
+            <td></td>
+            <td>Inner Hive</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Kollos</td>
+            <td></td>
+            <td>Inner Hive</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Spitter</td>
+            <td></td>
+            <td>Inner Hive</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Waspoid</td>
+            <td></td>
+            <td>Inner Hive</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Warlock</td>
+            <td></td>
+            <td>Demona</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Misguided Thief</td>
+            <td></td>
+            <td>Misguided Camp</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Misguided Bully</td>
+            <td></td>
+            <td>Misguided Camp</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>High Voltage Elemental</td>
+            <td></td>
+            <td>Oramond Glooth Underground Raid, Warzone 5</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Deepling Scout</td>
+            <td></td>
+            <td>Fiehonja (way to Deathlings)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Deepling Spellsinger</td>
+            <td></td>
+            <td>Fiehonja Library</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Crystalcrusher</td>
+            <td></td>
+            <td>Crystal Grounds</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Carniphila</td>
+            <td></td>
+            <td>Tiquanda Laboratory</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Mutated Rat</td>
+            <td></td>
+            <td>Yalahar Arena Quarter</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Fire Elemental</td>
+            <td></td>
+            <td>Goroma Volcano, DHQ</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Zombie</td>
+            <td></td>
+            <td>Treasure Island</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Clay Guardian</td>
+            <td></td>
+            <td>Medusa Tower</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Omnivora</td>
+            <td></td>
+            <td>Medusa Tower</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Killer Caiman</td>
+            <td></td>
+            <td>Muggy Plains Killer Caimans</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Demon Skeleton</td>
+            <td></td>
+            <td>Ghostland Banshee Quest Area, Vengoth Surface</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Brimstone Bug</td>
+            <td></td>
+            <td>Northern Zao Plantations</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Wyvern</td>
+            <td></td>
+            <td>Mushroom Gardens</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Wiggler</td>
+            <td></td>
+            <td>Mushroom Gardens</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Banshee</td>
+            <td></td>
+            <td>Ghostland Banshee Quest Area</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Lich</td>
+            <td></td>
+            <td>Lich Hell, Ferumbras Tower -1</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Water Elemental</td>
+            <td></td>
+            <td>Water Elemental Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Corym Skirmisher</td>
+            <td></td>
+            <td>Coryms PH</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Corym Vanguard</td>
+            <td></td>
+            <td>Coryms PH</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Wailing Widow</td>
+            <td></td>
+            <td>Krailos Spider Lair</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Lancer Beetle</td>
+            <td></td>
+            <td>Northern Zao Plantations</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Green Djinn</td>
+            <td></td>
+            <td>Yalahar Djinn Area (depending on faction), Oasis Tomb -8</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Blue Djinn</td>
+            <td></td>
+            <td>Yalahar Djinn Area (depending on faction), Forgoten Tomb Edron</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Elder Bonelord</td>
+            <td></td>
+            <td>Liberty Bay Bonelords</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Braindeath</td>
+            <td></td>
+            <td>Liberty Bay Bonelords</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Crystal Spider</td>
+            <td></td>
+            <td>Nibelor Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Dwarf Geomancer</td>
+            <td></td>
+            <td>Dwarven Axe Quest (Circle Room), Beregar</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Barbarian Bloodwalker</td>
+            <td></td>
+            <td>Barbarian Camp</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Ice Witch</td>
+            <td></td>
+            <td>Barbarian Camp, Yalahar Magician Quarter</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Orc Marauder</td>
+            <td></td>
+            <td>Zao Orc Land</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Cyclops Drone</td>
+            <td></td>
+            <td>Mistrock</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Cyclops Smith</td>
+            <td></td>
+            <td>Mistrock</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Necromancer</td>
+            <td></td>
+            <td>Drefia</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Shadow Pupil</td>
+            <td></td>
+            <td>Drefia</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Blood Priest</td>
+            <td></td>
+            <td>Drefia</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Blood Hand</td>
+            <td></td>
+            <td>Drefia</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Forest Fury</td>
+            <td></td>
+            <td>Dryad Gardens</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Pirate Bucaneer</td>
+            <td></td>
+            <td>Nargor Quest</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Deepling Warrior</td>
+            <td></td>
+            <td>Fiehonja Library</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Pirate Corsair</td>
+            <td></td>
+            <td>Nargor Quest, Krailos Pirate Raid</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Massive Water Elemental</td>
+            <td></td>
+            <td>INQ Quaras</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Massive Fire Elemental</td>
+            <td></td>
+            <td>Hot Spot</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Massive Earth Elemental</td>
+            <td></td>
+            <td>Mushroom Gardens</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Earth Elemental</td>
+            <td></td>
+            <td>Crystal Grounds</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Energy Elemental</td>
+            <td></td>
+            <td>North west Ankrahmun levitate area, Energy Elemental Lair</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Lizard Snakecharmer</td>
+            <td></td>
+            <td>Chor</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Roaring Lion</td>
+            <td></td>
+            <td>Lion's Rock</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Mooh'tah Warrior</td>
+            <td></td>
+            <td>Oramond East Minos</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Execowtioner</td>
+            <td></td>
+            <td>Oramond East Minos</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Minotaur Hunter</td>
+            <td></td>
+            <td>Oramond East Minos</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Worm Priestess</td>
+            <td></td>
+            <td>Oramond East Minos</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Moohtant</td>
+            <td></td>
+            <td>Oramond East Minos</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Dragon Lord Hatching</td>
+            <td></td>
+            <td>Fenrock</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Dragon Hatching</td>
+            <td></td>
+            <td>Fenrock, Various Dragon Caves</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Deepling Guard</td>
+            <td></td>
+            <td>Fiehonja Library</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Shark</td>
+            <td></td>
+            <td>Krailos Shark Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Acid Blob</td>
+            <td></td>
+            <td>Yalahar Alchemist Quarter</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Quara Mantassin</td>
+            <td></td>
+            <td>Frozen Trench, Sunken Quarter</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Quara Constrictor</td>
+            <td></td>
+            <td>Frozen Trench</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Quara Constrictor Scout</td>
+            <td></td>
+            <td>Oramond West Raid</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Quara Predator Scout</td>
+            <td></td>
+            <td>Oramond West Raid</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Quara Hydromancer Scout</td>
+            <td></td>
+            <td>Oramond West Raid</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Quara Pincher Scout</td>
+            <td></td>
+            <td>Oramond West Raid</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Orc Berserker</td>
+            <td></td>
+            <td>Orc Fortress Tower</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Orc Warlord</td>
+            <td></td>
+            <td>Orc Fortress Quest</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Orc Leader</td>
+            <td></td>
+            <td>Orc Fortress Quest</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Broken Shaper</td>
+            <td></td>
+            <td>Astral Shaper Dungeon</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Twisted Shaper</td>
+            <td></td>
+            <td>Astral Shaper Dungeon</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Shaper Matriarch</td>
+            <td></td>
+            <td>Astral Shaper Dungeon</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Nightstalker</td>
+            <td></td>
+            <td>Yalahar Cemetery, Vandura Mountain</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Mutated Tiger</td>
+            <td></td>
+            <td>Yalahar Alchemist Quarter, Farmine Mutated Bat/Tiger Cave</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Efreet</td>
+            <td></td>
+            <td>Yalahar Djinn Area, Darashia Burster Spectre Djinns</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Marid</td>
+            <td></td>
+            <td>Yalahar Djinn Area, Darashia Burster Spectre Djinns</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Insectoid Worker</td>
+            <td></td>
+            <td>Hive Surface</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Swarmer</td>
+            <td></td>
+            <td>Hive Surface</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Priestess</td>
+            <td></td>
+            <td>Drefia, Lich Hell</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Gravedigger</td>
+            <td></td>
+            <td>Drefia</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Diabolic Imp</td>
+            <td></td>
+            <td>POI Levers, INQ Warlock seal</td>
+            <td></td>
+        </tr>
+        
+    </table>
+</div>
+
+<div id="HardTab" class="tabcontent">
+    <table id="tasks_table_hard" class="tasks_table">
+        <tr>
+            <th>Level</th>
+            <th>Monster</th>
+            <th>Rating</th>
+            <th>Suggested Spawn</th>
+            <th>Extra</th>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Chasm Spawn</td>
+            <td></td>
+            <td>Warzone 4 (650/h~)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Spiky Carnivor</td>
+            <td></td>
+            <td>Carnivora's Rock</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Menancing Carnivor</td>
+            <td></td>
+            <td>Carnivora's Rock</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Fury</td>
+            <td></td>
+            <td>Oramond Fury Dungeon</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Diremaw</td>
+            <td></td>
+            <td>Warzone 6</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Deepworm</td>
+            <td></td>
+            <td>Warzone 6</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Stone Devourer</td>
+            <td></td>
+            <td>Warzone 1-3</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Weeper</td>
+            <td></td>
+            <td>Warzone 1-3</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Orewalker</td>
+            <td></td>
+            <td>Warzone 1-3</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Lava Golem</td>
+            <td></td>
+            <td>Warzone 1-3</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Magma Crawler</td>
+            <td></td>
+            <td>Warzone 1-3</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Seacrest Serpent</td>
+            <td></td>
+            <td>Oramond Seacrest Grounds</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Infernalist</td>
+            <td></td>
+            <td>Fury Dungeon</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Vulcongra</td>
+            <td></td>
+            <td>Hot Spot, Lower Spike</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Ghastly Dragon</td>
+            <td></td>
+            <td>Draken Palace</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>Minotaur Amazon</td>
+            <td></td>
+            <td>Oramond East Minos</td>
+            <td></td>
+        </tr>
+        
+    </table>
+</div>
+
+    </section>
+    
+    <aside id="right-sidebar" class="right-sidebar">
+            <section id="banner-paragraph" class="right-sidebar__inner">
+                <article class="feature-item feature-item--discord">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Community</span>
+                        <h4 class="feature-item__title">Join the TibiaPal Discord</h4>
+                    </header>
+                    <p class="feature-item__body">
+                        The biggest, nerdiest & most knowledgeable Tibian <b>Discord</b> server.
+                    </p><br>
+                    <a class="feature-item__cta" href="https://discord.gg/kbjqY2VRa9" target="_blank" rel="noopener">
+                        discord.gg/kbjqY2VRa9
+                    </a>
+                </article>
+
+                <!-- Stream online (Embed) -->
+                <article id="stream-status" class="feature-item feature-item--stream-status" style="display: none">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Live now</span>
+                        <h4 class="feature-item__title">
+                            Live on <a href="https://www.kick.com/Kusnier" target="_blank" rel="noopener">Kick</a>
+                        </h4>
+                    </header>
+                    <div class="feature-item__frame feature-item__frame--16x9">
+                        <iframe src="" title="Kusnier Kick livestream" loading="lazy" allow="autoplay; fullscreen" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+                    </div>
+                </article>
+
+                <!-- IglaOTS -->
+                 <article id="iglaots-display" class="feature-item feature-item--igla">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Partner</span>
+                        <h4 class="feature-item__title">
+                            Join <a href="https://iglaots.net/?view=register&refcode=Kusnier" target="_blank" rel="noopener">IgłaOTS</a>, Real Tibia server with custom QOL & features!
+                        </h4>
+                    </header>
+                    <p class="feature-item__body">
+                        Register with below link to receive a custom TibiaPal Beaver backpack!
+                    </p><br>
+                    <div class="feature-item__frame feature-item__frame--16x9">
+                        <a href="https://iglaots.net/?view=register&refcode=Kusnier" target="_blank" rel="noopener">
+                            <video src=/images/iglaots.webm autoplay muted loop playsinline>
+                                Your browser does not support the video tag.
+                            </video>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Bestiary Arena -->
+                <article class="feature-item feature-item--bestiary">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Partner</span>
+                        <h4 class="feature-item__title">
+                            Browser-based idle Tibia:
+                            <a href="https://bestiaryarena.com/?t=tibiapal" target="_blank" rel="noopener">Bestiary Arena</a>
+                        </h4>
+                    </header>
+                    <div class="feature-item__frame">
+                        <iframe src="https://bestiaryarena.com/iframe-obs-4?tag=tibiapal" width="277" height="313" scrolling="no" loading="lazy" frameborder="0" title="Bestiary Arena"></iframe>
+                    </div>
+                </article>
+
+                <!-- Stream offline (YouTube video) -->
+                <article id="kick-offline" class="feature-item feature-item--youtube">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Content</span>
+                        <h4 class="feature-item__title">
+                            Watch our latest <a href="https://www.youtube.com/kusnierr" target="_blank" rel="noopener">YouTube</a> video!
+                        </h4>
+                    </header>
+                    <div class="feature-item__frame feature-item__frame--16x9">
+                        <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLC0KAO2SnwlREgB3ScVsAK9OeAqwLXq8-" title="Latest Kusnierr YouTube video" loading="lazy" allowfullscreen></iframe> 
+                    </div>
+                </article>
+            </section>
+           <!-- <div id="ads-container" class="right-sidebar__ads">
+                
+                <br>
+            </div>!-->
+            <br>
+        </aside>
+        <aside id="left-footer-space"></aside>
+        <footer id="footer"><!--
+            <p id="footerParagraph">
+                Tibia and all products related to Tibia are copyrighted by <a href="https://www.cipsoft.com"
+                    target="_blank">CipSoft GmbH</a>. The official
+                website of Tibia is <a href="https://www.tibia.com" target="_blank">tibia.com</a>.<br><br>
+                Created by Kusnier.
+            </p><br><br>!-->
+        </footer>
+        <aside id="right-footer-space"></aside>
+        </main>
+            <script>
+                //showAdblockPopup(); bump
+            </script>
+</body>
+</html>
