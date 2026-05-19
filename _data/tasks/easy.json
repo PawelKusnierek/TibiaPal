@@ -1,0 +1,710 @@
+{
+    "Toad": {
+        "level": "",
+        "rating": "",
+        "where": "Laguna Islands, Tainted Soul Cave",
+        "extra": ""
+    },
+    "Larva": {
+        "level": "",
+        "rating": "",
+        "where": "Ankrahmun Larva Caves, Mother of Scarabs Lair -1/-2",
+        "extra": ""
+    },
+    "Scarab": {
+        "level": "",
+        "rating": "",
+        "where": "Ankrahmun Larva Caves, Mother of Scarabs Lair -4/-5",
+        "extra": ""
+    },
+    "Blood Crab": {
+        "level": "",
+        "rating": "",
+        "where": "Laguna Blood Crab Caves",
+        "extra": ""
+    },
+    "Deepsea Blood Crab": {
+        "level": "",
+        "rating": "",
+        "where": "Sea Serpent Area Svargrond",
+        "extra": ""
+    },
+    "Salamander": {
+        "level": "",
+        "rating": "",
+        "where": "Venore Salamander Cave",
+        "extra": ""
+    },
+    "Emerald Damselfly": {
+        "level": "",
+        "rating": "",
+        "where": "Venore Salamander Cave",
+        "extra": ""
+    },
+    "Stalker": {
+        "level": "",
+        "rating": "",
+        "where": "Peninsula Tomb",
+        "extra": ""
+    },
+    "Ghost": {
+        "level": "",
+        "rating": "",
+        "where": "Peninsula Tomb",
+        "extra": ""
+    },
+    "Mummy": {
+        "level": "",
+        "rating": "",
+        "where": "Peninsula Tomb",
+        "extra": ""
+    },
+    "Marsh Stalker": {
+        "level": "",
+        "rating": "",
+        "where": "Venore Salamander Cave",
+        "extra": ""
+    },
+    "Gargoyle": {
+        "level": "",
+        "rating": "",
+        "where": "Meriana Gargoyle Cave",
+        "extra": ""
+    },
+    "Hunter": {
+        "level": "",
+        "rating": "",
+        "where": "Poacher's Cave (Hunter stage)",
+        "extra": ""
+    },
+    "Poacher": {
+        "level": "",
+        "rating": "",
+        "where": "Poacher's Cave (Hunter stage)",
+        "extra": ""
+    },
+    "Boar": {
+        "level": "",
+        "rating": "",
+        "where": "Poacher's Cave (Wildlife stage)",
+        "extra": ""
+    },
+    "Bear": {
+        "level": "",
+        "rating": "",
+        "where": "Poacher's Cave (Wildlife stage)",
+        "extra": ""
+    },
+    "Wild Warrior": {
+        "level": "",
+        "rating": "",
+        "where": "Dark Cathedral",
+        "extra": ""
+    },
+    "Bandit": {
+        "level": "",
+        "rating": "",
+        "where": "Dark Cathedral",
+        "extra": ""
+    },
+    "Dark Monk": {
+        "level": "",
+        "rating": "",
+        "where": "Dark Cathedral",
+        "extra": ""
+    },
+    "Smuggler": {
+        "level": "",
+        "rating": "",
+        "where": "Dark Cathedral",
+        "extra": ""
+    },
+    "Assassin": {
+        "level": "",
+        "rating": "",
+        "where": "Dark Cathedral",
+        "extra": ""
+    },
+    "Pirate Marauder": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Pirates",
+        "extra": ""
+    },
+    "Novice of the Cult": {
+        "level": "",
+        "rating": "",
+        "where": "Liberty Bay Cults -1/-2",
+        "extra": ""
+    },
+    "Swamp Troll": {
+        "level": "",
+        "rating": "",
+        "where": "Port Hope Swamp Trolls Cave",
+        "extra": ""
+    },
+    "Corym Charlatan": {
+        "level": "",
+        "rating": "",
+        "where": "Coryms PH, Coryms Venore",
+        "extra": ""
+    },
+    "Mammoth": {
+        "level": "",
+        "rating": "",
+        "where": "Svargrond Mammoth Mountain (South west from depot)",
+        "extra": ""
+    },
+    "Winter Wolf": {
+        "level": "",
+        "rating": "",
+        "where": "Svargrond Mammoth Mountain (South west from depot)",
+        "extra": ""
+    },
+    "Kongra": {
+        "level": "",
+        "rating": "",
+        "where": "Port Hope Ape City",
+        "extra": ""
+    },
+    "Sibang": {
+        "level": "",
+        "rating": "",
+        "where": "Port Hope Ape City",
+        "extra": ""
+    },
+    "Ghoul": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Cemetery, Mount Sternum, Edron Vampire Crypt -1/-2",
+        "extra": ""
+    },
+    "Skeleton": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Cemetery, Mount Sternum, Edron Vampire Crypt -1/-2",
+        "extra": ""
+    },
+    "Slime": {
+        "level": "",
+        "rating": "",
+        "where": "Vengoth Surface",
+        "extra": ""
+    },
+    "Gnarlhound": {
+        "level": "",
+        "rating": "",
+        "where": "Zao Gnarlhound Cave",
+        "extra": ""
+    },
+    "Lizard Templar": {
+        "level": "",
+        "rating": "",
+        "where": "Chor",
+        "extra": ""
+    },
+    "Lizard Sentinel": {
+        "level": "",
+        "rating": "",
+        "where": "Chor",
+        "extra": ""
+    },
+    "Crocodile": {
+        "level": "",
+        "rating": "",
+        "where": "Port Hope Crocodile Cave",
+        "extra": ""
+    },
+    "Rotworm": {
+        "level": "",
+        "rating": "",
+        "where": "Darashia Rotworms, Liberty Bay Rotworms",
+        "extra": ""
+    },
+    "Tortoise": {
+        "level": "",
+        "rating": "",
+        "where": "Laguna Islands Tortoise Caves",
+        "extra": ""
+    },
+    "Thornback Tortoise": {
+        "level": "",
+        "rating": "",
+        "where": "Laguna Islands Tortoise Caves",
+        "extra": ""
+    },
+    "Leaf Golem": {
+        "level": "",
+        "rating": "",
+        "where": "Dryad Gardens",
+        "extra": ""
+    },
+    "Terramite": {
+        "level": "",
+        "rating": "",
+        "where": "Darashia Terramite Cave",
+        "extra": ""
+    },
+    "Terror Bird": {
+        "level": "",
+        "rating": "",
+        "where": "Southern Tiquanda Coast",
+        "extra": ""
+    },
+    "Crypt Shambler": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Cemetery, Mount Sternum, Ramoa -1/-2",
+        "extra": ""
+    },
+    "Frost Giant": {
+        "level": "",
+        "rating": "",
+        "where": "Nibelor",
+        "extra": ""
+    },
+    "Carrion Worm": {
+        "level": "",
+        "rating": "",
+        "where": "Liberty Bay Rotworms",
+        "extra": ""
+    },
+    "Merlkin": {
+        "level": "",
+        "rating": "",
+        "where": "Port Hope Ape City",
+        "extra": ""
+    },
+    "Frost Giantess": {
+        "level": "",
+        "rating": "",
+        "where": "Nibelor",
+        "extra": ""
+    },
+    "Panda": {
+        "level": "",
+        "rating": "",
+        "where": "Southern Tiquanda Coast",
+        "extra": ""
+    },
+    "Deepling Worker": {
+        "level": "",
+        "rating": "",
+        "where": "Fiehonja",
+        "extra": ""
+    },
+    "Fire Devil": {
+        "level": "",
+        "rating": "",
+        "where": "Spike Sword Quest",
+        "extra": ""
+    },
+    "Swampling": {
+        "level": "",
+        "rating": "",
+        "where": "Tiquanda Laboratory, Venore Salamander Cave",
+        "extra": ""
+    },
+    "Spit Nettle": {
+        "level": "",
+        "rating": "",
+        "where": "Tiquanda Laboratory",
+        "extra": ""
+    },
+    "Insect Swarm": {
+        "level": "",
+        "rating": "",
+        "where": "Horestis Tomb (World Change inactive)",
+        "extra": ""
+    },
+    "Gozzler": {
+        "level": "",
+        "rating": "",
+        "where": "Farmine Mines",
+        "extra": ""
+    },
+    "Cyclops": {
+        "level": "",
+        "rating": "",
+        "where": "Venore Cyclops, Mistrock",
+        "extra": ""
+    },
+    "Valkyrie": {
+        "level": "",
+        "rating": "",
+        "where": "Amazon Camp",
+        "extra": ""
+    },
+    "Nomad": {
+        "level": "",
+        "rating": "",
+        "where": "Nomad Cave",
+        "extra": ""
+    },
+    "Barbarian Skullhunter": {
+        "level": "",
+        "rating": "",
+        "where": "Barbarian Camp",
+        "extra": ""
+    },
+    "Barbarian Headhunter": {
+        "level": "",
+        "rating": "",
+        "where": "Barbarian Camp",
+        "extra": ""
+    },
+    "Barbarian Brutetamer": {
+        "level": "",
+        "rating": "",
+        "where": "Barbarian Camp",
+        "extra": ""
+    },
+    "Gladiator": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Arena Quarter",
+        "extra": ""
+    },
+    "Gang Member": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Trade Quarter",
+        "extra": ""
+    },
+    "Crazed Beggar": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Trade Quarter, Yalahar Factory Quarter",
+        "extra": ""
+    },
+    "Monk": {
+        "level": "",
+        "rating": "",
+        "where": "Edron, Isle of Kings",
+        "extra": ""
+    },
+    "Witch": {
+        "level": "",
+        "rating": "",
+        "where": "Dark Cathedral -2, Libery Bay Cults",
+        "extra": ""
+    },
+    "Amazon": {
+        "level": "",
+        "rating": "",
+        "where": "Amazon Camp",
+        "extra": ""
+    },
+    "Stone Golem": {
+        "level": "",
+        "rating": "",
+        "where": "Goroma Volcano",
+        "extra": ""
+    },
+    "Damaged Worker Golem": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Factory Surface",
+        "extra": ""
+    },
+    "Elf": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Elves",
+        "extra": ""
+    },
+    "Elf Scout": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Elves",
+        "extra": ""
+    },
+    "Elf Arcanist": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Elves",
+        "extra": ""
+    },
+    "Minotaur Mage": {
+        "level": "",
+        "rating": "",
+        "where": "Dark Pyramid Darashia",
+        "extra": ""
+    },
+    "Scorpion": {
+        "level": "",
+        "rating": "",
+        "where": "Drefia Entrance, Venore Dragon Lair",
+        "extra": ""
+    },
+    "Dworc Voodoomaster": {
+        "level": "",
+        "rating": "",
+        "where": "Port Hope Dworcs",
+        "extra": ""
+    },
+    "Dworc Fleshhunter": {
+        "level": "",
+        "rating": "",
+        "where": "Port Hope Dworcs",
+        "extra": ""
+    },
+    "Dworc Venomsniper": {
+        "level": "",
+        "rating": "",
+        "where": "Port Hope Dworcs",
+        "extra": ""
+    },
+    "Chakoya Tribewarden": {
+        "level": "",
+        "rating": "",
+        "where": "Nibelor Chakoyas",
+        "extra": ""
+    },
+    "Chakoya Toolshaper": {
+        "level": "",
+        "rating": "",
+        "where": "Nibelor Chakoyas",
+        "extra": ""
+    },
+    "Chakoya Windcaller": {
+        "level": "",
+        "rating": "",
+        "where": "Nibelor Chakoyas",
+        "extra": ""
+    },
+    "Skeleton Warrior": {
+        "level": "",
+        "rating": "",
+        "where": "Carlin Ghostland, Edron Vampire Crypt -1/-2",
+        "extra": ""
+    },
+    "Pirate Skeleton": {
+        "level": "",
+        "rating": "",
+        "where": "Treasure Island, Nargor",
+        "extra": ""
+    },
+    "Goblin Assassin": {
+        "level": "",
+        "rating": "",
+        "where": "Edron Goblin Cave, Femor Hills",
+        "extra": ""
+    },
+    "Goblin Scavenger": {
+        "level": "",
+        "rating": "",
+        "where": "Edron Goblin Cave, Femor Hills",
+        "extra": ""
+    },
+    "Dwarf": {
+        "level": "",
+        "rating": "",
+        "where": "Cormaya Dwarves",
+        "extra": ""
+    },
+    "Dwarf Guard": {
+        "level": "",
+        "rating": "",
+        "where": "Dwarven Axe Quest (Circle Room)",
+        "extra": ""
+    },
+    "Dwarf Soldier": {
+        "level": "",
+        "rating": "",
+        "where": "Dwarven Axe Quest (Circle Room)",
+        "extra": ""
+    },
+    "Minotaur Guard": {
+        "level": "",
+        "rating": "",
+        "where": "Dark Pyramid Darashia",
+        "extra": ""
+    },
+    "Minotaur Archer": {
+        "level": "",
+        "rating": "",
+        "where": "Dark Pyramid Darashia",
+        "extra": ""
+    },
+    "Minotaur": {
+        "level": "",
+        "rating": "",
+        "where": "Dark Pyramid Darashia",
+        "extra": ""
+    },
+    "Bat": {
+        "level": "",
+        "rating": "",
+        "where": "Bat Cave South of Thais",
+        "extra": ""
+    },
+    "Orc": {
+        "level": "",
+        "rating": "",
+        "where": "Edron Orcs",
+        "extra": ""
+    },
+    "Orc Shaman": {
+        "level": "",
+        "rating": "",
+        "where": "Orc Fortress Tower",
+        "extra": ""
+    },
+    "War Wolf": {
+        "level": "",
+        "rating": "",
+        "where": "Orc Fortress Tower",
+        "extra": ""
+    },
+    "Ragged Rabid Wolf": {
+        "level": "",
+        "rating": "",
+        "where": "",
+        "extra": ""
+    },
+    "Rabid Wolf": {
+        "level": "",
+        "rating": "",
+        "where": "",
+        "extra": ""
+    },
+    "Gloom Wolf": {
+        "level": "",
+        "rating": "",
+        "where": "",
+        "extra": ""
+    },
+    "Lion": {
+        "level": "",
+        "rating": "",
+        "where": "Jakundaf Desert, Darama Desert",
+        "extra": ""
+    },
+    "Orc Spearman": {
+        "level": "",
+        "rating": "",
+        "where": "Orc Fortress Tower, Edron Orcs",
+        "extra": ""
+    },
+    "Orc Warrior": {
+        "level": "",
+        "rating": "",
+        "where": "Orc Fortress Surface",
+        "extra": ""
+    },
+    "Bonelord": {
+        "level": "",
+        "rating": "",
+        "where": "Liberty Bay Bonelord Cave",
+        "extra": ""
+    },
+    "Gazer": {
+        "level": "",
+        "rating": "",
+        "where": "Liberty Bay Bonelords",
+        "extra": ""
+    },
+    "Rorc": {
+        "level": "",
+        "rating": "",
+        "where": "Orc Fortress Surroundings",
+        "extra": ""
+    },
+    "Hyaena": {
+        "level": "",
+        "rating": "",
+        "where": "Green Djinn Ankrahmun Entrance, Oasis Tomb",
+        "extra": ""
+    },
+    "Mercury Blob": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Alchemist Quarter",
+        "extra": ""
+    },
+    "Cobra": {
+        "level": "",
+        "rating": "",
+        "where": "Talahu Surface (Hydra Island)",
+        "extra": ""
+    },
+    "Troll Champion": {
+        "level": "",
+        "rating": "",
+        "where": "Edron Troll Cave",
+        "extra": ""
+    },
+    "Centipede": {
+        "level": "",
+        "rating": "",
+        "where": "Port Hope Dworcs, Deeper Banuta, Tiquanda",
+        "extra": ""
+    },
+    "Orc Rider": {
+        "level": "",
+        "rating": "",
+        "where": "Orc Fortress Quest",
+        "extra": ""
+    },
+    "Polar Bear": {
+        "level": "",
+        "rating": "",
+        "where": "Nibelor",
+        "extra": ""
+    },
+    "Damaged Crystal Golem": {
+        "level": "",
+        "rating": "",
+        "where": "Golem Workshop",
+        "extra": ""
+    },
+    "Quara Mantassin Scout": {
+        "level": "",
+        "rating": "",
+        "where": "Malada",
+        "extra": ""
+    },
+    "Dark Magician": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Magician Quarter",
+        "extra": ""
+    },
+    "Dark Apprentice": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Magician Quarter",
+        "extra": ""
+    },
+    "Mad Scientist": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Magician Quarter",
+        "extra": ""
+    },
+    "Elephant": {
+        "level": "",
+        "rating": "",
+        "where": "Tiquanda near Asura Palace",
+        "extra": ""
+    },
+    "Tiger": {
+        "level": "",
+        "rating": "",
+        "where": "Meriana, Tiquanda",
+        "extra": ""
+    },
+    "Crab": {
+        "level": "",
+        "rating": "",
+        "where": "Treasure Island -1/-2",
+        "extra": ""
+    },
+    "Pirate Ghost": {
+        "level": "",
+        "rating": "",
+        "where": "Treasure Island, Nargor",
+        "extra": ""
+    }
+}

@@ -1,0 +1,992 @@
+{
+    "Haunted Treeling": {
+        "level": "",
+        "rating": "",
+        "where": "Vengoth Surface",
+        "extra": ""
+    },
+    "Bonebeast": {
+        "level": "",
+        "rating": "",
+        "where": "Mother of Scarabs Lair -4/-5, Edron Old Fortress -1",
+        "extra": ""
+    },
+    "Ancient Scarab": {
+        "level": "",
+        "rating": "",
+        "where": "Mother of Scarabs Lair -4/-5",
+        "extra": ""
+    },
+    "Worker Golem": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond Catacombs - Golem stage",
+        "extra": ""
+    },
+    "War Golem": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond Catacombs - Golem stage",
+        "extra": ""
+    },
+    "Exotic Bat": {
+        "level": "",
+        "rating": "",
+        "where": "Exotic Cave Spider Cave",
+        "extra": ""
+    },
+    "Exotic Cave Spider": {
+        "level": "",
+        "rating": "",
+        "where": "Exotic Cave Spider Cave",
+        "extra": ""
+    },
+    "Metal Gargoyle": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond Surface, Abandoned Sewers",
+        "extra": ""
+    },
+    "Wilting Leaf Golem": {
+        "level": "",
+        "rating": "",
+        "where": "Dryad Gardens",
+        "extra": ""
+    },
+    "Vampire": {
+        "level": "",
+        "rating": "",
+        "where": "Edron Vampire Crypt, Peninsula Tomb",
+        "extra": ""
+    },
+    "Vampire Bride": {
+        "level": "",
+        "rating": "",
+        "where": "Edron Vampire Crypt",
+        "extra": ""
+    },
+    "Vampire Viscount": {
+        "level": "",
+        "rating": "",
+        "where": "Edron Vampire Crypt",
+        "extra": ""
+    },
+    "Weakened Frazzlemaw": {
+        "level": "",
+        "rating": "",
+        "where": "Feyrist Mini Rosha",
+        "extra": ""
+    },
+    "Enfeebled Silencer": {
+        "level": "",
+        "rating": "",
+        "where": "Feyrist Mini Rosha",
+        "extra": ""
+    },
+    "Lumbering Carnivor": {
+        "level": "",
+        "rating": "",
+        "where": "Carnivora's Rock",
+        "extra": ""
+    },
+    "Putrid Mummy": {
+        "level": "",
+        "rating": "",
+        "where": "Caverna Exanima",
+        "extra": ""
+    },
+    "Ice Golem": {
+        "level": "",
+        "rating": "",
+        "where": "Nibelor Cave",
+        "extra": ""
+    },
+    "Bog Raider": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond Hydra Cave",
+        "extra": ""
+    },
+    "Stonerefiner": {
+        "level": "",
+        "rating": "",
+        "where": "Corym Mines Venore",
+        "extra": ""
+    },
+    "Sea Serpent": {
+        "level": "",
+        "rating": "",
+        "where": "Svargrond Sea Serpent Area",
+        "extra": ""
+    },
+    "Young Sea Serpent": {
+        "level": "",
+        "rating": "",
+        "where": "Svargrond Sea Serpent Area",
+        "extra": ""
+    },
+    "Stampor": {
+        "level": "",
+        "rating": "",
+        "where": "Stampor Cave Muggy Plains",
+        "extra": ""
+    },
+    "Giant Spider": {
+        "level": "",
+        "rating": "",
+        "where": "Port Hope Spider Cave",
+        "extra": ""
+    },
+    "Lizard Zaogun": {
+        "level": "",
+        "rating": "",
+        "where": "Lower Draken Walls",
+        "extra": ""
+    },
+    "Lizard Chosen": {
+        "level": "",
+        "rating": "",
+        "where": "Temple of Equilibrium",
+        "extra": ""
+    },
+    "Lizard High Guard": {
+        "level": "",
+        "rating": "",
+        "where": "Lizard City",
+        "extra": ""
+    },
+    "Lizard Legionnaire": {
+        "level": "",
+        "rating": "",
+        "where": "Lizard City",
+        "extra": ""
+    },
+    "Lizard Dragon Priest": {
+        "level": "",
+        "rating": "",
+        "where": "Lizard City (South mostly)",
+        "extra": ""
+    },
+    "Eternal Guardian": {
+        "level": "",
+        "rating": "",
+        "where": "Deeper Banuta",
+        "extra": ""
+    },
+    "Dragon": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Dragons, Edron Dragons",
+        "extra": ""
+    },
+    "Pirate Cutthroat": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Pirates",
+        "extra": ""
+    },
+    "Acolyte of the Cult": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Cults, Goroma Volcano",
+        "extra": ""
+    },
+    "Adept of the Cult": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Cults, Goroma Volcano",
+        "extra": ""
+    },
+    "Enlightened of the Cult": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Cults",
+        "extra": ""
+    },
+    "Dragon Lord": {
+        "level": "",
+        "rating": "",
+        "where": "Fenrock DLs, POI DLs",
+        "extra": ""
+    },
+    "Frost Dragon": {
+        "level": "",
+        "rating": "",
+        "where": "Chyllfroest",
+        "extra": ""
+    },
+    "Frost Dragon Hatchling": {
+        "level": "",
+        "rating": "",
+        "where": "Chyllfroest",
+        "extra": ""
+    },
+    "Quara Predator": {
+        "level": "",
+        "rating": "",
+        "where": "Sunken Quarter, Calassa",
+        "extra": ""
+    },
+    "Quara Pincher": {
+        "level": "",
+        "rating": "",
+        "where": "Sunken Quarter, Calassa",
+        "extra": ""
+    },
+    "Quara Hydromancer": {
+        "level": "",
+        "rating": "",
+        "where": "Sunken Quarter, Calassa",
+        "extra": ""
+    },
+    "Orc Cultist": {
+        "level": "",
+        "rating": "",
+        "where": "Edron Orc Cults",
+        "extra": ""
+    },
+    "Orc Cult Priest": {
+        "level": "",
+        "rating": "",
+        "where": "Edron Orc Cults",
+        "extra": ""
+    },
+    "Orc Cult Inquisitor": {
+        "level": "",
+        "rating": "",
+        "where": "Edron Orc Cults",
+        "extra": ""
+    },
+    "Orc Cult Fanatic": {
+        "level": "",
+        "rating": "",
+        "where": "Edron Orc Cults",
+        "extra": ""
+    },
+    "Orc Cult Minion": {
+        "level": "",
+        "rating": "",
+        "where": "Edron Orc Cults",
+        "extra": ""
+    },
+    "Barkless Devotee": {
+        "level": "",
+        "rating": "",
+        "where": "Ab'Dendriel Cults",
+        "extra": ""
+    },
+    "Barkless Fanatic": {
+        "level": "",
+        "rating": "",
+        "where": "Ab'Dendriel Cults",
+        "extra": ""
+    },
+    "Minotaur Cult Follower": {
+        "level": "",
+        "rating": "",
+        "where": "Mintwallin Cults",
+        "extra": ""
+    },
+    "Minotaur Cult Propher": {
+        "level": "",
+        "rating": "",
+        "where": "Mintwallin Cults",
+        "extra": ""
+    },
+    "Minotaur Cult Zealot": {
+        "level": "",
+        "rating": "",
+        "where": "Mintwallin Cults",
+        "extra": ""
+    },
+    "Mutated Bat": {
+        "level": "",
+        "rating": "",
+        "where": "Farmine Mutated Bat/Tiger Cave",
+        "extra": ""
+    },
+    "Souleater": {
+        "level": "",
+        "rating": "",
+        "where": "Souleater Mountains",
+        "extra": ""
+    },
+    "Death Blob": {
+        "level": "",
+        "rating": "",
+        "where": "Souleater Mountains",
+        "extra": ""
+    },
+    "Glooth Blob": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond West",
+        "extra": ""
+    },
+    "Blood Beast": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond West",
+        "extra": ""
+    },
+    "Rot Elemental": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond West",
+        "extra": ""
+    },
+    "Devourer": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond West",
+        "extra": ""
+    },
+    "Glooth Anemone": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond Wildlife Raid",
+        "extra": ""
+    },
+    "Pirat Cutthroat": {
+        "level": "",
+        "rating": "",
+        "where": "The Wreckoning",
+        "extra": ""
+    },
+    "Pirat Bombardier": {
+        "level": "",
+        "rating": "",
+        "where": "The Wreckoning",
+        "extra": ""
+    },
+    "Pirat Scoundrel": {
+        "level": "",
+        "rating": "",
+        "where": "The Wreckoning",
+        "extra": ""
+    },
+    "Pirat Mate": {
+        "level": "",
+        "rating": "",
+        "where": "The Wreckoning",
+        "extra": ""
+    },
+    "Faun": {
+        "level": "",
+        "rating": "",
+        "where": "Feyrist Surface",
+        "extra": ""
+    },
+    "Pooka": {
+        "level": "",
+        "rating": "",
+        "where": "Feyrist Surface",
+        "extra": ""
+    },
+    "Swan Maiden": {
+        "level": "",
+        "rating": "",
+        "where": "Feyrist Surface",
+        "extra": ""
+    },
+    "Pixie": {
+        "level": "",
+        "rating": "",
+        "where": "Feyrist Surface",
+        "extra": ""
+    },
+    "Nymph": {
+        "level": "",
+        "rating": "",
+        "where": "Feyrist Surface",
+        "extra": ""
+    },
+    "Boogy": {
+        "level": "",
+        "rating": "",
+        "where": "Dark Faun Cave",
+        "extra": ""
+    },
+    "Twisted Pooka": {
+        "level": "",
+        "rating": "",
+        "where": "Dark Faun Cave",
+        "extra": ""
+    },
+    "Drillworm": {
+        "level": "",
+        "rating": "",
+        "where": "Warzone 4",
+        "extra": ""
+    },
+    "Mutated Human": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Alchemist Quarter",
+        "extra": ""
+    },
+    "Undead Gladiator": {
+        "level": "",
+        "rating": "",
+        "where": "Krailos Nightmare Cave",
+        "extra": ""
+    },
+    "Clomp": {
+        "level": "",
+        "rating": "",
+        "where": "Krailos Surface",
+        "extra": ""
+    },
+    "Ogre Brute": {
+        "level": "",
+        "rating": "",
+        "where": "Krailos Surface",
+        "extra": ""
+    },
+    "Ogre Savage": {
+        "level": "",
+        "rating": "",
+        "where": "Krailos Surface",
+        "extra": ""
+    },
+    "Ogre Shaman": {
+        "level": "",
+        "rating": "",
+        "where": "Krailos Surface",
+        "extra": ""
+    },
+    "Orclops Ravager": {
+        "level": "",
+        "rating": "",
+        "where": "Desecrated Glade",
+        "extra": ""
+    },
+    "Orclops Doomhauler": {
+        "level": "",
+        "rating": "",
+        "where": "Desecrated Glade",
+        "extra": ""
+    },
+    "Crawler": {
+        "level": "",
+        "rating": "",
+        "where": "Inner Hive",
+        "extra": ""
+    },
+    "Spidris": {
+        "level": "",
+        "rating": "",
+        "where": "Inner Hive",
+        "extra": ""
+    },
+    "Kollos": {
+        "level": "",
+        "rating": "",
+        "where": "Inner Hive",
+        "extra": ""
+    },
+    "Spitter": {
+        "level": "",
+        "rating": "",
+        "where": "Inner Hive",
+        "extra": ""
+    },
+    "Waspoid": {
+        "level": "",
+        "rating": "",
+        "where": "Inner Hive",
+        "extra": ""
+    },
+    "Warlock": {
+        "level": "",
+        "rating": "",
+        "where": "Demona",
+        "extra": ""
+    },
+    "Misguided Thief": {
+        "level": "",
+        "rating": "",
+        "where": "Misguided Camp",
+        "extra": ""
+    },
+    "Misguided Bully": {
+        "level": "",
+        "rating": "",
+        "where": "Misguided Camp",
+        "extra": ""
+    },
+    "High Voltage Elemental": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond Glooth Underground Raid, Warzone 5",
+        "extra": ""
+    },
+    "Deepling Scout": {
+        "level": "",
+        "rating": "",
+        "where": "Fiehonja (way to Deathlings)",
+        "extra": ""
+    },
+    "Deepling Spellsinger": {
+        "level": "",
+        "rating": "",
+        "where": "Fiehonja Library",
+        "extra": ""
+    },
+    "Crystalcrusher": {
+        "level": "",
+        "rating": "",
+        "where": "Crystal Grounds",
+        "extra": ""
+    },
+    "Carniphila": {
+        "level": "",
+        "rating": "",
+        "where": "Tiquanda Laboratory",
+        "extra": ""
+    },
+    "Mutated Rat": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Arena Quarter",
+        "extra": ""
+    },
+    "Fire Elemental": {
+        "level": "",
+        "rating": "",
+        "where": "Goroma Volcano, DHQ",
+        "extra": ""
+    },
+    "Zombie": {
+        "level": "",
+        "rating": "",
+        "where": "Treasure Island",
+        "extra": ""
+    },
+    "Clay Guardian": {
+        "level": "",
+        "rating": "",
+        "where": "Medusa Tower",
+        "extra": ""
+    },
+    "Omnivora": {
+        "level": "",
+        "rating": "",
+        "where": "Medusa Tower",
+        "extra": ""
+    },
+    "Killer Caiman": {
+        "level": "",
+        "rating": "",
+        "where": "Muggy Plains Killer Caimans",
+        "extra": ""
+    },
+    "Demon Skeleton": {
+        "level": "",
+        "rating": "",
+        "where": "Ghostland Banshee Quest Area, Vengoth Surface",
+        "extra": ""
+    },
+    "Brimstone Bug": {
+        "level": "",
+        "rating": "",
+        "where": "Northern Zao Plantations",
+        "extra": ""
+    },
+    "Wyvern": {
+        "level": "",
+        "rating": "",
+        "where": "Mushroom Gardens",
+        "extra": ""
+    },
+    "Wiggler": {
+        "level": "",
+        "rating": "",
+        "where": "Mushroom Gardens",
+        "extra": ""
+    },
+    "Banshee": {
+        "level": "",
+        "rating": "",
+        "where": "Ghostland Banshee Quest Area",
+        "extra": ""
+    },
+    "Lich": {
+        "level": "",
+        "rating": "",
+        "where": "Lich Hell, Ferumbras Tower -1",
+        "extra": ""
+    },
+    "Water Elemental": {
+        "level": "",
+        "rating": "",
+        "where": "Water Elemental Cave",
+        "extra": ""
+    },
+    "Corym Skirmisher": {
+        "level": "",
+        "rating": "",
+        "where": "Coryms PH",
+        "extra": ""
+    },
+    "Corym Vanguard": {
+        "level": "",
+        "rating": "",
+        "where": "Coryms PH",
+        "extra": ""
+    },
+    "Wailing Widow": {
+        "level": "",
+        "rating": "",
+        "where": "Krailos Spider Lair",
+        "extra": ""
+    },
+    "Lancer Beetle": {
+        "level": "",
+        "rating": "",
+        "where": "Northern Zao Plantations",
+        "extra": ""
+    },
+    "Green Djinn": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Djinn Area (depending on faction), Oasis Tomb -8",
+        "extra": ""
+    },
+    "Blue Djinn": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Djinn Area (depending on faction), Forgoten Tomb Edron",
+        "extra": ""
+    },
+    "Elder Bonelord": {
+        "level": "",
+        "rating": "",
+        "where": "Liberty Bay Bonelords",
+        "extra": ""
+    },
+    "Braindeath": {
+        "level": "",
+        "rating": "",
+        "where": "Liberty Bay Bonelords",
+        "extra": ""
+    },
+    "Crystal Spider": {
+        "level": "",
+        "rating": "",
+        "where": "Nibelor Cave",
+        "extra": ""
+    },
+    "Dwarf Geomancer": {
+        "level": "",
+        "rating": "",
+        "where": "Dwarven Axe Quest (Circle Room), Beregar",
+        "extra": ""
+    },
+    "Barbarian Bloodwalker": {
+        "level": "",
+        "rating": "",
+        "where": "Barbarian Camp",
+        "extra": ""
+    },
+    "Ice Witch": {
+        "level": "",
+        "rating": "",
+        "where": "Barbarian Camp, Yalahar Magician Quarter",
+        "extra": ""
+    },
+    "Orc Marauder": {
+        "level": "",
+        "rating": "",
+        "where": "Zao Orc Land",
+        "extra": ""
+    },
+    "Cyclops Drone": {
+        "level": "",
+        "rating": "",
+        "where": "Mistrock",
+        "extra": ""
+    },
+    "Cyclops Smith": {
+        "level": "",
+        "rating": "",
+        "where": "Mistrock",
+        "extra": ""
+    },
+    "Necromancer": {
+        "level": "",
+        "rating": "",
+        "where": "Drefia",
+        "extra": ""
+    },
+    "Shadow Pupil": {
+        "level": "",
+        "rating": "",
+        "where": "Drefia",
+        "extra": ""
+    },
+    "Blood Priest": {
+        "level": "",
+        "rating": "",
+        "where": "Drefia",
+        "extra": ""
+    },
+    "Blood Hand": {
+        "level": "",
+        "rating": "",
+        "where": "Drefia",
+        "extra": ""
+    },
+    "Forest Fury": {
+        "level": "",
+        "rating": "",
+        "where": "Dryad Gardens",
+        "extra": ""
+    },
+    "Pirate Bucaneer": {
+        "level": "",
+        "rating": "",
+        "where": "Nargor Quest",
+        "extra": ""
+    },
+    "Deepling Warrior": {
+        "level": "",
+        "rating": "",
+        "where": "Fiehonja Library",
+        "extra": ""
+    },
+    "Pirate Corsair": {
+        "level": "",
+        "rating": "",
+        "where": "Nargor Quest, Krailos Pirate Raid",
+        "extra": ""
+    },
+    "Massive Water Elemental": {
+        "level": "",
+        "rating": "",
+        "where": "INQ Quaras",
+        "extra": ""
+    },
+    "Massive Fire Elemental": {
+        "level": "",
+        "rating": "",
+        "where": "Hot Spot",
+        "extra": ""
+    },
+    "Massive Earth Elemental": {
+        "level": "",
+        "rating": "",
+        "where": "Mushroom Gardens",
+        "extra": ""
+    },
+    "Earth Elemental": {
+        "level": "",
+        "rating": "",
+        "where": "Crystal Grounds",
+        "extra": ""
+    },
+    "Energy Elemental": {
+        "level": "",
+        "rating": "",
+        "where": "North west Ankrahmun levitate area, Energy Elemental Lair",
+        "extra": ""
+    },
+    "Lizard Snakecharmer": {
+        "level": "",
+        "rating": "",
+        "where": "Chor",
+        "extra": ""
+    },
+    "Roaring Lion": {
+        "level": "",
+        "rating": "",
+        "where": "Lion's Rock",
+        "extra": ""
+    },
+    "Mooh'tah Warrior": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond East Minos",
+        "extra": ""
+    },
+    "Execowtioner": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond East Minos",
+        "extra": ""
+    },
+    "Minotaur Hunter": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond East Minos",
+        "extra": ""
+    },
+    "Worm Priestess": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond East Minos",
+        "extra": ""
+    },
+    "Moohtant": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond East Minos",
+        "extra": ""
+    },
+    "Dragon Lord Hatching": {
+        "level": "",
+        "rating": "",
+        "where": "Fenrock",
+        "extra": ""
+    },
+    "Dragon Hatching": {
+        "level": "",
+        "rating": "",
+        "where": "Fenrock, Various Dragon Caves",
+        "extra": ""
+    },
+    "Deepling Guard": {
+        "level": "",
+        "rating": "",
+        "where": "Fiehonja Library",
+        "extra": ""
+    },
+    "Shark": {
+        "level": "",
+        "rating": "",
+        "where": "Krailos Shark Cave",
+        "extra": ""
+    },
+    "Acid Blob": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Alchemist Quarter",
+        "extra": ""
+    },
+    "Quara Mantassin": {
+        "level": "",
+        "rating": "",
+        "where": "Frozen Trench, Sunken Quarter",
+        "extra": ""
+    },
+    "Quara Constrictor": {
+        "level": "",
+        "rating": "",
+        "where": "Frozen Trench",
+        "extra": ""
+    },
+    "Quara Constrictor Scout": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond West Raid",
+        "extra": ""
+    },
+    "Quara Predator Scout": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond West Raid",
+        "extra": ""
+    },
+    "Quara Hydromancer Scout": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond West Raid",
+        "extra": ""
+    },
+    "Quara Pincher Scout": {
+        "level": "",
+        "rating": "",
+        "where": "Oramond West Raid",
+        "extra": ""
+    },
+    "Orc Berserker": {
+        "level": "",
+        "rating": "",
+        "where": "Orc Fortress Tower",
+        "extra": ""
+    },
+    "Orc Warlord": {
+        "level": "",
+        "rating": "",
+        "where": "Orc Fortress Quest",
+        "extra": ""
+    },
+    "Orc Leader": {
+        "level": "",
+        "rating": "",
+        "where": "Orc Fortress Quest",
+        "extra": ""
+    },
+    "Broken Shaper": {
+        "level": "",
+        "rating": "",
+        "where": "Astral Shaper Dungeon",
+        "extra": ""
+    },
+    "Twisted Shaper": {
+        "level": "",
+        "rating": "",
+        "where": "Astral Shaper Dungeon",
+        "extra": ""
+    },
+    "Shaper Matriarch": {
+        "level": "",
+        "rating": "",
+        "where": "Astral Shaper Dungeon",
+        "extra": ""
+    },
+    "Nightstalker": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Cemetery, Vandura Mountain",
+        "extra": ""
+    },
+    "Mutated Tiger": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Alchemist Quarter, Farmine Mutated Bat/Tiger Cave",
+        "extra": ""
+    },
+    "Efreet": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Djinn Area, Darashia Burster Spectre Djinns",
+        "extra": ""
+    },
+    "Marid": {
+        "level": "",
+        "rating": "",
+        "where": "Yalahar Djinn Area, Darashia Burster Spectre Djinns",
+        "extra": ""
+    },
+    "Insectoid Worker": {
+        "level": "",
+        "rating": "",
+        "where": "Hive Surface",
+        "extra": ""
+    },
+    "Swarmer": {
+        "level": "",
+        "rating": "",
+        "where": "Hive Surface",
+        "extra": ""
+    },
+    "Priestess": {
+        "level": "",
+        "rating": "",
+        "where": "Drefia, Lich Hell",
+        "extra": ""
+    },
+    "Gravedigger": {
+        "level": "",
+        "rating": "",
+        "where": "Drefia",
+        "extra": ""
+    },
+    "Diabolic Imp": {
+        "level": "",
+        "rating": "",
+        "where": "POI Levers, INQ Warlock seal",
+        "extra": ""
+    }
+}
