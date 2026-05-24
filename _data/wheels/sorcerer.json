@@ -5,82 +5,80 @@
         {
             "points": 50,
             "description": "1x Gem",
-            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2DAAoxQuf-RAAA"
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2DAAoxQuf-RAAA",
+            "mastery": "N/A"
         },
         {
             "points": 100,
             "description": "2x Gem",
-            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BABkYoFAz8RwIA"
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BABkYoFAz8RwIA",
+            "mastery": "N/A"
         },
         {
             "points": 150,
             "description": "2x Gem + T1 Focus Spells",
-            "link": ""
+            "link": "",
+            "mastery": "N/A"
         },
         {
             "points": 225,
             "description": "3x Gem + T1 Focus Spells",
-            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BABkYQEkx5w0X_IwEA"
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BABkYQEkx5w0X_IwEA",
+            "mastery": "N/A"
         },
         {
             "points": 225,
             "description": "T1 Death Echo",
-            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2CAgRQQYeTNgAn-IwEA"
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2CAgRQQYeTNgAn-IwEA",
+            "mastery": "N/A"
         },
         {
             "points": 250,
             "description": "T1 Beam Mastery",
-            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJBkAIEUEGHkzYAJ_iMBAA"
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJBkAIEUEGHkzYAJ_iMBAA",
+            "mastery": "Energy"
         },
         {
             "points": 250,
             "description": "T1 LoD + T1 Death Echo",
-            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2DAAJJGIDLFGy7wHwkAAA"
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2DAAJJGIDLFGy7wHwkAAA",
+            "mastery": "Death/Fire"
         },
         {
             "points": 425,
             "description": "T1 Beam Mastery + T1 E-Wave + T1 Death Echo",
-            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJBkAIEUEGHkDWZ7I0SA4D8SAAA"
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJBkAIEUEGHkDWZ7I0SA4D8SAAA",
+            "mastery": "Energy"
         },
         {
             "points": 500,
             "description": "T2 Death Echo + T1 LoD + T1 Beam Mastery",
-            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJAEYgbvFBBpBOKCCIYUbwYY-I8EAA"
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJAEYgbvFBBpBOKCCIYUbwYY-I8EAA",
+            "mastery": "Death/Fire/Energy"
         },
         {
             "points": 650,
             "description": "T2 E-Wave + T1 Beam Mastery",
-            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJBkAIEUhhRvIyNvMNsbKgIB_5EAAA"
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJBkAIEUhhRvIyNvMNsbKgIB_5EAAA",
+            "mastery": "Energy"
         },
         {
             "points": 750,
             "description": "T2 LoD + T2 Death Echo + 1x Greater Gem",
-            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJAEYgbvFBBpxMCQAiKAlDdIZhqI-R8JAAA"
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJAEYgbvFBBpxMCQAiKAlDdIZhqI-R8JAAA",
+            "mastery": "Death/Fire"
         },
         {
             "points": 1000,
             "description": "T2 Beam Mastery + T2 E-Wave + 1x Greater Gem + T1 Avatar + T1 GoL",
-            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJgmySDJ4J3CkOJtZMSQAhQw8gYSDJIgJgj8RwIA"
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJgmySDJ4J3CkOJtZMSQAhQw8gYSDJIgJgj8RwIA",
+            "mastery": "Energy"
         },
         {
             "points": 1000,
             "description": "T2 LoD + T2 Beam Mastery + T2 Death Echo + 2x Greater Gem",
-            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJgmCSS8U4AEgxFDSgqQAIIUbyAhOQ3E_I8EAA"
-        },
-        {
-            "points": 0,
-            "description": "",
-            "link": ""
-        },
-        {
-            "points": 0,
-            "description": "",
-            "link": ""
-        },
-        {
-            "points": 0,
-            "description": "",
-            "link": ""
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJgmCSS8U4AEgxFDSgqQAIIUbyAhOQ3E_I8EAA",
+            "mastery": "Death/Fire/Energy"
         }
     ]
 }
