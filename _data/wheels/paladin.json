@@ -1,11 +1,62 @@
 {
     "lesser_gems": ["Mitigation", "Hit Points", "Any Elemental Resistance"],
-    "greater_gems": ["Divine Caldera Base Damage", "Divine Empowerment Mastery", "Grenade Mastery", "Salvation Healing"],
+    "greater_gems": ["Divine Caldera Base Damage", "Divine Empowerment Mastery", "Salvation Healing"],
     "builds": [
         {
             "points": 50,
-            "description": "x1 Gem",
+            "description": "1x Gem",
             "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2DAAoxQuf-RAAA"
+        },
+        {
+            "points": 100,
+            "description": "2x Gem",
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2BABkYoFAz8RwIA"
+        },
+        {
+            "points": 250,
+            "description": "T1 Divine Barrage + T1 GoL",
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2AAA0kQkeJtxIAN_EcCAA"
+        },
+        {
+            "points": 450,
+            "description": "T2 Gran Con (Base Bossing Build)",
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2AAgxQw6W0E4Rl5Q_hQ8B8JAAA"
+        },
+        {
+            "points":450,
+            "description": "T2 Amp Res (Base Ranged Spawn Build)",
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2CAAu8UEGkEJ1K8YTIM_5EAAA"
+        },
+        {
+            "points": 500,
+            "description": "T2 Divine Barrage + T1 GoL + T1 Avatar",
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2AAA0kQkeJtBOEZeYPFUiA8hv9IAAA"
+        },
+        {
+            "points": 600,
+            "description": "T2 Divine Barrage + T1 Empowerment",
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2BAgBQoaQSmvL1ToOL_kQAA"
+        },
+        {
+            "points": 775,
+            "description": "T2 Divine Barrage + T2 Empowerment + 1x Greater Gem",
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2BAgBQoaQSmvL1TGCSngZj_kQAA"
+        },
+        
+        {
+            "points": 1000,
+            "description": "T2 Mas San + T2 Divine Barrage + T2 Empowerment + 1x Greater Gem",
+            "link": "https://www.test.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2BAgBQGBiMQaQTmeHunMJyYBmL-RwIA"
+        },
+        {
+            "points": 0,
+            "description": "",
+            "link": ""
+        },
+        {
+            "points": 0,
+            "description": "",
+            "link": ""
         }
     ]
 }
