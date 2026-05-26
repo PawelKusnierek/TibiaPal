@@ -3152,7 +3152,7 @@
     {
         "icon": "Cave_Chimera_Head.gif",
         "name": "Cave Chimera Head",
-        "price": "1200",
+        "price": "1 200",
         "value": "Very High",
         "link": "https://tibia.fandom.com/wiki/Cave_Chimera_Head"
     },
@@ -3190,5 +3190,173 @@
         "price": "930",
         "value": "Very High",
         "link": "https://tibia.fandom.com/wiki/Tremendous_Tyrant_Head"
+    },
+    {
+        "icon": "Lizard_Tail.gif",
+        "name": "Lizard Tail",
+        "price": "95",
+        "value": "Medium",
+        "link": "https://tibia.fandom.com/wiki/Lizard_Tail"
+    },
+    {
+        "icon": "Infernoid_Ember.gif",
+        "name": "Infernoid Ember",
+        "price": "160",
+        "value": "Medium",
+        "link": "https://tibia.fandom.com/wiki/Infernoid_Ember"
+    },
+    {
+        "icon": "Gold_Tooth.gif",
+        "name": "Gold Tooth",
+        "price": "120",
+        "value": "Medium",
+        "link": "https://tibia.fandom.com/wiki/Gold_Tooth"
+    },
+    {
+        "icon": "Rotten_Vermin_Ichor.gif",
+        "name": "Rotten Vermin Ichor",
+        "price": "4 500",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Rotten_Vermin_Ichor"
+    },
+    {
+        "icon": "Blooded_Worm.gif",
+        "name": "Blooded Worm",
+        "price": "4 700",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Blooded_Worm"
+    },
+    {
+        "icon": "Basalt_Core.gif",
+        "name": "Basalt Core",
+        "price": "5 800",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Basalt_Core"
+    },
+    {
+        "icon": "Rod.gif",
+        "name": "Rod",
+        "price": "2 200",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Rod"
+    },
+    {
+        "icon": "Head_(Many_Faces).gif",
+        "name": "Head (Many Faces)",
+        "price": "3 200",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Head_(Many_Faces)"
+    },
+    {
+        "icon": "Apron.gif",
+        "name": "Apron",
+        "price": "1 300",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Apron"
+    },
+    {
+        "icon": "Crown.gif",
+        "name": "Crown",
+        "price": "2 700",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Crown"
+    },
+    {
+        "icon": "Head_(Brachiodemon).gif",
+        "name": "Head (Brachiodemon)",
+        "price": "3 500",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Head_(Brachiodemon)"
+    },
+    {
+        "icon": "Hand.gif",
+        "name": "Hand",
+        "price": "1 450",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Hand"
+    },
+    {
+        "icon": "Jaws.gif",
+        "name": "Jaws",
+        "price": "3 900",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Jaws"
+    },
+    {
+        "icon": "Capricious_Heart.gif",
+        "name": "Capricious Heart",
+        "price": "2 100",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Capricious_Heart"
+    },
+    {
+        "icon": "Capricious_Robe.gif",
+        "name": "Capricious Robe",
+        "price": "1 200",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Capricious_Robe"
+    },
+    {
+        "icon": "Infernal_Heart.gif",
+        "name": "Infernal Heart",
+        "price": "2 100",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Infernal_Heart"
+    },
+    {
+        "icon": "Infernal_Robe.gif",
+        "name": "Infernal Robe",
+        "price": "1 200",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Infernal_Robe"
+    },
+    {
+        "icon": "Hazardous_Heart.gif",
+        "name": "Hazardous Heart",
+        "price": "5 000",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Hazardous_Heart"
+    },
+    {
+        "icon": "Hazardous_Robe.gif",
+        "name": "Hazardous Robe",
+        "price": "3 000",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Hazardous_Robe"
+    },
+    {
+        "icon": "Distorted_Heart.gif",
+        "name": "Distorted Heart",
+        "price": "2 100",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Distorted_Heart"
+    },
+    {
+        "icon": "Distorted_Robe.gif",
+        "name": "Distorted Robe",
+        "price": "1 200",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Distorted_Robe"
+    },
+    {
+        "icon": "Vibrant_Heart.gif",
+        "name": "Vibrant Heart",
+        "price": "2 100",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Vibrant_Heart"
+    },
+    {
+        "icon": "Vibrant_Robe.gif",
+        "name": "Vibrant Robe",
+        "price": "1 200",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Vibrant_Robe"
+    },
+    {
+        "icon": "Mould_Robe.gif",
+        "name": "Mould Robe",
+        "price": "1 200",
+        "value": "Very High",
+        "link": "https://tibia.fandom.com/wiki/Mould_Robe"
     }
 ]
