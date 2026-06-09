@@ -8,7 +8,7 @@
         "weapon_type":  "Physical"
     },
     {
-        "level":  "8+",
+        "level":  "10+",
         "place":  "Targuna Pirates",
         "raw_exp":  "-",
         "loot":  "-",
@@ -16,7 +16,7 @@
         "weapon_type":  "Physical"
     },
     {
-        "level":  "8+",
+        "level":  "12+",
         "place":  "Targuna Infernoids",
         "raw_exp":  "-",
         "loot":  "-",
@@ -1205,6 +1205,22 @@
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Ice, Earth, Fire",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "800+",
+        "place":  "Raubritters Castle",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "weapon_type":  "Physical",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "800+",
+        "place":  "Bloodfire Gorge",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
     {

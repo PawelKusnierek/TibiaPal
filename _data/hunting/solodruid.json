@@ -2,1049 +2,1289 @@
     {
         "level":  "8+",
         "place":  "Targuna Lizards",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "55k",
+        "loot":  "50k",
         "link":  "https://youtu.be/",
-        "runes":  "N/A"
+        "playstyle":  "Single Target Strike Spells"
     },
     {
-        "level":  "8+",
+        "level":  "10+",
         "place":  "Targuna Pirates",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "70k",
+        "loot":  "50k",
         "link":  "https://youtu.be/",
-        "runes":  "N/A"
+        "playstyle":  "Single Target Strike Spells"
     },
     {
-        "level":  "8+",
+        "level":  "12+",
         "place":  "Targuna Infernoids",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "90k",
+        "loot":  "35k",
         "link":  "https://youtu.be/",
-        "runes":  "N/A"
+        "playstyle":  "Single Target Strike Spells"
     },
     {
         "level":  "8+",
         "place":  "Rotworms Liberty Bay/Darashia",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "N/A",
-        "link":  "https://youtu.be/"
+        "raw_exp":  "40k",
+        "loot":  "0k",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Single Target Strike Spells"
     },
     {
-        "level":  "8+",
+        "level":  "13+",
         "place":  "Swamp Trolls Port Hope/Venore",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "N/A",
-        "link":  "https://youtu.be/"
+        "raw_exp":  "30k",
+        "loot":  "50k",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Single Target Strike Spells"
     },
     {
         "level":  "8+",
         "place":  "Crocodiles Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "N/A",
-        "link":  "https://youtu.be/"
+        "raw_exp":  "40k",
+        "loot":  "-4k",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Single Target Strike Spells"
     },
     {
         "level":  "8+",
-        "place":  "Larva Ankh (Sorcerer)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "N/A",
-        "link":  "https://youtu.be/"
+        "place":  "Terramites Darashia",
+        "raw_exp":  "60k",
+        "loot":  "120k",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Single Target Strike Spells"
     },
     {
         "level":  "8+",
-        "place":  "Ankh Library Tomb (Sorcerer)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "N/A",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "12+",
         "place":  "Edron Forgotten Tomb",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "N/A",
-        "link":  "https://youtu.be/"
+        "raw_exp":  "75k",
+        "loot":  "50k",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Single Target Strike Spells"
     },
     {
-        "level":  "12+",
-        "place":  "Drefia Surface",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "N/A",
-        "link":  "https://youtu.be/"
+        "level":  "8+",
+        "place":  "Amazon Camp",
+        "raw_exp":  "45k",
+        "loot":  "125k",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Single Target Strike Spells"
     },
     {
-        "level":  "12+",
-        "place":  "Amazon Camp (Profit)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "N/A",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "12+",
+        "level":  "8+",
         "place":  "Cormaya Dwarf Mines",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "N/A",
-        "link":  "https://youtu.be/"
+        "raw_exp":  "55k",
+        "loot":  "-5k",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Single Target Strike Spells"
+    },
+    {
+        "level":  "8+",
+        "place":  "Coryms Port Hope (Stealth Ring)",
+        "raw_exp":  "100k",
+        "loot":  "0k",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Single Target Strike Spells"
     },
     {
         "level":  "13+",
-        "place":  "Cyclops Mistrock/Mount Sternum",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "N/A",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "14+",
-        "place":  "Coryms Port Hope (Stealth Ring)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "N/A",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "14+",
         "place":  "Tarantulas Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "N/A",
-        "link":  "https://youtu.be/"
+        "raw_exp":  "60k",
+        "loot":  "-10k",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Single Target Strike Spells"
     },
     {
-        "level":  "15+",
+        "level":  "8+",
         "place":  "Stonerefiners (Stealth Ring)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "N/A",
-        "link":  "https://youtu.be/"
+        "raw_exp":  "135k",
+        "loot":  "40k",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Single Target Strike Spells"
     },
     {
-        "level":  "15+",
+        "level":  "8+",
         "place":  "Minotaurs Darashia (Stealth Ring)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "N/A",
-        "link":  "https://youtu.be/"
+        "raw_exp":  "95k",
+        "loot":  "-10k",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Single Target Strike Spells"
+    },
+    {
+        "level":  "13+",
+        "place":  "Cyclops Mistrock",
+        "raw_exp":  "75k",
+        "loot":  "15k",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Single Target Strike Spells"
     },
     {
         "level":  "15+",
         "place":  "Elves Yalahar",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "N/A",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "20+",
-        "place":  "Edron Earth Elementals",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "N/A",
-        "link":  "https://youtu.be/"
+        "raw_exp":  "80k",
+        "loot":  "150k",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Single Target Strike Spells"
     },
     {
         "level":  "20+",
         "place":  "Mutated Humans Yala",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "N/A",
-        "link":  "https://youtu.be/"
+        "raw_exp":  "120k",
+        "loot":  "-5k",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Single Target Strike Spells"
     },
     {
-        "level":  "28+",
-        "place":  "Upper Spike",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Thunderstorm, GFB, Avalanche",
-        "link":  "https://youtu.be/"
+        "level": "28+",
+        "place": "Upper Spike",
+        "raw_exp": "320k",
+        "loot": "75k",
+        "playstyle": "Thunderstorm, GFB, Avalanche",
+        "link": "https://youtu.be/qtHD2m-s5WE"
     },
     {
-        "level":  "28+",
-        "place":  "Gargoyle Cave Meriana",
-        "raw_exp":  "-",
+        "level": "28+",
+        "place": "Gargoyle Cave Meriana",
+        "raw_exp": "220k",
         "loot":  "-",
-        "runes":  "Thunderstorm, GFB",
-        "link":  "https://youtu.be/"
+        "playstyle": "Thunderstorm, GFB",
+        "link": "https://youtu.be/PnXNfzJcr3o"
     },
     {
-        "level":  "30+",
-        "place":  "Chor",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "level": "30+",
+        "place": "Chor",
+        "raw_exp": "290k",
+        "loot": "-20k",
+        "playstyle": "GFB",
+        "link": "https://youtu.be/PgJSRyBCSzs"
     },
     {
-        "level":  "30+",
-        "place":  "Coryms Port Hope (AOE)",
-        "raw_exp":  "-",
+        "level": "30+",
+        "place": "Coryms Port Hope (AOE)",
+        "raw_exp": "260k",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "playstyle": "GFB",
+        "link": "https://youtu.be/0AvNiVT6KOo"
     },
     {
-        "level":  "30+",
-        "place":  "Stonerefiners (AOE)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "level": "30+",
+        "place": "Stonerefiners (AOE)",
+        "raw_exp": "250k",
+        "loot": "25k",
+        "playstyle": "Avalanche",
+        "link": "https://youtu.be/WTrR8Zjvh1Y"
     },
     {
-        "level":  "30+",
-        "place":  "Mummy/Bonebeasts MOSL -3",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "level": "30+",
+        "place": "Mummy/Bonebeasts MOSL -3",
+        "raw_exp": "240k",
+        "loot": "150k",
+        "playstyle": "Avalanche",
+        "link": "https://youtu.be/VKifdYSTD2g"
     },
     {
-        "level":  "30+",
-        "place":  "Dryad Gardens",
-        "raw_exp":  "-",
+        "level": "30+",
+        "place": "Dryad Gardens",
+        "raw_exp": "220k",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "playstyle": "GFB",
+        "link": "https://youtu.be/h6frDxop6bA"
     },
     {
-        "level":  "30+",
-        "place":  "Apes Banuta (Profit)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "level": "30+",
+        "place": "Apes Banuta (Profit)",
+        "raw_exp": "210k",
+        "loot": "200k",
+        "playstyle": "Avalanche",
+        "link": "https://youtu.be/IRW8bc0MX7E"
     },
     {
-        "level":  "30+",
-        "place":  "Laguna Islands (Profit)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "level": "30+",
+        "place": "Laguna Islands (Profit)",
+        "raw_exp": "200k",
+        "loot": "400k",
+        "playstyle": "GFB",
+        "link": "https://youtu.be/NwrSF8TRe4s"
     },
     {
-        "level":  "30+",
-        "place":  "Carniphilas Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "level": "30+",
+        "place": "Carniphilas Port Hope",
+        "raw_exp": "120k",
+        "loot": "-30k",
+        "playstyle": "GFB",
+        "link": "https://youtu.be/smLBYH4LoC4"
     },
     {
         "level":  "50+",
         "place":  "Mother of Scarabs Lair",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "50+",
-        "place":  "LB Wyrms SD",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "SD",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + GFB"
     },
     {
         "level":  "50+",
         "place":  "Nibelor Crystal Spiders",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
+        "raw_exp": "450k",
+        "loot": "-10k",
+        "playstyle": "Thunderstorm",
+        "link": "https://youtu.be/Ma_T9DV5GqA"
     },
     {
         "level":  "50+",
-        "place":  "Darashia DLs SD",
+        "place":  "Darashia Dragon Lords",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "SD",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + SD"
     },
     {
         "level":  "50+",
         "place":  "Peninsula Tomb",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Avalanche"
     },
     {
         "level":  "50+",
-        "place":  "Lion\u0027s Rock Lions",
+        "place":  "Lion's Rock",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Avalanche"
     },
     {
-        "level":  "50+",
-        "place":  "Water Elementals Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
+        "level": "50+",
+        "place": "Water Elementals Port Hope",
+        "raw_exp": "400k",
+        "loot": "-50k",
+        "playstyle": "Thunderstorm",
+        "link": "https://youtu.be/Qjdpi5yDl0E"
     },
     {
         "level":  "50+",
         "place":  "Haunted Treelings Vengoth",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Avalanche"
+    },
+    {
+        "level": "50+",
+        "place": "Yalahar Cults",
+        "raw_exp": "290k",
+        "loot": "500k",
+        "playstyle": "Thunderstorm",
+        "link": "https://youtu.be/Mf97YGUteV0"
     },
     {
         "level":  "50+",
-        "place":  "Yalahar Cults",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "60+",
         "place":  "Middle Spike",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + GFB"
     },
     {
-        "level":  "70+",
-        "place":  "Krailos Ogres Surface",
+        "level":  "50+",
+        "place":  "Liberty Bay Wyrms",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + SD"
     },
     {
-        "level":  "70+",
-        "place":  "Mutated Tigers Yalahar (Profit)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "level": "70+",
+        "place": "Krailos Ogres Surface",
+        "raw_exp": "530k",
+        "loot": "300k",
+        "playstyle": "Thunderstorm",
+        "link": "https://youtu.be/mCdQATL1DUs"
     },
     {
         "level":  "80+",
-        "place":  "Issavi Surafce (SD)",
+        "place":  "Shaburak Demons",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "SD",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Stoneshower"
     },
     {
-        "level":  "80+",
+        "level": "80+",
+        "place": "Issavi Surafce (SD)",
+        "raw_exp": "830k",
+        "loot": "-200k",
+        "playstyle": "SD",
+        "link": "https://youtu.be/pVxkC4e-pus"
+    },
+    {
+        "level":  "100+",
         "place":  "Muggy Plains",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
-        "level":  "80+",
+        "level":  "100+",
         "place":  "Feyrist Surface",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
-        "level":  "80+",
+        "level":  "100+",
         "place":  "Giant Spiders Port Hope",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
-        "level":  "80+",
+        "level":  "100+",
         "place":  "Hive Surface",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "80+",
-        "place":  "Ice Witch Temple",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
         "level":  "100+",
         "place":  "Ravenous Lava Lurkers",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "100+",
         "place":  "Sunken Quarter",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "100+",
-        "place":  "Edron Old Fortress -2 (Hero)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Stoneshower"
     },
     {
         "level":  "100+",
         "place":  "Quaras Liberty Bay",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Stoneshower"
     },
     {
         "level":  "100+",
         "place":  "Grimvale -4",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
-        "level":  "100+",
-        "place":  "Souleater Mountain",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "level": "100+",
+        "place": "Souleater Mountain",
+        "raw_exp": "1.0kk",
+        "loot": "100k",
+        "playstyle": "GFB",
+        "link": "https://youtu.be/1olb1AXEu3Y"
     },
     {
         "level":  "100+",
         "place":  "Calassa",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Stoneshower"
     },
     {
         "level":  "100+",
         "place":  "Old Masonry (Death portal)",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
         "level":  "100+",
         "place":  "Dragon Lords Fenrock",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
         "level":  "100+",
         "place":  "Edron Vampire Crypt",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
         "level":  "100+",
         "place":  "Dragon Lords POI",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
         "level":  "100+",
         "place":  "Putrid Mummy",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
         "level":  "100+",
         "place":  "Krailos Bug Cave",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
-        "level":  "110+",
+        "level":  "100+",
         "place":  "Edron Were South",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + GFB"
     },
     {
-        "level":  "110+",
+        "level":  "100+",
         "place":  "Exotic Cave",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + GFB"
     },
     {
-        "level":  "110+",
+        "level":  "100+",
         "place":  "Iksupan",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
-        "level":  "120+",
-        "place":  "Carlin Cults",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "120+",
-        "place":  "Edron Old Fortress -3 (Hero)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "120+",
+        "level":  "100+",
         "place":  "Lizard City",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
-        "level":  "120+",
+        "level":  "100+",
         "place":  "Lizard Chosens",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
-        "level":  "120+",
+        "level":  "100+",
+        "place":  "Misguided",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
+    },
+    {
+        "level":  "100+",
+        "place":  "Orc Cults",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "100+",
         "place":  "Brimstone Bugs WOTE",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + GFB"
     },
     {
-        "level":  "130+",
-        "place":  "Goroma Medusa/Serpents (Talahu)",
+        "level":  "100+",
+        "place":  "Carlin Cults",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "SD",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
-        "level":  "130+",
-        "place":  "Behemoths Forbidden Lands",
+        "level":  "100+",
+        "place":  "Edron Old Fortress -3 (Hero)",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
-    {
-        "level":  "130+",
-        "place":  "Glooth Bandits",
+        {
+        "level":  "100+",
+        "place":  "Edron Old Fortress -2 (Hero)",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "130+",
         "place":  "Elder Wyrms Drefia",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
+    },
+    {
+        "level":  "130+",
+        "place":  "Behemoths Forbidden Lands",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
+    },
+    {
+        "level":  "130+",
+        "place":  "Behemoths Cyclopolis",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
+    },
+    {
+        "level":  "130+",
+        "place":  "Glooth Bandits",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
+    },
+    {
+        "level":  "130+",
+        "place":  "Barkless",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "130+",
+        "place":  "Otherworld (Kazo)",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Stoneshower"
+    },
+    {
+        "level":  "130+",
+        "place":  "Okolnir",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Stoneshower"
     },
     {
         "level":  "150+",
-        "place":  "Oramond West",
+        "place":  "Otherworld (Edron)",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB, Thunderstorm",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "150+",
+        "place":  "Oramond West (No Quara Raid)",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
+    },
+    {
+        "level":  "150+",
+        "place":  "Oramond West (Quara Raid)",
+        "raw_exp": "2.0kk",
+        "loot": "-100k",
+        "playstyle": "Thunderstorm",
+        "link": "https://youtu.be/s3whv09knGE"
     },
     {
         "level":  "150+",
         "place":  "Deeplings Library",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Thunderstorm"
     },
     {
         "level":  "150+",
-        "place":  "Oramond Minotaur Plains",
+        "place":  "Oramond Minotaur South Plains",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + Avalanche"
     },
     {
         "level":  "150+",
         "place":  "Dark Faun Cave Feyrist",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + Thunderstorm"
     },
     {
-        "level":  "200+",
-        "place":  "Goroma Demons Avalanche",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "200+",
+        "level":  "150+",
         "place":  "Mini Rosha",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
-        "level":  "200+",
+        "level":  "150+",
         "place":  "Pirats",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Stoneshower",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "200+",
-        "place":  "Okolnir (Sorcerer)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "250+",
         "place":  "Yalahar Grim Reapers",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "GFB"
     },
     {
-        "level":  "250+",
+        "level":  "200+",
         "place":  "Werehyaenas North",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
+    },
+    {
+        "level":  "200+",
+        "place":  "Hive Stage 3",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
+    },
+    {
+        "level":  "200+",
+        "place":  "Crumbling Caverns",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "200+",
+        "place":  "Seacrest Serpents",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Thunderstorm"
+    },
+    {
+        "level":  "200+",
+        "place":  "Diremaw Task Area",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "200+",
+        "place":  "Book World: Chapter II",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "250+",
-        "place":  "Deeper Banuta -6 (Sorcerer)",
+        "place":  "Book World: Chapter III",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "250+",
-        "place":  "Carnivors",
+        "place":  "Book World: Chapter IV",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "250+",
-        "place":  "Diremaw Task Area (AOE)",
+        "place":  "Carnivora's Rocks",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "250+",
-        "place":  "INQ Hellfires + Spectres",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche, Thunderstorm",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "300+",
         "place":  "Lower Spike",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
-        "level":  "300+",
-        "place":  "Deeper Banuta -8 (Sorcerer)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Draken Walls",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
         "level":  "300+",
         "place":  "Werehyaenas South",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
+    },
+    {
+        "level":  "300+",
+        "place":  "Asura Palace",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + Thunderstorm"
+    },
+    {
+        "level":  "300+",
+        "place":  "Asura Mirror",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + Thunderstorm"
     },
     {
         "level":  "300+",
         "place":  "Candia Nibblemaws",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "300+",
         "place":  "Burster Spectres",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + GFB"
     },
     {
         "level":  "300+",
         "place":  "Oramond Wildlife Raid",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "300+",
-        "place":  "Book World: Chapter II",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "300+",
-        "place":  "Book World: Chapter III",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "300+",
-        "place":  "Book World: Chapter IV",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + GFB"
     },
     {
         "level":  "300+",
         "place":  "Gazer Spectre",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "300+",
-        "place":  "Drefia Grim Reapers (Sorcerer)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Thunderstorm, GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "300+",
         "place":  "Werelions",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Winter Court",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + GFB"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Summer Court",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
-        "level":  "400+",
-        "place":  "Falcons",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche, GFB",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Oramond Fury",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Ripper Spectres",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Warzone 4",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + GFB"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Warzone 5",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB, Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Warzone 6",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "300+",
+        "place":  "Weretigers -1",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Stoneshower"
+    },
+    {
+        "level":  "300+",
+        "place":  "Weretigers -2",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Stoneshower"
+    },
+    {
+        "level":  "300+",
+        "place":  "Werecrocodiles -1",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "300+",
+        "place":  "Iksupan Last Stand",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "300+",
+        "place":  "Iksupan Occupied Sanctuary",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "300+",
+        "place":  "Marapur Nagas",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "300+",
+        "place":  "Marapur Turtles",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Stoneshower"
+    },
+    {
+        "level":  "300+",
+        "place":  "Crypt Warriors",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "400+",
         "place":  "Cobras",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche, GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + Thunderstorm"
     },
     {
         "level":  "400+",
-        "place":  "Oskayaat Weretigers",
+        "place":  "Upper Rosh",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Stoneshower",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + Thunderstorm"
     },
     {
         "level":  "400+",
-        "place":  "Oskayaat Werecrocodiles",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "400+",
-        "place":  "Iksupan Last Stand",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "400+",
-        "place":  "Iksupan Occupied Sanctuary",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "500+",
-        "place":  "Dream Labrynith",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche, GFB",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "500+",
-        "place":  "Marapur Turtles",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Stoneshower",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "500+",
-        "place":  "Otherworld",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Stoneshower",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "500+",
         "place":  "Oramond Catacombs",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + GFB"
+    },
+    {
+        "level":  "400+",
+        "place":  "Falcons",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "400+",
+        "place":  "Deathlings",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Stoneshower"
+    },
+    {
+        "level":  "400+",
+        "place":  "Buried Cathedral -8",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + GFB"
+    },
+    {
+        "level":  "400+",
+        "place":  "Nightmare Isles",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + Thunderstorm"
+    },
+    {
+        "level":  "400+",
+        "place":  "Otherworld",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Stoneshower"
+    },
+    {
+        "level":  "500+",
+        "place":  "Issavi Sphinx & Crypt Wardens",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "400+",
+        "place":  "Warzone 1",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + GFB"
+    },
+    {
+        "level":  "500+",
+        "place":  "Warzone 2",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + Avalanche"
+    },
+    {
+        "level":  "500+",
+        "place":  "Issavi Sewers",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "500+",
+        "place":  "Issavi Puzzle",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "500+",
+        "place":  "Warzone 3",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + Thunderstorm"
     },
     {
         "level":  "500+",
         "place":  "Girtablilu",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "500+",
+        "place":  "Carnisylvans",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "500+",
+        "place":  "Bashmu",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "500+",
+        "place":  "Azzilon Castle",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "500+",
+        "place":  "Deep Desert",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "500+",
+        "place":  "Floating Savants MoTA",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "500+",
         "place":  "Issavi Goannas",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "500+",
-        "place":  "Flimsy Port Hope",
+        "place":  "Issavi Ogre Mountain",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Strong Ice Wave + Forked Glacier"
     },
     {
         "level":  "500+",
-        "place":  "Flimsy Venore",
+        "place":  "Usurpers",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "500+",
-        "place":  "Marapur Nagas",
+        "place":  "Nimmersatt's Bottom Floor (-7)",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Stoneshower, Thunderstorm",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "500+",
-        "place":  "Crypt Warriors",
+        "place":  "Nimmersatt's Boss Floor (-6)",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
-        "level":  "600+",
-        "place":  "Crypt Wardens -2",
+        "level":  "500+",
+        "place":  "Norcferatu Fortress",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "600+",
         "place":  "Norcferatu Dungeons West",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "600+",
         "place":  "Norcferatu Dungeons East",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "600+",
-        "place":  "Ingol",
+        "place":  "Azzilon Catacombs",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "600+",
-        "place":  "Warzone 1",
+        "place":  "Bulltaur Lair",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "600+",
-        "place":  "Warzone 2",
+        "place":  "Ingol Surface",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "600+",
-        "place":  "Warzone 3",
+        "place":  "Ingol -1",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
-        "level":  "700+",
+        "level":  "600+",
+        "place":  "Ingol -2",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "600+",
         "place":  "Warzone 7",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "600+",
+        "place":  "Warzone 8",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "600+",
+        "place":  "Warzone 9",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "600+",
+        "place":  "Feru Undead Dragons",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + Thunderstorm"
+    },
+    {
+        "level":  "600+",
+        "place":  "Feru Mazoran",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + Avalanche"
+    },
+    {
+        "level":  "600+",
+        "place":  "Feru Juggernauts",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + Thunderstorm"
+    },
+    {
+        "level":  "800+",
+        "place":  "Ingol -3",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Glacier + Avalanche"
+    },
+    {
+        "level":  "800+",
+        "place":  "Bloodfire Gorge",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "800+",
+        "place":  "Podzilla Quaras",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Stoneshower"
+    },
+    {
+        "level":  "800+",
+        "place":  "True Asuras",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "1000+",
+        "place":  "Forsaken Crypt",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     }
 ]

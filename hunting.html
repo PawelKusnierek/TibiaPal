@@ -33,6 +33,10 @@ scripts: <script src="../scripts/hunting.js"></script>
     <button id="teamhunt" class="tablinks" onclick="show_tab(event, 'Teamhunt')">Teamhunts</button>
 </div>
 
+<div style="text-align: center; margin: 12px 0 8px 0; padding: 8px 16px; border: 1px solid #c8a020; border-radius: 6px; background-color: #1a1200;">
+    <span style="color: #f0c040; font-size: 0.9em;">Profit values are based on MARKET values on established worlds. Actual profit may vary based on your server's imbue & weekly delivery prices.</span>
+</div>
+
 <div id="Knight" class="tabcontent">
     <div id="filter_selection">
         <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
@@ -93,7 +97,7 @@ scripts: <script src="../scripts/hunting.js"></script>
             <th class="place_row">Place</th>
             <th class="exp_row">Raw exp</th>
             <th class="loot_row">Loot</th>
-            <th class="runes_row">Runes/Low Level Ammo</th>
+            <th class="runes_row">Ammo/Barrage</th>
         </tr>
         {% for hunt in site.data.hunting.solopaladin %}
             <tr>
@@ -203,6 +207,11 @@ scripts: <script src="../scripts/hunting.js"></script>
             <label for="levelFilter_druid" style="color: #ebebeb; margin-right: 10px; font-weight: bold; min-width: 120px;">Character Level:</label>
             <input type="number" id="levelFilter_druid" class="level-filter" placeholder="Shows spawns suitable for your level..." min="0" style="padding: 8px; width: 240px; background-color: #061021; color: #ebebeb; border: 1px solid #2d8cf8b6; border-radius: 4px;">
         </div>
+        <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+            <label style="color: #ebebeb; display: flex; align-items: center; gap: 8px; cursor: pointer; min-width: 376px;font-weight: bold;">
+                Both Forks only <input type="checkbox" id="bothForksFilter_druid" onchange="apply_combined_filters('druid')" style="width: 16px; height: 16px; accent-color: #2d8cf8; cursor: pointer;">
+            </label>
+        </div>
     </div>
     <table id="hunting_table_druid" class="hunting_table">
         <tr>
@@ -210,7 +219,7 @@ scripts: <script src="../scripts/hunting.js"></script>
             <th class="place_row">Place</th>
             <th class="exp_row">Raw exp</th>
             <th class="loot_row">Loot</th>
-            <th class="runes_row">Runes</th>
+            <th class="runes_row">Playstyle</th>
         </tr>
         {% for hunt in site.data.hunting.solodruid %}
             <tr>
@@ -224,7 +233,7 @@ scripts: <script src="../scripts/hunting.js"></script>
 
                 <td>{{ hunt.raw_exp }}</td>
                 <td>{{ hunt.loot }}</td>
-                <td>{{ hunt.runes }}</td>
+                <td>{{ hunt.playstyle }}</td>
             </tr>
         {% endfor %}
     </table>

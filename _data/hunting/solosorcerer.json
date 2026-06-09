@@ -2,160 +2,152 @@
     {
         "level":  "8+",
         "place":  "Targuna Lizards",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "55k",
+        "loot":  "50k",
         "link":  "https://youtu.be/",
         "mastery":  "N/A"
     },
     {
-        "level":  "8+",
+        "level":  "10+",
         "place":  "Targuna Pirates",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "70k",
+        "loot":  "50k",
         "link":  "https://youtu.be/",
         "mastery":  "N/A"
     },
     {
-        "level":  "8+",
+        "level":  "12+",
         "place":  "Targuna Infernoids",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "90k",
+        "loot":  "35k",
         "link":  "https://youtu.be/",
         "mastery":  "N/A"
     },
     {
         "level":  "8+",
         "place":  "Rotworms Liberty Bay/Darashia",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "40k",
+        "loot":  "0k",
         "link":  "https://youtu.be/",
         "mastery":  "N/A"
     },
     {
         "level":  "8+",
         "place":  "Swamp Trolls Port Hope/Venore",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "30k",
+        "loot":  "50k",
         "link":  "https://youtu.be/",
         "mastery":  "N/A"
     },
     {
         "level":  "8+",
         "place":  "Crocodiles Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "40k",
+        "loot":  "-4k",
         "link":  "https://youtu.be/",
         "mastery":  "N/A"
     },
     {
         "level":  "8+",
         "place":  "Terramites Darashia",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "60k",
+        "loot":  "120k",
         "link":  "https://youtu.be/",
         "mastery":  "N/A"
     },
     {
         "level":  "8+",
-        "place":  "Larva Ankh",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "N/A"
-    },
-    {
-        "level":  "8+",
-        "place":  "Ankh Library Tomb",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Larvas",
+        "raw_exp":  "35k",
+        "loot":  "-4k",
         "link":  "https://youtu.be/",
         "mastery":  "N/A"
     },
     {
         "level":  "8+",
         "place":  "Edron Forgotten Tomb",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "75k",
+        "loot":  "50k",
         "link":  "https://youtu.be/",
         "mastery":  "N/A"
     },
     {
         "level":  "8+",
-        "place":  "Amazon Camp (Profit)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Amazon Camp",
+        "raw_exp":  "45k",
+        "loot":  "125k",
         "link":  "https://youtu.be/",
         "mastery":  "N/A"
     },
     {
         "level":  "8+",
         "place":  "Cormaya Dwarf Mines",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "55k",
+        "loot":  "-5k",
         "link":  "https://youtu.be/",
         "mastery":  "N/A"
     },
     {
         "level":  "8+",
         "place":  "Coryms Port Hope (Stealth Ring)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "100k",
+        "loot":  "0k",
         "link":  "https://youtu.be/",
         "mastery":  "N/A"
     },
     {
         "level":  "8+",
         "place":  "Tarantulas Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "60k",
+        "loot":  "-10k",
         "link":  "https://youtu.be/",
         "mastery":  "N/A"
     },
     {
         "level":  "8+",
         "place":  "Stonerefiners (Stealth Ring)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "135k",
+        "loot":  "40k",
         "link":  "https://youtu.be/",
         "mastery":  "N/A"
     },
     {
         "level":  "8+",
         "place":  "Minotaurs Darashia (Stealth Ring)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "95k",
+        "loot":  "-10k",
         "link":  "https://youtu.be/",
         "mastery":  "N/A"
     },
     {
         "level":  "13+",
         "place":  "Cyclops Mistrock",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "75k",
+        "loot":  "15k",
+        "link":  "https://youtu.be/",
+        "mastery":  "N/A"
+    },
+    {
+        "level":  "15+",
+        "place":  "Elves Yalahar",
+        "raw_exp":  "80k",
+        "loot":  "150k",
         "link":  "https://youtu.be/",
         "mastery":  "N/A"
     },
     {
         "level":  "20+",
-        "place":  "Elves Yalahar",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
-    },
-    {
-        "level":  "20+",
         "place":  "Edron Earth Elementals",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "150k",
+        "loot":  "10k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
     {
         "level":  "20+",
         "place":  "Mutated Humans Yala",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "120k",
+        "loot":  "-5k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -185,7 +177,7 @@
     },
     {
         "level":  "30+",
-        "place":  "Coryms Port Hope (AOE)",
+        "place":  "Coryms Port Hope",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
@@ -193,7 +185,7 @@
     },
     {
         "level":  "30+",
-        "place":  "Stonerefiners (AOE)",
+        "place":  "Stonerefiners",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
@@ -249,14 +241,6 @@
     },
     {
         "level":  "50+",
-        "place":  "LB Wyrms SD",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
-    },
-    {
-        "level":  "50+",
         "place":  "Nibelor Crystal Spiders",
         "raw_exp":  "-",
         "loot":  "-",
@@ -265,7 +249,7 @@
     },
     {
         "level":  "50+",
-        "place":  "Darashia DLs SD",
+        "place":  "Darashia Dragon Lords",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
@@ -281,7 +265,7 @@
     },
     {
         "level":  "50+",
-        "place":  "Lion\u0027s Rock",
+        "place":  "Lion's Rock",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
@@ -320,6 +304,14 @@
         "mastery":  "Fire"
     },
     {
+        "level":  "66+",
+        "place":  "Liberty Bay Wyrms",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Death"
+    },
+    {
         "level":  "70+",
         "place":  "Krailos Ogres Surface",
         "raw_exp":  "-",
@@ -350,6 +342,14 @@
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
+    },
+    {
+        "level":  "80+",
+        "place":  "Askarak Demons",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
     },
     {
         "level":  "80+",
@@ -777,7 +777,7 @@
     },
     {
         "level":  "250+",
-        "place":  "Carnivors",
+        "place":  "Carnivora's Rocks",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
@@ -937,7 +937,7 @@
     },
     {
         "level":  "300+",
-        "place":  "Oskayaat Weretigers",
+        "place":  "Weretigers -1",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
@@ -945,7 +945,15 @@
     },
     {
         "level":  "300+",
-        "place":  "Oskayaat Werecrocodiles",
+        "place":  "Weretigers -2",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
+    },
+    {
+        "level":  "300+",
+        "place":  "Werecrocodiles -1",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
@@ -1281,14 +1289,6 @@
     },
     {
         "level":  "600+",
-        "place":  "Raubritters",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
-    },
-    {
-        "level":  "600+",
         "place":  "Feru Pumin",
         "raw_exp":  "-",
         "loot":  "-",
@@ -1329,10 +1329,34 @@
     },
     {
         "level":  "800+",
+        "place":  "Bloodfire Gorge",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
+    },
+    {
+        "level":  "800+",
         "place":  "Podzilla Quaras",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
+    },
+    {
+        "level":  "800+",
+        "place":  "True Asuras",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
+    },
+    {
+        "level":  "1000+",
+        "place":  "Forsaken Crypt",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Death"
     }
 ]

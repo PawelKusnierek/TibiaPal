@@ -29,7 +29,9 @@ function filter_hunting_table_combined(level_filter, weapon_type, vocation) {
 	unfilter_hunting_table(vocation);
 	
 	// If no filters are set, show all rows
-	if ((level_filter === null || level_filter === 0) && weapon_type === "All") {
+	const bothForksCheckbox = document.getElementById("bothForksFilter_druid");
+	const bothForksActive = bothForksCheckbox && bothForksCheckbox.checked;
+	if ((level_filter === null || level_filter === 0) && weapon_type === "All" && !bothForksActive) {
 		return;
 	}
 	
@@ -54,7 +56,15 @@ function filter_hunting_table_combined(level_filter, weapon_type, vocation) {
 				should_hide = true;
 			}
 		}
-		
+
+		// Check Both Forks filter (druid only)
+		if (bothForksActive) {
+			const playstyleValue = hunting_table.rows[i].cells[4].textContent.trim();
+			if (!playstyleValue.includes("Forked Thorns") || !playstyleValue.includes("Forked Glacier")) {
+				should_hide = true;
+			}
+		}
+
 		if (should_hide) {
 			hunting_table.rows[i].style.display = 'none'
 		}
@@ -287,6 +297,38 @@ function setupSortingHeaders(vocation) {
 	}
 }
 
+function sortTableInitial(vocation) {
+	const table = document.getElementById("hunting_table_" + vocation);
+	if (!table) return;
+	const tbody = table.querySelector("tbody") || table;
+	const rows = Array.from(tbody.querySelectorAll("tr")).slice(1);
+
+	rows.sort((a, b) => {
+		const aLevel = parseInt(a.cells[0].textContent.trim().replace("+", "")) || 0;
+		const bLevel = parseInt(b.cells[0].textContent.trim().replace("+", "")) || 0;
+		if (aLevel !== bLevel) return aLevel - bLevel;
+
+		const aRawText = a.cells[2].textContent.trim();
+		const bRawText = b.cells[2].textContent.trim();
+		const aLootText = a.cells[3].textContent.trim();
+		const bLootText = b.cells[3].textContent.trim();
+
+		const aNoData = (aRawText === "-" || aRawText === "") && (aLootText === "-" || aLootText === "");
+		const bNoData = (bRawText === "-" || bRawText === "") && (bLootText === "-" || bLootText === "");
+
+		if (aNoData && !bNoData) return 1;
+		if (!aNoData && bNoData) return -1;
+
+		const aExp = extractExpValue(aRawText);
+		const bExp = extractExpValue(bRawText);
+		if (aExp !== bExp) return bExp - aExp;
+
+		return extractLootValue(bLootText) - extractLootValue(aLootText);
+	});
+
+	rows.forEach(row => tbody.appendChild(row));
+}
+
 // Initialize sorting headers when page loads
 function initializeSortingHeaders() {
 	const vocations = ['knight', 'paladin', 'sorcerer', 'druid', 'monk', 'teamhunt'];
@@ -296,10 +338,11 @@ function initializeSortingHeaders() {
 	if (firstTab) {
 		firstTab.style.display = "block";
 	}
-	
+
 	vocations.forEach(vocation => {
+		sortTableInitial(vocation);
 		setupSortingHeaders(vocation);
-		
+
 		// Set up level filter event listeners
 		const levelFilter = document.getElementById("levelFilter_" + vocation);
 		if (levelFilter) {
@@ -316,19 +359,28 @@ function applyColorCoding() {
 		// Fire/GFB - Red
 		'GFB': 'rune-fire',
 		'Fire': 'rune-fire',
+		'Firestorm Arrows': 'rune-fire',
 		// Ice/Avalanche - Light blue
 		'Avalanche': 'rune-ice',
 		'Ice': 'rune-ice',
+		'Froststorm Arrows': 'rune-ice',
+		'Strong Ice Wave': 'rune-ice',
+		'Forked Glacier': 'rune-ice',
 		// Energy/Thunderstorm - Purple
 		'Thunderstorm': 'rune-energy',
 		'Energy': 'rune-energy',
 		// Earth/Stoneshower - Green
 		'Stoneshower': 'rune-earth',
 		'Earth': 'rune-earth',
+		'Forked Thorns': 'rune-earth',
 		// Death - Darker shade of white
 		'Death': 'rune-death',
 		// Physical stays white (default)
-		'Physical': 'rune-physical'
+		'Physical': 'rune-physical',
+		// Ethereal - pale light blue
+		'Ethereal': 'rune-ethereal',
+		// Divine - Holy/Gold
+		'Divine': 'rune-divine'
 	};
 	
 	// Function to apply colors to a cell with multiple values
@@ -336,8 +388,8 @@ function applyColorCoding() {
 		const text = cell.textContent.trim();
 		if (!text) return;
 
-		// Split by comma or slash, preserving which separator was used
-		const tokens = text.split(/([,\/])/);
+		// Split by comma, slash, or plus, preserving which separator was used
+		const tokens = text.split(/([,\/+])/);
 		const parts = [];
 		const separators = [];
 		for (let i = 0; i < tokens.length; i++) {
@@ -365,7 +417,7 @@ function applyColorCoding() {
 				const colorClass = colorMap[part] || 'rune-physical';
 				newHTML += `<span class="${colorClass}">${part}</span>`;
 				if (index < parts.length - 1) {
-					newHTML += separators[index] === '/' ? '/' : ', ';
+					newHTML += separators[index] === '/' ? '/' : separators[index] === '+' ? ' + ' : ', ';
 				}
 			});
 			cell.innerHTML = newHTML;

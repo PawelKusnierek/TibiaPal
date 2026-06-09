@@ -2,281 +2,329 @@
     {
         "level":  "8+",
         "place":  "Targuna Lizards",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "60k",
+        "loot":  "55k",
         "link":  "https://youtu.be/",
-        "runes":  "Arrows"
+        "runes":  "Arrows/Simple Arrows"
     },
     {
-        "level":  "8+",
+        "level":  "10+",
         "place":  "Targuna Pirates",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "75k",
+        "loot":  "40k",
         "link":  "https://youtu.be/",
-        "runes":  "Arrows"
+        "runes":  "Arrows/Simple Arrows"
     },
     {
-        "level":  "8+",
+        "level":  "12+",
         "place":  "Targuna Infernoids",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "85k",
+        "loot":  "40k",
         "link":  "https://youtu.be/",
-        "runes":  "Arrows"
+        "runes":  "Arrows/Simple Arrows"
     },
     {
-        "level":  "8+",
-        "place":  "Swamp Trolls Port Hope/Venore",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Spears",
-        "link":  "https://youtu.be/"
+        "level": "8+",
+        "place": "Swamp Trolls Port Hope/Venore",
+        "raw_exp": "30k",
+        "loot": "55k",
+        "runes": "Spears",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "8+",
-        "place":  "Crocodiles Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Spears",
-        "link":  "https://youtu.be/"
+        "level": "8+",
+        "place": "Crocodiles Port Hope",
+        "raw_exp": "30k",
+        "loot": "5k",
+        "runes": "Spears",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "8+",
-        "place":  "Rotworms Liberty Bay/Darashia",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Spears",
-        "link":  "https://youtu.be/"
+        "level": "8+",
+        "place": "Rotworms Liberty Bay/Darashia",
+        "raw_exp": "30k",
+        "loot": "4k",
+        "runes": "Spears",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "8+",
-        "place":  "Larva Ankh",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Spears",
-        "link":  "https://youtu.be/"
+        "level": "8+",
+        "place": "Larva Ankh",
+        "raw_exp": "30k",
+        "loot": "2k",
+        "runes": "Spears",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "15+",
-        "place":  "Edron Tomb",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Arrows",
-        "link":  "https://youtu.be/"
+        "level": "15+",
+        "place": "Edron Tomb",
+        "raw_exp": "55k",
+        "loot": "30k",
+        "runes": "Arrows",
+        "link" : "https://youtu.be/tAGHQ6Zbx5g"
     },
     {
-        "level":  "15+",
-        "place":  "Mistrock Cyclops (Stealth Ring)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Arrows",
-        "link":  "https://youtu.be/"
+        "level": "15+",
+        "place": "Mistrock Cyclops (Stealth Ring)",
+        "raw_exp": "50k",
+        "loot": "0k",
+        "runes": "Arrows",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "15+",
-        "place":  "Amazon Camp",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Spears",
-        "link":  "https://youtu.be/"
+        "level": "15+",
+        "place": "Amazon Camp",
+        "raw_exp": "35k",
+        "loot": "60k",
+        "runes": "Spears",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "15+",
-        "place":  "Ankrahmun City Tomb",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Spears",
-        "link":  "https://youtu.be/"
+        "level": "15+",
+        "place": "Ankrahmun City Tomb",
+        "raw_exp": "35k",
+        "loot": "5k",
+        "runes": "Spears",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "20+",
-        "place":  "Minotaurs Yalahar",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Arrows",
-        "link":  "https://youtu.be/"
+        "level": "20+",
+        "place": "Minotaurs Yalahar",
+        "raw_exp": "60k",
+        "loot": "0k",
+        "runes": "Arrows",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "20+",
-        "place":  "Elves Yalahar ",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Arrows",
-        "link":  "https://youtu.be/"
+        "level": "20+",
+        "place": "Elves Yalahar",
+        "raw_exp": "40k",
+        "loot": "40k",
+        "runes": "Arrows",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "25+",
-        "place":  "Stonerefiners (Stealth Ring)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Royal Spears",
-        "link":  "https://youtu.be/"
+        "level": "25+",
+        "place": "Stonerefiners (Stealth Ring)",
+        "raw_exp": "180k",
+        "loot": "40k",
+        "runes": "Royal Spears",
+        "link": "https://youtu.be/_PQb_eT6nVU"
     },
     {
-        "level":  "25+",
-        "place":  "Mutated Humans Yalahar",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Royal Spears",
-        "link":  "https://youtu.be/"
+        "level": "25+",
+        "place": "Mutated Humans Yalahar",
+        "raw_exp": "110k",
+        "loot": "5k",
+        "runes": "Royal Spears",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "25+",
-        "place":  "Coryms Port Hope (Stealth Ring)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Royal Spears",
-        "link":  "https://youtu.be/"
+        "level": "25+",
+        "place": "Coryms Port Hope (Stealth Ring)",
+        "raw_exp": "95k",
+        "loot": "-15k",
+        "runes": "Royal Spears",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "25+",
-        "place":  "Carniphilas Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Royal Spears",
-        "link":  "https://youtu.be/"
+        "level": "25+",
+        "place": "Carniphilas Port Hope",
+        "raw_exp": "75k",
+        "loot": "-5k",
+        "runes": "Royal Spears",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "25+",
-        "place":  "Tarantulas Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Royal Spears",
-        "link":  "https://youtu.be/"
+        "level": "25+",
+        "place": "Tarantulas Port Hope",
+        "raw_exp": "70k",
+        "loot": "15k",
+        "runes": "Royal Spears",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "25+",
-        "place":  "Mammoths/Badgers Svargrond",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Royal Spears",
-        "link":  "https://youtu.be/"
+        "level": "25+",
+        "place": "Mammoths/Badgers Svargrond",
+        "raw_exp": "60k",
+        "loot": "70k",
+        "runes": "Royal Spears",
+        "link": "https://youtu.be/"
     },
     {
-        "level":  "40+",
-        "place":  "Zombies Cemetery Yalahar",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Onyx Arrows",
-        "link":  "https://youtu.be/"
+        "level": "40+",
+        "place": "Zombies Cemetery Yalahar",
+        "raw_exp": "160k",
+        "loot": "-10k",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/6v7_TICOpEU"
     },
     {
-        "level":  "40+",
-        "place":  "MoAS -3",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Onyx Arrows",
-        "link":  "https://youtu.be/"
+        "level": "40+",
+        "place": "Chor",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "40+",
-        "place":  "Zombies Treasure Island",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Onyx Arrows",
-        "link":  "https://youtu.be/"
+        "level": "40+",
+        "place": "Banuta Apes",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "40+",
-        "place":  "Pirates Yalahar",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Onyx Arrows",
-        "link":  "https://youtu.be/"
+        "level": "40+",
+        "place": "Mummy/Bonebeasts MOSL -3",
+        "raw_exp": "150k",
+        "loot": "70k",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "50+",
-        "place":  "Ramoa Bonebeast Island",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Onyx Arrows, Avalanche",
-        "link":  "https://youtu.be/"
+        "level": "40+",
+        "place": "Zombies Treasure Island",
+        "raw_exp": "145k",
+        "loot": "5k",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/1pQ8Ta0BJ0Q"
     },
     {
-        "level":  "50+",
-        "place":  "Peninsula Tomb",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Onyx Arrows, Avalanche",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "50+",
-        "place":  "Lion's Rock",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Onyx Arrows, Avalanche",
-        "link":  "https://youtu.be/"
+        "level": "40+",
+        "place": "Pirates Yalahar",
+        "raw_exp": "110k",
+        "loot": "60k",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/"
     },
     {
         "level":  "50+",
         "place":  "Old Fortress Bonebeasts",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp": "270k",
+        "loot": "0k",
         "runes":  "Onyx Arrows",
-        "link":  "https://youtu.be/"
+        "link": "https://youtu.be/Rimlz__WgqY"
     },
     {
-        "level":  "50+",
-        "place":  "Ankrahmun Cults Lizards",
+        "level":  "60+",
+        "place":  "Ramoa Bonebeast Island",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Onyx Arrows, Thunderstorm",
+        "runes":  "Shatterstorm Arrows, Ethereal, Divine",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "50+",
+        "level":  "60+",
+        "place":  "Peninsula Tomb",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Shatterstorm Arrows, Ethereal, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "60+",
+        "place":  "Lion's Rock",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Shatterstorm Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "60+",
+        "place":  "Laguna Islands (Profit)",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Shatterstorm Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "60+",
+        "place":  "Forbidden Temple (Ankrahmun Cults)",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Shatterstorm Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "70+",
         "place":  "Werebadgers Grimvale -1",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Onyx Arrows",
+        "runes":  "Drill Bolts, Divine",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "50+",
-        "place":  "Krailos Surface",
+        "level":  "70+",
+        "place":  "Hive Surface",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Onyx Arrows",
+        "runes":  "Drill Bolts, Divine",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "50+",
+        "level":  "70+",
+        "place":  "Askarak Demons",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Shatterstorm Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "70+",
+        "place":  "Shaburak Demons",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Shatterstorm Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level": "50+",
+        "place": "Krailos Surface",
+        "raw_exp": "220k",
+        "loot": "100k",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level":  "60+",
         "place":  "Edron Vampire Crypt -3",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Onyx Arrows, Avalanche",
+        "runes":  "Shatterstorm Arrows, Ethereal, Divine",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "50+",
+        "level":  "60+",
         "place":  "Cults Yalahar",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Onyx Arrows, Thunderstorm",
+        "runes":  "Onyx Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "50+",
-        "place":  "Darashia Dragon Lair",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Onyx Arrows",
-        "link":  "https://youtu.be/"
+        "level": "50+",
+        "place": "Darashia Dragon Lair",
+        "raw_exp": "180k",
+        "loot": "10k",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "50+",
-        "place":  "Yalahar Dragons",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Onyx Arrows",
-        "link":  "https://youtu.be/"
+        "level": "50+",
+        "place": "Yalahar Dragons",
+        "raw_exp": "160k",
+        "loot": "10k",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/"
     },
     {
         "level":  "70+",
         "place":  "Iksupan",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Drill Bolts, Avalanche",
+        "runes":  "Drill Bolts, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -284,7 +332,7 @@
         "place":  "Middle Spike",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Drill Bolts, GFB",
+        "runes":  "Shatterstorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -292,7 +340,7 @@
         "place":  "Wyrms Liberty Bay -1",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Drill Bolts",
+        "runes":  "Drill Bolts, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -300,7 +348,7 @@
         "place":  "Cemetery Quarter -1",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Drill Bolts",
+        "runes":  "Drill Bolts, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -308,14 +356,14 @@
         "place":  "Nibelor Crystal Spiders",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Drill Bolts, Thunderstorm",
+        "runes":  "Drill Bolts, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "70+",
         "place":  "Braindeaths Vandura Bonelord Cave",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp": "180k",
+        "loot": "250k",
         "runes":  "Drill Bolts",
         "link":  "https://youtu.be/"
     },
@@ -324,15 +372,15 @@
         "place":  "Mother of Scarabs Lair",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Drill Bolts, GFB",
+        "runes":  "Shatterstorm Bolts, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "80+",
-        "place":  "Giant Spiders PH",
+        "place":  "Giant Spiders Port Hope",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Drill Bolts, GFB",
+        "runes":  "Drill Bolts, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -340,7 +388,7 @@
         "place":  "Nightmare Scions Krailos",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Avalanche",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -348,7 +396,7 @@
         "place":  "Dragon Lords Fenrock",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Avalanche",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -356,7 +404,7 @@
         "place":  "Edron South Were",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, GFB",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -364,7 +412,7 @@
         "place":  "Grimvale -4",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, GFB",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -372,7 +420,7 @@
         "place":  "Werehyaenas -1",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Avalanche",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -380,7 +428,7 @@
         "place":  "Oramond Minos",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Avalanche",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -388,7 +436,7 @@
         "place":  "Exotic Cave",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, GFB",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -396,7 +444,7 @@
         "place":  "Mini Rosha",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Avalanche",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -404,7 +452,47 @@
         "place":  "Yielothax",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Avalanche",
+        "runes":  "Crystalline Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "90+",
+        "place":  "Feyrist Surface",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Crystalline Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "90+",
+        "place":  "Ice Witch Temple",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Crystalline Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "90+",
+        "place":  "Old Masonry (Death portal)",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Crystalline Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "90+",
+        "place":  "Quaras Liberty Bay",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Crystalline Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "90+",
+        "place":  "Misguided",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -412,7 +500,7 @@
         "place":  "Putrid Mummy",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, GFB",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -420,7 +508,7 @@
         "place":  "Lizard Chosens",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Avalanche",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -428,7 +516,7 @@
         "place":  "Okolnir Frost Dragons",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Thunderstorm",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -436,7 +524,7 @@
         "place":  "Edron Vampire Crypt -4",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, GFB",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -444,7 +532,15 @@
         "place":  "Ravenous Lava Lurkers",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Burst Arrows, Avalanche",
+        "runes":  "Shatterstorm Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "120+",
+        "place":  "Souleater Mountain",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -452,15 +548,15 @@
         "place":  "Banuta -1 (Hydras/SS/Medusa)",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Thunderstorm",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "130+",
-        "place":  "Talahu Medusa/Serpents",
+        "place":  "Talahu Medusas/Serpents",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Thunderstorm",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -468,7 +564,7 @@
         "place":  "Frazzlemaw Bridge",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Avalanche",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -476,7 +572,7 @@
         "place":  "Ghastly Dragons",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Thunderstorm",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -484,15 +580,7 @@
         "place":  "MoTa Fury",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Thunderstorm",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "130+",
-        "place":  "Edron Demons",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Crystalline Arrows, Avalanche",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -500,7 +588,7 @@
         "place":  "Ravenous Lava Lurkers",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -508,7 +596,7 @@
         "place":  "Exotic Cave",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -516,7 +604,7 @@
         "place":  "Yalahar Sunken Quarter",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -524,7 +612,7 @@
         "place":  "Deeplings Library",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -532,7 +620,7 @@
         "place":  "Mini Rosha (AOE)",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -540,7 +628,7 @@
         "place":  "Edron Heroes -3",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -548,7 +636,7 @@
         "place":  "Carlin Cults",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -556,15 +644,7 @@
         "place":  "Edron Heroes -2",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
-        "place":  "Inner Hive (East Stage2)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -572,7 +652,7 @@
         "place":  "Orc Cults",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Stoneshower",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -580,7 +660,7 @@
         "place":  "Dark Faun Cave",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -588,7 +668,7 @@
         "place":  "Edron Vampire Crypt",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -596,15 +676,7 @@
         "place":  "Mother of Scarabs Lair",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
-        "place":  "Misguided",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -612,7 +684,15 @@
         "place":  "Yalahar Grim Reapers",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "200+",
+        "place":  "Pirats",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -620,7 +700,7 @@
         "place":  "Barkless Elves",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Stoneshower",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -628,7 +708,7 @@
         "place":  "Werehyaenas North",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -636,7 +716,7 @@
         "place":  "Oramond West",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm, GFB",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -644,15 +724,7 @@
         "place":  "Glooth Tower",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "200+",
-        "place":  "Werelions -2 East",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -660,7 +732,7 @@
         "place":  "Otherworld Edron",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Stoneshower",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -668,7 +740,7 @@
         "place":  "Glooth Bandits",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -676,7 +748,7 @@
         "place":  "Grimvale -4",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -684,7 +756,7 @@
         "place":  "Lizard City",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -692,7 +764,7 @@
         "place":  "Werecreatures Edron",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -700,7 +772,7 @@
         "place":  "Otherworld Kazordoon (Dwarf Bridge)",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Stoneshower",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -708,15 +780,7 @@
         "place":  "Brimstone Bugs WOTE",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "200+",
-        "place":  "Mino Cults",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -724,7 +788,15 @@
         "place":  "Werehyaenas South",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "250+",
+        "place":  "Carnivora's Rocks",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -732,7 +804,7 @@
         "place":  "Medusa Tower",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm, GFB",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -740,7 +812,7 @@
         "place":  "Deeper Banuta -8",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -748,15 +820,15 @@
         "place":  "Diremaw Task Area",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "250+",
-        "place":  "Hive West (Stage3)",
+        "place":  "Hive Stage 3",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -764,7 +836,7 @@
         "place":  "Deeper Banuta -6",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -772,7 +844,7 @@
         "place":  "Elder Wyrms Drefia",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -780,7 +852,7 @@
         "place":  "Seacrest Serpents Birthing Grounds",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -788,7 +860,7 @@
         "place":  "Oramond Wildlife Raid",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -796,15 +868,7 @@
         "place":  "Asura Palace",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "300+",
-        "place":  "Oramond Minotaur Raid",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -812,7 +876,7 @@
         "place":  "Werelions -1",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -820,7 +884,7 @@
         "place":  "Drefia Grim Reapers",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB, Thunderstorm",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -828,15 +892,7 @@
         "place":  "Werelions -2",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "300+",
-        "place":  "Oramond Golem Raid",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Thunderstorm",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -844,7 +900,7 @@
         "place":  "Warzone 6",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -852,7 +908,7 @@
         "place":  "Draken Walls",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -860,15 +916,15 @@
         "place":  "Candia Nibblemaws",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "200+",
         "place":  "Book World: Chapter II",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -876,7 +932,7 @@
         "place":  "Book World: Chapter III",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -884,7 +940,15 @@
         "place":  "Book World: Chapter IV",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "300+",
+        "place":  "Weretigers -1",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -892,7 +956,7 @@
         "place":  "Asura Mirror",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -900,7 +964,7 @@
         "place":  "Warzone 5",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -908,7 +972,7 @@
         "place":  "Oramond Fury Dungeon",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -916,7 +980,7 @@
         "place":  "Warzone 4",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -924,7 +988,7 @@
         "place":  "Lower Roshamuul",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -932,7 +996,7 @@
         "place":  "Oramond Catacombs",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -940,7 +1004,7 @@
         "place":  "Iksupan Occupied Sanctuary",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -948,15 +1012,15 @@
         "place":  "Iksupan Last Stand",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "400+",
-        "place":  "Winter Court for beginners",
+        "place":  "Winter Court",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -964,7 +1028,7 @@
         "place":  "Weretigers -2",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Stoneshower",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -972,7 +1036,7 @@
         "place":  "Werecrocodiles -1",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -980,31 +1044,39 @@
         "place":  "Wote 8 Drakens",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "400+",
-        "place":  "Weretigers -1",
+        "place":  "Burster Spectres",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Stoneshower",
+        "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "400+",
-        "place":  "Burster Spectres Solo (Bestiary)",
+        "place":  "Ripper Spectres",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "400+",
-        "place":  "Gazer Spectres Solo (Bestiary)",
+        "place":  "Buried Cathedral -8",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Firestorm Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "400+",
+        "place":  "Gazer Spectres",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Froststorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1012,15 +1084,7 @@
         "place":  "Oramond Abandoned Sewers",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "400+",
-        "place":  "Verminor Seal",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Thunderstorm",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1028,7 +1092,7 @@
         "place":  "Marapur Turtles and Foam Stalkers",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Stoneshower",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1036,7 +1100,7 @@
         "place":  "Rosha Shockheads",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1044,7 +1108,7 @@
         "place":  "Rosha West",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1052,7 +1116,7 @@
         "place":  "Roshamuul Mines (Terrorsleeps)",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1060,7 +1124,7 @@
         "place":  "Rosha Bones",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1068,39 +1132,39 @@
         "place":  "Otherworld",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Stoneshower",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "450+",
+        "level":  "400+",
         "place":  "Nightmare Isles",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "500+",
-        "place":  "Bounac Crypt Warriors",
+        "place":  "Crypt Warriors",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "500+",
+        "place":  "Carnisylvans",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "400+",
         "place":  "Summer Court",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "500+",
-        "place":  "Winter Court (Advanced)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1108,7 +1172,7 @@
         "place":  "Marapur Naga",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Stoneshower, Thunderstorm",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1116,7 +1180,7 @@
         "place":  "Deathlings",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Stoneshower",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1124,7 +1188,7 @@
         "place":  "Upper Roshamuul (North)",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1132,7 +1196,7 @@
         "place":  "Bashmu",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1140,15 +1204,23 @@
         "place":  "Upper Roshamuul (South)",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "550+",
-        "place":  "Falcon\u0027s Eagle",
+        "place":  "Falcon's Eagle",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche, GFB",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "600+",
+        "place":  "Venore Flimsies",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1156,7 +1228,7 @@
         "place":  "Port Hope Flimsies",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1164,7 +1236,15 @@
         "place":  "Girtablilu",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "600+",
+        "place":  "Warzone 1",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -1172,7 +1252,7 @@
         "place":  "Warzone 2",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1180,15 +1260,7 @@
         "place":  "Warzone 3",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "600+",
-        "place":  "Venore Lost Souls",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1196,63 +1268,167 @@
         "place":  "Norcferatu Fortress",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "500+",
+        "place":  "Azzilon Walls",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "600+",
-        "place":  "Azzilon Walls",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "700+",
         "place":  "Azzilon Castle",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "600+",
+        "place":  "Issavi Ogres",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "600+",
+        "place":  "Usurpers",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "600+",
+        "place":  "Floating Savants MoTA",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "600+",
+        "place":  "Nimmersatt's Bottom Floor (-7)",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "600+",
+        "place":  "Oramond Mountain Hideout -1/-2",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "600+",
+        "place":  "Nimmersatt's Boss Floor (-6)",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "600+",
+        "place":  "Deep Desert",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "700+",
-        "place":  "Thais Floating Savants",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Avalanche",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "700+",
-        "place":  "Wardragons",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Stoneshower",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "800+",
-        "place":  "Darashia Skeletons",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Stoneshower",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "800+",
         "place":  "Norcferatu Dungeons West",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "700+",
+        "place":  "Norcferatu Dungeons East",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "600+",
+        "place":  "Issavi Sewers",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "600+",
+        "place":  "Issavi Puzzle",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "600+",
+        "place":  "Cobras -1",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "600+",
+        "place":  "Cobra Bastion",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "600+",
+        "place":  "Issavi Sphinx & Crypt Wardens",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "800+",
-        "place":  "Norcferatu Dungeons East",
+        "place":  "Feru Pumin",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "GFB",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "800+",
+        "place":  "Issavi Surface",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "800+",
+        "place":  "Feru Undead Dragons",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "800+",
+        "place":  "Bulltaur Lair",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1260,15 +1436,71 @@
         "place":  "Ferumbras Way",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "800+",
-        "place":  "Issavi Crypts (Wardens/Sphinx)",
+        "place":  "Warzone 7",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "800+",
+        "place":  "Warzone 8",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "800+",
+        "place":  "Warzone 9",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "800+",
+        "place":  "Bloodfire Gorge",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "800+",
+        "place":  "True Asuras",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "800+",
+        "place":  "Ingol Surface/-1/-2",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "1000+",
+        "place":  "Ingol -3/-4/-5",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "1000+",
+        "place":  "Azzilon Catacombs",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1276,7 +1508,23 @@
         "place":  "Feru DT",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "1000+",
+        "place":  "Podzilla Quaras",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "1000+",
+        "place":  "Feru Juggernauts",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1284,23 +1532,15 @@
         "place":  "Feru Infernatil",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Avalanche",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "1000+",
-        "place":  "Feru Pumin",
+        "place":  "Forsaken Crypt",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Thunderstorm",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "1000+",
-        "place":  "Feru Undead Dragons",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Thunderstorm",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     }
 ]

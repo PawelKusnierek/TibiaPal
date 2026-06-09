@@ -225,7 +225,7 @@
     },
     {
         "level":  "250+",
-        "place":  "Lost Souls (Flimsy etc.)",
+        "place":  "Venore Flimsies",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/"
@@ -295,27 +295,6 @@
     },
     {
         "level":  "400+",
-        "place":  "Secret Library",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "400+",
-        "place":  "Feru Seals",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "500+",
-        "place":  "Soul War Areas",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "500+",
         "place":  "Norcferatu Dungeons",
         "raw_exp":  "-",
         "loot":  "-",
@@ -323,7 +302,28 @@
     },
     {
         "level":  "500+",
+        "place":  "Secret Library",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "500+",
+        "place":  "Feru Seals",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "500+",
         "place":  "Raubritters Bloodfire Gorge",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "600+",
+        "place":  "Soul War Areas",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/"
@@ -345,6 +345,13 @@
     {
         "level":  "800+",
         "place":  "Rotten Blood",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "800+",
+        "place":  "Unhallowed Crypt",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/"

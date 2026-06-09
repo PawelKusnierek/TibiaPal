@@ -779,6 +779,14 @@ ol, ul {
   color: #ffffff;
 }
 
+.rune-ethereal {
+  color: #c0d8ff;
+}
+
+.rune-divine {
+  color: #ffd700;
+}
+
 .level_row {
   width: 10%;
 }
