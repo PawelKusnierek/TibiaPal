@@ -26,6 +26,13 @@ function enable_expandable_div_buttons() {
 }
 
 function enable_default_tabs() {
+  const hash = location.hash.slice(1);
+  if (hash && document.getElementById(hash) && document.getElementById(hash).classList.contains('tabcontent')) {
+    initial_show_tab(hash);
+    setTimeout(function() { window.scrollTo(0, 0); }, 0);
+    return;
+  }
+
   if (location.href.split("/").slice(-1).includes('charm_planner')) {
     initial_show_tab("Major Charms")
   }
@@ -75,11 +82,12 @@ function show_tab(evt, tab_name) {
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(tab_name).style.display = "block";
   evt.currentTarget.className += " active";
+  history.replaceState(null, '', '#' + tab_name);
 }
 
 function initial_show_tab(tab_name) {
   // Declare all variables
-  var i, tabcontent;
+  var i, tabcontent, tablinks;
 
   // Get all elements with class="tabcontent" and hide them
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -89,6 +97,16 @@ function initial_show_tab(tab_name) {
 
   // Show the current tab
   document.getElementById(tab_name).style.display = "block";
+
+  // Activate the corresponding tab button (handles hash-based overrides where HTML default differs)
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    var onclick = tablinks[i].getAttribute('onclick');
+    if (onclick && onclick.includes("'" + tab_name + "'")) {
+      tablinks[i].className += " active";
+    }
+  }
 }
 
 function enable_tablinks() {
