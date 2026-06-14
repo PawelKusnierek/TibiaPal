@@ -1153,6 +1153,22 @@
     },
     {
         "level":  "500+",
+        "place":  "Issavi Sewers",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
+    },
+    {
+        "level":  "500+",
+        "place":  "Issavi Puzzle",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
+    },
+    {
+        "level":  "500+",
         "place":  "Flimsy Port Hope",
         "raw_exp":  "-",
         "loot":  "-",
