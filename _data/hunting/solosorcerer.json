@@ -1005,14 +1005,6 @@
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
-        "mastery":  "Fire/Energy"
-    },
-    {
-        "level":  "400+",
-        "place":  "Upper Rosh",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
     {
@@ -1021,7 +1013,7 @@
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
-        "mastery":  "Fire/Energy"
+        "mastery":  "Energy"
     },
     {
         "level":  "400+",
@@ -1070,6 +1062,14 @@
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
+    },
+    {
+        "level":  "500+",
+        "place":  "Upper Rosh",
+        "raw_exp":  "6.5kk",
+        "loot":  "1.7kk",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
     },
     {
         "level":  "500+",
