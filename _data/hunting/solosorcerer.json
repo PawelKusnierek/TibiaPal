@@ -1001,14 +1001,6 @@
     },
     {
         "level":  "400+",
-        "place":  "Cobras",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Death"
-    },
-    {
-        "level":  "400+",
         "place":  "Falcons",
         "raw_exp":  "-",
         "loot":  "-",
@@ -1062,6 +1054,22 @@
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
+    },
+    {
+        "level":  "500+",
+        "place":  "Cobra Bastion",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Death"
+    },
+    {
+        "level":  "500+",
+        "place":  "Cobra Basement -1",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Death"
     },
     {
         "level":  "500+",
@@ -1233,51 +1241,11 @@
     },
     {
         "level":  "600+",
-        "place":  "Azzilon Catacombs",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Death"
-    },
-    {
-        "level":  "600+",
         "place":  "Oramond Mountain Hideout -1/-2",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
-    },
-    {
-        "level":  "600+",
-        "place":  "Bulltaur Lair",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Death"
-    },
-    {
-        "level":  "600+",
-        "place":  "Ingol Surface",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Death"
-    },
-    {
-        "level":  "600+",
-        "place":  "Ingol -1",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Death"
-    },
-    {
-        "level":  "600+",
-        "place":  "Ingol -2",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Death"
     },
     {
         "level":  "600+",
@@ -1296,23 +1264,63 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "600+",
-        "place":  "Warzone 9",
+        "level":  "800+",
+        "place":  "Bulltaur Lair",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
     },
     {
-        "level":  "600+",
-        "place":  "Feru Pumin",
+        "level":  "800+",
+        "place":  "Azzilon Catacombs",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Death"
+    },
+    {
+        "level":  "800+",
+        "place":  "Warzone 9",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Death"
+    },
+        {
+        "level":  "800+",
+        "place":  "Ingol Surface",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Death"
+    },
+    {
+        "level":  "800+",
+        "place":  "Ingol -1",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Death"
+    },
+    {
+        "level":  "800+",
+        "place":  "Ingol -2",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Death"
+    },
+    {
+        "level":  "800+",
+        "place":  "Feru Pumin Boss Floor",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
     {
-        "level":  "600+",
+        "level":  "800+",
         "place":  "Feru Undead Dragons",
         "raw_exp":  "-",
         "loot":  "-",
@@ -1320,7 +1328,7 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "600+",
+        "level":  "800+",
         "place":  "Feru Mazoran",
         "raw_exp":  "-",
         "loot":  "-",
@@ -1328,7 +1336,7 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "600+",
+        "level":  "800+",
         "place":  "Feru Juggernauts",
         "raw_exp":  "-",
         "loot":  "-",
