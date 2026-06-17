@@ -51,6 +51,12 @@
             "mastery": "Energy/Death"
         },
         {
+            "points": 425,
+            "description": "T1 Beam Mastery + T1 E-Wave",
+            "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2CAA0kgNvJOATG9wQIpUIn_SAAA",
+            "mastery": "Fire (TH)"
+        },
+        {
             "points": 500,
             "description": "T1 Beam Mastery + T1 E-Wave + T1 Death Echo + T1 Avatar",
             "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJAEYgbvFBBpxAAmvUGkJFgECP4jAQA",
@@ -60,7 +66,7 @@
             "points": 500,
             "description": "T2 Death Echo + T1 LoD + T1 Beam Mastery",
             "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJAEYgbvFBBpBOKCCIYUbwYY-I8EAA",
-            "mastery": "Fire"
+            "mastery": "Fire (Solo)"
         },
         {
             "points": 650,
@@ -72,13 +78,13 @@
             "points": 700,
             "description": "T2 Beam Mastery + T1 E-Wave + 1x Greater Gem",
             "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJgmCSS8U4AEgxEDmIKQECYDw38kAAA",
-            "mastery": "Energy/Death"
+            "mastery": "Energy/Death/Fire (TH)"
         },
         {
             "points": 750,
             "description": "T2 LoD + T2 Death Echo + 1x Greater Gem",
             "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJAEYgbvFBBpxMCQAiKAlDdIZhqI-R8JAAA",
-            "mastery": "Fire"
+            "mastery": "Fire (Solo)"
         },
         {
             "points": 1000,
@@ -90,7 +96,7 @@
             "points": 1000,
             "description": "T2 LoD + T2 Beam Mastery + T2 Death Echo + 2x Greater Gem",
             "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJgmCSS8U4AEgxFDSgqQAIIUbyAhOQ3E_I8EAA",
-            "mastery": "Fire"
+            "mastery": "Fire (Solo)"
         }
     ]
 }

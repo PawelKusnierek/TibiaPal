@@ -8,6 +8,15 @@ function applyWheelColorCoding() {
 		'Physical':'rune-physical'
 	};
 
+	function findColorClass(text) {
+		for (const [keyword, cls] of Object.entries(colorMap)) {
+			if (text === keyword || text.startsWith(keyword + ' ')) {
+				return cls;
+			}
+		}
+		return null;
+	}
+
 	function colorizeCell(cell) {
 		const text = cell.textContent.trim();
 		if (!text) return;
@@ -28,13 +37,14 @@ function applyWheelColorCoding() {
 
 		if (parts.length === 1) {
 			const value = parts[0];
-			if (colorMap[value]) {
-				cell.classList.add(colorMap[value]);
+			const colorClass = findColorClass(value);
+			if (colorClass) {
+				cell.classList.add(colorClass);
 			}
 		} else {
 			let newHTML = '';
 			parts.forEach((part, index) => {
-				const colorClass = colorMap[part];
+				const colorClass = findColorClass(part);
 				newHTML += colorClass ? `<span class="${colorClass}">${part}</span>` : part;
 				if (index < parts.length - 1) {
 					newHTML += '/';
