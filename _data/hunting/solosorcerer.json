@@ -1017,9 +1017,9 @@
     },
     {
         "level":  "400+",
-        "place":  "Buried Cathedral -8",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Flimsy Port Hope (-1 only)",
+        "raw_exp":  "6.8kk",
+        "loot":  "900k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -1033,22 +1033,6 @@
     },
     {
         "level":  "400+",
-        "place":  "Otherworld",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
-    },
-    {
-        "level":  "400+",
-        "place":  "Issavi Sphinx & Crypt Wardens",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Death"
-    },
-    {
-        "level":  "400+",
         "place":  "Warzone 1",
         "raw_exp":  "-",
         "loot":  "-",
@@ -1057,24 +1041,40 @@
     },
     {
         "level":  "500+",
+        "place":  "Otherworld",
+        "raw_exp":  "3.4kk",
+        "loot":  "1.7kk",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
+    },
+    {
+        "level":  "500+",
+        "place":  "Issavi Sphinxes & Crypt Wardens",
+        "raw_exp":  "7.0kk",
+        "loot":  "1.4kk",
+        "link":  "https://youtu.be/",
+        "mastery":  "Death"
+    },
+    {
+        "level":  "500+",
         "place":  "Cobra Bastion",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "7.2kk",
+        "loot":  "1.4kk",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
     },
     {
         "level":  "500+",
         "place":  "Cobra Basement -1",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "7.1kk",
+        "loot":  "1.5kk",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
     },
     {
         "level":  "500+",
         "place":  "Upper Rosh",
-        "raw_exp":  "6.5kk",
+        "raw_exp":  "6.7kk",
         "loot":  "1.7kk",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
@@ -1114,8 +1114,8 @@
     {
         "level":  "500+",
         "place":  "Bashmu",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.5kk",
+        "loot":  "2.4kk",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
     },
@@ -1177,25 +1177,25 @@
     },
     {
         "level":  "500+",
-        "place":  "Flimsy Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Flimsy Port Hope (-1/-2)",
+        "raw_exp":  "7.5kk",
+        "loot":  "1.1kk",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
     {
         "level":  "500+",
         "place":  "Flimsy Venore",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "8.0kk",
+        "loot":  "1.3kk",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
     {
         "level":  "500+",
         "place":  "Usurpers",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "5.6kk",
+        "loot":  "2.0kk",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
     },
@@ -1218,8 +1218,8 @@
     {
         "level":  "500+",
         "place":  "Norcferatu Fortress",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "6.5kk",
+        "loot":  "1.4kk",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
