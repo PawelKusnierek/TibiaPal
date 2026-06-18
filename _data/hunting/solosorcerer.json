@@ -249,14 +249,6 @@
     },
     {
         "level":  "50+",
-        "place":  "Darashia Dragon Lords",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
-    },
-    {
-        "level":  "50+",
         "place":  "Peninsula Tomb",
         "raw_exp":  "-",
         "loot":  "-",
@@ -266,22 +258,14 @@
     {
         "level":  "50+",
         "place":  "Lion's Rock",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "470k",
+        "loot":  "-15k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
     {
         "level":  "50+",
         "place":  "Water Elementals Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
-    },
-    {
-        "level":  "50+",
-        "place":  "Haunted Treelings Vengoth",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
