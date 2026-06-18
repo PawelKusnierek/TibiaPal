@@ -154,18 +154,18 @@
     {
         "level":  "28+",
         "place":  "Gargoyle Cave Meriana",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "210k",
+        "loot":  "300k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
     {
         "level":  "30+",
         "place":  "Upper Spike",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "290k",
+        "loot":  "250k",
         "link":  "https://youtu.be/",
-        "mastery":  "Fire"
+        "mastery":  "Energy"
     },
     {
         "level":  "30+",
@@ -193,9 +193,9 @@
     },
     {
         "level":  "30+",
-        "place":  "Mummy/Bonebeasts MOSL -3",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Mummy/Bonebeasts MoSL -3",
+        "raw_exp":  "270k",
+        "loot":  "400k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -218,8 +218,8 @@
     {
         "level":  "30+",
         "place":  "Laguna Islands (Profit)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "210k",
+        "loot":  "500k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -994,24 +994,24 @@
     {
         "level":  "300+",
         "place":  "Crypt Warriors",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "5.5kk",
+        "loot":  "800k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire/Energy"
     },
     {
         "level":  "400+",
         "place":  "Falcons",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "6.5kk",
+        "loot":  "1.43kk",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
     {
         "level":  "400+",
         "place":  "Deathlings",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "5.5kk",
+        "loot":  "1.3kk",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
@@ -1033,9 +1033,25 @@
     },
     {
         "level":  "400+",
-        "place":  "Warzone 1",
+        "place":  "Roshamuul Terrosleep Mines",
         "raw_exp":  "-",
         "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
+    },
+    {
+        "level":  "400+",
+        "place":  "Rosha West",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
+    },
+    {
+        "level":  "400+",
+        "place":  "Warzone 1",
+        "raw_exp":  "4.0kk",
+        "loot":  "1.6kk",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -1082,8 +1098,8 @@
     {
         "level":  "500+",
         "place":  "Warzone 2",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "5.0kk",
+        "loot":  "2.0kk",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
@@ -1146,32 +1162,16 @@
     {
         "level":  "500+",
         "place":  "Issavi Goannas",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "6.0kk",
+        "loot":  "1.8kk",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
     {
         "level":  "500+",
         "place":  "Issavi Ogre Mountain",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
-    },
-    {
-        "level":  "500+",
-        "place":  "Issavi Sewers",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
-    },
-    {
-        "level":  "500+",
-        "place":  "Issavi Puzzle",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "4.6kk",
+        "loot":  "1.5kk",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
@@ -1200,7 +1200,7 @@
         "mastery":  "Death"
     },
     {
-        "level":  "500+",
+        "level":  "600+",
         "place":  "Nimmersatt's Bottom Floor (-7)",
         "raw_exp":  "-",
         "loot":  "-",
@@ -1208,7 +1208,7 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "500+",
+        "level":  "600+",
         "place":  "Nimmersatt's Boss Floor (-6)",
         "raw_exp":  "-",
         "loot":  "-",
