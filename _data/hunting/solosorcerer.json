@@ -170,24 +170,24 @@
     {
         "level":  "30+",
         "place":  "Chor",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "325k",
+        "loot":  "-10k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
     {
         "level":  "30+",
         "place":  "Coryms Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "300k",
+        "loot":  "300k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
     {
         "level":  "30+",
         "place":  "Stonerefiners",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "270k",
+        "loot":  "240k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -202,8 +202,8 @@
     {
         "level":  "30+",
         "place":  "Dryad Gardens",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "220k",
+        "loot":  "400k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
