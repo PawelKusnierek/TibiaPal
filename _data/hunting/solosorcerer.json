@@ -209,25 +209,25 @@
     },
     {
         "level":  "30+",
-        "place":  "Apes Banuta (Profit)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Apes Banuta",
+        "raw_exp":  "200k",
+        "loot":  "350k",
         "link":  "https://youtu.be/",
-        "mastery":  "Fire"
+        "mastery":  "Energy"
     },
     {
         "level":  "30+",
-        "place":  "Laguna Islands (Profit)",
+        "place":  "Laguna Islands",
         "raw_exp":  "210k",
         "loot":  "500k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
     {
-        "level":  "33+",
-        "place":  "Carniphilas Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "level":  "31+",
+        "place":  "Zombies Treasure Island",
+        "raw_exp":  "200k",
+        "loot":  "300k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -338,6 +338,14 @@
     {
         "level":  "80+",
         "place":  "Muggy Plains",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
+    },
+    {
+        "level":  "80+",
+        "place":  "Yielothaxes",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
