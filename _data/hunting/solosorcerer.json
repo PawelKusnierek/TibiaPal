@@ -233,30 +233,30 @@
     },
     {
         "level":  "50+",
-        "place":  "Mother of Scarabs Lair",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "MoSL -4 (Ancient Scarabs)",
+        "raw_exp":  "650k",
+        "loot":  "200k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
     {
-        "level":  "50+",
+        "level":  "55+",
         "place":  "Nibelor Crystal Spiders",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "450k",
+        "loot":  "20k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
     {
-        "level":  "50+",
+        "level":  "55+",
         "place":  "Peninsula Tomb",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "420k",
+        "loot":  "20k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
     {
-        "level":  "50+",
+        "level":  "55+",
         "place":  "Lion's Rock",
         "raw_exp":  "470k",
         "loot":  "-15k",
@@ -264,50 +264,42 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "50+",
+        "level":  "55+",
         "place":  "Water Elementals Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "670k",
+        "loot":  "100k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
     {
         "level":  "50+",
         "place":  "Yalahar Cults",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "380k",
+        "loot":  "400k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
     {
         "level":  "50+",
         "place":  "Middle Spike",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "750k",
+        "loot":  "150k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
     {
         "level":  "66+",
         "place":  "Liberty Bay Wyrms",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "550k",
+        "loot":  "-125k",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
     },
     {
         "level":  "70+",
         "place":  "Krailos Ogres Surface",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
-    },
-    {
-        "level":  "70+",
-        "place":  "Mutated Tigers Yalahar (Profit)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "420k",
+        "loot":  "450k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
