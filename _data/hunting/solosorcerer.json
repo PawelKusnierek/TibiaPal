@@ -322,24 +322,24 @@
     {
         "level":  "80+",
         "place":  "Yielothaxes",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "850k",
+        "loot":  "40k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
     {
         "level":  "80+",
         "place":  "Askarak Demons",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "750k",
+        "loot":  "50k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
     {
         "level":  "80+",
         "place":  "Feyrist Surface",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "625k",
+        "loot":  "600k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -365,7 +365,7 @@
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
-        "mastery":  "Fire"
+        "mastery":  "Energy"
     },
     {
         "level":  "100+",
