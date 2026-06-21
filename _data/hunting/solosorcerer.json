@@ -481,14 +481,6 @@
     },
     {
         "level":  "100+",
-        "place":  "Lizard City",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
-    },
-    {
-        "level":  "100+",
         "place":  "Lizard Chosens",
         "raw_exp":  "-",
         "loot":  "-",
@@ -550,6 +542,14 @@
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
+    },
+    {
+        "level":  "130+",
+        "place":  "Lizard City",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
     },
     {
         "level":  "130+",
