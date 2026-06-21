@@ -272,6 +272,14 @@
         "mastery":  "Energy"
     },
     {
+        "level":  "55+",
+        "place":  "Ice Witch Temple (Zushuka)",
+        "raw_exp":  "550k",
+        "loot":  "30k",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
+    },
+    {
         "level":  "50+",
         "place":  "Yalahar Cults",
         "raw_exp":  "380k",
@@ -361,33 +369,41 @@
     },
     {
         "level":  "80+",
-        "place":  "Ice Witch Temple",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Krailos Bug Cave",
+        "raw_exp":  "600k",
+        "loot":  "300k",
         "link":  "https://youtu.be/",
-        "mastery":  "Energy"
+        "mastery":  "Fire"
     },
     {
-        "level":  "100+",
-        "place":  "Ravenous Lava Lurkers",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
-    },
-    {
-        "level":  "100+",
-        "place":  "Sunken Quarter",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
-    },
-    {
-        "level":  "100+",
+        "level":  "80+",
         "place":  "Quaras Liberty Bay",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "975k",
+        "loot":  "300k",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
+    },
+    {
+        "level":  "80+",
+        "place":  "Old Masonry (Death portal)",
+        "raw_exp":  "825k",
+        "loot":  "100k",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
+    },
+    {
+        "level":  "80+",
+        "place":  "Edron Vampire Crypt",
+        "raw_exp":  "825k",
+        "loot":  "350k",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
+    },
+    {
+        "level":  "80+",
+        "place":  "Iksupan",
+        "raw_exp":  "1.0kk",
+        "loot":  "500k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
@@ -417,31 +433,15 @@
     },
     {
         "level":  "100+",
-        "place":  "Old Masonry (Death portal)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
-    },
-    {
-        "level":  "100+",
-        "place":  "Dragon Lords Fenrock",
+        "place":  "Ravenous Lava Lurkers",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
-    },
+    },    
     {
         "level":  "100+",
-        "place":  "Edron Vampire Crypt",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
-    },
-    {
-        "level":  "100+",
-        "place":  "Dragon Lords POI",
+        "place":  "Sunken Quarter",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
@@ -478,14 +478,6 @@
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
-    },
-    {
-        "level":  "100+",
-        "place":  "Iksupan",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
     },
     {
         "level":  "100+",
