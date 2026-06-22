@@ -336,14 +336,6 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "100+",
-        "place":  "Askarak Demons",
-        "raw_exp":  "750k",
-        "loot":  "50k",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
-    },
-    {
         "level":  "80+",
         "place":  "Feyrist Surface",
         "raw_exp":  "625k",
@@ -409,11 +401,27 @@
     },
     {
         "level":  "100+",
+        "place":  "Askarak Demons",
+        "raw_exp":  "750k",
+        "loot":  "50k",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
+    },
+    {
+        "level":  "100+",
         "place":  "Grimvale -4",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
+    },
+    {
+        "level":  "100+",
+        "place":  "Desecrated Glade",
+        "raw_exp":  "850k",
+        "loot":  "100k",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
     },
     {
         "level":  "100+",
@@ -450,8 +458,8 @@
     {
         "level":  "100+",
         "place":  "Putrid Mummy",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "700k",
+        "loot":  "500k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
