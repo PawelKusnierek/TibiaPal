@@ -402,8 +402,8 @@
     {
         "level":  "80+",
         "place":  "Iksupan",
-        "raw_exp":  "1.0kk",
-        "loot":  "500k",
+        "raw_exp":  "1.05kk",
+        "loot":  "400k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
@@ -457,14 +457,6 @@
     },
     {
         "level":  "100+",
-        "place":  "Krailos Bug Cave",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
-    },
-    {
-        "level":  "100+",
         "place":  "Edron Were South",
         "raw_exp":  "-",
         "loot":  "-",
@@ -493,7 +485,7 @@
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
-        "mastery":  "Fire"
+        "mastery":  "Death"
     },
     {
         "level":  "120+",
@@ -544,7 +536,7 @@
         "mastery":  "Death"
     },
     {
-        "level":  "130+",
+        "level":  "120+",
         "place":  "Lizard City",
         "raw_exp":  "-",
         "loot":  "-",
@@ -576,7 +568,7 @@
         "mastery":  "Death"
     },
     {
-        "level":  "130+",
+        "level":  "120+",
         "place":  "Glooth Bandits",
         "raw_exp":  "-",
         "loot":  "-",
