@@ -77,6 +77,9 @@ function submit_exercise_form() {
   else if (vocation_and_type == "Monk Magic") {
     vocation_constant = 1.25
   }
+  else if (vocation_and_type == "Knight Magic") {
+    vocation_constant = 3.0
+  }
 
 
   points_required = main_skill_calculation_points_required(vocation_constant, currentskill, currentskillpercentage, targetskill, IsDummy, IsEvent, 0)
@@ -250,6 +253,8 @@ function calculate_skill_gain_from_weapons() {
     vocationConstant = 1.4;
   } else if (vocationAndType === "Monk Magic") {
     vocationConstant = 1.25;
+  } else if (vocationAndType === "Knight Magic") {
+    vocationConstant = 3.0;
   }
   
   // Calculate current skill total points
