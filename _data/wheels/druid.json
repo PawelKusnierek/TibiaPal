@@ -3,10 +3,64 @@
     "greater_gems": ["Twin Bursts Mastery", "Blessing of the Grove Mastery", "Strong Ice Wave Base Damage"],
     "builds": [
         {
-            "points": 0,
-            "description": "",
-            "link": "",
-            "notes": "Druid wheels to be confirmed in some days, fork wheel position seems bugged atm"
+            "points": 50,
+            "description": "T1 Forks",
+            "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=D0Y2DABEZo_P9IAAA",
+            "notes": ""
+        },
+        {
+            "points": 100,
+            "description": "T1 Forks + 1x Gem",
+            "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=D0Y2DABEZGqPz_SAAA",
+            "notes": ""
+        },
+        {
+            "points": 150,
+            "description": "T1 Forks + 2x Gem",
+            "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=D0Y2BABkYQ0ghFkOE_EgAA",
+            "notes": ""
+        },
+        {
+            "points": 175,
+            "description": "T1 Forks + 2x Gem",
+            "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=D0Y2DABEZGINIbzv-PBAA",
+            "notes": ""
+        },
+        {
+            "points": 225,
+            "description": "T1 Forks + 3x Gem",
+            "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=D0Y2BABkYQEkx5w0X_IwEA",
+            "notes": ""
+        },
+        {
+            "points": 250,
+            "description": "T1 Forks + T1 Ulu's",
+            "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=D0Y2DAAJJGYMobTKYA8X8kAAA",
+            "notes": ""
+        },
+        {
+            "points": 350,
+            "description": "T1 Forks + T1 Ulu's + 2x Gem",
+            "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=D0Y2BABkYgQtIITHmDRVKA-D8SAAA",
+            "notes": ""
+        },
+        {
+            "points": 500,
+            "description": "T1 Forks + T2 Ulu's + 1x Greater Gem",
+            "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=D0Y2BABykMRmDKG0hITgMx_yMBAA",
+            "notes": ""
+        },
+        {
+            "points": 725,
+            "description": "T1 Forks + T2 Ulu's + 1x Greater Gem + T2 Strong Ice Wave",
+            "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=D0Y2BAAUYMDCkgAkh5A4kT00DM_0gAAA",
+            "notes": ""
+        },
+        {
+            "points": 1075,
+            "description": "T2 Forks + T2 Ulu's + 1x Greater Gem + T2 Blessing of the Grove",
+            "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=D0Y2BgSJl2goGBwZsBBIyAXBABpEACktNAzP9IAAA",
+            "notes": ""
         }
     ]
 }
