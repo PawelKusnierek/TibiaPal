@@ -37,13 +37,13 @@ scripts: <script src="../scripts/wheels.js"></script>
         <tr>
             <th class="points_row">Points</th>
             <th class="description_row">Description</th>
-            <th class="notes_row">Notes</th>
+            
         </tr>
         {% for build in site.data.wheels.druid.builds %}
         <tr>
             <td><a href="{{ build.link }}" target="_blank">{{ build.points }}</a></td>
             <td>{{ build.description }}</td>
-            <td>{{ build.notes }}</td>
+            
         </tr>
         {% endfor %}
     </table>
