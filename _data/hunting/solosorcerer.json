@@ -410,8 +410,8 @@
     {
         "level":  "100+",
         "place":  "Grimvale -4",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.0kk",
+        "loot":  "500k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -426,16 +426,16 @@
     {
         "level":  "100+",
         "place":  "Souleater Mountain",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.15kk",
+        "loot":  "350k",
         "link":  "https://youtu.be/",
-        "mastery":  "Energy"
+        "mastery":  "Fire"
     },
     {
         "level":  "100+",
         "place":  "Calassa",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "850k",
+        "loot":  "200k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
@@ -450,8 +450,8 @@
     {
         "level":  "100+",
         "place":  "Sunken Quarter",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.25kk",
+        "loot":  "300k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
@@ -480,12 +480,12 @@
         "mastery":  "Fire"
     },
     {
-        "level":  "100+",
+        "level":  "120+",
         "place":  "Lizard Chosens",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
-        "mastery":  "Energy"
+        "mastery":  "Death"
     },
     {
         "level":  "120+",

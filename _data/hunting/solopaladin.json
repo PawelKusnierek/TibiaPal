@@ -32,44 +32,12 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "8+",
-        "place": "Crocodiles Port Hope",
-        "raw_exp": "30k",
-        "loot": "5k",
-        "runes": "Spears",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "8+",
-        "place": "Rotworms Liberty Bay/Darashia",
-        "raw_exp": "30k",
-        "loot": "4k",
-        "runes": "Spears",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "8+",
-        "place": "Larva Ankh",
-        "raw_exp": "30k",
-        "loot": "2k",
-        "runes": "Spears",
-        "link" : "https://youtu.be/"
-    },
-    {
         "level": "15+",
         "place": "Edron Tomb",
         "raw_exp": "55k",
         "loot": "30k",
         "runes": "Arrows",
         "link" : "https://youtu.be/tAGHQ6Zbx5g"
-    },
-    {
-        "level": "15+",
-        "place": "Mistrock Cyclops (Stealth Ring)",
-        "raw_exp": "50k",
-        "loot": "0k",
-        "runes": "Arrows",
-        "link" : "https://youtu.be/"
     },
     {
         "level": "15+",
@@ -80,25 +48,9 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "15+",
-        "place": "Ankrahmun City Tomb",
-        "raw_exp": "35k",
-        "loot": "5k",
-        "runes": "Spears",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "20+",
-        "place": "Minotaurs Yalahar",
-        "raw_exp": "60k",
-        "loot": "0k",
-        "runes": "Arrows",
-        "link" : "https://youtu.be/"
-    },
-    {
         "level": "20+",
         "place": "Elves Yalahar",
-        "raw_exp": "40k",
+        "raw_exp": "50k",
         "loot": "40k",
         "runes": "Arrows",
         "link" : "https://youtu.be/"
@@ -112,35 +64,19 @@
         "link": "https://youtu.be/_PQb_eT6nVU"
     },
     {
-        "level": "25+",
+        "level": "23+",
         "place": "Mutated Humans Yalahar",
-        "raw_exp": "110k",
-        "loot": "5k",
-        "runes": "Royal Spears",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Arrows",
         "link" : "https://youtu.be/"
     },
     {
-        "level": "25+",
+        "level": "23+",
         "place": "Coryms Port Hope (Stealth Ring)",
-        "raw_exp": "95k",
-        "loot": "-15k",
-        "runes": "Royal Spears",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "25+",
-        "place": "Carniphilas Port Hope",
-        "raw_exp": "75k",
-        "loot": "-5k",
-        "runes": "Royal Spears",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "25+",
-        "place": "Tarantulas Port Hope",
-        "raw_exp": "70k",
-        "loot": "15k",
-        "runes": "Royal Spears",
+        "raw_exp": "160k",
+        "loot": "120k",
+        "runes": "Arrows",
         "link" : "https://youtu.be/"
     },
     {
@@ -154,10 +90,10 @@
     {
         "level": "40+",
         "place": "Zombies Cemetery Yalahar",
-        "raw_exp": "160k",
-        "loot": "-10k",
+        "raw_exp": "-",
+        "loot": "-",
         "runes": "Onyx Arrows",
-        "link" : "https://youtu.be/6v7_TICOpEU"
+        "link" : "https://youtu.be/"
     },
     {
         "level": "40+",
@@ -177,35 +113,51 @@
     },
     {
         "level": "40+",
-        "place": "Mummy/Bonebeasts MOSL -3",
-        "raw_exp": "150k",
-        "loot": "70k",
+        "place": "MoSL -3 (Mummy/Bonebeasts)",
+        "raw_exp": "-",
+        "loot": "-",
         "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
     {
         "level": "40+",
-        "place": "Zombies Treasure Island",
-        "raw_exp": "145k",
-        "loot": "5k",
-        "runes": "Onyx Arrows",
-        "link" : "https://youtu.be/1pQ8Ta0BJ0Q"
-    },
-    {
-        "level": "40+",
         "place": "Pirates Yalahar",
-        "raw_exp": "110k",
-        "loot": "60k",
+        "raw_exp": "-",
+        "loot": "-",
         "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
     {
         "level":  "50+",
         "place":  "Old Fortress Bonebeasts",
-        "raw_exp": "270k",
-        "loot": "0k",
+        "raw_exp": "-",
+        "loot": "-",
         "runes":  "Onyx Arrows",
         "link": "https://youtu.be/Rimlz__WgqY"
+    },
+    {
+        "level": "50+",
+        "place": "Krailos Surface",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "50+",
+        "place": "Darashia Dragon Lair",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "50+",
+        "place": "Yalahar Dragons",
+        "raw_exp": "-",
+        "loot": "-",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/"
     },
     {
         "level":  "60+",
@@ -280,14 +232,6 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level": "50+",
-        "place": "Krailos Surface",
-        "raw_exp": "220k",
-        "loot": "100k",
-        "runes": "Onyx Arrows",
-        "link" : "https://youtu.be/"
-    },
-    {
         "level":  "60+",
         "place":  "Edron Vampire Crypt -3",
         "raw_exp":  "-",
@@ -302,22 +246,6 @@
         "loot":  "-",
         "runes":  "Onyx Arrows, Ethereal",
         "link":  "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Darashia Dragon Lair",
-        "raw_exp": "180k",
-        "loot": "10k",
-        "runes": "Onyx Arrows",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Yalahar Dragons",
-        "raw_exp": "160k",
-        "loot": "10k",
-        "runes": "Onyx Arrows",
-        "link" : "https://youtu.be/"
     },
     {
         "level":  "70+",
