@@ -56,12 +56,12 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level": "25+",
+        "level": "23+",
         "place": "Stonerefiners (Stealth Ring)",
-        "raw_exp": "180k",
-        "loot": "40k",
-        "runes": "Royal Spears",
-        "link": "https://youtu.be/_PQb_eT6nVU"
+        "raw_exp": "210k",
+        "loot": "140k",
+        "runes": "Arrows",
+        "link": "https://youtu.be/"
     },
     {
         "level": "23+",
@@ -90,40 +90,40 @@
     {
         "level": "40+",
         "place": "Zombies Cemetery Yalahar",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "215k",
+        "loot": "150k",
         "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
     {
         "level": "40+",
         "place": "Chor",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "200k",
+        "loot": "-10k",
         "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
     {
         "level": "40+",
         "place": "Banuta Apes",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "120k",
+        "loot": "300k",
         "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
     {
         "level": "40+",
         "place": "MoSL -3 (Mummy/Bonebeasts)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "190k",
+        "loot": "200k",
         "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
     {
         "level": "40+",
         "place": "Pirates Yalahar",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "150k",
+        "loot": "150k",
         "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
@@ -133,7 +133,7 @@
         "raw_exp": "-",
         "loot": "-",
         "runes":  "Onyx Arrows",
-        "link": "https://youtu.be/Rimlz__WgqY"
+        "link": "https://youtu.be/"
     },
     {
         "level": "50+",
@@ -289,9 +289,9 @@
     },
     {
         "level":  "70+",
-        "place":  "Braindeaths Vandura Bonelord Cave",
-        "raw_exp": "180k",
-        "loot": "250k",
+        "place":  "Liberty Bay Bonelord Cave (Full Lap)",
+        "raw_exp": "-",
+        "loot": "-",
         "runes":  "Drill Bolts",
         "link":  "https://youtu.be/"
     },
