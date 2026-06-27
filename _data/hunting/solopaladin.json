@@ -128,6 +128,22 @@
         "link" : "https://youtu.be/"
     },
     {
+        "level": "40+",
+        "place": "Darashia Dragon Lair",
+        "raw_exp": "220k",
+        "loot": "0k",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/"
+    },
+    {
+        "level": "40+",
+        "place": "Yalahar Dragons",
+        "raw_exp": "250k",
+        "loot": "10k",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/"
+    },
+    {
         "level":  "50+",
         "place":  "Old Fortress Bonebeasts",
         "raw_exp": "-",
@@ -138,22 +154,6 @@
     {
         "level": "50+",
         "place": "Krailos Surface",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Onyx Arrows",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Darashia Dragon Lair",
-        "raw_exp": "-",
-        "loot": "-",
-        "runes": "Onyx Arrows",
-        "link" : "https://youtu.be/"
-    },
-    {
-        "level": "50+",
-        "place": "Yalahar Dragons",
         "raw_exp": "-",
         "loot": "-",
         "runes": "Onyx Arrows",
