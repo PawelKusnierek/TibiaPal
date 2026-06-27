@@ -442,8 +442,8 @@
     {
         "level":  "100+",
         "place":  "Ravenous Lava Lurkers",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.6kk",
+        "loot":  "200k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },    
@@ -466,16 +466,16 @@
     {
         "level":  "100+",
         "place":  "Edron Were South",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.4kk",
+        "loot":  "550k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
     {
         "level":  "100+",
         "place":  "Exotic Cave",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.5kk",
+        "loot":  "200k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
