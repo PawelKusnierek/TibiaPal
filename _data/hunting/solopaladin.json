@@ -145,7 +145,7 @@
     },
     {
         "level":  "50+",
-        "place":  "Old Fortress Bonebeasts",
+        "place":  "Edron Old Fortress -1 (Bonebeasts)",
         "raw_exp": "-",
         "loot": "-",
         "runes":  "Onyx Arrows",
@@ -154,8 +154,8 @@
     {
         "level": "50+",
         "place": "Krailos Surface",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "230k",
+        "loot": "250k",
         "runes": "Onyx Arrows",
         "link" : "https://youtu.be/"
     },
