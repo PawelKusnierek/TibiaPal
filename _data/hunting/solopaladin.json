@@ -170,9 +170,17 @@
     {
         "level":  "50+",
         "place":  "Laguna Islands (Profit)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "170k",
+        "loot":  "500k",
         "runes":  "Shatterstorm Arrows",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "50+",
+        "place":  "Wyrms Liberty Bay -1",
+        "raw_exp":  "350k",
+        "loot":  "0k",
+        "runes":  "Onyx Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -197,6 +205,22 @@
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Shatterstorm Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "60+",
+        "place":  "Middle Spike",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Shatterstorm Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "60+",
+        "place":  "Nibelor Crystal Spiders",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Onyx Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -256,30 +280,6 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "60+",
-        "place":  "Middle Spike",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "70+",
-        "place":  "Wyrms Liberty Bay -1",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Drill Bolts, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "70+",
-        "place":  "Nibelor Crystal Spiders",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Drill Bolts, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
         "level":  "70+",
         "place":  "Liberty Bay Bonelord Cave (Full Lap)",
         "raw_exp": "-",
@@ -308,7 +308,7 @@
         "place":  "Nightmare Scions Krailos",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -316,7 +316,7 @@
         "place":  "Dragon Lords Fenrock",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -324,7 +324,7 @@
         "place":  "Edron South Were",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -332,7 +332,7 @@
         "place":  "Grimvale -4",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -340,7 +340,7 @@
         "place":  "Werehyaenas -1",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -348,7 +348,7 @@
         "place":  "Oramond Minos",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -356,7 +356,7 @@
         "place":  "Exotic Cave",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -364,7 +364,7 @@
         "place":  "Mini Rosha",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -404,7 +404,7 @@
         "place":  "Quaras Liberty Bay",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -412,7 +412,7 @@
         "place":  "Misguided",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -420,7 +420,7 @@
         "place":  "Putrid Mummy",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -428,7 +428,7 @@
         "place":  "Lizard Chosens",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -436,7 +436,7 @@
         "place":  "Okolnir Frost Dragons",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -444,7 +444,7 @@
         "place":  "Edron Vampire Crypt -4",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -452,7 +452,7 @@
         "place":  "Ravenous Lava Lurkers",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Divine",
+        "runes":  "Shatterstorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -460,7 +460,7 @@
         "place":  "Souleater Mountain",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Firestorm Arrows, Divine",
+        "runes":  "Firestorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -468,7 +468,7 @@
         "place":  "Banuta -1 (Hydras/SS/Medusa)",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -476,7 +476,7 @@
         "place":  "Talahu Medusas/Serpents",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -484,7 +484,7 @@
         "place":  "Frazzlemaw Bridge",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -492,7 +492,7 @@
         "place":  "Ghastly Dragons",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Crystalline Arrows, Divine",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -508,7 +508,7 @@
         "place":  "Ravenous Lava Lurkers",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -516,7 +516,7 @@
         "place":  "Exotic Cave",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -524,7 +524,7 @@
         "place":  "Yalahar Sunken Quarter",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -532,7 +532,7 @@
         "place":  "Deeplings Library",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -540,7 +540,7 @@
         "place":  "Mini Rosha (AOE)",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -580,7 +580,7 @@
         "place":  "Dark Faun Cave",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -588,7 +588,7 @@
         "place":  "Edron Vampire Crypt",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -596,7 +596,7 @@
         "place":  "Mother of Scarabs Lair",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -612,7 +612,7 @@
         "place":  "Pirats",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -620,7 +620,7 @@
         "place":  "Barkless Elves",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -636,7 +636,7 @@
         "place":  "Oramond West",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -652,7 +652,7 @@
         "place":  "Otherworld Edron",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -660,7 +660,7 @@
         "place":  "Glooth Bandits",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -668,7 +668,7 @@
         "place":  "Grimvale -4",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -676,7 +676,7 @@
         "place":  "Lizard City",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -684,7 +684,7 @@
         "place":  "Werecreatures Edron",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -692,7 +692,7 @@
         "place":  "Otherworld Kazordoon (Dwarf Bridge)",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -700,7 +700,7 @@
         "place":  "Brimstone Bugs WOTE",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
