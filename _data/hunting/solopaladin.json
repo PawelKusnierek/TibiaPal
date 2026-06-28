@@ -144,10 +144,10 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level":  "50+",
+        "level":  "40+",
         "place":  "Edron Old Fortress -1 (Bonebeasts)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "330k",
+        "loot": "30k",
         "runes":  "Onyx Arrows",
         "link": "https://youtu.be/"
     },
@@ -160,35 +160,19 @@
         "link" : "https://youtu.be/"
     },
     {
-        "level":  "60+",
-        "place":  "Ramoa Bonebeast Island",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Ethereal, Divine",
-        "link":  "https://youtu.be/"
+        "level": "50+",
+        "place": "Edron Vampire Crypt -3",
+        "raw_exp": "280k",
+        "loot": "100k",
+        "runes": "Onyx Arrows",
+        "link" : "https://youtu.be/"
     },
     {
-        "level":  "60+",
-        "place":  "Peninsula Tomb",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Ethereal, Divine",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "60+",
-        "place":  "Lion's Rock",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "60+",
+        "level":  "50+",
         "place":  "Laguna Islands (Profit)",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Ethereal",
+        "runes":  "Shatterstorm Arrows",
         "link":  "https://youtu.be/"
     },
     {
@@ -200,43 +184,19 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "70+",
-        "place":  "Werebadgers Grimvale -1",
+        "level":  "60+",
+        "place":  "Ramoa Bonebeast Island",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Drill Bolts, Divine",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "70+",
-        "place":  "Hive Surface",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Drill Bolts, Divine",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "70+",
-        "place":  "Askarak Demons",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Divine",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "70+",
-        "place":  "Shaburak Demons",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Divine",
+        "runes":  "Shatterstorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "60+",
-        "place":  "Edron Vampire Crypt -3",
+        "place":  "Peninsula Tomb",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Ethereal, Divine",
+        "runes":  "Shatterstorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -244,7 +204,47 @@
         "place":  "Cults Yalahar",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Onyx Arrows, Ethereal",
+        "runes":  "Shatterstorm Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "60+",
+        "place":  "Lion's Rock",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Shatterstorm Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "70+",
+        "place":  "Werebadgers Grimvale -1",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Drill Bolts, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "70+",
+        "place":  "Hive Surface",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Drill Bolts, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "70+",
+        "place":  "Askarak Demons",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Shatterstorm Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "70+",
+        "place":  "Shaburak Demons",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Shatterstorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -252,15 +252,15 @@
         "place":  "Iksupan",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Drill Bolts, Divine",
+        "runes":  "Drill Bolts, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "70+",
+        "level":  "60+",
         "place":  "Middle Spike",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Divine",
+        "runes":  "Shatterstorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -268,15 +268,7 @@
         "place":  "Wyrms Liberty Bay -1",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Drill Bolts, Divine",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "70+",
-        "place":  "Cemetery Quarter -1",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Drill Bolts, Divine",
+        "runes":  "Drill Bolts, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -292,15 +284,15 @@
         "place":  "Liberty Bay Bonelord Cave (Full Lap)",
         "raw_exp": "-",
         "loot": "-",
-        "runes":  "Drill Bolts",
+        "runes":  "Drill Bolts, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "80+",
-        "place":  "Mother of Scarabs Lair",
+        "level":  "60+",
+        "place":  "MoSL -4 (Ancient Scarabs)",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Divine",
+        "runes":  "Shatterstorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -308,7 +300,7 @@
         "place":  "Giant Spiders Port Hope",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Drill Bolts, Divine",
+        "runes":  "Drill Bolts, Ethereal",
         "link":  "https://youtu.be/"
     },
     {

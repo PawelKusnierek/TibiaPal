@@ -443,7 +443,7 @@
         "level":  "100+",
         "place":  "Ravenous Lava Lurkers",
         "raw_exp":  "1.6kk",
-        "loot":  "200k",
+        "loot":  "-200k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },    
