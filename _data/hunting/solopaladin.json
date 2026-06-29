@@ -209,14 +209,6 @@
     },
     {
         "level":  "60+",
-        "place":  "Middle Spike",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "60+",
         "place":  "Nibelor Crystal Spiders",
         "raw_exp":  "400k",
         "loot":  "30k",
@@ -257,22 +249,6 @@
     },
     {
         "level":  "70+",
-        "place":  "Askarak Demons",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "70+",
-        "place":  "Shaburak Demons",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "70+",
         "place":  "Iksupan",
         "raw_exp":  "-",
         "loot":  "-",
@@ -288,8 +264,24 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "60+",
+        "level":  "80+",
         "place":  "MoSL -4 (Ancient Scarabs)",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Shatterstorm Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "80+",
+        "place":  "Askarak Demons",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Shatterstorm Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "80+",
+        "place":  "Shaburak Demons",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Shatterstorm Arrows, Ethereal",
@@ -306,6 +298,14 @@
     {
         "level":  "90+",
         "place":  "Nightmare Scions Krailos",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Crystalline Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "90+",
+        "place":  "Holy Portal",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Crystalline Arrows, Ethereal",
@@ -456,7 +456,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "120+",
+        "level":  "125+",
         "place":  "Souleater Mountain",
         "raw_exp":  "-",
         "loot":  "-",
