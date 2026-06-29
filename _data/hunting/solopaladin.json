@@ -186,24 +186,24 @@
     {
         "level":  "60+",
         "place":  "Forbidden Temple (Ankrahmun Cults)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "400k",
+        "loot":  "400k",
         "runes":  "Shatterstorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "60+",
         "place":  "Ramoa Bonebeast Island",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "500k",
+        "loot":  "-10k",
         "runes":  "Shatterstorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "60+",
         "place":  "Peninsula Tomb",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "400k",
+        "loot":  "20k",
         "runes":  "Shatterstorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -218,17 +218,17 @@
     {
         "level":  "60+",
         "place":  "Cults Yalahar",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "350k",
+        "loot":  "350k",
         "runes":  "Shatterstorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "60+",
         "place":  "Lion's Rock",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Ethereal",
+        "raw_exp":  "480k",
+        "loot":  "30k",
+        "runes":  "Onyx Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -242,8 +242,8 @@
     {
         "level":  "70+",
         "place":  "Hive Surface",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "550k",
+        "loot":  "350k",
         "runes":  "Drill Bolts, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -258,8 +258,8 @@
     {
         "level":  "70+",
         "place":  "Liberty Bay Bonelord Cave (Full Lap)",
-        "raw_exp": "-",
-        "loot": "-",
+        "raw_exp": "320k",
+        "loot": "400k",
         "runes":  "Drill Bolts, Ethereal",
         "link":  "https://youtu.be/"
     },
