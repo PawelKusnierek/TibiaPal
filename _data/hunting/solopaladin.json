@@ -52,7 +52,7 @@
         "place": "Elves Yalahar",
         "raw_exp": "50k",
         "loot": "40k",
-        "runes": "Arrows",
+        "runes": "Sniper Arrows",
         "link" : "https://youtu.be/"
     },
     {
@@ -60,7 +60,7 @@
         "place": "Stonerefiners (Stealth Ring)",
         "raw_exp": "210k",
         "loot": "140k",
-        "runes": "Arrows",
+        "runes": "Sniper Arrows",
         "link": "https://youtu.be/"
     },
     {
@@ -68,7 +68,7 @@
         "place": "Mutated Humans Yalahar",
         "raw_exp": "150k",
         "loot": "70k",
-        "runes": "Arrows",
+        "runes": "Sniper Arrows",
         "link" : "https://youtu.be/"
     },
     {
@@ -76,7 +76,7 @@
         "place": "Coryms Port Hope (Stealth Ring)",
         "raw_exp": "160k",
         "loot": "120k",
-        "runes": "Arrows",
+        "runes": "Sniper Arrows",
         "link" : "https://youtu.be/"
     },
     {
@@ -218,8 +218,8 @@
     {
         "level":  "60+",
         "place":  "Nibelor Crystal Spiders",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "400k",
+        "loot":  "30k",
         "runes":  "Onyx Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
