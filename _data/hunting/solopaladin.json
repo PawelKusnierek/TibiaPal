@@ -252,7 +252,7 @@
         "place":  "Iksupan",
         "raw_exp":  "950k",
         "loot":  "200k",
-        "runes":  "Drill Bolts, Ethereal",
+        "runes":  "Drill Bolts, Ethereal, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -266,27 +266,20 @@
     {
         "level":  "80+",
         "place":  "MoSL -4 (Ancient Scarabs)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Ethereal",
+        "raw_exp":  "700k",
+        "loot":  "10k",
+        "runes":  "Shatterstorm Arrows, Ethereal, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "80+",
-        "place":  "Askarak Demons",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Demonwar Crypt (Both Spawns)",
+        "raw_exp":  "1.0kk",
+        "loot":  "-200k",
         "runes":  "Shatterstorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
-    {
-        "level":  "80+",
-        "place":  "Shaburak Demons",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
+
     {
         "level":  "90+",
         "place":  "Nightmare Scions Krailos",
