@@ -234,13 +234,13 @@
     {
         "level":  "70+",
         "place":  "Werebadgers Grimvale -1",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "675k",
+        "loot":  "250k",
         "runes":  "Drill Bolts, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "70+",
+        "level":  "80+",
         "place":  "Hive Surface",
         "raw_exp":  "550k",
         "loot":  "350k",
@@ -250,8 +250,8 @@
     {
         "level":  "70+",
         "place":  "Iksupan",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "950k",
+        "loot":  "200k",
         "runes":  "Drill Bolts, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -285,14 +285,6 @@
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Shatterstorm Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "80+",
-        "place":  "Giant Spiders Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Drill Bolts, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
