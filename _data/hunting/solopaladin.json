@@ -418,6 +418,38 @@
     },
     {
         "level":  "90+",
+        "place":  "Orc Cults",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Crystalline Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "90+",
+        "place":  "Dark Faun Cave",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Crystalline Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "90+",
+        "place":  "Edron Vampire Crypt",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Crystalline Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "90+",
+        "place":  "Yalahar Sunken Quarter",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Crystalline Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "90+",
         "place":  "Okolnir Frost Dragons",
         "raw_exp":  "-",
         "loot":  "-",
@@ -450,23 +482,7 @@
     },
     {
         "level":  "130+",
-        "place":  "Banuta -1 (Hydras/SS/Medusa)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Crystalline Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "130+",
         "place":  "Talahu Medusas/Serpents",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Crystalline Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "130+",
-        "place":  "Frazzlemaw Bridge",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Crystalline Arrows, Ethereal",
@@ -506,23 +522,7 @@
     },
     {
         "level":  "150+",
-        "place":  "Yalahar Sunken Quarter",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
         "place":  "Deeplings Library",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
-        "place":  "Mini Rosha (AOE)",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Diamond Arrows, Ethereal",
@@ -554,31 +554,7 @@
     },
     {
         "level":  "150+",
-        "place":  "Orc Cults",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
-        "place":  "Dark Faun Cave",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
-        "place":  "Edron Vampire Crypt",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
-        "place":  "Mother of Scarabs Lair",
+        "place":  "Oramond West",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Diamond Arrows, Ethereal",
@@ -618,14 +594,6 @@
     },
     {
         "level":  "200+",
-        "place":  "Oramond West",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "200+",
         "place":  "Glooth Tower",
         "raw_exp":  "-",
         "loot":  "-",
@@ -641,16 +609,8 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "200+",
+        "level":  "150+",
         "place":  "Glooth Bandits",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "200+",
-        "place":  "Grimvale -4",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Diamond Arrows, Ethereal",
