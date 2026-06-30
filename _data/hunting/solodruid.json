@@ -139,7 +139,7 @@
         "level": "28+",
         "place": "Upper Spike",
         "raw_exp": "320k",
-        "loot": "75k",
+        "loot": "",
         "playstyle": "Thunderstorm, GFB, Avalanche",
         "link": "https://youtu.be/qtHD2m-s5WE"
     },
@@ -171,7 +171,7 @@
         "level": "30+",
         "place": "Stonerefiners (AOE)",
         "raw_exp": "250k",
-        "loot": "25k",
+        "loot": "",
         "playstyle": "Avalanche",
         "link": "https://youtu.be/WTrR8Zjvh1Y"
     },
@@ -179,7 +179,7 @@
         "level": "30+",
         "place": "Mummy/Bonebeasts MOSL -3",
         "raw_exp": "240k",
-        "loot": "150k",
+        "loot": "",
         "playstyle": "Avalanche",
         "link": "https://youtu.be/VKifdYSTD2g"
     },
@@ -193,27 +193,19 @@
     },
     {
         "level": "30+",
-        "place": "Apes Banuta (Profit)",
+        "place": "Apes Banuta",
         "raw_exp": "210k",
-        "loot": "200k",
+        "loot": "250k",
         "playstyle": "Avalanche",
         "link": "https://youtu.be/IRW8bc0MX7E"
     },
     {
         "level": "30+",
-        "place": "Laguna Islands (Profit)",
+        "place": "Laguna Islands",
         "raw_exp": "200k",
         "loot": "400k",
         "playstyle": "GFB",
         "link": "https://youtu.be/NwrSF8TRe4s"
-    },
-    {
-        "level": "30+",
-        "place": "Carniphilas Port Hope",
-        "raw_exp": "120k",
-        "loot": "-30k",
-        "playstyle": "GFB",
-        "link": "https://youtu.be/smLBYH4LoC4"
     },
     {
         "level":  "50+",
@@ -275,7 +267,7 @@
         "level": "50+",
         "place": "Yalahar Cults",
         "raw_exp": "290k",
-        "loot": "500k",
+        "loot": "400k",
         "playstyle": "Thunderstorm",
         "link": "https://youtu.be/Mf97YGUteV0"
     },
@@ -469,7 +461,15 @@
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
-        "playstyle":  "Strong Ice Wave + Forked Glacier"
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "100+",
+        "place":  "Holy Portal",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
     },
     {
         "level":  "100+",
