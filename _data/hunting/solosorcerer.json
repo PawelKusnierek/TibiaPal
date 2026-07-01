@@ -506,8 +506,8 @@
     {
         "level":  "120+",
         "place":  "Brimstone Bugs WOTE",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.2kk",
+        "loot":  "400k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
@@ -521,17 +521,9 @@
     },
     {
         "level":  "120+",
-        "place":  "Edron Old Fortress -3 (Hero)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Death"
-    },
-        {
-        "level":  "120+",
-        "place":  "Edron Old Fortress -2 (Hero)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Edron Old Fortress Heroes -2/-3",
+        "raw_exp":  "1.75kk",
+        "loot":  "150k",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
     },
@@ -554,8 +546,8 @@
     {
         "level":  "120+",
         "place":  "Holy Portal",
-        "raw_exp":  "1.2kk",
-        "loot":  "1.0kk",
+        "raw_exp":  "1.3kk",
+        "loot":  "900k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -592,7 +584,7 @@
         "mastery":  "Fire"
     },
     {
-        "level":  "130+",
+        "level":  "150+",
         "place":  "Barkless",
         "raw_exp":  "-",
         "loot":  "-",
