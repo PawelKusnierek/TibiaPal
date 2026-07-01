@@ -482,24 +482,24 @@
     {
         "level":  "120+",
         "place":  "Lizard Chosens",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.2kk",
+        "loot":  "200k",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
     },
     {
         "level":  "120+",
         "place":  "Misguided",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.1kk",
+        "loot":  "-50k",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
     },
     {
         "level":  "120+",
         "place":  "Orc Cults",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.05kk",
+        "loot":  "150k",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
     },
@@ -514,8 +514,8 @@
     {
         "level":  "120+",
         "place":  "Carlin Cults",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.6kk",
+        "loot":  "50k",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
     },
@@ -538,8 +538,8 @@
     {
         "level":  "120+",
         "place":  "Elder Wyrms Drefia",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.4kk",
+        "loot":  "-50k",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
     },
@@ -586,8 +586,8 @@
     {
         "level":  "120+",
         "place":  "Glooth Bandits",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.75kk",
+        "loot":  "400k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },

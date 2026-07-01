@@ -32,7 +32,7 @@
     
 
     <!-- javascript files -->
-    <script src="scripts/tablecheckbox.js"></script>
+    
     <script src=/scripts/onload.js></script>
 
     <!-- extra googleapi fonts -->
@@ -203,767 +203,637 @@
     <button class="nav-toggle" onclick="toggleNavigation()" style="display: none;">☰ Menu</button>
     
     <section id="main-content">
-    <h1>Tibia Bosstiary Guide</h1>
+    <h1 style="color: gold; letter-spacing: 2px; border-bottom: 2px solid #2d8cf8; padding-bottom: 10px; margin-bottom: 20px;">Tibia Bosstiary Reference</h1>
 
-<form id="profile_name_form">
-    <!--suppress HtmlFormInputWithoutLabel -->
-    <input type="text" id="profile_name" name="profile_name" placeholder="Enter character name..." autocomplete="off">
-    <input type="submit" id="profile_name_submit" value="Add"
-        onclick="event.preventDefault(); profile_name_submit_click()" />
-</form>
+<div class="tasks_tab">
+    <button class="tablinks active" style="width:20%" onclick="show_tab(event, 'SoloBossesLow')">Solo &lt;400</button>
+    <button class="tablinks" style="width:20%" onclick="show_tab(event, 'SoloBossesHigh')">Solo 400+</button>
+    <button class="tablinks" style="width:20%" onclick="show_tab(event, 'TeamBosses')">Team</button>
+    <button class="tablinks" style="width:20%" onclick="show_tab(event, 'EventBosses')">Event</button>
+    <button class="tablinks" style="width:20%" onclick="show_tab(event, 'RaidBosses')">Raid</button>
+</div>
 
-<p><b>Active character:</b></p>
-
-<!--suppress HtmlFormInputWithoutLabel -->
-<select name="profile_dropdown" id="profile_dropdown">
-</select>
-<input type="submit" id="profile_remove_submit" value="Remove"
-    onclick="event.preventDefault(); profile_remove_submit_click()" />
-
-
-<button type="button" class="expandable-div">Solo Bosses - before level 400   (total boss points: 1700)</button>
-<div class="expandable-div-content">
+<div id="SoloBossesLow" class="tabcontent">
     <table class="bestiary_table">
         <tr>
             <th>Boss</th>
             <th>Rec. Level</th>
             <th>Access Quest</th>
-            <th>Done</th>
         </tr>
         <tr>
             <td>Bibby Bloodbath</td>
             <td>100</td>
-            <td>Warpath Mini World Change</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Bibby" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Warpath_Mini_World_Change" target="_blank">Warpath Mini World Change</a></td>
         </tr>
         <tr>
             <td>Raxias</td>
             <td>100</td>
             <td>Shipwreck from Port Hope</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Raxias" /></td>
         </tr>
         <tr>
             <td>Black Vixen</td>
             <td>100</td>
-            <td>Grimvale Quest - The Curse Spreads</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Vixen" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grimvale_Quest" target="_blank">Grimvale Quest - The Curse Spreads</a></td>
         </tr>
         <tr>
             <td>Bloodback</td>
             <td>100</td>
-            <td>Grimvale Quest - The Curse Spreads</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Bloodback" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grimvale_Quest" target="_blank">Grimvale Quest - The Curse Spreads</a></td>
         </tr>
         <tr>
             <td>Darkfang</td>
             <td>100</td>
-            <td>Grimvale Quest - The Curse Spreads</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Darkfang" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grimvale_Quest" target="_blank">Grimvale Quest - The Curse Spreads</a></td>
         </tr>
         <tr>
             <td>Sharpclaw</td>
             <td>100</td>
-            <td>Grimvale Quest - The Curse Spreads</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Sharpclaw" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grimvale_Quest" target="_blank">Grimvale Quest - The Curse Spreads</a></td>
         </tr>
         <tr>
             <td>Shadowpelt</td>
             <td>100</td>
-            <td>Grimvale Quest - The Curse Spreads</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Shadowpelt" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grimvale_Quest" target="_blank">Grimvale Quest - The Curse Spreads</a></td>
         </tr>
         <tr>
             <td>Katex Blood Tongue</td>
             <td>250</td>
-            <td>Grimvale Quest - An Ancient Feud</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Katex" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grimvale_Quest" target="_blank">Grimvale Quest - An Ancient Feud</a></td>
         </tr>
         <tr>
             <td>Srezz Yellow Eyes</td>
             <td>250</td>
-            <td>Grimvale Quest - An Ancient Feud</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Srezz" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grimvale_Quest" target="_blank">Grimvale Quest - An Ancient Feud</a></td>
         </tr>
         <tr>
             <td>Utua Stone Sting</td>
             <td>250</td>
-            <td>Grimvale Quest - An Ancient Feud</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Utua" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grimvale_Quest" target="_blank">Grimvale Quest - An Ancient Feud</a></td>
         </tr>
         <tr>
             <td>Yirkas Blue Scales</td>
             <td>250</td>
-            <td>Grimvale Quest - An Ancient Feud</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Yirkas" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grimvale_Quest" target="_blank">Grimvale Quest - An Ancient Feud</a></td>
         </tr>
         <tr>
             <td>Scarlett Etzel</td>
             <td>250</td>
-            <td>Grave Danger</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Scarlett" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grave_Danger_Quest" target="_blank">Grave Danger</a></td>
         </tr>
         <tr>
             <td>Drume</td>
             <td>300</td>
-            <td>The Order of the Lion Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Drume" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Order_of_the_Lion_Quest" target="_blank">The Order of the Lion Quest</a></td>
         </tr>
         <tr>
             <td>Kusuma</td>
             <td>300</td>
-            <td>Within the Tides Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Kusuma" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Within_the_Tides_Quest" target="_blank">Within the Tides Quest</a></td>
         </tr>
         <tr>
             <td>Ahau</td>
             <td>300</td>
-            <td>Adventures of Galthen</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Ahau" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Adventures_of_Galthen_Quest" target="_blank">Adventures of Galthen</a></td>
         </tr>
         <tr>
             <td>The Flaming Orchid</td>
             <td>300</td>
-            <td>Asura Palace Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Orchid" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Asura_Palace_Quest" target="_blank">Asura Palace Quest</a></td>
         </tr>
         <tr>
             <td>The Moonlight Aster</td>
             <td>300</td>
-            <td>Asura Palace Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Aster" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Asura_Palace_Quest" target="_blank">Asura Palace Quest</a></td>
         </tr>
         <tr>
             <td>The Winter Bloom</td>
             <td>300</td>
-            <td>Asura Palace Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Bloom" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Asura_Palace_Quest" target="_blank">Asura Palace Quest</a></td>
         </tr>
         <tr>
             <td>Wrathful Archivist</td>
             <td>300</td>
-            <td>Between the Lines Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Bloom" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Between_the_Lines_Quest" target="_blank">Between the Lines Quest</a></td>
         </tr>
         <tr>
             <td>Blight Mariner</td>
             <td>300</td>
-            <td>Between the Lines Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Bloom" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Between_the_Lines_Quest" target="_blank">Between the Lines Quest</a></td>
         </tr>
         <tr>
             <td>Tropical Desolator</td>
             <td>300</td>
-            <td>Between the Lines Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Bloom" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Between_the_Lines_Quest" target="_blank">Between the Lines Quest</a></td>
         </tr>
     </table>
 </div>
 
-<button type="button" class="expandable-div">Solo Bosses - after level 400 (total boss points: 1100)</button>
-<div class="expandable-div-content">
+<div id="SoloBossesHigh" class="tabcontent">
     <table class="bestiary_table">
         <tr>
             <th>Boss</th>
             <th>Rec. Level</th>
             <th>Access Quest</th>
-            <th>Done</th>
         </tr>
         <tr>
             <td>Tentugly's Head</td>
             <td>400</td>
-            <td>A Pirate's Tail Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Tentugly" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/A_Pirate%27s_Tail_Quest" target="_blank">A Pirate's Tail Quest</a></td>
         </tr>
         <tr>
             <td>Mitmah Vanguard</td>
             <td>500</td>
-            <td>Adventures of Galthen Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Mitmah" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Adventures_of_Galthen_Quest" target="_blank">Adventures of Galthen Quest</a></td>
         </tr>
         <tr>
             <td>Amenef the Burning</td>
             <td>500</td>
-            <td>Kilmaresh Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Amenef" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Kilmaresh_Quest" target="_blank">Kilmaresh Quest</a></td>
         </tr>
         <tr>
             <td>Sister Hetai</td>
             <td>500</td>
-            <td>Kilmaresh Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Hetai" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Kilmaresh_Quest" target="_blank">Kilmaresh Quest</a></td>
         </tr>
         <tr>
             <td>Neferi the Spy</td>
             <td>500</td>
-            <td>Kilmaresh Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Neferi" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Kilmaresh_Quest" target="_blank">Kilmaresh Quest</a></td>
         </tr>
         <tr>
             <td>Irgix the Flimsy</td>
             <td>500</td>
-            <td>Feaster of Souls Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Irgix" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Feaster_of_Souls_Quest" target="_blank">Feaster of Souls Quest</a></td>
         </tr>
         <tr>
             <td>Unaz the Mean</td>
             <td>500</td>
-            <td>Feaster of Souls Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Unaz" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Feaster_of_Souls_Quest" target="_blank">Feaster of Souls Quest</a></td>
         </tr>
         <tr>
             <td>Vok the Freakish</td>
             <td>500</td>
-            <td>Feaster of Souls Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Vok" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Feaster_of_Souls_Quest" target="_blank">Feaster of Souls Quest</a></td>
         </tr>
         <tr>
             <td>The Blazing Rose</td>
             <td>650</td>
-            <td>The Secret Library Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Rose" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Secret_Library_Quest" target="_blank">The Secret Library Quest</a></td>
         </tr>
         <tr>
             <td>The Diamond Blossom</td>
             <td>650</td>
-            <td>The Secret Library Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Blossom" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Secret_Library_Quest" target="_blank">The Secret Library Quest</a></td>
         </tr>
         <tr>
             <td>The Lily of Night</td>
             <td>650</td>
-            <td>The Secret Library Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Night" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Secret_Library_Quest" target="_blank">The Secret Library Quest</a></td>
         </tr>
     </table>
 </div>
 
-<button type="button" class="expandable-div">Common Team Bosses (total boss points: 4900)</button>
-<div class="expandable-div-content">
+<div id="TeamBosses" class="tabcontent">
+    <p><b>Common Team Bosses</b></p> <br>
     <table class="bestiary_table">
         <tr>
             <th>Boss</th>
             <th>Rec. Level</th>
             <th>Access Quest</th>
-            <th>Done</th>
         </tr>
         <tr>
             <td>Abyssador</td>
             <td>200</td>
-            <td>Bigfoot's Burden</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Abyssador" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Bigfoot%27s_Burden_Quest" target="_blank">Bigfoot's Burden</a></td>
         </tr>
         <tr>
             <td>Gnomevil</td>
             <td>200</td>
-            <td>Bigfoot's Burden</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Gnomevil" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Bigfoot%27s_Burden_Quest" target="_blank">Bigfoot's Burden</a></td>
         </tr>
         <tr>
             <td>Deathstrike</td>
             <td>200</td>
-            <td>Bigfoot's Burden</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Deathstrike" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Bigfoot%27s_Burden_Quest" target="_blank">Bigfoot's Burden</a></td>
         </tr>
         <tr>
             <td>Lizard Gate Guardian</td>
             <td>200</td>
-            <td>Children of the Revolution</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Lizard" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Children_of_the_Revolution_Quest" target="_blank">Children of the Revolution</a></td>
         </tr>
         <tr>
             <td>Urmahlullu the Weakened</td>
             <td>250</td>
-            <td>Kilmaresh Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Urmahlullu" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Kilmaresh_Quest" target="_blank">Kilmaresh Quest</a></td>
         </tr>
         <tr>
             <td>Lloyd</td>
             <td>250</td>
-            <td>Forgotten Knowledge Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Lloyd" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Forgotten_Knowledge_Quest" target="_blank">Forgotten Knowledge Quest</a></td>
         </tr>
         <tr>
             <td>Lady Tenebris</td>
             <td>250</td>
-            <td>Forgotten Knowledge Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Tenebris" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Forgotten_Knowledge_Quest" target="_blank">Forgotten Knowledge Quest</a></td>
         </tr>
         <tr>
             <td>Mounted Thorn Knight</td>
             <td>250</td>
-            <td>Forgotten Knowledge Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Thorn" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Forgotten_Knowledge_Quest" target="_blank">Forgotten Knowledge Quest</a></td>
         </tr>
         <tr>
             <td>Solid Frozen Horror</td>
             <td>250</td>
-            <td>Forgotten Knowledge Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="FrozenHorror" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Forgotten_Knowledge_Quest" target="_blank">Forgotten Knowledge Quest</a></td>
         </tr>
         <tr>
             <td>Dragonking Zyrtarch</td>
             <td>250</td>
-            <td>Forgotten Knowledge Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Zyrtarch" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Forgotten_Knowledge_Quest" target="_blank">Forgotten Knowledge Quest</a></td>
         </tr>
         <tr>
             <td>The Time Guardian</td>
             <td>250</td>
-            <td>Forgotten Knowledge Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="TimeGuardian" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Forgotten_Knowledge_Quest" target="_blank">Forgotten Knowledge Quest</a></td>
         </tr>
         <tr>
             <td>Faceless Bane</td>
             <td>300</td>
-            <td>The Dream Courts Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Faceless" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Dream_Courts_Quest" target="_blank">The Dream Courts Quest</a></td>
         </tr>
         <tr>
             <td>Leiden</td>
             <td>300</td>
-            <td>Cults of Tibia Quest (Ab)</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Leiden" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Cults_of_Tibia_Quest" target="_blank">Cults of Tibia Quest (Ab)</a></td>
         </tr>
         <tr>
             <td>Timira the Many-Headed</td>
             <td>300</td>
-            <td>Within the Tides Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Timira" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Within_the_Tides_Quest" target="_blank">Within the Tides Quest</a></td>
         </tr>
         <tr>
             <td>Oberon</td>
             <td>300</td>
-            <td>The Secret Library Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Oberon" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Secret_Library_Quest" target="_blank">The Secret Library Quest</a></td>
         </tr>
         <tr>
             <td>Anomaly</td>
             <td>300</td>
-            <td>Heart of Destruction Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Anomaly" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Heart_of_Destruction_Quest" target="_blank">Heart of Destruction Quest</a></td>
         </tr>
         <tr>
             <td>Outburst</td>
             <td>300</td>
-            <td>Heart of Destruction Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Outburst" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Heart_of_Destruction_Quest" target="_blank">Heart of Destruction Quest</a></td>
         </tr>
         <tr>
             <td>Eradicator</td>
             <td>300</td>
-            <td>Heart of Destruction Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Eradicator" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Heart_of_Destruction_Quest" target="_blank">Heart of Destruction Quest</a></td>
         </tr>
         <tr>
             <td>Realityquake</td>
             <td>300</td>
-            <td>Heart of Destruction Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Realityquake" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Heart_of_Destruction_Quest" target="_blank">Heart of Destruction Quest</a></td>
         </tr>
         <tr>
             <td>Rupture</td>
             <td>300</td>
-            <td>Heart of Destruction Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Rupture" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Heart_of_Destruction_Quest" target="_blank">Heart of Destruction Quest</a></td>
         </tr>
         <tr>
             <td>World Devourer</td>
             <td>300</td>
-            <td>Heart of Destruction Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="WorldDevourer" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Heart_of_Destruction_Quest" target="_blank">Heart of Destruction Quest</a></td>
         </tr>
         <tr>
             <td>Brokul</td>
             <td>300</td>
-            <td>The Secret Library Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Brokul" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Secret_Library_Quest" target="_blank">The Secret Library Quest</a></td>
         </tr>
         <tr>
             <td>Ratmiral Blackwhiskers</td>
             <td>350</td>
-            <td>A Pirate's Tail Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Ratmiral" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/A_Pirate%27s_Tail_Quest" target="_blank">A Pirate's Tail Quest</a></td>
         </tr>
         <tr>
             <td>Count Vlarkorth</td>
             <td>400</td>
-            <td>Grave Danger</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Vlarkorth" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grave_Danger_Quest" target="_blank">Grave Danger</a></td>
         </tr>
         <tr>
             <td>Earl Osam</td>
             <td>400</td>
-            <td>Grave Danger</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Osam" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grave_Danger_Quest" target="_blank">Grave Danger</a></td>
         </tr>
         <tr>
             <td>Lord Azaram</td>
             <td>400</td>
-            <td>Grave Danger</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Azaram" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grave_Danger_Quest" target="_blank">Grave Danger</a></td>
         </tr>
         <tr>
             <td>Sir Baeloc</td>
             <td>400</td>
-            <td>Grave Danger</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Baeloc" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grave_Danger_Quest" target="_blank">Grave Danger</a></td>
         </tr>
         <tr>
             <td>Sir Nictros</td>
             <td>400</td>
-            <td>Grave Danger</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Nictros" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grave_Danger_Quest" target="_blank">Grave Danger</a></td>
         </tr>
         <tr>
             <td>Duke Krule</td>
             <td>400</td>
-            <td>Grave Danger</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Krule" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grave_Danger_Quest" target="_blank">Grave Danger</a></td>
         </tr>
         <tr>
             <td>King Zelos</td>
             <td>400</td>
-            <td>Grave Danger</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Zelos" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grave_Danger_Quest" target="_blank">Grave Danger</a></td>
         </tr>
         <tr>
             <td>Brainhead</td>
             <td>400</td>
-            <td>Feaster of Souls</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Brainhead" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Feaster_of_Souls_Quest" target="_blank">Feaster of Souls</a></td>
         </tr>
         <tr>
             <td>Thaian</td>
             <td>400</td>
-            <td>Feaster of Souls</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Thaian" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Feaster_of_Souls_Quest" target="_blank">Feaster of Souls</a></td>
         </tr>
         <tr>
             <td>The Unwelcome</td>
             <td>400</td>
-            <td>Feaster of Souls</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Unwelcome" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Feaster_of_Souls_Quest" target="_blank">Feaster of Souls</a></td>
         </tr>
         <tr>
             <td>The Fear Fester</td>
             <td>400</td>
-            <td>Feaster of Souls</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Fear Fester" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Feaster_of_Souls_Quest" target="_blank">Feaster of Souls</a></td>
         </tr>
         <tr>
             <td>The Dread Maiden</td>
             <td>400</td>
-            <td>Feaster of Souls</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Dread Maiden" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Feaster_of_Souls_Quest" target="_blank">Feaster of Souls</a></td>
         </tr>
         <tr>
             <td>The Pale Worm</td>
             <td>400</td>
-            <td>Feaster of Souls</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Pale Worm" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Feaster_of_Souls_Quest" target="_blank">Feaster of Souls</a></td>
         </tr>
         <tr>
             <td>Arbaziloth</td>
             <td>400</td>
-            <td>No Rest for the Wicked</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Arbaziloth" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/No_Rest_for_the_Wicked_Quest" target="_blank">No Rest for the Wicked</a></td>
         </tr>
         <tr>
             <td>Ascending Ferumbras</td>
             <td>400</td>
-            <td>Ferumbras' Ascendant Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Ascending Ferumbras" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Ferumbras%27_Ascension_Quest" target="_blank">Ferumbras' Ascendant Quest</a></td>
         </tr>
         <tr>
             <td>The Nightmare Beast</td>
             <td>400</td>
-            <td>The Dream Courts Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Nightmare Beast" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Dream_Courts_Quest" target="_blank">The Dream Courts Quest</a></td>
         </tr>
         <tr>
             <td>Malofur Mangrinder</td>
             <td>400</td>
-            <td>The Dream Courts Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Malofur" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Dream_Courts_Quest" target="_blank">The Dream Courts Quest</a></td>
         </tr>
         <tr>
             <td>Plagueroot</td>
             <td>400</td>
-            <td>The Dream Courts Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Plagueroot" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Dream_Courts_Quest" target="_blank">The Dream Courts Quest</a></td>
         </tr>
         <tr>
             <td>Alptramun</td>
             <td>400</td>
-            <td>The Dream Courts Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Alptramun" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Dream_Courts_Quest" target="_blank">The Dream Courts Quest</a></td>
         </tr>
         <tr>
             <td>Maxxenius</td>
             <td>400</td>
-            <td>The Dream Courts Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Maxxenius" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Dream_Courts_Quest" target="_blank">The Dream Courts Quest</a></td>
         </tr>
         <tr>
             <td>Izcandar Champion of Winter</td>
             <td>400</td>
-            <td>The Dream Courts Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Izcandar Champion of Winter" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Dream_Courts_Quest" target="_blank">The Dream Courts Quest</a></td>
         </tr>
         <tr>
             <td>Izcandar Champion of Summer</td>
             <td>400</td>
-            <td>The Dream Courts Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Izcandar Champion of Summer" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Dream_Courts_Quest" target="_blank">The Dream Courts Quest</a></td>
         </tr>
         <tr>
             <td>Izcandar the Banished</td>
             <td>400</td>
-            <td>The Dream Courts Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Izcandar the Banished" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Dream_Courts_Quest" target="_blank">The Dream Courts Quest</a></td>
         </tr>
         <tr>
             <td>The Last Lore Keeper</td>
             <td>400</td>
-            <td>Forgotten Knowledge</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Last Lore Keeper" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Forgotten_Knowledge_Quest" target="_blank">Forgotten Knowledge</a></td>
         </tr>
         <tr>
             <td>The Brainstealer</td>
             <td>500</td>
-            <td>Too Hot to Handle Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Brainstealer" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Too_Hot_to_Handle_Quest" target="_blank">Too Hot to Handle Quest</a></td>
         </tr>
         <tr>
             <td>The Monster</td>
             <td>500</td>
-            <td>The Cradle of Monsters Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Monster" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Cradle_of_Monsters_Quest" target="_blank">The Cradle of Monsters Quest</a></td>
         </tr>
         <tr>
             <td>Dragon Hoard</td>
             <td>500</td>
-            <td>20 Years a Cook Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Dragon Hoard" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/20_Years_a_Cook_Quest" target="_blank">20 Years a Cook Quest</a></td>
         </tr>
         <tr>
             <td>Vladrukh</td>
             <td>500</td>
-            <td>Bloody Tusks</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Vladrukh" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Bloody_Tusks_Quest" target="_blank">Bloody Tusks</a></td>
         </tr>
         <tr>
             <td>Court Warlock</td>
             <td>600</td>
-            <td>Order of the Stag</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Court Warlock" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Order_of_the_Stag_Quest" target="_blank">Order of the Stag</a></td>
         </tr>
         <tr>
             <td>Magma Bubble</td>
             <td>600</td>
-            <td>Primal Ordeal</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Bubble" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Primal_Ordeal_Quest" target="_blank">Primal Ordeal</a></td>
         </tr>
         <tr>
             <td>Lokathmor</td>
             <td>600</td>
-            <td>The Secret Library Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Lokathmor" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Secret_Library_Quest" target="_blank">The Secret Library Quest</a></td>
         </tr>
         <tr>
             <td>Gorzindel</td>
             <td>600</td>
-            <td>The Secret Library Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Gorzindel" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Secret_Library_Quest" target="_blank">The Secret Library Quest</a></td>
         </tr>
         <tr>
             <td>Ghulosh</td>
             <td>600</td>
-            <td>The Secret Library Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Ghulosh" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Secret_Library_Quest" target="_blank">The Secret Library Quest</a></td>
         </tr>
         <tr>
             <td>Mazzinor</td>
             <td>600</td>
-            <td>The Secret Library Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Mazzinor" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_Secret_Library_Quest" target="_blank">The Secret Library Quest</a></td>
         </tr>
         <tr>
             <td>Ichgahal</td>
             <td>600</td>
-            <td>Rotten Blood Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Ichgahal" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Rotten_Blood_Quest" target="_blank">Rotten Blood Quest</a></td>
         </tr>
     </table>
 </div>
-<button type="button" class="expandable-div">Special Event Bosses (total boss points: 1100)</button>
-<div class="expandable-div-content">
-    <p>Bosses in this section are only completable during certain world events. Most of them are relatively easy and only require 5 kills, therefore are definitely worth doing during the events.<br><br></p>
+
+<div id="EventBosses" class="tabcontent">
+    <p>Bosses in this section are only completable during certain world events. <br>Most of them are relatively easy and only require 5 kills, therefore are definitely worth doing during the events.<br><br></p>
     <table class="bestiary_table">
         <tr>
             <th>Boss</th>
             <th>Rec. Level</th>
-            <th>Access Quest</th>
-            <th>Done</th>
+            <th>Event</th>
         </tr>
         <tr>
             <td>The Mutated Pumpkin</td>
             <td>100</td>
-            <td>Halloween Event</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Pumpkin" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Halloween" target="_blank">Halloween Event</a></td>
         </tr>
         <tr>
             <td>The Percht Queen</td>
             <td>150</td>
-            <td>Winterlight Solstice</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Percht" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Winterlight_Solstice" target="_blank">Winterlight Solstice</a></td>
         </tr>
         <tr>
             <td>King Chuck</td>
             <td>200</td>
-            <td>Orcsoberfest event</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Chuck" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Orcsoberfest" target="_blank">Orcsoberfest event</a></td>
         </tr>
         <tr>
             <td>The First Dragon</td>
             <td>200</td>
-            <td>First Dragon Quest</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="First Dragon" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/The_First_Dragon_Quest" target="_blank">First Dragon Quest</a></td>
         </tr>
         <tr>
             <td>Feroxa</td>
             <td>200</td>
-            <td>Monthly Grimvale Mini World Change</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Feroxa" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Grimvale_Mini_World_Change" target="_blank">Monthly Grimvale Mini World Change</a></td>
         </tr>
         <tr>
             <td>Anmothra</td>
             <td>200</td>
-            <td>Devovorga's Essence Mini World Change</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Anmothra" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Devovorga%27s_Essence_Mini_World_Change" target="_blank">Devovorga's Essence Mini World Change</a></td>
         </tr>
         <tr>
             <td>Irahsae</td>
             <td>200</td>
-            <td>Devovorga's Essence Mini World Change</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Irahsae" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Devovorga%27s_Essence_Mini_World_Change" target="_blank">Devovorga's Essence Mini World Change</a></td>
         </tr>
         <tr>
             <td>Teneshpar</td>
             <td>200</td>
-            <td>Devovorga's Essence Mini World Change</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Teneshpar" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Devovorga%27s_Essence_Mini_World_Change" target="_blank">Devovorga's Essence Mini World Change</a></td>
         </tr>
         <tr>
             <td>Chikhaton</td>
             <td>300</td>
-            <td>Rise of Devovorga Event</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Chikhaton" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Rise_of_Devovorga" target="_blank">Rise of Devovorga Event</a></td>
         </tr>
         <tr>
             <td>Phrodomo</td>
             <td>300</td>
-            <td>Rise of Devovorga Event</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Phrodomo" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Rise_of_Devovorga" target="_blank">Rise of Devovorga Event</a></td>
         </tr>
         <tr>
             <td>Devovorga</td>
             <td>300</td>
-            <td>Rise of Devovorga Event</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Devovorga" /></td>
+            <td><a href="https://tibia.fandom.com/wiki/Rise_of_Devovorga" target="_blank">Rise of Devovorga Event</a></td>
         </tr>
     </table>
 </div>
-<button type="button" class="expandable-div">Raid Bosses (total boss points: 1200)</button>
-<div class="expandable-div-content">
+
+<div id="RaidBosses" class="tabcontent">
     <p>Bosses in this section only appear during announced raids. Some of them are very weak, some are more tough.<br><br>
-        <b>IMPORTANT:</b> when attempting to kill bosses with low health (e.g. Willi Wasp, Zomba) you should 'tag' the boss only ONCE, either with a weak rune 
+        <b>IMPORTANT:</b> when attempting to kill bosses with low health (e.g. Willi Wasp, Zomba) you should 'tag' the boss only ONCE, either with a weak rune
         (e.g. a poison/fire bomb) or preferably using wand/rod obtainable from Thais Museum (plain mayhem rod, valuable carving wand).<br><br>
-            This is so other people on your server can also get the boss kill contribution.<br>People who one-shot/UE/SD/Avalanche etc. raid bosses like this are extremely rude, do NOT be like them.<br><br></p>
+        This is so other people on your server can also get the boss kill contribution.<br>People who one-shot/UE/SD/Avalanche etc. raid bosses like this are extremely rude, do NOT be like them.<br><br></p>
     <table class="bestiary_table">
         <tr>
             <th>Boss</th>
             <th>Rec. Level</th>
-            <th>Access Quest</th>
+            <th>Raid</th>
         </tr>
         <tr>
             <td>Willi Wasp</td>
             <td>50</td>
             <td>Carlin Wasp Raid</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Willi" /></td>
         </tr>
         <tr>
             <td>Zomba</td>
             <td>50</td>
             <td>Darashia Lion Raid</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Zomba" /></td>
         </tr>
         <tr>
             <td>Cublarc the Plunderer</td>
             <td>100</td>
             <td>Orc Raid on Zzaion</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Cublarc" /></td>
         </tr>
         <tr>
             <td>The Blightfather</td>
             <td>100</td>
             <td>Muggy Plains Lancer Beetle Raid</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Blightfather" /></td>
         </tr>
         <tr>
             <td>Grand Mother Foulscale</td>
             <td>100</td>
             <td>Muggy Plains Dragon/Draptor Raid</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Foulscale" /></td>
         </tr>
         <tr>
             <td>The Pale Count</td>
             <td>200</td>
             <td>Darashia Drefia Raid</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Pale" /></td>
         </tr>
         <tr>
             <td>Zulazza the Corruptor</td>
             <td>300</td>
             <td>Orc Raid on Zzaion</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Zulazza" /></td>
         </tr>
         <tr>
             <td>Chizzoron the Distorter</td>
             <td>300</td>
             <td>Orc Raid on Zzaion</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Chizzoron" /></td>
         </tr>
         <tr>
             <td>Orshabaal</td>
             <td>300</td>
             <td>Edron Demon Raid</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Orshabaal" /></td>
         </tr>
         <tr>
             <td>Ferumbras</td>
             <td>300</td>
             <td>Ferumbras Tower Raid</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="NFerumbrasight" /></td>
         </tr>
         <tr>
             <td>Morgaroth</td>
             <td>300</td>
             <td>Goroma Demon Raid</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Morgaroth" /></td>
         </tr>
         <tr>
             <td>Ghazbaran</td>
             <td>300</td>
             <td>Formorgar Mines Demon Raid</td>
-            <td class="table_cell_checkbox"><input type="checkbox" name="Ghazbaran" /></td>
         </tr>
     </table>
 </div>
 
-<script type="text/javascript">
-    init();
-</script>
     </section>
     
     <aside id="right-sidebar" class="right-sidebar">

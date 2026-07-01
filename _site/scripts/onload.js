@@ -57,6 +57,9 @@ function enable_default_tabs() {
   else if (location.href.includes('/deliveries')) {
     initial_show_tab("Everything")
   }
+  else if (location.href.includes('bosstiary')) {
+    initial_show_tab("SoloBossesLow")
+  }
   else if (location.href.split("/").slice(-1).includes('tasks')) {
     initial_show_tab("EasyTab")
   }
