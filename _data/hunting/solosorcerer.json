@@ -584,7 +584,7 @@
         "mastery":  "Death"
     },
     {
-        "level":  "150+",
+        "level":  "200+",
         "place":  "Barkless",
         "raw_exp":  "-",
         "loot":  "-",
@@ -602,34 +602,34 @@
     {
         "level":  "150+",
         "place":  "Deeplings Library",
+        "raw_exp":  "1.5kk",
+        "loot":  "800k",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
+    },
+    {
+        "level":  "150+",
+        "place":  "Oramond Minotaurs (South)",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
     {
-        "level":  "150+",
-        "place":  "Oramond Minotaur Plains",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
-    },
-    {
-        "level":  "150+",
+        "level":  "130+",
         "place":  "Dark Faun Cave Feyrist",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.1kk",
+        "loot":  "400k",
         "link":  "https://youtu.be/",
-        "mastery":  "Energy"
+        "mastery":  "Energy/Fire"
     },
     {
-        "level":  "150+",
-        "place":  "Mini Rosha",
+        "level":  "200+",
+        "place":  "Mini Rosha Feyrist",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
-        "mastery":  "Energy"
+        "mastery":  "Energy/Fire"
     },
     {
         "level":  "200+",
