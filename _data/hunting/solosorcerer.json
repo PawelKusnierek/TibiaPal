@@ -552,30 +552,6 @@
         "mastery":  "Fire"
     },
     {
-        "level":  "130+",
-        "place":  "Goroma Medusa/Serpents (Talahu)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
-    },
-    {
-        "level":  "130+",
-        "place":  "Behemoths Forbidden Lands",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Death"
-    },
-    {
-        "level":  "130+",
-        "place":  "Behemoths Cyclopolis",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Death"
-    },
-    {
         "level":  "120+",
         "place":  "Glooth Bandits",
         "raw_exp":  "1.75kk",
@@ -584,36 +560,36 @@
         "mastery":  "Fire"
     },
     {
+        "level":  "130+",
+        "place":  "Behemoths Cyclopolis",
+        "raw_exp":  "900k",
+        "loot":  "150k",
+        "link":  "https://youtu.be/",
+        "mastery":  "Death"
+    },
+    {
+        "level":  "130+",
+        "place":  "Okolnir",
+        "raw_exp":  "1.3kk",
+        "loot":  "10k",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
+    },
+    {
+        "level":  "150+",
+        "place":  "Otherworld (Kazo)",
+        "raw_exp":  "1.1kk",
+        "loot":  "400k",
+        "link":  "https://youtu.be/",
+        "mastery":  "Death"
+    },
+    {
         "level":  "150+",
         "place":  "Barkless",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
-    },
-    {
-        "level":  "130+",
-        "place":  "Otherworld (Kazo)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Death"
-    },
-    {
-        "level":  "130+",
-        "place":  "Otherworld (Edron)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
-    },
-    {
-        "level":  "130+",
-        "place":  "Okolnir",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
     },
     {
         "level":  "150+",
@@ -656,7 +632,15 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "150+",
+        "level":  "200+",
+        "place":  "Otherworld (Edron)",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
+    },
+    {
+        "level":  "200+",
         "place":  "Pirats",
         "raw_exp":  "-",
         "loot":  "-",
@@ -664,7 +648,7 @@
         "mastery":  "Fire"
     },
     {
-        "level":  "150+",
+        "level":  "200+",
         "place":  "Yalahar Grim Reapers",
         "raw_exp":  "-",
         "loot":  "-",
@@ -979,7 +963,7 @@
         "level":  "400+",
         "place":  "Falcons",
         "raw_exp":  "6.5kk",
-        "loot":  "1.43kk",
+        "loot":  "1.4kk",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
