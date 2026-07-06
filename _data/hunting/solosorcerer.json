@@ -379,7 +379,7 @@
         "level":  "80+",
         "place":  "Old Masonry (Death portal)",
         "raw_exp":  "825k",
-        "loot":  "100k",
+        "loot":  "80k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -387,7 +387,7 @@
         "level":  "80+",
         "place":  "Edron Vampire Crypt",
         "raw_exp":  "825k",
-        "loot":  "350k",
+        "loot":  "300k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -593,25 +593,25 @@
     },
     {
         "level":  "150+",
-        "place":  "Oramond West",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Oramond West (No Quara Raid)",
+        "raw_exp":  "1.9kk",
+        "loot":  "200k",
         "link":  "https://youtu.be/",
-        "mastery":  "Fire/Energy"
+        "mastery":  "Fire"
+    },
+    {
+        "level":  "150+",
+        "place":  "Oramond West (Quara Raid)",
+        "raw_exp":  "2.2kk",
+        "loot":  "300k",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
     },
     {
         "level":  "150+",
         "place":  "Deeplings Library",
         "raw_exp":  "1.5kk",
         "loot":  "800k",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
-    },
-    {
-        "level":  "150+",
-        "place":  "Oramond Minotaurs (South)",
-        "raw_exp":  "-",
-        "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
