@@ -586,8 +586,8 @@
     {
         "level":  "200+",
         "place":  "Barkless",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.3kk",
+        "loot":  "-150k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -952,7 +952,7 @@
         "mastery":  "Death"
     },
     {
-        "level":  "300+",
+        "level":  "400+",
         "place":  "Crypt Warriors",
         "raw_exp":  "5.5kk",
         "loot":  "800k",
