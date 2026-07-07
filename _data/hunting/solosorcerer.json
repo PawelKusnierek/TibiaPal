@@ -632,10 +632,10 @@
         "mastery":  "Energy/Fire"
     },
     {
-        "level":  "200+",
+        "level":  "250+",
         "place":  "Otherworld (Edron)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.5kk",
+        "loot":  "200k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -665,14 +665,6 @@
     },
     {
         "level":  "200+",
-        "place":  "Hive Stage 3",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire/Energy/Death"
-    },
-    {
-        "level":  "200+",
         "place":  "Crumbling Caverns",
         "raw_exp":  "-",
         "loot":  "-",
@@ -686,14 +678,6 @@
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
-    },
-    {
-        "level":  "200+",
-        "place":  "Diremaw Task Area",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
     },
     {
         "level":  "200+",
@@ -782,6 +766,14 @@
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
+    },
+    {
+        "level":  "300+",
+        "place":  "Diremaw Task Area",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
     },
     {
         "level":  "300+",
