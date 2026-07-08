@@ -576,20 +576,20 @@
         "mastery":  "Energy"
     },
     {
+        "level":  "130+",
+        "place":  "Dark Faun Cave Feyrist",
+        "raw_exp":  "1.1kk",
+        "loot":  "400k",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy/Fire"
+    },
+    {
         "level":  "150+",
         "place":  "Otherworld (Kazo)",
         "raw_exp":  "1.1kk",
         "loot":  "400k",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
-    },
-    {
-        "level":  "200+",
-        "place":  "Barkless",
-        "raw_exp":  "2.3kk",
-        "loot":  "-150k",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
     },
     {
         "level":  "150+",
@@ -616,26 +616,18 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "130+",
-        "place":  "Dark Faun Cave Feyrist",
-        "raw_exp":  "1.1kk",
-        "loot":  "400k",
+        "level":  "200+",
+        "place":  "Mini Rosha Feyrist",
+        "raw_exp":  "1.3kk",
+        "loot":  "300k",
         "link":  "https://youtu.be/",
-        "mastery":  "Energy/Fire"
+        "mastery":  "Energy"
     },
     {
         "level":  "200+",
-        "place":  "Mini Rosha Feyrist",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy/Fire"
-    },
-    {
-        "level":  "250+",
-        "place":  "Otherworld (Edron)",
-        "raw_exp":  "1.5kk",
-        "loot":  "200k",
+        "place":  "Barkless",
+        "raw_exp":  "2.3kk",
+        "loot":  "-150k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -658,18 +650,18 @@
     {
         "level":  "200+",
         "place":  "Werehyaenas North",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.25kk",
+        "loot":  "400k",
         "link":  "https://youtu.be/",
-        "mastery":  "Energy"
+        "mastery":  "Death"
     },
     {
         "level":  "200+",
-        "place":  "Crumbling Caverns",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Werehyaenas South",
+        "raw_exp":  "2.5kk",
+        "loot":  "400k",
         "link":  "https://youtu.be/",
-        "mastery":  "Death/Energy"
+        "mastery":  "Death"
     },
     {
         "level":  "200+",
@@ -682,10 +674,26 @@
     {
         "level":  "200+",
         "place":  "Book World: Chapter II",
+        "raw_exp":  "2.5kk",
+        "loot":  "600k",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire/Death"
+    },
+    {
+        "level":  "250+",
+        "place":  "Crumbling Caverns",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
-        "mastery":  "Death"
+        "mastery":  "Death/Energy"
+    },
+    {
+        "level":  "250+",
+        "place":  "Otherworld (Edron)",
+        "raw_exp":  "1.5kk",
+        "loot":  "200k",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
     },
     {
         "level":  "250+",
@@ -752,16 +760,16 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "300+",
-        "place":  "Deeper Banuta -8",
+        "level":  "275+",
+        "place":  "Werehyaenas South (T1 DE)",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
-        "mastery":  "Energy"
+        "mastery":  "Death"
     },
     {
         "level":  "300+",
-        "place":  "Werehyaenas South",
+        "place":  "Deeper Banuta -8",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
