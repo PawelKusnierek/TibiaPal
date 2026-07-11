@@ -36,13 +36,19 @@
             "points": 250,
             "description": "T1 Beam Mastery + T1 Death Echo",
             "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJAEYgbvFBBpxIAF_EcCAA",
-            "mastery": "Energy/Death"
+            "mastery": "Energy"
+        },
+        {
+            "points": 250,
+            "description": "T1 Energy Wave",
+            "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2DAAoy8QaRkCpT7HwkAAA",
+            "mastery": "Energy"
         },
         {
             "points": 250,
             "description": "T1 LoD + T1 Death Echo",
             "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2DAAJJGIDLFGy7wHwkAAA",
-            "mastery": "Fire"
+            "mastery": "Fire/Death"
         },
         {
             "points": 425,
@@ -66,7 +72,7 @@
             "points": 500,
             "description": "T2 Death Echo + T1 LoD + T1 Beam Mastery",
             "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=S0Y2BgYJAEYgbvFBBpBOKCCIYUbwYY-I8EAA",
-            "mastery": "Fire (Solo)"
+            "mastery": "Fire (Solo)/Death"
         },
         {
             "points": 650,

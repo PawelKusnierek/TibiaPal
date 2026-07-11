@@ -704,14 +704,6 @@
         "mastery":  "Death"
     },
     {
-        "level":  "300+",
-        "place":  "Book World: Chapter IV",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Death"
-    },
-    {
         "level":  "250+",
         "place":  "Deeper Banuta -6",
         "raw_exp":  "-",
@@ -762,6 +754,22 @@
     {
         "level":  "275+",
         "place":  "Werehyaenas South (T1 DE)",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Death"
+    },
+    {
+        "level":  "275+",
+        "place":  "Winter Court Surface",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
+    },
+    {
+        "level":  "300+",
+        "place":  "Book World: Chapter IV",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",

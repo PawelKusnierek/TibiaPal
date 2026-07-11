@@ -15,10 +15,22 @@
             "notes": "N/A"
         },
         {
+            "points": 175,
+            "description": "2x Gem + T1 Ethereal Barrage",
+            "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2DABEZGINIbzv-PBAA",
+            "notes": "N/A"
+        },
+        {
             "points": 250,
             "description": "T1 Divine Barrage + T1 GoL",
             "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2AAA0kQkeJtxIAN_EcCAA",
-            "notes": "N/A"
+            "notes": "Holy Build"
+        },
+        {
+            "points": 250,
+            "description": "T1 Ethereal Barrage + T1 Carpet",
+            "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2DAAJJGYMobTKYA8X8kAAA",
+            "notes": "Physical Build"
         },
         {
             "points": 450,
@@ -36,13 +48,19 @@
             "points": 500,
             "description": "T2 Divine Barrage + T1 GoL + T1 Avatar",
             "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2AAA0kQkeJtBOEZeYPFUiA8hv9IAAA",
-            "notes": "N/A"
+            "notes": "Holy Build"
+        },
+        {
+            "points": 500,
+            "description": "T2 Carpet + T1 Ethereal Barrage + 1x Greater Gem",
+            "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2BABykMRmDKG0hITgMx_yMBAA",
+            "notes": "Physical Build"
         },
         {
             "points": 600,
             "description": "T2 Divine Barrage + T1 Empowerment",
             "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2BAgBQoaQSmvL1ToOL_kQAA",
-            "notes": "N/A"
+            "notes": "Holy Build"
         },
         {
             "points": 725,
@@ -54,13 +72,13 @@
             "points": 775,
             "description": "T2 Divine Barrage + T2 Empowerment + 1x Greater Gem",
             "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2BAgBQoaQSmvL1TGCSngZj_kQAA",
-            "notes": "N/A"
+            "notes": "Holy Build"
         },
         {
             "points": 1000,
             "description": "T2 Mas San + T2 Divine Barrage + T2 Empowerment + 1x Greater Gem",
             "link": "https://www.tibia.com/community/?subtopic=wheelofdestinyplanner&code=P0Y2BAgBQGBiMQaQTmeHunMJyYBmL-RwIA",
-            "notes": "N/A"
+            "notes": "Holy Build"
         }
     ]
 }
