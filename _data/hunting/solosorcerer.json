@@ -616,6 +616,14 @@
         "mastery":  "Energy"
     },
     {
+        "level":  "150+",
+        "place":  "Pirats Ship (The Wreckoning)",
+        "raw_exp":  "2.0kk",
+        "loot":  "500k",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire/Death"
+    },
+    {
         "level":  "200+",
         "place":  "Mini Rosha Feyrist",
         "raw_exp":  "1.3kk",
@@ -630,14 +638,6 @@
         "loot":  "-150k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
-    },
-    {
-        "level":  "200+",
-        "place":  "Pirats Ship (The Wreckoning)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire/Death"
     },
     {
         "level":  "200+",
@@ -666,8 +666,8 @@
     {
         "level":  "200+",
         "place":  "Seacrest Serpents",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.1kk",
+        "loot":  "300k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
@@ -680,15 +680,15 @@
         "mastery":  "Fire/Death"
     },
     {
-        "level":  "250+",
+        "level":  "275+",
         "place":  "Crumbling Caverns",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
-        "mastery":  "Death/Energy"
+        "mastery":  "Death"
     },
     {
-        "level":  "250+",
+        "level":  "275+",
         "place":  "Otherworld (Edron)",
         "raw_exp":  "1.5kk",
         "loot":  "200k",
@@ -698,13 +698,13 @@
     {
         "level":  "250+",
         "place":  "Book World: Chapter III",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.2kk",
+        "loot":  "600k",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
     },
     {
-        "level":  "250+",
+        "level":  "275+",
         "place":  "Deeper Banuta -6",
         "raw_exp":  "-",
         "loot":  "-",
@@ -712,7 +712,7 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "250+",
+        "level":  "275+",
         "place":  "Medusa Tower",
         "raw_exp":  "-",
         "loot":  "-",
@@ -720,7 +720,7 @@
         "mastery":  "Fire"
     },
     {
-        "level":  "250+",
+        "level":  "275+",
         "place":  "Carnivora's Rocks",
         "raw_exp":  "-",
         "loot":  "-",
@@ -728,7 +728,7 @@
         "mastery":  "Fire"
     },
     {
-        "level":  "250+",
+        "level":  "300+",
         "place":  "INQ Hellfires + Spectres",
         "raw_exp":  "-",
         "loot":  "-",
@@ -736,7 +736,7 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "250+",
+        "level":  "275+",
         "place":  "Lower Spike",
         "raw_exp":  "-",
         "loot":  "-",
@@ -744,7 +744,7 @@
         "mastery":  "Death"
     },
     {
-        "level":  "250+",
+        "level":  "300+",
         "place":  "Draken Walls",
         "raw_exp":  "-",
         "loot":  "-",
@@ -768,7 +768,7 @@
         "mastery":  "Fire"
     },
     {
-        "level":  "300+",
+        "level":  "275+",
         "place":  "Book World: Chapter IV",
         "raw_exp":  "-",
         "loot":  "-",
@@ -784,7 +784,7 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "300+",
+        "level":  "275+",
         "place":  "Diremaw Task Area",
         "raw_exp":  "-",
         "loot":  "-",
@@ -816,7 +816,7 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "300+",
+        "level":  "275+",
         "place":  "Burster Spectres",
         "raw_exp":  "-",
         "loot":  "-",
@@ -824,7 +824,7 @@
         "mastery":  "Fire"
     },
     {
-        "level":  "300+",
+        "level":  "275+",
         "place":  "Oramond Wildlife Raid",
         "raw_exp":  "-",
         "loot":  "-",
@@ -832,7 +832,7 @@
         "mastery":  "Fire"
     },
     {
-        "level":  "300+",
+        "level":  "275+",
         "place":  "Gazer Spectre",
         "raw_exp":  "-",
         "loot":  "-",
@@ -872,7 +872,7 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "300+",
+        "level":  "275+",
         "place":  "Ripper Spectres",
         "raw_exp":  "-",
         "loot":  "-",
@@ -880,7 +880,7 @@
         "mastery":  "Fire"
     },
     {
-        "level":  "300+",
+        "level":  "275+",
         "place":  "Warzone 4",
         "raw_exp":  "-",
         "loot":  "-",
@@ -888,7 +888,7 @@
         "mastery":  "Fire"
     },
     {
-        "level":  "300+",
+        "level":  "275+",
         "place":  "Warzone 5",
         "raw_exp":  "-",
         "loot":  "-",
@@ -896,7 +896,7 @@
         "mastery":  "Fire"
     },
     {
-        "level":  "300+",
+        "level":  "275+",
         "place":  "Warzone 6",
         "raw_exp":  "-",
         "loot":  "-",
@@ -904,7 +904,7 @@
         "mastery":  "Fire"
     },
     {
-        "level":  "300+",
+        "level":  "275+",
         "place":  "Weretigers -1",
         "raw_exp":  "-",
         "loot":  "-",
@@ -912,7 +912,7 @@
         "mastery":  "Fire"
     },
     {
-        "level":  "300+",
+        "level":  "275+",
         "place":  "Weretigers -2",
         "raw_exp":  "-",
         "loot":  "-",
@@ -952,12 +952,20 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "300+",
+        "level":  "275+",
         "place":  "Marapur Turtles",
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
+    },
+    {
+        "level":  "300+",
+        "place":  "Deathlings",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
     },
     {
         "level":  "400+",
@@ -972,14 +980,6 @@
         "place":  "Falcons",
         "raw_exp":  "6.5kk",
         "loot":  "1.4kk",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
-    },
-    {
-        "level":  "400+",
-        "place":  "Deathlings",
-        "raw_exp":  "5.5kk",
-        "loot":  "1.3kk",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
