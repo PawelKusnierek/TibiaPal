@@ -680,6 +680,14 @@
         "mastery":  "Fire/Death"
     },
     {
+        "level":  "250+",
+        "place":  "Weretigers -1",
+        "raw_exp":  "3.6kk",
+        "loot":  "800k",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
+    },
+    {
         "level":  "275+",
         "place":  "Crumbling Caverns",
         "raw_exp":  "-",
@@ -714,32 +722,24 @@
     {
         "level":  "275+",
         "place":  "Medusa Tower",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.7kk",
+        "loot":  "250kk",
         "link":  "https://youtu.be/",
-        "mastery":  "Fire"
+        "mastery":  "Death/Fire"
     },
     {
         "level":  "275+",
         "place":  "Carnivora's Rocks",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.3kk",
+        "loot":  "750k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
     {
-        "level":  "300+",
-        "place":  "INQ Hellfires + Spectres",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
-    },
-    {
         "level":  "275+",
         "place":  "Lower Spike",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.0kk",
+        "loot":  "1.2kk",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
     },
@@ -750,14 +750,6 @@
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
-    },
-    {
-        "level":  "275+",
-        "place":  "Werehyaenas South (T1 DE)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Death"
     },
     {
         "level":  "275+",
@@ -792,7 +784,7 @@
         "mastery":  "Fire"
     },
     {
-        "level":  "300+",
+        "level":  "275+",
         "place":  "Asura Palace",
         "raw_exp":  "-",
         "loot":  "-",
@@ -834,8 +826,8 @@
     {
         "level":  "275+",
         "place":  "Gazer Spectre",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.2kk",
+        "loot":  "600k",
         "link":  "https://youtu.be/",
         "mastery":  "Death"
     },
@@ -904,15 +896,7 @@
         "mastery":  "Fire"
     },
     {
-        "level":  "250+",
-        "place":  "Weretigers -1",
-        "raw_exp":  "3.6kk",
-        "loot":  "800k",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
-    },
-    {
-        "level":  "275+",
+        "level":  "300+",
         "place":  "Weretigers -2",
         "raw_exp":  "-",
         "loot":  "-",
