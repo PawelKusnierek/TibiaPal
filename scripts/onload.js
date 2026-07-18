@@ -49,7 +49,7 @@ function enable_default_tabs() {
     initial_show_tab("Druid")
   }
   else if (location.href.includes('/proficiency')) {
-    initial_show_tab("ProficiencyDruid")
+    initial_show_tab("Druid")
   }
   else if (location.href.includes('/exercise')) {
     initial_show_tab("TargetSkill")
