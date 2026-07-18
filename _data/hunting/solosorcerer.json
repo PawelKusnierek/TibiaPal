@@ -714,8 +714,8 @@
     {
         "level":  "275+",
         "place":  "Deeper Banuta -6",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.2kk",
+        "loot":  "500k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
@@ -865,17 +865,9 @@
     },
     {
         "level":  "275+",
-        "place":  "Ripper Spectres",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
-    },
-    {
-        "level":  "275+",
         "place":  "Warzone 4",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.7kk",
+        "loot":  "1.5kk",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -950,6 +942,14 @@
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
+    },
+    {
+        "level":  "350+",
+        "place":  "Ripper Spectres",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
     },
     {
         "level":  "400+",
