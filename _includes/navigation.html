@@ -1,3 +1,6 @@
+<!--
+<span style="color:red">NEW!</span>
+!-->
 <nav id="left-sidebar">
     <div class="nav-section">GENERAL</div>
         <div class="{% if page.url == "/" %}active {% endif %}nav-item"> <a href="/">
@@ -10,10 +13,6 @@
                 </div>
                 </a>
         </div>
-        <!--<div class="{% if page.url == "/donators.html" %}active {% endif %}nav-item"><a href="/donators">
-                <div class="nav-image-container"><img class="nav-image" src={{"images/Heart_Pillow.gif" |
-                        relative_url}}>Donators</div></a>
-        </div>-->
         <div class="nav-item"><a href="https://iglaots.net/?view=register&refcode=Kusnier" target="_blank">
                 <div class="nav-image-container"><img class="nav-image" src={{"images/iglaots.png" |
                         relative_url}}>IglaOTS.net - Partner OTS</div>
@@ -35,10 +34,6 @@
             <div class="nav-image-container"><img class="nav-image" src={{"images/charms/vampiric_embrace.png" |
             relative_url}}>Charm Planner</div>
         </a></div>
-    <!--<div class="{% if page.url == "/fiend_hunter.html" %}active {% endif %}nav-item"><a href="/fiend_map">
-        <div class="nav-image-container"><img class="nav-image" src={{"images/old_map.gif" |
-                relative_url}}>Fiend Map</div>
-        </a></div>-->
     </div>
 
     <div class="nav-section">GUIDES / REFERENCES</div>
@@ -50,31 +45,29 @@
         <div class="nav-image-container"><img class="nav-image" src={{"images/Wheel.gif" |
                 relative_url}}>Wheel of Destiny Builds
         </div></a> </div>
+<!--
+<div class="{% if page.url == "/proficiency.html" %}active {% endif %}nav-item"><a href="/proficiency">
+        <div class="nav-image-container"><img class="nav-image" src={{"images/Catalyst.gif" |
+                relative_url}}><span style="color:red">NEW!</span>Proficiency Refinement
+        </div></a> </div>
+!-->
 <div class="{% if page.url == "/equipment.html" %}active {% endif %}nav-item"><a href="/equipment">
         <div class="nav-image-container"><img class="nav-image" src={{"images/equipment.gif" |
                 relative_url}}>Vocation Equipment Reference
         </div></a> </div>
 <div class="{% if page.url == "/quest-reference.html" %}active {% endif %}nav-item"><a href="/quest-reference">
-            <div class="nav-image-container"><img class="nav-image" src={{"images/old_map.gif" |
-                    relative_url}}>Quest Reference</div>
+        <div class="nav-image-container"><img class="nav-image" src={{"images/old_map.gif" |
+                relative_url}}>Quest Reference</div>
         </a></div>
 <div class="{% if page.url == "/deliveries.html" %}active {% endif %}nav-item"><a href="/deliveries">
         <div class="nav-image-container"><img class="nav-image" src={{"images/Weekly.png" |
                 relative_url}}>Weekly Deliveries
         </div></a> </div>
-    <!--<div class="{% if page.url == "/tasks.html" %}active {% endif %}nav-item"><a href="/tasks">
-        <div class="nav-image-container"><img class="nav-image" src={{"images/Bestiary_Betterment.gif" |
-                relative_url}}>Bestiary Tasks
-        </div></a> </div>-->
     <div class="{% if page.url == "/bestiary.html" %}active {% endif %}nav-item"><a href="/bestiary">
             <div class="nav-image-container"><img class="nav-image" src={{"images/Bestiary_Betterment.gif" |
                     relative_url}}>Bestiary
                 Reference</div>
         </a> </div>
-    <!--<div class="{% if page.url == "/bestiary_guide.html" %}active {% endif %}nav-item"><a href="/bestiary_guide">
-            <div class="nav-image-container"><img class="nav-image" src={{"images/Bestiary_Betterment.gif" |
-                    relative_url}}>Bestiary Guide</div>
-        </a> </div>-->
     <div class="{% if page.url == "/bosstiary.html" %}active {% endif %}nav-item"><a href="/bosstiary">
             <div class="nav-image-container"><img class="nav-image" src={{"images/Falcon_Greaves.gif" |
                     relative_url}}>Bosstiary Reference
@@ -137,10 +130,4 @@
             relative_url}}>Leech Calculator
             </div>
         </a></div>
-
-    <div class="right-sidebar-item" id="Rashid">
-        <!--<img src={{"images/Rashid.gif" | relative_url}} style="width:45%" alt="Rashid NPC">
-        <br>
-        <div id="rashid-city">Unavailable...</div>!-->
-    </div>
 </nav>
