@@ -832,6 +832,38 @@
         "mastery":  "Death"
     },
     {
+        "level":  "275+",
+        "place":  "Marapur Turtles",
+        "raw_exp":  "2.8kk",
+        "loot":  "1.6kk",
+        "link":  "https://youtu.be/",
+        "mastery":  "Death"
+    },
+    {
+        "level":  "275+",
+        "place":  "Warzone 4",
+        "raw_exp":  "3.7kk",
+        "loot":  "1.5kk",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
+    },
+    {
+        "level":  "275+",
+        "place":  "Warzone 5",
+        "raw_exp":  "4.4kk",
+        "loot":  "900k",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
+    },
+    {
+        "level":  "275+",
+        "place":  "Warzone 6",
+        "raw_exp":  "3.3kk",
+        "loot":  "1.0kk",
+        "link":  "https://youtu.be/",
+        "mastery":  "Fire"
+    },
+    {
         "level":  "300+",
         "place":  "Werelions",
         "raw_exp":  "-",
@@ -862,30 +894,6 @@
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
-    },
-    {
-        "level":  "275+",
-        "place":  "Warzone 4",
-        "raw_exp":  "3.7kk",
-        "loot":  "1.5kk",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
-    },
-    {
-        "level":  "275+",
-        "place":  "Warzone 5",
-        "raw_exp":  "4.4kk",
-        "loot":  "900k",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
-    },
-    {
-        "level":  "275+",
-        "place":  "Warzone 6",
-        "raw_exp":  "3.3kk",
-        "loot":  "1.0kk",
-        "link":  "https://youtu.be/",
-        "mastery":  "Fire"
     },
     {
         "level":  "300+",
@@ -926,14 +934,6 @@
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
-    },
-    {
-        "level":  "275+",
-        "place":  "Marapur Turtles",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Death"
     },
     {
         "level":  "300+",
