@@ -355,5 +355,19 @@
         "raw_exp":  "-",
         "loot":  "-",
         "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "1000+",
+        "place":  "Radiant Ascendency",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "1200+",
+        "place":  "Radiant Skyhold",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/"
     }
 ]

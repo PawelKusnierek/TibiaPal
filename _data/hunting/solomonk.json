@@ -1361,6 +1361,14 @@
     },
     {
         "level":  "800+",
+        "place":  "Asura Citadel",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "weapon_type":  "Earth",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "800+",
         "place":  "Azzilon Catacombs",
         "raw_exp":  "-",
         "loot":  "-",

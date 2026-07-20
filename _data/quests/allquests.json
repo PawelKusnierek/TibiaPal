@@ -520,5 +520,23 @@
     "hunt_access": "Yes",
     "other": "",
     "link": "https://tibia.fandom.com/wiki/In_Service_of_Yalahar_Quest"
+  },
+  {
+    "rec_level": 1000,
+    "name": "Make Believe Quest",
+    "doable_solo": "No",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Make_Believe_Quest"
+  },
+  {
+    "rec_level": 500,
+    "name": "Shards of a Broken Moon Quest",
+    "doable_solo": "Yes",
+    "boss_access": "Yes",
+    "hunt_access": "Yes",
+    "other": "",
+    "link": "https://tibia.fandom.com/wiki/Shards_of_a_Broken_Moon_Quest"
   }
 ]

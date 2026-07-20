@@ -1346,6 +1346,14 @@
     },
     {
         "level":  "800+",
+        "place":  "Asura Citadel",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "800+",
         "place":  "Ingol Surface/-1/-2",
         "raw_exp":  "-",
         "loot":  "-",
