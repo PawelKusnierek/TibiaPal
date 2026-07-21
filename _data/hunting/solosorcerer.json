@@ -794,8 +794,8 @@
     {
         "level":  "300+",
         "place":  "Asura Mirror",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "4.4kk",
+        "loot":  "400k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
@@ -866,8 +866,8 @@
     {
         "level":  "300+",
         "place":  "Werelions",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.2kk",
+        "loot":  "600k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
@@ -888,10 +888,10 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "300+",
+        "level":  "275+",
         "place":  "Weretigers -2",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "4.4kk",
+        "loot":  "1.0kk",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -904,18 +904,10 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "300+",
+        "level":  "275+",
         "place":  "Iksupan Last Stand",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
-    },
-    {
-        "level":  "300+",
-        "place":  "Iksupan Occupied Sanctuary",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "4.5kk",
+        "loot":  "1.0kk",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
@@ -942,6 +934,14 @@
         "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
+    },
+    {
+        "level":  "350+",
+        "place":  "Iksupan Occupied Sanctuary",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "mastery":  "Energy"
     },
     {
         "level":  "400+",
