@@ -746,8 +746,8 @@
     {
         "level":  "300+",
         "place":  "Draken Walls",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.1kk",
+        "loot":  "800k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
@@ -920,7 +920,7 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "300+",
+        "level":  "400+",
         "place":  "Deathlings",
         "raw_exp":  "-",
         "loot":  "-",
