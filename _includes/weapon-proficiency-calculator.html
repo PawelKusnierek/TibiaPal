@@ -1,0 +1,76 @@
+<div class="wp-calculator" id="weaponProficiencyCalculator">
+  <main class="window" aria-label="Weapon proficiency editor">
+    <header class="titlebar">Weapon Proficiency</header>
+    <section class="workspace">
+      <aside class="sidebar">
+        <section class="weapon-card">
+          <div class="weapon-name" id="weaponName">loading Tibia data…</div>
+          <div class="crest" aria-hidden="true"><span id="crestGlyph">✦</span></div>
+        </section>
+        <div class="modify-row">
+          <button class="modify" id="modifyButton">⚒ Modify</button>
+        </div>
+        <p class="selection-hint" id="selectionHint">Choose a perk on the board to modify it.</p>
+        <div class="filters segmented" id="filters">
+          <button data-filter="all" class="active">All</button>
+          <button data-filter="1H">1H</button>
+          <button data-filter="2H">2H</button>
+        </div>
+        <label class="select-wrap"><select id="familySelect"><option value="all">Weapons: All</option></select></label>
+        <label class="search-wrap"><input id="search" type="search" placeholder="Type to search"><span>×</span></label>
+        <div class="weapon-grid" id="weaponGrid" role="listbox"></div>
+      </aside>
+      <section class="proficiency">
+        <div class="level-tabs" id="levelTabs"></div>
+        <div class="progress-track"><div id="progressBar"></div></div>
+        <div class="level-board" id="levelBoard"></div>
+        <div class="perk-labels" id="perkLabels"></div>
+      </section>
+    </section>
+    <footer>
+      <span class="footer-status" id="footerStatus">Build changes are saved in the URL automatically.</span>
+      <button id="shareButton">Copy Share URL</button><button id="resetButton">Reset Build</button>
+    </footer>
+  </main>
+  <section class="build-summary" aria-labelledby="buildSummaryTitle">
+    <header>
+      <h2 id="buildSummaryTitle">Selected Proficiency Stats</h2>
+      <p id="buildSummaryMeta"></p>
+    </header>
+    <div class="summary-grid" id="buildSummary"></div>
+  </section>
+  <div class="modal-backdrop" id="shapeBackdrop" hidden>
+    <section class="shape-window" role="dialog" aria-modal="true" aria-labelledby="shapeTitle">
+      <header class="titlebar" id="shapeTitle">Shape Weapon Perk</header>
+      <div class="shape-content">
+        <p class="shape-hint" id="shapeHint"></p>
+        <div class="shape-current" id="shapeCurrent"></div>
+        <div class="shape-actions">
+          <button id="refineButton">Refine <span id="refineCost"></span></button>
+          <button id="maximiseButton">Maximise <span class="orb">●</span></button>
+          <button id="reshapeButton">Reshape <span>250</span><span class="shard">◆</span></button>
+          <button id="clearShapeButton">Clear</button>
+        </div>
+        <div class="wallet"><span>Dust: <b id="dustBalance">0</b> <i class="shard">◆</i></span><span>Orbs: <b id="orbBalance">0</b> <i class="orb">●</i></span></div>
+      </div>
+      <footer><button class="close-modal">Close</button></footer>
+    </section>
+  </div>
+  <div class="modal-backdrop" id="reshapeBackdrop" hidden>
+    <section class="shape-window reshape-window" role="dialog" aria-modal="true" aria-labelledby="reshapeTitle">
+      <header class="titlebar" id="reshapeTitle">🔮 Perk Shaping Options</header>
+      <div class="perk-picker">
+        <input id="reshapeFilter" type="search" placeholder="Type to search…" aria-label="Search perks" autocomplete="off">
+        <select id="reshapeSelect" hidden aria-label="Selected perk"></select>
+        <div class="reshape-table-head" aria-hidden="true">
+          <span>Perk</span><span>Effect at rank 0</span><span>Effect at rank 10</span>
+        </div>
+        <div class="reshape-perk-list" id="reshapePerkList" role="listbox" aria-label="Available perks"></div>
+      </div>
+      <footer><p class="picker-cost" id="pickerCost"></p><button id="confirmReshapeButton">Select Perk</button><button id="keepButton">Cancel</button></footer>
+    </section>
+  </div>
+  <template id="weaponTemplate">
+    <button class="weapon-tile" role="option"><span class="weapon-glyph"></span><span class="weapon-level"></span></button>
+  </template>
+</div>

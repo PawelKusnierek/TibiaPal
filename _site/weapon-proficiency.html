@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TibiaPal.com - Weapon Proficiency Tool</title>
+    <meta name="author" content="Pawel Kusnierek">
+    <meta name="description"
+        content="TibiaPal — tools and calculators for the MMORPG Tibia. Includes TibiaLootSplit, Hunting Places guide, Quest Reference and many more.">
+    <meta name="keywords"
+        content="Tibia tools, Tibia calculators, Tibia fansite, TibiaPal,
+          TibiaLootSplit, Tibia loot split, Tibia loot analyser,
+          Tibia hunting places, Tibia hunting guide, Tibia spawn guide,
+          Tibia quest reference, Tibia quest guide, Tibia quest list, Tibia quest levels, Tibia boss access quests, Tibia hunting ground quests,
+          Tibia equipment reference, Tibia vocation equipment, Tibia best equipment,
+          Tibia bestiary reference, Tibia bestiary guide, Tibia bosstiary guide,
+          Tibia charm planner, Tibia charm guide, Tibia charm damage calculator,
+          Tibia weekly deliveries, Tibia NPC deliveries,
+          Tibia experience calculator, Tibia levelling calculator,
+          Tibia exp share calculator, Tibia party exp,
+          Tibia stamina calculator, Tibia bless calculator, Tibia bless cost,
+          Tibia imbue calculator, Tibia imbuement cost,
+          Tibia leech calculator, Tibia life leech, Tibia mana leech,
+          Tibia exercise weapons calculator, Tibia exercise training,
+          Tibia offline training calculator, Tibia training calculator,
+          Tibia weekly task calculator, Tibia weekly tasks">
+    <link rel="shortcut icon" href=/images/crystalcoin.ico type="image/x-icon">
+
+    <!-- css files -->
+    <link rel="stylesheet" href=/css/main.css>
+    <link rel="stylesheet" href="/proficiency-calculator/styles.css?v=20260723-16">
+
+    <!-- javascript files -->
+    <script type="module" src="/proficiency-calculator/app.js?v=20260723-15"></script>
+    <script src=/scripts/onload.js></script>
+
+    <!-- extra googleapi fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+    <!-- Analytics and ad related section-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164338286-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-164338286-3');
+    </script>
+    <script data-ad-client="ca-pub-2936542406889680" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+    <main id="page-container">
+        <div id="tibiatrade_low_res">
+            <div class="tibiatrade_span">
+                Featured on <a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank"><b>TibiaTrade</b>:</a>
+            </div>
+            <iframe id="tibiatrade" src="https://tibiatrade.gg/iframe/highlighted/" title="TibiaTrade" loading="lazy" scrolling="no"></iframe>
+        </div>
+    
+        <div id="header">
+            <a href="https://tibiapal.com"> 
+                <img src=/images/mainlogo.png style="width:100px" alt="TibiaPal beaver logo">
+            </a>
+        </div>
+
+        <div id="banner">
+            <span class="tibiatrade_span">Featured on <a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank"><b>TibiaTrade</b>:</a></span>
+            <iframe id="tibiatrade" src="https://tibiatrade.gg/iframe/highlighted/" title="TibiaTrade" loading="lazy" scrolling="no"></iframe>
+                <!--<a href="https://store.steampowered.com/app/2948410/Talus/" target="_blank"> 
+                    <img src=/images/talus/small_capsule.png style="width:300px"  alt="Logo of upcoming ARPG 'Talus'">
+                </a>-->
+        </div>
+        <div id="right-header">
+
+        </div>
+    <!--
+<span style="color:red">NEW!</span>
+!-->
+<nav id="left-sidebar">
+    <div class="nav-section">GENERAL</div>
+        <div class="nav-item"> <a href="/">
+                <div class="nav-image-container"><img class="nav-image" src=/images/icon-news.gif>Latest News</div>
+                </a>
+        </div>
+        <div class="nav-item"><a href="/about">
+                <div class="nav-image-container"><img class="nav-image" src=/images/icon-abouttibia.gif>About & Contact
+                </div>
+                </a>
+        </div>
+        <div class="nav-item"><a href="https://iglaots.net/?view=register&refcode=Kusnier" target="_blank">
+                <div class="nav-image-container"><img class="nav-image" src=/images/iglaots.png>IglaOTS.net - Partner OTS</div>
+                </a>
+        </div>
+        <div class="nav-item"><a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank">
+                <div class="nav-image-container"><img class="nav-image" src=/images/tibiatrade_favicon.png>TibiaTrade.gg - Partner Fansite</div>
+                </a>
+        </div>
+    </div>
+
+    <div class="nav-section">TOOLS</div>
+    <div class="nav-item"><a href="/tibialootsplit">
+            <div class="nav-image-container"><img class="nav-image" src=/images/crystalcoin.ico>TibiaLootSplit</div>
+        </a></div>
+    <div class="nav-item"><a href="/charm_planner">
+            <div class="nav-image-container"><img class="nav-image" src=/images/charms/vampiric_embrace.png>Charm Planner</div>
+        </a></div>
+    <div class="active nav-item"><a href="/weapon-proficiency">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Catalyst.gif><span style="color:red">NEW!</span>Weapon Proficiency Tool
+            </div>
+        </a></div>
+    </div>
+
+    <div class="nav-section">GUIDES / REFERENCES</div>
+    <div class="nav-item"><a href="/hunting">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Sword.gif>Hunting
+                Places</div>
+        </a></div>
+<div class="nav-item"><a href="/wheels">
+        <div class="nav-image-container"><img class="nav-image" src=/images/Wheel.gif>Wheel of Destiny Builds
+        </div></a> </div>
+<div class="nav-item"><a href="/proficiency">
+        <div class="nav-image-container"><img class="nav-image" src=/images/Catalyst.gif>Proficiency Refinement
+        </div></a> </div>
+<div class="nav-item"><a href="/equipment">
+        <div class="nav-image-container"><img class="nav-image" src=/images/equipment.gif>Vocation Equipment Reference
+        </div></a> </div>
+<div class="nav-item"><a href="/quest-reference">
+        <div class="nav-image-container"><img class="nav-image" src=/images/old_map.gif>Quest Reference</div>
+        </a></div>
+<div class="nav-item"><a href="/deliveries">
+        <div class="nav-image-container"><img class="nav-image" src=/images/Weekly.png>Weekly Deliveries
+        </div></a> </div>
+    <div class="nav-item"><a href="/bestiary">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bestiary_Betterment.gif>Bestiary
+                Reference</div>
+        </a> </div>
+    <div class="nav-item"><a href="/bosstiary">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Falcon_Greaves.gif>Bosstiary Reference
+            </div>
+        </a> </div>
+    <div class="nav-item"><a href="https://www.youtube.com/kusnierr" target="_blank">
+            <div class="nav-image-container"><img class="nav-image" src=/images/youtube-icon.png>YouTube Videos &
+                Guides</div>
+        </a></div>
+    </div>
+
+    <div class="nav-section">CALCULATORS</div>
+    <div class="nav-item"><a href="/exercise">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Exercise_Wand.gif>Exercise
+                Weapons Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/offlinetraining">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Skill_Trainer.gif>Training
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/imbue">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Imbuing_Shrine.gif>Imbue
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/weekly_tasks">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Weekly.png>Weekly Task Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/charm_calculator">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Overpower.png>Charms Damage
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/expshare">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bricklayers.gif>Exp Share
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/stamina">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Staminafull.png>Stamina
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/bless">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Solitude_Charm.gif>Bless
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/expcalculator">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Demon.gif>Levelling
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/leech">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Leech.gif>Leech Calculator
+            </div>
+        </a></div>
+</nav>
+
+    
+    <!-- Navigation toggle button for mobile -->
+    <button class="nav-toggle" onclick="toggleNavigation()" style="display: none;">☰ Menu</button>
+    
+    <section id="main-content">
+    <section class="proficiency-calculator-section">
+    <h1>Weapon Proficiency Tool</h1>
+    <p>Select any Tibia weapon, plan every proficiency perk, and shape up to two perk slots. The tool runs entirely in your browser.</p>
+    <div class="wp-calculator" id="weaponProficiencyCalculator">
+  <main class="window" aria-label="Weapon proficiency editor">
+    <header class="titlebar">Weapon Proficiency</header>
+    <section class="workspace">
+      <aside class="sidebar">
+        <section class="weapon-card">
+          <div class="weapon-name" id="weaponName">loading Tibia data…</div>
+          <div class="crest" aria-hidden="true"><span id="crestGlyph">✦</span></div>
+        </section>
+        <div class="modify-row">
+          <button class="modify" id="modifyButton">⚒ Modify</button>
+        </div>
+        <p class="selection-hint" id="selectionHint">Choose a perk on the board to modify it.</p>
+        <div class="filters segmented" id="filters">
+          <button data-filter="all" class="active">All</button>
+          <button data-filter="1H">1H</button>
+          <button data-filter="2H">2H</button>
+        </div>
+        <label class="select-wrap"><select id="familySelect"><option value="all">Weapons: All</option></select></label>
+        <label class="search-wrap"><input id="search" type="search" placeholder="Type to search"><span>×</span></label>
+        <div class="weapon-grid" id="weaponGrid" role="listbox"></div>
+      </aside>
+      <section class="proficiency">
+        <div class="level-tabs" id="levelTabs"></div>
+        <div class="progress-track"><div id="progressBar"></div></div>
+        <div class="level-board" id="levelBoard"></div>
+        <div class="perk-labels" id="perkLabels"></div>
+      </section>
+    </section>
+    <footer>
+      <span class="footer-status" id="footerStatus">Build changes are saved in the URL automatically.</span>
+      <button id="shareButton">Copy Share URL</button><button id="resetButton">Reset Build</button>
+    </footer>
+  </main>
+  <section class="build-summary" aria-labelledby="buildSummaryTitle">
+    <header>
+      <h2 id="buildSummaryTitle">Selected Proficiency Stats</h2>
+      <p id="buildSummaryMeta"></p>
+    </header>
+    <div class="summary-grid" id="buildSummary"></div>
+  </section>
+  <div class="modal-backdrop" id="shapeBackdrop" hidden>
+    <section class="shape-window" role="dialog" aria-modal="true" aria-labelledby="shapeTitle">
+      <header class="titlebar" id="shapeTitle">Shape Weapon Perk</header>
+      <div class="shape-content">
+        <p class="shape-hint" id="shapeHint"></p>
+        <div class="shape-current" id="shapeCurrent"></div>
+        <div class="shape-actions">
+          <button id="refineButton">Refine <span id="refineCost"></span></button>
+          <button id="maximiseButton">Maximise <span class="orb">●</span></button>
+          <button id="reshapeButton">Reshape <span>250</span><span class="shard">◆</span></button>
+          <button id="clearShapeButton">Clear</button>
+        </div>
+        <div class="wallet"><span>Dust: <b id="dustBalance">0</b> <i class="shard">◆</i></span><span>Orbs: <b id="orbBalance">0</b> <i class="orb">●</i></span></div>
+      </div>
+      <footer><button class="close-modal">Close</button></footer>
+    </section>
+  </div>
+  <div class="modal-backdrop" id="reshapeBackdrop" hidden>
+    <section class="shape-window reshape-window" role="dialog" aria-modal="true" aria-labelledby="reshapeTitle">
+      <header class="titlebar" id="reshapeTitle">🔮 Perk Shaping Options</header>
+      <div class="perk-picker">
+        <input id="reshapeFilter" type="search" placeholder="Type to search…" aria-label="Search perks" autocomplete="off">
+        <select id="reshapeSelect" hidden aria-label="Selected perk"></select>
+        <div class="reshape-table-head" aria-hidden="true">
+          <span>Perk</span><span>Effect at rank 0</span><span>Effect at rank 10</span>
+        </div>
+        <div class="reshape-perk-list" id="reshapePerkList" role="listbox" aria-label="Available perks"></div>
+      </div>
+      <footer><p class="picker-cost" id="pickerCost"></p><button id="confirmReshapeButton">Select Perk</button><button id="keepButton">Cancel</button></footer>
+    </section>
+  </div>
+  <template id="weaponTemplate">
+    <button class="weapon-tile" role="option"><span class="weapon-glyph"></span><span class="weapon-level"></span></button>
+  </template>
+</div>
+
+</section>
+
+    </section>
+    
+    <aside id="right-sidebar" class="right-sidebar">
+            <section id="banner-paragraph" class="right-sidebar__inner">
+                <article class="feature-item feature-item--discord">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Community</span>
+                        <h4 class="feature-item__title">Join the TibiaPal & Kusnier Discord</h4>
+                    </header>
+                    <a class="feature-item__cta" href="https://discord.gg/kusnier" target="_blank" rel="noopener">
+                        discord.gg/Kusnier
+                    </a><br>
+                </article>
+
+                <!-- Stream online (Embed) -->
+                <article id="stream-status" class="feature-item feature-item--stream-status" style="display: none">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Live now</span>
+                        <h4 class="feature-item__title">
+                            Live on <a href="https://www.kick.com/Kusnier" target="_blank" rel="noopener">Kick</a>
+                        </h4>
+                    </header>
+                    <div class="feature-item__frame feature-item__frame--16x9">
+                        <iframe src="" title="Kusnier Kick livestream" loading="lazy" allow="autoplay; fullscreen" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+                    </div>
+                </article>
+
+                <!-- IglaOTS -->
+                 <article id="iglaots-display" class="feature-item feature-item--igla">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Partner</span>
+                        <h4 class="feature-item__title">
+                            Join <a href="https://iglaots.net/?view=register&refcode=Kusnier" target="_blank" rel="noopener">IgłaOTS</a>, Real Tibia server with custom QOL & features!
+                        </h4>
+                    </header>
+                    <p class="feature-item__body">
+                        Register with below link to receive a custom TibiaPal Beaver backpack!
+                    </p><br>
+                    <div class="feature-item__frame feature-item__frame--16x9">
+                        <a href="https://iglaots.net/?view=register&refcode=Kusnier" target="_blank" rel="noopener">
+                            <video src=/images/iglaots.webm autoplay muted loop playsinline>
+                                Your browser does not support the video tag.
+                            </video>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Tibia Kantor -->
+                <article class="feature-item feature-item--tibia-kantor">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Partner</span>
+                        <h4 class="feature-item__title">
+                            Visit our partnered TC reseller <a href="https://tibiakantor.pl/en/tibia-coins-en/" target="_blank" rel="noopener">TibiaKantor</a> for best TC rates!
+                        </h4>
+                    </header>
+                    <a href="https://tibiakantor.pl/en/tibia-coins-en/" target="_blank" rel="noopener">
+                        <img src=/images/tibia_kantor.png alt="Tibia Kantor" style="max-width:100%; max-height:220px; display:block; margin:0 auto;">
+                    </a>
+                </article>
+
+                <!-- Bestiary Arena -->
+                <article class="feature-item feature-item--bestiary">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Partner</span>
+                        <h4 class="feature-item__title">
+                            Browser-based idle Tibia:
+                            <a href="https://bestiaryarena.com/?t=tibiapal" target="_blank" rel="noopener">Bestiary Arena</a>
+                        </h4>
+                    </header>
+                    <div class="feature-item__frame">
+                        <iframe src="https://bestiaryarena.com/iframe-obs-4?tag=tibiapal" width="277" height="313" scrolling="no" loading="lazy" frameborder="0" title="Bestiary Arena"></iframe>
+                    </div>
+                </article>
+
+                <!-- Stream offline (YouTube video) -->
+                <article id="kick-offline" class="feature-item feature-item--youtube">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Content</span>
+                        <h4 class="feature-item__title">
+                            Watch our latest <a href="https://www.youtube.com/kusnierr" target="_blank" rel="noopener">YouTube</a> video!
+                        </h4>
+                    </header>
+                    <div class="feature-item__frame feature-item__frame--16x9">
+                        <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLC0KAO2SnwlREgB3ScVsAK9OeAqwLXq8-" title="Latest Kusnierr YouTube video" loading="lazy" allowfullscreen></iframe> 
+                    </div>
+                </article>
+            </section>
+           <!-- <div id="ads-container" class="right-sidebar__ads">
+                
+                <br>
+            </div>!-->
+            <br>
+        </aside>
+        <aside id="left-footer-space"></aside>
+        <footer id="footer"><!--
+            <p id="footerParagraph">
+                Tibia and all products related to Tibia are copyrighted by <a href="https://www.cipsoft.com"
+                    target="_blank">CipSoft GmbH</a>. The official
+                website of Tibia is <a href="https://www.tibia.com" target="_blank">tibia.com</a>.<br><br>
+                Created by Kusnier.
+            </p><br><br>!-->
+        </footer>
+        <aside id="right-footer-space"></aside>
+        </main>
+            <script>
+                //showAdblockPopup(); bump
+            </script>
+</body>
+</html>
