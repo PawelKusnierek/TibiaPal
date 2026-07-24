@@ -46,8 +46,7 @@ calculator.addEventListener("mouseout", (event) => {
 calculator.addEventListener("mousedown", hideTooltip);
 calculator.addEventListener("scroll", hideTooltip, true);
 window.addEventListener("resize", hideTooltip);
-const state = { profiles: [], shapingGroups: {}, filtered: [], current: null, selected: {}, applied: {}, modified: {}, filter: "all", family: "all", dust: 4600, orbs: 1, activeSlot: null, modifyTarget: null, picker: null };
-const refineCosts = [125, 200, 275, 350, 425, 500, 575, 650, 725, 800];
+const state = { profiles: [], shapingGroups: {}, filtered: [], current: null, selected: {}, applied: {}, modified: {}, filter: "all", family: "all", dust: 4600, modifyTarget: null, picker: null };
 const BUILD_COOKIE = "wpBuild";
 
 function setCookie(name, value, days) {
@@ -284,39 +283,13 @@ function randomChoices(profile, rank, excluded) {
 function modificationMap() { return state.modified[state.current.ProficiencyId] ??= {}; }
 function modifiedCount() { return Object.keys(modificationMap()).length; }
 
-function makePerkCard(perk, rank, buttonText, onClick) {
-  const card = document.createElement("article");
-  card.className = "shape-card";
-  card.innerHTML = `<div class="shape-icon"><span></span><b>${rank}</b></div><p>${perkLabel(perk)}</p>${buttonText ? `<button>${buttonText}</button>` : ""}`;
-  const icon = card.querySelector(".shape-icon span");
-  applyPerkSprite(icon, perk);
-  if (onClick) card.querySelector("button").addEventListener("click", onClick);
-  return card;
-}
-
-function updateWallet() {
-  $("#dustBalance").textContent = state.dust.toLocaleString();
-  $("#orbBalance").textContent = state.orbs;
-}
-
-function openShape(levelIndex) {
-  state.activeSlot = levelIndex;
-  const modification = modificationMap()[levelIndex];
-  if (!modification) return;
-  $("#shapeCurrent").replaceChildren(makePerkCard(modification.perk, modification.rank));
-  $("#shapeHint").textContent = `Modified slot ${modifiedCount()} of 2 · proficiency level ${levelIndex + 1}`;
-  const nextCost = refineCosts[modification.rank];
-  $("#refineCost").innerHTML = nextCost == null ? "Maximum rank" : `${nextCost} <span class="shard">◆</span>`;
-  $("#refineButton").disabled = nextCost == null || state.dust < nextCost;
-  $("#maximiseButton").disabled = modification.rank === 10 || state.orbs < 1;
-  $("#reshapeButton").disabled = state.dust < 250;
-  updateWallet();
-  $("#shapeBackdrop").hidden = false;
-}
-
 function shapeSlot(levelIndex) {
   const modifications = modificationMap();
-  if (modifications[levelIndex]) { openShape(levelIndex); return; }
+  if (modifications[levelIndex]) {
+    if (state.dust < 250) { alert("You need 250 dust to reshape this slot."); return; }
+    openPerkPicker(levelIndex, 250, false);
+    return;
+  }
   const count = modifiedCount();
   if (count >= 2) { alert("This weapon already has two modified perk slots."); return; }
   const cost = count === 0 ? 250 : 1000;
@@ -567,8 +540,9 @@ function renderBoard() {
       const selected = choices[levelIndex] === perkIndex;
       const modification = modificationMap()[levelIndex];
       const modified = modification?.originalChoice === perkIndex;
+      const lockedOut = Boolean(modification) && !modified;
       const displayPerk = modified ? modification.perk : perk;
-      node.className = `perk-node ${selected ? "selected" : ""} ${modified ? "modified" : ""} ${state.modifyTarget === levelIndex && selected ? "modify-target" : ""}`;
+      node.className = `perk-node ${selected ? "selected" : ""} ${modified ? "modified" : ""} ${lockedOut ? "locked" : ""} ${state.modifyTarget === levelIndex && selected ? "modify-target" : ""}`;
       node.innerHTML = "<span></span>";
       const icon = node.firstElementChild;
       applyPerkSprite(icon, displayPerk);
@@ -582,6 +556,7 @@ function renderBoard() {
       node.dataset.tooltip = perkLabel(displayPerk, profile);
       if (modified) node.insertAdjacentHTML("beforeend", `<b class="rank-badge">${modification.rank}</b>`);
       node.addEventListener("click", () => {
+        if (lockedOut) return;
         console.groupCollapsed(`[Proficiency] ${profile.Name} · level ${levelIndex + 1} · option ${perkIndex + 1}`);
         console.table({
           weapon: profile.Name,
@@ -622,7 +597,7 @@ function renderBoard() {
   });
   $("#progressBar").style.width = "100%";
   const targetModification = state.modifyTarget == null ? null : modificationMap()[state.modifyTarget];
-  const targetIsModified = targetModification?.originalChoice === choices[state.modifyTarget];
+  const targetIsModified = targetModification != null && targetModification.originalChoice === choices[state.modifyTarget];
   $("#modifyButton").disabled = state.modifyTarget == null;
   $("#modifyButton").classList.toggle("ready", state.modifyTarget != null);
   $("#modifyButton").textContent = state.modifyTarget == null
@@ -633,6 +608,7 @@ function renderBoard() {
     : targetIsModified
       ? `Level ${state.modifyTarget + 1} custom perk selected · click Reshape to replace it.`
       : `Level ${state.modifyTarget + 1} selected · click Modify to reshape it.`;
+  $("#clearShapedPerkButton").hidden = !targetIsModified;
   renderBuildSummary();
   syncBuildUrl();
 }
@@ -874,24 +850,6 @@ $("#modifyButton").addEventListener("click", () => {
   }
 });
 
-calculator.querySelectorAll(".close-modal").forEach((button) => button.addEventListener("click", () => $("#shapeBackdrop").hidden = true));
-$("#refineButton").addEventListener("click", () => {
-  const modification = modificationMap()[state.activeSlot];
-  const cost = refineCosts[modification.rank];
-  if (cost == null || state.dust < cost) return;
-  state.dust -= cost; modification.rank++; modification.perk = valueAtRank(modification.perk, modification.rank);
-  renderBoard(); openShape(state.activeSlot);
-});
-$("#maximiseButton").addEventListener("click", () => {
-  const modification = modificationMap()[state.activeSlot];
-  if (state.orbs < 1 || modification.rank === 10) return;
-  state.orbs--; modification.rank = 10; modification.perk = valueAtRank(modification.perk, 10);
-  renderBoard(); openShape(state.activeSlot);
-});
-$("#reshapeButton").addEventListener("click", () => {
-  if (state.dust < 250) return;
-  openPerkPicker(state.activeSlot, 250, false);
-});
 $("#reshapeSelect").addEventListener("change", renderPickerPreview);
 $("#reshapeFilter").addEventListener("input", renderPerkOptions);
 function confirmReshapeSelection(index) {
@@ -907,9 +865,7 @@ function confirmReshapeSelection(index) {
     modificationMap()[picker.levelIndex].rank = 10;
     modificationMap()[picker.levelIndex].perk = maximumPerk;
   }
-  state.activeSlot = picker.levelIndex;
   $("#reshapeBackdrop").hidden = true;
-  $("#shapeBackdrop").hidden = true;
   renderBoard();
 }
 
@@ -917,11 +873,12 @@ $("#confirmReshapeButton").addEventListener("click", () => {
   confirmReshapeSelection(Number($("#reshapeSelect").value));
 });
 $("#keepButton").addEventListener("click", () => $("#reshapeBackdrop").hidden = true);
-$("#clearShapeButton").addEventListener("click", () => {
-  const slot = state.activeSlot;
-  if (!confirm("Clear this shaped perk? Its refinements will be lost.")) return;
+$("#clearShapedPerkButton").addEventListener("click", () => {
+  const slot = state.modifyTarget;
+  if (slot == null || !modificationMap()[slot]) return;
   state.selected[state.current.ProficiencyId][slot] = modificationMap()[slot].originalChoice;
-  delete modificationMap()[slot]; $("#shapeBackdrop").hidden = true; renderBoard();
+  delete modificationMap()[slot];
+  renderBoard();
 });
 
 try {

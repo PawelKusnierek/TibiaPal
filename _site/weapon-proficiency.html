@@ -29,10 +29,10 @@
 
     <!-- css files -->
     <link rel="stylesheet" href=/css/main.css>
-    <link rel="stylesheet" href="/proficiency-calculator/styles.css?v=20260724-7">
+    <link rel="stylesheet" href="/proficiency-calculator/styles.css?v=20260724-11">
 
     <!-- javascript files -->
-    <script type="module" src="/proficiency-calculator/app.js?v=20260724-7"></script>
+    <script type="module" src="/proficiency-calculator/app.js?v=20260724-11"></script>
     <script src=/scripts/onload.js></script>
 
     <!-- extra googleapi fonts -->
@@ -210,6 +210,7 @@
         </section>
         <div class="modify-row">
           <button class="modify" id="modifyButton">⚒ Modify</button>
+          <button class="modify ready" id="clearShapedPerkButton" hidden>✕ Clear Shaped Perk</button>
         </div>
         <p class="selection-hint" id="selectionHint">Choose a perk on the board to modify it.</p>
         <div class="filters segmented" id="filters">
@@ -243,23 +244,6 @@
     </header>
     <div class="summary-grid" id="buildSummary"></div>
   </section>
-  <div class="modal-backdrop" id="shapeBackdrop" hidden>
-    <section class="shape-window" role="dialog" aria-modal="true" aria-labelledby="shapeTitle">
-      <header class="titlebar" id="shapeTitle">Shape Weapon Perk</header>
-      <div class="shape-content">
-        <p class="shape-hint" id="shapeHint"></p>
-        <div class="shape-current" id="shapeCurrent"></div>
-        <div class="shape-actions">
-          <button id="refineButton">Refine <span id="refineCost"></span></button>
-          <button id="maximiseButton">Maximise <span class="orb">●</span></button>
-          <button id="reshapeButton">Reshape <span>250</span><span class="shard">◆</span></button>
-          <button id="clearShapeButton">Clear</button>
-        </div>
-        <div class="wallet"><span>Dust: <b id="dustBalance">0</b> <i class="shard">◆</i></span><span>Orbs: <b id="orbBalance">0</b> <i class="orb">●</i></span></div>
-      </div>
-      <footer><button class="close-modal">Close</button></footer>
-    </section>
-  </div>
   <div class="modal-backdrop" id="reshapeBackdrop" hidden>
     <section class="shape-window reshape-window" role="dialog" aria-modal="true" aria-labelledby="reshapeTitle">
       <header class="titlebar" id="reshapeTitle">🔮 Perk Shaping Options</header>
