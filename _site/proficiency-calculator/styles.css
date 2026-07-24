@@ -265,3 +265,12 @@ footer button:active, button.active { filter: brightness(1.25); }
   .picker-cost { font-size: 11px; }
 }
 }
+
+.wp-tooltip {
+  position: fixed; z-index: 1000; max-width: 240px; padding: 6px 9px;
+  border: 1px solid #315f91; border-radius: 5px; background: #071426; color: #e7f2ff;
+  font-family: Verdana, Arial, sans-serif; font-size: 11px; line-height: 1.4;
+  box-shadow: 0 4px 14px rgba(0,0,0,.5);
+  opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .08s ease;
+}
+.wp-tooltip.visible { opacity: 1; visibility: visible; }

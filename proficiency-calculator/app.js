@@ -1,5 +1,51 @@
 const calculator = document.querySelector("#weaponProficiencyCalculator") ?? document;
 const $ = (selector) => calculator.querySelector(selector);
+
+const TOOLTIP_SHOW_DELAY = 40;
+const tooltipEl = document.createElement("div");
+tooltipEl.className = "wp-tooltip";
+tooltipEl.setAttribute("role", "tooltip");
+document.body.append(tooltipEl);
+let tooltipTimer = null;
+
+function positionTooltip(target) {
+  const rect = target.getBoundingClientRect();
+  const tipRect = tooltipEl.getBoundingClientRect();
+  const left = Math.max(6, Math.min(rect.left + rect.width / 2 - tipRect.width / 2, window.innerWidth - tipRect.width - 6));
+  const above = rect.top - tipRect.height - 8;
+  tooltipEl.style.left = `${left}px`;
+  tooltipEl.style.top = `${above < 6 ? rect.bottom + 8 : above}px`;
+}
+
+function showTooltip(target) {
+  const text = target.dataset.tooltip;
+  if (!text) return;
+  tooltipEl.textContent = text;
+  tooltipEl.classList.add("visible");
+  positionTooltip(target);
+}
+
+function hideTooltip() {
+  clearTimeout(tooltipTimer);
+  tooltipTimer = null;
+  tooltipEl.classList.remove("visible");
+}
+
+calculator.addEventListener("mouseover", (event) => {
+  const target = event.target.closest?.("[data-tooltip]");
+  if (!target) return;
+  clearTimeout(tooltipTimer);
+  tooltipTimer = setTimeout(() => showTooltip(target), TOOLTIP_SHOW_DELAY);
+});
+calculator.addEventListener("mouseout", (event) => {
+  const target = event.target.closest?.("[data-tooltip]");
+  if (!target) return;
+  if (event.relatedTarget && target.contains(event.relatedTarget)) return;
+  hideTooltip();
+});
+calculator.addEventListener("mousedown", hideTooltip);
+calculator.addEventListener("scroll", hideTooltip, true);
+window.addEventListener("resize", hideTooltip);
 const state = { profiles: [], shapingGroups: {}, filtered: [], current: null, selected: {}, applied: {}, modified: {}, filter: "all", family: "all", dust: 4600, orbs: 1, activeSlot: null, modifyTarget: null, picker: null };
 const refineCosts = [125, 200, 275, 350, 425, 500, 575, 650, 725, 800];
 
@@ -451,6 +497,7 @@ function weaponDisplayPriority(name) {
 }
 
 function renderGrid() {
+  hideTooltip();
   const grid = $("#weaponGrid");
   grid.replaceChildren();
   for (const profile of state.filtered) {
@@ -481,6 +528,7 @@ function selectProfile(profile) {
 }
 
 function renderBoard() {
+  hideTooltip();
   const profile = state.current;
   const choices = state.selected[profile.ProficiencyId];
   const tabs = $("#levelTabs");
@@ -519,7 +567,7 @@ function renderBoard() {
         augmentIcon.alt = "";
         node.append(augmentIcon);
       }
-      node.title = perkLabel(displayPerk, profile);
+      node.dataset.tooltip = perkLabel(displayPerk, profile);
       if (modified) node.insertAdjacentHTML("beforeend", `<b class="rank-badge">${modification.rank}</b>`);
       node.addEventListener("click", () => {
         console.groupCollapsed(`[Proficiency] ${profile.Name} · level ${levelIndex + 1} · option ${perkIndex + 1}`);
