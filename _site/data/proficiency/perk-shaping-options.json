@@ -1,0 +1,1677 @@
+{
+  "source": "https://www.tibiawiki.com.br/wiki/Perk_Shaping_Options",
+  "exportedAt": "2026-07-23T21:25:04.691Z",
+  "groupCount": 6,
+  "perkCount": 184,
+  "imageCount": 65,
+  "groups": {
+    "Todas as Vocações": [
+      {
+        "group": "Todas as Vocações",
+        "name": "Alpha Strike Extra Damage",
+        "rank0": "+2,00% de dano contra alvos com mais de 95% dos pontos de vida",
+        "rank10": "+10,00% de dano contra alvos com mais de 95% dos pontos de vida",
+        "icon": "images/proficiency-type-alpha-dmg.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Alpha_Strike_Extra_Damage"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Armor Penetration",
+        "rank0": "+4% de penetração de armadura",
+        "rank10": "+10% de penetração de armadura",
+        "icon": "images/proficiency-type-armor-penetration.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Armor_Penetration"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Auto-Attack Critical Extra Damage",
+        "rank0": "+3,00% de dano crítico adicional para ataques automáticos",
+        "rank10": "+20,00% de dano crítico adicional para ataques automáticos",
+        "icon": "images/proficiency-type-auto-atk-critical-dmg.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Auto-Attack_Critical_Extra_Damage"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Auto-Attack Critical Hit Chance",
+        "rank0": "+0,50% de chance de acerto crítico para ataques automáticos",
+        "rank10": "+2,50% de chance de acerto crítico para ataques automáticos",
+        "icon": "images/proficiency-type-auto-atk-critical-chance.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Auto-Attack_Critical_Hit_Chance"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Amphibic",
+        "rank0": "+0,50% de dano contra criaturas da classe Anfíbios",
+        "rank10": "+2,50% de dano contra criaturas da classe Anfíbios",
+        "icon": "images/proficiency-type-bestiary-dmg-amphibic.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Amphibic"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Aquatic",
+        "rank0": "+0,50% de dano contra criaturas da classe Aquáticos",
+        "rank10": "+2,50% de dano contra criaturas da classe Aquáticos",
+        "icon": "images/proficiency-type-bestiary-dmg-aquatic.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Aquatic"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Bird",
+        "rank0": "+0,50% de dano contra criaturas da classe Aves",
+        "rank10": "+2,50% de dano contra criaturas da classe Aves",
+        "icon": "images/proficiency-type-bestiary-dmg-bird.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Bird"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Construct",
+        "rank0": "+0,50% de dano contra criaturas da classe Constructos",
+        "rank10": "+2,50% de dano contra criaturas da classe Constructos",
+        "icon": "images/proficiency-type-bestiary-dmg-construct.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Construct"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Demon",
+        "rank0": "+0,50% de dano contra criaturas da classe Demônios",
+        "rank10": "+2,50% de dano contra criaturas da classe Demônios",
+        "icon": "images/proficiency-type-bestiary-dmg-demon.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Demon"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Dragon",
+        "rank0": "+0,50% de dano contra criaturas da classe Dragões",
+        "rank10": "+2,50% de dano contra criaturas da classe Dragões",
+        "icon": "images/proficiency-type-bestiary-dmg-dragon.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Dragon"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Elemental",
+        "rank0": "+0,50% de dano contra criaturas da classe Elementais",
+        "rank10": "+2,50% de dano contra criaturas da classe Elementais",
+        "icon": "images/proficiency-type-bestiary-dmg-elemental.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Elemental"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Extra Dimensional",
+        "rank0": "+0,50% de dano contra criaturas da classe Extra Dimensionais",
+        "rank10": "+2,50% de dano contra criaturas da classe Extra Dimensionais",
+        "icon": "images/proficiency-type-bestiary-dmg-extra-dimensional.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Extra_Dimensional"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Fey",
+        "rank0": "+0,50% de dano contra criaturas da classe Fadas",
+        "rank10": "+2,50% de dano contra criaturas da classe Fadas",
+        "icon": "images/proficiency-type-bestiary-dmg-fey.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Fey"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Giant",
+        "rank0": "+0,50% de dano contra criaturas da classe Gigantes",
+        "rank10": "+2,50% de dano contra criaturas da classe Gigantes",
+        "icon": "images/proficiency-type-bestiary-dmg-giant.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Giant"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Human",
+        "rank0": "+0,50% de dano contra criaturas da classe Humanos",
+        "rank10": "+2,50% de dano contra criaturas da classe Humanos",
+        "icon": "images/proficiency-type-bestiary-dmg-human.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Human"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Humanoid",
+        "rank0": "+0,50% de dano contra criaturas da classe Humanóides",
+        "rank10": "+2,50% de dano contra criaturas da classe Humanóides",
+        "icon": "images/proficiency-type-bestiary-dmg-humanoid.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Humanoid"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Inkborn",
+        "rank0": "+0,50% de dano contra criaturas da classe Inkborn",
+        "rank10": "+2,50% de dano contra criaturas da classe Inkborn",
+        "icon": "images/proficiency-type-bestiary-dmg-inkborn.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Inkborn"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Lycanthrope",
+        "rank0": "+0,50% de dano contra criaturas da classe Licantropos",
+        "rank10": "+2,50% de dano contra criaturas da classe Licantropos",
+        "icon": "images/proficiency-type-bestiary-dmg-lycanthrope.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Lycanthrope"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Magical",
+        "rank0": "+0,50% de dano contra criaturas da classe Criaturas Mágicas",
+        "rank10": "+2,50% de dano contra criaturas da classe Criaturas Mágicas",
+        "icon": "images/proficiency-type-bestiary-dmg-magical.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Magical"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Mammal",
+        "rank0": "+0,50% de dano contra criaturas da classe Mamíferos",
+        "rank10": "+2,50% de dano contra criaturas da classe Mamíferos",
+        "icon": "images/proficiency-type-bestiary-dmg-mammal.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Mammal"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Plant",
+        "rank0": "+0,50% de dano contra criaturas da classe Plantas",
+        "rank10": "+2,50% de dano contra criaturas da classe Plantas",
+        "icon": "images/proficiency-type-bestiary-dmg-plant.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Plant"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Reptile",
+        "rank0": "+0,50% de dano contra criaturas da classe Répteis",
+        "rank10": "+2,50% de dano contra criaturas da classe Répteis",
+        "icon": "images/proficiency-type-bestiary-dmg-reptile.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Reptile"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Slime",
+        "rank0": "+0,50% de dano contra criaturas da classe Slimes",
+        "rank10": "+2,50% de dano contra criaturas da classe Slimes",
+        "icon": "images/proficiency-type-bestiary-dmg-slime.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Slime"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Undead",
+        "rank0": "+0,50% de dano contra criaturas da classe Mortos-Vivos",
+        "rank10": "+2,50% de dano contra criaturas da classe Mortos-Vivos",
+        "icon": "images/proficiency-type-bestiary-dmg-undead.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Undead"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Bestiary Damage Vermin",
+        "rank0": "+0,50% de dano contra criaturas da classe Vermes",
+        "rank10": "+2,50% de dano contra criaturas da classe Vermes",
+        "icon": "images/proficiency-type-bestiary-dmg-vermin.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Bestiary_Damage_Vermin"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Highest Combat Skill Percentage Auto-Attack Damage",
+        "rank0": "+2,00% da sua maior habilidade de combate como dano adicional para ataques automáticos",
+        "rank10": "+10,00% da sua maior habilidade de combate como dano adicional para ataques automáticos",
+        "icon": "images/proficiency-type-perc-auto-atk-best-combat.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Highest_Combat_Skill_Percentage_Auto-Attack_Damage"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Highest Combat Skill Percentage Spell Damage",
+        "rank0": "+1,00% da sua maior habilidade de combate como dano adicional para suas magias",
+        "rank10": "+8,00% da sua maior habilidade de combate como dano adicional para suas magias",
+        "icon": "images/proficiency-type-perc-spell-dmg-best-combat.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Highest_Combat_Skill_Percentage_Spell_Damage"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Highest Combat Skill Percentage Spell Healing",
+        "rank0": "+2,00% da sua maior habilidade de combate como cura adicional para suas magias, exceto magias de cura ao longo do tempo",
+        "rank10": "+10,00% da sua maior habilidade de combate como cura adicional para suas magias, exceto magias de cura ao longo do tempo",
+        "icon": "images/proficiency-type-perc-spell-heal-best-combat.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Highest_Combat_Skill_Percentage_Spell_Healing"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Life Gain on Hit",
+        "rank0": "+2 pontos de vida ao acertar um ataque",
+        "rank10": "+12 pontos de vida ao acertar um ataque",
+        "icon": "images/proficiency-type-life-on-hit.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Life_Gain_on_Hit"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Life Gain on Kill",
+        "rank0": "+10 pontos de vida ao derrotar uma criatura",
+        "rank10": "+50 pontos de vida ao derrotar uma criatura",
+        "icon": "images/proficiency-type-life-on-kill.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Life_Gain_on_Kill"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Mana Gain on Kill",
+        "rank0": "+4 pontos de mana ao derrotar uma criatura",
+        "rank10": "+24 pontos de mana ao derrotar uma criatura",
+        "icon": "images/proficiency-type-mana-on-kill.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Mana_Gain_on_Kill"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Omega Strike Extra Damage",
+        "rank0": "+0,50% de dano contra alvos com menos de 30% dos pontos de vida",
+        "rank10": "+2,50% de dano contra alvos com menos de 30% dos pontos de vida",
+        "icon": "images/proficiency-type-omega-dmg.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Omega_Strike_Extra_Damage"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Rune Critical Extra Damage",
+        "rank0": "+2,00% de dano crítico adicional para runas ofensivas",
+        "rank10": "+15,00% de dano crítico adicional para runas ofensivas",
+        "icon": "images/proficiency-type-rune-critical-dmg.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Rune_Critical_Extra_Damage"
+      },
+      {
+        "group": "Todas as Vocações",
+        "name": "Rune Critical Hit Chance",
+        "rank0": "+0,50% de chance de acerto crítico para runas ofensivas",
+        "rank10": "+1,50% de chance de acerto crítico para runas ofensivas",
+        "icon": "images/proficiency-type-rune-critical-chance.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Rune_Critical_Hit_Chance"
+      }
+    ],
+    "Knight": [
+      {
+        "group": "Knight",
+        "name": "Spell Augment Berserk Base Damage",
+        "rank0": "+1% de dano base para Berserk",
+        "rank10": "+3% de dano base para Berserk",
+        "icon": "images/proficiency-spell-berserk.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Berserk_Base_Damage"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Berserk Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Berserk",
+        "rank10": "+20% de dano crítico adicional para Berserk",
+        "icon": "images/proficiency-spell-berserk.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Berserk_Critical_Extra_Damage"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Berserk Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Berserk",
+        "rank10": "+3% de chance de acerto crítico para Berserk",
+        "icon": "images/proficiency-spell-berserk.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Berserk_Critical_Hit_Chance"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Berserk Life Leech",
+        "rank0": "+1% de life leech para Berserk",
+        "rank10": "+12% de life leech para Berserk",
+        "icon": "images/proficiency-spell-berserk.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Berserk_Life_Leech"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Berserk Mana Leech",
+        "rank0": "+1% de mana leech para Berserk",
+        "rank10": "+6% de mana leech para Berserk",
+        "icon": "images/proficiency-spell-berserk.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Berserk_Mana_Leech"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Executioner's Throw Base Damage",
+        "rank0": "+1% de dano base para Executioner's Throw",
+        "rank10": "+3% de dano base para Executioner's Throw",
+        "icon": "images/proficiency-spell-executioners-throw.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Executioner%27s_Throw_Base_Damage"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Executioner's Throw Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Executioner's Throw",
+        "rank10": "+20% de dano crítico adicional para Executioner's Throw",
+        "icon": "images/proficiency-spell-executioners-throw.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Executioner%27s_Throw_Critical_Extra_Damage"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Executioner's Throw Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Executioner's Throw",
+        "rank10": "+3% de chance de acerto crítico para Executioner's Throw",
+        "icon": "images/proficiency-spell-executioners-throw.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Executioner%27s_Throw_Critical_Hit_Chance"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Executioner's Throw Life Leech",
+        "rank0": "+1% de life leech para Executioner's Throw",
+        "rank10": "+12% de life leech para Executioner's Throw",
+        "icon": "images/proficiency-spell-executioners-throw.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Executioner%27s_Throw_Life_Leech"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Executioner's Throw Mana Leech",
+        "rank0": "+1% de mana leech para Executioner's Throw",
+        "rank10": "+6% de mana leech para Executioner's Throw",
+        "icon": "images/proficiency-spell-executioners-throw.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Executioner%27s_Throw_Mana_Leech"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Fierce Berserk Base Damage",
+        "rank0": "+1% de dano base para Fierce Berserk",
+        "rank10": "+3% de dano base para Fierce Berserk",
+        "icon": "images/proficiency-spell-fierce-berserk.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Fierce_Berserk_Base_Damage"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Fierce Berserk Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Fierce Berserk",
+        "rank10": "+20% de dano crítico adicional para Fierce Berserk",
+        "icon": "images/proficiency-spell-fierce-berserk.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Fierce_Berserk_Critical_Extra_Damage"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Fierce Berserk Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Fierce Berserk",
+        "rank10": "+3% de chance de acerto crítico para Fierce Berserk",
+        "icon": "images/proficiency-spell-fierce-berserk.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Fierce_Berserk_Critical_Hit_Chance"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Fierce Berserk Life Leech",
+        "rank0": "+1% de life leech para Fierce Berserk",
+        "rank10": "+12% de life leech para Fierce Berserk",
+        "icon": "images/proficiency-spell-fierce-berserk.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Fierce_Berserk_Life_Leech"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Fierce Berserk Mana Leech",
+        "rank0": "+1% de mana leech para Fierce Berserk",
+        "rank10": "+6% de mana leech para Fierce Berserk",
+        "icon": "images/proficiency-spell-fierce-berserk.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Fierce_Berserk_Mana_Leech"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Front Sweep Base Damage",
+        "rank0": "+1% de dano base para Front Sweep",
+        "rank10": "+3% de dano base para Front Sweep",
+        "icon": "images/proficiency-spell-front-sweep.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Front_Sweep_Base_Damage"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Front Sweep Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Front Sweep",
+        "rank10": "+20% de dano crítico adicional para Front Sweep",
+        "icon": "images/proficiency-spell-front-sweep.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Front_Sweep_Critical_Extra_Damage"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Front Sweep Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Front Sweep",
+        "rank10": "+3% de chance de acerto crítico para Front Sweep",
+        "icon": "images/proficiency-spell-front-sweep.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Front_Sweep_Critical_Hit_Chance"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Front Sweep Life Leech",
+        "rank0": "+1% de life leech para Front Sweep",
+        "rank10": "+12% de life leech para Front Sweep",
+        "icon": "images/proficiency-spell-front-sweep.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Front_Sweep_Life_Leech"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Front Sweep Mana Leech",
+        "rank0": "+1% de mana leech para Front Sweep",
+        "rank10": "+6% de mana leech para Front Sweep",
+        "icon": "images/proficiency-spell-front-sweep.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Front_Sweep_Mana_Leech"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Groundshaker Base Damage",
+        "rank0": "+1% de dano base para Groundshaker",
+        "rank10": "+3% de dano base para Groundshaker",
+        "icon": "images/proficiency-spell-groundshaker.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Groundshaker_Base_Damage"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Groundshaker Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Groundshaker",
+        "rank10": "+20% de dano crítico adicional para Groundshaker",
+        "icon": "images/proficiency-spell-groundshaker.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Groundshaker_Critical_Extra_Damage"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Groundshaker Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Groundshaker",
+        "rank10": "+3% de chance de acerto crítico para Groundshaker",
+        "icon": "images/proficiency-spell-groundshaker.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Groundshaker_Critical_Hit_Chance"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Groundshaker Life Leech",
+        "rank0": "+1% de life leech para Groundshaker",
+        "rank10": "+12% de life leech para Groundshaker",
+        "icon": "images/proficiency-spell-groundshaker.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Groundshaker_Life_Leech"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Groundshaker Mana Leech",
+        "rank0": "+1% de mana leech para Groundshaker",
+        "rank10": "+6% de mana leech para Groundshaker",
+        "icon": "images/proficiency-spell-groundshaker.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Groundshaker_Mana_Leech"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Shield Slam Base Damage",
+        "rank0": "+1% de dano base para Shield Slam",
+        "rank10": "+3% de dano base para Shield Slam",
+        "icon": "images/proficiency-spell-shield-slam.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Shield_Slam_Base_Damage"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Shield Slam Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Shield Slam",
+        "rank10": "+20% de dano crítico adicional para Shield Slam",
+        "icon": "images/proficiency-spell-shield-slam.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Shield_Slam_Critical_Extra_Damage"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Shield Slam Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Shield Slam",
+        "rank10": "+3% de chance de acerto crítico para Shield Slam",
+        "icon": "images/proficiency-spell-shield-slam.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Shield_Slam_Critical_Hit_Chance"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Shield Slam Life Leech",
+        "rank0": "+1% de life leech para Shield Slam",
+        "rank10": "+12% de life leech para Shield Slam",
+        "icon": "images/proficiency-spell-shield-slam.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Shield_Slam_Life_Leech"
+      },
+      {
+        "group": "Knight",
+        "name": "Spell Augment Shield Slam Mana Leech",
+        "rank0": "+1% de mana leech para Shield Slam",
+        "rank10": "+6% de mana leech para Shield Slam",
+        "icon": "images/proficiency-spell-shield-slam.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Shield_Slam_Mana_Leech"
+      }
+    ],
+    "Paladin": [
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Barrage Base Damage",
+        "rank0": "+1% de dano base para Divine Barrage",
+        "rank10": "+3% de dano base para Divine Barrage",
+        "icon": "images/proficiency-spell-divine-barrage.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Barrage_Base_Damage"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Barrage Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Divine Barrage",
+        "rank10": "+20% de dano crítico adicional para Divine Barrage",
+        "icon": "images/proficiency-spell-divine-barrage.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Barrage_Critical_Extra_Damage"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Barrage Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Divine Barrage",
+        "rank10": "+3% de chance de acerto crítico para Divine Barrage",
+        "icon": "images/proficiency-spell-divine-barrage.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Barrage_Critical_Hit_Chance"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Barrage Life Leech",
+        "rank0": "+1% de life leech para Divine Barrage",
+        "rank10": "+12% de life leech para Divine Barrage",
+        "icon": "images/proficiency-spell-divine-barrage.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Barrage_Life_Leech"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Barrage Mana Leech",
+        "rank0": "+1% de mana leech para Divine Barrage",
+        "rank10": "+6% de mana leech para Divine Barrage",
+        "icon": "images/proficiency-spell-divine-barrage.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Barrage_Mana_Leech"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Caldera Base Damage",
+        "rank0": "+1% de dano base para Divine Caldera",
+        "rank10": "+3% de dano base para Divine Caldera",
+        "icon": "images/proficiency-spell-divine-caldera.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Caldera_Base_Damage"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Caldera Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Divine Caldera",
+        "rank10": "+20% de dano crítico adicional para Divine Caldera",
+        "icon": "images/proficiency-spell-divine-caldera.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Caldera_Critical_Extra_Damage"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Caldera Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Divine Caldera",
+        "rank10": "+3% de chance de acerto crítico para Divine Caldera",
+        "icon": "images/proficiency-spell-divine-caldera.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Caldera_Critical_Hit_Chance"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Caldera Life Leech",
+        "rank0": "+1% de life leech para Divine Caldera",
+        "rank10": "+12% de life leech para Divine Caldera",
+        "icon": "images/proficiency-spell-divine-caldera.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Caldera_Life_Leech"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Caldera Mana Leech",
+        "rank0": "+1% de mana leech para Divine Caldera",
+        "rank10": "+6% de mana leech para Divine Caldera",
+        "icon": "images/proficiency-spell-divine-caldera.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Caldera_Mana_Leech"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Grenade Base Damage",
+        "rank0": "+1% de dano base para Divine Grenade",
+        "rank10": "+3% de dano base para Divine Grenade",
+        "icon": "images/proficiency-spell-divine-grenade.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Grenade_Base_Damage"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Grenade Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Divine Grenade",
+        "rank10": "+20% de dano crítico adicional para Divine Grenade",
+        "icon": "images/proficiency-spell-divine-grenade.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Grenade_Critical_Extra_Damage"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Grenade Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Divine Grenade",
+        "rank10": "+3% de chance de acerto crítico para Divine Grenade",
+        "icon": "images/proficiency-spell-divine-grenade.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Grenade_Critical_Hit_Chance"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Grenade Life Leech",
+        "rank0": "+1% de life leech para Divine Grenade",
+        "rank10": "+12% de life leech para Divine Grenade",
+        "icon": "images/proficiency-spell-divine-grenade.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Grenade_Life_Leech"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Grenade Mana Leech",
+        "rank0": "+1% de mana leech para Divine Grenade",
+        "rank10": "+6% de mana leech para Divine Grenade",
+        "icon": "images/proficiency-spell-divine-grenade.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Grenade_Mana_Leech"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Missile Base Damage",
+        "rank0": "+1% de dano base para Divine Missile",
+        "rank10": "+3% de dano base para Divine Missile",
+        "icon": "images/proficiency-spell-divine-missile.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Missile_Base_Damage"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Missile Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Divine Missile",
+        "rank10": "+20% de dano crítico adicional para Divine Missile",
+        "icon": "images/proficiency-spell-divine-missile.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Missile_Critical_Extra_Damage"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Missile Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Divine Missile",
+        "rank10": "+3% de chance de acerto crítico para Divine Missile",
+        "icon": "images/proficiency-spell-divine-missile.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Missile_Critical_Hit_Chance"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Missile Life Leech",
+        "rank0": "+1% de life leech para Divine Missile",
+        "rank10": "+12% de life leech para Divine Missile",
+        "icon": "images/proficiency-spell-divine-missile.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Missile_Life_Leech"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Divine Missile Mana Leech",
+        "rank0": "+1% de mana leech para Divine Missile",
+        "rank10": "+6% de mana leech para Divine Missile",
+        "icon": "images/proficiency-spell-divine-missile.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Divine_Missile_Mana_Leech"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Ethereal Barrage Base Damage",
+        "rank0": "+1% de dano base para Ethereal Barrage",
+        "rank10": "+3% de dano base para Ethereal Barrage",
+        "icon": "images/proficiency-spell-ethereal-barrage.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Ethereal_Barrage_Base_Damage"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Ethereal Barrage Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Ethereal Barrage",
+        "rank10": "+20% de dano crítico adicional para Ethereal Barrage",
+        "icon": "images/proficiency-spell-ethereal-barrage.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Ethereal_Barrage_Critical_Extra_Damage"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Ethereal Barrage Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Ethereal Barrage",
+        "rank10": "+3% de chance de acerto crítico para Ethereal Barrage",
+        "icon": "images/proficiency-spell-ethereal-barrage.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Ethereal_Barrage_Critical_Hit_Chance"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Ethereal Barrage Life Leech",
+        "rank0": "+1% de life leech para Ethereal Barrage",
+        "rank10": "+12% de life leech para Ethereal Barrage",
+        "icon": "images/proficiency-spell-ethereal-barrage.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Ethereal_Barrage_Life_Leech"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Ethereal Barrage Mana Leech",
+        "rank0": "+1% de mana leech para Ethereal Barrage",
+        "rank10": "+6% de mana leech para Ethereal Barrage",
+        "icon": "images/proficiency-spell-ethereal-barrage.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Ethereal_Barrage_Mana_Leech"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Strong Ethereal Spear Base Damage",
+        "rank0": "+1% de dano base para Strong Ethereal Spear",
+        "rank10": "+3% de dano base para Strong Ethereal Spear",
+        "icon": "images/proficiency-spell-strong-ethereal-spear.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Strong_Ethereal_Spear_Base_Damage"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Strong Ethereal Spear Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Strong Ethereal Spear",
+        "rank10": "+20% de dano crítico adicional para Strong Ethereal Spear",
+        "icon": "images/proficiency-spell-strong-ethereal-spear.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Strong_Ethereal_Spear_Critical_Extra_Damage"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Strong Ethereal Spear Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Strong Ethereal Spear",
+        "rank10": "+3% de chance de acerto crítico para Strong Ethereal Spear",
+        "icon": "images/proficiency-spell-strong-ethereal-spear.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Strong_Ethereal_Spear_Critical_Hit_Chance"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Strong Ethereal Spear Life Leech",
+        "rank0": "+1% de life leech para Strong Ethereal Spear",
+        "rank10": "+12% de life leech para Strong Ethereal Spear",
+        "icon": "images/proficiency-spell-strong-ethereal-spear.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Strong_Ethereal_Spear_Life_Leech"
+      },
+      {
+        "group": "Paladin",
+        "name": "Spell Augment Strong Ethereal Spear Mana Leech",
+        "rank0": "+1% de mana leech para Strong Ethereal Spear",
+        "rank10": "+6% de mana leech para Strong Ethereal Spear",
+        "icon": "images/proficiency-spell-strong-ethereal-spear.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Strong_Ethereal_Spear_Mana_Leech"
+      }
+    ],
+    "Monk": [
+      {
+        "group": "Monk",
+        "name": "Spell Augment Chained Penance Base Damage",
+        "rank0": "+1% de dano base para Chained Penance",
+        "rank10": "+3% de dano base para Chained Penance",
+        "icon": "images/proficiency-spell-chained-penance.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Chained_Penance_Base_Damage"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Chained Penance Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Chained Penance",
+        "rank10": "+20% de dano crítico adicional para Chained Penance",
+        "icon": "images/proficiency-spell-chained-penance.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Chained_Penance_Critical_Extra_Damage"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Chained Penance Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Chained Penance",
+        "rank10": "+3% de chance de acerto crítico para Chained Penance",
+        "icon": "images/proficiency-spell-chained-penance.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Chained_Penance_Critical_Hit_Chance"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Chained Penance Life Leech",
+        "rank0": "+1% de life leech para Chained Penance",
+        "rank10": "+12% de life leech para Chained Penance",
+        "icon": "images/proficiency-spell-chained-penance.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Chained_Penance_Life_Leech"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Chained Penance Mana Leech",
+        "rank0": "+1% de mana leech para Chained Penance",
+        "rank10": "+6% de mana leech para Chained Penance",
+        "icon": "images/proficiency-spell-chained-penance.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Chained_Penance_Mana_Leech"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Flurry of Blows Base Damage",
+        "rank0": "+1% de dano base para Flurry of Blows",
+        "rank10": "+3% de dano base para Flurry of Blows",
+        "icon": "images/proficiency-spell-flurry-of-blows.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Flurry_of_Blows_Base_Damage"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Flurry of Blows Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Flurry of Blows",
+        "rank10": "+20% de dano crítico adicional para Flurry of Blows",
+        "icon": "images/proficiency-spell-flurry-of-blows.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Flurry_of_Blows_Critical_Extra_Damage"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Flurry of Blows Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Flurry of Blows",
+        "rank10": "+3% de chance de acerto crítico para Flurry of Blows",
+        "icon": "images/proficiency-spell-flurry-of-blows.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Flurry_of_Blows_Critical_Hit_Chance"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Flurry of Blows Life Leech",
+        "rank0": "+1% de life leech para Flurry of Blows",
+        "rank10": "+12% de life leech para Flurry of Blows",
+        "icon": "images/proficiency-spell-flurry-of-blows.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Flurry_of_Blows_Life_Leech"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Flurry of Blows Mana Leech",
+        "rank0": "+1% de mana leech para Flurry of Blows",
+        "rank10": "+6% de mana leech para Flurry of Blows",
+        "icon": "images/proficiency-spell-flurry-of-blows.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Flurry_of_Blows_Mana_Leech"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Greater Flurry of Blows Base Damage",
+        "rank0": "+1% de dano base para Greater Flurry of Blows",
+        "rank10": "+5% de dano base para Greater Flurry of Blows",
+        "icon": "images/proficiency-spell-greater-flurry-of-blows.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Greater_Flurry_of_Blows_Base_Damage"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Greater Flurry of Blows Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Greater Flurry of Blows",
+        "rank10": "+20% de dano crítico adicional para Greater Flurry of Blows",
+        "icon": "images/proficiency-spell-greater-flurry-of-blows.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Greater_Flurry_of_Blows_Critical_Extra_Damage"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Greater Flurry of Blows Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Greater Flurry of Blows",
+        "rank10": "+3% de chance de acerto crítico para Greater Flurry of Blows",
+        "icon": "images/proficiency-spell-greater-flurry-of-blows.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Greater_Flurry_of_Blows_Critical_Hit_Chance"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Greater Flurry of Blows Life Leech",
+        "rank0": "+1% de life leech para Greater Flurry of Blows",
+        "rank10": "+12% de life leech para Greater Flurry of Blows",
+        "icon": "images/proficiency-spell-greater-flurry-of-blows.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Greater_Flurry_of_Blows_Life_Leech"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Greater Flurry of Blows Mana Leech",
+        "rank0": "+1% de mana leech para Greater Flurry of Blows",
+        "rank10": "+6% de mana leech para Greater Flurry of Blows",
+        "icon": "images/proficiency-spell-greater-flurry-of-blows.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Greater_Flurry_of_Blows_Mana_Leech"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Mystic Repulse Base Damage",
+        "rank0": "+1% de dano base para Mystic Repulse",
+        "rank10": "+3% de dano base para Mystic Repulse",
+        "icon": "images/proficiency-spell-mystic-repulse.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Mystic_Repulse_Base_Damage"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Mystic Repulse Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Mystic Repulse",
+        "rank10": "+20% de dano crítico adicional para Mystic Repulse",
+        "icon": "images/proficiency-spell-mystic-repulse.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Mystic_Repulse_Critical_Extra_Damage"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Mystic Repulse Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Mystic Repulse",
+        "rank10": "+3% de chance de acerto crítico para Mystic Repulse",
+        "icon": "images/proficiency-spell-mystic-repulse.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Mystic_Repulse_Critical_Hit_Chance"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Mystic Repulse Life Leech",
+        "rank0": "+1% de life leech para Mystic Repulse",
+        "rank10": "+12% de life leech para Mystic Repulse",
+        "icon": "images/proficiency-spell-mystic-repulse.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Mystic_Repulse_Life_Leech"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Mystic Repulse Mana Leech",
+        "rank0": "+1% de mana leech para Mystic Repulse",
+        "rank10": "+6% de mana leech para Mystic Repulse",
+        "icon": "images/proficiency-spell-mystic-repulse.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Mystic_Repulse_Mana_Leech"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Sweeping Takedown Base Damage",
+        "rank0": "+1% de dano base para Sweeping Takedown",
+        "rank10": "+3% de dano base para Sweeping Takedown",
+        "icon": "images/proficiency-spell-sweeping-takedown.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Sweeping_Takedown_Base_Damage"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Sweeping Takedown Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Sweeping Takedown",
+        "rank10": "+20% de dano crítico adicional para Sweeping Takedown",
+        "icon": "images/proficiency-spell-sweeping-takedown.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Sweeping_Takedown_Critical_Extra_Damage"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Sweeping Takedown Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Sweeping Takedown",
+        "rank10": "+3% de chance de acerto crítico para Sweeping Takedown",
+        "icon": "images/proficiency-spell-sweeping-takedown.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Sweeping_Takedown_Critical_Hit_Chance"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Sweeping Takedown Life Leech",
+        "rank0": "+1% de life leech para Sweeping Takedown",
+        "rank10": "+12% de life leech para Sweeping Takedown",
+        "icon": "images/proficiency-spell-sweeping-takedown.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Sweeping_Takedown_Life_Leech"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Sweeping Takedown Mana Leech",
+        "rank0": "+1% de mana leech para Sweeping Takedown",
+        "rank10": "+6% de mana leech para Sweeping Takedown",
+        "icon": "images/proficiency-spell-sweeping-takedown.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Sweeping_Takedown_Mana_Leech"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Thousand Fist Blows Base Damage",
+        "rank0": "+1% de dano base para Thousand Fist Blows",
+        "rank10": "+3% de dano base para Thousand Fist Blows",
+        "icon": "images/proficiency-spell-thousand-fist-blows.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Thousand_Fist_Blows_Base_Damage"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Thousand Fist Blows Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Thousand Fist Blows",
+        "rank10": "+20% de dano crítico adicional para Thousand Fist Blows",
+        "icon": "images/proficiency-spell-thousand-fist-blows.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Thousand_Fist_Blows_Critical_Extra_Damage"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Thousand Fist Blows Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Thousand Fist Blows",
+        "rank10": "+3% de chance de acerto crítico para Thousand Fist Blows",
+        "icon": "images/proficiency-spell-thousand-fist-blows.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Thousand_Fist_Blows_Critical_Hit_Chance"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Thousand Fist Blows Life Leech",
+        "rank0": "+1% de life leech para Thousand Fist Blows",
+        "rank10": "+12% de life leech para Thousand Fist Blows",
+        "icon": "images/proficiency-spell-thousand-fist-blows.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Thousand_Fist_Blows_Life_Leech"
+      },
+      {
+        "group": "Monk",
+        "name": "Spell Augment Thousand Fist Blows Mana Leech",
+        "rank0": "+1% de mana leech para Thousand Fist Blows",
+        "rank10": "+6% de mana leech para Thousand Fist Blows",
+        "icon": "images/proficiency-spell-thousand-fist-blows.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Thousand_Fist_Blows_Mana_Leech"
+      }
+    ],
+    "Sorcerer": [
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Death Echo Base Damage",
+        "rank0": "+1% de dano base para Death Echo",
+        "rank10": "+3% de dano base para Death Echo",
+        "icon": "images/proficiency-spell-death-echo.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Death_Echo_Base_Damage"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Death Echo Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Death Echo",
+        "rank10": "+20% de dano crítico adicional para Death Echo",
+        "icon": "images/proficiency-spell-death-echo.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Death_Echo_Critical_Extra_Damage"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Death Echo Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Death Echo",
+        "rank10": "+3% de chance de acerto crítico para Death Echo",
+        "icon": "images/proficiency-spell-death-echo.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Death_Echo_Critical_Hit_Chance"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Death Echo Life Leech",
+        "rank0": "+1% de life leech para Death Echo",
+        "rank10": "+12% de life leech para Death Echo",
+        "icon": "images/proficiency-spell-death-echo.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Death_Echo_Life_Leech"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Death Echo Mana Leech",
+        "rank0": "+1% de mana leech para Death Echo",
+        "rank10": "+6% de mana leech para Death Echo",
+        "icon": "images/proficiency-spell-death-echo.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Death_Echo_Mana_Leech"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Energy Wave Base Damage",
+        "rank0": "+1% de dano base para Energy Wave",
+        "rank10": "+3% de dano base para Energy Wave",
+        "icon": "images/proficiency-spell-energy-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Energy_Wave_Base_Damage"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Energy Wave Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Energy Wave",
+        "rank10": "+20% de dano crítico adicional para Energy Wave",
+        "icon": "images/proficiency-spell-energy-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Energy_Wave_Critical_Extra_Damage"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Energy Wave Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Energy Wave",
+        "rank10": "+3% de chance de acerto crítico para Energy Wave",
+        "icon": "images/proficiency-spell-energy-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Energy_Wave_Critical_Hit_Chance"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Energy Wave Life Leech",
+        "rank0": "+1% de life leech para Energy Wave",
+        "rank10": "+12% de life leech para Energy Wave",
+        "icon": "images/proficiency-spell-energy-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Energy_Wave_Life_Leech"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Energy Wave Mana Leech",
+        "rank0": "+1% de mana leech para Energy Wave",
+        "rank10": "+6% de mana leech para Energy Wave",
+        "icon": "images/proficiency-spell-energy-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Energy_Wave_Mana_Leech"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Great Death Beam Base Damage",
+        "rank0": "+1% de dano base para Great Death Beam",
+        "rank10": "+3% de dano base para Great Death Beam",
+        "icon": "images/proficiency-spell-great-death-beam.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Great_Death_Beam_Base_Damage"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Great Death Beam Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Great Death Beam",
+        "rank10": "+20% de dano crítico adicional para Great Death Beam",
+        "icon": "images/proficiency-spell-great-death-beam.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Great_Death_Beam_Critical_Extra_Damage"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Great Death Beam Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Great Death Beam",
+        "rank10": "+3% de chance de acerto crítico para Great Death Beam",
+        "icon": "images/proficiency-spell-great-death-beam.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Great_Death_Beam_Critical_Hit_Chance"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Great Death Beam Life Leech",
+        "rank0": "+1% de life leech para Great Death Beam",
+        "rank10": "+12% de life leech para Great Death Beam",
+        "icon": "images/proficiency-spell-great-death-beam.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Great_Death_Beam_Life_Leech"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Great Death Beam Mana Leech",
+        "rank0": "+1% de mana leech para Great Death Beam",
+        "rank10": "+6% de mana leech para Great Death Beam",
+        "icon": "images/proficiency-spell-great-death-beam.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Great_Death_Beam_Mana_Leech"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Great Energy Beam Base Damage",
+        "rank0": "+1% de dano base para Great Energy Beam",
+        "rank10": "+3% de dano base para Great Energy Beam",
+        "icon": "images/proficiency-spell-great-energy-beam.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Great_Energy_Beam_Base_Damage"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Great Energy Beam Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Great Energy Beam",
+        "rank10": "+20% de dano crítico adicional para Great Energy Beam",
+        "icon": "images/proficiency-spell-great-energy-beam.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Great_Energy_Beam_Critical_Extra_Damage"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Great Energy Beam Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Great Energy Beam",
+        "rank10": "+3% de chance de acerto crítico para Great Energy Beam",
+        "icon": "images/proficiency-spell-great-energy-beam.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Great_Energy_Beam_Critical_Hit_Chance"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Great Energy Beam Life Leech",
+        "rank0": "+1% de life leech para Great Energy Beam",
+        "rank10": "+12% de life leech para Great Energy Beam",
+        "icon": "images/proficiency-spell-great-energy-beam.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Great_Energy_Beam_Life_Leech"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Great Energy Beam Mana Leech",
+        "rank0": "+1% de mana leech para Great Energy Beam",
+        "rank10": "+6% de mana leech para Great Energy Beam",
+        "icon": "images/proficiency-spell-great-energy-beam.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Great_Energy_Beam_Mana_Leech"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Great Fire Wave Base Damage",
+        "rank0": "+1% de dano base para Great Fire Wave",
+        "rank10": "+3% de dano base para Great Fire Wave",
+        "icon": "images/proficiency-spell-great-fire-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Great_Fire_Wave_Base_Damage"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Great Fire Wave Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Great Fire Wave",
+        "rank10": "+20% de dano crítico adicional para Great Fire Wave",
+        "icon": "images/proficiency-spell-great-fire-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Great_Fire_Wave_Critical_Extra_Damage"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Great Fire Wave Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Great Fire Wave",
+        "rank10": "+3% de chance de acerto crítico para Great Fire Wave",
+        "icon": "images/proficiency-spell-great-fire-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Great_Fire_Wave_Critical_Hit_Chance"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Great Fire Wave Life Leech",
+        "rank0": "+1% de life leech para Great Fire Wave",
+        "rank10": "+12% de life leech para Great Fire Wave",
+        "icon": "images/proficiency-spell-great-fire-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Great_Fire_Wave_Life_Leech"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Great Fire Wave Mana Leech",
+        "rank0": "+1% de mana leech para Great Fire Wave",
+        "rank10": "+6% de mana leech para Great Fire Wave",
+        "icon": "images/proficiency-spell-great-fire-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Great_Fire_Wave_Mana_Leech"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Hell’s Core Base Damage",
+        "rank0": "+1% de dano base para Hell's Core",
+        "rank10": "+3% de dano base para Hell's Core",
+        "icon": "images/proficiency-spell-hells-core.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Hell%E2%80%99s_Core_Base_Damage"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Hell’s Core Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Hell's Core",
+        "rank10": "+20% de dano crítico adicional para Hell's Core",
+        "icon": "images/proficiency-spell-hells-core.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Hell%E2%80%99s_Core_Critical_Extra_Damage"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Hell’s Core Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Hell's Core",
+        "rank10": "+3% de chance de acerto crítico para Hell's Core",
+        "icon": "images/proficiency-spell-hells-core.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Hell%E2%80%99s_Core_Critical_Hit_Chance"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Hell’s Core Life Leech",
+        "rank0": "+1% de life leech para Hell's Core",
+        "rank10": "+12% de life leech para Hell's Core",
+        "icon": "images/proficiency-spell-hells-core.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Hell%E2%80%99s_Core_Life_Leech"
+      },
+      {
+        "group": "Sorcerer",
+        "name": "Spell Augment Hell’s Core Mana Leech",
+        "rank0": "+1% de mana leech para Hell's Core",
+        "rank10": "+6% de mana leech para Hell's Core",
+        "icon": "images/proficiency-spell-hells-core.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Hell%E2%80%99s_Core_Mana_Leech"
+      }
+    ],
+    "Druid": [
+      {
+        "group": "Druid",
+        "name": "Spell Augment Forked Glacier Base Damage",
+        "rank0": "+1% de dano base para Forked Glacier",
+        "rank10": "+3% de dano base para Forked Glacier",
+        "icon": "images/proficiency-spell-forked-glacier.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Forked_Glacier_Base_Damage"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Forked Glacier Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Forked Glacier",
+        "rank10": "+20% de dano crítico adicional para Forked Glacier",
+        "icon": "images/proficiency-spell-forked-glacier.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Forked_Glacier_Critical_Extra_Damage"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Forked Glacier Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Forked Glacier",
+        "rank10": "+3% de chance de acerto crítico para Forked Glacier",
+        "icon": "images/proficiency-spell-forked-glacier.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Forked_Glacier_Critical_Hit_Chance"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Forked Glacier Life Leech",
+        "rank0": "+1% de life leech para Forked Glacier",
+        "rank10": "+12% de life leech para Forked Glacier",
+        "icon": "images/proficiency-spell-forked-glacier.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Forked_Glacier_Life_Leech"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Forked Glacier Mana Leech",
+        "rank0": "+1% de mana leech para Forked Glacier",
+        "rank10": "+6% de mana leech para Forked Glacier",
+        "icon": "images/proficiency-spell-forked-glacier.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Forked_Glacier_Mana_Leech"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Forked Thorns Base Damage",
+        "rank0": "+1% de dano base para Forked Thorns",
+        "rank10": "+3% de dano base para Forked Thorns",
+        "icon": "images/proficiency-spell-forked-thorns.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Forked_Thorns_Base_Damage"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Forked Thorns Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Forked Thorns",
+        "rank10": "+20% de dano crítico adicional para Forked Thorns",
+        "icon": "images/proficiency-spell-forked-thorns.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Forked_Thorns_Critical_Extra_Damage"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Forked Thorns Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Forked Thorns",
+        "rank10": "+3% de chance de acerto crítico para Forked Thorns",
+        "icon": "images/proficiency-spell-forked-thorns.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Forked_Thorns_Critical_Hit_Chance"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Forked Thorns Life Leech",
+        "rank0": "+1% de life leech para Forked Thorns",
+        "rank10": "+12% de life leech para Forked Thorns",
+        "icon": "images/proficiency-spell-forked-thorns.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Forked_Thorns_Life_Leech"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Forked Thorns Mana Leech",
+        "rank0": "+1% de mana leech para Forked Thorns",
+        "rank10": "+6% de mana leech para Forked Thorns",
+        "icon": "images/proficiency-spell-forked-thorns.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Forked_Thorns_Mana_Leech"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Ice Burst Base Damage",
+        "rank0": "+1% de dano base para Ice Burst",
+        "rank10": "+3% de dano base para Ice Burst",
+        "icon": "images/proficiency-spell-ice-burst.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Ice_Burst_Base_Damage"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Ice Burst Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Ice Burst",
+        "rank10": "+20% de dano crítico adicional para Ice Burst",
+        "icon": "images/proficiency-spell-ice-burst.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Ice_Burst_Critical_Extra_Damage"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Ice Burst Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Ice Burst",
+        "rank10": "+3% de chance de acerto crítico para Ice Burst",
+        "icon": "images/proficiency-spell-ice-burst.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Ice_Burst_Critical_Hit_Chance"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Ice Burst Life Leech",
+        "rank0": "+1% de life leech para Ice Burst",
+        "rank10": "+12% de life leech para Ice Burst",
+        "icon": "images/proficiency-spell-ice-burst.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Ice_Burst_Life_Leech"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Ice Burst Mana Leech",
+        "rank0": "+1% de mana leech para Ice Burst",
+        "rank10": "+6% de mana leech para Ice Burst",
+        "icon": "images/proficiency-spell-ice-burst.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Ice_Burst_Mana_Leech"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Strong Ice Wave Base Damage",
+        "rank0": "+1% de dano base para Strong Ice Wave",
+        "rank10": "+3% de dano base para Strong Ice Wave",
+        "icon": "images/proficiency-spell-strong-ice-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Strong_Ice_Wave_Base_Damage"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Strong Ice Wave Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Strong Ice Wave",
+        "rank10": "+20% de dano crítico adicional para Strong Ice Wave",
+        "icon": "images/proficiency-spell-strong-ice-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Strong_Ice_Wave_Critical_Extra_Damage"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Strong Ice Wave Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Strong Ice Wave",
+        "rank10": "+3% de chance de acerto crítico para Strong Ice Wave",
+        "icon": "images/proficiency-spell-strong-ice-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Strong_Ice_Wave_Critical_Hit_Chance"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Strong Ice Wave Life Leech",
+        "rank0": "+1% de life leech para Strong Ice Wave",
+        "rank10": "+12% de life leech para Strong Ice Wave",
+        "icon": "images/proficiency-spell-strong-ice-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Strong_Ice_Wave_Life_Leech"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Strong Ice Wave Mana Leech",
+        "rank0": "+1% de mana leech para Strong Ice Wave",
+        "rank10": "+6% de mana leech para Strong Ice Wave",
+        "icon": "images/proficiency-spell-strong-ice-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Strong_Ice_Wave_Mana_Leech"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Terra Burst Base Damage",
+        "rank0": "+1% de dano base para Terra Burst",
+        "rank10": "+3% de dano base para Terra Burst",
+        "icon": "images/proficiency-spell-terra-burst.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Terra_Burst_Base_Damage"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Terra Burst Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Terra Burst",
+        "rank10": "+20% de dano crítico adicional para Terra Burst",
+        "icon": "images/proficiency-spell-terra-burst.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Terra_Burst_Critical_Extra_Damage"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Terra Burst Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Terra Burst",
+        "rank10": "+3% de chance de acerto crítico para Terra Burst",
+        "icon": "images/proficiency-spell-terra-burst.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Terra_Burst_Critical_Hit_Chance"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Terra Burst Life Leech",
+        "rank0": "+1% de life leech para Terra Burst",
+        "rank10": "+12% de life leech para Terra Burst",
+        "icon": "images/proficiency-spell-terra-burst.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Terra_Burst_Life_Leech"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Terra Burst Mana Leech",
+        "rank0": "+1% de mana leech para Terra Burst",
+        "rank10": "+6% de mana leech para Terra Burst",
+        "icon": "images/proficiency-spell-terra-burst.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Terra_Burst_Mana_Leech"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Terra Wave Base Damage",
+        "rank0": "+1% de dano base para Terra Wave",
+        "rank10": "+3% de dano base para Terra Wave",
+        "icon": "images/proficiency-spell-terra-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Terra_Wave_Base_Damage"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Terra Wave Critical Extra Damage",
+        "rank0": "+5% de dano crítico adicional para Terra Wave",
+        "rank10": "+20% de dano crítico adicional para Terra Wave",
+        "icon": "images/proficiency-spell-terra-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Terra_Wave_Critical_Extra_Damage"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Terra Wave Critical Hit Chance",
+        "rank0": "+1% de chance de acerto crítico para Terra Wave",
+        "rank10": "+3% de chance de acerto crítico para Terra Wave",
+        "icon": "images/proficiency-spell-terra-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Terra_Wave_Critical_Hit_Chance"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Terra Wave Life Leech",
+        "rank0": "+1% de life leech para Terra Wave",
+        "rank10": "+12% de life leech para Terra Wave",
+        "icon": "images/proficiency-spell-terra-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Terra_Wave_Life_Leech"
+      },
+      {
+        "group": "Druid",
+        "name": "Spell Augment Terra Wave Mana Leech",
+        "rank0": "+1% de mana leech para Terra Wave",
+        "rank10": "+6% de mana leech para Terra Wave",
+        "icon": "images/proficiency-spell-terra-wave.gif",
+        "border": "images/proficiency-border.gif",
+        "sourceUrl": "https://www.tibiawiki.com.br/wiki/Spell_Augment_Terra_Wave_Mana_Leech"
+      }
+    ]
+  }
+}
