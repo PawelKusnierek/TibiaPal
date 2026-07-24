@@ -408,11 +408,8 @@ function logImageStatus(label, url) {
 function buildFamilies() {
   const categories = [
     { value: "all", label: "Weapons: All" },
-    { value: "Rods & Wands", label: "Rods & Wands" },
-    { value: "Distance", label: "Distance" },
     ...[...new Set(state.profiles.map((profile) => weaponCategory(profile.WeaponType)))]
-      .filter((category) => !["Rods & Wands", "Distance"].includes(category))
-      .sort()
+      .sort((left, right) => left.localeCompare(right))
       .map((category) => ({ value: category, label: category })),
   ];
   const menu = $("#familyDropdownMenu");
