@@ -385,6 +385,7 @@ function makeReshapeRow(perk, index) {
     $("#reshapeSelect").value = String(index);
     renderPickerPreview();
   });
+  row.addEventListener("dblclick", () => confirmReshapeSelection(index));
   return row;
 }
 
@@ -858,9 +859,9 @@ $("#reshapeButton").addEventListener("click", () => {
 });
 $("#reshapeSelect").addEventListener("change", renderPickerPreview);
 $("#reshapeFilter").addEventListener("input", renderPerkOptions);
-$("#confirmReshapeButton").addEventListener("click", () => {
+function confirmReshapeSelection(index) {
   const picker = state.picker;
-  const perk = picker?.pool[Number($("#reshapeSelect").value)];
+  const perk = picker?.pool[index];
   if (!picker || !perk || state.dust < picker.cost) return;
   state.dust -= picker.cost;
   const maximumPerk = valueAtRank(perk, 10);
@@ -875,6 +876,10 @@ $("#confirmReshapeButton").addEventListener("click", () => {
   $("#reshapeBackdrop").hidden = true;
   $("#shapeBackdrop").hidden = true;
   renderBoard();
+}
+
+$("#confirmReshapeButton").addEventListener("click", () => {
+  confirmReshapeSelection(Number($("#reshapeSelect").value));
 });
 $("#keepButton").addEventListener("click", () => $("#reshapeBackdrop").hidden = true);
 $("#clearShapeButton").addEventListener("click", () => {
