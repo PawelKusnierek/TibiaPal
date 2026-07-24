@@ -80,6 +80,8 @@ button { cursor: pointer; }
 .modify { text-align: left; padding-left: 28px; filter: grayscale(1); }
 .modify:disabled { cursor: default; opacity: .55; }
 .modify.ready { filter: none; color: #fff; border-color: #62b5ff; box-shadow: inset 0 0 0 1px #0d2947, 0 0 9px #2d8cf8; }
+.modify.clear-shaped { height: 21px; padding-left: 0; filter: none; text-align: center; font-size: 11px; color: #d99; border-color: #6a3232; background: linear-gradient(#3a2323, #241515); }
+.modify.clear-shaped:hover { filter: brightness(1.25); }
 .selection-hint { display: block; min-height: 30px; margin: 0 0 8px; padding: 4px 6px; color: #94b6d8; font: 11px/1.35 Verdana, Arial, sans-serif; text-align: left; }
 .price { color: #e74336; font-weight: bold; }
 .shard { color: #75d5f0; padding-left: 2px; font-size: 9px; }
