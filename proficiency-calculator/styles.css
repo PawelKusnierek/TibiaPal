@@ -224,7 +224,9 @@ footer button:active, button.active { filter: brightness(1.25); }
   .reshape-window .perk-picker { overflow-x: auto; }
 }
 
-@media (max-width: 640px) {
+/* The calculator's compact layout starts earlier because its desktop board
+   needs more room than the surrounding TibiaPal content column provides. */
+@media (max-width: 1187px) {
   & { min-height: 0; padding: 2px; overflow-x: hidden; }
   .window { width: 100%; min-width: 0; height: auto; min-height: 0; overflow: visible; }
   .workspace { display: block; height: auto; padding: 8px; }
