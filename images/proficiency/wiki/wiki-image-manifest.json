@@ -1,0 +1,681 @@
+{
+  "images": [
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/64/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/001-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/2/25/Weapon_Proficiency_Border_Active.png/revision/latest?cb=20250625211543&path-prefix=en",
+      "file": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/7a/Weapon_Proficiency_-_Gain_Extra_Damage_Auto-Attack.png/revision/latest/window-crop/width/32/x-offset/0/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/003-weapon-proficiency-gain-extra-damage-auto-attack.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/192/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/004-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/448/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/005-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/0/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/006-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/576/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/007-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/288/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/008-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/4/4b/Weapon_Proficiency_-_Critical_Hit_Chance_Element.png/revision/latest/window-crop/width/32/x-offset/128/y-offset/0/window-width/32/window-height/32?cb=20250629110319&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/009-weapon-proficiency-critical-hit-chance-element.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/a/ac/Weapon_Proficiency_-_Critical_Extra_Damage_Element.png/revision/latest/window-crop/width/32/x-offset/128/y-offset/0/window-width/32/window-height/32?cb=20250629110318&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/010-weapon-proficiency-critical-extra-damage-element.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/416/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/011-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/a/ac/Weapon_Proficiency_-_Critical_Extra_Damage_Element.png/revision/latest/window-crop/width/32/x-offset/96/y-offset/0/window-width/32/window-height/32?cb=20250629110318&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/012-weapon-proficiency-critical-extra-damage-element.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/256/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/013-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/2/24/Terra_Strike.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003213558&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/014-terra-strike.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/1/10/Skillwheel_Small_Perk_Icons.png/revision/latest/window-crop/width/16/x-offset/96/y-offset/0/window-width/16/window-height/16?cb=20250625080425&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/015-skillwheel-small-perk-icons.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/480/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/016-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/4/4b/Weapon_Proficiency_-_Critical_Hit_Chance_Element.png/revision/latest/window-crop/width/32/x-offset/96/y-offset/0/window-width/32/window-height/32?cb=20250629110319&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/017-weapon-proficiency-critical-hit-chance-element.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/160/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/018-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/0/00/Weapon_Proficiency_-_Gain_Extra_Healing_Spells.png/revision/latest/window-crop/width/32/x-offset/128/y-offset/0/window-width/32/window-height/32?cb=20250629110322&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/019-weapon-proficiency-gain-extra-healing-spells.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/eb/Light_Healing.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20101209161158&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/020-light-healing.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/384/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/021-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c6/Ice_Strike.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20101207011024&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/022-ice-strike.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/1/10/Skillwheel_Small_Perk_Icons.png/revision/latest/window-crop/width/16/x-offset/176/y-offset/0/window-width/16/window-height/16?cb=20250625080425&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/023-skillwheel-small-perk-icons.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/7a/Weapon_Proficiency_-_Gain_Extra_Damage_Auto-Attack.png/revision/latest/window-crop/width/32/x-offset/128/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/024-weapon-proficiency-gain-extra-damage-auto-attack.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/512/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/025-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/1/10/Skillwheel_Small_Perk_Icons.png/revision/latest/window-crop/width/16/x-offset/112/y-offset/0/window-width/16/window-height/16?cb=20250625080425&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/026-skillwheel-small-perk-icons.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/4/4b/Weapon_Proficiency_-_Critical_Hit_Chance_Element.png/revision/latest/window-crop/width/32/x-offset/32/y-offset/0/window-width/32/window-height/32?cb=20250629110319&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/027-weapon-proficiency-critical-hit-chance-element.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/cf/Fire_Wave.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20101209162641&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/028-fire-wave.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/a/ac/Weapon_Proficiency_-_Critical_Extra_Damage_Element.png/revision/latest/window-crop/width/32/x-offset/32/y-offset/0/window-width/32/window-height/32?cb=20250629110318&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/029-weapon-proficiency-critical-extra-damage-element.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/e0/Force_Strike.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20050524043100&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/030-force-strike.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/a/ac/Weapon_Proficiency_-_Critical_Extra_Damage_Element.png/revision/latest/window-crop/width/32/x-offset/64/y-offset/0/window-width/32/window-height/32?cb=20250629110318&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/031-weapon-proficiency-critical-extra-damage-element.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/b/ba/Energy_Beam.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20101209162434&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/032-energy-beam.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/4/4b/Weapon_Proficiency_-_Critical_Hit_Chance_Element.png/revision/latest/window-crop/width/32/x-offset/64/y-offset/0/window-width/32/window-height/32?cb=20250629110319&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/033-weapon-proficiency-critical-hit-chance-element.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/d/d5/Buzz.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20140920174339&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/034-buzz.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/cd/Flame_Strike.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003211757&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/035-flame-strike.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/7a/Weapon_Proficiency_-_Gain_Extra_Damage_Auto-Attack.png/revision/latest/window-crop/width/32/x-offset/64/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/036-weapon-proficiency-gain-extra-damage-auto-attack.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ed/Weapon_Proficiency_-_Gain_Extra_Damage_Spells.png/revision/latest/window-crop/width/32/x-offset/64/y-offset/0/window-width/32/window-height/32?cb=20250629110321&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/037-weapon-proficiency-gain-extra-damage-spells.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/32/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/038-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/7a/Weapon_Proficiency_-_Gain_Extra_Damage_Auto-Attack.png/revision/latest/window-crop/width/32/x-offset/32/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/039-weapon-proficiency-gain-extra-damage-auto-attack.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/256/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/040-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ed/Weapon_Proficiency_-_Gain_Extra_Damage_Spells.png/revision/latest/window-crop/width/32/x-offset/128/y-offset/0/window-width/32/window-height/32?cb=20250629110321&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/041-weapon-proficiency-gain-extra-damage-spells.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/128/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/042-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/5/5e/Intense_Wound_Cleansing.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20220930163859&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/043-intense-wound-cleansing.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/1/10/Skillwheel_Small_Perk_Icons.png/revision/latest/window-crop/width/16/x-offset/80/y-offset/0/window-width/16/window-height/16?cb=20250625080425&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/044-skillwheel-small-perk-icons.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/0/00/Weapon_Proficiency_-_Gain_Extra_Healing_Spells.png/revision/latest/window-crop/width/32/x-offset/0/y-offset/0/window-width/32/window-height/32?cb=20250629110322&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/045-weapon-proficiency-gain-extra-healing-spells.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/f/f3/Berserk.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003210427&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/046-berserk.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/1/10/Skillwheel_Small_Perk_Icons.png/revision/latest/window-crop/width/16/x-offset/16/y-offset/0/window-width/16/window-height/16?cb=20250625080425&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/047-skillwheel-small-perk-icons.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/7a/Weapon_Proficiency_-_Gain_Extra_Damage_Auto-Attack.png/revision/latest/window-crop/width/32/x-offset/96/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/048-weapon-proficiency-gain-extra-damage-auto-attack.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/352/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/049-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/320/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/050-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/352/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/051-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/480/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/052-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/576/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/053-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/a/a4/Weapon_Proficiency_-_Offensive_Bonus_Skill.png/revision/latest/window-crop/width/32/x-offset/32/y-offset/0/window-width/32/window-height/32?cb=20250629110323&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/054-weapon-proficiency-offensive-bonus-skill.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/384/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/055-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/96/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/056-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/448/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/057-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/a/a4/Weapon_Proficiency_-_Offensive_Bonus_Skill.png/revision/latest/window-crop/width/32/x-offset/64/y-offset/0/window-width/32/window-height/32?cb=20250629110323&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/058-weapon-proficiency-offensive-bonus-skill.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/8/85/Whirlwind_Throw.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003212907&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/059-whirlwind-throw.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/96/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/060-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/4/44/Groundshaker.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20101208023044&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/061-groundshaker.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/192/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/062-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/0/00/Weapon_Proficiency_-_Gain_Extra_Healing_Spells.png/revision/latest/window-crop/width/32/x-offset/64/y-offset/0/window-width/32/window-height/32?cb=20250629110322&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/063-weapon-proficiency-gain-extra-healing-spells.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/a/a4/Weapon_Proficiency_-_Offensive_Bonus_Skill.png/revision/latest/window-crop/width/32/x-offset/0/y-offset/0/window-width/32/window-height/32?cb=20250629110323&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/064-weapon-proficiency-offensive-bonus-skill.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ed/Weapon_Proficiency_-_Gain_Extra_Damage_Spells.png/revision/latest/window-crop/width/32/x-offset/0/y-offset/0/window-width/32/window-height/32?cb=20250629110321&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/065-weapon-proficiency-gain-extra-damage-spells.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/544/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/066-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/a/a4/Weapon_Proficiency_-_Offensive_Bonus_Skill.png/revision/latest/window-crop/width/32/x-offset/128/y-offset/0/window-width/32/window-height/32?cb=20250629110323&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/067-weapon-proficiency-offensive-bonus-skill.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/9/9a/Avatar_of_Storm.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221114171408&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/068-avatar-of-storm.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/5/58/Avatar_of_Nature.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221114171358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/069-avatar-of-nature.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/3/3e/Avatar_of_Light.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221114171353&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/070-avatar-of-light.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/8/86/Avatar_of_Balance.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20250225123753&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/071-avatar-of-balance.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/4/42/Avatar_of_Steel.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221114171403&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/072-avatar-of-steel.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/70/Weapon_Proficiency_-_Specialized_Magic_Level.png/revision/latest/window-crop/width/32/x-offset/160/y-offset/0/window-width/32/window-height/32?cb=20250628175356&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/073-weapon-proficiency-specialized-magic-level.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/416/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/074-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ed/Weapon_Proficiency_-_Gain_Extra_Damage_Spells.png/revision/latest/window-crop/width/32/x-offset/96/y-offset/0/window-width/32/window-height/32?cb=20250629110321&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/075-weapon-proficiency-gain-extra-damage-spells.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/7a/Weapon_Proficiency_-_Gain_Extra_Damage_Auto-Attack.png/revision/latest/window-crop/width/32/x-offset/192/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/076-weapon-proficiency-gain-extra-damage-auto-attack.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/320/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/077-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/b/be/Brutal_Strike.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20150205085650&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/078-brutal-strike.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/0/00/Weapon_Proficiency_-_Gain_Extra_Healing_Spells.png/revision/latest/window-crop/width/32/x-offset/32/y-offset/0/window-width/32/window-height/32?cb=20250629110322&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/079-weapon-proficiency-gain-extra-healing-spells.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/160/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/080-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/224/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/081-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/f/f8/Front_Sweep.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20101228172153&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/082-front-sweep.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/d/de/Inflict_Wound.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003222905&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/083-inflict-wound.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/4/40/Annihilation.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20191218133418&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/084-annihilation.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/288/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ed/Weapon_Proficiency_-_Gain_Extra_Damage_Spells.png/revision/latest/window-crop/width/32/x-offset/160/y-offset/0/window-width/32/window-height/32?cb=20250629110321&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/086-weapon-proficiency-gain-extra-damage-spells.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/544/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/087-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/608/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/088-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/70/Weapon_Proficiency_-_Specialized_Magic_Level.png/revision/latest/window-crop/width/32/x-offset/0/y-offset/0/window-width/32/window-height/32?cb=20250628175356&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/089-weapon-proficiency-specialized-magic-level.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ed/Weapon_Proficiency_-_Gain_Extra_Damage_Spells.png/revision/latest/window-crop/width/32/x-offset/32/y-offset/0/window-width/32/window-height/32?cb=20250629110321&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/090-weapon-proficiency-gain-extra-damage-spells.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/128/y-offset/0/window-width/32/window-height/32?cb=20250628185358&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/091-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/7a/Weapon_Proficiency_-_Gain_Extra_Damage_Auto-Attack.png/revision/latest/window-crop/width/32/x-offset/160/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/092-weapon-proficiency-gain-extra-damage-auto-attack.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/70/Weapon_Proficiency_-_Specialized_Magic_Level.png/revision/latest/window-crop/width/32/x-offset/128/y-offset/0/window-width/32/window-height/32?cb=20250628175356&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/093-weapon-proficiency-specialized-magic-level.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/1/1a/Fierce_Berserk.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20101208022917&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/094-fierce-berserk.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/7a/Weapon_Proficiency_-_Gain_Extra_Damage_Auto-Attack.png/revision/latest/window-crop/width/32/x-offset/224/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/095-weapon-proficiency-gain-extra-damage-auto-attack.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/224/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/096-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/32/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/097-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/d/dd/Intense_Healing.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20101209160655&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/098-intense-healing.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/3/35/Strong_Ethereal_Spear.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003213829&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/099-strong-ethereal-spear.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c6/Wound_Cleansing.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20101209160841&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/100-wound-cleansing.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/0/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/101-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/7c/Lesser_Ethereal_Spear.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20250218014333&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/102-lesser-ethereal-spear.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/a/a4/Weapon_Proficiency_-_Offensive_Bonus_Skill.png/revision/latest/window-crop/width/32/x-offset/192/y-offset/0/window-width/32/window-height/32?cb=20250629110323&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/103-weapon-proficiency-offensive-bonus-skill.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/512/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/104-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/3/33/Physical_Strike.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003222725&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/105-physical-strike.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/9/9b/Energy_Strike.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003211658&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/106-energy-strike.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/70/Weapon_Proficiency_-_Specialized_Magic_Level.png/revision/latest/window-crop/width/32/x-offset/32/y-offset/0/window-width/32/window-height/32?cb=20250628175356&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/107-weapon-proficiency-specialized-magic-level.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/70/Weapon_Proficiency_-_Specialized_Magic_Level.png/revision/latest/window-crop/width/32/x-offset/64/y-offset/0/window-width/32/window-height/32?cb=20250628175356&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/108-weapon-proficiency-specialized-magic-level.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/70/Weapon_Proficiency_-_Specialized_Magic_Level.png/revision/latest/window-crop/width/32/x-offset/96/y-offset/0/window-width/32/window-height/32?cb=20250628175356&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/109-weapon-proficiency-specialized-magic-level.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/9/97/Lesser_Front_Sweep.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20240726060030&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/110-lesser-front-sweep.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/1/11/Apprentice%27s_Strike.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20250308181110&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/111-apprentice-s-strike.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/288/y-offset/0/window-width/32/window-height/32?cb=20251104183605&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/112-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/192/y-offset/0/window-width/32/window-height/32?cb=20251104183605&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/113-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/96/y-offset/0/window-width/32/window-height/32?cb=20251104183605&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/114-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ed/Weapon_Proficiency_-_Gain_Extra_Damage_Spells.png/revision/latest/window-crop/width/32/x-offset/192/y-offset/0/window-width/32/window-height/32?cb=20250629110321&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/115-weapon-proficiency-gain-extra-damage-spells.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/256/y-offset/0/window-width/32/window-height/32?cb=20251104183605&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/116-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/eb/Terra_Wave.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20101207011152&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/117-terra-wave.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/64/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/118-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/7d/Energy_Wave.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20101209162408&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/119-energy-wave.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/79/Divine_Missile.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20210612002321&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/120-divine-missile.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/70/Weapon_Proficiency_-_Specialized_Magic_Level.png/revision/latest/window-crop/width/32/x-offset/192/y-offset/0/window-width/32/window-height/32?cb=20250628175356&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/121-weapon-proficiency-specialized-magic-level.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/0/00/Weapon_Proficiency_-_Gain_Extra_Healing_Spells.png/revision/latest/window-crop/width/32/x-offset/160/y-offset/0/window-width/32/window-height/32?cb=20250629110322&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/122-weapon-proficiency-gain-extra-healing-spells.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/6/67/Great_Energy_Beam.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20101209162500&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/123-great-energy-beam.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/9/9f/Ice_Wave.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003222945&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/124-ice-wave.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ed/Weapon_Proficiency_-_Gain_Extra_Damage_Spells.png/revision/latest/window-crop/width/32/x-offset/224/y-offset/0/window-width/32/window-height/32?cb=20250629110321&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/125-weapon-proficiency-gain-extra-damage-spells.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/0/09/Strong_Terra_Strike.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003213635&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/126-strong-terra-strike.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/ef/Weapon_Proficiency_-_Damage_Against_Bestiary.png/revision/latest/window-crop/width/32/x-offset/640/y-offset/0/window-width/32/window-height/32?cb=20250629110320&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/127-weapon-proficiency-damage-against-bestiary.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/70/Executioner%27s_Throw.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221114171436&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/128-executioner-s-throw.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/a/ac/Weapon_Proficiency_-_Critical_Extra_Damage_Element.png/revision/latest/window-crop/width/32/x-offset/160/y-offset/0/window-width/32/window-height/32?cb=20250629110318&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/129-weapon-proficiency-critical-extra-damage-element.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/f/f2/Great_Death_Beam.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221114171446&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/130-great-death-beam.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/4/4b/Weapon_Proficiency_-_Critical_Hit_Chance_Element.png/revision/latest/window-crop/width/32/x-offset/160/y-offset/0/window-width/32/window-height/32?cb=20250629110319&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/131-weapon-proficiency-critical-hit-chance-element.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/8/82/Ice_Burst.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221109001850&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/132-ice-burst.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/a/ae/Strong_Ice_Wave.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003213701&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/133-strong-ice-wave.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/6/66/Strong_Flame_Strike.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003213802&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/134-strong-flame-strike.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/4/4b/Weapon_Proficiency_-_Critical_Hit_Chance_Element.png/revision/latest/window-crop/width/32/x-offset/192/y-offset/0/window-width/32/window-height/32?cb=20250629110319&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/135-weapon-proficiency-critical-hit-chance-element.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/1/1d/Great_Fire_Wave.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20201026175100&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/136-great-fire-wave.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c6/Heal_Friend.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003213114&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/137-heal-friend.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/e/e8/Ultimate_Energy_Strike.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003213502&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/138-ultimate-energy-strike.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/1/13/Ultimate_Ice_Strike.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003213406&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/139-ultimate-ice-strike.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/f/fa/Divine_Caldera.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003211326&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/140-divine-caldera.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/0/0e/Hell%27s_Core.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20101207011351&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/141-hell-s-core.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/6/6e/Eternal_Winter.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20191218133300&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/142-eternal-winter.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/b/be/Divine_Grenade.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221216001827&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/143-divine-grenade.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/9/9e/Rage_of_the_Skies.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003214114&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/144-rage-of-the-skies.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/1/14/Ultimate_Flame_Strike.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003213429&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/145-ultimate-flame-strike.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/f/f0/Ultimate_Terra_Strike.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221003213341&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/146-ultimate-terra-strike.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/0/01/Divine_Dazzle.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20221004180707&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/147-divine-dazzle.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/a/a4/Weapon_Proficiency_-_Offensive_Bonus_Skill.png/revision/latest/window-crop/width/32/x-offset/96/y-offset/0/window-width/32/window-height/32?cb=20250629110323&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/148-weapon-proficiency-offensive-bonus-skill.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/f/f9/Sweeping_Takedown.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20250225124044&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/149-sweeping-takedown.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/a/a2/Chained_Penance.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20250225123754&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/150-chained-penance.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/7/74/Flurry_of_Blows.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20250225123759&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/151-flurry-of-blows.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/0/00/Weapon_Proficiency_-_Gain_Extra_Healing_Spells.png/revision/latest/window-crop/width/32/x-offset/96/y-offset/0/window-width/32/window-height/32?cb=20250629110322&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/152-weapon-proficiency-gain-extra-healing-spells.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/a/aa/Mystic_Repulse.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20250225124040&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/153-mystic-repulse.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/f/f5/Devastating_Knockout.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20250225123757&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/154-devastating-knockout.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/4/4a/Greater_Flurry_of_Blows.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20250225124033&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/155-greater-flurry-of-blows.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/2/2b/Weapon_Proficiency_-_Pierce.png/revision/latest/window-crop/width/32/x-offset/192/y-offset/0/window-width/32/window-height/32?cb=20251104193443&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/156-weapon-proficiency-pierce.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/576/y-offset/0/window-width/32/window-height/32?cb=20251104183605&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/157-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/672/y-offset/0/window-width/32/window-height/32?cb=20251104183605&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/158-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/608/y-offset/0/window-width/32/window-height/32?cb=20251104183605&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/159-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/640/y-offset/0/window-width/32/window-height/32?cb=20251104183605&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/160-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/0/y-offset/0/window-width/32/window-height/32?cb=20251104183605&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/161-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/2/2b/Weapon_Proficiency_-_Pierce.png/revision/latest/window-crop/width/32/x-offset/64/y-offset/0/window-width/32/window-height/32?cb=20251104193443&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/162-weapon-proficiency-pierce.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/2/2b/Weapon_Proficiency_-_Pierce.png/revision/latest/window-crop/width/32/x-offset/0/y-offset/0/window-width/32/window-height/32?cb=20251104193443&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/163-weapon-proficiency-pierce.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/2/2b/Weapon_Proficiency_-_Pierce.png/revision/latest/window-crop/width/32/x-offset/32/y-offset/0/window-width/32/window-height/32?cb=20251104193443&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/164-weapon-proficiency-pierce.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/224/y-offset/0/window-width/32/window-height/32?cb=20251104183605&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/165-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/c/c2/Weapon_Proficiency_-_General.png/revision/latest/window-crop/width/32/x-offset/352/y-offset/0/window-width/32/window-height/32?cb=20251104183605&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/166-weapon-proficiency-general.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/a/ac/Weapon_Proficiency_-_Critical_Extra_Damage_Element.png/revision/latest/window-crop/width/32/x-offset/0/y-offset/0/window-width/32/window-height/32?cb=20250629110318&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/167-weapon-proficiency-critical-extra-damage-element.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/a/ab/Wrath_of_Nature.gif/revision/latest/window-crop/width/38/x-offset/0/y-offset/0/window-width/38/window-height/38?cb=20101207011214&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/168-wrath-of-nature.gif"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/tibia/images/2/2b/Weapon_Proficiency_-_Pierce.png/revision/latest/window-crop/width/32/x-offset/96/y-offset/0/window-width/32/window-height/32?cb=20251104193443&path-prefix=en&format=original",
+      "file": "images/proficiency/wiki/169-weapon-proficiency-pierce.png"
+    }
+  ],
+  "failed": []
+}

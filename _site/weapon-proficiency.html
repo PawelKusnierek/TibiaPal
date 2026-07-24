@@ -29,10 +29,10 @@
 
     <!-- css files -->
     <link rel="stylesheet" href=/css/main.css>
-    <link rel="stylesheet" href="/proficiency-calculator/styles.css?v=20260723-16">
+    <link rel="stylesheet" href="/proficiency-calculator/styles.css?v=20260724-1">
 
     <!-- javascript files -->
-    <script type="module" src="/proficiency-calculator/app.js?v=20260723-15"></script>
+    <script type="module" src="/proficiency-calculator/app.js?v=20260724-2"></script>
     <script src=/scripts/onload.js></script>
 
     <!-- extra googleapi fonts -->
@@ -217,7 +217,10 @@
           <button data-filter="1H">1H</button>
           <button data-filter="2H">2H</button>
         </div>
-        <label class="select-wrap"><select id="familySelect"><option value="all">Weapons: All</option></select></label>
+        <div class="family-dropdown" id="familyDropdown">
+          <button class="family-dropdown-toggle" id="familyDropdownToggle" type="button" aria-haspopup="listbox" aria-expanded="false">Weapons: All</button>
+          <div class="family-dropdown-menu" id="familyDropdownMenu" role="listbox" aria-label="Weapon category" hidden></div>
+        </div>
         <label class="search-wrap"><input id="search" type="search" placeholder="Type to search"><span>×</span></label>
         <div class="weapon-grid" id="weaponGrid" role="listbox"></div>
       </aside>

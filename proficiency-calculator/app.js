@@ -61,7 +61,7 @@ function weaponType(name) {
 
 function applyWeaponSprite(element, profile) {
   if (!profile.weapon?.sprite) return;
-  element.style.backgroundImage = `url('../${profile.weapon.sprite}')`;
+  element.style.backgroundImage = `url('../${profile.weapon.sprite}?v=20260724-1')`;
   element.style.setProperty("--sprite-x", 0);
   element.style.setProperty("--sprite-y", 0);
 }
@@ -406,15 +406,39 @@ function logImageStatus(label, url) {
 }
 
 function buildFamilies() {
-  const families = [...new Set(state.profiles.map((p) => p.WeaponType))].sort();
-  $("#familySelect").innerHTML = `<option value="all">Weapons: All</option>${families.map((f) => `<option>${f}</option>`).join("")}`;
+  const categories = [
+    { value: "all", label: "Weapons: All" },
+    { value: "Rods & Wands", label: "Rods & Wands" },
+    { value: "Distance", label: "Distance" },
+    ...[...new Set(state.profiles.map((profile) => weaponCategory(profile.WeaponType)))]
+      .filter((category) => !["Rods & Wands", "Distance"].includes(category))
+      .sort()
+      .map((category) => ({ value: category, label: category })),
+  ];
+  const menu = $("#familyDropdownMenu");
+  menu.replaceChildren(...categories.map(({ value, label }) => {
+    const option = document.createElement("button");
+    option.type = "button";
+    option.className = `family-dropdown-option ${value === state.family ? "selected" : ""}`;
+    option.dataset.value = value;
+    option.setAttribute("role", "option");
+    option.setAttribute("aria-selected", String(value === state.family));
+    option.textContent = label;
+    return option;
+  }));
+}
+
+function weaponCategory(type) {
+  if (["Caster", "Rod", "Wand"].includes(type)) return "Rods & Wands";
+  if (["Bow", "Crossbow", "Throw", "Other"].includes(type)) return "Distance";
+  return type;
 }
 
 function filterProfiles() {
   const query = $("#search").value.trim().toLowerCase();
   state.filtered = state.profiles.filter((p) => {
     const matchesSearch = !query || p.Name.toLowerCase().includes(query);
-    const matchesFamily = state.family === "all" || p.WeaponType === state.family;
+    const matchesFamily = state.family === "all" || weaponCategory(p.WeaponType) === state.family;
     const matchesFilter = state.filter === "all" || p.Handedness === state.filter;
     return matchesSearch && matchesFamily && matchesFilter;
   }).sort((a, b) => weaponDisplayPriority(a.Name) - weaponDisplayPriority(b.Name));
@@ -524,15 +548,19 @@ function renderBoard() {
     const selectedPerk = modification?.originalChoice === choices[levelIndex]
       ? modification.perk
       : level.Perks[choices[levelIndex]];
+    const description = selectedPerk ? perkLabel(selectedPerk, profile) : "";
+    const descriptionSize = description.length > 105 ? "very-long-description" : description.length > 72 ? "long-description" : "";
     const mobileLabel = document.createElement("div");
     mobileLabel.className = "mobile-perk-label";
-    mobileLabel.textContent = selectedPerk ? perkLabel(selectedPerk, profile) : "";
+    if (descriptionSize) mobileLabel.classList.add(descriptionSize);
+    mobileLabel.textContent = description;
     column.append(mobileLabel);
     board.append(column);
 
     const label = document.createElement("div");
     label.className = "perk-label";
-    label.textContent = selectedPerk ? perkLabel(selectedPerk, profile) : "";
+    if (descriptionSize) label.classList.add(descriptionSize);
+    label.textContent = description;
     labels.append(label);
   });
   $("#progressBar").style.width = "100%";
@@ -708,7 +736,39 @@ async function copyShareUrl() {
 
 $("#search").addEventListener("input", filterProfiles);
 $(".search-wrap span").addEventListener("click", () => { $("#search").value = ""; filterProfiles(); });
-$("#familySelect").addEventListener("change", (event) => { state.family = event.target.value; filterProfiles(); });
+const familyDropdown = $("#familyDropdown");
+const familyDropdownToggle = $("#familyDropdownToggle");
+const familyDropdownMenu = $("#familyDropdownMenu");
+function closeFamilyDropdown() {
+  familyDropdown.classList.remove("open");
+  familyDropdownMenu.hidden = true;
+  familyDropdownToggle.setAttribute("aria-expanded", "false");
+}
+familyDropdownToggle.addEventListener("click", () => {
+  const willOpen = familyDropdownMenu.hidden;
+  familyDropdown.classList.toggle("open", willOpen);
+  familyDropdownMenu.hidden = !willOpen;
+  familyDropdownToggle.setAttribute("aria-expanded", String(willOpen));
+});
+familyDropdownMenu.addEventListener("click", (event) => {
+  const option = event.target.closest(".family-dropdown-option");
+  if (!option) return;
+  state.family = option.dataset.value;
+  familyDropdownToggle.textContent = option.textContent;
+  familyDropdownMenu.querySelectorAll(".family-dropdown-option").forEach((item) => {
+    const selected = item === option;
+    item.classList.toggle("selected", selected);
+    item.setAttribute("aria-selected", String(selected));
+  });
+  closeFamilyDropdown();
+  filterProfiles();
+});
+document.addEventListener("click", (event) => {
+  if (!familyDropdown.contains(event.target)) closeFamilyDropdown();
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeFamilyDropdown();
+});
 $("#filters").addEventListener("click", (event) => {
   const button = event.target.closest("button");
   if (!button) return;
@@ -781,7 +841,7 @@ $("#clearShapeButton").addEventListener("click", () => {
 
 try {
   const [data, shaping] = await Promise.all([
-    fetch("../data/proficiency/weapon-proficiencies.json?v=20260723-12"),
+    fetch("../data/proficiency/weapon-proficiencies.json?v=20260724-1"),
     fetch("../data/proficiency/perk-shaping-options.json?v=20260723-1"),
   ]).then(async (responses) => {
     const failed = responses.find((response) => !response.ok);
