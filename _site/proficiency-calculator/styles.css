@@ -3,6 +3,11 @@
   color: #d5d5d5;
   background: #141311;
   font-size: 13px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  box-sizing: border-box;
   --line: #64645f;
   --dark-line: #252522;
   --panel: #383936;
