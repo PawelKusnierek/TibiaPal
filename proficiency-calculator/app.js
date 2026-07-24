@@ -48,6 +48,17 @@ calculator.addEventListener("scroll", hideTooltip, true);
 window.addEventListener("resize", hideTooltip);
 const state = { profiles: [], shapingGroups: {}, filtered: [], current: null, selected: {}, applied: {}, modified: {}, filter: "all", family: "all", dust: 4600, orbs: 1, activeSlot: null, modifyTarget: null, picker: null };
 const refineCosts = [125, 200, 275, 350, 425, 500, 575, 650, 725, 800];
+const BUILD_COOKIE = "wpBuild";
+
+function setCookie(name, value, days) {
+  const expires = new Date(Date.now() + days * 864e5).toUTCString();
+  document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/; SameSite=Lax`;
+}
+
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
+  return match ? decodeURIComponent(match[1]) : null;
+}
 
 const perkNames = {
   0: "Attack damage", 1: "Defence", 2: "Weapon shield",
@@ -707,11 +718,13 @@ function syncBuildUrl() {
     modification.rank,
     modification.perk.ShapeKey,
   ]);
-  url.searchParams.set("build", encodeBuild({ w: id, p: state.selected[id], s: compactShapes }));
+  const token = encodeBuild({ w: id, p: state.selected[id], s: compactShapes });
+  url.searchParams.set("build", token);
   url.searchParams.delete("weapon");
   url.searchParams.delete("perks");
   url.searchParams.delete("shaped");
   history.replaceState(null, "", url);
+  setCookie(BUILD_COOKIE, token, 365);
 }
 
 function restoreBuildFromUrl() {
@@ -734,6 +747,28 @@ function restoreBuildFromUrl() {
       return null;
     }
   }
+  return buildFromParts(weaponId, choicesValue, shapedValue);
+}
+
+function restoreBuildFromCookie() {
+  const token = getCookie(BUILD_COOKIE);
+  if (!token) return null;
+  try {
+    const build = decodeBuild(token);
+    const weaponId = Number(build.w);
+    const choicesValue = Array.isArray(build.p) ? build.p.map(Number) : [];
+    const shapedValue = Object.fromEntries((Array.isArray(build.s) ? build.s : []).map(([level, originalChoice, rank, ShapeKey]) => [
+      level,
+      { originalChoice, rank, perk: { ShapeKey } },
+    ]));
+    return buildFromParts(weaponId, choicesValue, shapedValue);
+  } catch (error) {
+    console.warn("Ignored invalid saved proficiency build cookie", error);
+    return null;
+  }
+}
+
+function buildFromParts(weaponId, choicesValue, shapedValue) {
   const profile = state.profiles.find((candidate) => candidate.ProficiencyId === weaponId);
   if (!profile) return null;
   state.selected[profile.ProficiencyId] = profile.Levels.map((level, index) => {
@@ -914,7 +949,7 @@ try {
   }));
   state.filtered = [...state.profiles].sort((a, b) => weaponDisplayPriority(a.Name) - weaponDisplayPriority(b.Name));
   buildFamilies();
-  selectProfile(restoreBuildFromUrl() ?? state.profiles.find((p) => p.Name.toLowerCase().includes("glacial rod")) ?? state.profiles[0]);
+  selectProfile(restoreBuildFromUrl() ?? restoreBuildFromCookie() ?? state.profiles.find((p) => p.Name.toLowerCase() === "moonsilver epee") ?? state.profiles[0]);
 } catch (error) {
   $("#weaponName").textContent = "Tibia data unavailable";
   $("#weaponGrid").innerHTML = `<p>Calculator data could not be loaded.<br>${error.message}</p>`;
