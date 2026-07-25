@@ -364,7 +364,7 @@ ol, ul {
 }
 
 .right-sidebar__ads {
-  margin-top: 16px;
+  margin-top: 0;
 }
 
 .feature-item {
@@ -777,14 +777,6 @@ ol, ul {
 
 .rune-physical, .weapon-physical {
   color: #ffffff;
-}
-
-.rune-ethereal {
-  color: #c0d8ff;
-}
-
-.rune-divine {
-  color: #ffd700;
 }
 
 .level_row {
@@ -1672,6 +1664,29 @@ ol, ul {
   background-color: #0d1e38;
 }
 
+.proficiency-calculator-section {
+  width: 100%;
+  margin-bottom: 28px;
+}
+.proficiency-calculator-section h1 {
+  margin-bottom: 8px;
+}
+.proficiency-calculator-section > p {
+  margin-bottom: 14px;
+}
+
+.wp-calculator {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 600px;
+}
+
+@media (max-width: 900px) {
+  .wp-calculator {
+    min-height: 640px;
+  }
+}
 #vocation_exercise_form {
   padding-top: 20px;
   padding-left: 15px;
@@ -2492,47 +2507,6 @@ ol, ul {
   background-color: #0d1e38;
 }
 
-.tasks-sortable-header {
-  cursor: pointer;
-  position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  transition: background-color 0.2s ease;
-  padding-right: 40px;
-}
-
-.tasks-sortable-header::after {
-  content: "↕";
-  position: absolute;
-  right: 2px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #888;
-  font-size: 12px;
-  transition: color 0.2s ease;
-}
-
-.tasks-sortable-header:hover {
-  background-color: #14356d;
-}
-
-.tasks-sortable-header:hover::after {
-  color: #4CAF50;
-}
-
-.tasks-sortable-header.tasks-sort-asc::after {
-  content: " ▲";
-  color: #4CAF50;
-  font-weight: bold;
-}
-
-.tasks-sortable-header.tasks-sort-desc::after {
-  content: " ▼";
-  color: #4CAF50;
-  font-weight: bold;
-}
-
 .flex {
   display: flex;
 }
@@ -2877,75 +2851,4 @@ ol, ul {
   color: #e53935;
   font-size: 18px;
   font-weight: bold;
-}
-
-/* Proficiency Refinement - weapon accordion (overrides the generic .expandable-div look) */
-button.proficiency-weapon-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 14px 20px !important;
-  background: linear-gradient(135deg, #0d1e38 0%, #14294d 100%) !important;
-  border: none !important;
-  border-left: 4px solid #2d8cf8 !important;
-  border-radius: 8px !important;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
-  transition: background 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-}
-
-button.proficiency-weapon-toggle:hover {
-  background: linear-gradient(135deg, #14294d 0%, #1c4b9b 100%) !important;
-  border-color: rgba(45, 140, 248, 0.7137254902) !important;
-  box-shadow: 0 4px 10px rgba(45, 140, 248, 0.35);
-  transform: translateX(2px);
-}
-
-button.proficiency-weapon-toggle:active {
-  transform: translateX(0);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-button.proficiency-weapon-toggle.active-expanded-div {
-  background: linear-gradient(135deg, #1c4b9b 0%, #14294d 100%) !important;
-  border-left-color: #7db8ff !important;
-}
-
-button.proficiency-weapon-toggle:after {
-  content: "\25BE" !important;
-  font-size: 14px !important;
-  font-weight: normal;
-  float: none;
-  margin-left: 10px;
-  display: inline-block;
-  transition: transform 0.25s ease;
-}
-
-button.proficiency-weapon-toggle.active-expanded-div:after {
-  content: "\25BE" !important;
-  transform: rotate(180deg);
-}
-
-.proficiency-weapon-content {
-  text-align: left;
-  margin: 0 0 10px 2px;
-  padding: 2px 20px 14px 24px;
-  border-left: 4px solid rgba(45, 140, 248, 0.35);
-}
-
-.proficiency-weapon-content ol {
-  margin: 8px 0 0 0;
-  padding-left: 20px;
-}
-
-.proficiency-weapon-content ol li {
-  margin-bottom: 6px;
-  color: #eee;
 }/*# sourceMappingURL=main.css.map */
