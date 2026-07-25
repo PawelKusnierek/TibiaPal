@@ -82,14 +82,16 @@
 
         <div id="banner">
             {% if page.top_banner == "adsense" %}
-            <!-- TopBanner -->
-            <ins class="adsbygoogle"
-                style="display:inline-block;width:780px;height:90px"
-                data-ad-client="ca-pub-2936542406889680"
-                data-ad-slot="4379838481"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <!-- TopBanner: min-height reserves the slot's footprint even if the ad is blocked -->
+            <div style="min-height:90px">
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:780px;height:90px"
+                    data-ad-client="ca-pub-2936542406889680"
+                    data-ad-slot="4379838481"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
             {% else %}
             <span class="tibiatrade_span">Featured on <a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank"><b>TibiaTrade</b>:</a></span>
             <iframe id="tibiatrade" src="https://tibiatrade.gg/iframe/highlighted/" title="TibiaTrade" loading="lazy" scrolling="no"></iframe>
