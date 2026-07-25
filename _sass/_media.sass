@@ -1,3 +1,7 @@
+/* Mobile top ad - hidden by default, shown only on small screens */
+#mobile-top-ad
+    display: none
+
 /* Ensure navigation stays on the left for very wide screens */
 @media (min-width: 1401px)
     #header
@@ -73,6 +77,15 @@
         width: 100%
 
 @media (max-width: 768px)
+    /* Mobile top ad bar - sits in normal document flow so it scrolls away
+       naturally, and content below it just flows after it (any ad size,
+       no overlap, no phantom gap when blocked/unfilled). */
+    #mobile-top-ad
+        display: block
+        width: 100%
+        text-align: center
+        overflow: hidden
+
     #left-sidebar
         width: 0
         overflow: hidden
@@ -115,9 +128,12 @@
         scrollbar-width: thin
         scrollbar-color: #1c4b9b #061021
     
-    /* Navigation toggle button */
+    /* Navigation toggle button - sticky so it sits right below the ad while
+       the ad is in view, then sticks to the very top once the ad scrolls
+       out of view, instead of permanently reserving space for it. */
     .nav-toggle
-        position: fixed
+        position: -webkit-sticky
+        position: sticky
         top: 0
         left: 0
         z-index: 1001
@@ -171,7 +187,6 @@
     /* Adjust main content - no margin when collapsed */
     #main-content
         margin-left: 0
-        margin-top: 48px
         width: 100%
         min-width: 100vw
     
