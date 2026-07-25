@@ -81,11 +81,22 @@
         </div>
 
         <div id="banner">
+            {% if page.top_banner == "adsense" %}
+            <!-- TopBanner -->
+            <ins class="adsbygoogle"
+                style="display:inline-block;width:780px;height:90px"
+                data-ad-client="ca-pub-2936542406889680"
+                data-ad-slot="4379838481"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            {% else %}
             <span class="tibiatrade_span">Featured on <a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank"><b>TibiaTrade</b>:</a></span>
             <iframe id="tibiatrade" src="https://tibiatrade.gg/iframe/highlighted/" title="TibiaTrade" loading="lazy" scrolling="no"></iframe>
-                <!--<a href="https://store.steampowered.com/app/2948410/Talus/" target="_blank"> 
+                <!--<a href="https://store.steampowered.com/app/2948410/Talus/" target="_blank">
                     <img src={{"images/talus/small_capsule.png" |relative_url}} style="width:300px"  alt="Logo of upcoming ARPG 'Talus'">
                 </a>-->
+            {% endif %}
         </div>
         <div id="right-header">
             <!-- 275x90 Top -->
