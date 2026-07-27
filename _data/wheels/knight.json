@@ -1,5 +1,5 @@
 {
-    "lesser_gems": ["Mitigation", "Hit Points", "Any Elemental Resistance"],
+    "lesser_gems": ["Hit Points", "Mitigation", "Any Elemental Resistance"],
     "greater_gems": ["Fierce Berserk Base Damage", "Front Sweep Base Damage", "Fair Wound Cleansing", "Combat Mastery Mastery", "Executioner's Throw Mastery"],
     "builds": [
         {

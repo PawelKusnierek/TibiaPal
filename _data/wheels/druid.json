@@ -1,5 +1,5 @@
 {
-    "lesser_gems": ["Mitigation", "Hit Points", "Any Elemental Resistance", "Mana"],
+    "lesser_gems": ["Hit Points", "Mitigation", "Any Elemental Resistance", "Mana"],
     "greater_gems": ["Twin Bursts Mastery", "Blessing of the Grove Mastery", "Strong Ice Wave Base Damage"],
     "builds": [
         {
