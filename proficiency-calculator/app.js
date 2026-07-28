@@ -182,7 +182,7 @@ function skillArtworkFrame(skillId) {
 
 function vocation(profile) {
   const type = profile?.WeaponType ?? weaponType(profile.Name);
-  return ({ Sword: "Knight", Axe: "Knight", Club: "Knight", Bow: "Paladin", Crossbow: "Paladin", Throw: "Paladin", Fist: "Monk", Wand: "Sorcerer", Rod: "Druid" })[type] ?? "Knight";
+  return ({ Sword: "Knight", Axe: "Knight", Club: "Knight", Bow: "Paladin", Crossbow: "Paladin", Throw: "Paladin", Other: "Paladin", Fist: "Monk", Wand: "Sorcerer", Rod: "Druid" })[type] ?? "Knight";
 }
 
 function spellDetails(spellId, profile) {
