@@ -312,11 +312,19 @@ function openPerkPicker(levelIndex, cost, isNew = false) {
   $("#reshapeBackdrop").hidden = false;
 }
 
+function perkName(perk) {
+  return perk.ShapeName
+    ?? perk.SpellName
+    ?? perk.ShapeLabel?.replace(/\s*[+:]?\s*\{value\}.*$/, "")
+    ?? perkNames[perk.Type]
+    ?? "Weapon perk";
+}
+
 function renderPerkOptions() {
   const query = $("#reshapeFilter").value.trim().toLowerCase();
   const matches = state.picker.pool
-    .map((perk, index) => ({ perk, index, label: perkLabel(perk) }))
-    .filter(({ label }) => !query || label.toLowerCase().includes(query));
+    .map((perk, index) => ({ perk, index, label: perkLabel(perk), name: perkName(perk) }))
+    .filter(({ label, name }) => !query || label.toLowerCase().includes(query) || name.toLowerCase().includes(query));
   const select = $("#reshapeSelect");
   select.innerHTML = matches.map(({ index, label }) => `<option value="${index}">${label}</option>`).join("");
   const preferred = matches.find(({ perk }) => perkLabel(perk) !== perkLabel(state.picker.currentPerk)) ?? matches[0];
@@ -348,11 +356,7 @@ function makeReshapeRow(perk, index) {
   }
   const names = document.createElement("span");
   const title = document.createElement("strong");
-  title.textContent = perk.ShapeName
-    ?? perk.SpellName
-    ?? perk.ShapeLabel?.replace(/\s*[+:]?\s*\{value\}.*$/, "")
-    ?? perkNames[perk.Type]
-    ?? "Weapon perk";
+  title.textContent = perkName(perk);
   const category = document.createElement("small");
   category.textContent = perk.ShapeCategory ?? perkNames[perk.Type] ?? "Weapon proficiency";
   names.append(title, category);
