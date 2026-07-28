@@ -83,8 +83,6 @@ button { cursor: pointer; }
 .modify.clear-shaped { height: 21px; padding-left: 0; filter: none; text-align: center; font-size: 11px; color: #d99; border-color: #6a3232; background: linear-gradient(#3a2323, #241515); }
 .modify.clear-shaped:hover { filter: brightness(1.25); }
 .selection-hint { display: block; min-height: 30px; margin: 0 0 8px; padding: 4px 6px; color: #94b6d8; font: 11px/1.35 Verdana, Arial, sans-serif; text-align: left; }
-.price { color: #e74336; font-weight: bold; }
-.shard { color: #75d5f0; padding-left: 2px; font-size: 9px; }
 .segmented { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
 .segmented button { height: 21px; padding: 0; font-size: 11px; font-weight: bold; }
 .segmented button.active { color: white; background: #555652; }
@@ -167,8 +165,6 @@ footer button:active, button.active { filter: brightness(1.25); }
 .reshape-rank-effect.rank-maximum { color: #a7f52a; font-weight: bold; }
 .reshape-window footer { flex: 0 0 58px; height: 58px; padding: 10px 22px; border-color: #253247; }
 .reshape-window footer button { min-width: 105px; height: 34px; }
-.picker-cost { margin: 0 auto 0 0; color: #aab3c4; font-size: 13px; }
-.picker-cost .shard { color: #5fd4ee; }
 
 .build-summary {
   width: 100%; margin: 14px auto 0; padding: 16px; border: 1px solid #315f91;
@@ -247,7 +243,6 @@ footer button:active, button.active { filter: brightness(1.25); }
   .reshape-rank-effect:nth-child(3)::before { content: "Rank 10"; }
   .reshape-window footer { flex: 0 0 auto; height: auto; min-height: 58px; padding: 8px 10px; }
   .reshape-window footer button { min-width: 82px; height: 32px; margin-left: 2px; padding: 0 6px; }
-  .picker-cost { font-size: 11px; }
 }
 }
 
