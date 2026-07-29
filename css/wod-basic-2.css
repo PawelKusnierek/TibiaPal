@@ -1,0 +1,1010 @@
+/* BEGIN - TEST - do not copy */
+#tmp-browser-info #tmp-browser-info-chromium {
+  display: block;
+}
+#tmp-browser-info #tmp-browser-info-internet-explorer-new {
+  display: none;
+}
+#tmp-browser-info #tmp-browser-info-internet-explorer-old {
+  display: none;
+}
+/* END - TEST - do not copy */
+
+/* disable browserbased appearences of input types */
+input[type=search] {
+  -webkit-appearance: textfield;
+}
+/** -------------------------------
+ *  Stylesheet declarations for the
+ *  MOBILE MENU
+ *  -------------------------------
+ */
+
+#MobileMenu {
+  display: none;
+  top: 0px;
+  height: 70px;
+  margin-top: 0px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  font-size: 11pt;
+  z-index: 1000;
+  line-height: 11pt;
+}
+#MobileMenu nav {
+  min-height: 70px;
+  background-image: url(../images/global/header/mobile/header-background.png);
+  background-repeat: repeat-x;
+  background-size: 100% 70px;
+}
+.MenuSticky {
+  margin-top: -75px;
+}
+#MobileMenu #MyAccount {
+  top: 10px;
+  font-size: 35px;
+  right: 15px;
+  float: right;
+  text-align: center;
+}
+.MobileTibiaLogo {
+  position: relative;
+  top: 10px;
+  width: 120px;
+  height: 47px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: contain;
+  background-image: url(../images/global/header/mobile/tibia-logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.MobileTibiaLogo a {
+  display: block;
+  width: 120px;
+  height: 47px;
+}
+#MobileMenuBottom {
+  position: absolute;
+  top: 66px;
+  width: 100%;
+  height: 10px;
+  background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1));
+  z-index: 100;
+}
+.MobileMenuIconContainer {
+  float: left;
+  margin-left: 15px;
+}
+#MobileMenu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#MobileMenu .Level1Entry {
+  font-weight: bold;
+  padding-left: 10px;
+  border: 17px solid ;
+  border-image-source: url(../images/global/header/mobile/menu-borders.png);
+  border-image-slice: 17;
+  text-transform: uppercase;
+}
+#MobileMenu .MobileMenuItems {
+  position: relative;
+  display: none;
+  width: 100%;
+  margin-top: 20px;
+  margin-right: 15px;
+  padding-top: 5px;
+  color: #610b0b;
+  background-color: rgb(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 10px 10px rgb(0, 0, 0, 0.5);
+}
+#MobileMenu .Level1Block {
+  width: 240px;
+}
+#MobileMenu .Level1Block {
+  border-bottom: 1px solid #610b0b;
+  background-image: url(../images/global/header/mobile/menu-level-1-background.png);
+}
+#MobileMenu .Level2Block {
+  display: none;
+  border-top: 1px solid #610b0b;
+  background-color: #f1e0c6;
+}
+#MobileMenu .Level2Block a {
+  padding: 10px;
+  padding-left: 30px;
+}
+#MobileMenu .Level1Block:last-of-type .Level2Block:last-of-type {
+  border-bottom: 0px;
+}
+#MobileMenu .MobileMenuItems a {
+  display: block;
+}
+.MobileNavigationMainElement {
+  position: absolute;
+  display: block;
+  width: 45px;
+  height: 47px;
+  background-image: url(../images/global/header/mobile/button-background-up.png);
+  background-size: contain;
+}
+.MobileNavigationMainElement a::after,
+#MobileMenu .MobileNavigationMainElement::after {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 18px;
+  top: 14px;
+  left: 12px;
+  content: "";
+  background-size: contain;
+}
+#MobileMenu label::after {
+  background-image: url(../images/global/header/mobile/button-icon-menu.png);
+}
+#MobileMenuIcon:checked + .MobileNavigationMainElement {
+  background-image: url(../images/global/header/mobile/button-background-down.png);
+}
+#MobileMenuIcon:checked + .MobileNavigationMainElement::after {
+  top: 16px;
+  background-image: url(../images/global/header/mobile/button-icon-close.png);
+}
+#MobileMenu #MyAccount::after {
+  background-image: url(../images/global/header/mobile/button-icon-account.png);
+}
+#MobileMenu #MobileShortMenuIcon:checked + #MyAccount::after {
+  top: 16px;
+  background-image: url(../images/global/header/mobile/button-icon-close.png);
+}
+#MobileMenu #MobileShortMenuIcon:checked + #MyAccount {
+  background-image: url(../images/global/header/mobile/button-background-down.png);
+}
+.MobileNavigationLinkContainer a:link,
+.MobileNavigationLinkContainer a:visited,
+.MobileNavigationLinkContainer a:focus {
+  color: #610b0b;
+  text-decoration: none;
+}
+.MobileMenuItems .MobileNavigationLinkContainer a:active,
+.MobileMenuItems .MobileNavigationLinkContainer a:hover {
+  color: #f1e0c6;
+  background-color: #8a2727;
+  text-decoration: none;
+}
+#MobileMenu .MobileMenuActiveItem {
+  background-color: #610b0b;
+}
+.MobileNavigationLinkContainer.MobileMenuActiveItem a:link,
+.MobileNavigationLinkContainer.MobileMenuActiveItem a:visited,
+.MobileNavigationLinkContainer.MobileMenuActiveItem a:focus {
+  color: #f1e0c6;
+}
+label.MobileMenuIconContainer {
+  top: 10px;
+}
+input#MobileMenuIcon {
+  display: none
+}
+
+#MobileMenu #MobileMenuIcon:checked + .MobileMenuIconContainer + .MobileMenuItems {
+  display: block;
+}
+#MobileMenu .Level1Entry::after {
+  width: 15px;
+  height: 15px;
+  margin-left: 25px;
+  margin-right: 0px;
+  float: right;
+  content: "";
+  background-image: url(../images/global/header/mobile/menu-level-1-closed.png);
+  background-size: 15px;
+  background-repeat: no-repeat;
+}
+#MobileMenu .Level1Entry.Level1ItemOpen::after {
+  background-image: url(../images/global/header/mobile/menu-level-1-open.png);
+}
+
+input#MobileShortMenuIcon {
+  display: none
+}
+#MobileMenu .MobileShortMenuItemsList {
+  width: fit-content;
+  margin-right: 0px;
+  margin-left: auto;
+  border-top: none;
+  border: 17px solid;
+  border-image-source: url(../images/global/header/mobile/menu-borders.png);
+  border-image-slice: 17;
+  background-image: url(../images/global/header/mobile/menu-level-1-background.png);
+}
+#MobileMenu .MobileShortMenuItems {
+  width: 100%;
+  right: 0px;
+  margin-right: 0px;
+  margin-left: auto;
+  background-color: rgb(0, 0, 0, 0.5);
+  box-shadow: -2px 2px 10px 10px rgb(0, 0, 0, 0.5);
+}
+#MobileMenu .MobileShortMenuItems li {
+  display: flex;
+  justify-content: center;
+  background-color: #edcea6;
+  margin-left: auto;
+  width: 165px;
+  margin-top: 17px;
+}
+#MobileMenu .MobileShortMenuItems li:first-child {
+  margin-top: 0;
+}
+#MobileMenu #MobileShortMenuIcon:checked + .MobileShortMenuIconContainer + .MobileMenuItems {
+  display: block;
+}
+#BackToTopButton {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  box-shadow: 2px 2px 4px 1px rgb(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+#BackToTopButton #BackToTopArrowUp {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  left: 15px;
+  top: 0px;
+  text-align: center;
+}
+#BackToTopButton #BackToTopArrowUp::after {
+  background-image: url(../images/global/header/mobile/button-icon-up.png);
+}
+
+/* narrow version */
+@media (max-width: 1150.01px) {
+  .main-site-container {
+    max-width: 1150px;
+  }
+  #VocationList {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #WheelOfDestinySelection {
+    display: flex;
+    flex-direction: column;
+  }
+  #PerkInformationTables {
+    display: flex;
+    width: 100%;
+  }
+  #PerkInformationTables > .TableContainer {
+    height: fit-content;
+  }
+  #PerkInformationTables > div:first-child {
+    margin-right: 7px;
+  }
+  #PerkInformationTables > div:last-child {
+    margin-left: 7px;
+    margin-top: 0px;
+  }
+  #VocationList .OptionContainer {
+    margin-right: 10px;
+    min-width: 90px;
+    text-align: left;
+  }
+}
+
+/* small devices */
+@media (max-width: 768.01px) {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-position: top center;
+  }
+  .main-site-container {
+    grid-template-columns: auto;
+    grid-template-areas:
+      "header"
+      "navigation"
+      "content"
+      "sidebar";
+  }
+  .main-site-container {
+    max-width: unset;
+    min-width: unset;
+  }
+  .main-header {
+    visibility: visible;
+  }
+  #MobileMenu {
+    display: block;
+  }
+  body {
+    /* TODO: remove oder edit after switching artwork */
+    background-image: url(../images/global/header/background-artwork-mobile.webp) !important;
+  }
+  #BackToTopButton {
+    display: block;
+  }
+  .NotOnMobile {
+    display: none;
+  }
+  /* hide desktop menu */
+  .main-menu {
+    display: none;
+  }
+  /* hide themeboxes */
+  .Themeboxes {
+    display: none;
+  }
+  .InfoBarSmallLogo {
+    display: inline;
+  }
+  .Content .Box {
+    margin-left: unset;
+    margin-right: unset;
+    border: unset;
+  }
+  .Content .Corner-tr,
+  .Content .Corner-br,
+  .Content .Corner-tl,
+  .Content .Corner-bl {
+    display: none;
+  }
+  .Content .Border_2,
+  .Content .Border_3 {
+    border: 0px;
+    margin: 0px;
+  }
+  .TableContainer .InnerTableContainer {
+    overflow-x: auto;
+  }
+  .Content .InnerTableContainer img {
+    max-width: 370px;
+  }
+  .InnerTableButtonRow .DivWithButton {
+    float: left;
+  }
+  .NavigationBarContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    line-height: 1.5;
+  }
+  .NavigationBarButtons {
+    margin-top: 10px;
+    order: unset;
+  }
+  .NavigationBarButtonSpacer {
+    font-size: 1px;
+    height: 4px;
+  }
+  .NavigationBarLinkList {
+    order: unset;
+  }
+  #TroubleTicketInfoBox {
+    right: 5px;
+    top: -120px;
+  }
+  /* Boosted Creature/Boss */
+  #RightArtwork {
+    display:none;
+  }
+  /* News */
+  .Content #NewsTicker .BoxContent {
+    padding: 0px !important;
+  }
+  .Content #FeaturedArticle #TeaserText {
+    height: unset;
+  }
+  .Content .NewsTable .NewsTableContainer {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .eventscheduleheadertop {
+    display: block;
+    min-width: unset;
+  }
+  .eventscheduleheaderdateblock {
+    position: relative;
+    width: unset;
+    margin-right: 10px;
+  }
+  .eventscheduleheaderblockright {
+    text-align: center;
+  }
+  .eventscheduleheadertop a {
+    font-size: 25px;
+  }
+  .Content #FeaturedArticle #TeaserText {
+    height: unset !important;
+  }
+  .Content #FeaturedArticle #Link {
+    bottom: 10px !important;
+    right: 10px !important;
+  }
+  .Content #FeaturedArticle #TeaserThumbnail {
+    margin-bottom: 15px;
+  }
+  /* About Tibia - Screenshots */
+  #ScreenshotThumbnailContainerTable {
+    width: unset;
+  }
+  #LightBoxClose {
+    display: none
+  }
+  #LightBoxContent {
+    position: fixed;
+    margin-top: 175px;
+    zoom: 0.5;
+  }
+  #LightBoxContent #ScreenshotContainer,
+  #LightBoxContent #ScreenshotContainer #ScreenshotImage {
+    width: inherit;
+    height: unset;
+  }
+  #LightBoxContent #ScreenshotContainer .ScreenshotTextRow,
+  #LightBoxContent .NavigationRow {
+    width: unset;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  #LightBoxContent .NavigationRow, #LightBoxContent .NavigationRow > .NavigationButton {
+    height: 60px;
+    line-height: 60px;
+    font-size: xx-large;
+  }
+  #LightBoxContent #ScreenshotContainer .ScreenshotTextRow {
+    font-size: x-large;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1px;
+  }
+  #LightBoxContent #ScreenshotContainer .ScreenshotTextRow:nth-child(2) {
+    margin-top: 10px;
+  }
+  /* Account Management - Login */
+  #accountmanagement .LoginBox .Cell,
+  #createaccount .LoginBox .Cell {
+    flex-basis: 120px;
+  }
+  #accountmanagement .LoginButtons .ButtonField .BigButton,
+  #createaccount .LoginButtons .ButtonField .BigButton {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #accountmanagement .LoginTable,
+  #createaccount .LoginTable {
+    display: flex;
+    flex-direction: column;
+  }
+  #accountmanagement .LoginButtons,
+  #createaccount .LoginButtons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  /* Account - Create Account */
+  #createaccount .CreateAccountFormInput, .ChangePasswordFormInput, .SetPasswordFormInput {
+    margin-right: 15px;
+  }
+  #createaccount .PWStrengthToolTip {
+    position: absolute;
+    left: -140px;
+    top: 50px;
+    width: unset;
+  }
+  #createaccount .HelperDivArrow {
+    display: none;
+  }
+  #createaccount input[type=checkbox] {
+    display: block;
+    float: left;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    clear: both;
+  }
+  #accountmanagement .AvailableCWTIndicator {
+    position: relative;
+    top: unset;
+    left: unset;
+    margin-left: 15px;
+  }
+  #accountmanagement .AvailableCWTIndicator > span:first-child {
+    float: unset;
+    margin-right: 15px;
+  }
+  /* Library - Experience Table */
+  #ExperienceTable .FlexTable {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #ExperienceTable td {
+    flex: 50 1 45%;
+  }
+  /* Library - Genesis */
+  .Genesis-Navigation span {
+    margin: 0 15px;
+    text-align: center;
+  }
+  /* Library - Soundtrack */
+  .SingleTrack {
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  /* Reports */
+  .WebsiteReport {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .WebsiteReportReason {
+    display: block;
+  }
+  .WebsiteReportReason > .LabelV{
+    display: none;
+  }
+  .ReportLengthCounter {
+    margin-bottom: 5px;
+  }
+  #reason_description, #translation_input, #comment_input{
+    max-width: none;
+    margin-right: 0px;
+  }
+  .ReportedContent {
+    overflow-wrap: anywhere;
+  }
+  .ReportButtonRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* Community - Fansites */
+  .Content #FansiteFilters {
+    position: relative;
+  }
+  .Content #fansites {
+    min-width: unset;
+  }
+  /* Community - Guilds */
+  .GuildViewCols col:nth-child(2) {
+    display: none;
+  }
+  .GuildViewInformationBlocks {
+    display: flex;
+    flex-direction: column;
+  }
+  .GuildViewInformationBlocks #NavigationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    height: inherit;
+  }
+  .GuildInformationTable {
+    padding-right: 0;
+  }
+  /* Community Wheel of Destiny Planner */
+  #wheelofdestinyplanner .LabelV150 {
+    white-space: normal;
+  }
+  #VocationList {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #wod-wrapper > :is(:nth-child(3), :nth-child(4)) {
+    display: none;
+  }
+  #VocationSelection .TableContent {
+    border-spacing: 0 2px;
+  }
+  #VocationSelection .CodeExport, #VocationSelection .CodeImport, #VocationSelection .ButtonRow {
+    display: table-row;
+  }
+  #VocationSelection .ButtonRow {
+    text-align: -moz-center;
+    text-align: -webkit-center;
+  }
+  #VocationSelection .ButtonRow .BigButton {
+    margin: 10px 0;
+  }
+  #wod-code-mobile {
+    line-break: anywhere;
+  }
+  .WheelOfDestinyWrapper .CodeColumn {
+    padding-right: 15px;
+  }
+  #WheelOfDestiny{
+    width: 100%;
+    border: 1px solid #55636c;
+    background-color: #d4c0a1;
+    box-shadow: 3px 3px 2px #875f3e;
+    margin-top: 0;
+  }
+  #WheelOfDestiny > ::-webkit-scrollbar {
+    margin-bottom: 10px;
+  }
+  ::-webkit-scrollbar {
+    width: 10px; left:-100px;
+}
+  #WheelOfDestinySelection {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #WheelOfDestinySelection > td:nth-child(2){
+    overflow-x: auto;
+  }
+  #WheelOfDestinySelection > td:nth-child(2) > canvas{
+    margin: 15px 10px;
+  }
+  #wod-selection-box-medium:not(.hide) {
+    display: flex;
+    flex-direction: column;
+  }
+  #WheelOfDestinySelection .SmallButtonRow {
+    position: relative;
+    margin-bottom: 20px;
+    bottom: 0;
+    order: -1;
+  }
+  #PerkInformationTables {
+    display: flex;
+    flex-direction: column;
+    padding-right: 0;
+  }
+  #PerkInformationTables > .TableContainer {
+    width: 100%;
+  }
+  #PerkInformationTables > div:first-child {
+    margin-top: 16px;
+  }
+  #PerkInformationTables > :nth-child(2) {
+    display: none;
+  }
+  #PerksSummary {
+    display: flex;
+    flex-direction: column;
+  }
+  #PerksSummary td {
+    width: 99%;
+  }
+  #PerksSummary .PerkTableMarginTopOnMobile {
+    margin-top: 8px;
+  }
+  #wod-conviction-perks-header {
+    margin-top: 8px;
+  }
+  #AddPerkButtons {
+    margin-right: 5px;
+  }
+  #wod-canvas {
+    display: block;
+  }
+  .WheelOfDestinyWrapper > Table {
+    width: 100%;
+  }
+  /* Charactertrade */
+  #CharacterDetails > tbody > tr > td > table > tbody > tr:first-child {
+    display: flex;
+    flex-direction: column;
+  }
+  #CharacterDetails > tbody > tr > td > table > tbody > tr:first-child > td:first-child{
+    margin-bottom: 5px;
+  }
+  #CharacterDetailsGeneral {
+    width: 100%;
+  }
+  .CurrentBid {
+    order: 0;
+  }
+  .AuctionItemsViewBox {
+    margin-right: 4px;
+  }
+  .AuctionOutfit {
+    margin-right: 4px;
+  }
+  .ShortAuctionData, .SpecialCharacterFeatures {
+    order: 1;
+    margin-right: 0px;
+  }
+  .DisplayOptionsContent  {
+    min-width: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-bottom: 5px;
+  }
+  .DisplayOptionsContent .InInputResetButton {
+    position: relative;
+    left: 0;
+    margin-top: -25px;
+    margin-bottom: 6px;
+  }
+  #CharacterAuctionSearchBlock,
+  #CharacterAuctionApplyBlock
+  .CharacterAuctionItemSearch,
+  #CurrentTradesItemSearch {
+    display: flex;
+    flex-direction: column;
+  }
+  .DisplayOptionsButton {
+    position: relative;
+    order: 5;
+    margin: 5px auto;
+  }
+  .DisplayOptionsRadioButtonRow {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .AuctionInput:not(.AuctionInputSearch, .LevelRangeInput), .AuctionInputLong {
+    width: 45%;
+    max-width: 220px;
+    min-width: 130px;
+    margin-bottom: 2px;
+  }
+  .RangeFilter {
+    display: flex;
+    justify-content: center;
+  }
+  .LevelRange {
+    margin-top: 5px;
+  }
+  .LevelRangeInput {
+    min-width: 100px;
+    max-width: 205px;
+    width: 42%;
+  }
+  .DisplayOptionsContent .DisplayOptionsLabel {
+    width: 90%;
+    margin-bottom: 5px;
+  }
+  /* Support - FAQ */
+  .FAQSearchForm {
+    height: 35px;
+  }
+  .FAQPermanentBlock {
+    flex-direction: column-reverse;
+  }
+  .FAQBlock {
+    width: 100%;
+    margin: 0 0;
+    margin-bottom: 10px;
+  }
+  .FAQBlockRight, .FAQBlockLeft {
+    padding: 0 0;
+  }
+  /* payment process */
+  .ProductCategoryTabRow {
+    zoom: 0.606;
+  }
+  .OptionsContainer .HelperDivIndicator {
+    display: block;
+  }
+  /* Tibia Observer */
+  .TibiaObserverTokenButton:empty {
+    display: none;
+  }
+  .TibiaObserverTokenButtonRow .TibiaObserverTokenButton {
+    margin: 8px 5px;
+  }
+  .TibiaObserverTokenButtonRow .TibiaObserverTokenButton:nth-child(2) {
+    order: 2;
+  }
+  /* Forum */
+  #ThreadReviewTable tr, .ForumPostRow{
+    display: flex;
+    flex-direction: column;
+  }
+  #ThreadReviewTable tr > td{
+    width: inherit;
+  }
+  .ForumPostRowMessage {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #forum_pagetext {
+    height: 300px;
+    width: 98%;
+    max-width: 420px;
+  }
+  .PostIconList, .ForumPostButtonRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .PostIconList {
+    max-width: 420px;
+  }
+  .ForumPostButtonRow > td {
+    margin: 0 5px;
+    margin-bottom: 10px;
+  }
+  .ForumPostButtonRow {
+    justify-content: center;
+  }
+  .PostSubject {
+    width: 95%;
+    max-width: 310px
+  }
+  .PostUpper {
+    flex-direction: column;
+  }
+  .ForumMobileElements {
+    display: initial;
+  }
+  .ForumDesktopElements, .PostSeparatorV, .ForumPostHeaderAuthor {
+    display: none;
+  }
+  .SmileyTable > tbody {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .SmileyTable > tbody > tr {
+    flex: 0 0 110px;
+  }
+  .ForumPostHeaderText {
+    width: 100%;
+  }
+  .PostCharacterText {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    max-width: 300px;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  .PostCharacterText div {
+    width: 50%;
+    margin: 0 5px;
+  }
+  .CipPost, .ForumPostHeaderCell, .ForumContentFooter {
+    border: 1px solid #55636c;
+  }
+  .PostText {
+    width: 95%;
+    margin-left: 5px;
+    overflow-wrap: anywhere;
+  }
+  .PostText, .PostLower {
+    border-top: 1px solid #fff0d9;
+  }
+  .PostDetailsHelper, .PostActions {
+    width: 45%;
+    margin: 0 5px;
+  }
+  .PostActions .AdditionalBox {
+    float: left;
+    text-align: left;
+  }
+  .PostActions {
+    width: inherit;
+    margin-left: 0;
+    margin-right: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .PostLower {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+  }
+  .TableHeaderRightButton {
+    margin-left: 2px;
+  }
+  #ThreadOverview td:nth-last-child(-n+2){
+    display: table-cell;
+  }
+  #ThreadOverview td:not(:nth-last-child(-n+2)), #BoardOverview td:not(:nth-last-child(-n+1)) {
+    display: none;
+  }
+  #BoardOverview td:last-child, #BoardOverview td:first-child {
+    display: table-cell;
+  }
+  .ThreadStarter {
+    font-size: smaller;
+    vertical-align: text-bottom;
+  }
+  .ThreadTitle {
+    min-height: 2.5em;
+  }
+  .LastPostInfo {
+    width: auto;
+    font-size: xx-small;
+  }
+  .LastPostInformation {
+    font-size: xx-small;
+    text-indent: -62px;
+    margin-left: 62px;
+  }
+  .LastPostInformation > div, .PostNumericInformation, .LastEditedBy {
+    font-size: xx-small;
+    vertical-align: text-bottom;
+  }
+  .LastPostInformation div:not(:first-child) {
+    margin-left: 4px;
+  }
+  .ThreadPages {
+    float: right;
+  }
+  /* additional top scrollbar */
+  .TableScrollbarWrapper {
+    display: none;
+    height: 15px;
+    margin-left: 3px;
+    overflow-x: scroll;
+  }
+  .TableScrollbarContainer {
+    display: block;
+    height: 1px;
+  }
+  /* scrollbars */
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: 4px;
+    width: 0px;
+  }
+  ::-webkit-scrollbar:vertical {
+    width: 0px;
+  }
+  ::-webkit-scrollbar:horizontal {
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb:horizontal {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+  }
+  ::-webkit-scrollbar-track:horizontal {
+    border-radius: 10px;
+    background-color: #ffffff;
+  }
+}
+@media (max-width: 544.01px) {
+  #DruidImg {
+    display: none !important;
+  }
+  .ModIconCharBazaarBasicMod {
+    display: none;
+  }
+  .ModIconCharBazaarSupremeMod {
+    display: none;
+  }
+}
+
+/* --------------------- */
+/* Tibia Token Exchange */
+/* --------------------- */
+@media (max-width: 500px) {
+  .ReownButtonWrapper .HelperDivIndicator {
+    margin-top: 6px;
+  }
+  #tibiatoken-pagewrapper .CurrencyDisplay .ExchangeLabel {
+    width: max-content;
+  }
+  #tibiatoken-pagewrapper .ExchangeFlexbox {
+    flex-direction: column;
+    align-items: center;
+  }
+  #tibiatoken-pagewrapper .ExportInfo,
+  #tibiatoken-pagewrapper .ImportInfo {
+    order: 1;
+    margin-top: 4px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #exchange-status-container #MainContainer {
+    margin-bottom: 0;
+  }
+  #exchange-status-container .StepText {
+    display: none;
+  }
+  #tibiatoken-pagewrapper .CopyNotification {
+    left: 28px;
+  }
+}

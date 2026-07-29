@@ -1,0 +1,192 @@
+/* ------- */
+/* IE 9-11 */
+/* ------- */
+
+@media screen\0, body {
+
+  /* BEGIN - TEST - do not copy */
+  #tmp-browser-info #tmp-browser-info-chromium {
+    display: none;
+  }
+  #tmp-browser-info #tmp-browser-info-internet-explorer-new {
+    display: block;
+  }
+  #tmp-browser-info #tmp-browser-info-internet-explorer-old {
+    display: none;
+  }
+  /* END - TEST - do not copy */
+
+  body {
+    height: 100%;
+  }
+  .main-site-container {
+    position: relative;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1280px;
+    height: 100%;
+  }
+  .main-header {
+    position: relative;
+    text-align: center;
+  }
+  .main-menu {
+    position: absolute;
+    top: 155px;
+    width: 140px;
+  }
+  .main-content {
+    position: absolute;
+    top: 155px;
+    left: 205px;
+    width: 875px;
+  }
+  .main-themboxes {
+    position: relative;
+    left: 1085px;
+    width: 200px;
+    margin-top: 0px;
+  }
+  .main-header #background-image {
+    display: none;
+  }
+  #MobileMenu {
+    display: none;
+  }
+  #BackToTopButton {
+    display: none;
+  }
+  .main-menu {
+    display: block;
+  }
+  .main-themboxes {
+    display: block;
+  }
+  #MobileMenu .Level1Block,
+  #MobileMenu .Level2Block {
+    border-color: #610b0b;
+  }
+  #MobileMenu .Level1Entry,
+  #MobileMenu .Level2Entry,
+  #MobileMenu .MobileShortMenuItems li {
+    border-color: #edcea6;
+  }
+  #eventscheduletablecontainer .TableContainer {
+    overflow-x: scroll;
+  }
+  .AuctionBody {
+    width: 712px;
+  }
+  .BigButtonText {
+    filter: progid:DXImageTransform.Microsoft.Glow(Color=#000000,Strength=1);
+  }
+  #cookiedialogbox,
+  #cookiedetailsbox {
+    width: 607px;
+  }
+  #accountmanagement .LoginBox,
+  #createaccount .LoginBox {
+    display: block;
+  }
+  .AccountBadges {
+    display: block;
+    word-wrap: normal;
+  }
+  .Creatures {
+    display: block;
+  }
+  .Genesis-Navigation {
+    display: block;
+    text-align: center;
+  }
+  .Genesis-Navigation span:first-child {
+    float: inline-start;
+    margin-right:20px;
+  }
+  .Genesis-Navigation span:last-child {
+    float: inline-end;
+    margin-left:20px;
+  }
+  .Genesis-Navigation span:only-child {
+    margin: 0 auto;
+    float: none;
+  }
+  /* Forum */
+  .ThreadReviewPosting {
+    word-break: break-all;
+  }
+  #soundtrack audio {
+    max-width: 382px;
+    margin-top: -3px;
+  }
+}
+
+/* ------- */
+/* IE <= 9 */
+/* ------- */
+
+@media \0screen\,screen\9 {
+
+  /* BEGIN - TEST - do not copy */
+  #tmp-browser-info #tmp-browser-info-chromium {
+    display: none;
+  }
+  #tmp-browser-info #tmp-browser-info-internet-explorer-new {
+    display: none;
+  }
+  #tmp-browser-info #tmp-browser-info-internet-explorer-old {
+    display: block;
+  }
+  /* END - TEST - do not copy */
+
+  /* only for old internet explorers */
+  .TableContentContainer {
+    margin-right: 6px;
+    margin-bottom: 4px;
+  }
+  body {
+    height: 100%;
+  }
+  .main-site-container {
+    position: relative;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1280px;
+    height: 100%;
+  }
+  .main-header {
+    position: relative;
+    text-align: center;
+  }
+  .main-menu {
+    position: absolute;
+    top: 155px;
+    width: 140px;
+  }
+  .main-content {
+    position: absolute;
+    top: 155px;
+    left: 210px;
+    width: 790px;
+  }
+  .main-themboxes {
+    position: relative;
+    left: 1000px;
+    width: 200px;
+    margin-top: 0px;
+  }
+  .main-header #background-image {
+    display: none;
+  }
+  .AuctionBody {
+    width: 712px;
+  }
+  .BigButtonText {
+    filter: progid:DXImageTransform.Microsoft.Glow(Color=#000000,Strength=1);
+  }
+  .PWStrengthIndicator {
+    display: none;
+  }
+}
