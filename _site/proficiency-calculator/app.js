@@ -117,7 +117,7 @@ function weaponType(name) {
 
 function applyWeaponSprite(element, profile) {
   if (!profile.weapon?.sprite) return;
-  element.style.backgroundImage = `url('../${profile.weapon.sprite}?v=20260724-1')`;
+  element.style.backgroundImage = `url('../${profile.weapon.sprite}?v=20260729-2')`;
   element.style.setProperty("--sprite-x", 0);
   element.style.setProperty("--sprite-y", 0);
 }
@@ -882,7 +882,7 @@ $("#clearShapedPerkButton").addEventListener("click", () => {
 
 try {
   const [data, shaping] = await Promise.all([
-    fetch("../data/proficiency/weapon-proficiencies.json?v=20260724-1"),
+    fetch("../data/proficiency/weapon-proficiencies.json?v=20260729-2"),
     fetch("../data/proficiency/perk-shaping-options.json?v=20260723-1"),
   ]).then(async (responses) => {
     const failed = responses.find((response) => !response.ok);
