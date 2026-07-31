@@ -1029,7 +1029,7 @@
         "place":  "Summer Court",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal, Ethereal",
+        "runes":  "Diamond Arrows, Ethereal, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1235,8 +1235,8 @@
     {
         "level":  "600+",
         "place":  "Issavi Puzzle",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "6.0kk",
+        "loot":  "500k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -1275,8 +1275,8 @@
     {
         "level":  "600+",
         "place":  "Issavi Surface",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "6.5kk",
+        "loot":  "800k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
