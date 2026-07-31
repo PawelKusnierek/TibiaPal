@@ -786,6 +786,14 @@ ol, ul {
   color: #ffffff;
 }
 
+.rune-ethereal, .weapon-ethereal {
+  color: #cceeff;
+}
+
+.rune-divine, .weapon-divine {
+  color: #ffd700;
+}
+
 .level_row {
   width: 10%;
 }
@@ -2878,7 +2886,6 @@ ol, ul {
   font-weight: bold;
 }
 
-/* Proficiency Refinement - weapon accordion (overrides the generic .expandable-div look) */
 button.proficiency-weapon-toggle {
   display: flex;
   align-items: center;
@@ -2899,26 +2906,22 @@ button.proficiency-weapon-toggle {
   transition: background 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
-
 button.proficiency-weapon-toggle:hover {
   background: linear-gradient(135deg, #14294d 0%, #1c4b9b 100%) !important;
   border-color: rgba(45, 140, 248, 0.7137254902) !important;
   box-shadow: 0 4px 10px rgba(45, 140, 248, 0.35);
   transform: translateX(2px);
 }
-
 button.proficiency-weapon-toggle:active {
   transform: translateX(0);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-
 button.proficiency-weapon-toggle.active-expanded-div {
   background: linear-gradient(135deg, #1c4b9b 0%, #14294d 100%) !important;
   border-left-color: #7db8ff !important;
 }
-
 button.proficiency-weapon-toggle:after {
-  content: "\25BE" !important;
+  content: "▾" !important;
   font-size: 14px !important;
   font-weight: normal;
   float: none;
@@ -2926,9 +2929,8 @@ button.proficiency-weapon-toggle:after {
   display: inline-block;
   transition: transform 0.25s ease;
 }
-
 button.proficiency-weapon-toggle.active-expanded-div:after {
-  content: "\25BE" !important;
+  content: "▾" !important;
   transform: rotate(180deg);
 }
 
@@ -2938,12 +2940,10 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   padding: 2px 20px 14px 24px;
   border-left: 4px solid rgba(45, 140, 248, 0.35);
 }
-
 .proficiency-weapon-content ol {
   margin: 8px 0 0 0;
   padding-left: 20px;
 }
-
 .proficiency-weapon-content ol li {
   margin-bottom: 6px;
   color: #eee;
