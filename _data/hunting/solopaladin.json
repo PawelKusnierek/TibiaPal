@@ -578,6 +578,22 @@
     },
     {
         "level":  "200+",
+        "place":  "Lower Spike",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "200+",
+        "place":  "Crumbling Caverns",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "200+",
         "place":  "Barkless Elves",
         "raw_exp":  "-",
         "loot":  "-",
@@ -942,6 +958,14 @@
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Firestorm Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "400+",
+        "place":  "Prison -1",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Firestorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -1418,7 +1442,7 @@
     },
     {
         "level":  "1000+",
-        "place":  "Feru Infernatil",
+        "place":  "Feru Mazoran",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Diamond Arrows, Ethereal",
