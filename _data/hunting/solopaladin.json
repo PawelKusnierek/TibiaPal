@@ -1002,14 +1002,6 @@
     },
     {
         "level":  "400+",
-        "place":  "Rosha Shockheads",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "400+",
         "place":  "Rosha West",
         "raw_exp":  "-",
         "loot":  "-",
@@ -1026,7 +1018,7 @@
     },
     {
         "level":  "400+",
-        "place":  "Rosha Bones",
+        "place":  "Rosha Bones + Shockheads",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Diamond Arrows, Ethereal",
@@ -1057,14 +1049,6 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "500+",
-        "place":  "Carnisylvans",
-        "raw_exp":  "3.8kk",
-        "loot":  "1.8kk",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
         "level":  "400+",
         "place":  "Summer Court",
         "raw_exp":  "-",
@@ -1090,9 +1074,17 @@
     },
     {
         "level":  "500+",
+        "place":  "Carnisylvans",
+        "raw_exp":  "3.8kk",
+        "loot":  "1.8kk",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "400+",
         "place":  "Upper Roshamuul (North)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "6.0kk",
+        "loot":  "1.5kk",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -1123,8 +1115,8 @@
     {
         "level":  "500+",
         "place":  "Upper Roshamuul (South)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "7.5kk",
+        "loot":  "2.0kk",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -1161,11 +1153,11 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "600+",
+        "level":  "500+",
         "place":  "Warzone 3",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
+        "raw_exp":  "5.0kk",
+        "loot":  "1.5kk",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1283,6 +1275,14 @@
     {
         "level":  "600+",
         "place":  "Issavi Sphinx & Crypt Wardens",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "600+",
+        "place":  "Upper Roshamuul (North + South)",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Diamond Arrows, Ethereal",
