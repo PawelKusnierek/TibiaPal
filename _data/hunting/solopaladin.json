@@ -1099,7 +1099,7 @@
     {
         "level":  "500+",
         "place":  "Venore Flimsies -1 and -2",
-        "raw_exp":  "8.5kk",
+        "raw_exp":  "9.0kk",
         "loot":  "1.0kk",
         "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
@@ -1107,7 +1107,7 @@
     {
         "level":  "500+",
         "place":  "Port Hope Flimsies -1 and -2",
-        "raw_exp":  "8.0kk",
+        "raw_exp":  "8.5kk",
         "loot":  "1.0kk",
         "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
@@ -1161,10 +1161,10 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "600+",
+        "level":  "500+",
         "place":  "Norcferatu Fortress",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "7.5kk",
+        "loot":  "800k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -1185,11 +1185,11 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "600+",
+        "level":  "500+",
         "place":  "Issavi Ogres",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
+        "raw_exp":  "4.6kk",
+        "loot":  "1.2kk",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -1203,8 +1203,8 @@
     {
         "level":  "600+",
         "place":  "Floating Savants MoTA",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "4.6kk",
+        "loot":  "1.2kk",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -1275,8 +1275,8 @@
     {
         "level":  "600+",
         "place":  "Issavi Sphinx & Crypt Wardens",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "6.5kk",
+        "loot":  "1.0kk",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
