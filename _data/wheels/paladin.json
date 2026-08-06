@@ -1,5 +1,5 @@
 {
-    "lesser_gems": ["Mitigation", "Hit Points", "Any Elemental Resistance"],
+    "lesser_gems": ["Hit Points", "Mitigation", "Any Elemental Resistance"],
     "greater_gems": ["Divine Caldera Base Damage", "Divine Empowerment Mastery", "Salvation Healing"],
     "builds": [
         {

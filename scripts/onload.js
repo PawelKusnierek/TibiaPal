@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
   enable_tablinks();
   //comment out below to disable kick embed - without the check it will never be visible/active
   check_livestream();
+
+  // Keep the mobile nav drawer aligned with the sticky toggle button as the
+  // user scrolls past the top ad (or resizes across the mobile breakpoint).
+  window.addEventListener('scroll', sync_sidebar_position, { passive: true });
+  window.addEventListener('resize', sync_sidebar_position);
 });
 
 
@@ -123,9 +128,31 @@ function enable_tablinks() {
   }
 }
 
+function sync_sidebar_position() {
+  var sidebar = document.getElementById('left-sidebar');
+  var toggle = document.querySelector('.nav-toggle');
+  if (!sidebar || !toggle) return;
+
+  // Desktop layout positions these elements itself - don't fight it with inline styles
+  if (window.innerWidth > 768) {
+    sidebar.style.top = '';
+    sidebar.style.height = '';
+    return;
+  }
+
+  // .nav-toggle is sticky, so its on-screen position depends on scroll (below
+  // the mobile top ad while it's still in view, pinned to 0 once scrolled past).
+  // Mirror that live position so the opened drawer never overlaps the toggle.
+  var bottom = toggle.getBoundingClientRect().bottom;
+  sidebar.style.top = bottom + 'px';
+  sidebar.style.height = 'calc(100vh - ' + bottom + 'px)';
+}
+
 function toggleNavigation() {
   var sidebar = document.getElementById('left-sidebar');
   var toggle = document.querySelector('.nav-toggle');
+
+  sync_sidebar_position();
 
   if (sidebar.classList.contains('expanded')) {
     sidebar.classList.remove('expanded');

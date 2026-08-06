@@ -1,6 +1,6 @@
 {
-  "profileTemplateCount": 443,
-  "weaponCount": 430,
+  "profileTemplateCount": 448,
+  "weaponCount": 435,
   "weapons": [
     {
       "name": "crimson sword",
@@ -2259,16 +2259,17 @@
               "Type": 11,
               "Value": 0.01,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 7,
-                "frames": 22,
-                "x": 224,
-                "y": 0,
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             },
             {
               "name": "Mana on kill",
@@ -7671,16 +7672,17 @@
               "Type": 11,
               "Value": 0.01,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 7,
-                "frames": 22,
-                "x": 224,
-                "y": 0,
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             },
             {
               "name": "Mana on kill",
@@ -11532,13 +11534,13 @@
             {
               "name": "Auto-attack critical hit chance",
               "sourceDescription": "-6s cooldown for Annihilation",
-              "optionImage": "images/proficiency/wiki/084-annihilation.gif",
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
               "iconImage": "images/proficiency/wiki/044-skillwheel-small-perk-icons.png",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "Type": 11,
               "Value": 0.02,
               "sprite": {
-                "file": "images/proficiency/wiki/084-annihilation.gif",
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -14988,16 +14990,17 @@
               "Type": 11,
               "Value": 0.02,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 7,
-                "frames": 22,
-                "x": 224,
-                "y": 0,
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             }
           ]
         },
@@ -15009,16 +15012,17 @@
               "Type": 11,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 7,
-                "frames": 22,
-                "x": 224,
-                "y": 0,
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             },
             {
               "name": "Life on kill",
@@ -17439,16 +17443,17 @@
               "Type": 11,
               "Value": 0.02,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 7,
-                "frames": 22,
-                "x": 224,
-                "y": 0,
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             },
             {
               "name": "Damage against bestiary family",
@@ -17737,16 +17742,17 @@
               "Type": 11,
               "Value": 0.1,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 7,
-                "frames": 22,
-                "x": 224,
-                "y": 0,
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             }
           ]
         },
@@ -17758,16 +17764,17 @@
               "Type": 11,
               "Value": 0.15,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 7,
-                "frames": 22,
-                "x": 224,
-                "y": 0,
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             }
           ]
         }
@@ -17875,16 +17882,17 @@
               "Type": 11,
               "Value": 0.05,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 7,
-                "frames": 22,
-                "x": 224,
-                "y": 0,
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             },
             {
               "name": "Combat skill scaling for spell damage",
@@ -17913,16 +17921,17 @@
               "Type": 11,
               "Value": 0.05,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 7,
-                "frames": 22,
-                "x": 224,
-                "y": 0,
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             }
           ]
         }
@@ -18069,16 +18078,17 @@
               "Type": 11,
               "Value": 0.1,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 7,
-                "frames": 22,
-                "x": 224,
-                "y": 0,
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             }
           ]
         }
@@ -18558,16 +18568,17 @@
               "Type": 11,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 7,
-                "frames": 22,
-                "x": 224,
-                "y": 0,
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             }
           ]
         },
@@ -18767,16 +18778,17 @@
               "Type": 11,
               "Value": 0.1,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 7,
-                "frames": 22,
-                "x": 224,
-                "y": 0,
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             },
             {
               "name": "Life on hit",
@@ -19215,16 +19227,17 @@
               "Type": 11,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 7,
-                "frames": 22,
-                "x": 224,
-                "y": 0,
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             }
           ]
         },
@@ -19487,16 +19500,17 @@
               "Type": 11,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 7,
-                "frames": 22,
-                "x": 224,
-                "y": 0,
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             }
           ]
         },
@@ -33327,13 +33341,31 @@
             {
               "name": "Damage against bosses and Sinister Embraced",
               "sourceDescription": "+3% damage against bosses and Sinister Embraced",
-              "optionImage": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+              "optionImage": "images/proficiency/wiki/060-weapon-proficiency-general.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "Type": 7,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+                "file": "images/proficiency/wiki/060-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Auto-attack critical hit chance",
+              "sourceDescription": "+3.50% critical hit chance for auto-attacks",
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 11,
+              "Value": 0.035,
+              "sprite": {
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -33349,7 +33381,7 @@
           "proficiencies": [
             {
               "name": "Combat skill",
-              "sourceDescription": "+3.50% critical hit chance for auto-attacks",
+              "sourceDescription": "+1 Sword Fighting",
               "optionImage": "images/proficiency/wiki/064-weapon-proficiency-offensive-bonus-skill.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
@@ -33373,30 +33405,13 @@
           "proficiencies": [
             {
               "name": "Combat skill scaling for spell damage",
-              "sourceDescription": "+1 Sword Fighting",
-              "optionImage": "images/proficiency/wiki/064-weapon-proficiency-offensive-bonus-skill.png",
+              "sourceDescription": "+10% of your Sword Fighting as extra damage for your spells",
+              "optionImage": "images/proficiency/wiki/065-weapon-proficiency-gain-extra-damage-spells.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "SkillId": 8,
               "Type": 26,
               "Value": 0.1,
-              "sprite": {
-                "file": "images/proficiency/wiki/064-weapon-proficiency-offensive-bonus-skill.png",
-                "frame": 0,
-                "frames": 1,
-                "width": 32,
-                "height": 32,
-                "displayWidth": 64,
-                "displayHeight": 64
-              }
-            },
-            {
-              "name": "Proficiency effect -1",
-              "sourceDescription": "+10% of your Sword Fighting as extra damage for your spells",
-              "optionImage": "images/proficiency/wiki/065-weapon-proficiency-gain-extra-damage-spells.png",
-              "iconImage": "",
-              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
-              "Type": -1,
               "sprite": {
                 "file": "images/proficiency/wiki/065-weapon-proficiency-gain-extra-damage-spells.png",
                 "frame": 0,
@@ -33478,13 +33493,31 @@
             {
               "name": "Damage against bosses and Sinister Embraced",
               "sourceDescription": "+3% damage against bosses and Sinister Embraced",
-              "optionImage": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+              "optionImage": "images/proficiency/wiki/060-weapon-proficiency-general.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "Type": 7,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+                "file": "images/proficiency/wiki/060-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Auto-attack critical hit chance",
+              "sourceDescription": "+3.50% critical hit chance for auto-attacks",
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 11,
+              "Value": 0.035,
+              "sprite": {
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -33500,7 +33533,7 @@
           "proficiencies": [
             {
               "name": "Combat skill",
-              "sourceDescription": "+3.50% critical hit chance for auto-attacks",
+              "sourceDescription": "+1 Sword Fighting",
               "optionImage": "images/proficiency/wiki/064-weapon-proficiency-offensive-bonus-skill.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
@@ -33524,30 +33557,13 @@
           "proficiencies": [
             {
               "name": "Combat skill scaling for spell damage",
-              "sourceDescription": "+1 Sword Fighting",
-              "optionImage": "images/proficiency/wiki/064-weapon-proficiency-offensive-bonus-skill.png",
+              "sourceDescription": "+10% of your Sword Fighting as extra damage for your spells",
+              "optionImage": "images/proficiency/wiki/065-weapon-proficiency-gain-extra-damage-spells.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "SkillId": 8,
               "Type": 26,
               "Value": 0.1,
-              "sprite": {
-                "file": "images/proficiency/wiki/064-weapon-proficiency-offensive-bonus-skill.png",
-                "frame": 0,
-                "frames": 1,
-                "width": 32,
-                "height": 32,
-                "displayWidth": 64,
-                "displayHeight": 64
-              }
-            },
-            {
-              "name": "Proficiency effect -1",
-              "sourceDescription": "+10% of your Sword Fighting as extra damage for your spells",
-              "optionImage": "images/proficiency/wiki/065-weapon-proficiency-gain-extra-damage-spells.png",
-              "iconImage": "",
-              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
-              "Type": -1,
               "sprite": {
                 "file": "images/proficiency/wiki/065-weapon-proficiency-gain-extra-damage-spells.png",
                 "frame": 0,
@@ -33629,13 +33645,31 @@
             {
               "name": "Damage against bosses and Sinister Embraced",
               "sourceDescription": "+3% damage against bosses and Sinister Embraced",
-              "optionImage": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+              "optionImage": "images/proficiency/wiki/060-weapon-proficiency-general.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "Type": 7,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+                "file": "images/proficiency/wiki/060-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Auto-attack critical hit chance",
+              "sourceDescription": "+3.50% critical hit chance for auto-attacks",
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 11,
+              "Value": 0.035,
+              "sprite": {
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -33651,7 +33685,7 @@
           "proficiencies": [
             {
               "name": "Combat skill",
-              "sourceDescription": "+3.50% critical hit chance for auto-attacks",
+              "sourceDescription": "+1 Axe Fighting",
               "optionImage": "images/proficiency/wiki/054-weapon-proficiency-offensive-bonus-skill.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
@@ -33675,30 +33709,13 @@
           "proficiencies": [
             {
               "name": "Combat skill scaling for spell damage",
-              "sourceDescription": "+1 Axe Fighting",
-              "optionImage": "images/proficiency/wiki/054-weapon-proficiency-offensive-bonus-skill.png",
+              "sourceDescription": "+10% of your Axe Fighting as extra damage for your spells",
+              "optionImage": "images/proficiency/wiki/090-weapon-proficiency-gain-extra-damage-spells.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "SkillId": 10,
               "Type": 26,
               "Value": 0.1,
-              "sprite": {
-                "file": "images/proficiency/wiki/054-weapon-proficiency-offensive-bonus-skill.png",
-                "frame": 0,
-                "frames": 1,
-                "width": 32,
-                "height": 32,
-                "displayWidth": 64,
-                "displayHeight": 64
-              }
-            },
-            {
-              "name": "Proficiency effect -1",
-              "sourceDescription": "+10% of your Axe Fighting as extra damage for your spells",
-              "optionImage": "images/proficiency/wiki/090-weapon-proficiency-gain-extra-damage-spells.png",
-              "iconImage": "",
-              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
-              "Type": -1,
               "sprite": {
                 "file": "images/proficiency/wiki/090-weapon-proficiency-gain-extra-damage-spells.png",
                 "frame": 0,
@@ -33780,13 +33797,31 @@
             {
               "name": "Damage against bosses and Sinister Embraced",
               "sourceDescription": "+3% damage against bosses and Sinister Embraced",
-              "optionImage": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+              "optionImage": "images/proficiency/wiki/060-weapon-proficiency-general.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "Type": 7,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+                "file": "images/proficiency/wiki/060-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Auto-attack critical hit chance",
+              "sourceDescription": "+3.50% critical hit chance for auto-attacks",
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 11,
+              "Value": 0.035,
+              "sprite": {
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -33802,7 +33837,7 @@
           "proficiencies": [
             {
               "name": "Combat skill",
-              "sourceDescription": "+3.50% critical hit chance for auto-attacks",
+              "sourceDescription": "+1 Axe Fighting",
               "optionImage": "images/proficiency/wiki/054-weapon-proficiency-offensive-bonus-skill.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
@@ -33826,30 +33861,13 @@
           "proficiencies": [
             {
               "name": "Combat skill scaling for spell damage",
-              "sourceDescription": "+1 Axe Fighting",
-              "optionImage": "images/proficiency/wiki/054-weapon-proficiency-offensive-bonus-skill.png",
+              "sourceDescription": "+10% of your Axe Fighting as extra damage for your spells",
+              "optionImage": "images/proficiency/wiki/090-weapon-proficiency-gain-extra-damage-spells.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "SkillId": 10,
               "Type": 26,
               "Value": 0.1,
-              "sprite": {
-                "file": "images/proficiency/wiki/054-weapon-proficiency-offensive-bonus-skill.png",
-                "frame": 0,
-                "frames": 1,
-                "width": 32,
-                "height": 32,
-                "displayWidth": 64,
-                "displayHeight": 64
-              }
-            },
-            {
-              "name": "Proficiency effect -1",
-              "sourceDescription": "+10% of your Axe Fighting as extra damage for your spells",
-              "optionImage": "images/proficiency/wiki/090-weapon-proficiency-gain-extra-damage-spells.png",
-              "iconImage": "",
-              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
-              "Type": -1,
               "sprite": {
                 "file": "images/proficiency/wiki/090-weapon-proficiency-gain-extra-damage-spells.png",
                 "frame": 0,
@@ -33931,13 +33949,31 @@
             {
               "name": "Damage against bosses and Sinister Embraced",
               "sourceDescription": "+3% damage against bosses and Sinister Embraced",
-              "optionImage": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+              "optionImage": "images/proficiency/wiki/060-weapon-proficiency-general.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "Type": 7,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+                "file": "images/proficiency/wiki/060-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Auto-attack critical hit chance",
+              "sourceDescription": "+3.50% critical hit chance for auto-attacks",
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 11,
+              "Value": 0.035,
+              "sprite": {
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -33953,7 +33989,7 @@
           "proficiencies": [
             {
               "name": "Combat skill",
-              "sourceDescription": "+3.50% critical hit chance for auto-attacks",
+              "sourceDescription": "+1 Club Fighting",
               "optionImage": "images/proficiency/wiki/058-weapon-proficiency-offensive-bonus-skill.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
@@ -33977,30 +34013,13 @@
           "proficiencies": [
             {
               "name": "Combat skill scaling for spell damage",
-              "sourceDescription": "+1 Club Fighting",
-              "optionImage": "images/proficiency/wiki/058-weapon-proficiency-offensive-bonus-skill.png",
+              "sourceDescription": "+10% of your Club Fighting as extra damage for your spells",
+              "optionImage": "images/proficiency/wiki/037-weapon-proficiency-gain-extra-damage-spells.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "SkillId": 9,
               "Type": 26,
               "Value": 0.1,
-              "sprite": {
-                "file": "images/proficiency/wiki/058-weapon-proficiency-offensive-bonus-skill.png",
-                "frame": 0,
-                "frames": 1,
-                "width": 32,
-                "height": 32,
-                "displayWidth": 64,
-                "displayHeight": 64
-              }
-            },
-            {
-              "name": "Proficiency effect -1",
-              "sourceDescription": "+10% of your Club Fighting as extra damage for your spells",
-              "optionImage": "images/proficiency/wiki/037-weapon-proficiency-gain-extra-damage-spells.png",
-              "iconImage": "",
-              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
-              "Type": -1,
               "sprite": {
                 "file": "images/proficiency/wiki/037-weapon-proficiency-gain-extra-damage-spells.png",
                 "frame": 0,
@@ -34082,13 +34101,31 @@
             {
               "name": "Damage against bosses and Sinister Embraced",
               "sourceDescription": "+3% damage against bosses and Sinister Embraced",
-              "optionImage": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+              "optionImage": "images/proficiency/wiki/060-weapon-proficiency-general.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "Type": 7,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+                "file": "images/proficiency/wiki/060-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Auto-attack critical hit chance",
+              "sourceDescription": "+3.50% critical hit chance for auto-attacks",
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 11,
+              "Value": 0.035,
+              "sprite": {
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -34104,7 +34141,7 @@
           "proficiencies": [
             {
               "name": "Combat skill",
-              "sourceDescription": "+3.50% critical hit chance for auto-attacks",
+              "sourceDescription": "+1 Club Fighting",
               "optionImage": "images/proficiency/wiki/058-weapon-proficiency-offensive-bonus-skill.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
@@ -34128,30 +34165,13 @@
           "proficiencies": [
             {
               "name": "Combat skill scaling for spell damage",
-              "sourceDescription": "+1 Club Fighting",
-              "optionImage": "images/proficiency/wiki/058-weapon-proficiency-offensive-bonus-skill.png",
+              "sourceDescription": "+10% of your Club Fighting as extra damage for your spells",
+              "optionImage": "images/proficiency/wiki/037-weapon-proficiency-gain-extra-damage-spells.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "SkillId": 9,
               "Type": 26,
               "Value": 0.1,
-              "sprite": {
-                "file": "images/proficiency/wiki/058-weapon-proficiency-offensive-bonus-skill.png",
-                "frame": 0,
-                "frames": 1,
-                "width": 32,
-                "height": 32,
-                "displayWidth": 64,
-                "displayHeight": 64
-              }
-            },
-            {
-              "name": "Proficiency effect -1",
-              "sourceDescription": "+10% of your Club Fighting as extra damage for your spells",
-              "optionImage": "images/proficiency/wiki/037-weapon-proficiency-gain-extra-damage-spells.png",
-              "iconImage": "",
-              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
-              "Type": -1,
               "sprite": {
                 "file": "images/proficiency/wiki/037-weapon-proficiency-gain-extra-damage-spells.png",
                 "frame": 0,
@@ -34233,13 +34253,31 @@
             {
               "name": "Damage against bosses and Sinister Embraced",
               "sourceDescription": "+3% damage against bosses and Sinister Embraced",
-              "optionImage": "images/proficiency/wiki/114-weapon-proficiency-general.png",
+              "optionImage": "images/proficiency/wiki/060-weapon-proficiency-general.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "Type": 7,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/wiki/114-weapon-proficiency-general.png",
+                "file": "images/proficiency/wiki/060-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Auto-attack critical hit chance",
+              "sourceDescription": "+3.50% critical hit chance for auto-attacks",
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 11,
+              "Value": 0.035,
+              "sprite": {
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -34255,15 +34293,15 @@
           "proficiencies": [
             {
               "name": "Combat skill",
-              "sourceDescription": "+3.50% critical hit chance for auto-attacks",
-              "optionImage": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+              "sourceDescription": "+1 Distance Fighting",
+              "optionImage": "images/proficiency/wiki/103-weapon-proficiency-offensive-bonus-skill.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "SkillId": 7,
               "Type": 3,
               "Value": 1,
               "sprite": {
-                "file": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+                "file": "images/proficiency/wiki/103-weapon-proficiency-offensive-bonus-skill.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -34279,30 +34317,13 @@
           "proficiencies": [
             {
               "name": "Combat skill scaling for spell damage",
-              "sourceDescription": "+1 Distance Fighting",
-              "optionImage": "images/proficiency/wiki/103-weapon-proficiency-offensive-bonus-skill.png",
+              "sourceDescription": "+3.50% of your Distance Fighting as extra damage for your spells",
+              "optionImage": "images/proficiency/wiki/115-weapon-proficiency-gain-extra-damage-spells.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "SkillId": 7,
               "Type": 26,
               "Value": 0.035,
-              "sprite": {
-                "file": "images/proficiency/wiki/103-weapon-proficiency-offensive-bonus-skill.png",
-                "frame": 0,
-                "frames": 1,
-                "width": 32,
-                "height": 32,
-                "displayWidth": 64,
-                "displayHeight": 64
-              }
-            },
-            {
-              "name": "Proficiency effect -1",
-              "sourceDescription": "+3.50% of your Distance Fighting as extra damage for your spells",
-              "optionImage": "images/proficiency/wiki/115-weapon-proficiency-gain-extra-damage-spells.png",
-              "iconImage": "",
-              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
-              "Type": -1,
               "sprite": {
                 "file": "images/proficiency/wiki/115-weapon-proficiency-gain-extra-damage-spells.png",
                 "frame": 0,
@@ -34463,13 +34484,13 @@
             {
               "name": "Damage against bosses and Sinister Embraced",
               "sourceDescription": "+3% damage against bosses and Sinister Embraced",
-              "optionImage": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+              "optionImage": "images/proficiency/wiki/060-weapon-proficiency-general.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "Type": 7,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+                "file": "images/proficiency/wiki/060-weapon-proficiency-general.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -34773,13 +34794,13 @@
             {
               "name": "Damage against bosses and Sinister Embraced",
               "sourceDescription": "+3% damage against bosses and Sinister Embraced",
-              "optionImage": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+              "optionImage": "images/proficiency/wiki/060-weapon-proficiency-general.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
               "Type": 7,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/wiki/113-weapon-proficiency-general.png",
+                "file": "images/proficiency/wiki/060-weapon-proficiency-general.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -42093,16 +42114,17 @@
               "Type": 11,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 7,
-                "frames": 22,
-                "x": 224,
-                "y": 0,
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             },
             {
               "name": "Spell augmentation",
@@ -71615,32 +71637,35 @@
               "Type": 7,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 12,
-                "frames": 22,
-                "x": 384,
-                "y": 0,
+                "file": "images/proficiency/wiki/060-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "sourceDescription": "+3% damage against bosses and Sinister Embraced",
+              "optionImage": "images/proficiency/wiki/060-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             },
             {
               "name": "Auto-attack critical hit chance",
               "Type": 11,
               "Value": 0.035,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 7,
-                "frames": 22,
-                "x": 224,
-                "y": 0,
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             }
           ]
         },
@@ -74133,16 +74158,17 @@
               "Type": 11,
               "Value": 0.02,
               "sprite": {
-                "file": "images/proficiency/icons-weaponmastery.png",
-                "frame": 7,
-                "frames": 22,
-                "x": 224,
-                "y": 0,
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,
                 "displayHeight": 64
-              }
+              },
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png"
             },
             {
               "name": "Life on kill",
@@ -76963,7 +76989,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -76971,7 +76997,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -77340,7 +77366,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -77348,7 +77374,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -77717,7 +77743,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -77725,7 +77751,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -77824,13 +77850,13 @@
             {
               "name": "Auto-attack critical hit chance",
               "sourceDescription": "+1.50% critical hit chance for auto-attacks",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-auto-atk-critical-chance.png",
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "Type": 11,
               "Value": 0.015,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-auto-atk-critical-chance.png",
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -78091,7 +78117,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -78099,7 +78125,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -78198,13 +78224,13 @@
             {
               "name": "Auto-attack critical hit chance",
               "sourceDescription": "+2.75% critical hit chance for auto-attacks",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-auto-atk-critical-chance.png",
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "Type": 11,
               "Value": 0.0275,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-auto-atk-critical-chance.png",
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -78465,7 +78491,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -78473,7 +78499,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -78842,7 +78868,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -78850,7 +78876,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -79219,7 +79245,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -79227,7 +79253,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -79326,13 +79352,13 @@
             {
               "name": "Auto-attack critical hit chance",
               "sourceDescription": "+1.50% critical hit chance for auto-attacks",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-auto-atk-critical-chance.png",
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "Type": 11,
               "Value": 0.015,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-auto-atk-critical-chance.png",
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -79593,7 +79619,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -79601,7 +79627,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -79700,13 +79726,13 @@
             {
               "name": "Auto-attack critical hit chance",
               "sourceDescription": "+2.75% critical hit chance for auto-attacks",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-auto-atk-critical-chance.png",
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "Type": 11,
               "Value": 0.0275,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-auto-atk-critical-chance.png",
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -79967,7 +79993,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -79975,7 +80001,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -80344,7 +80370,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -80352,7 +80378,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -80721,7 +80747,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -80729,7 +80755,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -80828,13 +80854,13 @@
             {
               "name": "Auto-attack critical hit chance",
               "sourceDescription": "+1.50% critical hit chance for auto-attacks",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-auto-atk-critical-chance.png",
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "Type": 11,
               "Value": 0.015,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-auto-atk-critical-chance.png",
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -81095,7 +81121,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -81103,7 +81129,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -81202,13 +81228,13 @@
             {
               "name": "Auto-attack critical hit chance",
               "sourceDescription": "+2.75% critical hit chance for auto-attacks",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-auto-atk-critical-chance.png",
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "Type": 11,
               "Value": 0.0275,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-auto-atk-critical-chance.png",
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -81469,7 +81495,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -81477,7 +81503,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -81855,7 +81881,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -81863,7 +81889,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -82241,7 +82267,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -82249,7 +82275,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -82626,7 +82652,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -82634,7 +82660,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -83011,7 +83037,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -83019,7 +83045,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -83388,7 +83414,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -83396,7 +83422,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -83765,7 +83791,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -83773,7 +83799,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -84147,7 +84173,7 @@
             {
               "name": "Damage against bestiary family",
               "sourceDescription": "+3.00% damage against Human",
-              "optionImage": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+              "optionImage": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
               "BestiaryId": 10,
@@ -84155,7 +84181,7 @@
               "Type": 6,
               "Value": 0.03,
               "sprite": {
-                "file": "images/proficiency/source/fandom/proficiency-type-bestiary-dmg-human.png",
+                "file": "images/proficiency/wiki/085-weapon-proficiency-damage-against-bestiary.png",
                 "frame": 0,
                 "frames": 1,
                 "width": 32,
@@ -85443,6 +85469,1335 @@
                 "frames": 22,
                 "x": 224,
                 "y": 0,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "inferniarch bow",
+      "profileName": "Inferniarch 2H Bow",
+      "proficiencyId": 497,
+      "version": 4,
+      "weaponType": "Bow",
+      "handedness": "2H",
+      "weapon": {
+        "clientId": 49520,
+        "spriteId": 237489,
+        "firstSpriteId": 237397,
+        "sprite": "images/proficiency/weapons/497.png"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "proficiencies": [
+            {
+              "name": "Attack damage",
+              "sourceDescription": "+1 attack",
+              "optionImage": "images/proficiency/wiki/006-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 0,
+              "Value": 1,
+              "sprite": {
+                "file": "images/proficiency/wiki/006-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "proficiencies": [
+            {
+              "name": "Combat skill scaling for auto-attacks",
+              "sourceDescription": "+10% of your Distance Fighting as extra damage for auto-attacks",
+              "optionImage": "images/proficiency/wiki/076-weapon-proficiency-gain-extra-damage-auto-attack.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "SkillId": 7,
+              "Type": 25,
+              "Value": 0.1,
+              "sprite": {
+                "file": "images/proficiency/wiki/076-weapon-proficiency-gain-extra-damage-auto-attack.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Auto-attack critical extra damage",
+              "sourceDescription": "+10% critical extra damage for auto-attacks",
+              "optionImage": "images/proficiency/wiki/008-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 15,
+              "Value": 0.1,
+              "sprite": {
+                "file": "images/proficiency/wiki/008-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "proficiencies": [
+            {
+              "name": "Auto-attack critical extra damage",
+              "sourceDescription": "+15% critical extra damage for auto-attacks",
+              "optionImage": "images/proficiency/wiki/008-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 15,
+              "Value": 0.15,
+              "sprite": {
+                "file": "images/proficiency/wiki/008-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "proficiencies": [
+            {
+              "name": "Spell augmentation",
+              "sourceDescription": "+5% life leech for Strong Ethereal Spear",
+              "optionImage": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+              "iconImage": "images/proficiency/wiki/023-skillwheel-small-perk-icons.png",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "AugmentType": 14,
+              "SpellId": 57,
+              "Type": 5,
+              "Value": 0.05,
+              "sprite": {
+                "file": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Spell augmentation",
+              "sourceDescription": "+1% critical hit chance for Strong Ethereal Spear",
+              "optionImage": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+              "iconImage": "images/proficiency/wiki/026-skillwheel-small-perk-icons.png",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "AugmentType": 17,
+              "SpellId": 57,
+              "Type": 5,
+              "Value": 0.01,
+              "sprite": {
+                "file": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Spell augmentation",
+              "sourceDescription": "+3% mana leech for Strong Ethereal Spear",
+              "optionImage": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+              "iconImage": "images/proficiency/wiki/047-skillwheel-small-perk-icons.png",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "AugmentType": 15,
+              "SpellId": 57,
+              "Type": 5,
+              "Value": 0.03,
+              "sprite": {
+                "file": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rending inferniarch bow",
+      "profileName": "Rending Inferniarch 2H Bow",
+      "proficiencyId": 498,
+      "version": 8,
+      "weaponType": "Bow",
+      "handedness": "2H",
+      "weapon": {
+        "clientId": 49858,
+        "spriteId": 237640,
+        "firstSpriteId": 237541,
+        "sprite": "images/proficiency/weapons/498.png"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "proficiencies": [
+            {
+              "name": "Critical extra damage",
+              "sourceDescription": "+48% critical extra damage",
+              "optionImage": "images/proficiency/wiki/081-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 12,
+              "Value": 0.48,
+              "sprite": {
+                "file": "images/proficiency/wiki/081-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "proficiencies": [
+            {
+              "name": "Combat skill scaling for auto-attacks",
+              "sourceDescription": "+10% of your Distance Fighting as extra damage for auto-attacks",
+              "optionImage": "images/proficiency/wiki/076-weapon-proficiency-gain-extra-damage-auto-attack.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "SkillId": 7,
+              "Type": 25,
+              "Value": 0.1,
+              "sprite": {
+                "file": "images/proficiency/wiki/076-weapon-proficiency-gain-extra-damage-auto-attack.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Auto-attack critical extra damage",
+              "sourceDescription": "+10% critical extra damage for auto-attacks",
+              "optionImage": "images/proficiency/wiki/008-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 15,
+              "Value": 0.1,
+              "sprite": {
+                "file": "images/proficiency/wiki/008-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "proficiencies": [
+            {
+              "name": "Critical hit chance",
+              "sourceDescription": "+5% critical hit chance",
+              "optionImage": "images/proficiency/wiki/091-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 8,
+              "Value": 0.05,
+              "sprite": {
+                "file": "images/proficiency/wiki/091-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "proficiencies": [
+            {
+              "name": "Spell augmentation",
+              "sourceDescription": "+10% life leech for Strong Ethereal Spear",
+              "optionImage": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+              "iconImage": "images/proficiency/wiki/023-skillwheel-small-perk-icons.png",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "AugmentType": 14,
+              "SpellId": 57,
+              "Type": 5,
+              "Value": 0.1,
+              "sprite": {
+                "file": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Spell augmentation",
+              "sourceDescription": "+5% mana leech for Strong Ethereal Spear",
+              "optionImage": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+              "iconImage": "images/proficiency/wiki/047-skillwheel-small-perk-icons.png",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "AugmentType": 15,
+              "SpellId": 57,
+              "Type": 5,
+              "Value": 0.05,
+              "sprite": {
+                "file": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Rune critical extra damage",
+              "sourceDescription": "+8% critical extra damage for offensive runes",
+              "optionImage": "images/proficiency/wiki/013-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 14,
+              "Value": 0.08,
+              "sprite": {
+                "file": "images/proficiency/wiki/013-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 5,
+          "proficiencies": [
+            {
+              "name": "Combat skill",
+              "sourceDescription": "+1 Distance Fighting",
+              "optionImage": "images/proficiency/wiki/103-weapon-proficiency-offensive-bonus-skill.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "SkillId": 7,
+              "Type": 3,
+              "Value": 1,
+              "sprite": {
+                "file": "images/proficiency/wiki/103-weapon-proficiency-offensive-bonus-skill.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Damage against bestiary family",
+              "sourceDescription": "+3% damage against Plant",
+              "optionImage": "images/proficiency/wiki/057-weapon-proficiency-damage-against-bestiary.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "BestiaryId": 15,
+              "BestiaryName": "Plant",
+              "Type": 6,
+              "Value": 0.03,
+              "sprite": {
+                "file": "images/proficiency/wiki/057-weapon-proficiency-damage-against-bestiary.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Specialized magic level",
+              "sourceDescription": "+1 Holy Magic Level",
+              "optionImage": "images/proficiency/wiki/073-weapon-proficiency-specialized-magic-level.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "damageType": "Holy",
+              "DamageType": 128,
+              "Type": 4,
+              "Value": 1,
+              "sprite": {
+                "file": "images/proficiency/wiki/073-weapon-proficiency-specialized-magic-level.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 6,
+          "proficiencies": [
+            {
+              "name": "Damage against bosses and Sinister Embraced",
+              "sourceDescription": "+3% damage against bosses and Sinister Embraced",
+              "optionImage": "images/proficiency/wiki/060-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 7,
+              "Value": 0.03,
+              "sprite": {
+                "file": "images/proficiency/wiki/060-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Combat skill scaling for spell damage",
+              "sourceDescription": "+5% of your Distance Fighting as extra damage for your spells",
+              "optionImage": "images/proficiency/wiki/115-weapon-proficiency-gain-extra-damage-spells.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "SkillId": 7,
+              "Type": 26,
+              "Value": 0.05,
+              "sprite": {
+                "file": "images/proficiency/wiki/115-weapon-proficiency-gain-extra-damage-spells.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Spell augmentation",
+              "sourceDescription": "-2s cooldown for Divine Dazzle",
+              "optionImage": "images/proficiency/wiki/147-divine-dazzle.gif",
+              "iconImage": "images/proficiency/wiki/044-skillwheel-small-perk-icons.png",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "AugmentType": 6,
+              "SpellId": 238,
+              "Type": 5,
+              "Value": -2,
+              "sprite": {
+                "file": "images/proficiency/wiki/147-divine-dazzle.gif",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 7,
+          "proficiencies": [
+            {
+              "name": "Spell augmentation",
+              "sourceDescription": "+1.50% critical hit chance for Strong Ethereal Spear",
+              "optionImage": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+              "iconImage": "images/proficiency/wiki/026-skillwheel-small-perk-icons.png",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "AugmentType": 17,
+              "SpellId": 57,
+              "Type": 5,
+              "Value": 0.015,
+              "sprite": {
+                "file": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Rune critical hit chance",
+              "sourceDescription": "+1.50% critical hit chance for offensive runes",
+              "optionImage": "images/proficiency/wiki/018-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 10,
+              "Value": 0.015,
+              "sprite": {
+                "file": "images/proficiency/wiki/018-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "draining inferniarch bow",
+      "profileName": "Draining Inferniarch 2H Bow",
+      "proficiencyId": 499,
+      "version": 6,
+      "weaponType": "Bow",
+      "handedness": "2H",
+      "weapon": {
+        "clientId": 49859,
+        "spriteId": 237641,
+        "firstSpriteId": 237541,
+        "sprite": "images/proficiency/weapons/499.png"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "proficiencies": [
+            {
+              "name": "Armor penetration",
+              "sourceDescription": "+14.50% life leech",
+              "optionImage": "images/proficiency/wiki/050-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 17,
+              "Value": 0.145,
+              "sprite": {
+                "file": "images/proficiency/wiki/050-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "proficiencies": [
+            {
+              "name": "Combat skill scaling for auto-attacks",
+              "sourceDescription": "+10% of your Distance Fighting as extra damage for auto-attacks",
+              "optionImage": "images/proficiency/wiki/076-weapon-proficiency-gain-extra-damage-auto-attack.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "SkillId": 7,
+              "Type": 25,
+              "Value": 0.1,
+              "sprite": {
+                "file": "images/proficiency/wiki/076-weapon-proficiency-gain-extra-damage-auto-attack.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Auto-attack critical extra damage",
+              "sourceDescription": "+10% critical extra damage for auto-attacks",
+              "optionImage": "images/proficiency/wiki/008-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 15,
+              "Value": 0.1,
+              "sprite": {
+                "file": "images/proficiency/wiki/008-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "proficiencies": [
+            {
+              "name": "Armor penetration",
+              "sourceDescription": "+14.50% life leech",
+              "optionImage": "images/proficiency/wiki/050-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 17,
+              "Value": 0.145,
+              "sprite": {
+                "file": "images/proficiency/wiki/050-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "proficiencies": [
+            {
+              "name": "Spell augmentation",
+              "sourceDescription": "+5% mana leech for Strong Ethereal Spear",
+              "optionImage": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+              "iconImage": "images/proficiency/wiki/047-skillwheel-small-perk-icons.png",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "AugmentType": 15,
+              "SpellId": 57,
+              "Type": 5,
+              "Value": 0.05,
+              "sprite": {
+                "file": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Spell augmentation",
+              "sourceDescription": "+8% critical extra damage for Strong Ethereal Spear",
+              "optionImage": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+              "iconImage": "images/proficiency/wiki/026-skillwheel-small-perk-icons.png",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "AugmentType": 16,
+              "SpellId": 57,
+              "Type": 5,
+              "Value": 0.08,
+              "sprite": {
+                "file": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Rune critical extra damage",
+              "sourceDescription": "+8% critical extra damage for offensive runes",
+              "optionImage": "images/proficiency/wiki/013-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 14,
+              "Value": 0.08,
+              "sprite": {
+                "file": "images/proficiency/wiki/013-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 5,
+          "proficiencies": [
+            {
+              "name": "Combat skill",
+              "sourceDescription": "+1 Distance Fighting",
+              "optionImage": "images/proficiency/wiki/103-weapon-proficiency-offensive-bonus-skill.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "SkillId": 7,
+              "Type": 3,
+              "Value": 1,
+              "sprite": {
+                "file": "images/proficiency/wiki/103-weapon-proficiency-offensive-bonus-skill.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Damage against bestiary family",
+              "sourceDescription": "+3% damage against Plant",
+              "optionImage": "images/proficiency/wiki/057-weapon-proficiency-damage-against-bestiary.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "BestiaryId": 15,
+              "BestiaryName": "Plant",
+              "Type": 6,
+              "Value": 0.03,
+              "sprite": {
+                "file": "images/proficiency/wiki/057-weapon-proficiency-damage-against-bestiary.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Specialized magic level",
+              "sourceDescription": "+1 Holy Magic Level",
+              "optionImage": "images/proficiency/wiki/073-weapon-proficiency-specialized-magic-level.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "damageType": "Holy",
+              "DamageType": 128,
+              "Type": 4,
+              "Value": 1,
+              "sprite": {
+                "file": "images/proficiency/wiki/073-weapon-proficiency-specialized-magic-level.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 6,
+          "proficiencies": [
+            {
+              "name": "Damage against bosses and Sinister Embraced",
+              "sourceDescription": "+3% damage against bosses and Sinister Embraced",
+              "optionImage": "images/proficiency/wiki/060-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 7,
+              "Value": 0.03,
+              "sprite": {
+                "file": "images/proficiency/wiki/060-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Combat skill scaling for spell damage",
+              "sourceDescription": "+5% of your Distance Fighting as extra damage for your spells",
+              "optionImage": "images/proficiency/wiki/115-weapon-proficiency-gain-extra-damage-spells.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "SkillId": 7,
+              "Type": 26,
+              "Value": 0.05,
+              "sprite": {
+                "file": "images/proficiency/wiki/115-weapon-proficiency-gain-extra-damage-spells.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Spell augmentation",
+              "sourceDescription": "-2s cooldown for Divine Dazzle",
+              "optionImage": "images/proficiency/wiki/147-divine-dazzle.gif",
+              "iconImage": "images/proficiency/wiki/044-skillwheel-small-perk-icons.png",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "AugmentType": 6,
+              "SpellId": 238,
+              "Type": 5,
+              "Value": -2,
+              "sprite": {
+                "file": "images/proficiency/wiki/147-divine-dazzle.gif",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 7,
+          "proficiencies": [
+            {
+              "name": "Spell augmentation",
+              "sourceDescription": "+1.50% critical hit chance for Strong Ethereal Spear",
+              "optionImage": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+              "iconImage": "images/proficiency/wiki/026-skillwheel-small-perk-icons.png",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "AugmentType": 17,
+              "SpellId": 57,
+              "Type": 5,
+              "Value": 0.015,
+              "sprite": {
+                "file": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Rune critical hit chance",
+              "sourceDescription": "+1.50% critical hit chance for offensive runes",
+              "optionImage": "images/proficiency/wiki/018-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 10,
+              "Value": 0.015,
+              "sprite": {
+                "file": "images/proficiency/wiki/018-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "siphoning inferniarch bow",
+      "profileName": "Siphoning Inferniarch 2H Bow",
+      "proficiencyId": 500,
+      "version": 7,
+      "weaponType": "Bow",
+      "handedness": "2H",
+      "weapon": {
+        "clientId": 49860,
+        "spriteId": 237642,
+        "firstSpriteId": 237541,
+        "sprite": "images/proficiency/weapons/500.png"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "proficiencies": [
+            {
+              "name": "Mana leech",
+              "sourceDescription": "+5% mana leech",
+              "optionImage": "images/proficiency/wiki/051-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 16,
+              "Value": 0.05,
+              "sprite": {
+                "file": "images/proficiency/wiki/051-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "proficiencies": [
+            {
+              "name": "Combat skill scaling for auto-attacks",
+              "sourceDescription": "+10% of your Distance Fighting as extra damage for auto-attacks",
+              "optionImage": "images/proficiency/wiki/076-weapon-proficiency-gain-extra-damage-auto-attack.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "SkillId": 7,
+              "Type": 25,
+              "Value": 0.1,
+              "sprite": {
+                "file": "images/proficiency/wiki/076-weapon-proficiency-gain-extra-damage-auto-attack.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Auto-attack critical extra damage",
+              "sourceDescription": "+10% critical extra damage for auto-attacks",
+              "optionImage": "images/proficiency/wiki/008-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 15,
+              "Value": 0.1,
+              "sprite": {
+                "file": "images/proficiency/wiki/008-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "proficiencies": [
+            {
+              "name": "Mana leech",
+              "sourceDescription": "+5% mana leech",
+              "optionImage": "images/proficiency/wiki/051-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 16,
+              "Value": 0.05,
+              "sprite": {
+                "file": "images/proficiency/wiki/051-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "proficiencies": [
+            {
+              "name": "Spell augmentation",
+              "sourceDescription": "+10% life leech for Strong Ethereal Spear",
+              "optionImage": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+              "iconImage": "images/proficiency/wiki/023-skillwheel-small-perk-icons.png",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "AugmentType": 14,
+              "SpellId": 57,
+              "Type": 5,
+              "Value": 0.1,
+              "sprite": {
+                "file": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Spell augmentation",
+              "sourceDescription": "+8% critical extra damage for Strong Ethereal Spear",
+              "optionImage": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+              "iconImage": "images/proficiency/wiki/026-skillwheel-small-perk-icons.png",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "AugmentType": 16,
+              "SpellId": 57,
+              "Type": 5,
+              "Value": 0.08,
+              "sprite": {
+                "file": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Rune critical extra damage",
+              "sourceDescription": "+8% critical extra damage for offensive runes",
+              "optionImage": "images/proficiency/wiki/013-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 14,
+              "Value": 0.08,
+              "sprite": {
+                "file": "images/proficiency/wiki/013-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 5,
+          "proficiencies": [
+            {
+              "name": "Combat skill",
+              "sourceDescription": "+1 Distance Fighting",
+              "optionImage": "images/proficiency/wiki/103-weapon-proficiency-offensive-bonus-skill.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "SkillId": 7,
+              "Type": 3,
+              "Value": 1,
+              "sprite": {
+                "file": "images/proficiency/wiki/103-weapon-proficiency-offensive-bonus-skill.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Damage against bestiary family",
+              "sourceDescription": "+3% damage against Plant",
+              "optionImage": "images/proficiency/wiki/057-weapon-proficiency-damage-against-bestiary.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "BestiaryId": 15,
+              "BestiaryName": "Plant",
+              "Type": 6,
+              "Value": 0.03,
+              "sprite": {
+                "file": "images/proficiency/wiki/057-weapon-proficiency-damage-against-bestiary.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Specialized magic level",
+              "sourceDescription": "+1 Holy Magic Level",
+              "optionImage": "images/proficiency/wiki/073-weapon-proficiency-specialized-magic-level.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "damageType": "Holy",
+              "DamageType": 128,
+              "Type": 4,
+              "Value": 1,
+              "sprite": {
+                "file": "images/proficiency/wiki/073-weapon-proficiency-specialized-magic-level.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 6,
+          "proficiencies": [
+            {
+              "name": "Damage against bosses and Sinister Embraced",
+              "sourceDescription": "+3% damage against bosses and Sinister Embraced",
+              "optionImage": "images/proficiency/wiki/060-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 7,
+              "Value": 0.03,
+              "sprite": {
+                "file": "images/proficiency/wiki/060-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Combat skill scaling for spell damage",
+              "sourceDescription": "+5% of your Distance Fighting as extra damage for your spells",
+              "optionImage": "images/proficiency/wiki/115-weapon-proficiency-gain-extra-damage-spells.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "SkillId": 7,
+              "Type": 26,
+              "Value": 0.05,
+              "sprite": {
+                "file": "images/proficiency/wiki/115-weapon-proficiency-gain-extra-damage-spells.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Spell augmentation",
+              "sourceDescription": "-2s cooldown for Divine Dazzle",
+              "optionImage": "images/proficiency/wiki/147-divine-dazzle.gif",
+              "iconImage": "images/proficiency/wiki/044-skillwheel-small-perk-icons.png",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "AugmentType": 6,
+              "SpellId": 238,
+              "Type": 5,
+              "Value": -2,
+              "sprite": {
+                "file": "images/proficiency/wiki/147-divine-dazzle.gif",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 7,
+          "proficiencies": [
+            {
+              "name": "Spell augmentation",
+              "sourceDescription": "+1.50% critical hit chance for Strong Ethereal Spear",
+              "optionImage": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+              "iconImage": "images/proficiency/wiki/026-skillwheel-small-perk-icons.png",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "AugmentType": 17,
+              "SpellId": 57,
+              "Type": 5,
+              "Value": 0.015,
+              "sprite": {
+                "file": "images/proficiency/wiki/099-strong-ethereal-spear.gif",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Rune critical hit chance",
+              "sourceDescription": "+1.50% critical hit chance for offensive runes",
+              "optionImage": "images/proficiency/wiki/018-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 10,
+              "Value": 0.015,
+              "sprite": {
+                "file": "images/proficiency/wiki/018-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bow of destruction",
+      "profileName": "Destruction 2H Bow",
+      "proficiencyId": 501,
+      "version": 3,
+      "weaponType": "Bow",
+      "handedness": "2H",
+      "weapon": {
+        "clientId": 27455,
+        "spriteId": 217923,
+        "firstSpriteId": 217813,
+        "sprite": "images/proficiency/weapons/501.png"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "proficiencies": [
+            {
+              "name": "Auto-attack critical extra damage",
+              "sourceDescription": "+10% critical extra damage for auto-attacks",
+              "optionImage": "images/proficiency/wiki/112-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 15,
+              "Value": 0.1,
+              "sprite": {
+                "file": "images/proficiency/wiki/112-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "proficiencies": [
+            {
+              "name": "Combat skill scaling for auto-attacks",
+              "sourceDescription": "+10% of your Distance Fighting as extra damage for auto-attacks",
+              "optionImage": "images/proficiency/wiki/076-weapon-proficiency-gain-extra-damage-auto-attack.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "SkillId": 7,
+              "Type": 25,
+              "Value": 0.1,
+              "sprite": {
+                "file": "images/proficiency/wiki/076-weapon-proficiency-gain-extra-damage-auto-attack.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "proficiencies": [
+            {
+              "name": "Damage against bosses and Sinister Embraced",
+              "sourceDescription": "+3% damage against bosses and Sinister Embraced",
+              "optionImage": "images/proficiency/wiki/060-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 7,
+              "Value": 0.03,
+              "sprite": {
+                "file": "images/proficiency/wiki/060-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            },
+            {
+              "name": "Auto-attack critical hit chance",
+              "sourceDescription": "+3.50% critical hit chance for auto-attacks",
+              "optionImage": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "Type": 11,
+              "Value": 0.035,
+              "sprite": {
+                "file": "images/proficiency/wiki/004-weapon-proficiency-general.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "proficiencies": [
+            {
+              "name": "Combat skill",
+              "sourceDescription": "+1 Distance Fighting",
+              "optionImage": "images/proficiency/wiki/103-weapon-proficiency-offensive-bonus-skill.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "SkillId": 7,
+              "Type": 3,
+              "Value": 1,
+              "sprite": {
+                "file": "images/proficiency/wiki/103-weapon-proficiency-offensive-bonus-skill.png",
+                "frame": 0,
+                "frames": 1,
+                "width": 32,
+                "height": 32,
+                "displayWidth": 64,
+                "displayHeight": 64
+              }
+            }
+          ]
+        },
+        {
+          "level": 5,
+          "proficiencies": [
+            {
+              "name": "Combat skill scaling for spell damage",
+              "sourceDescription": "+3.50% of your Distance Fighting as extra damage for your spells",
+              "optionImage": "images/proficiency/wiki/115-weapon-proficiency-gain-extra-damage-spells.png",
+              "iconImage": "",
+              "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
+              "SkillId": 7,
+              "Type": 26,
+              "Value": 0.035,
+              "sprite": {
+                "file": "images/proficiency/wiki/115-weapon-proficiency-gain-extra-damage-spells.png",
+                "frame": 0,
+                "frames": 1,
                 "width": 32,
                 "height": 32,
                 "displayWidth": 64,

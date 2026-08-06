@@ -51,7 +51,7 @@ calculator.addEventListener("mouseout", (event) => {
 calculator.addEventListener("mousedown", hideTooltip);
 calculator.addEventListener("scroll", hideTooltip, true);
 window.addEventListener("resize", hideTooltip);
-const state = { profiles: [], shapingGroups: {}, filtered: [], current: null, selected: {}, applied: {}, modified: {}, filter: "all", family: "all", dust: 4600, modifyTarget: null, picker: null };
+const state = { profiles: [], shapingGroups: {}, filtered: [], current: null, selected: {}, applied: {}, modified: {}, filter: "all", family: "all", modifyTarget: null, picker: null };
 const BUILD_COOKIE = "wpBuild";
 
 function setCookie(name, value, days) {
@@ -122,7 +122,7 @@ function weaponType(name) {
 
 function applyWeaponSprite(element, profile) {
   if (!profile.weapon?.sprite) return;
-  element.style.backgroundImage = `url('../${profile.weapon.sprite}?v=20260724-1')`;
+  element.style.backgroundImage = `url('../${profile.weapon.sprite}?v=20260729-7')`;
   element.style.setProperty("--sprite-x", 0);
   element.style.setProperty("--sprite-y", 0);
 }
@@ -187,7 +187,7 @@ function skillArtworkFrame(skillId) {
 
 function vocation(profile) {
   const type = profile?.WeaponType ?? weaponType(profile.Name);
-  return ({ Sword: "Knight", Axe: "Knight", Club: "Knight", Bow: "Paladin", Crossbow: "Paladin", Throw: "Paladin", Fist: "Monk", Wand: "Sorcerer", Rod: "Druid" })[type] ?? "Knight";
+  return ({ Sword: "Knight", Axe: "Knight", Club: "Knight", Bow: "Paladin", Crossbow: "Paladin", Throw: "Paladin", Other: "Paladin", Fist: "Monk", Wand: "Sorcerer", Rod: "Druid" })[type] ?? "Knight";
 }
 
 function matchesPlannerVocation(profile) {
@@ -311,37 +311,41 @@ function modifiedCount() { return Object.keys(modificationMap()).length; }
 function shapeSlot(levelIndex) {
   const modifications = modificationMap();
   if (modifications[levelIndex]) {
-    if (state.dust < 250) { alert("You need 250 dust to reshape this slot."); return; }
-    openPerkPicker(levelIndex, 250, false);
+    openPerkPicker(levelIndex, false);
     return;
   }
   const count = modifiedCount();
   if (count >= 2) { alert("This weapon already has two modified perk slots."); return; }
-  const cost = count === 0 ? 250 : 1000;
-  if (state.dust < cost) { alert(`You need ${cost} dust to shape this slot.`); return; }
-  openPerkPicker(levelIndex, cost, true);
+  openPerkPicker(levelIndex, true);
 }
 
-function openPerkPicker(levelIndex, cost, isNew = false) {
+function openPerkPicker(levelIndex, isNew = false) {
   const currentModification = modificationMap()[levelIndex];
   const rank = currentModification?.rank ?? 0;
   const currentPerk = currentModification?.perk ?? state.current.Levels[levelIndex].Perks[state.selected[state.current.ProficiencyId][levelIndex]];
   const pool = shapingPool(state.current)
     .map((perk) => valueAtRank(perk, rank))
     .sort((a, b) => perkLabel(a).localeCompare(perkLabel(b)));
-  state.picker = { levelIndex, cost, isNew, pool, currentPerk };
+  state.picker = { levelIndex, isNew, pool, currentPerk };
   $("#reshapeFilter").value = "";
   renderPerkOptions();
-  $("#pickerCost").innerHTML = `Cost: ${cost.toLocaleString()} <span class="shard">◆</span> · rank ${rank}`;
   renderPickerPreview();
   $("#reshapeBackdrop").hidden = false;
+}
+
+function perkName(perk) {
+  return perk.ShapeName
+    ?? perk.SpellName
+    ?? perk.ShapeLabel?.replace(/\s*[+:]?\s*\{value\}.*$/, "")
+    ?? perkNames[perk.Type]
+    ?? "Weapon perk";
 }
 
 function renderPerkOptions() {
   const query = $("#reshapeFilter").value.trim().toLowerCase();
   const matches = state.picker.pool
-    .map((perk, index) => ({ perk, index, label: perkLabel(perk) }))
-    .filter(({ label }) => !query || label.toLowerCase().includes(query));
+    .map((perk, index) => ({ perk, index, label: perkLabel(perk), name: perkName(perk) }))
+    .filter(({ label, name }) => !query || label.toLowerCase().includes(query) || name.toLowerCase().includes(query));
   const select = $("#reshapeSelect");
   select.innerHTML = matches.map(({ index, label }) => `<option value="${index}">${label}</option>`).join("");
   const preferred = matches.find(({ perk }) => perkLabel(perk) !== perkLabel(state.picker.currentPerk)) ?? matches[0];
@@ -373,11 +377,7 @@ function makeReshapeRow(perk, index) {
   }
   const names = document.createElement("span");
   const title = document.createElement("strong");
-  title.textContent = perk.ShapeName
-    ?? perk.SpellName
-    ?? perk.ShapeLabel?.replace(/\s*[+:]?\s*\{value\}.*$/, "")
-    ?? perkNames[perk.Type]
-    ?? "Weapon perk";
+  title.textContent = perkName(perk);
   const category = document.createElement("small");
   category.textContent = perk.ShapeCategory ?? perkNames[perk.Type] ?? "Weapon proficiency";
   names.append(title, category);
@@ -917,7 +917,7 @@ $("#modifyButton").addEventListener("click", () => {
   if (state.modifyTarget == null) return;
   const modification = modificationMap()[state.modifyTarget];
   if (modification?.originalChoice === state.selected[state.current.ProficiencyId][state.modifyTarget]) {
-    openPerkPicker(state.modifyTarget, 250, false);
+    openPerkPicker(state.modifyTarget, false);
   } else {
     shapeSlot(state.modifyTarget);
   }
@@ -928,8 +928,7 @@ $("#reshapeFilter").addEventListener("input", renderPerkOptions);
 function confirmReshapeSelection(index) {
   const picker = state.picker;
   const perk = picker?.pool[index];
-  if (!picker || !perk || state.dust < picker.cost) return;
-  state.dust -= picker.cost;
+  if (!picker || !perk) return;
   const maximumPerk = valueAtRank(perk, 10);
   if (picker.isNew) {
     const originalChoice = state.selected[state.current.ProficiencyId][picker.levelIndex];
@@ -956,7 +955,7 @@ $("#clearShapedPerkButton").addEventListener("click", () => {
 
 try {
   const [data, shaping] = await Promise.all([
-    fetch("../data/proficiency/weapon-proficiencies.json?v=20260724-1"),
+    fetch("../data/proficiency/weapon-proficiencies.json?v=20260729-7"),
     fetch("../data/proficiency/perk-shaping-options.json?v=20260723-1"),
   ]).then(async (responses) => {
     const failed = responses.find((response) => !response.ok);

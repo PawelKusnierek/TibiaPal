@@ -1,5 +1,5 @@
 {
-    "lesser_gems": ["Mitigation", "Hit Points", "Any Elemental Resistance", "Mana"],
+    "lesser_gems": ["Hit Points", "Mitigation", "Any Elemental Resistance", "Mana"],
     "greater_gems": ["Beam Mastery Mastery", "Great Energy/Death Beam Base Damage", "Great Fire Wave Base Damage", "UE Base Damage", "Energy Wave CD Reduction"],
     "builds": [
         {
