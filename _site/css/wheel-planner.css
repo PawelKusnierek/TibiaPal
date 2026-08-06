@@ -9,6 +9,19 @@
   text-align: left;
 }
 
+/* The scraped tibia.com stylesheets (wod-basic-1/2.css) redeclare body's
+   background-position (and, below 768px, the background-image itself, with
+   !important) for their own site chrome. Loaded after main.css, they clobber
+   the TibiaPal site artwork set there. Restore it here for the real page;
+   the iframe embed (damage calculator) explicitly wants no artwork at all,
+   see planner-embed.css, so it's excluded. */
+html:not(.planner-embed) body {
+  background-image: url(../images/Background_Artwork.webp) !important;
+  background-size: 1600px 800px !important;
+  background-position: 300px top !important;
+  background-repeat: no-repeat !important;
+}
+
 /* ---------- Panels & tables ---------- */
 
 #wod-wrapper .TableContainer {
@@ -185,12 +198,52 @@
 #wod-wrapper .SkillPercentage .Text {
   top: 0;
   height: 100%;
+  margin: 0;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 11px;
   font-weight: bold;
   text-shadow: 1px 1px 0 #000;
+}
+
+/* ---------- Code box: code on top, import input below it, and all 5 action
+   buttons combined into a single horizontal row at the bottom (instead of a
+   tall column of stacked buttons split across two rows on the right).
+   Scoped to .WodCodeBoxTable only -- the vocation-selection block reuses the
+   same .CodeExport/.CodeImport/.ButtonColumn class names for its own
+   (normally hidden-on-desktop) mobile code UI, so an unscoped rule here would
+   leak in and make that block visible too.
+   The row/tbody/ButtonColumn wrappers are all flattened with display:contents
+   so every button ends up a direct flex child of the same single container --
+   that's what keeps the gap between buttons uniform (nesting a second flex
+   container with its own `gap` inside a `gap`-ed parent double-counts the
+   spacing between the two groups). ---------- */
+#wod-wrapper .WodCodeBoxTable {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+#wod-wrapper .WodCodeBoxTable > tbody,
+#wod-wrapper .WodCodeBoxTable .WodCodeBoxRow,
+#wod-wrapper .WodCodeBoxTable .WodCodeBoxRow .ButtonColumn {
+  display: contents;
+}
+#wod-wrapper .WodCodeBoxRow .CodeColumn {
+  width: 100%;
+  padding-right: 0;
+}
+#wod-wrapper .WodCodeBoxRow:first-child .CodeColumn {
+  order: 1;
+}
+#wod-wrapper .WodCodeBoxRow:last-child .CodeColumn {
+  order: 2;
+}
+#wod-wrapper .WodCodeBoxRow .ButtonColumn .BigButton {
+  order: 3;
+  margin: 0 !important;
 }
 
 /* ---------- Locked / unlocked states ---------- */
