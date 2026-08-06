@@ -258,9 +258,9 @@
     return result;
   }
 
-  function CopyTextOfElement(sourceId, targetId) {
-    var source = document.getElementById(sourceId);
+  function CopyTextOfElement(targetId, sourceId) {
     var target = document.getElementById(targetId);
+    var source = document.getElementById(sourceId);
     if (!source || !target) return;
     target.addEventListener("click", function () {
       navigator.clipboard && navigator.clipboard.writeText(source.textContent || "");
