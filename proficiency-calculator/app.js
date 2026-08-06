@@ -1,4 +1,9 @@
 const calculator = document.querySelector("#weaponProficiencyCalculator") ?? document;
+const plannerParams = new URLSearchParams(window.location.search);
+const isPlannerEmbed = plannerParams.has("embed");
+const supportedVocations = new Set(["knight", "paladin", "sorcerer", "druid", "monk"]);
+let plannerVocation = supportedVocations.has(plannerParams.get("vocation")?.toLowerCase()) ? plannerParams.get("vocation").toLowerCase() : null;
+document.documentElement.classList.toggle("planner-embed", isPlannerEmbed);
 const $ = (selector) => calculator.querySelector(selector);
 
 const TOOLTIP_SHOW_DELAY = 40;
@@ -183,6 +188,26 @@ function skillArtworkFrame(skillId) {
 function vocation(profile) {
   const type = profile?.WeaponType ?? weaponType(profile.Name);
   return ({ Sword: "Knight", Axe: "Knight", Club: "Knight", Bow: "Paladin", Crossbow: "Paladin", Throw: "Paladin", Fist: "Monk", Wand: "Sorcerer", Rod: "Druid" })[type] ?? "Knight";
+}
+
+function matchesPlannerVocation(profile) {
+  if (!profile) return false;
+  return !isPlannerEmbed || !plannerVocation || vocation(profile).toLowerCase() === plannerVocation;
+}
+
+function applyPlannerVocation(value) {
+  const next = String(value ?? "").toLowerCase();
+  if (!isPlannerEmbed || !supportedVocations.has(next)) return;
+  plannerVocation = next;
+  if (!state.profiles.length) return;
+  state.family = "all";
+  state.filter = "all";
+  $("#search").value = "";
+  calculator.querySelectorAll("#filters button").forEach((button) => button.classList.toggle("active", button.dataset.filter === "all"));
+  buildFamilies();
+  $("#familyDropdownToggle").textContent = "Weapons: All";
+  filterProfiles();
+  if (!matchesPlannerVocation(state.current)) selectProfile(state.filtered[0]);
 }
 
 function spellDetails(spellId, profile) {
@@ -439,7 +464,7 @@ function logImageStatus(label, url) {
 function buildFamilies() {
   const categories = [
     { value: "all", label: "Weapons: All" },
-    ...[...new Set(state.profiles.map((profile) => weaponCategory(profile.WeaponType)))]
+    ...[...new Set(state.profiles.filter(matchesPlannerVocation).map((profile) => weaponCategory(profile.WeaponType)))]
       .sort((left, right) => left.localeCompare(right))
       .map((category) => ({ value: category, label: category })),
   ];
@@ -468,7 +493,7 @@ function filterProfiles() {
     const matchesSearch = !query || p.Name.toLowerCase().includes(query);
     const matchesFamily = state.family === "all" || weaponCategory(p.WeaponType) === state.family;
     const matchesFilter = state.filter === "all" || p.Handedness === state.filter;
-    return matchesSearch && matchesFamily && matchesFilter;
+    return matchesSearch && matchesFamily && matchesFilter && matchesPlannerVocation(p);
   }).sort((a, b) => weaponDisplayPriority(a.Name) - weaponDisplayPriority(b.Name));
   renderGrid();
 }
@@ -501,6 +526,7 @@ function renderGrid() {
 }
 
 function selectProfile(profile) {
+  if (!profile) return;
   state.current = profile;
   state.modifyTarget = null;
   state.selected[profile.ProficiencyId] ??= profile.Levels.map(() => 0);
@@ -511,6 +537,28 @@ function selectProfile(profile) {
   renderGrid();
   renderBoard();
 }
+
+function applyProficiencyBuildToken(value) {
+  const raw = String(value ?? "").trim();
+  if (!raw) return;
+  try {
+    const build = decodeBuild(raw);
+    const shaped = Object.fromEntries((Array.isArray(build.s) ? build.s : []).map(([level, originalChoice, rank, ShapeKey]) => [
+      level,
+      { originalChoice, rank, perk: { ShapeKey } },
+    ]));
+    const profile = buildFromParts(Number(build.w), Array.isArray(build.p) ? build.p.map(Number) : [], shaped);
+    if (profile) selectProfile(profile);
+  } catch (error) {
+    console.warn("Ignored invalid proficiency build token", error);
+  }
+}
+
+window.addEventListener("message", (event) => {
+  if (event.origin !== window.location.origin) return;
+  if (event.data?.type === "tibiapal:set-vocation") applyPlannerVocation(event.data.vocation);
+  if (event.data?.type === "tibiapal:load-proficiency-build") applyProficiencyBuildToken(event.data.token);
+});
 
 function renderBoard() {
   hideTooltip();
@@ -666,6 +714,31 @@ function renderBuildSummary() {
     item.append(icon, text);
     summary.append(item);
   }
+  publishProficiencyBuild(profile, grouped);
+}
+
+function publishProficiencyBuild(profile, grouped) {
+  if (window.parent === window) return;
+  const id = profile.ProficiencyId;
+  const compactShapes = Object.entries(state.modified[id] ?? {}).map(([level, modification]) => [
+    Number(level), modification.originalChoice, modification.rank, modification.perk.ShapeKey,
+  ]);
+  const token = encodeBuild({ w: id, p: state.selected[id], s: compactShapes });
+  const effects = [...grouped.values()].map(({ perk, levels }) => ({
+    type: perk.Type,
+    value: Number(perk.Value) || 0,
+    skillId: perk.SkillId ?? null,
+    spellId: perk.SpellId ?? null,
+    augmentType: perk.AugmentType ?? null,
+    elementId: perk.ElementId ?? perk.DamageType ?? null,
+    bestiaryName: perk.BestiaryName ?? null,
+    label: perkLabel(perk, profile),
+    levels,
+  }));
+  window.parent.postMessage({
+    type: "tibiapal:proficiency-build",
+    payload: { token, weaponName: profile.Name, weaponSprite: profile.weapon?.sprite ?? "", vocation: vocation(profile).toLowerCase(), effects },
+  }, window.location.origin);
 }
 
 function cloneSelections(value) { return JSON.parse(JSON.stringify(value)); }
@@ -904,9 +977,10 @@ try {
       Perks: level.proficiencies,
     })),
   }));
-  state.filtered = [...state.profiles].sort((a, b) => weaponDisplayPriority(a.Name) - weaponDisplayPriority(b.Name));
+  state.filtered = state.profiles.filter(matchesPlannerVocation).sort((a, b) => weaponDisplayPriority(a.Name) - weaponDisplayPriority(b.Name));
   buildFamilies();
-  selectProfile(restoreBuildFromUrl() ?? restoreBuildFromCookie() ?? state.profiles.find((p) => p.Name.toLowerCase() === "moonsilver epee") ?? state.profiles[0]);
+  const restored = restoreBuildFromUrl() ?? restoreBuildFromCookie();
+  selectProfile((matchesPlannerVocation(restored) ? restored : null) ?? state.filtered.find((p) => p.Name.toLowerCase() === "moonsilver epee") ?? state.filtered[0]);
 } catch (error) {
   $("#weaponName").textContent = "Tibia data unavailable";
   $("#weaponGrid").innerHTML = `<p>Calculator data could not be loaded.<br>${error.message}</p>`;

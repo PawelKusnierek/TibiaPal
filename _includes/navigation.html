@@ -26,6 +26,10 @@
     </div>
 
     <div class="nav-section">TOOLS</div>
+    <div class="{% if page.url == "/damage-calculator.html" %}active {% endif %}nav-item"><a href="/damage-calculator">
+            <div class="nav-image-container"><img class="nav-image" src={{"images/Sword.gif" |
+            relative_url}}><span style="color:red">NEW!</span>Damage Calculator</div>
+        </a></div>
     <div class="{% if page.url == "/tibialootsplit.html" %}active {% endif %}nav-item"><a href="/tibialootsplit">
             <div class="nav-image-container"><img class="nav-image" src={{"images/crystalcoin.ico" |
                     relative_url}}>TibiaLootSplit</div>
@@ -37,11 +41,6 @@
     <div class="{% if page.url == "/weapon-proficiency.html" %}active {% endif %}nav-item"><a href="/weapon-proficiency">
             <div class="nav-image-container"><img class="nav-image" src={{"images/Catalyst.gif" |
                     relative_url}}><span style="color:red">NEW!</span>Weapon Proficiency Planner
-            </div>
-        </a></div>
-    <div class="{% if page.url == "/wheel-planner.html" %}active {% endif %}nav-item"><a href="/wheel-planner">
-            <div class="nav-image-container"><img class="nav-image" src={{"images/wheel_of_destiny.png" |
-                    relative_url}}>Wheel of Destiny Planner
             </div>
         </a></div>
     </div>
