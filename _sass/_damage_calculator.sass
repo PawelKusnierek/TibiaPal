@@ -1,0 +1,1366 @@
+.dc-app
+  --dc-bg: #061021
+  --dc-panel: #0b1b32
+  --dc-panel-2: #071326
+  --dc-border: #315f91
+  --dc-muted: #7897b8
+  --dc-text: #eef6ff
+  --dc-blue: #2d8cf8
+  --dc-cyan: #14a99b
+  --dc-gold: #efbd55
+  box-sizing: border-box
+  width: 100%
+  min-height: 760px
+  padding: 14px
+  color: var(--dc-text)
+  background: radial-gradient(ellipse at top, rgba(22, 55, 95, .62), transparent 34rem), #061021
+  font-family: Verdana, Arial, sans-serif
+  text-align: left
+  text-shadow: none
+
+.dc-app *,
+.dc-app *::before,
+.dc-app *::after
+  box-sizing: border-box
+
+.dc-app [hidden]
+  display: none !important
+
+.dc-app h1,
+.dc-app h2,
+.dc-app p
+  margin: 0
+
+.dc-app h1
+  margin-top: 4px
+  font: 700 clamp(26px, 3vw, 36px)/1.1 Verdana, Arial, sans-serif
+  letter-spacing: -.025em
+
+.dc-app h2
+  padding: 0
+  font-size: 18px
+  line-height: 1.2
+
+.dc-app button,
+.dc-app input,
+.dc-app select
+  font: inherit
+
+.dc-hero
+  display: flex
+  align-items: flex-end
+  justify-content: space-between
+  gap: 16px
+  margin-bottom: 14px
+
+.dc-hero p
+  display: block
+  margin-top: 10px
+  color: var(--dc-muted)
+  font-size: 15px
+
+.dc-kicker
+  color: var(--dc-blue)
+  font-size: 10px
+  font-weight: 800
+  letter-spacing: .18em
+
+.dc-hero-actions
+  display: flex
+  gap: 8px
+  flex: 0 0 auto
+
+.dc-button,
+.dc-add-row button
+  min-height: 34px
+  padding: 0 14px
+  border: 1px solid #315f91
+  border-radius: 2px
+  color: #eef6ff
+  background: linear-gradient(#1a4677, #0c2848)
+  box-shadow: inset 0 0 0 1px #071525, 0 2px 7px rgba(0, 0, 0, .45)
+  cursor: pointer
+  font-weight: 750
+
+.dc-button:hover,
+.dc-add-row button:hover
+  filter: brightness(1.12)
+
+.dc-button:disabled
+  cursor: not-allowed
+  opacity: .5
+
+.dc-button-stale
+  animation: dc-button-pulse 1.1s ease-in-out infinite
+
+@keyframes dc-button-pulse
+  0%,
+  100%
+    box-shadow: inset 0 0 0 1px #071525, 0 0 0 0 rgba(245, 200, 111, .55)
+  50%
+    box-shadow: inset 0 0 0 1px #071525, 0 0 0 5px rgba(245, 200, 111, 0)
+    filter: brightness(1.2)
+
+.dc-button-secondary
+  color: var(--dc-text)
+  border-color: #315f91
+  background: linear-gradient(#16375f, #0b203b)
+
+.dc-button-quiet
+  color: #94b6d8
+  border-color: #253e5b
+  background: #09182b
+  box-shadow: inset 0 0 0 1px #07111f
+
+.dc-status
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 10px
+  min-height: 260px
+  color: var(--dc-muted)
+
+.dc-status[hidden]
+  display: none
+
+.dc-status.dc-error
+  color: #ff9c9c
+
+.dc-status button
+  margin-left: 10px
+
+.dc-spinner
+  width: 18px
+  height: 18px
+  border: 2px solid #31506f
+  border-top-color: var(--dc-blue)
+  border-radius: 50%
+  animation: dc-spin .7s linear infinite
+
+@keyframes dc-spin
+  to
+    transform: rotate(360deg)
+
+.dc-layout
+  display: grid
+  grid-template-columns: minmax(0, 1fr) minmax(390px, .75fr)
+  gap: 10px
+  align-items: start
+
+.dc-builder
+  display: grid
+  gap: 9px
+  min-width: 0
+
+.dc-panel,
+.dc-results-panel
+  border: 1px solid var(--dc-border)
+  border-radius: 2px
+  background: linear-gradient(145deg, #0b1b32, #071326)
+  box-shadow: inset 0 0 0 1px #071525, 0 5px 18px #020814
+  overflow: hidden
+
+.dc-panel
+  padding: 12px
+
+.dc-accent-wheel
+  border-left: 3px solid var(--dc-gold)
+
+.dc-accent-proficiency
+  border-left: 3px solid var(--dc-cyan)
+
+.dc-panel-heading
+  display: grid
+  grid-template-columns: 32px minmax(0, 1fr) auto
+  gap: 9px
+  align-items: center
+  margin: -12px -12px 11px
+  padding: 8px 12px
+  border-bottom: 1px solid #173b61
+  background: linear-gradient(90deg, rgba(22, 55, 95, .72), rgba(7, 19, 38, .25))
+
+.dc-optional-tag
+  align-self: center
+  justify-self: end
+  padding: 3px 9px
+  border: 1px solid #315f91
+  border-radius: 999px
+  color: #8fb0d4
+  background: rgba(7, 20, 38, .7)
+  font-size: 9px
+  font-weight: 800
+  letter-spacing: .07em
+  text-transform: uppercase
+  white-space: nowrap
+
+.dc-panel-heading p
+  display: block
+  margin-top: 4px
+  color: var(--dc-muted)
+  font-size: 12px
+
+.dc-panel-heading > a
+  align-self: center
+  font-size: 11px
+  white-space: nowrap
+
+.dc-inline-action
+  align-self: center
+  padding: 5px 8px
+  border: 0
+  color: #75d5f0
+  background: transparent
+  cursor: pointer
+  font-size: 11px
+  text-decoration: underline
+
+.dc-heading-actions
+  display: flex
+  align-items: center
+  gap: 9px
+  justify-self: end
+
+.dc-info
+  position: relative
+  display: flex
+
+.dc-info-toggle
+  position: relative
+  display: grid
+  place-items: center
+  width: 24px
+  height: 24px
+  padding: 0
+  border: 1px solid #315f91
+  border-radius: 50%
+  color: #9fd8ef
+  background: linear-gradient(#16375f, #0b203b)
+  box-shadow: inset 0 0 0 1px #071525
+  cursor: pointer
+
+.dc-info-toggle:hover,
+.dc-info.open .dc-info-toggle
+  color: #eaf6ff
+  border-color: #64c7ff
+  box-shadow: inset 0 0 0 1px #071525, 0 0 8px rgba(45, 140, 248, .45)
+
+.dc-info-glyph
+  font: italic 700 13px/1 Georgia, "Times New Roman", serif
+  pointer-events: none
+
+.dc-info-count
+  position: absolute
+  top: -6px
+  right: -7px
+  min-width: 16px
+  height: 16px
+  padding: 0 3px
+  border-radius: 999px
+  color: #04121f
+  background: var(--dc-cyan)
+  box-shadow: 0 0 0 1px #071326
+  font: 800 9px/16px system-ui, sans-serif
+  text-align: center
+
+.dc-info-count[hidden]
+  display: none
+
+.dc-info-popover
+  position: fixed
+  z-index: 1200
+  display: none
+  width: min(360px, calc(100vw - 20px))
+  max-height: min(60vh, 440px)
+  overflow-y: auto
+  padding: 11px
+  border: 1px solid #347ec1
+  border-radius: 6px
+  background: #071326
+  box-shadow: inset 0 0 0 1px #071525, 0 18px 55px rgba(0, 0, 0, .72)
+
+.dc-info.open .dc-info-popover
+  display: block
+
+.dc-info-popover-head
+  margin-bottom: 9px
+  color: #aebed0
+  font-size: 10px
+  font-weight: 800
+  letter-spacing: .06em
+  text-transform: uppercase
+
+.dc-info-popover .dc-synced-effects
+  margin-top: 0
+
+.dc-step
+  display: grid
+  place-items: center
+  width: 30px
+  height: 30px
+  border: 1px solid #2d8cf8
+  border-radius: 2px
+  color: #eef6ff
+  background: linear-gradient(#16375f, #0b203b)
+  box-shadow: inset 0 0 0 1px #071525
+  font-size: 10px
+  font-weight: 800
+
+.dc-fields
+  display: grid
+  grid-template-columns: repeat(4, minmax(105px, 1fr))
+  gap: 8px
+  align-items: start
+
+.dc-fields-basic
+  grid-template-columns: repeat(3, minmax(120px, 1fr))
+
+.dc-app label
+  display: grid
+  gap: 5px
+  min-width: 0
+  color: #94b6d8
+  font-size: 10px
+  font-weight: 700
+
+.dc-fields > label,
+.dc-equipment-grid > label
+  grid-template-rows: 16px 35px
+  align-content: start
+
+.dc-equipment-grid > .dc-equipment-main
+  grid-template-rows: 16px 35px auto
+
+.dc-app label > span
+  color: #70879e
+
+.dc-app input,
+.dc-app select
+  width: 100%
+  height: 35px
+  min-width: 0
+  padding: 0 10px
+  border: 1px solid #315f91
+  border-radius: 2px
+  outline: none
+  color: var(--dc-text)
+  background: #071426
+  box-shadow: inset 0 0 0 1px #050d18
+
+.dc-app input:focus,
+.dc-app select:focus
+  border-color: #64c7ff
+  box-shadow: inset 0 0 0 1px #071525, 0 0 8px rgba(45, 140, 248, .45)
+
+.dc-app input:disabled,
+.dc-app select:disabled
+  opacity: .45
+
+.dc-details
+  margin-top: 9px
+  border-top: 1px solid #173b61
+
+.dc-details summary
+  padding: 9px 2px 6px
+  color: #94b6d8
+  cursor: pointer
+  font-size: 10px
+  font-weight: 700
+
+.dc-wheel-fields
+  grid-template-columns: minmax(150px, .42fr) 1fr
+  align-items: start
+
+.dc-stance-list
+  display: flex
+  flex-wrap: wrap
+  gap: 7px
+  min-width: 0
+  margin: 0
+  padding: 0
+  border: 0
+
+.dc-stance-list legend
+  margin-bottom: 5px
+  color: #aebed0
+  font-size: 11px
+  font-weight: 700
+
+.dc-stance-list label
+  display: flex
+  align-items: center
+  gap: 6px
+  min-height: 35px
+  padding: 0 10px
+  border: 1px solid #315f91
+  border-radius: 2px
+  background: #071426
+  box-shadow: inset 0 0 0 1px #050d18
+
+.dc-stance-list input
+  width: 15px
+  height: 15px
+
+.dc-stance-note
+  color: var(--dc-cyan)
+  font-size: 10px
+  font-weight: 700
+
+.dc-no-options
+  color: #7389a0
+  font-size: 12px
+
+.dc-equipment-grid
+  display: grid
+  grid-template-columns: minmax(180px, 1.6fr) 1fr 1fr
+  gap: 10px
+
+.dc-equipment-main small
+  min-height: 15px
+  color: #7491ad
+  font-weight: 500
+
+.dc-app input[readonly]
+  color: #b7c9da
+  background: #09182b
+  cursor: default
+
+.dc-add-row
+  margin-top: 16px
+
+.dc-add-row > label
+  margin-bottom: 5px
+
+.dc-add-row > div
+  display: grid
+  grid-template-columns: minmax(0, 1fr) auto
+  gap: 7px
+
+.dc-add-row button
+  min-height: 37px
+
+.dc-row-list
+  display: grid
+  gap: 7px
+  margin-top: 9px
+
+.dc-list-head
+  display: grid
+  gap: 8px
+  margin-top: 15px
+  padding: 0 10px
+  color: #667f97
+  font-size: 9px
+  font-weight: 800
+  letter-spacing: .08em
+  text-transform: uppercase
+
+.dc-rotation-head
+  grid-template-columns: minmax(140px, 1fr) 76px 76px 30px
+
+.dc-target-head
+  grid-template-columns: minmax(120px, 1fr) 70px minmax(115px, .8fr) 56px 30px
+
+.dc-data-row
+  display: grid
+  align-items: center
+  gap: 8px
+  min-height: 48px
+  padding: 7px 9px
+  border: 1px solid #173b61
+  border-radius: 2px
+  background: rgba(5, 16, 31, .88)
+
+.dc-data-row strong
+  display: block
+  overflow: hidden
+  color: #dce9f6
+  font-size: 12px
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.dc-data-row small
+  display: block
+  margin-top: 2px
+  overflow: hidden
+  color: #718aa2
+  font-size: 9px
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.dc-data-row input,
+.dc-data-row select
+  height: 33px
+  padding: 0 7px
+
+.dc-perk-row
+  grid-template-columns: minmax(160px, 1fr) minmax(95px, .4fr) 30px
+
+.dc-rotation-row
+  grid-template-columns: minmax(140px, 1fr) 76px 76px 30px
+
+.dc-target-row
+  grid-template-columns: minmax(120px, 1fr) 70px minmax(115px, .8fr) 56px 30px
+
+.dc-remove
+  width: 28px
+  height: 28px
+  padding: 0
+  border: 0
+  border-radius: 50%
+  color: #d08787
+  background: transparent
+  cursor: pointer
+  font-size: 20px
+
+.dc-remove:hover
+  color: #ffaaaa
+  background: rgba(176, 64, 64, .14)
+
+.dc-empty-row
+  padding: 12px
+  border: 1px dashed #31577f
+  border-radius: 2px
+  color: #70879e
+  font-size: 11px
+  text-align: center
+
+.dc-synced-effects
+  display: flex
+  flex-wrap: wrap
+  gap: 5px
+  margin-top: 9px
+
+.dc-synced-effect
+  max-width: 100%
+  padding: 7px 9px
+  border: 1px solid #31577f
+  border-radius: 2px
+  color: #c9ddf2
+  background: rgba(5, 16, 31, .88)
+  box-shadow: inset 0 0 0 1px #07111f
+  font-size: 10px
+
+.dc-synced-effect strong
+  color: inherit
+  font: inherit
+
+.dc-synced-effect.has-details
+  display: grid
+  gap: 3px
+  border-radius: 2px
+
+.dc-synced-effect.has-details small
+  display: block
+  color: #8ea5bb
+  font-size: 9px
+  line-height: 1.35
+
+.dc-synced-effect.mapped
+  border-color: rgba(71, 215, 202, .45)
+  color: #9be5dc
+
+.dc-synced-effect.unmapped
+  border-color: rgba(239, 189, 85, .4)
+  color: #d9ba7d
+
+.dc-manual-perks > p
+  display: block
+  margin: 0 0 5px
+  color: #738ba2
+  font-size: 10px
+
+.dc-results-panel
+  position: sticky
+  top: 12px
+  display: flex
+  flex-direction: column
+  max-height: calc(100vh - 24px)
+
+.dc-results-heading
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 15px
+  padding: 14px 16px
+  border-bottom: 2px solid #2d8cf8
+  background: linear-gradient(#16375f, #0b203b)
+
+.dc-results-heading h2
+  margin-top: 4px
+  font-size: 22px
+
+.dc-calculation-status
+  min-height: 34px
+  padding: 10px 16px
+  color: #7897b8
+  border-bottom: 1px solid #173b61
+  background: #071426
+  font-size: 10px
+
+.dc-calculation-status.error
+  color: #ff9e9e
+
+.dc-calculation-status.dc-status-stale
+  color: #f5c86f
+
+/* Shareable build card rendered off-screen for the "Save image" export. */
+
+.dc-export-stage
+  position: fixed
+  left: -10000px
+  top: 0
+
+.dc-export-card
+  width: 760px
+  padding: 26px 26px 20px
+  border: 1px solid #347ec1
+  border-radius: 14px
+  background: radial-gradient(120% 90% at 50% -10%, #163a63, #0a1a30 55%, #071223)
+  box-shadow: inset 0 0 0 1px #0a1c33
+  color: #dce9f6
+  font-family: inherit
+
+.dc-export-header
+  display: flex
+  align-items: center
+  gap: 16px
+  padding-bottom: 16px
+  border-bottom: 1px solid #24507e
+
+.dc-export-logo
+  flex: 0 0 auto
+  width: 66px
+  height: 66px
+  object-fit: contain
+
+.dc-export-header-text
+  flex: 1 1 auto
+  min-width: 0
+
+.dc-export-weapon
+  flex: 0 0 auto
+  width: 62px
+  height: 62px
+  object-fit: contain
+  image-rendering: pixelated
+  padding: 5px
+  border: 1px solid #2a527d
+  border-radius: 10px
+  background: radial-gradient(circle, #173756, #0a1a30 74%)
+
+.dc-export-kicker
+  color: #6fd0ec
+  font-size: 11px
+  font-weight: 800
+  letter-spacing: .18em
+
+.dc-export-header h2
+  margin: 6px 0 6px
+  color: #f4f9ff
+  font-size: 30px
+  line-height: 1.1
+
+.dc-export-header p
+  color: #9fbbd8
+  font-size: 13px
+
+.dc-export-summary
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 10px
+  margin: 18px 0
+
+.dc-export-summary div
+  padding: 12px
+  border: 1px solid #2a527d
+  border-radius: 8px
+  background: rgba(6, 18, 34, .6)
+  text-align: center
+
+.dc-export-summary span
+  display: block
+  color: #7f9cbb
+  font-size: 10px
+  font-weight: 800
+  letter-spacing: .05em
+  text-transform: uppercase
+
+.dc-export-summary strong
+  display: block
+  margin-top: 6px
+  color: #f5c86f
+  font-size: 24px
+
+.dc-export-grid-title
+  margin-bottom: 10px
+  color: #aecbe9
+  font-size: 12px
+  font-weight: 800
+  letter-spacing: .12em
+  text-transform: uppercase
+
+.dc-export-grid
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 10px
+
+.dc-export-tile
+  padding: 13px 14px
+  border: 1px solid #2a527d
+  border-radius: 10px
+  background: linear-gradient(150deg, #10294a, #0a1a30)
+
+.dc-export-tile-head
+  display: flex
+  align-items: center
+  gap: 9px
+  margin-bottom: 8px
+
+.dc-export-tile-head .dc-result-icon
+  flex: 0 0 auto
+
+.dc-export-tile-head strong
+  overflow: hidden
+  color: #eaf3ff
+  font-size: 14px
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.dc-export-tile-label
+  color: #7f9cbb
+  font-size: 10px
+  font-weight: 800
+  letter-spacing: .05em
+  text-transform: uppercase
+
+.dc-export-tile-value
+  margin: 1px 0 6px
+  color: #7fe0d2
+  font-size: 26px
+  font-weight: 800
+  line-height: 1
+
+.dc-export-tile-raw
+  color: #9fbbd8
+  font-size: 11px
+
+.dc-export-hl
+  color: #f5c86f
+  font-weight: 800
+
+.dc-export-icon-glyph
+  background-image: none !important
+  color: #cfe0f2
+  font-size: 26px
+  line-height: 1
+
+.dc-export-gem-title
+  margin-top: 18px
+
+.dc-export-gems
+  display: flex
+  flex-wrap: wrap
+  gap: 6px
+
+.dc-export-gem
+  padding: 6px 9px
+  border: 1px solid #2a527d
+  border-radius: 6px
+  background: rgba(6, 18, 34, .6)
+  color: #bcd6f0
+  font-size: 11px
+
+.dc-export-footer
+  margin-top: 18px
+  padding-top: 12px
+  border-top: 1px solid #24507e
+  color: #7f9cbb
+  font-size: 11px
+  text-align: center
+  letter-spacing: .04em
+
+.dc-boost-legend
+  display: flex
+  justify-content: flex-end
+  gap: 12px
+  padding: 7px 16px
+  border-bottom: 1px solid #173b61
+  color: #7690a8
+  background: #09182b
+  font-size: 9px
+  font-weight: 800
+
+.dc-boost-legend span::before
+  content: ""
+  display: inline-block
+  width: 6px
+  height: 6px
+  margin-right: 4px
+  border-radius: 50%
+  background: currentColor
+
+.dc-summary-cards
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 1px
+  border-bottom: 1px solid #315f91
+  background: #315f91
+
+.dc-summary-cards article
+  min-width: 0
+  padding: 15px 10px
+  background: #071426
+  text-align: center
+
+.dc-summary-cards article > span:first-child
+  display: block
+  min-height: 27px
+  color: #7890a6
+  font-size: 9px
+  font-weight: 800
+  letter-spacing: .04em
+  text-transform: uppercase
+
+.dc-summary-cards .dc-damage-number
+  display: block
+  margin-top: 3px
+  color: #f5c86f
+  font-size: 24px
+
+.dc-result-filter
+  display: grid
+  grid-template-columns: auto minmax(0, 1fr)
+  align-items: center
+  gap: 10px
+  padding: 8px
+  border-bottom: 1px solid #173b61
+  background: #09182b
+
+.dc-result-filter label
+  color: #7897b8
+  font-size: 9px
+  font-weight: 800
+  letter-spacing: .05em
+  text-transform: uppercase
+
+.dc-result-filter input
+  width: 100%
+  height: 32px
+  padding: 0 10px
+  border: 1px solid #315f91
+  border-radius: 3px
+  color: #e7f2ff
+  background: #071426
+  box-shadow: inset 0 0 0 1px #050d18
+  font-size: 10px
+
+.dc-result-filter input:focus
+  border-color: #62baff
+  outline: 1px solid rgba(98, 186, 255, .25)
+
+.dc-damage-number
+  color: #d9e5f1
+  font-size: 13px
+  font-weight: 800
+
+.dc-damage-number.boosted
+  font-size: 15px
+  text-shadow: 0 0 12px rgba(239, 189, 85, .2)
+
+.dc-boost-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-end
+  gap: 3px
+  margin-top: 4px
+
+.dc-summary-cards .dc-boost-list
+  justify-content: center
+
+.dc-boost
+  display: inline-block
+  padding: 2px 4px
+  border: 1px solid currentColor
+  border-radius: 4px
+  outline: none
+  background: rgba(3, 12, 20, .7)
+  cursor: help
+  font-size: 9px
+  font-weight: 900
+  line-height: 1.1
+
+.dc-boost:hover,
+.dc-boost:focus
+  filter: brightness(1.35)
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, .08)
+
+.dc-boost-wheel
+  color: #f2bd58
+
+.dc-boost-proficiency
+  color: #48ddcd
+
+.dc-boost-manual
+  color: #b18cff
+
+.dc-result-sections
+  display: grid
+  align-content: start
+  gap: 10px
+  flex: 1 1 auto
+  min-height: 0
+  padding: 8px
+  overflow: auto
+  scrollbar-color: #2d8cf8 #071426
+
+.dc-result-sections > .dc-empty
+  margin: 0
+  padding: 34px 10px
+  color: #698096
+  text-align: center
+
+.dc-result-sections > .dc-filter-empty
+  margin: 0
+  padding: 34px 10px
+  color: #7897b8
+  text-align: center
+
+.dc-result-group
+  display: grid
+  gap: 6px
+
+.dc-result-group-heading
+  position: sticky
+  top: -8px
+  z-index: 3
+  display: flex
+  align-items: center
+  justify-content: space-between
+  min-height: 32px
+  padding: 6px 9px
+  border: 1px solid #315f91
+  background: linear-gradient(#16375f, #0b203b)
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .35)
+
+.dc-result-group-heading strong
+  color: #eef6ff
+  font-size: 11px
+  letter-spacing: .08em
+  text-transform: uppercase
+
+.dc-result-group-heading span
+  color: #7897b8
+  font-size: 9px
+
+.dc-result-grid
+  display: grid
+  gap: 6px
+
+.dc-result-card
+  display: grid
+  grid-template-columns: 104px minmax(0, 1fr)
+  min-width: 0
+  border: 1px solid #173b61
+  background: rgba(5, 16, 31, .88)
+  box-shadow: inset 0 0 0 1px #07111f
+
+.dc-result-group[hidden],
+.dc-result-card[hidden]
+  display: none
+
+.dc-result-card:hover
+  border-color: #315f91
+  background: rgba(10, 31, 55, .94)
+
+.dc-result-identity
+  display: flex
+  min-width: 0
+  padding: 8px 6px
+  border-right: 1px solid #173b61
+  flex-direction: column
+  align-items: center
+  justify-content: flex-start
+  text-align: center
+
+.dc-result-icon
+  display: grid
+  place-items: center
+  width: 52px
+  height: 52px
+  margin-bottom: 6px
+  border: 1px solid #315f91
+  background: radial-gradient(circle, #173756, #07111f 72%)
+  box-shadow: inset 0 0 0 2px #07111f
+  image-rendering: pixelated
+
+.dc-result-icon img
+  width: 44px
+  height: 44px
+  object-fit: contain
+  image-rendering: pixelated
+
+.dc-result-icon.fallback
+  background-image: url('/images/proficiency/icons-weaponmastery-gainExtraDamageSpells.png')
+  background-repeat: no-repeat
+  background-position: 0 0
+  background-size: 520px 52px
+
+.dc-result-identity strong
+  overflow-wrap: anywhere
+  color: #e7f2ff
+  font-size: 10px
+  line-height: 1.3
+
+.dc-result-identity small
+  margin-top: 3px
+  color: #75d5f0
+  font-size: 8px
+  text-transform: uppercase
+
+.dc-result-metrics
+  display: grid
+  grid-template-columns: repeat(4, minmax(58px, 1fr))
+  min-width: 0
+
+.dc-result-metric
+  min-width: 0
+  padding: 8px 5px
+  border-right: 1px solid #173b61
+  text-align: right
+
+.dc-result-metric:last-child
+  border-right: 0
+
+.dc-result-metric > span:first-child
+  display: block
+  min-height: 24px
+  color: #7897b8
+  font-size: 8px
+  font-weight: 800
+  line-height: 1.25
+  text-transform: uppercase
+
+.dc-result-metric:first-child .dc-damage-number
+  color: #72d9cc
+
+.dc-result-card-rune .dc-result-icon
+  border-color: #7f43be
+  background-color: #17122a
+
+.dc-api-credit
+  display: block !important
+  padding: 14px 18px
+  color: #687f94
+  font-size: 9px
+  text-align: center
+
+.dc-planner-modal
+  position: fixed
+  z-index: 1000
+  inset: 0
+  display: grid
+  place-items: center
+  padding: 18px
+  background: radial-gradient(circle at 50% 18%, rgba(24, 70, 118, .26), transparent 36rem), rgba(0, 5, 13, .92)
+  backdrop-filter: blur(7px)
+
+.dc-planner-modal[hidden]
+  display: none
+
+.dc-planner-modal
+  animation: dc-backdrop-in .22s ease
+
+.dc-planner-window
+  display: flex
+  flex-direction: column
+  width: min(1240px, calc(100vw - 36px))
+  height: min(860px, calc(100vh - 36px))
+  border: 1px solid #347ec1
+  border-radius: 8px
+  overflow: hidden
+  background: #071326
+  box-shadow: inset 0 0 0 1px #071525, 0 24px 80px rgba(0, 0, 0, .82), 0 0 26px rgba(45, 140, 248, .16)
+
+.dc-planner-modal:not([data-planner="wheel"]) .dc-planner-window
+  animation: dc-modal-in .24s cubic-bezier(.22, 1, .36, 1)
+
+.dc-planner-modal[data-planner="wheel"]
+  place-items: stretch end
+  padding: 0
+
+.dc-planner-modal[data-planner="wheel"] .dc-planner-window
+  width: min(1360px, 100vw)
+  height: 100vh
+  max-height: 100vh
+  border-top: 0
+  border-right: 0
+  border-bottom: 0
+  border-radius: 0
+  box-shadow: -26px 0 70px rgba(0, 0, 0, .8), inset 0 0 0 1px #071525
+  animation: dc-drawer-in .32s cubic-bezier(.22, 1, .36, 1)
+
+.dc-planner-modal.dc-closing
+  animation: dc-backdrop-out .26s ease forwards
+
+.dc-planner-modal.dc-closing:not([data-planner="wheel"]) .dc-planner-window
+  animation: dc-modal-out .22s ease forwards
+
+.dc-planner-modal.dc-closing[data-planner="wheel"] .dc-planner-window
+  animation: dc-drawer-out .28s cubic-bezier(.4, 0, 1, 1) forwards
+
+@keyframes dc-drawer-in
+  from
+    transform: translateX(100%)
+  to
+    transform: translateX(0)
+
+@keyframes dc-drawer-out
+  from
+    transform: translateX(0)
+  to
+    transform: translateX(100%)
+
+@keyframes dc-backdrop-in
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes dc-backdrop-out
+  from
+    opacity: 1
+  to
+    opacity: 0
+
+@keyframes dc-modal-in
+  from
+    opacity: 0
+    transform: translateY(10px) scale(.98)
+  to
+    opacity: 1
+    transform: none
+
+@keyframes dc-modal-out
+  from
+    opacity: 1
+    transform: none
+  to
+    opacity: 0
+    transform: translateY(10px) scale(.98)
+
+.dc-planner-window > header
+  display: grid
+  grid-template-columns: minmax(0, 1fr) auto
+  align-items: center
+  gap: 14px
+  min-height: 60px
+  padding: 10px 14px 10px 18px
+  border-bottom: 1px solid #2d8cf8
+  background: linear-gradient(135deg, #173c68, #0a203b 70%)
+
+.dc-planner-window > header h2
+  margin-top: 3px
+  font-size: 19px
+
+.dc-planner-window > header button
+  width: 34px
+  height: 34px
+  border: 1px solid #315f91
+  border-radius: 2px
+  color: #eef6ff
+  background: linear-gradient(#1a4677, #0c2848)
+  box-shadow: inset 0 0 0 1px #071525
+  cursor: pointer
+  font-size: 24px
+
+.dc-planner-frame-wrap
+  position: relative
+  flex: 1 1 auto
+  min-height: 0
+  background: #07111d
+
+.dc-wheel-toolbar
+  display: grid
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+  gap: 12px
+  flex: 0 0 auto
+  padding: 10px 16px
+  border-bottom: 1px solid #173b61
+  background: #08182c
+
+.dc-wheel-toolbar[hidden]
+  display: none
+
+.dc-wheel-tool
+  display: grid
+  gap: 5px
+  min-width: 0
+
+.dc-wheel-tool > label
+  color: #94b6d8
+  font-size: 10px
+  font-weight: 700
+
+.dc-wheel-tool-row
+  display: flex
+  gap: 7px
+  min-width: 0
+
+.dc-wheel-tool-row > input,
+.dc-wheel-tool-row > select
+  flex: 1 1 auto
+  min-width: 0
+
+.dc-wheel-tool-row > .dc-button
+  flex: 0 0 auto
+  min-height: 35px
+  padding: 0 12px
+  font-size: 11px
+
+.dc-wheel-tool-error
+  color: #e2a1a1
+  font-size: 10px
+
+.dc-wheel-tool-error[hidden]
+  display: none
+
+.dc-planner-frame-wrap iframe
+  width: 100%
+  height: 100%
+  border: 0
+  background: #07111d
+
+.dc-planner-frame-wrap iframe[hidden]
+  display: none
+
+.dc-planner-window > footer
+  display: flex
+  align-items: center
+  gap: 13px
+  min-height: 56px
+  padding: 9px 16px
+  border-top: 1px solid #2d8cf8
+  background: linear-gradient(135deg, #0a203b, #173c68 70%)
+
+.dc-planner-window > footer .dc-button
+  margin-left: auto
+
+.dc-planner-sync-note
+  color: #86a4c4
+  font-size: 11px
+
+.dc-planner-points
+  display: grid
+  grid-template-columns: auto auto
+  align-items: baseline
+  gap: 2px 9px
+  padding: 6px 12px
+  border: 1px solid #315f91
+  border-radius: 5px
+  background: rgba(4, 17, 34, .72)
+  box-shadow: inset 0 0 0 1px #071525
+
+.dc-planner-points span
+  grid-row: 1 / 3
+  align-self: center
+  color: #7897b8
+  font-size: 9px
+  font-weight: 800
+  letter-spacing: .08em
+  text-transform: uppercase
+
+.dc-planner-points strong
+  color: #efbd55
+  font-size: 18px
+  line-height: 1
+
+@media (min-width: 1401px)
+  #main-content:has(.dc-app)
+    flex-basis: 78%
+    margin-right: 0
+  #page-container:has(.dc-app) #right-sidebar
+    display: none
+
+@media (max-width: 1050px)
+  .dc-layout
+    grid-template-columns: 1fr
+  .dc-results-panel
+    position: static
+    max-height: none
+  .dc-result-sections
+    max-height: 650px
+
+@media (max-width: 700px)
+  .dc-app
+    padding: 15px 10px
+  .dc-hero
+    align-items: flex-start
+    flex-direction: column
+  .dc-fields,
+  .dc-fields-basic
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+  .dc-wheel-fields,
+  .dc-equipment-grid
+    grid-template-columns: 1fr
+  .dc-panel
+    padding: 10px
+  .dc-panel-heading
+    grid-template-columns: 36px minmax(0, 1fr) auto
+    margin: -10px -10px 10px
+    padding: 8px 10px
+  .dc-panel-heading h2
+    font-size: 16px
+  .dc-panel-heading p
+    font-size: 11px
+  .dc-panel-heading > .dc-heading-actions,
+  .dc-panel-heading > .dc-optional-tag
+    grid-column: 2 / -1
+    grid-row: 2
+    justify-self: start
+    margin-top: 2px
+  .dc-list-head
+    display: none
+  .dc-data-row
+    grid-template-columns: 1fr 1fr
+  .dc-data-row > div:first-child
+    grid-column: 1 / -1
+  .dc-data-row .dc-remove
+    grid-column: 2
+    justify-self: end
+  .dc-summary-cards strong,
+  .dc-summary-cards .dc-damage-number
+    font-size: 17px
+  .dc-results-heading
+    padding: 12px
+  .dc-results-heading h2
+    font-size: 18px
+  .dc-result-card
+    grid-template-columns: 88px minmax(0, 1fr)
+  .dc-result-metrics
+    grid-template-columns: repeat(2, minmax(72px, 1fr))
+  .dc-result-metric:nth-child(2)
+    border-right: 0
+  .dc-result-metric:nth-child(-n+2)
+    border-bottom: 1px solid #173b61
+  .dc-planner-modal
+    padding: 0
+  .dc-planner-window
+    width: 100vw
+    height: 100vh
+    max-height: 100vh
+    border: 0
+    border-radius: 0
+  .dc-planner-window > header
+    grid-template-columns: minmax(0, 1fr) auto
+    padding-left: 12px
+  .dc-planner-points
+    padding: 6px 9px
+  .dc-planner-sync-note
+    display: none
+  .dc-wheel-toolbar
+    grid-template-columns: 1fr
+    gap: 9px
+  .dc-wheel-tool-row
+    flex-wrap: wrap
+  .dc-info-popover
+    width: calc(100vw - 20px)

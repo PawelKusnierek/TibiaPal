@@ -1,0 +1,327 @@
+html.planner-embed body {
+  min-width: 0;
+  overflow-x: hidden;
+  background: #07111d;
+  background-image: none;
+}
+
+html.planner-embed #header,
+html.planner-embed #banner,
+html.planner-embed #right-header,
+html.planner-embed #left-sidebar,
+html.planner-embed .nav-toggle,
+html.planner-embed #right-sidebar,
+html.planner-embed #tibiatrade_low_res,
+html.planner-embed #left-footer-space,
+html.planner-embed #footer,
+html.planner-embed #right-footer-space {
+  display: none !important;
+}
+
+html.planner-embed #page-container {
+  display: block;
+  width: 100%;
+}
+
+html.planner-embed #main-content {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 0;
+  background: #07111d;
+}
+
+html.planner-embed .proficiency-calculator-section > p {
+  display: none;
+}
+
+html.planner-embed .proficiency-calculator-section .build-summary,
+html.planner-embed .proficiency-calculator-section .wp-calculator > .window > footer {
+  display: none !important;
+}
+
+html.planner-embed #wod-wrapper > .TableContainer,
+html.planner-embed #wod-wrapper > br,
+html.planner-embed #wod-wrapper > #HelperDivContainer {
+  display: none !important;
+}
+
+html.planner-embed #WheelOfDestinySelectionBlock {
+  display: block;
+  width: auto;
+  min-width: 0;
+  margin: 14px 16px 10px;
+}
+
+html.planner-embed #WheelOfDestinySelectionBlock > tbody {
+  display: block;
+  width: 100%;
+}
+
+html.planner-embed #WheelOfDestinySelection {
+  display: grid !important;
+  grid-template-areas: "wheel" "info";
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: 18px;
+  width: 100%;
+}
+
+html.planner-embed #WheelOfDestiny {
+  grid-area: wheel;
+  display: flex;
+  justify-content: center;
+  width: 100% !important;
+}
+
+html.planner-embed #wod-canvas {
+  width: min(640px, 100%) !important;
+  height: auto !important;
+}
+
+html.planner-embed #PerkInformationTables {
+  display: grid !important;
+  grid-area: info;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 14px;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-top: 0;
+}
+
+html.planner-embed #PerkInformationTables > br {
+  display: none !important;
+}
+
+html.planner-embed #PerkInformationTables > .TableContainer:first-of-type,
+html.planner-embed #PerkInformationTables > .TableContainer:nth-of-type(2) {
+  display: block !important;
+  width: 100%;
+  margin-top: 0;
+  overflow: hidden;
+  border: 1px solid #315f91;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #0b1b32, #071326);
+  box-shadow: inset 0 0 0 1px #071525, 0 5px 16px rgba(0, 0, 0, .35);
+}
+
+html.planner-embed #PerkInformationTables > .TableContainer:first-of-type {
+  order: 2;
+}
+
+html.planner-embed #PerkInformationTables > .TableContainer:nth-of-type(2) {
+  order: 1;
+}
+
+html.planner-embed #PerkInformationTables .CaptionContainer {
+  margin: 0;
+}
+
+html.planner-embed #PerkInformationTables .CaptionInnerContainer {
+  min-height: 40px;
+  border-bottom: 1px solid #2d8cf8;
+  background: linear-gradient(135deg, #173c68, #0a203b 72%);
+}
+
+html.planner-embed #PerkInformationTables .CaptionInnerContainer .Text {
+  padding: 10px 14px;
+  color: #eef6ff;
+  font: 800 13px/20px Verdana, Arial, sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+html.planner-embed #PerkInformationTables .CaptionInnerContainer > span,
+html.planner-embed #PerkInformationTables .TableScrollbarWrapper {
+  display: none !important;
+}
+
+html.planner-embed #PerkInformationTables .InnerTableContainer,
+html.planner-embed #PerkInformationTables .Table5,
+html.planner-embed #PerkInformationTables .BoxWrapper {
+  width: 100% !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+html.planner-embed #PerkInformationTables .BoxWrapper {
+  min-height: 180px;
+  padding: 12px !important;
+  color: #c9dbed;
+}
+
+html.planner-embed #wod-selection-box-gem-modgrades {
+  display: none !important;
+}
+
+html.planner-embed .GemDropdownWrapper {
+  display: block !important;
+  position: static !important;
+  float: none !important;
+  width: auto !important;
+  height: auto !important;
+  clear: both;
+  margin: 8px 0 6px;
+  padding: 8px;
+  border: 1px solid #234a71;
+  border-radius: 5px;
+  background: rgba(4, 15, 29, .72);
+}
+
+html.planner-embed .GemDropdownWrapper > .GemDropdown {
+  width: 100%;
+  min-height: 32px;
+  border: 1px solid #315f91;
+  border-radius: 3px;
+  color: #e7f2ff;
+  background: #071426;
+}
+
+html.planner-embed .wod-grade-picker {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column: 1 / -1;
+  align-items: center;
+  gap: 7px 10px;
+  margin-top: 8px;
+}
+
+html.planner-embed .wod-grade-picker[hidden] {
+  display: none !important;
+}
+
+html.planner-embed .wod-grade-label {
+  color: #7897b8;
+  font: 700 9px/1 Verdana, Arial, sans-serif;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+html.planner-embed .wod-grade-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+}
+
+html.planner-embed .wod-grade-options button {
+  min-width: 0;
+  height: 26px;
+  padding: 0;
+  border: 1px solid #315f91;
+  border-radius: 3px;
+  color: #8faac5;
+  background: linear-gradient(#14345a, #0a2039);
+  box-shadow: inset 0 0 0 1px #071525;
+  cursor: pointer;
+  font: 800 10px/1 Verdana, Arial, sans-serif;
+}
+
+html.planner-embed .wod-grade-options button:hover {
+  border-color: #64c7ff;
+  color: #eef6ff;
+}
+
+html.planner-embed .wod-grade-options button.selected {
+  border-color: #efbd55;
+  color: #07111d;
+  background: linear-gradient(#ffd77d, #d99b29);
+  box-shadow: inset 0 0 0 1px #fff1b6, 0 0 8px rgba(239, 189, 85, .26);
+}
+
+html.planner-embed .wod-grade-effective {
+  grid-column: 2;
+  color: #72d9cc;
+  font: 700 9px/1.3 Verdana, Arial, sans-serif;
+}
+
+html.planner-embed .wod-grade-picker.capped .wod-grade-effective {
+  color: #efbd55;
+}
+
+html.planner-embed .ModEffectWrapper {
+  display: grid !important;
+  position: static !important;
+  float: none !important;
+  grid-template-columns: 40px minmax(0, 1fr);
+  align-items: center;
+  width: auto !important;
+  height: auto !important;
+  min-height: 42px;
+  margin: 0 0 8px !important;
+  padding: 7px !important;
+  border-radius: 4px;
+  background: rgba(18, 49, 80, .34);
+}
+
+html.planner-embed .ModEffectValue {
+  width: auto !important;
+  min-height: 0 !important;
+  color: #dce9f6;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+/* The planner strikes out (line-through + red) gem mods it treats as unavailable.
+   The damage build still counts them, so keep them shown as normal in the embed. */
+html.planner-embed .ModEffectValue.InvalidMod,
+html.planner-embed .ModEffectValue .InvalidMod,
+html.planner-embed .ModEffectValue.ColorRed,
+html.planner-embed .ModEffectValue .ColorRed {
+  color: #dce9f6 !important;
+  text-decoration: none !important;
+}
+
+@media (max-width: 900px) {
+  html.planner-embed #WheelOfDestinySelectionBlock {
+    margin: 12px 10px;
+  }
+
+  html.planner-embed #WheelOfDestinySelection {
+    gap: 12px;
+  }
+
+  html.planner-embed #PerkInformationTables {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  html.planner-embed #wod-canvas {
+    width: min(480px, 100%) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  html.planner-embed #WheelOfDestinySelectionBlock {
+    margin: 10px 8px;
+  }
+
+  html.planner-embed #wod-canvas {
+    width: 100% !important;
+  }
+
+  html.planner-embed #PerkInformationTables .InnerTableContainer,
+  html.planner-embed #PerkInformationTables .Table5,
+  html.planner-embed #PerkInformationTables .BoxWrapper {
+    max-width: 100% !important;
+  }
+
+  html.planner-embed .GemDropdownWrapper,
+  html.planner-embed .ModEffectWrapper {
+    max-width: 100% !important;
+  }
+
+  /* Stack the mod-grade picker so the I/II/III/IV buttons form one full-width, evenly aligned row. */
+  html.planner-embed .wod-grade-picker {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  html.planner-embed .wod-grade-effective {
+    grid-column: 1;
+  }
+
+  html.planner-embed .wod-grade-options button {
+    height: 30px;
+  }
+}

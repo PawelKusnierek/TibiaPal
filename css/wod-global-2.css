@@ -1,0 +1,166 @@
+/* small devices */
+@media (max-width: 768.01px) {
+  .TableContentContainer {
+    margin-right: 0px;
+  }
+  .Landingpage5 #TibiaTrailer,
+  .Landingpage6 #TibiaTrailer,
+  .Landingpage8 #TibiaTrailer {
+    transform: scale(0.6) translate(-50%, 35%);
+  }
+  #BackgroundContainer {
+    min-width: 0;
+    min-height: 0;
+  }
+  /* Landingpages */
+  .Landingpage5 #BackgroundContainer,
+  .Landingpage6 #BackgroundContainer,
+  .Landingpage8 #BackgroundContainer {
+    width: 166.66%;/* 1/scale-value */
+    transform: scale(0.6);
+  }
+  .Landingpage5 .TibiaTrailer {
+    left: unset;
+    top: -450px;
+    margin: auto;
+  }
+  #FormContainer {
+    width: unset;
+  }
+  .FormFieldError,
+  .BoxInputText .PWStrengthToolTip {
+    left: unset;
+    margin-top: 0px;
+    margin-left: -5px;
+    z-index: 1000;
+  }
+  #password_errormessage {
+    margin-top: 20px;
+  }
+  .BoxInputText .PWStrengthToolTip {
+    margin-top: 50px;
+  }
+  #InformationStripe {
+    height: unset;
+  }
+  .LandingPageWithoutVideo #InformationStripe #QuoteSlideshow {
+    display: block;
+    position: relative;
+    height: unset;
+    min-height: 50px;
+  }
+  .LandingPageWithoutVideo #InformationStripe #QuoteSlideshow .PlayerQuote {
+    position: relative;
+    padding-bottom: 15px;
+    left: unset;
+  }
+  #InformationStripe #PlayersOnlineBox {
+    position: relative;
+    left: unset;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+  }
+  #PlayersOnlineBox {
+    height: 25px;
+    left: unset;
+  }
+  #PlayersOnlineText {
+    width: unset;
+    margin-left: unset;
+    margin-top: unset;
+  }
+  #ThumbnailContainer {
+    display: block;
+    top: 0px;
+    right: auto;
+    position: relative;
+  }
+  .TibiaTrailer {
+    order: 7;
+    position: relative;
+  }
+  .Landingpage3 #ThumbnailContainer .SmallBox,
+  .Landingpage4 #ThumbnailContainer .SmallBox {
+    position: relative;
+    margin-top: 15px;
+    margin-left: -125px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+  .Landingpage5 #AdditionalInformation,
+  .Landingpage6 #AdditionalInformation,
+  .Landingpage8 #AdditionalInformation {
+    flex-wrap: wrap;
+  }
+  .Landingpage5 #AdditionalInformation > :nth-child(2),
+  .Landingpage6 #AdditionalInformation > :nth-child(2),
+  .Landingpage8 #AdditionalInformation > :nth-child(2) {
+    width: 100%;
+    margin: auto;
+  }
+  .SinglePressQuote {
+    width: 45%;
+    order: 2;
+    margin: 5px;
+  }
+  #HiddenContentContainer {
+    position: fixed;
+    z-index: 999;
+    max-width: 800px;
+    margin: 0 30px;
+  }
+  /* Cookie Dialog */
+  #cookiedialogbox,
+  #cookiedetailsbox {
+    left: unset;
+    right: unset;
+    margin-left: 10px;
+    margin-right: 10px;
+    bottom: 10px;
+  }
+  @media (max-width: 500.01px) {
+    #cookiedialogbox .CaptionInnerContainer .Text {
+      padding-left: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    #cookiedetailsbox .InnerTableContainer .TableContentContainer {
+      margin-bottom: 4px;
+    }
+    #cookiedetailsbox .cookiedetailscontent {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    #cookiedetailsbox .cookiedetailscontent h3 {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+    #cookiedetailsbox .SubmitButtonRow {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  #cookiedialogbox .InnerTableContainer {
+    overflow: initial;
+  }
+  #cookiedialogbox .TableScrollbarWrapper {
+    max-width: 420px;
+  }
+  #cookiedialogbox,
+  #cookiedetailsbox,
+  #cookiedialogcontent {
+    width: unset;
+  }
+  #cookiedetailsbox .LeftButton {
+    flex-grow: unset;
+  }
+  #cookiedetailsbox .CenterButton {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
