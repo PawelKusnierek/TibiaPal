@@ -1441,8 +1441,6 @@ ol, ul {
     text-align: center;
     overflow: hidden;
   }
-}
-@media (max-width: 1240px) {
   #left-sidebar {
     width: 0;
     overflow: hidden;
@@ -2966,9 +2964,6 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   --panel: #383936;
   --teal: #118f85;
   --teal-dark: #09685f;
-  /* TibiaPal integration theme */
-  /* The calculator's compact layout starts earlier because its desktop board
-  * needs more room than the surrounding TibiaPal content column provides. */
 }
 .wp-calculator * {
   box-sizing: border-box;
@@ -3719,6 +3714,9 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   font-size: 10px;
 }
 .wp-calculator {
+  /* TibiaPal integration theme */
+}
+.wp-calculator {
   background: #061021;
   font-family: Verdana, Arial, sans-serif;
 }
@@ -3809,6 +3807,10 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   .wp-calculator .reshape-window .perk-picker {
     overflow-x: auto;
   }
+}
+.wp-calculator {
+  /* The calculator's compact layout starts earlier because its desktop board
+  * needs more room than the surrounding TibiaPal content column provides. */
 }
 @media (max-width: 1187px) {
   .wp-calculator {
@@ -4262,6 +4264,47 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   justify-self: end;
 }
 
+.dc-planner-launch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 11px;
+}
+
+.dc-planner-launch-btn {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 42px;
+  font-size: 13px;
+}
+
+.dc-planner-launch-icon {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.dc-planner-launch-wheel {
+  border-color: var(--dc-gold);
+  background: linear-gradient(#3a3111, #201a08);
+}
+
+.dc-planner-launch-proficiency {
+  border-color: var(--dc-cyan);
+  background: linear-gradient(#0f3733, #081f1c);
+}
+
+.dc-planner-launch .dc-info {
+  flex: 0 0 auto;
+}
+
+.dc-planner-launch .dc-info-toggle {
+  width: 42px;
+  height: 42px;
+}
+
 .dc-info {
   position: relative;
   display: flex;
@@ -4412,6 +4455,26 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   box-shadow: inset 0 0 0 1px #071525, 0 0 8px rgba(45, 140, 248, 0.45);
 }
 
+.dc-app input[type=number] {
+  padding-right: 2px;
+}
+
+.dc-app input[type=number]::-webkit-inner-spin-button,
+.dc-app input[type=number]::-webkit-outer-spin-button {
+  width: 24px;
+  height: 33px;
+  margin-left: 6px;
+  opacity: 1;
+  cursor: pointer;
+  background: linear-gradient(#1a4677, #0c2848);
+  border-left: 1px solid #315f91;
+}
+
+.dc-app input[type=number]:hover::-webkit-inner-spin-button,
+.dc-app input[type=number]:hover::-webkit-outer-spin-button {
+  background: linear-gradient(#215488, #123055);
+}
+
 .dc-app input:disabled,
 .dc-app select:disabled {
   opacity: 0.45;
@@ -4430,11 +4493,6 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   font-weight: 700;
 }
 
-.dc-wheel-fields {
-  grid-template-columns: minmax(150px, 0.42fr) 1fr;
-  align-items: start;
-}
-
 .dc-stance-list {
   display: flex;
   flex-wrap: wrap;
@@ -4443,6 +4501,10 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   margin: 0;
   padding: 0;
   border: 0;
+}
+
+.dc-fields + .dc-stance-list {
+  margin-top: 12px;
 }
 
 .dc-stance-list legend {
@@ -4739,7 +4801,8 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   flex: 0 0 auto;
   width: 66px;
   height: 66px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .dc-export-header-text {
@@ -4751,7 +4814,8 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   flex: 0 0 auto;
   width: 62px;
   height: 62px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   image-rendering: pixelated;
   padding: 5px;
   border: 1px solid #2a527d;
@@ -5161,7 +5225,8 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
 .dc-result-icon img {
   width: 44px;
   height: 44px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   image-rendering: pixelated;
 }
 
@@ -5526,7 +5591,6 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   .dc-fields-basic {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .dc-wheel-fields,
   .dc-equipment-grid {
     grid-template-columns: 1fr;
   }
@@ -5616,5 +5680,4 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   .dc-info-popover {
     width: calc(100vw - 20px);
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

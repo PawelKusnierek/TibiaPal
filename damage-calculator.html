@@ -1,15 +1,14 @@
 ---
 layout: default
 title: TibiaPal.com - Damage Calculator
-scripts: <script type="module" src="/damage-calculator/app.js?v=20260806-11"></script>
+scripts: <script type="module" src="/damage-calculator/app.js?v=20260809-1"></script>
 ---
 
 <section id="damageCalculator" class="dc-app" aria-busy="true">
   <header class="dc-hero">
     <div>
-      <span class="dc-kicker">BUILD LAB</span>
       <h1>Damage Calculator</h1>
-      <p>Edit your Wheel of Destiny, weapon proficiency, rotation and hunt in one build.</p>
+      <p>Compare Build DPS, accounting for your Wheel of Destiny, proficiency, rotation and more.</p>
     </div>
     <div class="dc-hero-actions">
       <button id="saveBuildImage" class="dc-button dc-button-secondary" type="button" disabled>Save image</button>
@@ -28,39 +27,40 @@ scripts: <script type="module" src="/damage-calculator/app.js?v=20260806-11"></s
       <section class="dc-panel">
         <div class="dc-panel-heading">
           <span class="dc-step">01</span>
-          <div><h2>Character</h2><p>Final stats after equipment, imbuements and buffs.</p></div>
+          <div><h2>Character</h2><p>Final stats after equipment, imbuements and buffs. Crit chance and crit damage assume the base 10% / 50%.</p></div>
         </div>
         <div class="dc-fields dc-fields-basic">
           <label>Vocation<select id="vocation" data-stat="vocation"></select></label>
           <label>Level<input type="number" min="0" step="1" inputmode="numeric" data-stat="level"></label>
-          <label id="skillField"><span id="skillFieldLabel">Main skill</span><input type="number" min="0" step="0.01" inputmode="decimal" data-stat="skill"></label>
+          <label id="skillField"><span id="skillFieldLabel">Main skill</span><input type="number" min="0" step="1" inputmode="numeric" data-stat="skill"></label>
           <label id="magicLevelField"><span>Magic level</span><input type="number" min="0" step="0.01" inputmode="decimal" data-stat="magicLevel"></label>
-          <label>Crit chance (%)<input type="number" min="0" step="0.01" inputmode="decimal" data-stat="critChance"></label>
-          <label>Crit damage (%)<input type="number" min="0" step="0.01" inputmode="decimal" data-stat="critDamage"></label>
         </div>
+        <fieldset id="stanceChoices" class="dc-stance-list"><legend>Active stances</legend></fieldset>
       </section>
 
       <section class="dc-panel dc-accent-wheel">
         <div class="dc-panel-heading">
           <span class="dc-step">02</span>
           <div><h2>Wheel of Destiny</h2><p>Synced directly from the TibiaPal Wheel planner.</p></div>
-          <div class="dc-heading-actions">
-            <div class="dc-info" data-effects-info="wheel">
-              <button type="button" class="dc-info-toggle" aria-label="Show selected wheel bonuses" aria-expanded="false">
-                <span class="dc-info-glyph" aria-hidden="true">i</span>
-                <span class="dc-info-count" id="wheelEffectsCount" hidden>0</span>
-              </button>
-              <div class="dc-info-popover" role="tooltip">
-                <div class="dc-info-popover-head">Selected wheel bonuses</div>
-                <div id="wheelSyncedEffects" class="dc-synced-effects" aria-live="polite"></div>
-              </div>
+        </div>
+        <div class="dc-planner-launch">
+          <button class="dc-button dc-planner-launch-btn dc-planner-launch-wheel" type="button" data-open-planner="wheel">
+            <span class="dc-planner-launch-icon" aria-hidden="true">◆</span>
+            <span>Edit Wheel of Destiny</span>
+          </button>
+          <div class="dc-info" data-effects-info="wheel">
+            <button type="button" class="dc-info-toggle" aria-label="Show selected wheel bonuses" aria-expanded="false">
+              <span class="dc-info-glyph" aria-hidden="true">i</span>
+              <span class="dc-info-count" id="wheelEffectsCount" hidden>0</span>
+            </button>
+            <div class="dc-info-popover" role="tooltip">
+              <div class="dc-info-popover-head">Selected wheel bonuses</div>
+              <div id="wheelSyncedEffects" class="dc-synced-effects" aria-live="polite"></div>
             </div>
-            <button class="dc-inline-action" type="button" data-open-planner="wheel">Edit Wheel</button>
           </div>
         </div>
-        <div class="dc-fields dc-wheel-fields">
+        <div class="dc-fields">
           <label>Wheel damage bonus<input type="number" min="0" step="0.01" data-stat="bonus" readonly></label>
-          <fieldset id="stanceChoices" class="dc-stance-list"><legend>Active stances</legend></fieldset>
         </div>
       </section>
 
@@ -68,18 +68,21 @@ scripts: <script type="module" src="/damage-calculator/app.js?v=20260806-11"></s
         <div class="dc-panel-heading">
           <span class="dc-step">03</span>
           <div><h2>Weapon &amp; Proficiency</h2><p>Weapon and effects synced directly from the TibiaPal Proficiency planner.</p></div>
-          <div class="dc-heading-actions">
-            <div class="dc-info" data-effects-info="proficiency">
-              <button type="button" class="dc-info-toggle" aria-label="Show selected proficiency bonuses" aria-expanded="false">
-                <span class="dc-info-glyph" aria-hidden="true">i</span>
-                <span class="dc-info-count" id="proficiencyEffectsCount" hidden>0</span>
-              </button>
-              <div class="dc-info-popover" role="tooltip">
-                <div class="dc-info-popover-head">Selected proficiency bonuses</div>
-                <div id="proficiencySyncedEffects" class="dc-synced-effects" aria-live="polite"></div>
-              </div>
+        </div>
+        <div class="dc-planner-launch">
+          <button class="dc-button dc-planner-launch-btn dc-planner-launch-proficiency" type="button" data-open-planner="proficiency">
+            <span class="dc-planner-launch-icon" aria-hidden="true">◆</span>
+            <span>Edit Weapon Proficiency</span>
+          </button>
+          <div class="dc-info" data-effects-info="proficiency">
+            <button type="button" class="dc-info-toggle" aria-label="Show selected proficiency bonuses" aria-expanded="false">
+              <span class="dc-info-glyph" aria-hidden="true">i</span>
+              <span class="dc-info-count" id="proficiencyEffectsCount" hidden>0</span>
+            </button>
+            <div class="dc-info-popover" role="tooltip">
+              <div class="dc-info-popover-head">Selected proficiency bonuses</div>
+              <div id="proficiencySyncedEffects" class="dc-synced-effects" aria-live="polite"></div>
             </div>
-            <button class="dc-inline-action" type="button" data-open-planner="proficiency">Edit Proficiency</button>
           </div>
         </div>
         <div class="dc-equipment-grid">
@@ -87,25 +90,27 @@ scripts: <script type="module" src="/damage-calculator/app.js?v=20260806-11"></s
             <input id="weaponSearch" type="text" placeholder="Choose a weapon in the planner" readonly>
             <small id="weaponMeta"></small>
           </label>
-          <label>Ammo<select id="ammoSelect"><option value="">None</option></select></label>
-          <label>Shield<select id="shieldSelect"><option value="">None</option></select></label>
+          <label id="ammoField">Ammo<select id="ammoSelect"><option value="">None</option></select></label>
+          <label id="shieldField">Shield<select id="shieldSelect"><option value="">None</option></select></label>
         </div>
-        <details class="dc-details dc-manual-perks">
-          <summary>Additional API perks</summary>
-          <p>Use this only for equipment or specialized effects that are not part of either planner.</p>
-          <div class="dc-add-row">
-            <label for="manualPerkSearch">Add an extra damage perk</label>
-            <div><input id="manualPerkSearch" type="search" list="perkOptions" placeholder="Search API perks…" autocomplete="off"><button type="button" data-add-perk="manual">Add</button></div>
-          </div>
-          <div id="manualPerks" class="dc-row-list" aria-live="polite"></div>
-        </details>
       </section>
 
       <section class="dc-panel">
         <div class="dc-panel-heading">
           <span class="dc-step">04</span>
-          <div><h2>Rotation</h2><p>Optional — sets the effective damage-per-turn summary. Leave it empty to compare spells one hit at a time.</p></div>
-          <span class="dc-optional-tag">Optional</span>
+          <div><h2>Additional API perks (Optional)</h2><p>Use this only for equipment or specialized effects that are not part of either planner.</p></div>
+        </div>
+        <div class="dc-add-row">
+          <label for="manualPerkSearch">Add an extra damage perk</label>
+          <div><input id="manualPerkSearch" type="search" list="perkOptions" placeholder="Search API perks…" autocomplete="off"><button type="button" data-add-perk="manual">Add</button></div>
+        </div>
+        <div id="manualPerks" class="dc-row-list" aria-live="polite"></div>
+      </section>
+
+      <section class="dc-panel">
+        <div class="dc-panel-heading">
+          <span class="dc-step">05</span>
+          <div><h2>Rotation (Optional)</h2><p>Sets the effective damage-per-turn summary. Leave it empty to compare spells one hit at a time. Ratio sets how often an attack is used relative to your basic attack: 1 means every turn, 0.5 means every other turn, 0.2 means once every 5 turns — it's used to weight each attack's contribution to your effective damage per turn.</p></div>
         </div>
         <div class="dc-add-row">
           <label for="spellSearch">Add an attack or spell</label>
@@ -117,9 +122,8 @@ scripts: <script type="module" src="/damage-calculator/app.js?v=20260806-11"></s
 
       <section class="dc-panel">
         <div class="dc-panel-heading">
-          <span class="dc-step">05</span>
-          <div><h2>Targets</h2><p>Optional — add creatures to fold their defenses, kill ratios and charms into the effective damage.</p></div>
-          <span class="dc-optional-tag">Optional</span>
+          <span class="dc-step">06</span>
+          <div><h2>Targets (Optional)</h2><p>Add creatures to account for defenses, kill ratios and charms to further improve the calculations. Ratio sets what share of your kills come from this creature relative to the others in this list — it's used to weight the results toward the fights you actually spend time in.</p></div>
         </div>
         <div class="dc-add-row">
           <label for="creatureSearch">Add a creature</label>

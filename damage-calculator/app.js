@@ -1,14 +1,21 @@
 const API_ROOT = "https://tibiatools.io/api/v1";
 const STORAGE_KEY = "tibiapalDamageBuildV1";
+// Everyone starts with these base values; wheel/proficiency/stance bonuses are added on top by the perks the calculator sends.
+const BASE_CRIT_CHANCE = 10;
+const BASE_CRIT_DAMAGE = 50;
+const DEFAULT_PALADIN_MAGIC_LEVEL = 35;
 const META_RESOURCES = ["vocations", "stances", "weapons", "ammo", "shields", "perks", "spells", "creatures", "charms"];
 const FANDOM_ICON_ALIASES = { "exec-throw": "executioner-s-throw", "hells-core": "hell-s-core" };
 
 // Stances the damage API marks non-selectable ("only selectable stances affect damage"),
 // but whose skill/magic-level boost we can apply client-side to the stat we already send.
 // These ids are applied locally and are NOT forwarded to the API as stanceIds.
+// `multiplier` scales the stance's own stat; `addFromStat`/`addFactor` add a share of a
+// different stat on top (e.g. Divine Defiance turning distance fighting into magic level).
 const LOCAL_STANCE_MODS = {
   1: { stat: "skill", multiplier: 1.30, note: "+30% skill" },        // Blood Rage (knight)
   3: { stat: "skill", multiplier: 1.32, note: "+32% distance" },     // Sharpshooter (paladin)
+  4: { stat: "magicLevel", addFromStat: "skill", addFactor: 0.06, note: "+6% distance as holy magic level" }, // Divine Defiance (paladin)
   10: { stat: "magicLevel", multiplier: 1.10, note: "+10% magic level" }, // Elemental Synthesis (druid)
 };
 
@@ -40,7 +47,7 @@ let lastResult = null;
 const defaultState = () => ({
   stats: {
     vocation: "knight", level: 1000, bonus: 0, skill: 120, magicLevel: 13,
-    critChance: 10, critDamage: 50, fatalChance: 0, transcendenceChance: 0,
+    critChance: BASE_CRIT_CHANCE, critDamage: BASE_CRIT_DAMAGE, fatalChance: 0, transcendenceChance: 0,
     hitPoints: 0, manaPoints: 0, baseMagicLevel: 0, axe: 0, club: 0,
     sword: 0, fist: 0, distance: 0, shielding: 0, fishing: 0,
     imbuementElement: "", imbuementValue: 0, stanceIds: [],
@@ -111,6 +118,9 @@ function sanitizeState(candidate) {
   const stats = { ...fallback.stats, ...(candidate.stats && typeof candidate.stats === "object" ? candidate.stats : {}) };
   stats.vocation = typeof stats.vocation === "string" ? stats.vocation : fallback.stats.vocation;
   stats.stanceIds = Array.isArray(stats.stanceIds) ? stats.stanceIds.map(Number).filter(Number.isInteger) : [];
+  stats.critChance = BASE_CRIT_CHANCE;
+  stats.critDamage = BASE_CRIT_DAMAGE;
+  if (stats.vocation === "paladin" && candidate.stats?.magicLevel == null) stats.magicLevel = DEFAULT_PALADIN_MAGIC_LEVEL;
   const rows = (key, defaults) => Array.isArray(candidate[key])
     ? candidate[key].filter((row) => row && Number.isInteger(Number(row.id))).map((row) => ({ ...defaults, ...row, id: Number(row.id) }))
     : [];
@@ -148,7 +158,7 @@ function saveState() {
 // keeping them out of the shared link keeps it short.
 function shareableBuild() {
   const s = state.stats;
-  const stats = { vocation: s.vocation, level: s.level, skill: s.skill, magicLevel: s.magicLevel, critChance: s.critChance, critDamage: s.critDamage };
+  const stats = { vocation: s.vocation, level: s.level, skill: s.skill, magicLevel: s.magicLevel };
   if (s.stanceIds?.length) stats.stanceIds = s.stanceIds;
   return {
     stats,
@@ -182,11 +192,13 @@ function populateStaticControls() {
 }
 
 function renderStatControls() {
+  state.stats.critChance = BASE_CRIT_CHANCE;
+  state.stats.critDamage = BASE_CRIT_DAMAGE;
   const usesMagicLevel = state.stats.vocation === "druid" || state.stats.vocation === "sorcerer";
   const skillField = document.querySelector("#skillField");
   const magicLevelField = document.querySelector("#magicLevelField");
   skillField.hidden = usesMagicLevel;
-  magicLevelField.hidden = !usesMagicLevel;
+  magicLevelField.hidden = !usesMagicLevel && state.stats.vocation !== "paladin";
   document.querySelector("#skillFieldLabel").textContent = state.stats.vocation === "paladin"
     ? "Distance fighting"
     : state.stats.vocation === "monk"
@@ -242,14 +254,20 @@ function renderEquipment() {
   const details = [weapon?.skill, weapon?.hands ? `${weapon.hands}-handed` : null, weapon?.attack != null ? `${weapon.attack} atk` : null, weapon?.damage != null ? `${weapon.damage} ${weapon.damageType ?? ""} damage` : null].filter(Boolean);
   document.querySelector("#weaponMeta").textContent = details.join(" · ");
 
+  const ammoField = document.querySelector("#ammoField");
   const ammoSelect = document.querySelector("#ammoSelect");
+  const showAmmo = state.stats.vocation === "paladin";
+  ammoField.hidden = !showAmmo;
   const ammo = metadata.ammo.filter((entry) => weapon?.ammoType && entry.type === weapon.ammoType);
   ammoSelect.replaceChildren(option("", "None"), ...ammo.map((entry) => option(entry.id, `${entry.name} · ${entry.attack} atk`, entry.id === Number(state.weapon.ammoId))));
   ammoSelect.disabled = !ammo.length;
-  if (!ammo.some((entry) => entry.id === Number(state.weapon.ammoId))) state.weapon.ammoId = null;
+  if (!showAmmo || !ammo.some((entry) => entry.id === Number(state.weapon.ammoId))) state.weapon.ammoId = null;
 
+  const shieldField = document.querySelector("#shieldField");
   const shieldSelect = document.querySelector("#shieldSelect");
-  const canUseShield = weapon?.hands === "one";
+  const showShield = state.stats.vocation === "knight";
+  shieldField.hidden = !showShield;
+  const canUseShield = showShield && weapon?.hands === "one";
   shieldSelect.replaceChildren(option("", "None"), ...metadata.shields.map((entry) => option(entry.id, `${entry.name} · ${entry.defense} def`, entry.id === Number(state.weapon.shieldId))));
   shieldSelect.disabled = !canUseShield;
   if (!canUseShield) state.weapon.shieldId = null;
@@ -890,15 +908,18 @@ function damageRequest({ wheel = true, proficiency = true, manual = true } = {})
   const usesMagicLevel = state.stats.vocation === "druid" || state.stats.vocation === "sorcerer";
   const apiStanceIds = [];
   const statMultipliers = {};
+  const statAdders = {};
   state.stats.stanceIds.forEach((id) => {
     const mod = LOCAL_STANCE_MODS[id];
-    if (mod) statMultipliers[mod.stat] = (statMultipliers[mod.stat] ?? 1) * mod.multiplier;
-    else apiStanceIds.push(id);
+    if (!mod) { apiStanceIds.push(id); return; }
+    if (mod.multiplier) statMultipliers[mod.stat] = (statMultipliers[mod.stat] ?? 1) * mod.multiplier;
+    if (mod.addFromStat) statAdders[mod.stat] = (statAdders[mod.stat] ?? 0) + numberOrZero(state.stats[mod.addFromStat]) * mod.addFactor;
   });
   const statKeys = ["level", "bonus", "critChance", "critDamage", usesMagicLevel ? "magicLevel" : "skill"];
+  if (state.stats.vocation === "paladin") statKeys.push("magicLevel");
   statKeys.forEach((key) => {
     const value = key === "bonus" && !wheel ? 0 : Number(state.stats[key]);
-    if (Number.isFinite(value)) stats[key] = statMultipliers[key] ? value * statMultipliers[key] : value;
+    if (Number.isFinite(value)) stats[key] = (statMultipliers[key] ? value * statMultipliers[key] : value) + (statAdders[key] ?? 0);
   });
   if (apiStanceIds.length) stats.stanceIds = apiStanceIds;
   const weapon = { id: Number(state.weapon.id) || 1 };
@@ -1430,6 +1451,7 @@ function wireEvents() {
       if (key === "vocation") {
         state.stats.stanceIds = [];
         state.stats.bonus = 0;
+        if (state.stats.vocation === "paladin") state.stats.magicLevel = DEFAULT_PALADIN_MAGIC_LEVEL;
         state.wheelPlanner = { code: "", vocation: state.stats.vocation, promotionPoints: 0, bonus: 0, effects: [], gemGrades: {} };
         state.manualPerks = state.manualPerks.filter((row) => vocationAllows(item("perks", row.id)));
         state.rotation = state.rotation.filter((row) => vocationAllows(item("spells", row.id)));

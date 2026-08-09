@@ -220,6 +220,40 @@
   gap: 9px
   justify-self: end
 
+.dc-planner-launch
+  display: flex
+  align-items: center
+  gap: 10px
+  margin-bottom: 11px
+
+.dc-planner-launch-btn
+  display: flex
+  flex: 1
+  align-items: center
+  justify-content: center
+  gap: 9px
+  min-height: 42px
+  font-size: 13px
+
+.dc-planner-launch-icon
+  font-size: 12px
+  opacity: .85
+
+.dc-planner-launch-wheel
+  border-color: var(--dc-gold)
+  background: linear-gradient(#3a3111, #201a08)
+
+.dc-planner-launch-proficiency
+  border-color: var(--dc-cyan)
+  background: linear-gradient(#0f3733, #081f1c)
+
+.dc-planner-launch .dc-info
+  flex: 0 0 auto
+
+.dc-planner-launch .dc-info-toggle
+  width: 42px
+  height: 42px
+
 .dc-info
   position: relative
   display: flex
@@ -351,6 +385,23 @@
   border-color: #64c7ff
   box-shadow: inset 0 0 0 1px #071525, 0 0 8px rgba(45, 140, 248, .45)
 
+.dc-app input[type="number"]
+  padding-right: 2px
+
+.dc-app input[type="number"]::-webkit-inner-spin-button,
+.dc-app input[type="number"]::-webkit-outer-spin-button
+  width: 24px
+  height: 33px
+  margin-left: 6px
+  opacity: 1
+  cursor: pointer
+  background: linear-gradient(#1a4677, #0c2848)
+  border-left: 1px solid #315f91
+
+.dc-app input[type="number"]:hover::-webkit-inner-spin-button,
+.dc-app input[type="number"]:hover::-webkit-outer-spin-button
+  background: linear-gradient(#215488, #123055)
+
 .dc-app input:disabled,
 .dc-app select:disabled
   opacity: .45
@@ -366,10 +417,6 @@
   font-size: 10px
   font-weight: 700
 
-.dc-wheel-fields
-  grid-template-columns: minmax(150px, .42fr) 1fr
-  align-items: start
-
 .dc-stance-list
   display: flex
   flex-wrap: wrap
@@ -378,6 +425,9 @@
   margin: 0
   padding: 0
   border: 0
+
+.dc-fields + .dc-stance-list
+  margin-top: 12px
 
 .dc-stance-list legend
   margin-bottom: 5px
@@ -1299,7 +1349,6 @@
   .dc-fields,
   .dc-fields-basic
     grid-template-columns: repeat(2, minmax(0, 1fr))
-  .dc-wheel-fields,
   .dc-equipment-grid
     grid-template-columns: 1fr
   .dc-panel
