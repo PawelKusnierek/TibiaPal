@@ -92,12 +92,20 @@ ol, ul {
   height: 100%;
   margin: auto;
   padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 #header {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
   order: 1;
   -ms-flex-preferred-size: 14.9%;
   font-family: "Acme", sans-serif;
@@ -107,7 +115,10 @@ ol, ul {
 }
 
 #banner {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
   order: 2;
+  -ms-flex-preferred-size: 50%;
   flex-basis: 53%;
   height: 90%;
   margin-left: 3%;
@@ -119,23 +130,44 @@ ol, ul {
 }
 
 #right-header {
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
   order: 3;
+  -ms-flex-preferred-size: 15%;
   flex-basis: 20%;
 }
 
 #left-sidebar {
+  -webkit-box-ordinal-group: 5;
+  -ms-flex-order: 4;
   order: 4;
   -ms-flex-preferred-size: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   align-items: left;
   align-content: left;
   width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   align-items: left;
   align-content: left;
@@ -177,6 +209,7 @@ ol, ul {
   padding-bottom: 3px;
   font-size: 15px;
   font-family: "IBM Plex Sans", sans-serif;
+  -webkit-transition: 0s;
   transition: 0s;
   text-align: left;
   max-width: 300px;
@@ -254,7 +287,10 @@ ol, ul {
 }
 
 #main-content {
+  -webkit-box-ordinal-group: 6;
+  -ms-flex-order: 5;
   order: 5;
+  -ms-flex-preferred-size: 50%;
   flex-basis: 53%;
   height: 90%;
   background-color: #061021;
@@ -268,12 +304,23 @@ ol, ul {
 }
 
 #right-sidebar {
+  -webkit-box-ordinal-group: 7;
+  -ms-flex-order: 6;
   order: 6;
   height: 100%;
+  -ms-flex-preferred-size: 25%;
   flex-basis: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
@@ -290,20 +337,30 @@ ol, ul {
 }
 
 #left-footer-space {
+  -webkit-box-ordinal-group: 8;
+  -ms-flex-order: 7;
   order: 7;
   -ms-flex-preferred-size: 15%;
   width: 300px;
 }
 
 #footer {
+  -webkit-box-ordinal-group: 9;
+  -ms-flex-order: 8;
   order: 8;
+  -ms-flex-preferred-size: 70%;
   flex-basis: 60%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-top: 10px;
 }
 
 #right-footer-space {
+  -webkit-box-ordinal-group: 10;
+  -ms-flex-order: 9;
   order: 9;
+  -ms-flex-preferred-size: 15%;
   flex-basis: 20%;
 }
 
@@ -460,8 +517,7 @@ ol, ul {
   width: 100%;
   height: 100%;
   border: 0;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .feature-item--bestiary .feature-item__frame {
@@ -648,16 +704,28 @@ ol, ul {
 }
 
 .house_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
+  -ms-flex-line-pack: center;
   align-content: center;
 }
 
 .house_img {
   margin-bottom: 20px;
+  -ms-flex-line-pack: left;
   align-content: left;
   width: 50%;
 }
@@ -818,9 +886,7 @@ ol, ul {
 .sortable-header {
   cursor: pointer;
   position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   transition: background-color 0.2s ease;
   padding-right: 20px;
 }
@@ -899,6 +965,15 @@ ol, ul {
 
 .hunting_tab.two-tabs button.active {
   width: 50%;
+}
+
+/* Special styling for 4-tab layouts (like the damage calculator) */
+.hunting_tab.four-tabs button {
+  width: 25%;
+}
+
+.hunting_tab.four-tabs button.active {
+  width: 25%;
 }
 
 .tabcontent {
@@ -1071,9 +1146,7 @@ ol, ul {
 
 .bestiary_table .sortable-header {
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   transition: background-color 0.2s;
   position: relative;
   padding-right: 0;
@@ -1488,6 +1561,7 @@ ol, ul {
   * the ad is in view, then sticks to the very top once the ad scrolls
   * out of view, instead of permanently reserving space for it. */
   .nav-toggle {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     left: 0;
@@ -2455,9 +2529,7 @@ ol, ul {
 .delivery-sortable-header {
   cursor: pointer;
   position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   transition: background-color 0.2s ease;
   padding-right: 40px;
 }
@@ -2964,6 +3036,9 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   --panel: #383936;
   --teal: #118f85;
   --teal-dark: #09685f;
+  /* TibiaPal integration theme */
+  /* The calculator's compact layout starts earlier because its desktop board
+  * needs more room than the surrounding TibiaPal content column provides. */
 }
 .wp-calculator * {
   box-sizing: border-box;
@@ -3714,9 +3789,6 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   font-size: 10px;
 }
 .wp-calculator {
-  /* TibiaPal integration theme */
-}
-.wp-calculator {
   background: #061021;
   font-family: Verdana, Arial, sans-serif;
 }
@@ -3807,10 +3879,6 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   .wp-calculator .reshape-window .perk-picker {
     overflow-x: auto;
   }
-}
-.wp-calculator {
-  /* The calculator's compact layout starts earlier because its desktop board
-  * needs more room than the surrounding TibiaPal content column provides. */
 }
 @media (max-width: 1187px) {
   .wp-calculator {
@@ -4016,6 +4084,8 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   --dc-blue: #2d8cf8;
   --dc-cyan: #14a99b;
   --dc-gold: #efbd55;
+  --dc-green: #4caf50;
+  --dc-red: #e05a5a;
   box-sizing: border-box;
   width: 100%;
   min-height: 760px;
@@ -4778,8 +4848,8 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   top: 0;
 }
 
-.dc-export-card {
-  width: 760px;
+.dc-export-comparison {
+  width: 1440px;
   padding: 26px 26px 20px;
   border: 1px solid #347ec1;
   border-radius: 14px;
@@ -4787,6 +4857,60 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   box-shadow: inset 0 0 0 1px #0a1c33;
   color: #dce9f6;
   font-family: inherit;
+}
+
+.dc-export-comparison-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #24507e;
+}
+
+.dc-export-comparison-header h2 {
+  margin: 6px 0 0;
+  color: #f4f9ff;
+  font-size: 26px;
+  line-height: 1.1;
+}
+
+.dc-export-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.dc-export-column {
+  padding: 16px;
+  border: 1px solid #2a527d;
+  border-radius: 10px;
+  background: rgba(6, 18, 34, 0.45);
+}
+
+.dc-export-column-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(45, 140, 248, 0.25);
+  color: #8fc4ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.dc-export-column .dc-export-header {
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.dc-export-column .dc-export-summary .dc-diff-badge {
+  display: block;
+  width: fit-content;
+  margin: 6px auto 0;
 }
 
 .dc-export-header {
@@ -4801,8 +4925,7 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   flex: 0 0 auto;
   width: 66px;
   height: 66px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .dc-export-header-text {
@@ -4814,8 +4937,7 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   flex: 0 0 auto;
   width: 62px;
   height: 62px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   image-rendering: pixelated;
   padding: 5px;
   border: 1px solid #2a527d;
@@ -5225,8 +5347,7 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
 .dc-result-icon img {
   width: 44px;
   height: 44px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   image-rendering: pixelated;
 }
 
@@ -5680,4 +5801,117 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   .dc-info-popover {
     width: calc(100vw - 20px);
   }
-}/*# sourceMappingURL=main.css.map */
+}
+.dc-import-row {
+  margin-bottom: 10px;
+}
+
+.dc-howto-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--dc-text);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.dc-howto-list li::marker {
+  color: var(--dc-blue);
+}
+
+.dc-compare-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.dc-compare-column {
+  min-width: 0;
+  border: 1px solid var(--dc-border);
+  border-radius: 2px;
+  background: linear-gradient(145deg, #0b1b32, #071326);
+  box-shadow: inset 0 0 0 1px #071525, 0 5px 18px #020814;
+  overflow: hidden;
+}
+
+.dc-compare-column h3 {
+  margin: 0;
+  padding: 10px 14px;
+  border-bottom: 2px solid var(--dc-blue);
+  background: linear-gradient(#16375f, #0b203b);
+  font-size: 15px;
+}
+
+.dc-compare-column .dc-result-sections {
+  padding: 8px;
+}
+
+.dc-diff-legend-up,
+.dc-diff-legend-down {
+  color: var(--dc-muted);
+}
+
+.dc-diff-legend-up::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 4px;
+  border-radius: 50%;
+  background: var(--dc-green);
+}
+
+.dc-diff-legend-down::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 4px;
+  border-radius: 50%;
+  background: var(--dc-red);
+}
+
+.dc-diff-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 7px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 800;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.dc-diff-badge.dc-diff-up {
+  color: #eafff0;
+  background: rgba(76, 175, 80, 0.32);
+  border: 1px solid var(--dc-green);
+}
+
+.dc-diff-badge.dc-diff-down {
+  color: #ffeaea;
+  background: rgba(224, 90, 90, 0.3);
+  border: 1px solid var(--dc-red);
+}
+
+.dc-diff-badge.dc-diff-flat {
+  color: var(--dc-muted);
+  background: rgba(120, 151, 184, 0.18);
+  border: 1px solid var(--dc-border);
+}
+
+.dc-diff-badge.dc-diff-na {
+  color: var(--dc-muted);
+  background: rgba(120, 151, 184, 0.1);
+  border: 1px dashed var(--dc-border);
+}
+
+@media (max-width: 1050px) {
+  .dc-compare-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

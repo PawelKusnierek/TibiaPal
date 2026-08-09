@@ -8,6 +8,8 @@
   --dc-blue: #2d8cf8
   --dc-cyan: #14a99b
   --dc-gold: #efbd55
+  --dc-green: #4caf50
+  --dc-red: #e05a5a
   box-sizing: border-box
   width: 100%
   min-height: 760px
@@ -660,8 +662,8 @@
   left: -10000px
   top: 0
 
-.dc-export-card
-  width: 760px
+.dc-export-comparison
+  width: 1440px
   padding: 26px 26px 20px
   border: 1px solid #347ec1
   border-radius: 14px
@@ -669,6 +671,53 @@
   box-shadow: inset 0 0 0 1px #0a1c33
   color: #dce9f6
   font-family: inherit
+
+.dc-export-comparison-header
+  display: flex
+  align-items: center
+  gap: 16px
+  padding-bottom: 16px
+  margin-bottom: 18px
+  border-bottom: 1px solid #24507e
+
+.dc-export-comparison-header h2
+  margin: 6px 0 0
+  color: #f4f9ff
+  font-size: 26px
+  line-height: 1.1
+
+.dc-export-columns
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 18px
+  align-items: start
+
+.dc-export-column
+  padding: 16px
+  border: 1px solid #2a527d
+  border-radius: 10px
+  background: rgba(6, 18, 34, .45)
+
+.dc-export-column-label
+  display: inline-block
+  margin-bottom: 12px
+  padding: 3px 10px
+  border-radius: 20px
+  background: rgba(45, 140, 248, .25)
+  color: #8fc4ff
+  font-size: 11px
+  font-weight: 800
+  letter-spacing: .1em
+  text-transform: uppercase
+
+.dc-export-column .dc-export-header
+  padding-bottom: 12px
+  margin-bottom: 12px
+
+.dc-export-column .dc-export-summary .dc-diff-badge
+  display: block
+  width: fit-content
+  margin: 6px auto 0
 
 .dc-export-header
   display: flex
@@ -1413,3 +1462,112 @@
     flex-wrap: wrap
   .dc-info-popover
     width: calc(100vw - 20px)
+
+// ---------------------------------------------------------------------------
+// Build A / Build B / Results / How-to-use tabs
+//
+// The tab bar/panel styling itself is the site-wide .hunting_tab / .tablinks /
+// .tabcontent system (see _hunting.sass and scripts/onload.js) so this page's
+// tabs look and behave exactly like every other tool's. Only the bits below
+// are specific to the damage calculator's tab content.
+// ---------------------------------------------------------------------------
+
+.dc-import-row
+  margin-bottom: 10px
+
+.dc-howto-list
+  display: grid
+  gap: 8px
+  margin: 0
+  padding-left: 20px
+  color: var(--dc-text)
+  font-size: 13px
+  line-height: 1.5
+
+.dc-howto-list li::marker
+  color: var(--dc-blue)
+
+// ---------------------------------------------------------------------------
+// Results tab: side-by-side comparison
+// ---------------------------------------------------------------------------
+
+.dc-compare-columns
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 12px
+  align-items: start
+
+.dc-compare-column
+  min-width: 0
+  border: 1px solid var(--dc-border)
+  border-radius: 2px
+  background: linear-gradient(145deg, #0b1b32, #071326)
+  box-shadow: inset 0 0 0 1px #071525, 0 5px 18px #020814
+  overflow: hidden
+
+.dc-compare-column h3
+  margin: 0
+  padding: 10px 14px
+  border-bottom: 2px solid var(--dc-blue)
+  background: linear-gradient(#16375f, #0b203b)
+  font-size: 15px
+
+.dc-compare-column .dc-result-sections
+  padding: 8px
+
+.dc-diff-legend-up,
+.dc-diff-legend-down
+  color: var(--dc-muted)
+
+.dc-diff-legend-up::before
+  content: ""
+  display: inline-block
+  width: 6px
+  height: 6px
+  margin-right: 4px
+  border-radius: 50%
+  background: var(--dc-green)
+
+.dc-diff-legend-down::before
+  content: ""
+  display: inline-block
+  width: 6px
+  height: 6px
+  margin-right: 4px
+  border-radius: 50%
+  background: var(--dc-red)
+
+.dc-diff-badge
+  display: inline-block
+  margin-left: 8px
+  padding: 1px 7px
+  border-radius: 10px
+  font-size: 10px
+  font-weight: 800
+  vertical-align: middle
+  white-space: nowrap
+
+.dc-diff-badge.dc-diff-up
+  color: #eafff0
+  background: rgba(76, 175, 80, .32)
+  border: 1px solid var(--dc-green)
+
+.dc-diff-badge.dc-diff-down
+  color: #ffeaea
+  background: rgba(224, 90, 90, .3)
+  border: 1px solid var(--dc-red)
+
+.dc-diff-badge.dc-diff-flat
+  color: var(--dc-muted)
+  background: rgba(120, 151, 184, .18)
+  border: 1px solid var(--dc-border)
+
+.dc-diff-badge.dc-diff-na
+  color: var(--dc-muted)
+  background: rgba(120, 151, 184, .1)
+  border: 1px dashed var(--dc-border)
+
+@media (max-width: 1050px)
+  .dc-compare-columns
+    grid-template-columns: 1fr
+
