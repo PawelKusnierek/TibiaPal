@@ -291,8 +291,8 @@
     {
         "level":  "90+",
         "place":  "Holy Portal",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.1kk",
+        "loot":  "400k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -323,8 +323,8 @@
     {
         "level":  "90+",
         "place":  "Grimvale -4",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.3kk",
+        "loot":  "200k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -338,9 +338,9 @@
     },
     {
         "level":  "90+",
-        "place":  "Oramond Minos",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Oramond Minos South",
+        "raw_exp":  "1.3kk",
+        "loot":  "100k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -365,14 +365,6 @@
         "place":  "Yielothax",
         "raw_exp":  "950k",
         "loot":  "150k",
-        "runes":  "Crystalline Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "90+",
-        "place":  "Feyrist Surface",
-        "raw_exp":  "-",
-        "loot":  "-",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -403,15 +395,15 @@
     {
         "level":  "90+",
         "place":  "Muggy Plains",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.05kk",
+        "loot":  "400k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Lizard Chosens",
-        "raw_exp":  "1.40kk",
+        "raw_exp":  "1.4k",
         "loot":  "250k",
         "runes":  "Crystalline Arrows, Ethereal, Divine",
         "link":  "https://youtu.be/"
@@ -419,8 +411,8 @@
     {
         "level":  "90+",
         "place":  "Orc Cults",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.15kk",
+        "loot":  "300k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -443,16 +435,16 @@
     {
         "level":  "90+",
         "place":  "Okolnir Frost Dragons",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.3kk",
+        "loot":  "-100k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Edron Vampire Crypt -4",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "950k",
+        "loot":  "400k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -473,27 +465,19 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "120+",
-        "place":  "Edron Heroes -3",
+        "level":  "90+",
+        "place":  "Edron Heroes -2 and -3",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Shatterstorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "120+",
+        "level":  "90+",
         "place":  "Carlin Cults",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "120+",
-        "place":  "Edron Heroes -2",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Ethereal",
+        "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
