@@ -403,7 +403,7 @@
     {
         "level":  "90+",
         "place":  "Lizard Chosens",
-        "raw_exp":  "1.4k",
+        "raw_exp":  "1.4kk",
         "loot":  "250k",
         "runes":  "Crystalline Arrows, Ethereal, Divine",
         "link":  "https://youtu.be/"
@@ -451,8 +451,8 @@
     {
         "level":  "100+",
         "place":  "Ravenous Lava Lurkers",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.1kk",
+        "loot":  "-250k",
         "runes":  "Shatterstorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -475,8 +475,8 @@
     {
         "level":  "90+",
         "place":  "Carlin Cults",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.5kk",
+        "loot":  "50k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -518,14 +518,6 @@
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Crystalline Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
-        "place":  "Ravenous Lava Lurkers",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
