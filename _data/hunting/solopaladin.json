@@ -466,7 +466,7 @@
     },
     {
         "level":  "90+",
-        "place":  "Edron Heroes -2 and -3",
+        "place":  "Edron Heroes -2 & -3",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Shatterstorm Arrows, Ethereal",
@@ -801,7 +801,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "400+",
         "place":  "Port Hope Flimsies -1 only",
         "raw_exp":  "6.0kk",
         "loot":  "1.0kk",
@@ -809,7 +809,7 @@
         "link":  "https://youtu.be/"
     },
         {
-        "level":  "300+",
+        "level":  "400+",
         "place":  "Venore Flimsies -1 only",
         "raw_exp":  "5.5kk",
         "loot":  "1.0kk",
