@@ -435,7 +435,9 @@ function createBuild(key) {
         : "Main skill";
     root.querySelectorAll("[data-stat]").forEach((control) => {
       const statKey = control.dataset.stat;
-      control.value = state.stats[statKey] ?? "";
+      const value = state.stats[statKey] ?? "";
+      if ("value" in control) control.value = value;
+      else control.textContent = value;
     });
   }
 
@@ -1143,7 +1145,7 @@ function setupEffectsInfo() {
     const place = () => {
       const rect = toggle.getBoundingClientRect();
       const width = popover.offsetWidth;
-      const left = Math.max(10, Math.min(rect.right - width, window.innerWidth - width - 10));
+      const left = Math.max(10, Math.min(rect.left, window.innerWidth - width - 10));
       popover.style.top = `${rect.bottom + 8}px`;
       popover.style.left = `${left}px`;
     };

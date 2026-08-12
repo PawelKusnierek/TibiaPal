@@ -4633,6 +4633,15 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   cursor: default;
 }
 
+.dc-static-value {
+  display: flex;
+  align-items: center;
+  height: 26px;
+  color: #b7c9da;
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .dc-add-row {
   margin-top: 16px;
 }
