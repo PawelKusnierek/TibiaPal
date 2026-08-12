@@ -1,6 +1,7 @@
 const API_ROOT = "https://tibiatools.io/api/v1";
 const STORAGE_KEY = "tibiapalDamageBuildV2";
 const LEGACY_STORAGE_KEY = "tibiapalDamageBuildV1";
+const BUILD_META_KEY = "tibiapalDamageBuildMetaV1";
 // Everyone starts with these base values; wheel/proficiency/stance bonuses are added on top by the perks the calculator sends.
 const BASE_CRIT_CHANCE = 10;
 const BASE_CRIT_DAMAGE = 50;
@@ -391,6 +392,12 @@ function createBuild(key) {
     savedName = name;
     dirty = false;
     updateBuildHeading(key);
+    saveBuildMeta();
+  }
+
+  function restoreMeta(meta) {
+    savedName = typeof meta?.savedName === "string" ? meta.savedName : null;
+    dirty = Boolean(meta?.dirty) && savedName != null;
   }
 
   function vocationAllows(entry) {
@@ -812,6 +819,7 @@ function createBuild(key) {
     if (savedName && !dirty) {
       dirty = true;
       updateBuildHeading(key);
+      saveBuildMeta();
     }
   }
 
@@ -996,6 +1004,7 @@ function createBuild(key) {
     savedName = null;
     dirty = false;
     saveState();
+    saveBuildMeta();
     populateStaticControls();
     renderResults({ summary: {}, spells: [] });
     updateBuildHeading(key);
@@ -1048,6 +1057,7 @@ function createBuild(key) {
     get savedName() { return savedName; },
     get dirty() { return dirty; },
     markSaved,
+    restoreMeta,
     vocationAllows,
     populateStaticControls,
     renderStatControls,
@@ -1075,6 +1085,23 @@ const builds = { a: createBuild("a"), b: createBuild("b") };
 
 function saveAllState() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify({ a: builds.a.state, b: builds.b.state }));
+}
+
+// Which named saved build (if any) each tab currently reflects, so a refresh reopens the same
+// preset instead of a generically-labeled "Build A/B" — even though the draft content in
+// STORAGE_KEY already survives a refresh on its own.
+function saveBuildMeta() {
+  localStorage.setItem(BUILD_META_KEY, JSON.stringify({
+    a: { savedName: builds.a.savedName, dirty: builds.a.dirty },
+    b: { savedName: builds.b.savedName, dirty: builds.b.dirty },
+  }));
+}
+
+function loadBuildMeta() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(BUILD_META_KEY));
+    return stored && typeof stored === "object" ? stored : {};
+  } catch { return {}; }
 }
 
 function shareableBuilds() {
@@ -1428,9 +1455,17 @@ function closePlanner() {
   }, 280);
 }
 
+// Both planner iframes proactively push their current build on every "load" (not just in
+// response to an actual edit) — including the boot-time hydration right after a saved build
+// restores. Diff against the pre-sync snapshot so that harmless echoes of state we already
+// have don't flip a freshly-loaded (or freshly-saved) build to "unsaved changes".
 function receiveWheelBuild(build, payload) {
   if (!payload || typeof payload !== "object") return;
   const state = build.state;
+  // wheelPerks is a pure derivative of wheelPlanner.effects (already covered below) recomputed
+  // via mappedPlannerPerks(), so it's left out here — after a restore its key order differs from
+  // a value restored through sanitizeState's rows() helper even when the content is identical.
+  const before = JSON.stringify({ wheelPlanner: state.wheelPlanner, bonus: state.stats.bonus, vocation: state.stats.vocation });
   const { gemGrades, gradesHydrated, ...plannerPayload } = payload;
   state.wheelPlanner = { ...state.wheelPlanner, ...plannerPayload, effects: Array.isArray(payload.effects) ? payload.effects : [] };
   if (gradesHydrated && gemGrades && typeof gemGrades === "object" && !Array.isArray(gemGrades)) state.wheelPlanner.gemGrades = gemGrades;
@@ -1447,12 +1482,16 @@ function receiveWheelBuild(build, payload) {
   build.renderStatControls();
   build.renderSyncedEffects("wheel");
   document.querySelector("#plannerModalPoints strong").textContent = Number(payload.promotionPoints ?? 0).toLocaleString("en-US");
-  build.changed();
+  const after = JSON.stringify({ wheelPlanner: state.wheelPlanner, bonus: state.stats.bonus, vocation: state.stats.vocation });
+  if (before !== after) build.changed();
 }
 
 function receiveProficiencyBuild(build, payload) {
   if (!payload || typeof payload !== "object") return;
   const state = build.state;
+  // proficiencyPerks is likewise a pure derivative of proficiencyPlanner.effects — left out for
+  // the same reason as wheelPerks above.
+  const before = JSON.stringify({ proficiencyPlanner: state.proficiencyPlanner, weapon: state.weapon });
   const previousWeapon = Number(state.weapon.id);
   state.proficiencyPlanner = { ...state.proficiencyPlanner, ...payload, effects: Array.isArray(payload.effects) ? payload.effects : [] };
   const weapon = metadata.weapons.find((candidate) => normalized(candidate.name) === normalized(payload.weaponName));
@@ -1464,7 +1503,8 @@ function receiveProficiencyBuild(build, payload) {
   state.proficiencyPerks = build.mappedPlannerPerks("proficiency");
   build.renderEquipment();
   build.renderSyncedEffects("proficiency");
-  build.changed();
+  const after = JSON.stringify({ proficiencyPlanner: state.proficiencyPlanner, weapon: state.weapon });
+  if (before !== after) build.changed();
 }
 
 function filterResultCards(query) {
@@ -1863,9 +1903,14 @@ async function loadMetadata() {
     const restored = restoreBuilds();
     builds.a.state = restored.a;
     builds.b.state = restored.b;
+    // A shared "?build=" link describes an ad-hoc build, not the user's own saved presets —
+    // don't relabel it with whichever preset name happened to be active before.
+    const isSharedLink = Boolean(new URLSearchParams(window.location.search).get("build"));
+    const meta = isSharedLink ? {} : loadBuildMeta();
     ["a", "b"].forEach((key) => {
       const build = builds[key];
       if (!item("vocations", build.state.stats.vocation)) build.state.stats.vocation = "knight";
+      build.restoreMeta(meta[key]);
       build.wireEvents();
       build.populateStaticControls();
     });
