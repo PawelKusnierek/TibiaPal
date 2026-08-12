@@ -1252,7 +1252,6 @@ function deleteSelectedWheelPreset(build) {
   refreshWheelPresetOptions(build);
 }
 
-const PROFICIENCY_PRESETS_KEY = "tibiapalProficiencyPresetsV1";
 const PROFICIENCY_TOKEN_PATTERN = /^[-_A-Za-z0-9]{4,}$/;
 
 function parseProficiencyToken(value) {
@@ -1284,58 +1283,6 @@ function importProficiencyFromInput() {
   if (!build) return;
   const input = document.querySelector("#proficiencyImportInput");
   if (importProficiencyBuild(build, input.value)) input.value = "";
-}
-
-function loadProficiencyPresets() {
-  try { const stored = JSON.parse(localStorage.getItem(PROFICIENCY_PRESETS_KEY)); return stored && typeof stored === "object" && !Array.isArray(stored) ? stored : {}; }
-  catch { return {}; }
-}
-
-function proficiencyPresetsFor(vocation) {
-  const list = loadProficiencyPresets()[vocation];
-  return Array.isArray(list) ? list.filter((entry) => entry && typeof entry.name === "string" && typeof entry.token === "string") : [];
-}
-
-function refreshProficiencyPresetOptions(build, selectedName = "") {
-  const select = document.querySelector("#proficiencyPresetSelect");
-  if (!select) return;
-  const presets = proficiencyPresetsFor(build.state.stats.vocation);
-  select.replaceChildren(option("", presets.length ? "Choose a saved weapon…" : "No saved weapons"), ...presets.map((preset) => option(preset.name, preset.name)));
-  select.value = selectedName;
-  document.querySelector("#proficiencyPresetLoad").disabled = !presets.length;
-  document.querySelector("#proficiencyPresetDelete").disabled = !presets.length;
-}
-
-function saveCurrentProficiencyPreset(build) {
-  const token = String(build.state.proficiencyPlanner.token ?? "").trim();
-  if (!PROFICIENCY_TOKEN_PATTERN.test(token)) { setProficiencyImportError("Open the proficiency planner and choose a weapon before saving a preset."); return; }
-  const name = window.prompt("Name this proficiency preset:", build.state.proficiencyPlanner.weaponName || "")?.trim();
-  if (!name) return;
-  const vocation = build.state.stats.vocation;
-  const all = loadProficiencyPresets();
-  const list = proficiencyPresetsFor(vocation);
-  const index = list.findIndex((preset) => preset.name.toLowerCase() === name.toLowerCase());
-  const entry = { name, token, weaponName: build.state.proficiencyPlanner.weaponName || "" };
-  if (index >= 0) list[index] = entry; else list.push(entry);
-  all[vocation] = list;
-  localStorage.setItem(PROFICIENCY_PRESETS_KEY, JSON.stringify(all));
-  refreshProficiencyPresetOptions(build, name);
-}
-
-function loadSelectedProficiencyPreset(build) {
-  const name = document.querySelector("#proficiencyPresetSelect").value;
-  if (!name) return;
-  const preset = proficiencyPresetsFor(build.state.stats.vocation).find((entry) => entry.name === name);
-  if (preset) importProficiencyBuild(build, preset.token);
-}
-
-function deleteSelectedProficiencyPreset(build) {
-  const name = document.querySelector("#proficiencyPresetSelect").value;
-  if (!name || !window.confirm(`Delete saved weapon "${name}"?`)) return;
-  const all = loadProficiencyPresets();
-  all[build.state.stats.vocation] = proficiencyPresetsFor(build.state.stats.vocation).filter((preset) => preset.name !== name);
-  localStorage.setItem(PROFICIENCY_PRESETS_KEY, JSON.stringify(all));
-  refreshProficiencyPresetOptions(build);
 }
 
 // ---------------------------------------------------------------------------
@@ -1446,7 +1393,7 @@ function openPlanner(build, name) {
   document.querySelector("#wheelToolbar").hidden = name !== "wheel";
   document.querySelector("#proficiencyToolbar").hidden = name !== "proficiency";
   if (name === "wheel") { setWheelImportError(""); refreshWheelPresetOptions(build); }
-  if (name === "proficiency") { setProficiencyImportError(""); refreshProficiencyPresetOptions(build); }
+  if (name === "proficiency") setProficiencyImportError("");
   window.clearTimeout(plannerCloseTimer);
   plannerModal.classList.remove("dc-closing");
   plannerModal.hidden = false;
@@ -1833,9 +1780,6 @@ function wireGlobalEvents() {
   document.querySelector("#wheelPresetDelete").addEventListener("click", () => { const build = builds[activeBuildKey]; if (build) deleteSelectedWheelPreset(build); });
   document.querySelector("#proficiencyImportBtn").addEventListener("click", importProficiencyFromInput);
   document.querySelector("#proficiencyImportInput").addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); importProficiencyFromInput(); } });
-  document.querySelector("#proficiencyPresetLoad").addEventListener("click", () => { const build = builds[activeBuildKey]; if (build) loadSelectedProficiencyPreset(build); });
-  document.querySelector("#proficiencyPresetSave").addEventListener("click", () => { const build = builds[activeBuildKey]; if (build) saveCurrentProficiencyPreset(build); });
-  document.querySelector("#proficiencyPresetDelete").addEventListener("click", () => { const build = builds[activeBuildKey]; if (build) deleteSelectedProficiencyPreset(build); });
   ["a", "b"].forEach((key) => {
     document.querySelector(`#savedBuildSave-${key}`).addEventListener("click", () => saveCurrentBuild(builds[key]));
     document.querySelector(`#savedBuildSelect-${key}`).addEventListener("change", () => loadSelectedSavedBuild(builds[key]));
