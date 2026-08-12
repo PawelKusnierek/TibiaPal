@@ -4642,8 +4642,12 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   font-weight: 700;
 }
 
-.dc-rotation-fields {
+.dc-narrow-fields {
   max-width: 500px;
+}
+
+.dc-wide-fields {
+  max-width: 600px;
 }
 
 .dc-preset-row {

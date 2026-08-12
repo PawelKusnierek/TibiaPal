@@ -350,7 +350,7 @@
       <span class="dc-step">04</span>
       <div><h2>Rotation</h2><p>Sets the effective damage-per-turn summary. Ratio sets how often an attack is used relative to your basic attack: 1 means every turn, 0.5 means every other turn, 0.2 means once every 5 turns — it's used to weight each attack's contribution to your effective damage per turn.</p></div>
     </div>
-    <div class="dc-rotation-fields">
+    <div class="dc-narrow-fields">
       <div class="dc-preset-row">
         <label for="rotationPresetSelect-a">Common rotations</label>
         <select id="rotationPresetSelect-a"><option value="">Choose a preset…</option></select>
@@ -370,24 +370,28 @@
       <span class="dc-step">05</span>
       <div><h2>Targets (Optional)</h2><p>Add creatures to account for defenses, kill ratios and charms to further improve the calculations. Ratio sets what share of your kills come from this creature relative to the others in this list — it's used to weight the results toward the fights you actually spend time in.</p></div>
     </div>
-    <div class="dc-add-row">
-      <label for="creatureSearch-a">Add a creature</label>
-      <div><input id="creatureSearch-a" type="search" list="creatureOptions-a" placeholder="Search creatures…" autocomplete="off"><button id="addTarget-a" type="button">Add</button></div>
+    <div class="dc-wide-fields">
+      <div class="dc-add-row">
+        <label for="creatureSearch-a">Add a creature</label>
+        <div><input id="creatureSearch-a" type="search" list="creatureOptions-a" placeholder="Search creatures…" autocomplete="off"><button id="addTarget-a" type="button">Add</button></div>
+      </div>
+      <div class="dc-list-head dc-target-head"><span>Creature</span><span>Ratio</span><span>Charm</span><span>Tier</span><span></span></div>
+      <div id="targetRows-a" class="dc-row-list"></div>
     </div>
-    <div class="dc-list-head dc-target-head"><span>Creature</span><span>Ratio</span><span>Charm</span><span>Tier</span><span></span></div>
-    <div id="targetRows-a" class="dc-row-list"></div>
   </section>
 
   <section class="dc-panel">
     <div class="dc-panel-heading">
       <span class="dc-step">06</span>
-      <div><h2>Additional API perks (Optional)</h2><p>Use this only for equipment or specialized effects that are not part of either planner.</p></div>
+      <div><h2>Additional API perks (Optional, Advanced Users only)</h2><p>Use this only for equipment or specialized effects that are not part of any other section.</p></div>
     </div>
-    <div class="dc-add-row">
-      <label for="manualPerkSearch-a">Add an extra damage perk</label>
-      <div><input id="manualPerkSearch-a" type="search" list="perkOptions-a" placeholder="Search API perks…" autocomplete="off"><button type="button" data-add-perk="manual">Add</button></div>
+    <div class="dc-wide-fields">
+      <div class="dc-add-row">
+        <label for="manualPerkSearch-a">Add an extra damage perk</label>
+        <div><input id="manualPerkSearch-a" type="search" list="perkOptions-a" placeholder="Search API perks…" autocomplete="off"><button type="button" data-add-perk="manual">Add</button></div>
+      </div>
+      <div id="manualPerks-a" class="dc-row-list" aria-live="polite"></div>
     </div>
-    <div id="manualPerks-a" class="dc-row-list" aria-live="polite"></div>
   </section>
 
   <datalist id="perkOptions-a"></datalist>
@@ -484,7 +488,7 @@
       <span class="dc-step">04</span>
       <div><h2>Rotation</h2><p>Sets the effective damage-per-turn summary. Ratio sets how often an attack is used relative to your basic attack: 1 means every turn, 0.5 means every other turn, 0.2 means once every 5 turns — it's used to weight each attack's contribution to your effective damage per turn.</p></div>
     </div>
-    <div class="dc-rotation-fields">
+    <div class="dc-narrow-fields">
       <div class="dc-preset-row">
         <label for="rotationPresetSelect-b">Common rotations</label>
         <select id="rotationPresetSelect-b"><option value="">Choose a preset…</option></select>
@@ -504,24 +508,28 @@
       <span class="dc-step">05</span>
       <div><h2>Targets (Optional)</h2><p>Add creatures to account for defenses, kill ratios and charms to further improve the calculations. Ratio sets what share of your kills come from this creature relative to the others in this list — it's used to weight the results toward the fights you actually spend time in.</p></div>
     </div>
-    <div class="dc-add-row">
-      <label for="creatureSearch-b">Add a creature</label>
-      <div><input id="creatureSearch-b" type="search" list="creatureOptions-b" placeholder="Search creatures…" autocomplete="off"><button id="addTarget-b" type="button">Add</button></div>
+    <div class="dc-wide-fields">
+      <div class="dc-add-row">
+        <label for="creatureSearch-b">Add a creature</label>
+        <div><input id="creatureSearch-b" type="search" list="creatureOptions-b" placeholder="Search creatures…" autocomplete="off"><button id="addTarget-b" type="button">Add</button></div>
+      </div>
+      <div class="dc-list-head dc-target-head"><span>Creature</span><span>Ratio</span><span>Charm</span><span>Tier</span><span></span></div>
+      <div id="targetRows-b" class="dc-row-list"></div>
     </div>
-    <div class="dc-list-head dc-target-head"><span>Creature</span><span>Ratio</span><span>Charm</span><span>Tier</span><span></span></div>
-    <div id="targetRows-b" class="dc-row-list"></div>
   </section>
 
   <section class="dc-panel">
     <div class="dc-panel-heading">
       <span class="dc-step">06</span>
-      <div><h2>Additional API perks (Optional)</h2><p>Use this only for equipment or specialized effects that are not part of either planner.</p></div>
+      <div><h2>Additional API perks (Optional, Advanced Users only)</h2><p>Use this only for equipment or specialized effects that are not part of any other section.</p></div>
     </div>
-    <div class="dc-add-row">
-      <label for="manualPerkSearch-b">Add an extra damage perk</label>
-      <div><input id="manualPerkSearch-b" type="search" list="perkOptions-b" placeholder="Search API perks…" autocomplete="off"><button type="button" data-add-perk="manual">Add</button></div>
+    <div class="dc-wide-fields">
+      <div class="dc-add-row">
+        <label for="manualPerkSearch-b">Add an extra damage perk</label>
+        <div><input id="manualPerkSearch-b" type="search" list="perkOptions-b" placeholder="Search API perks…" autocomplete="off"><button type="button" data-add-perk="manual">Add</button></div>
+      </div>
+      <div id="manualPerks-b" class="dc-row-list" aria-live="polite"></div>
     </div>
-    <div id="manualPerks-b" class="dc-row-list" aria-live="polite"></div>
   </section>
 
   <datalist id="perkOptions-b"></datalist>

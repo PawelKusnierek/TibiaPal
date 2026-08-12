@@ -446,7 +446,7 @@ function createBuild(key) {
     const select = $("rotationPresetSelect");
     const preset = (ROTATION_PRESETS[state.stats.vocation] ?? []).find((entry) => entry.name === select.value);
     if (!preset) return;
-    const rows = [{ id: 1, targets: 1, ratio: 1 }];
+    const rows = [{ id: 1, targets: state.stats.vocation === "paladin" ? 9 : 1, ratio: 1 }];
     preset.spells.forEach((entry) => {
       const spell = matchByName("spells", entry.name, (candidate) => candidate.selectable !== false && vocationAllows(candidate));
       if (spell && !rows.some((row) => row.id === spell.id)) rows.push({ id: spell.id, targets: numberOrZero(entry.targets) || 1, ratio: numberOrZero(entry.ratio) || 1 });
@@ -1067,6 +1067,8 @@ function createBuild(key) {
           state.proficiencyPlanner = { token: "", weaponName: "", weaponSprite: "", vocation: state.stats.vocation, effects: [] };
           state.manualPerks = state.manualPerks.filter((row) => vocationAllows(item("perks", row.id)));
           state.rotation = state.rotation.filter((row) => vocationAllows(item("spells", row.id)));
+          const autoAttackRow = state.rotation.find((row) => row.id === 1);
+          if (autoAttackRow) autoAttackRow.targets = state.stats.vocation === "paladin" ? 9 : 1;
           state.wheelPerks = mappedPlannerPerks("wheel");
           state.proficiencyPerks = mappedPlannerPerks("proficiency");
           populateStaticControls();
