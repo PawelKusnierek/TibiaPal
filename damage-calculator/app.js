@@ -499,7 +499,8 @@ function createBuild(key) {
     const showShield = state.stats.vocation === "knight";
     shieldField.hidden = !showShield;
     const canUseShield = showShield && weapon?.hands === "one";
-    shieldSelect.replaceChildren(option("", "None"), ...metadata.shields.map((entry) => option(entry.id, `${entry.name} · ${entry.defense} def`, entry.id === Number(state.weapon.shieldId))));
+    const sortedShields = [...metadata.shields].sort((a, b) => b.defense - a.defense);
+    shieldSelect.replaceChildren(option("", "None"), ...sortedShields.map((entry) => option(entry.id, `${entry.name} · ${entry.defense} def`, entry.id === Number(state.weapon.shieldId))));
     shieldSelect.disabled = !canUseShield;
     if (!canUseShield) state.weapon.shieldId = null;
   }
