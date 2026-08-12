@@ -43,6 +43,8 @@ const metadataStatus = document.querySelector("#metadataStatus");
 const damageForm = document.querySelector("#damageForm");
 const plannerModal = document.querySelector("#plannerModal");
 const compareStatus = document.querySelector("#compareStatus");
+const resultsLoading = document.querySelector("#resultsLoading");
+const resultsContent = document.querySelector("#resultsContent");
 const metadata = {};
 
 // Per-vocation common rotations, edited in _data/rotation-presets/<vocation>.json and
@@ -1626,10 +1628,49 @@ function filterResultCards(query) {
   });
 }
 
+function renderHeadline(a, b) {
+  const nameA = builds.a.savedName ?? "Build A";
+  const nameB = builds.b.savedName ?? "Build B";
+  document.querySelector("#headlineName-a").textContent = nameA;
+  document.querySelector("#headlineName-b").textContent = nameB;
+
+  const dpsA = Number(a.summary?.effectiveDamagePerTurn);
+  const dpsB = Number(b.summary?.effectiveDamagePerTurn);
+  document.querySelector("#headlineValue-a").textContent = formatDamage(dpsA);
+  document.querySelector("#headlineValue-b").textContent = formatDamage(dpsB);
+
+  const badgeA = document.querySelector("#headlineBadge-a");
+  const badgeB = document.querySelector("#headlineBadge-b");
+  badgeA.replaceChildren();
+  badgeB.replaceChildren();
+  const pct = percentDiff(dpsA, dpsB);
+  badgeA.append(diffBadgeEl(pct == null ? null : -pct));
+  badgeB.append(diffBadgeEl(pct));
+
+  const barA = document.querySelector("#headlineBarA");
+  const barB = document.querySelector("#headlineBarB");
+  const totalPositive = Math.max(dpsA, 0) + Math.max(dpsB, 0);
+  const shareA = Number.isFinite(dpsA) && Number.isFinite(dpsB) && totalPositive > 0 ? (Math.max(dpsA, 0) / totalPositive) * 100 : 50;
+  barA.style.width = `${shareA}%`;
+  barB.style.width = `${100 - shareA}%`;
+
+  const verdict = document.querySelector("#headlineVerdict");
+  if (!Number.isFinite(dpsA) || !Number.isFinite(dpsB) || pct == null) {
+    verdict.textContent = "Not enough data to compare yet.";
+  } else {
+    const rounded = Math.round(Math.abs(pct) * 10) / 10;
+    verdict.textContent = rounded <= 0.05
+      ? "Both builds deal virtually identical DPS."
+      : `${pct > 0 ? nameB : nameA} deals ${rounded.toFixed(1)}% more effective damage per turn.`;
+  }
+}
+
 function annotateDiffs() {
   const a = builds.a.lastResult;
   const b = builds.b.lastResult;
   if (!a || !b) return;
+
+  renderHeadline(a, b);
 
   const summaryKeys = ["effectiveDamagePerTurn", "effectiveDamagePerHit", "damageFromCharms"];
   const summaryPct = summaryKeys.map((key) => percentDiff(Number(a.summary?.[key]), Number(b.summary?.[key])));
@@ -1862,6 +1903,11 @@ function buildSignature() {
   return `${JSON.stringify(builds.a.state)}|${JSON.stringify(builds.b.state)}`;
 }
 
+function setResultsLoading(isLoading) {
+  resultsLoading.hidden = !isLoading;
+  resultsContent.hidden = isLoading;
+}
+
 async function triggerCompare(force = false) {
   const signature = buildSignature();
   if (!force && signature === compareSignature && builds.a.lastResult && builds.b.lastResult) return;
@@ -1869,6 +1915,7 @@ async function triggerCompare(force = false) {
   compareSignature = signature;
   compareStatus.classList.remove("error");
   compareStatus.textContent = "Calculating both builds…";
+  setResultsLoading(true);
   compareInFlight = (async () => {
     try {
       await Promise.all([builds.a.calculate(), builds.b.calculate()]);
@@ -1883,6 +1930,7 @@ async function triggerCompare(force = false) {
       }
     } finally {
       compareInFlight = null;
+      setResultsLoading(false);
     }
   })();
   return compareInFlight;
