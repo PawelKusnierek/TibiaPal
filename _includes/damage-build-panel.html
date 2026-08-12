@@ -73,14 +73,21 @@
   <section class="dc-panel">
     <div class="dc-panel-heading">
       <span class="dc-step">04</span>
-      <div><h2>Rotation (Optional)</h2><p>Sets the effective damage-per-turn summary. Leave it empty to compare spells one hit at a time. Ratio sets how often an attack is used relative to your basic attack: 1 means every turn, 0.5 means every other turn, 0.2 means once every 5 turns — it's used to weight each attack's contribution to your effective damage per turn.</p></div>
+      <div><h2>Rotation</h2><p>Sets the effective damage-per-turn summary. Ratio sets how often an attack is used relative to your basic attack: 1 means every turn, 0.5 means every other turn, 0.2 means once every 5 turns — it's used to weight each attack's contribution to your effective damage per turn.</p></div>
     </div>
-    <div class="dc-add-row">
-      <label for="spellSearch-{{ include.key }}">Add an attack or spell</label>
-      <div><input id="spellSearch-{{ include.key }}" type="search" list="spellOptions-{{ include.key }}" placeholder="Search your vocation's spells…" autocomplete="off"><button id="addSpell-{{ include.key }}" type="button">Add</button></div>
+    <div class="dc-rotation-fields">
+      <div class="dc-preset-row">
+        <label for="rotationPresetSelect-{{ include.key }}">Common rotations</label>
+        <select id="rotationPresetSelect-{{ include.key }}"><option value="">Choose a preset…</option></select>
+        <small class="dc-preset-hint">Loads a common rotation for your vocation — tweak targets/ratio after applying.</small>
+      </div>
+      <div class="dc-add-row">
+        <label for="spellSearch-{{ include.key }}">Add an attack or spell</label>
+        <div><input id="spellSearch-{{ include.key }}" type="search" list="spellOptions-{{ include.key }}" placeholder="Search your vocation's spells…" autocomplete="off"><button id="addSpell-{{ include.key }}" type="button">Add</button></div>
+      </div>
+      <div class="dc-list-head dc-rotation-head"><span>Attack</span><span>Average Targets</span><span>Ratio</span><span></span></div>
+      <div id="rotationRows-{{ include.key }}" class="dc-row-list"></div>
     </div>
-    <div class="dc-list-head dc-rotation-head"><span>Attack</span><span>Targets</span><span>Ratio</span><span></span></div>
-    <div id="rotationRows-{{ include.key }}" class="dc-row-list"></div>
   </section>
 
   <section class="dc-panel">

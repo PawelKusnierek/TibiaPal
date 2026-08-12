@@ -1,0 +1,20 @@
+[
+  {
+    "name": "VoH: Chain - GFoB - Chain - TFB - Takedown",
+    "spells": [
+      { "name": "Chained Penance", "targets": 6, "ratio": 0.4 },
+      { "name": "Greater Flurry of Blows", "targets": 8, "ratio": 0.2 },
+      { "name": "Thousand Fist Blows", "targets": 7, "ratio": 0.2 },
+      { "name": "Sweeping Takedown", "targets": 8, "ratio": 0.2 }
+    ]
+  },
+  {
+    "name": "VoJ: Chain - GFoB - Chain - TFB - Chain - Takedown",
+    "spells": [
+      { "name": "Chained Penance", "targets": 6, "ratio": 0.5 },
+      { "name": "Greater Flurry of Blows", "targets": 8, "ratio": 0.166 },
+      { "name": "Thousand Fist Blows", "targets": 7, "ratio": 0.166 },
+      { "name": "Sweeping Takedown", "targets": 8, "ratio": 0.166 }
+    ]
+  }
+]

@@ -22,6 +22,8 @@ scripts: <script type="module" src="/damage-calculator/app.js?v=20260812-1"></sc
     Loading TibiaTools data…
   </div>
 
+  <script id="rotationPresetsData" type="application/json">{{ site.data['rotation-presets'] | jsonify }}</script>
+
   <div id="damageTabs" class="hunting_tab four-tabs" hidden>
     <button type="button" class="tablinks active" data-dc-tab="a" onclick="show_tab(event, 'build-a')">Build A</button>
     <button type="button" class="tablinks" data-dc-tab="b" onclick="show_tab(event, 'build-b')">Build B</button>

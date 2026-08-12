@@ -40,6 +40,14 @@ const damageForm = document.querySelector("#damageForm");
 const plannerModal = document.querySelector("#plannerModal");
 const compareStatus = document.querySelector("#compareStatus");
 const metadata = {};
+
+// Per-vocation common rotations, edited in _data/rotation-presets/<vocation>.json and
+// embedded into the page at build time so this can stay a static, no-fetch lookup.
+const ROTATION_PRESETS = (() => {
+  try { return JSON.parse(document.querySelector("#rotationPresetsData")?.textContent || "{}"); }
+  catch { return {}; }
+})();
+
 let plannerCloseTimer = null;
 let activeBuildKey = null;
 let activeTabKey = "a";
@@ -417,7 +425,32 @@ function createBuild(key) {
     renderSyncedEffects("proficiency");
     renderPerks();
     renderRotation();
+    renderRotationPresets();
     renderTargets();
+  }
+
+  function renderRotationPresets() {
+    const select = $("rotationPresetSelect");
+    if (!select) return;
+    const presets = ROTATION_PRESETS[state.stats.vocation] ?? [];
+    const previous = select.value;
+    select.replaceChildren(option("", "Choose a preset…"), ...presets.map((preset) => option(preset.name, preset.name)));
+    if (presets.some((preset) => preset.name === previous)) select.value = previous;
+  }
+
+  function applyRotationPreset() {
+    const select = $("rotationPresetSelect");
+    const preset = (ROTATION_PRESETS[state.stats.vocation] ?? []).find((entry) => entry.name === select.value);
+    if (!preset) return;
+    const rows = [{ id: 1, targets: 1, ratio: 1 }];
+    preset.spells.forEach((entry) => {
+      const spell = matchByName("spells", entry.name, (candidate) => candidate.selectable !== false && vocationAllows(candidate));
+      if (spell && !rows.some((row) => row.id === spell.id)) rows.push({ id: spell.id, targets: numberOrZero(entry.targets) || 1, ratio: numberOrZero(entry.ratio) || 1 });
+    });
+    state.rotation = rows;
+    renderRotation();
+    renderPerks();
+    changed();
   }
 
   function renderStatControls() {
@@ -682,7 +715,7 @@ function createBuild(key) {
       identity.append(title, hint);
       const targets = numericRowInput(row, "targets", 0, "Average targets", changed);
       const ratio = numericRowInput(row, "ratio", 0, "Cast ratio", changed);
-      if (row.id === 1) { ratio.value = "Every turn"; ratio.type = "text"; ratio.disabled = true; }
+      if (row.id === 1) { ratio.type = "text"; ratio.value = "N/A"; ratio.disabled = true; }
       element.append(identity, targets, ratio, removeButton(() => {
         state.rotation = state.rotation.filter((candidate) => candidate !== row);
         renderRotation();
@@ -1039,6 +1072,7 @@ function createBuild(key) {
     });
     root.querySelectorAll("[data-add-perk]").forEach((button) => button.addEventListener("click", addPerk));
     $("addSpell").addEventListener("click", addSpell);
+    $("rotationPresetSelect").addEventListener("change", applyRotationPreset);
     $("addTarget").addEventListener("click", addTarget);
     $("manualPerkSearch").addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); addPerk(); } });
     $("spellSearch").addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); addSpell(); } });

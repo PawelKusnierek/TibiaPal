@@ -253,6 +253,8 @@
     Loading TibiaTools data…
   </div>
 
+  <script id="rotationPresetsData" type="application/json">{"druid":[{"name":"2x Fork","spells":[{"name":"Forked Thorns","targets":6,"ratio":0.5},{"name":"Forked Glacier","targets":7,"ratio":0.5}]},{"name":"2x Fork - Ice Burst - Eternal Winter","spells":[{"name":"Forked Thorns","targets":6,"ratio":0.4625},{"name":"Forked Glacier","targets":7,"ratio":0.4625},{"name":"Ice Burst","targets":10,"ratio":0.05},{"name":"Eternal Winter","targets":15,"ratio":0.025}]},{"name":"Forked Glacier - Strong Ice Wave","spells":[{"name":"Forked Glacier","targets":7,"ratio":0.5},{"name":"Strong Ice Wave","targets":5,"ratio":0.5}]}],"knight":[{"name":"Exori Gran - Exori - Exori Min","spells":[{"name":"Fierce Berserk","targets":8,"ratio":0.333},{"name":"Berserk","targets":8,"ratio":0.333},{"name":"Front Sweep","targets":5,"ratio":0.333}]},{"name":"Exori Gran - Exori - Exori Mas","spells":[{"name":"Fierce Berserk","targets":8,"ratio":0.333},{"name":"Berserk","targets":8,"ratio":0.333},{"name":"Groundshaker","targets":10,"ratio":0.333}]}],"monk":[{"name":"VoH: Chain - GFoB - Chain - TFB - Takedown","spells":[{"name":"Chained Penance","targets":6,"ratio":0.4},{"name":"Greater Flurry of Blows","targets":8,"ratio":0.2},{"name":"Thousand Fist Blows","targets":7,"ratio":0.2},{"name":"Sweeping Takedown","targets":8,"ratio":0.2}]},{"name":"VoJ: Chain - GFoB - Chain - TFB - Chain - Takedown","spells":[{"name":"Chained Penance","targets":6,"ratio":0.5},{"name":"Greater Flurry of Blows","targets":8,"ratio":0.166},{"name":"Thousand Fist Blows","targets":7,"ratio":0.166},{"name":"Sweeping Takedown","targets":8,"ratio":0.166}]}],"paladin":[{"name":"Ethereal Barrage - Divine Caldera","spells":[{"name":"Ethereal Barrage","targets":7,"ratio":0.5},{"name":"Divine Caldera","targets":9,"ratio":0.5}]},{"name":"Divine Barrage - Divine Caldera","spells":[{"name":"Divine Barrage","targets":7,"ratio":0.5},{"name":"Divine Caldera","targets":9,"ratio":0.5}]},{"name":"Divine Barrage - Ethereal Barrage","spells":[{"name":"Divine Barrage","targets":7,"ratio":0.5},{"name":"Ethereal Barrage","targets":7,"ratio":0.5}]}],"sorcerer":[{"name":"Great Fire Wave - Death Echo","spells":[{"name":"Great Fire Wave","targets":8,"ratio":0.5},{"name":"Death Echo","targets":7,"ratio":0.5}]},{"name":"Death Echo - Energy Wave - Death Echo - Great Death Beam","spells":[{"name":"Death Echo","targets":7,"ratio":0.5},{"name":"Energy Wave","targets":8,"ratio":0.25},{"name":"Great Death Beam","targets":5,"ratio":0.25}]}]}</script>
+
   <div id="damageTabs" class="hunting_tab four-tabs" hidden>
     <button type="button" class="tablinks active" data-dc-tab="a" onclick="show_tab(event, 'build-a')">Build A</button>
     <button type="button" class="tablinks" data-dc-tab="b" onclick="show_tab(event, 'build-b')">Build B</button>
@@ -346,14 +348,21 @@
   <section class="dc-panel">
     <div class="dc-panel-heading">
       <span class="dc-step">04</span>
-      <div><h2>Rotation (Optional)</h2><p>Sets the effective damage-per-turn summary. Leave it empty to compare spells one hit at a time. Ratio sets how often an attack is used relative to your basic attack: 1 means every turn, 0.5 means every other turn, 0.2 means once every 5 turns — it's used to weight each attack's contribution to your effective damage per turn.</p></div>
+      <div><h2>Rotation</h2><p>Sets the effective damage-per-turn summary. Ratio sets how often an attack is used relative to your basic attack: 1 means every turn, 0.5 means every other turn, 0.2 means once every 5 turns — it's used to weight each attack's contribution to your effective damage per turn.</p></div>
     </div>
-    <div class="dc-add-row">
-      <label for="spellSearch-a">Add an attack or spell</label>
-      <div><input id="spellSearch-a" type="search" list="spellOptions-a" placeholder="Search your vocation's spells…" autocomplete="off"><button id="addSpell-a" type="button">Add</button></div>
+    <div class="dc-rotation-fields">
+      <div class="dc-preset-row">
+        <label for="rotationPresetSelect-a">Common rotations</label>
+        <select id="rotationPresetSelect-a"><option value="">Choose a preset…</option></select>
+        <small class="dc-preset-hint">Loads a common rotation for your vocation — tweak targets/ratio after applying.</small>
+      </div>
+      <div class="dc-add-row">
+        <label for="spellSearch-a">Add an attack or spell</label>
+        <div><input id="spellSearch-a" type="search" list="spellOptions-a" placeholder="Search your vocation's spells…" autocomplete="off"><button id="addSpell-a" type="button">Add</button></div>
+      </div>
+      <div class="dc-list-head dc-rotation-head"><span>Attack</span><span>Average Targets</span><span>Ratio</span><span></span></div>
+      <div id="rotationRows-a" class="dc-row-list"></div>
     </div>
-    <div class="dc-list-head dc-rotation-head"><span>Attack</span><span>Targets</span><span>Ratio</span><span></span></div>
-    <div id="rotationRows-a" class="dc-row-list"></div>
   </section>
 
   <section class="dc-panel">
@@ -473,14 +482,21 @@
   <section class="dc-panel">
     <div class="dc-panel-heading">
       <span class="dc-step">04</span>
-      <div><h2>Rotation (Optional)</h2><p>Sets the effective damage-per-turn summary. Leave it empty to compare spells one hit at a time. Ratio sets how often an attack is used relative to your basic attack: 1 means every turn, 0.5 means every other turn, 0.2 means once every 5 turns — it's used to weight each attack's contribution to your effective damage per turn.</p></div>
+      <div><h2>Rotation</h2><p>Sets the effective damage-per-turn summary. Ratio sets how often an attack is used relative to your basic attack: 1 means every turn, 0.5 means every other turn, 0.2 means once every 5 turns — it's used to weight each attack's contribution to your effective damage per turn.</p></div>
     </div>
-    <div class="dc-add-row">
-      <label for="spellSearch-b">Add an attack or spell</label>
-      <div><input id="spellSearch-b" type="search" list="spellOptions-b" placeholder="Search your vocation's spells…" autocomplete="off"><button id="addSpell-b" type="button">Add</button></div>
+    <div class="dc-rotation-fields">
+      <div class="dc-preset-row">
+        <label for="rotationPresetSelect-b">Common rotations</label>
+        <select id="rotationPresetSelect-b"><option value="">Choose a preset…</option></select>
+        <small class="dc-preset-hint">Loads a common rotation for your vocation — tweak targets/ratio after applying.</small>
+      </div>
+      <div class="dc-add-row">
+        <label for="spellSearch-b">Add an attack or spell</label>
+        <div><input id="spellSearch-b" type="search" list="spellOptions-b" placeholder="Search your vocation's spells…" autocomplete="off"><button id="addSpell-b" type="button">Add</button></div>
+      </div>
+      <div class="dc-list-head dc-rotation-head"><span>Attack</span><span>Average Targets</span><span>Ratio</span><span></span></div>
+      <div id="rotationRows-b" class="dc-row-list"></div>
     </div>
-    <div class="dc-list-head dc-rotation-head"><span>Attack</span><span>Targets</span><span>Ratio</span><span></span></div>
-    <div id="rotationRows-b" class="dc-row-list"></div>
   </section>
 
   <section class="dc-panel">
