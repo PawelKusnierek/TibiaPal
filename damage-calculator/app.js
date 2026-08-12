@@ -106,6 +106,24 @@ function matchByName(resource, value, allowed = () => true) {
     ?? null;
 }
 
+// Parses the "Killed Monsters:" block out of a pasted Tibia Hunt Analyser session
+// log, e.g. "  6x cave rat" -> { name: "cave rat", count: 6 }. Returns null when the
+// text doesn't look like a hunt log at all, so callers can tell "not a log" from "no kills".
+function parseHuntAnalyserKills(text) {
+  const startMarker = "Killed Monsters:";
+  const startIndex = String(text ?? "").indexOf(startMarker);
+  if (startIndex === -1) return null;
+  const afterStart = text.slice(startIndex + startMarker.length);
+  const endMatch = afterStart.match(/\n\s*Looted Items:/i);
+  const section = endMatch ? afterStart.slice(0, endMatch.index) : afterStart;
+  const kills = [];
+  section.split(/\r?\n/).forEach((line) => {
+    const match = line.trim().match(/^(\d[\d,]*)\s*[x×]\s*(.+)$/i);
+    if (match) kills.push({ name: match[2].trim(), count: Number(match[1].replaceAll(",", "")) });
+  });
+  return kills;
+}
+
 function numberOrZero(value) {
   const parsed = Number(value);
   return Number.isFinite(parsed) ? parsed : 0;
@@ -804,6 +822,40 @@ function createBuild(key) {
     changed();
   }
 
+  function setHuntLogStatus(message, isError) {
+    const status = $("huntLogStatus");
+    status.textContent = message;
+    status.classList.toggle("dc-hunt-import-error", Boolean(isError));
+  }
+
+  function importHuntLog() {
+    const input = $("huntAnalyserLog");
+    const kills = parseHuntAnalyserKills(input.value);
+    if (!kills) { setHuntLogStatus("Couldn't find a \"Killed Monsters\" section — paste the full session log.", true); return; }
+    if (!kills.length) { setHuntLogStatus("No creatures found in that log.", true); return; }
+    const total = kills.reduce((sum, kill) => sum + kill.count, 0);
+    const unmatched = [];
+    let added = 0;
+    kills.forEach(({ name, count }) => {
+      const creature = matchByName("creatures", name);
+      if (!creature) { unmatched.push(name); return; }
+      const ratio = Math.round((count / total) * 100) / 100;
+      const existing = state.targets.find((row) => row.id === creature.id);
+      if (existing) existing.ratio = ratio; else state.targets.push({ id: creature.id, ratio, charmId: null, charmTier: 1 });
+      added++;
+    });
+    if (!added) { setHuntLogStatus(`Couldn't match any creatures from the log: ${unmatched.join(", ")}.`, true); return; }
+    setHuntLogStatus(
+      unmatched.length
+        ? `Added ${added} target${added === 1 ? "" : "s"} with kill ratios. Couldn't match: ${unmatched.join(", ")}.`
+        : `Added ${added} target${added === 1 ? "" : "s"} with kill ratios from the log.`,
+      false,
+    );
+    input.value = "";
+    renderTargets();
+    changed();
+  }
+
   function aggregatePerks(groups = [state.wheelPerks, state.proficiencyPerks, state.manualPerks]) {
     const totals = new Map();
     groups.flat().forEach((row) => {
@@ -1080,6 +1132,7 @@ function createBuild(key) {
     $("addSpell").addEventListener("click", addSpell);
     $("rotationPresetSelect").addEventListener("change", applyRotationPreset);
     $("addTarget").addEventListener("click", addTarget);
+    $("importHuntLog").addEventListener("click", importHuntLog);
     $("manualPerkSearch").addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); addPerk(); } });
     $("spellSearch").addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); addSpell(); } });
     $("creatureSearch").addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); addTarget(); } });

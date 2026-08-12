@@ -371,6 +371,14 @@
       <div><h2>Targets (Optional)</h2><p>Add creatures to account for defenses, kill ratios and charms to further improve the calculations. Ratio sets what share of your kills come from this creature relative to the others in this list — it's used to weight the results toward the fights you actually spend time in.</p></div>
     </div>
     <div class="dc-wide-fields">
+      <div class="dc-hunt-import">
+        <label for="huntAnalyserLog-a">Paste a Hunt Analyser log — creatures and kill ratios are added automatically</label>
+        <textarea id="huntAnalyserLog-a" placeholder="Session data: From ...&#10;...&#10;Killed Monsters:&#10;  6x cave rat&#10;  7x rat&#10;  10x rotworm"></textarea>
+        <div class="dc-hunt-import-row">
+          <button id="importHuntLog-a" type="button" class="dc-button">Parse &amp; add targets</button>
+          <small id="huntLogStatus-a" class="dc-hunt-import-status" aria-live="polite"></small>
+        </div>
+      </div>
       <div class="dc-add-row">
         <label for="creatureSearch-a">Add a creature</label>
         <div><input id="creatureSearch-a" type="search" list="creatureOptions-a" placeholder="Search creatures…" autocomplete="off"><button id="addTarget-a" type="button">Add</button></div>
@@ -509,6 +517,14 @@
       <div><h2>Targets (Optional)</h2><p>Add creatures to account for defenses, kill ratios and charms to further improve the calculations. Ratio sets what share of your kills come from this creature relative to the others in this list — it's used to weight the results toward the fights you actually spend time in.</p></div>
     </div>
     <div class="dc-wide-fields">
+      <div class="dc-hunt-import">
+        <label for="huntAnalyserLog-b">Paste a Hunt Analyser log — creatures and kill ratios are added automatically</label>
+        <textarea id="huntAnalyserLog-b" placeholder="Session data: From ...&#10;...&#10;Killed Monsters:&#10;  6x cave rat&#10;  7x rat&#10;  10x rotworm"></textarea>
+        <div class="dc-hunt-import-row">
+          <button id="importHuntLog-b" type="button" class="dc-button">Parse &amp; add targets</button>
+          <small id="huntLogStatus-b" class="dc-hunt-import-status" aria-live="polite"></small>
+        </div>
+      </div>
       <div class="dc-add-row">
         <label for="creatureSearch-b">Add a creature</label>
         <div><input id="creatureSearch-b" type="search" list="creatureOptions-b" placeholder="Search creatures…" autocomplete="off"><button id="addTarget-b" type="button">Add</button></div>

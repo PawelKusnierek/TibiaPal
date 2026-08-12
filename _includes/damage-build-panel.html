@@ -96,6 +96,14 @@
       <div><h2>Targets (Optional)</h2><p>Add creatures to account for defenses, kill ratios and charms to further improve the calculations. Ratio sets what share of your kills come from this creature relative to the others in this list — it's used to weight the results toward the fights you actually spend time in.</p></div>
     </div>
     <div class="dc-wide-fields">
+      <div class="dc-hunt-import">
+        <label for="huntAnalyserLog-{{ include.key }}">Paste a Hunt Analyser log — creatures and kill ratios are added automatically</label>
+        <textarea id="huntAnalyserLog-{{ include.key }}" placeholder="Session data: From ...&#10;...&#10;Killed Monsters:&#10;  6x cave rat&#10;  7x rat&#10;  10x rotworm"></textarea>
+        <div class="dc-hunt-import-row">
+          <button id="importHuntLog-{{ include.key }}" type="button" class="dc-button">Parse &amp; add targets</button>
+          <small id="huntLogStatus-{{ include.key }}" class="dc-hunt-import-status" aria-live="polite"></small>
+        </div>
+      </div>
       <div class="dc-add-row">
         <label for="creatureSearch-{{ include.key }}">Add a creature</label>
         <div><input id="creatureSearch-{{ include.key }}" type="search" list="creatureOptions-{{ include.key }}" placeholder="Search creatures…" autocomplete="off"><button id="addTarget-{{ include.key }}" type="button">Add</button></div>
