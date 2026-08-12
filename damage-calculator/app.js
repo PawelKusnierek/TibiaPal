@@ -2,6 +2,10 @@ const API_ROOT = "https://tibiatools.io/api/v1";
 const STORAGE_KEY = "tibiapalDamageBuildV2";
 const LEGACY_STORAGE_KEY = "tibiapalDamageBuildV1";
 const BUILD_META_KEY = "tibiapalDamageBuildMetaV1";
+const METADATA_CACHE_KEY = "tibiapalDamageMetadataCacheV1";
+// Vocations/weapons/spells/etc. barely change - refetching all 9 endpoints on every single
+// page view was hammering the TibiaTools API for no reason. Cache them for a while instead.
+const METADATA_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
 // Everyone starts with these base values; wheel/proficiency/stance bonuses are added on top by the perks the calculator sends.
 const BASE_CRIT_CHANCE = 10;
 const BASE_CRIT_DAMAGE = 50;
@@ -1929,13 +1933,34 @@ function wireGlobalEvents() {
   document.querySelector("#resultFilterCompare").addEventListener("input", (event) => filterResultCards(normalized(event.target.value)));
 }
 
+function loadCachedMetadata() {
+  try {
+    const cached = JSON.parse(localStorage.getItem(METADATA_CACHE_KEY));
+    if (!cached || typeof cached !== "object" || !cached.data) return null;
+    if (Date.now() - cached.savedAt > METADATA_CACHE_TTL_MS) return null;
+    if (META_RESOURCES.some((resource) => !(resource in cached.data))) return null;
+    return cached.data;
+  } catch { return null; }
+}
+
+function saveCachedMetadata(data) {
+  try { localStorage.setItem(METADATA_CACHE_KEY, JSON.stringify({ savedAt: Date.now(), data })); }
+  catch { /* storage full/unavailable - just skip caching */ }
+}
+
 async function loadMetadata() {
   try {
-    const responses = await Promise.all(META_RESOURCES.map((resource) => fetch(`${API_ROOT}/meta/${resource}`, { headers: { Accept: "application/json" } })));
-    const failed = responses.find((response) => !response.ok);
-    if (failed) throw new Error(`TibiaTools metadata returned HTTP ${failed.status}.`);
-    const bodies = await Promise.all(responses.map((response) => response.json()));
-    bodies.forEach((body) => { metadata[body.resource] = body.items; });
+    const cached = loadCachedMetadata();
+    if (cached) {
+      Object.assign(metadata, cached);
+    } else {
+      const responses = await Promise.all(META_RESOURCES.map((resource) => fetch(`${API_ROOT}/meta/${resource}`, { headers: { Accept: "application/json" } })));
+      const failed = responses.find((response) => !response.ok);
+      if (failed) throw new Error(`TibiaTools metadata returned HTTP ${failed.status}.`);
+      const bodies = await Promise.all(responses.map((response) => response.json()));
+      bodies.forEach((body) => { metadata[body.resource] = body.items; });
+      saveCachedMetadata(metadata);
+    }
 
     const restored = restoreBuilds();
     builds.a.state = restored.a;
