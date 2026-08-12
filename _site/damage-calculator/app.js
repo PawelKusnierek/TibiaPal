@@ -371,6 +371,14 @@ function createBuild(key) {
   let lastResult = null;
   let lastStages = null;
   let requestController = null;
+  let savedName = null;
+  let dirty = false;
+
+  function markSaved(name) {
+    savedName = name;
+    dirty = false;
+    updateBuildHeading(key);
+  }
 
   function vocationAllows(entry) {
     return Boolean(entry) && (!Array.isArray(entry.vocations) || entry.vocations.includes(state.stats.vocation));
@@ -788,6 +796,10 @@ function createBuild(key) {
 
   function changed() {
     saveState();
+    if (savedName && !dirty) {
+      dirty = true;
+      updateBuildHeading(key);
+    }
   }
 
   function mappedEffectLabels(source, spell = null) {
@@ -968,9 +980,12 @@ function createBuild(key) {
     hasCalculated = false;
     lastResult = null;
     lastStages = null;
+    savedName = null;
+    dirty = false;
     saveState();
     populateStaticControls();
     renderResults({ summary: {}, spells: [] });
+    updateBuildHeading(key);
   }
 
   function reset() {
@@ -1016,6 +1031,9 @@ function createBuild(key) {
     get hasCalculated() { return hasCalculated; },
     get lastResult() { return lastResult; },
     get lastStages() { return lastStages; },
+    get savedName() { return savedName; },
+    get dirty() { return dirty; },
+    markSaved,
     vocationAllows,
     populateStaticControls,
     renderStatControls,
@@ -1294,6 +1312,100 @@ function deleteSelectedProficiencyPreset(build) {
   refreshProficiencyPresetOptions(build);
 }
 
+// ---------------------------------------------------------------------------
+// Named saved builds: a shared library (not tied to Build A or B specifically)
+// that can be saved from, and loaded into, either tab. Unlike the STORAGE_KEY
+// draft above, these only ever change when the user explicitly saves.
+// ---------------------------------------------------------------------------
+
+const SAVED_BUILDS_KEY = "tibiapalSavedBuildsV1";
+
+function loadSavedBuilds() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(SAVED_BUILDS_KEY));
+    return Array.isArray(stored) ? stored.filter((entry) => entry && typeof entry.name === "string" && entry.state && typeof entry.state === "object") : [];
+  } catch { return []; }
+}
+
+function persistSavedBuilds(list) {
+  localStorage.setItem(SAVED_BUILDS_KEY, JSON.stringify(list));
+}
+
+function refreshSavedBuildOptions(key, selectedName = "") {
+  const select = document.querySelector(`#savedBuildSelect-${key}`);
+  if (!select) return;
+  const savedList = loadSavedBuilds();
+  select.replaceChildren(option("", savedList.length ? "Choose a saved build…" : "No saved builds"), ...savedList.map((entry) => option(entry.name, entry.name)));
+  select.value = selectedName;
+  document.querySelector(`#savedBuildDelete-${key}`).disabled = !savedList.length;
+}
+
+function refreshAllSavedBuildOptions() {
+  refreshSavedBuildOptions("a", builds.a.savedName ?? "");
+  refreshSavedBuildOptions("b", builds.b.savedName ?? "");
+}
+
+function updateBuildHeading(key) {
+  const build = builds[key];
+  if (!build) return;
+  const defaultLabel = `Build ${key.toUpperCase()}`;
+  const label = build.savedName ?? defaultLabel;
+  const tabButton = document.querySelector(`#damageTabs [data-dc-tab="${key}"]`);
+  const resultHeading = document.querySelector(`#buildHeading-${key}`);
+  [tabButton, resultHeading].forEach((element) => {
+    if (!element) return;
+    element.textContent = label;
+    if (build.dirty) {
+      const marker = document.createElement("span");
+      marker.className = "dc-unsaved-marker";
+      marker.title = "Unsaved changes";
+      marker.textContent = " •";
+      element.append(marker);
+    }
+  });
+}
+
+function saveCurrentBuild(build) {
+  const name = window.prompt("Name this build:", build.savedName ?? "")?.trim();
+  if (!name) return;
+  const list = loadSavedBuilds();
+  const index = list.findIndex((entry) => entry.name.toLowerCase() === name.toLowerCase());
+  const entry = { name, state: build.shareableBuild(), savedAt: Date.now() };
+  if (index >= 0) list[index] = entry; else list.push(entry);
+  persistSavedBuilds(list);
+  build.markSaved(name);
+  refreshAllSavedBuildOptions();
+}
+
+function loadSelectedSavedBuild(build) {
+  const select = document.querySelector(`#savedBuildSelect-${build.key}`);
+  const name = select.value;
+  if (!name) return;
+  const entry = loadSavedBuilds().find((candidate) => candidate.name === name);
+  if (!entry) return;
+  if (build.dirty) {
+    const current = build.savedName ?? `Build ${build.key.toUpperCase()}`;
+    if (!window.confirm(`Discard unsaved changes to "${current}" and load "${name}"?`)) {
+      select.value = build.savedName ?? "";
+      return;
+    }
+  }
+  build.replaceState(sanitizeState(entry.state));
+  build.markSaved(entry.name);
+  refreshSavedBuildOptions(build.key, entry.name);
+}
+
+function deleteSelectedSavedBuild(key) {
+  const select = document.querySelector(`#savedBuildSelect-${key}`);
+  const name = select?.value;
+  if (!name || !window.confirm(`Delete saved build "${name}"?`)) return;
+  persistSavedBuilds(loadSavedBuilds().filter((entry) => entry.name !== name));
+  ["a", "b"].forEach((buildKey) => {
+    if (builds[buildKey].savedName === name) builds[buildKey].markSaved(null);
+  });
+  refreshAllSavedBuildOptions();
+}
+
 function openPlanner(build, name) {
   activeBuildKey = build.key;
   const wheel = document.querySelector("#wheelPlannerFrame");
@@ -1313,10 +1425,17 @@ function openPlanner(build, name) {
   plannerModal.classList.remove("dc-closing");
   plannerModal.hidden = false;
   document.body.style.overflow = "hidden";
+  const previousWheelSrc = wheel.getAttribute("src");
   initializePlannerFrames(build);
   if (name === "wheel") {
     syncWheelGrades(build);
-    wheel.contentWindow?.postMessage({ type: "tibiapal:request-wheel-build" }, window.location.origin);
+    // If the src didn't change, the iframe won't navigate and no "load" event will fire to
+    // request a fresh build — safe to ask immediately since no navigation is racing us. If it
+    // did change, wait for the "load" listener below: requesting now can hit the outgoing
+    // (stale) document mid-navigation, which reports its old vocation and corrupts our state.
+    if (wheel.getAttribute("src") === previousWheelSrc) {
+      wheel.contentWindow?.postMessage({ type: "tibiapal:request-wheel-build" }, window.location.origin);
+    }
   }
 }
 
@@ -1687,11 +1806,17 @@ function wireGlobalEvents() {
   document.querySelector("#proficiencyPresetLoad").addEventListener("click", () => { const build = builds[activeBuildKey]; if (build) loadSelectedProficiencyPreset(build); });
   document.querySelector("#proficiencyPresetSave").addEventListener("click", () => { const build = builds[activeBuildKey]; if (build) saveCurrentProficiencyPreset(build); });
   document.querySelector("#proficiencyPresetDelete").addEventListener("click", () => { const build = builds[activeBuildKey]; if (build) deleteSelectedProficiencyPreset(build); });
+  ["a", "b"].forEach((key) => {
+    document.querySelector(`#savedBuildSave-${key}`).addEventListener("click", () => saveCurrentBuild(builds[key]));
+    document.querySelector(`#savedBuildSelect-${key}`).addEventListener("change", () => loadSelectedSavedBuild(builds[key]));
+    document.querySelector(`#savedBuildDelete-${key}`).addEventListener("click", () => deleteSelectedSavedBuild(key));
+  });
   document.querySelector("#wheelPlannerFrame").addEventListener("load", () => {
     const build = builds[activeBuildKey];
     if (!build) return;
     syncPlannerVocation(build, "wheel");
     syncWheelGrades(build);
+    document.querySelector("#wheelPlannerFrame").contentWindow?.postMessage({ type: "tibiapal:request-wheel-build" }, window.location.origin);
   });
   document.querySelector("#proficiencyPlannerFrame").addEventListener("load", () => {
     const build = builds[activeBuildKey];
@@ -1716,10 +1841,23 @@ function wireGlobalEvents() {
     build.reset();
   });
   document.querySelector("#shareBuild").addEventListener("click", async (event) => {
+    const button = event.currentTarget;
     const url = new URL(window.location.href);
     url.searchParams.set("build", encodeBuild(shareableBuilds()));
-    try { await navigator.clipboard.writeText(url.href); event.currentTarget.textContent = "Link copied!"; window.setTimeout(() => { event.currentTarget.textContent = "Copy build link"; }, 1500); }
-    catch { window.prompt("Copy this build link:", url.href); }
+    try {
+      await navigator.clipboard.writeText(url.href);
+    } catch {
+      const textarea = document.createElement("textarea");
+      textarea.value = url.href;
+      textarea.style.position = "fixed";
+      textarea.style.opacity = "0";
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+    }
+    button.textContent = "Link copied!";
+    window.setTimeout(() => { button.textContent = "Copy build link"; }, 1500);
   });
   document.querySelector("#saveBuildImage").addEventListener("click", saveComparisonImage);
   document.querySelector("#importBuildA").addEventListener("click", () => {
@@ -1758,6 +1896,9 @@ async function loadMetadata() {
     wireGlobalEvents();
     wireTabs();
     saveAllState();
+    refreshAllSavedBuildOptions();
+    updateBuildHeading("a");
+    updateBuildHeading("b");
 
     metadataStatus.hidden = true;
     document.querySelector("#damageTabs").hidden = false;

@@ -73,6 +73,7 @@ function enable_default_tabs() {
   }
   else if (location.href.includes('/damage-calculator')) {
     initial_show_tab("build-a")
+    setTimeout(function() { window.scrollTo(0, 0); }, 0);
   }
 
 

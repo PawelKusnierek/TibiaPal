@@ -5803,7 +5803,45 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   }
 }
 .dc-import-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   margin-bottom: 10px;
+}
+
+.dc-saved-build-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+}
+
+.dc-saved-build-tools label {
+  display: inline;
+  color: var(--dc-text);
+  font-size: 14px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.dc-saved-build-tools select {
+  flex: 0 0 200px;
+  width: 200px;
+  min-width: 0;
+}
+
+.dc-button-danger {
+  color: #ffdede;
+  border-color: #7a2f2f;
+  background: linear-gradient(#5c2020, #2c0e0e);
+}
+
+.dc-unsaved-marker {
+  color: #e2a1a1;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .dc-howto-list {

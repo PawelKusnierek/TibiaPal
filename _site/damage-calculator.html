@@ -263,6 +263,12 @@
   <div id="damageForm" class="dc-tabpanels" hidden>
     <div id="build-a" class="tabcontent">
       <div class="dc-import-row">
+        <div class="dc-saved-build-tools">
+          <label for="savedBuildSelect-a">Presets:</label>
+          <select id="savedBuildSelect-a"><option value="">No saved builds</option></select>
+          <button id="savedBuildDelete-a" class="dc-button dc-button-danger" type="button">Delete Build</button>
+          <button id="savedBuildSave-a" class="dc-button dc-button-secondary" type="button">Save Build</button>
+        </div>
         <button id="importBuildB" class="dc-button dc-button-secondary" type="button">Import Build B</button>
       </div>
       <div class="dc-builder">
@@ -384,6 +390,12 @@
 
     <div id="build-b" class="tabcontent">
       <div class="dc-import-row">
+        <div class="dc-saved-build-tools">
+          <label for="savedBuildSelect-b">Presets:</label>
+          <select id="savedBuildSelect-b"><option value="">No saved builds</option></select>
+          <button id="savedBuildDelete-b" class="dc-button dc-button-danger" type="button">Delete Build</button>
+          <button id="savedBuildSave-b" class="dc-button dc-button-secondary" type="button">Save Build</button>
+        </div>
         <button id="importBuildA" class="dc-button dc-button-secondary" type="button">Import Build A</button>
       </div>
       <div class="dc-builder">
@@ -516,7 +528,7 @@
       </div>
       <div class="dc-compare-columns">
         <section class="dc-compare-column" data-build="a">
-          <h3>Build A</h3>
+          <h3 id="buildHeading-a">Build A</h3>
           <div id="summaryCards-a" class="dc-summary-cards">
             <article><span>Effective / turn</span><strong>—</strong></article>
             <article><span>Effective / hit</span><strong>—</strong></article>
@@ -525,7 +537,7 @@
           <div id="spellResults-a" class="dc-result-sections"><p class="dc-empty">Complete Build A and switch to this tab.</p></div>
         </section>
         <section class="dc-compare-column" data-build="b">
-          <h3>Build B</h3>
+          <h3 id="buildHeading-b">Build B</h3>
           <div id="summaryCards-b" class="dc-summary-cards">
             <article><span>Effective / turn</span><strong>—</strong></article>
             <article><span>Effective / hit</span><strong>—</strong></article>
