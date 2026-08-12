@@ -1002,6 +1002,7 @@ function createBuild(key) {
           state.stats.bonus = 0;
           if (state.stats.vocation === "paladin") state.stats.magicLevel = DEFAULT_PALADIN_MAGIC_LEVEL;
           state.wheelPlanner = { code: "", vocation: state.stats.vocation, promotionPoints: 0, bonus: 0, effects: [], gemGrades: {} };
+          state.proficiencyPlanner = { token: "", weaponName: "", weaponSprite: "", vocation: state.stats.vocation, effects: [] };
           state.manualPerks = state.manualPerks.filter((row) => vocationAllows(item("perks", row.id)));
           state.rotation = state.rotation.filter((row) => vocationAllows(item("spells", row.id)));
           state.wheelPerks = mappedPlannerPerks("wheel");
@@ -1119,9 +1120,21 @@ function setupEffectsInfo() {
   });
 }
 
+// Setting an iframe's src to a new URL doesn't tear down its current document immediately —
+// the outgoing document keeps running (and can still fetch/postMessage) until the new one
+// finishes loading. Both embedded planners publish their state proactively (not just in reply
+// to a request), so a slow-loading outgoing document can report its stale vocation/build after
+// we've already moved on. Mark a frame "pending" whenever we point it at a new URL so the
+// message handler can ignore anything that arrives before the matching "load" event confirms
+// the new document is the one actually talking to us.
+function setPlannerFrameSrc(frame, url) {
+  if (frame.getAttribute("src") !== url) frame.dataset.pendingNav = "1";
+  frame.src = url;
+}
+
 function initializePlannerFrames(build) {
-  document.querySelector("#wheelPlannerFrame").src = plannerUrl("/wheel-planner.html", { embed: "damage", v: "20260805-8", vocation: build.state.stats.vocation, code: build.state.wheelPlanner.code });
-  document.querySelector("#proficiencyPlannerFrame").src = plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260806-2", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token });
+  setPlannerFrameSrc(document.querySelector("#wheelPlannerFrame"), plannerUrl("/wheel-planner.html", { embed: "damage", v: "20260805-8", vocation: build.state.stats.vocation, code: build.state.wheelPlanner.code }));
+  setPlannerFrameSrc(document.querySelector("#proficiencyPlannerFrame"), plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260806-2", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token }));
 }
 
 function syncWheelGrades(build) {
@@ -1811,14 +1824,16 @@ function wireGlobalEvents() {
     document.querySelector(`#savedBuildSelect-${key}`).addEventListener("change", () => loadSelectedSavedBuild(builds[key]));
     document.querySelector(`#savedBuildDelete-${key}`).addEventListener("click", () => deleteSelectedSavedBuild(key));
   });
-  document.querySelector("#wheelPlannerFrame").addEventListener("load", () => {
+  document.querySelector("#wheelPlannerFrame").addEventListener("load", (event) => {
+    delete event.currentTarget.dataset.pendingNav;
     const build = builds[activeBuildKey];
     if (!build) return;
     syncPlannerVocation(build, "wheel");
     syncWheelGrades(build);
     document.querySelector("#wheelPlannerFrame").contentWindow?.postMessage({ type: "tibiapal:request-wheel-build" }, window.location.origin);
   });
-  document.querySelector("#proficiencyPlannerFrame").addEventListener("load", () => {
+  document.querySelector("#proficiencyPlannerFrame").addEventListener("load", (event) => {
+    delete event.currentTarget.dataset.pendingNav;
     const build = builds[activeBuildKey];
     if (build) syncPlannerVocation(build, "proficiency");
   });
@@ -1831,8 +1846,10 @@ function wireGlobalEvents() {
     if (event.origin !== window.location.origin) return;
     const build = builds[activeBuildKey];
     if (!build) return;
-    if (event.source === document.querySelector("#wheelPlannerFrame").contentWindow && event.data?.type === "tibiapal:wheel-build") receiveWheelBuild(build, event.data.payload);
-    if (event.source === document.querySelector("#proficiencyPlannerFrame").contentWindow && event.data?.type === "tibiapal:proficiency-build") receiveProficiencyBuild(build, event.data.payload);
+    const wheelFrame = document.querySelector("#wheelPlannerFrame");
+    const proficiencyFrame = document.querySelector("#proficiencyPlannerFrame");
+    if (event.source === wheelFrame.contentWindow && event.data?.type === "tibiapal:wheel-build" && !wheelFrame.dataset.pendingNav) receiveWheelBuild(build, event.data.payload);
+    if (event.source === proficiencyFrame.contentWindow && event.data?.type === "tibiapal:proficiency-build" && !proficiencyFrame.dataset.pendingNav) receiveProficiencyBuild(build, event.data.payload);
   });
   document.querySelector("#resetBuild").addEventListener("click", () => {
     const build = builds[activeTabKey];
