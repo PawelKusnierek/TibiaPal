@@ -4337,22 +4337,23 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
 .dc-planner-launch {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 11px;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
 .dc-planner-launch-btn {
-  display: flex;
-  flex: 1;
+  display: inline-flex;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
-  gap: 9px;
-  min-height: 28px;
-  font-size: 11px;
+  gap: 6px;
+  min-height: 24px;
+  padding: 0 8px;
+  font-size: 10px;
 }
 
 .dc-planner-launch-icon {
-  font-size: 12px;
+  font-size: 10px;
   opacity: 0.85;
 }
 
@@ -4371,8 +4372,8 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
 }
 
 .dc-planner-launch .dc-info-toggle {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
 }
 
 .dc-info {
