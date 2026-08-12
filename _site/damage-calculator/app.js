@@ -67,6 +67,19 @@ function item(resource, id) {
   return metadata[resource]?.find((candidate) => String(candidate.id) === String(id));
 }
 
+// Weapon id 1 ("Fists") is the API's placeholder for "no weapon selected" — it has no
+// proficiency tree of its own, so show it as "No Weapon" instead of its literal name.
+function weaponDisplayName(weapon) {
+  return weapon && weapon.id !== 1 ? weapon.name : "No Weapon";
+}
+
+const DEFAULT_AMMO_NAME_BY_TYPE = { arrows: "Diamond Arrow", bolts: "Spectral Bolt" };
+
+function defaultAmmoId(weapon) {
+  const name = DEFAULT_AMMO_NAME_BY_TYPE[weapon?.ammoType];
+  return name ? metadata.ammo.find((entry) => entry.name === name)?.id ?? null : null;
+}
+
 function normalized(value) {
   return String(value ?? "").trim().toLocaleLowerCase().replaceAll("‑", "-");
 }
@@ -459,7 +472,7 @@ function createBuild(key) {
     if (!weapon || !vocationAllows(weapon)) weapon = metadata.weapons.find((entry) => entry.id === 1);
     state.weapon.id = weapon?.id ?? 1;
     const weaponInput = $("weaponSearch");
-    weaponInput.value = weapon?.name ?? "Fists";
+    weaponInput.value = weaponDisplayName(weapon);
     const details = [weapon?.skill, weapon?.hands ? `${weapon.hands}-handed` : null, weapon?.attack != null ? `${weapon.attack} atk` : null, weapon?.damage != null ? `${weapon.damage} ${weapon.damageType ?? ""} damage` : null].filter(Boolean);
     $("weaponMeta").textContent = details.join(" · ");
 
@@ -1439,6 +1452,7 @@ function openPlanner(build, name) {
   plannerModal.hidden = false;
   document.body.style.overflow = "hidden";
   const previousWheelSrc = wheel.getAttribute("src");
+  const previousProficiencySrc = proficiency.getAttribute("src");
   initializePlannerFrames(build);
   if (name === "wheel") {
     syncWheelGrades(build);
@@ -1449,6 +1463,9 @@ function openPlanner(build, name) {
     if (wheel.getAttribute("src") === previousWheelSrc) {
       wheel.contentWindow?.postMessage({ type: "tibiapal:request-wheel-build" }, window.location.origin);
     }
+  }
+  if (name === "proficiency" && proficiency.getAttribute("src") === previousProficiencySrc) {
+    proficiency.contentWindow?.postMessage({ type: "tibiapal:request-proficiency-build" }, window.location.origin);
   }
 }
 
@@ -1494,7 +1511,7 @@ function receiveProficiencyBuild(build, payload) {
   const weapon = metadata.weapons.find((candidate) => normalized(candidate.name) === normalized(payload.weaponName));
   if (weapon) {
     state.weapon.id = weapon.id;
-    if (previousWeapon !== weapon.id) { state.weapon.ammoId = null; state.weapon.shieldId = null; }
+    if (previousWeapon !== weapon.id) { state.weapon.ammoId = defaultAmmoId(weapon); state.weapon.shieldId = null; }
   }
   state.wheelPerks = build.mappedPlannerPerks("wheel");
   state.proficiencyPerks = build.mappedPlannerPerks("proficiency");
@@ -1622,7 +1639,7 @@ function buildExportColumn(build, label, result, pctForKey) {
   const headerText = document.createElement("div");
   headerText.className = "dc-export-header-text";
   const title = document.createElement("h2");
-  title.textContent = build.state.proficiencyPlanner.weaponName || item("weapons", build.state.weapon.id)?.name || "Damage build";
+  title.textContent = build.state.proficiencyPlanner.weaponName || weaponDisplayName(item("weapons", build.state.weapon.id));
   headerText.append(title, exportStatSubtitle(build));
   head.append(headerText);
   const weaponSprite = String(build.state.proficiencyPlanner.weaponSprite ?? "").trim();
@@ -1835,7 +1852,9 @@ function wireGlobalEvents() {
   document.querySelector("#proficiencyPlannerFrame").addEventListener("load", (event) => {
     delete event.currentTarget.dataset.pendingNav;
     const build = builds[activeBuildKey];
-    if (build) syncPlannerVocation(build, "proficiency");
+    if (!build) return;
+    syncPlannerVocation(build, "proficiency");
+    document.querySelector("#proficiencyPlannerFrame").contentWindow?.postMessage({ type: "tibiapal:request-proficiency-build" }, window.location.origin);
   });
   setupEffectsInfo();
   document.querySelector("#closePlannerModal").addEventListener("click", closePlanner);

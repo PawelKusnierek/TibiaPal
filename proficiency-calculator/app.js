@@ -558,6 +558,7 @@ window.addEventListener("message", (event) => {
   if (event.origin !== window.location.origin) return;
   if (event.data?.type === "tibiapal:set-vocation") applyPlannerVocation(event.data.vocation);
   if (event.data?.type === "tibiapal:load-proficiency-build") applyProficiencyBuildToken(event.data.token);
+  if (event.data?.type === "tibiapal:request-proficiency-build") renderBuildSummary();
 });
 
 function renderBoard() {
