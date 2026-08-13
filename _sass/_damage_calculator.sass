@@ -739,8 +739,10 @@
   left: -10000px
   top: 0
 
+// inline-block shrink-wraps to content far more reliably across renderers (incl. html2canvas)
+// than `width: fit-content`, which was leaving this stretched to the full staging width.
 .dc-export-comparison
-  width: 1440px
+  display: inline-block
   padding: 26px 26px 20px
   border: 1px solid #347ec1
   border-radius: 14px
@@ -763,45 +765,10 @@
   font-size: 26px
   line-height: 1.1
 
-.dc-export-columns
-  display: grid
-  grid-template-columns: 1fr 1fr
-  gap: 18px
-  align-items: start
-
-.dc-export-column
-  padding: 16px
-  border: 1px solid #2a527d
-  border-radius: 10px
-  background: rgba(6, 18, 34, .45)
-
-.dc-export-column-label
-  display: inline-block
-  margin-bottom: 12px
-  padding: 3px 10px
-  border-radius: 20px
-  background: rgba(45, 140, 248, .25)
-  color: #8fc4ff
-  font-size: 11px
-  font-weight: 800
-  letter-spacing: .1em
-  text-transform: uppercase
-
-.dc-export-column .dc-export-header
-  padding-bottom: 12px
-  margin-bottom: 12px
-
-.dc-export-column .dc-export-summary .dc-diff-badge
-  display: block
-  width: fit-content
-  margin: 6px auto 0
-
-.dc-export-header
-  display: flex
-  align-items: center
-  gap: 16px
-  padding-bottom: 16px
-  border-bottom: 1px solid #24507e
+.dc-export-shared-meta
+  margin: 4px 0 0
+  color: #9fbbd8
+  font-size: 13px
 
 .dc-export-logo
   flex: 0 0 auto
@@ -813,138 +780,17 @@
   flex: 1 1 auto
   min-width: 0
 
-.dc-export-weapon
-  flex: 0 0 auto
-  width: 62px
-  height: 62px
-  object-fit: contain
-  image-rendering: pixelated
-  padding: 5px
-  border: 1px solid #2a527d
-  border-radius: 10px
-  background: radial-gradient(circle, #173756, #0a1a30 74%)
-
 .dc-export-kicker
   color: #6fd0ec
   font-size: 11px
   font-weight: 800
   letter-spacing: .18em
 
-.dc-export-header h2
-  margin: 6px 0 6px
-  color: #f4f9ff
-  font-size: 30px
-  line-height: 1.1
-
-.dc-export-header p
-  color: #9fbbd8
-  font-size: 13px
-
-.dc-export-summary
-  display: grid
-  grid-template-columns: repeat(3, 1fr)
-  gap: 10px
-  margin: 18px 0
-
-.dc-export-summary div
-  padding: 12px
-  border: 1px solid #2a527d
-  border-radius: 8px
-  background: rgba(6, 18, 34, .6)
-  text-align: center
-
-.dc-export-summary span
-  display: block
-  color: #7f9cbb
-  font-size: 10px
-  font-weight: 800
-  letter-spacing: .05em
-  text-transform: uppercase
-
-.dc-export-summary strong
-  display: block
-  margin-top: 6px
-  color: #f5c86f
-  font-size: 24px
-
-.dc-export-grid-title
-  margin-bottom: 10px
-  color: #aecbe9
-  font-size: 12px
-  font-weight: 800
-  letter-spacing: .12em
-  text-transform: uppercase
-
-.dc-export-grid
-  display: grid
-  grid-template-columns: repeat(2, 1fr)
-  gap: 10px
-
-.dc-export-tile
-  padding: 13px 14px
-  border: 1px solid #2a527d
-  border-radius: 10px
-  background: linear-gradient(150deg, #10294a, #0a1a30)
-
-.dc-export-tile-head
-  display: flex
-  align-items: center
-  gap: 9px
-  margin-bottom: 8px
-
-.dc-export-tile-head .dc-result-icon
-  flex: 0 0 auto
-
-.dc-export-tile-head strong
-  overflow: hidden
-  color: #eaf3ff
-  font-size: 14px
-  text-overflow: ellipsis
-  white-space: nowrap
-
-.dc-export-tile-label
-  color: #7f9cbb
-  font-size: 10px
-  font-weight: 800
-  letter-spacing: .05em
-  text-transform: uppercase
-
-.dc-export-tile-value
-  margin: 1px 0 6px
-  color: #7fe0d2
-  font-size: 26px
-  font-weight: 800
-  line-height: 1
-
-.dc-export-tile-raw
-  color: #9fbbd8
-  font-size: 11px
-
-.dc-export-hl
-  color: #f5c86f
-  font-weight: 800
-
 .dc-export-icon-glyph
   background-image: none !important
   color: #cfe0f2
   font-size: 26px
   line-height: 1
-
-.dc-export-gem-title
-  margin-top: 18px
-
-.dc-export-gems
-  display: flex
-  flex-wrap: wrap
-  gap: 6px
-
-.dc-export-gem
-  padding: 6px 9px
-  border: 1px solid #2a527d
-  border-radius: 6px
-  background: rgba(6, 18, 34, .6)
-  color: #bcd6f0
-  font-size: 11px
 
 .dc-export-footer
   margin-top: 18px
@@ -998,7 +844,7 @@
 // without needing actual <table> markup: label (flexible) · A value · diff badge · B value.
 .dc-cmp-row
   display: grid
-  grid-template-columns: minmax(0, 1fr) 78px 52px 78px
+  grid-template-columns: minmax(260px, 1fr) 130px 52px 130px
   align-items: center
   gap: 20px
   min-width: 0
@@ -1041,6 +887,7 @@
   color: #c7d4e0
   font-size: 13px
   font-weight: 700
+  text-align: left
   text-overflow: ellipsis
   white-space: nowrap
 
@@ -1551,11 +1398,14 @@
   vertical-align: middle
   white-space: nowrap
 
+// Literal hex values here, not var(--dc-green)/var(--dc-red) - html2canvas (used by the
+// "Save image" export) doesn't reliably resolve CSS custom properties, which left these
+// looking uncolored in exported PNGs even though they rendered fine live.
 .dc-diff-badge.dc-diff-up
-  color: var(--dc-green)
+  color: #4caf50
 
 .dc-diff-badge.dc-diff-down
-  color: var(--dc-red)
+  color: #e05a5a
 
 .dc-diff-badge.dc-diff-flat,
 .dc-diff-badge.dc-diff-na

@@ -304,6 +304,9 @@ function loadHtml2Canvas() {
 function exportSpellIcon(spell, meta) {
   const icon = document.createElement("span");
   icon.className = "dc-result-icon";
+  // html2canvas can't render the CSS background-image sprite crop that the live tab's
+  // .fallback icon uses (it comes out as a blank box), so auto-attack needs its own
+  // glyph fallback here rather than matching the live markup exactly.
   if (meta?.spellType === "auto") {
     icon.classList.add("dc-export-icon-glyph");
     icon.textContent = "⚔";
@@ -370,6 +373,7 @@ function createBuild(key) {
     dirty = false;
     updateBuildHeading(key);
     saveBuildMeta();
+    renderComparisonColumnLabels();
   }
 
   function restoreMeta(meta) {
@@ -930,6 +934,7 @@ function createBuild(key) {
     saveBuildMeta();
     populateStaticControls();
     updateBuildHeading(key);
+    renderComparisonColumnLabels();
   }
 
   function reset() {
@@ -1471,14 +1476,16 @@ function renderComparisonSummary(a, b) {
 
 // A single row per spell, showing both builds' values side by side - instead of two
 // independent A/B lists, which duplicated every icon/name and made the tab twice as tall.
-function comparisonResultRow(name, spellMeta, aSpell, bSpell) {
+// iconFn is swappable because the "Save image" export reuses this same row layout but needs
+// html2canvas-safe icons (see exportSpellIcon) instead of the CSS sprite-sheet fallback.
+function comparisonResultRow(name, spellMeta, aSpell, bSpell, iconFn = resultIcon) {
   const row = document.createElement("article");
   row.className = `dc-result-card dc-cmp-row${spellMeta?.spellType === "rune" ? " dc-result-card-rune" : ""}`;
   row.dataset.filterText = normalized([name, spellMeta?.name, spellMeta?.spellType, spellMeta?.element].filter(Boolean).join(" "));
   const identity = document.createElement("div");
   identity.className = "dc-result-identity";
   const nameEl = document.createElement("strong"); nameEl.textContent = name;
-  identity.append(resultIcon({ name }, spellMeta), nameEl);
+  identity.append(iconFn({ name }, spellMeta), nameEl);
   const aValue = Number(spellMetric(aSpell, "effective", "avg"));
   const bValue = Number(spellMetric(bSpell, "effective", "avg"));
   const aEl = document.createElement("span"); aEl.className = "dc-cmp-value dc-cmp-value-a"; aEl.textContent = aSpell ? formatDamage(aValue) : "—";
@@ -1487,7 +1494,7 @@ function comparisonResultRow(name, spellMeta, aSpell, bSpell) {
   return row;
 }
 
-function comparisonResultGroup(title, entries) {
+function comparisonResultGroup(title, entries, iconFn = resultIcon) {
   const section = document.createElement("section");
   section.className = "dc-result-group";
   const heading = document.createElement("header");
@@ -1495,21 +1502,16 @@ function comparisonResultGroup(title, entries) {
   const name = document.createElement("strong"); name.textContent = title;
   const count = document.createElement("span"); count.dataset.resultCount = ""; count.textContent = `${entries.length} result${entries.length === 1 ? "" : "s"}`;
   const grid = document.createElement("div"); grid.className = "dc-result-grid";
-  grid.append(...entries.map((entry) => comparisonResultRow(entry.name, entry.meta, entry.aSpell, entry.bSpell)));
+  grid.append(...entries.map((entry) => comparisonResultRow(entry.name, entry.meta, entry.aSpell, entry.bSpell, iconFn)));
   heading.append(name, count); section.append(heading, grid);
   return section;
 }
 
-function renderComparisonResults(a, b) {
-  const container = document.querySelector("#compareResults");
-  container.replaceChildren();
+// Union of both builds' visible spells, each carrying whichever side(s) it appears on -
+// shared by the live results list and the "Save image" export so both stay in sync.
+function comparisonEntries(a, b) {
   const aSpells = builds.a.visibleResultSpells(a.spells ?? []);
   const bSpells = builds.b.visibleResultSpells(b.spells ?? []);
-  if (!aSpells.length && !bSpells.length) {
-    const empty = document.createElement("p");
-    empty.className = "dc-empty"; empty.textContent = "No spell results returned.";
-    container.append(empty); return;
-  }
   const idOf = (spell) => String(spell.id ?? normalized(spell.name));
   const entries = new Map();
   const order = [];
@@ -1527,8 +1529,21 @@ function renderComparisonResults(a, b) {
     entry.bSpell = bSpells.find((spell) => idOf(spell) === id) ?? null;
   });
   const all = order.map((id) => entries.get(id));
-  const runes = all.filter((entry) => entry.meta?.spellType === "rune");
-  const spells = all.filter((entry) => entry.meta?.spellType !== "rune");
+  return {
+    spells: all.filter((entry) => entry.meta?.spellType !== "rune"),
+    runes: all.filter((entry) => entry.meta?.spellType === "rune"),
+  };
+}
+
+function renderComparisonResults(a, b) {
+  const container = document.querySelector("#compareResults");
+  container.replaceChildren();
+  const { spells, runes } = comparisonEntries(a, b);
+  if (!spells.length && !runes.length) {
+    const empty = document.createElement("p");
+    empty.className = "dc-empty"; empty.textContent = "No spell results returned.";
+    container.append(empty); return;
+  }
   if (spells.length) container.append(comparisonResultGroup("Spells & Attacks Breakdown", spells));
   if (runes.length) container.append(comparisonResultGroup("Runes", runes));
   const filterEmpty = document.createElement("p");
@@ -1551,124 +1566,46 @@ function renderComparison() {
 
 // --- "Save image" export: a side-by-side comparison of both builds ---
 
-function exportStatSubtitle(build) {
-  const stats = build.state.stats;
-  const usesMagicLevel = stats.vocation === "druid" || stats.vocation === "sorcerer";
-  const vocationName = item("vocations", stats.vocation)?.name ?? stats.vocation;
-  const skillLabel = usesMagicLevel
-    ? `ML ${numberOrZero(stats.magicLevel)}`
-    : `${numberOrZero(stats.skill)} ${stats.vocation === "paladin" ? "dist" : stats.vocation === "monk" ? "fist" : "skill"}`;
-  const subtitle = document.createElement("p");
-  const highlight = (text) => { const span = document.createElement("span"); span.className = "dc-export-hl"; span.textContent = text; return span; };
-  subtitle.append(
-    highlight(vocationName),
-    document.createTextNode("  ·  Level "),
-    highlight(String(numberOrZero(stats.level))),
-    document.createTextNode(`  ·  ${skillLabel}  ·  Crit ${numberOrZero(stats.critChance)}% / ${numberOrZero(stats.critDamage)}%  ·  Wheel +${numberOrZero(stats.bonus)}`),
-  );
-  return subtitle;
+// These three mirror the live #compareResults markup exactly (dc-cmp-columns-header,
+// dc-result-group summary, comparisonResultGroup) so the exported image matches the tab.
+function exportColumnsHeader(nameA, nameB) {
+  const header = document.createElement("div");
+  header.className = "dc-cmp-row dc-cmp-columns-header";
+  const labelA = document.createElement("span"); labelA.className = "dc-cmp-col-label dc-cmp-col-a"; labelA.textContent = nameA;
+  const labelB = document.createElement("span"); labelB.className = "dc-cmp-col-label dc-cmp-col-b"; labelB.textContent = nameB;
+  header.append(document.createElement("span"), labelA, document.createElement("span"), labelB);
+  return header;
 }
 
-function exportSpellTile(spell) {
-  const meta = item("spells", spell.id) ?? metadata.spells.find((entry) => entry.name === spell.name);
-  const tile = document.createElement("article");
-  tile.className = "dc-export-tile";
-  const head = document.createElement("div");
-  head.className = "dc-export-tile-head";
-  head.append(exportSpellIcon(spell, meta));
-  const name = document.createElement("strong");
-  name.textContent = spell.name;
-  head.append(name);
-  const effective = document.createElement("div");
-  effective.className = "dc-export-tile-value";
-  effective.textContent = formatDamage(spellMetric(spell, "effective", "avg"));
-  const effectiveLabel = document.createElement("span");
-  effectiveLabel.className = "dc-export-tile-label";
-  effectiveLabel.textContent = "Effective / hit";
-  const raw = document.createElement("div");
-  raw.className = "dc-export-tile-raw";
-  raw.textContent = `min ${formatDamage(spellMetric(spell, "raw", "min"))} · avg ${formatDamage(spellMetric(spell, "raw", "avg"))} · max ${formatDamage(spellMetric(spell, "raw", "max"))}`;
-  tile.append(head, effectiveLabel, effective, raw);
-  return tile;
-}
-
-function buildExportColumn(build, label, result, pctForKey) {
-  const column = document.createElement("div");
-  column.className = "dc-export-column";
-
-  const chip = document.createElement("span");
-  chip.className = "dc-export-column-label";
-  chip.textContent = label;
-  column.append(chip);
-
-  const head = document.createElement("header");
-  head.className = "dc-export-header";
-  const headerText = document.createElement("div");
-  headerText.className = "dc-export-header-text";
-  const title = document.createElement("h2");
-  title.textContent = build.state.proficiencyPlanner.weaponName || weaponDisplayName(item("weapons", build.state.weapon.id));
-  headerText.append(title, exportStatSubtitle(build));
-  head.append(headerText);
-  const weaponSprite = String(build.state.proficiencyPlanner.weaponSprite ?? "").trim();
-  if (weaponSprite) {
-    const weaponImg = document.createElement("img");
-    weaponImg.className = "dc-export-weapon";
-    weaponImg.src = `/${weaponSprite.replace(/^\/+/, "")}`;
-    weaponImg.alt = "";
-    head.append(weaponImg);
-  }
-  column.append(head);
-
+function exportSummarySection(a, b) {
+  const section = document.createElement("section");
+  section.className = "dc-result-group";
+  const heading = document.createElement("header");
+  heading.className = "dc-result-group-heading";
+  const title = document.createElement("strong"); title.textContent = "Damage Comparison Summary";
+  heading.append(title);
   const summary = document.createElement("div");
-  summary.className = "dc-export-summary";
-  [["Effective / turn", "effectiveDamagePerTurn"], ["Effective / hit", "effectiveDamagePerHit"], ["Charm damage", "damageFromCharms"]].forEach(([label2, key]) => {
-    const block = document.createElement("div");
-    const span = document.createElement("span");
-    span.textContent = label2;
-    const strong = document.createElement("strong");
-    strong.textContent = formatDamage(result.summary?.[key]);
-    block.append(span, strong, diffBadgeEl(pctForKey(key)));
-    summary.append(block);
+  summary.className = "dc-compare-summary";
+  [["effectiveDamagePerTurn", "Effective / turn"], ["effectiveDamagePerHit", "Effective / hit"], ["damageFromCharms", "Charm damage"]].forEach(([summaryKey, label]) => {
+    const row = document.createElement("div");
+    row.className = "dc-cmp-row";
+    const labelEl = document.createElement("span"); labelEl.className = "dc-cmp-row-label"; labelEl.textContent = label;
+    const aValue = Number(a.summary?.[summaryKey]);
+    const bValue = Number(b.summary?.[summaryKey]);
+    const aEl = document.createElement("span"); aEl.className = "dc-cmp-value dc-cmp-value-a"; aEl.textContent = formatDamage(aValue);
+    const bEl = document.createElement("span"); bEl.className = "dc-cmp-value dc-cmp-value-b"; bEl.textContent = formatDamage(bValue);
+    row.append(labelEl, aEl, diffBadgeEl(percentDiff(aValue, bValue)), bEl);
+    summary.append(row);
   });
-  column.append(summary);
-
-  const gridTitle = document.createElement("div");
-  gridTitle.className = "dc-export-grid-title";
-  gridTitle.textContent = "Top hits";
-  const grid = document.createElement("div");
-  grid.className = "dc-export-grid";
-  // Druids and sorcerers lean on wave spells; keep single-target strikes from crowding them out.
-  const demoteStrikes = build.state.stats.vocation === "druid" || build.state.stats.vocation === "sorcerer";
-  const strikeRank = (spell) => (demoteStrikes && /\bstrike\b/.test(normalized(item("spells", spell.id)?.name ?? spell.name)) ? 1 : 0);
-  const topSpells = build.visibleResultSpells(result.spells ?? [])
-    .filter((spell) => Number.isFinite(Number(spellMetric(spell, "effective", "avg"))))
-    .sort((a, b) => strikeRank(a) - strikeRank(b) || Number(spellMetric(b, "effective", "avg")) - Number(spellMetric(a, "effective", "avg")))
-    .slice(0, 4);
-  grid.append(...topSpells.map(exportSpellTile));
-  column.append(gridTitle, grid);
-
-  const gems = (build.state.wheelPlanner.effects ?? []).filter((effect) => effect.group === "gem");
-  if (gems.length) {
-    const gemTitle = document.createElement("div");
-    gemTitle.className = "dc-export-grid-title dc-export-gem-title";
-    gemTitle.textContent = "Wheel gems";
-    const gemList = document.createElement("div");
-    gemList.className = "dc-export-gems";
-    gems.forEach((effect) => {
-      const gemChip = document.createElement("span");
-      gemChip.className = "dc-export-gem";
-      gemChip.textContent = effect.label ?? `${effect.name}${effect.value ? ` ${effect.value}` : ""}`;
-      gemList.append(gemChip);
-    });
-    column.append(gemTitle, gemList);
-  }
-
-  return column;
+  section.append(heading, summary);
+  return section;
 }
 
 function buildComparisonExportCard() {
   const a = builds.a.lastResult;
   const b = builds.b.lastResult;
+  const nameA = builds.a.savedName ?? "Build A";
+  const nameB = builds.b.savedName ?? "Build B";
 
   const card = document.createElement("div");
   card.className = "dc-export-comparison";
@@ -1685,25 +1622,32 @@ function buildComparisonExportCard() {
   kicker.className = "dc-export-kicker";
   kicker.textContent = "TIBIAPAL · BUILD COMPARISON";
   const title = document.createElement("h2");
-  title.textContent = "Build A vs Build B";
+  title.textContent = `${nameA} vs ${nameB}`;
   headerText.append(kicker, title);
-  header.append(logo, headerText);
+  const statsA = builds.a.state.stats;
+  const statsB = builds.b.state.stats;
+  if (statsA.vocation === statsB.vocation && numberOrZero(statsA.level) === numberOrZero(statsB.level)) {
+    const shared = document.createElement("p");
+    shared.className = "dc-export-shared-meta";
+    shared.textContent = `${item("vocations", statsA.vocation)?.name ?? statsA.vocation} · Level ${numberOrZero(statsA.level)}`;
+    headerText.append(shared);
+  }
+  // The logo comes after the text (not before) so headerText's left edge lines up with the
+  // comparison table below instead of being pushed right by the logo's width.
+  header.append(headerText, logo);
 
-  const summaryKeys = ["effectiveDamagePerTurn", "effectiveDamagePerHit", "damageFromCharms"];
-  const pctByKey = Object.fromEntries(summaryKeys.map((key) => [key, percentDiff(Number(a.summary?.[key]), Number(b.summary?.[key]))]));
-
-  const columns = document.createElement("div");
-  columns.className = "dc-export-columns";
-  columns.append(
-    buildExportColumn(builds.a, "Build A", a, (key) => { const pct = pctByKey[key]; return pct == null ? null : -pct; }),
-    buildExportColumn(builds.b, "Build B", b, (key) => pctByKey[key]),
-  );
+  const comparison = document.createElement("div");
+  comparison.className = "dc-comparison";
+  comparison.append(exportColumnsHeader(nameA, nameB), exportSummarySection(a, b));
+  const { spells, runes } = comparisonEntries(a, b);
+  if (spells.length) comparison.append(comparisonResultGroup("Spells & Attacks Breakdown", spells, exportSpellIcon));
+  if (runes.length) comparison.append(comparisonResultGroup("Runes", runes, exportSpellIcon));
 
   const footer = document.createElement("div");
   footer.className = "dc-export-footer";
   footer.textContent = `${window.location.host}/damage-calculator`;
 
-  card.append(header, columns, footer);
+  card.append(header, comparison, footer);
   return card;
 }
 
