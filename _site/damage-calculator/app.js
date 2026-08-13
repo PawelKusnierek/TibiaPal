@@ -43,6 +43,8 @@ const metadataStatus = document.querySelector("#metadataStatus");
 const damageForm = document.querySelector("#damageForm");
 const plannerModal = document.querySelector("#plannerModal");
 const compareStatus = document.querySelector("#compareStatus");
+const resultsLoading = document.querySelector("#resultsLoading");
+const resultsContent = document.querySelector("#resultsContent");
 const metadata = {};
 
 // Per-vocation common rotations, edited in _data/rotation-presets/<vocation>.json and
@@ -225,60 +227,6 @@ function formatDamage(value) {
   return Number.isFinite(number) ? number.toLocaleString("en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : "—";
 }
 
-function formatDamageDelta(value) {
-  const number = numberOrZero(value);
-  return `${number >= 0 ? "+" : "−"}${formatDamage(Math.abs(number))}`;
-}
-
-function perkAppliesToResult(perk, spell) {
-  if (!perk || !spell) return true;
-  if (perk.scope === spell.scope) return true;
-  if (["all", "character"].includes(perk.scope)) return true;
-  if (perk.scope === "spell") return spell.spellType === "spell";
-  if (perk.scope === "rune") return spell.spellType === "rune";
-  if (perk.scope === "auto-attack") return spell.spellType === "auto";
-  if (["melee", "distance", "magic"].includes(perk.scope)) return spell.scalesWith === perk.scope;
-  if (["physical", "earth", "energy", "fire", "ice", "holy", "death"].includes(perk.scope)) return spell.element === perk.scope;
-  return !perk.appliesToSpell;
-}
-
-function boostBreakdown(values) {
-  return [
-    { source: "wheel", value: numberOrZero(values.wheel) - numberOrZero(values.base) },
-    { source: "proficiency", value: numberOrZero(values.proficiency) - numberOrZero(values.wheel) },
-    { source: "manual", value: numberOrZero(values.full) - numberOrZero(values.proficiency) },
-  ].filter((entry) => Math.abs(entry.value) >= 0.05);
-}
-
-function renderDamageValue(container, values, sourceDetails) {
-  const number = document.createElement("strong");
-  number.className = "dc-damage-number";
-  number.textContent = formatDamage(values.full);
-  container.append(number);
-  const boosts = boostBreakdown(values);
-  if (!boosts.length) return;
-  number.classList.add("boosted");
-  const list = document.createElement("span");
-  list.className = "dc-boost-list";
-  boosts.forEach(({ source, value }) => {
-    const boost = document.createElement("span");
-    boost.className = `dc-boost dc-boost-${source}`;
-    boost.tabIndex = 0;
-    boost.textContent = formatDamageDelta(value);
-    const sourceName = source === "wheel" ? "Wheel of Destiny" : source === "proficiency" ? "Weapon Proficiency" : "Additional API perks";
-    const details = sourceDetails[source].length ? `\n\n${sourceDetails[source].join("\n")}` : "";
-    boost.title = `${sourceName} contribution: ${formatDamageDelta(value)}${details}`;
-    boost.setAttribute("aria-label", boost.title.replaceAll("\n", ". "));
-    list.append(boost);
-  });
-  container.append(list);
-}
-
-function resultSpell(result, spell) {
-  return result?.spells?.find((candidate) => candidate.id === spell.id)
-    ?? result?.spells?.find((candidate) => candidate.name === spell.name);
-}
-
 function spellMetric(spell, group, key) {
   return spell?.[group]?.[key];
 }
@@ -413,7 +361,6 @@ function createBuild(key) {
   let state = defaultState();
   let hasCalculated = false;
   let lastResult = null;
-  let lastStages = null;
   let requestController = null;
   let savedName = null;
   let dirty = false;
@@ -915,79 +862,6 @@ function createBuild(key) {
     }
   }
 
-  function mappedEffectLabels(source, spell = null) {
-    const planner = source === "wheel" ? state.wheelPlanner : state.proficiencyPlanner;
-    return (planner.effects ?? []).flatMap((effect) => {
-      const details = (Array.isArray(effect.details) ? effect.details : []).filter((detail) => {
-        const mapped = mapPlannerEffect({ ...effect, detail });
-        return mapped && perkAppliesToResult(item("perks", mapped.id), spell);
-      });
-      const label = effect.label ?? `${effect.name ?? "Effect"}${effect.value ? ` ${effect.value}` : ""}`;
-      if (details.length) return [`${label}: ${details.join(" · ")}`];
-      const mapped = mapPlannerEffect(effect);
-      return mapped && perkAppliesToResult(item("perks", mapped.id), spell) ? [label] : [];
-    });
-  }
-
-  function boostSourceDetails(spell = null) {
-    const wheel = mappedEffectLabels("wheel", spell);
-    if (numberOrZero(state.stats.bonus)) wheel.unshift(`Damage and Healing +${numberOrZero(state.stats.bonus)}`);
-    return {
-      wheel,
-      proficiency: mappedEffectLabels("proficiency", spell),
-      manual: state.manualPerks.filter((row) => perkAppliesToResult(item("perks", row.id), spell)).map((row) => {
-        const perk = item("perks", row.id);
-        return `${perk?.name ?? `Perk ${row.id}`} ${numberOrZero(row.value)}`;
-      }),
-    };
-  }
-
-  function resultCard(spell, stages) {
-    const spellMeta = item("spells", spell.id) ?? metadata.spells.find((candidate) => candidate.name === spell.name);
-    const card = document.createElement("article");
-    card.className = `dc-result-card${spellMeta?.spellType === "rune" ? " dc-result-card-rune" : ""}`;
-    card.dataset.filterText = normalized([spell.name, spellMeta?.name, spellMeta?.spellType, spellMeta?.element].filter(Boolean).join(" "));
-    card.dataset.spellId = String(spell.id ?? normalized(spell.name));
-    const identity = document.createElement("div");
-    identity.className = "dc-result-identity";
-    const name = document.createElement("strong"); name.textContent = spell.name;
-    const kind = document.createElement("small");
-    kind.textContent = spellMeta?.spellType === "rune" ? "Rune" : spellMeta?.spellType === "auto" ? "Attack" : "Spell";
-    identity.append(resultIcon(spell, spellMeta), name, kind);
-    const metrics = document.createElement("div");
-    metrics.className = "dc-result-metrics";
-    const stageSpells = Object.fromEntries(Object.entries(stages).map(([stageKey, stage]) => [stageKey, resultSpell(stage, spell)]));
-    [
-      ["Effective avg", "effective", "avg"], ["Raw min", "raw", "min"],
-      ["Raw avg", "raw", "avg"], ["Raw max", "raw", "max"],
-    ].forEach(([label, group, metricKey]) => {
-      const metric = document.createElement("div");
-      metric.className = "dc-result-metric";
-      const heading = document.createElement("span"); heading.textContent = label;
-      metric.append(heading);
-      renderDamageValue(metric, {
-        base: spellMetric(stageSpells.base, group, metricKey), wheel: spellMetric(stageSpells.wheel, group, metricKey),
-        proficiency: spellMetric(stageSpells.proficiency, group, metricKey), full: spellMetric(spell, group, metricKey),
-      }, boostSourceDetails(spellMeta));
-      metrics.append(metric);
-    });
-    card.append(identity, metrics);
-    return card;
-  }
-
-  function resultGroup(title, spells, stages) {
-    const section = document.createElement("section");
-    section.className = "dc-result-group";
-    const heading = document.createElement("header");
-    heading.className = "dc-result-group-heading";
-    const name = document.createElement("strong"); name.textContent = title;
-    const count = document.createElement("span"); count.dataset.resultCount = ""; count.textContent = `${spells.length} result${spells.length === 1 ? "" : "s"}`;
-    const grid = document.createElement("div"); grid.className = "dc-result-grid";
-    grid.append(...spells.map((spell) => resultCard(spell, stages)));
-    heading.append(name, count); section.append(heading, grid);
-    return section;
-  }
-
   function activeSpellStages() {
     const effects = state.wheelPlanner.effects ?? [];
     const result = {};
@@ -1000,72 +874,30 @@ function createBuild(key) {
   }
 
   function visibleResultSpells(spells) {
+    // The API returns every vocation spell regardless of what's in the rotation request, so
+    // this filter is what actually narrows the results down to the rotation the user built -
+    // plus, for staged beam/burst spells, the tier-matched companion card (e.g. the "Sides"
+    // hit of Great Energy Beam) even though only the "Central" id was added to the rotation.
     const stages = activeSpellStages();
     const rotationIds = new Set(state.rotation.flatMap((row) => {
       const meta = item("spells", row.id);
       return meta?.bundledSpellIds?.length ? meta.bundledSpellIds : [row.id];
     }));
+    const rotationScopes = new Set(state.rotation.map((row) => item("spells", row.id)?.scope).filter(Boolean));
     return spells.filter((spell) => {
       if (rotationIds.has(spell.id)) return true;
       const meta = item("spells", spell.id);
       const scope = meta?.scope;
-      if (!scope || !(scope in STAGED_SCOPE_PERK)) return true;
+      if (!scope || !rotationScopes.has(scope) || !(scope in STAGED_SCOPE_PERK)) return false;
       const active = stages[scope] ?? 0;
       return active > 0 && (meta.stage ?? 0) === active;
     });
   }
 
-  function renderResults(result, stages = { base: result, wheel: result, proficiency: result, full: result }) {
-    const sourceDetails = boostSourceDetails();
-    const values = [result.summary?.effectiveDamagePerTurn, result.summary?.effectiveDamagePerHit, result.summary?.damageFromCharms];
-    const summaryKeys = ["effectiveDamagePerTurn", "effectiveDamagePerHit", "damageFromCharms"];
-    document.querySelectorAll(`#summaryCards-${key} article`).forEach((article, index) => {
-      article.querySelectorAll("strong, .dc-boost-list, .dc-diff-badge").forEach((element) => element.remove());
-      const summaryKey = summaryKeys[index];
-      renderDamageValue(article, {
-        base: stages.base.summary?.[summaryKey], wheel: stages.wheel.summary?.[summaryKey],
-        proficiency: stages.proficiency.summary?.[summaryKey], full: values[index],
-      }, sourceDetails);
-    });
-    const results = $("spellResults");
-    results.replaceChildren();
-    if (!result.spells?.length) {
-      const empty = document.createElement("p");
-      empty.className = "dc-empty"; empty.textContent = "No spell results returned.";
-      results.append(empty); return;
-    }
-    const shown = visibleResultSpells(result.spells);
-    const runes = shown.filter((spell) => item("spells", spell.id)?.spellType === "rune");
-    const spells = shown.filter((spell) => item("spells", spell.id)?.spellType !== "rune");
-    if (spells.length) results.append(resultGroup("Spells & attacks", spells, stages));
-    if (runes.length) results.append(resultGroup("Runes", runes, stages));
-    const filterEmpty = document.createElement("p");
-    filterEmpty.id = `resultFilterEmpty-${key}`;
-    filterEmpty.className = "dc-filter-empty";
-    filterEmpty.textContent = "No attacks match this filter.";
-    filterEmpty.hidden = true;
-    results.append(filterEmpty);
-    filterResultCards(normalized(document.querySelector("#resultFilterCompare")?.value ?? ""));
-  }
-
   async function calculate() {
     requestController?.abort();
     requestController = new AbortController();
-    const requests = {
-      base: damageRequest({ wheel: false, proficiency: false, manual: false }),
-      wheel: damageRequest({ wheel: true, proficiency: false, manual: false }),
-      proficiency: damageRequest({ wheel: true, proficiency: true, manual: false }),
-      full: damageRequest(),
-    };
-    const pending = new Map();
-    const stages = Object.fromEntries(await Promise.all(Object.entries(requests).map(async ([stageKey, request]) => {
-      const signature = JSON.stringify(request);
-      if (!pending.has(signature)) pending.set(signature, fetchDamage(request, requestController.signal));
-      return [stageKey, await pending.get(signature)];
-    })));
-    renderResults(stages.full, stages);
-    lastResult = stages.full;
-    lastStages = stages;
+    lastResult = await fetchDamage(damageRequest(), requestController.signal);
     hasCalculated = true;
   }
 
@@ -1092,13 +924,11 @@ function createBuild(key) {
     state = nextState;
     hasCalculated = false;
     lastResult = null;
-    lastStages = null;
     savedName = null;
     dirty = false;
     saveState();
     saveBuildMeta();
     populateStaticControls();
-    renderResults({ summary: {}, spells: [] });
     updateBuildHeading(key);
   }
 
@@ -1149,7 +979,6 @@ function createBuild(key) {
     set state(value) { state = value; },
     get hasCalculated() { return hasCalculated; },
     get lastResult() { return lastResult; },
-    get lastStages() { return lastStages; },
     get savedName() { return savedName; },
     get dirty() { return dirty; },
     markSaved,
@@ -1604,65 +1433,120 @@ function receiveProficiencyBuild(build, payload) {
 }
 
 function filterResultCards(query) {
-  ["a", "b"].forEach((key) => {
-    let visibleTotal = 0;
-    let cardTotal = 0;
-    document.querySelectorAll(`#spellResults-${key} .dc-result-group`).forEach((group) => {
-      let visible = 0;
-      const cards = [...group.querySelectorAll(".dc-result-card")];
-      cardTotal += cards.length;
-      cards.forEach((card) => {
-        const matches = !query || card.dataset.filterText.includes(query);
-        card.hidden = !matches;
-        if (matches) visible += 1;
-      });
-      group.hidden = visible === 0;
-      const count = group.querySelector("[data-result-count]");
-      if (count) count.textContent = `${visible} result${visible === 1 ? "" : "s"}`;
-      visibleTotal += visible;
+  let visibleTotal = 0;
+  let cardTotal = 0;
+  document.querySelectorAll("#compareResults .dc-result-group").forEach((group) => {
+    let visible = 0;
+    const cards = [...group.querySelectorAll(".dc-result-card")];
+    cardTotal += cards.length;
+    cards.forEach((card) => {
+      const matches = !query || card.dataset.filterText.includes(query);
+      card.hidden = !matches;
+      if (matches) visible += 1;
     });
-    const empty = document.querySelector(`#resultFilterEmpty-${key}`);
-    if (empty) empty.hidden = cardTotal === 0 || visibleTotal > 0;
+    group.hidden = visible === 0;
+    const count = group.querySelector("[data-result-count]");
+    if (count) count.textContent = `${visible} result${visible === 1 ? "" : "s"}`;
+    visibleTotal += visible;
+  });
+  const empty = document.querySelector("#resultFilterEmpty");
+  if (empty) empty.hidden = cardTotal === 0 || visibleTotal > 0;
+}
+
+function renderComparisonColumnLabels() {
+  document.querySelector("#compareColLabel-a").textContent = builds.a.savedName ?? "Build A";
+  document.querySelector("#compareColLabel-b").textContent = builds.b.savedName ?? "Build B";
+}
+
+function renderComparisonSummary(a, b) {
+  document.querySelectorAll("#compareSummary .dc-cmp-row").forEach((row) => {
+    const summaryKey = row.dataset.summaryKey;
+    const aValue = Number(a.summary?.[summaryKey]);
+    const bValue = Number(b.summary?.[summaryKey]);
+    row.querySelector(".dc-cmp-value-a").textContent = formatDamage(aValue);
+    row.querySelector(".dc-cmp-value-b").textContent = formatDamage(bValue);
+    row.querySelector(".dc-diff-badge-slot").replaceChildren(diffBadgeEl(percentDiff(aValue, bValue)));
   });
 }
 
-function annotateDiffs() {
+// A single row per spell, showing both builds' values side by side - instead of two
+// independent A/B lists, which duplicated every icon/name and made the tab twice as tall.
+function comparisonResultRow(name, spellMeta, aSpell, bSpell) {
+  const row = document.createElement("article");
+  row.className = `dc-result-card dc-cmp-row${spellMeta?.spellType === "rune" ? " dc-result-card-rune" : ""}`;
+  row.dataset.filterText = normalized([name, spellMeta?.name, spellMeta?.spellType, spellMeta?.element].filter(Boolean).join(" "));
+  const identity = document.createElement("div");
+  identity.className = "dc-result-identity";
+  const nameEl = document.createElement("strong"); nameEl.textContent = name;
+  identity.append(resultIcon({ name }, spellMeta), nameEl);
+  const aValue = Number(spellMetric(aSpell, "effective", "avg"));
+  const bValue = Number(spellMetric(bSpell, "effective", "avg"));
+  const aEl = document.createElement("span"); aEl.className = "dc-cmp-value dc-cmp-value-a"; aEl.textContent = aSpell ? formatDamage(aValue) : "—";
+  const bEl = document.createElement("span"); bEl.className = "dc-cmp-value dc-cmp-value-b"; bEl.textContent = bSpell ? formatDamage(bValue) : "—";
+  row.append(identity, aEl, diffBadgeEl(aSpell && bSpell ? percentDiff(aValue, bValue) : null), bEl);
+  return row;
+}
+
+function comparisonResultGroup(title, entries) {
+  const section = document.createElement("section");
+  section.className = "dc-result-group";
+  const heading = document.createElement("header");
+  heading.className = "dc-result-group-heading";
+  const name = document.createElement("strong"); name.textContent = title;
+  const count = document.createElement("span"); count.dataset.resultCount = ""; count.textContent = `${entries.length} result${entries.length === 1 ? "" : "s"}`;
+  const grid = document.createElement("div"); grid.className = "dc-result-grid";
+  grid.append(...entries.map((entry) => comparisonResultRow(entry.name, entry.meta, entry.aSpell, entry.bSpell)));
+  heading.append(name, count); section.append(heading, grid);
+  return section;
+}
+
+function renderComparisonResults(a, b) {
+  const container = document.querySelector("#compareResults");
+  container.replaceChildren();
+  const aSpells = builds.a.visibleResultSpells(a.spells ?? []);
+  const bSpells = builds.b.visibleResultSpells(b.spells ?? []);
+  if (!aSpells.length && !bSpells.length) {
+    const empty = document.createElement("p");
+    empty.className = "dc-empty"; empty.textContent = "No spell results returned.";
+    container.append(empty); return;
+  }
+  const idOf = (spell) => String(spell.id ?? normalized(spell.name));
+  const entries = new Map();
+  const order = [];
+  [aSpells, bSpells].forEach((list) => list.forEach((spell) => {
+    const id = idOf(spell);
+    if (!entries.has(id)) {
+      const meta = item("spells", spell.id) ?? metadata.spells.find((candidate) => candidate.name === spell.name);
+      entries.set(id, { id, name: spell.name, meta });
+      order.push(id);
+    }
+  }));
+  order.forEach((id) => {
+    const entry = entries.get(id);
+    entry.aSpell = aSpells.find((spell) => idOf(spell) === id) ?? null;
+    entry.bSpell = bSpells.find((spell) => idOf(spell) === id) ?? null;
+  });
+  const all = order.map((id) => entries.get(id));
+  const runes = all.filter((entry) => entry.meta?.spellType === "rune");
+  const spells = all.filter((entry) => entry.meta?.spellType !== "rune");
+  if (spells.length) container.append(comparisonResultGroup("Spells & Attacks Breakdown", spells));
+  if (runes.length) container.append(comparisonResultGroup("Runes", runes));
+  const filterEmpty = document.createElement("p");
+  filterEmpty.id = "resultFilterEmpty";
+  filterEmpty.className = "dc-filter-empty";
+  filterEmpty.textContent = "No attacks match this filter.";
+  filterEmpty.hidden = true;
+  container.append(filterEmpty);
+  filterResultCards(normalized(document.querySelector("#resultFilterCompare")?.value ?? ""));
+}
+
+function renderComparison() {
   const a = builds.a.lastResult;
   const b = builds.b.lastResult;
   if (!a || !b) return;
-
-  const summaryKeys = ["effectiveDamagePerTurn", "effectiveDamagePerHit", "damageFromCharms"];
-  const summaryPct = summaryKeys.map((key) => percentDiff(Number(a.summary?.[key]), Number(b.summary?.[key])));
-  document.querySelectorAll("#summaryCards-a article").forEach((article, index) => {
-    const pct = summaryPct[index];
-    article.append(diffBadgeEl(pct == null ? null : -pct));
-  });
-  document.querySelectorAll("#summaryCards-b article").forEach((article, index) => {
-    article.append(diffBadgeEl(summaryPct[index]));
-  });
-
-  function findSpellPair(card) {
-    const spellId = card.dataset.spellId;
-    if (!spellId) return null;
-    const aSpell = a.spells?.find((spell) => String(spell.id ?? normalized(spell.name)) === spellId);
-    const bSpell = b.spells?.find((spell) => String(spell.id ?? normalized(spell.name)) === spellId);
-    return aSpell && bSpell ? { aSpell, bSpell } : null;
-  }
-
-  document.querySelectorAll("#spellResults-a .dc-result-card").forEach((card) => {
-    const pair = findSpellPair(card);
-    const metric = card.querySelector(".dc-result-metric");
-    if (!pair || !metric) return;
-    const pct = percentDiff(Number(spellMetric(pair.aSpell, "effective", "avg")), Number(spellMetric(pair.bSpell, "effective", "avg")));
-    metric.append(diffBadgeEl(pct == null ? null : -pct));
-  });
-  document.querySelectorAll("#spellResults-b .dc-result-card").forEach((card) => {
-    const pair = findSpellPair(card);
-    const metric = card.querySelector(".dc-result-metric");
-    if (!pair || !metric) return;
-    const pct = percentDiff(Number(spellMetric(pair.aSpell, "effective", "avg")), Number(spellMetric(pair.bSpell, "effective", "avg")));
-    metric.append(diffBadgeEl(pct));
-  });
+  renderComparisonColumnLabels();
+  renderComparisonSummary(a, b);
+  renderComparisonResults(a, b);
 }
 
 // --- "Save image" export: a side-by-side comparison of both builds ---
@@ -1862,6 +1746,11 @@ function buildSignature() {
   return `${JSON.stringify(builds.a.state)}|${JSON.stringify(builds.b.state)}`;
 }
 
+function setResultsLoading(isLoading) {
+  resultsLoading.hidden = !isLoading;
+  resultsContent.hidden = isLoading;
+}
+
 async function triggerCompare(force = false) {
   const signature = buildSignature();
   if (!force && signature === compareSignature && builds.a.lastResult && builds.b.lastResult) return;
@@ -1869,10 +1758,11 @@ async function triggerCompare(force = false) {
   compareSignature = signature;
   compareStatus.classList.remove("error");
   compareStatus.textContent = "Calculating both builds…";
+  setResultsLoading(true);
   compareInFlight = (async () => {
     try {
       await Promise.all([builds.a.calculate(), builds.b.calculate()]);
-      annotateDiffs();
+      renderComparison();
       document.querySelector("#saveBuildImage").disabled = !(builds.a.hasCalculated && builds.b.hasCalculated);
       compareStatus.classList.remove("error");
       compareStatus.textContent = `Updated ${new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}.`;
@@ -1883,6 +1773,7 @@ async function triggerCompare(force = false) {
       }
     } finally {
       compareInFlight = null;
+      setResultsLoading(false);
     }
   })();
   return compareInFlight;
