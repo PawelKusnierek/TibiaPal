@@ -239,7 +239,7 @@
   <header class="dc-hero">
     <div>
       <h1>Damage Calculator</h1>
-      <p>Compare Build DPS, accounting for your Wheel of Destiny, proficiency, rotation and more.</p>
+      <p>Compare two builds' effective damage per turn, accounting for your Wheel of Destiny, proficiency, rotation and more.</p>
     </div>
     <div class="dc-hero-actions">
       <button id="saveBuildImage" class="dc-button dc-button-secondary" type="button" disabled>Save image</button>
@@ -349,13 +349,13 @@
   <section class="dc-panel">
     <div class="dc-panel-heading">
       <span class="dc-step">04</span>
-      <div><h2>Rotation</h2><p>Sets the effective damage-per-turn summary. Ratio sets how often an attack is used relative to your basic attack: 1 means every turn, 0.5 means every other turn, 0.2 means once every 5 turns — it's used to weight each attack's contribution to your effective damage per turn.</p></div>
+      <div><h2>Rotation</h2><p>Each spell is pre-filled with an approximate average targets value from real hunting data — adjust it if your own hunts land differently. Ratio is how often you cast it relative to your basic attack: 1 means every turn, 0.5 means every other turn, 0.2 means once every 5 turns.</p></div>
     </div>
     <div class="dc-narrow-fields">
       <div class="dc-preset-row">
         <label for="rotationPresetSelect-a">Common rotations</label>
         <select id="rotationPresetSelect-a"><option value="">Choose a preset…</option></select>
-        <small class="dc-preset-hint">Loads a common rotation for your vocation — tweak targets/ratio after applying.</small>
+        <small class="dc-preset-hint">Loads a common rotation for your vocation, pre-filled with average targets — tweak targets/ratio after applying.</small>
       </div>
       <div class="dc-add-row">
         <label for="spellSearch-a">Add an attack or spell</label>
@@ -369,7 +369,7 @@
   <section class="dc-panel">
     <div class="dc-panel-heading">
       <span class="dc-step">05</span>
-      <div><h2>Targets (Optional)</h2><p>Add creatures to account for defenses, kill ratios and charms to further improve the calculations. Ratio sets what share of your kills come from this creature relative to the others in this list — it's used to weight the results toward the fights you actually spend time in.</p></div>
+      <div><h2>Targets (Optional)</h2><p>Add the creatures you're hunting so their defenses, resistances and charms factor into the damage calculation. Ratio sets what share of the kills in this list come from this creature.</p></div>
     </div>
     <div class="dc-wide-fields">
       <div class="dc-hunt-import">
@@ -495,13 +495,13 @@
   <section class="dc-panel">
     <div class="dc-panel-heading">
       <span class="dc-step">04</span>
-      <div><h2>Rotation</h2><p>Sets the effective damage-per-turn summary. Ratio sets how often an attack is used relative to your basic attack: 1 means every turn, 0.5 means every other turn, 0.2 means once every 5 turns — it's used to weight each attack's contribution to your effective damage per turn.</p></div>
+      <div><h2>Rotation</h2><p>Each spell is pre-filled with an approximate average targets value from real hunting data — adjust it if your own hunts land differently. Ratio is how often you cast it relative to your basic attack: 1 means every turn, 0.5 means every other turn, 0.2 means once every 5 turns.</p></div>
     </div>
     <div class="dc-narrow-fields">
       <div class="dc-preset-row">
         <label for="rotationPresetSelect-b">Common rotations</label>
         <select id="rotationPresetSelect-b"><option value="">Choose a preset…</option></select>
-        <small class="dc-preset-hint">Loads a common rotation for your vocation — tweak targets/ratio after applying.</small>
+        <small class="dc-preset-hint">Loads a common rotation for your vocation, pre-filled with average targets — tweak targets/ratio after applying.</small>
       </div>
       <div class="dc-add-row">
         <label for="spellSearch-b">Add an attack or spell</label>
@@ -515,7 +515,7 @@
   <section class="dc-panel">
     <div class="dc-panel-heading">
       <span class="dc-step">05</span>
-      <div><h2>Targets (Optional)</h2><p>Add creatures to account for defenses, kill ratios and charms to further improve the calculations. Ratio sets what share of your kills come from this creature relative to the others in this list — it's used to weight the results toward the fights you actually spend time in.</p></div>
+      <div><h2>Targets (Optional)</h2><p>Add the creatures you're hunting so their defenses, resistances and charms factor into the damage calculation. Ratio sets what share of the kills in this list come from this creature.</p></div>
     </div>
     <div class="dc-wide-fields">
       <div class="dc-hunt-import">
