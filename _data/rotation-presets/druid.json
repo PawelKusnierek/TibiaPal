@@ -2,24 +2,24 @@
   {
     "name": "2x Fork",
     "spells": [
-      { "name": "Forked Thorns", "targets": 6, "ratio": 0.5 },
-      { "name": "Forked Glacier", "targets": 7, "ratio": 0.5 }
+      { "name": "Forked Thorns", "ratio": 0.5 },
+      { "name": "Forked Glacier", "ratio": 0.5 }
     ]
   },
   {
     "name": "2x Fork - Ice Burst - Eternal Winter",
     "spells": [
-      { "name": "Forked Thorns", "targets": 6, "ratio": 0.4625 },
-      { "name": "Forked Glacier", "targets": 7, "ratio": 0.4625 },
-      { "name": "Ice Burst", "targets": 10, "ratio": 0.05},
-      { "name": "Eternal Winter", "targets": 15, "ratio": 0.025 }
+      { "name": "Forked Thorns", "ratio": 0.4625 },
+      { "name": "Forked Glacier", "ratio": 0.4625 },
+      { "name": "Ice Burst", "ratio": 0.05 },
+      { "name": "Eternal Winter", "ratio": 0.025 }
     ]
   },
   {
     "name": "Forked Glacier - Strong Ice Wave",
     "spells": [
-      { "name": "Forked Glacier", "targets": 7, "ratio": 0.5 },
-      { "name": "Strong Ice Wave", "targets": 5, "ratio": 0.5 }
+      { "name": "Forked Glacier", "ratio": 0.5 },
+      { "name": "Strong Ice Wave", "ratio": 0.5 }
     ]
   }
 ]

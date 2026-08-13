@@ -1,0 +1,52 @@
+{
+  "runes": {
+    "Great Fireball": 9.1,
+    "Sudden Death": 1.0,
+    "Avalanche": 9.1,
+    "Thunderstorm": 9.1,
+    "Stone Shower": 9.1
+  },
+
+  "spells": {
+    "Rage of the Skies": 15.5,
+    "Hell's Core": 13.7,
+    "Death Echo": 5.9,
+    "Great Death Beam": 6.1,
+    "Energy Wave": 6.4,
+    "Great Fire Wave": 6.3,
+    "Great Energy Beam": 6.1,
+
+    "Divine Grenade": 9.3,
+    "Divine Caldera": 7.3,
+    "Divine Barrage": 6.5,
+    "Ethereal Barrage": 6.5,
+    "Strong Ethereal Spear": 1.0,
+    "Divine Missile": 1.0,
+
+    "Wrath of Nature": 15.5,
+    "Eternal Winter": 13.7,
+    "Ice Burst": 9.5,
+    "Terra Burst": 9.5,
+    "Forked Glacier": 7.0,
+    "Forked Thorns": 6.8,
+    "Terra Wave": 5.8,
+    "Strong Ice Wave": 5.3,
+
+    "Groundshaker": 6.3,
+    "Berserk": 6.3,
+    "Fierce Berserk": 6.0,
+    "Executioner's Throw": 3.2,
+    "Front Sweep": 4.0,
+    "Annihilation": 1.0,
+    "Whirlwind Throw": 1.0,
+
+    "Spiritual Outburst": 5.9,
+    "Sweeping Takedown": 6.4,
+    "Chained Penance": 5.0,
+    "Greater Flurry of Blows": 5.8,
+    "Thousand Fist Blows": 7.1,
+    "Flurry of Blows": 4.3,
+    "Mystic Repulse": 1.0,
+    "Forceful Uppercut": 1.0
+  }
+}

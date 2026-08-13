@@ -54,6 +54,23 @@ const ROTATION_PRESETS = (() => {
   catch { return {}; }
 })();
 
+// Average number of targets each spell/rune hits, edited in _data/spell-average-hits.json and
+// embedded into the page at build time. Used to pre-populate the "Average targets" field
+// whenever a spell is added to the rotation, whether via a preset or manually.
+const SPELL_AVERAGE_HITS = (() => {
+  try { return JSON.parse(document.querySelector("#spellAverageHitsData")?.textContent || "{}"); }
+  catch { return {}; }
+})();
+
+const SPELL_AVERAGE_HITS_BY_KEY = Object.fromEntries(
+  Object.values(SPELL_AVERAGE_HITS).flatMap((category) => Object.entries(category))
+    .map(([name, value]) => [normalized(name), value])
+);
+
+function averageHitsFor(spellName) {
+  return numberOrZero(SPELL_AVERAGE_HITS_BY_KEY[normalized(spellName)]) || 1;
+}
+
 let plannerCloseTimer = null;
 let activeBuildKey = null;
 let activeTabKey = "a";
@@ -415,10 +432,10 @@ function createBuild(key) {
     const select = $("rotationPresetSelect");
     const preset = (ROTATION_PRESETS[state.stats.vocation] ?? []).find((entry) => entry.name === select.value);
     if (!preset) return;
-    const rows = [{ id: 1, targets: state.stats.vocation === "paladin" ? 9 : 1, ratio: 1 }];
+    const rows = [{ id: 1, targets: state.stats.vocation === "paladin" ? 6 : 1, ratio: 1 }];
     preset.spells.forEach((entry) => {
       const spell = matchByName("spells", entry.name, (candidate) => candidate.selectable !== false && vocationAllows(candidate));
-      if (spell && !rows.some((row) => row.id === spell.id)) rows.push({ id: spell.id, targets: numberOrZero(entry.targets) || 1, ratio: numberOrZero(entry.ratio) || 1 });
+      if (spell && !rows.some((row) => row.id === spell.id)) rows.push({ id: spell.id, targets: averageHitsFor(spell.name), ratio: numberOrZero(entry.ratio) || 1 });
     });
     state.rotation = rows;
     renderRotation();
@@ -755,7 +772,7 @@ function createBuild(key) {
     const spell = matchByName("spells", input.value, (entry) => entry.selectable !== false && vocationAllows(entry));
     if (!spell) { input.setCustomValidity("Choose a spell from the list."); input.reportValidity(); return; }
     input.setCustomValidity("");
-    if (!state.rotation.some((row) => row.id === spell.id)) state.rotation.push({ id: spell.id, targets: 1, ratio: 1 });
+    if (!state.rotation.some((row) => row.id === spell.id)) state.rotation.push({ id: spell.id, targets: averageHitsFor(spell.name), ratio: 1 });
     input.value = "";
     renderRotation();
     renderPerks();
@@ -955,7 +972,7 @@ function createBuild(key) {
           state.manualPerks = state.manualPerks.filter((row) => vocationAllows(item("perks", row.id)));
           state.rotation = state.rotation.filter((row) => vocationAllows(item("spells", row.id)));
           const autoAttackRow = state.rotation.find((row) => row.id === 1);
-          if (autoAttackRow) autoAttackRow.targets = state.stats.vocation === "paladin" ? 9 : 1;
+          if (autoAttackRow) autoAttackRow.targets = state.stats.vocation === "paladin" ? 6 : 1;
           state.wheelPerks = mappedPlannerPerks("wheel");
           state.proficiencyPerks = mappedPlannerPerks("proficiency");
           populateStaticControls();

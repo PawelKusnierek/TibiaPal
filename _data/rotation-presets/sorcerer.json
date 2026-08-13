@@ -2,16 +2,16 @@
   {
     "name": "Great Fire Wave - Death Echo",
     "spells": [
-      { "name": "Great Fire Wave", "targets": 8, "ratio": 0.5 },
-      { "name": "Death Echo", "targets": 7, "ratio": 0.5 }
+      { "name": "Great Fire Wave", "ratio": 0.5 },
+      { "name": "Death Echo", "ratio": 0.5 }
     ]
   },
   {
     "name": "Death Echo - Energy Wave - Death Echo - Great Death Beam",
     "spells": [
-      { "name": "Death Echo", "targets": 7, "ratio": 0.5 },
-      { "name": "Energy Wave", "targets": 8, "ratio": 0.25 },
-      { "name": "Great Death Beam", "targets": 5, "ratio": 0.25 }
+      { "name": "Death Echo", "ratio": 0.5 },
+      { "name": "Energy Wave", "ratio": 0.25 },
+      { "name": "Great Death Beam", "ratio": 0.25 }
     ]
   }
 ]
