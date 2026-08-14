@@ -385,8 +385,8 @@ function diffBadgeEl(pct) {
   const badge = document.createElement("span");
   badge.className = "dc-diff-badge";
   if (pct == null) { badge.classList.add("dc-diff-na"); badge.textContent = "N/A"; return badge; }
-  const rounded = Math.round(pct * 10) / 10;
-  badge.textContent = `${rounded > 0 ? "+" : ""}${rounded.toFixed(1)}%`;
+  const rounded = Math.round(pct * 100) / 100;
+  badge.textContent = `${rounded > 0 ? "+" : ""}${rounded.toFixed(2)}%`;
   badge.classList.add(rounded > 0.05 ? "dc-diff-up" : rounded < -0.05 ? "dc-diff-down" : "dc-diff-flat");
   return badge;
 }
