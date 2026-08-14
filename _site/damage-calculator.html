@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TibiaPal.com - Damage Calculator</title>
+    <meta name="author" content="Pawel Kusnierek">
+    <meta name="description"
+        content="TibiaPal — tools and calculators for the MMORPG Tibia. Includes TibiaLootSplit, Hunting Places guide, Quest Reference and many more.">
+    <meta name="keywords"
+        content="Tibia tools, Tibia calculators, Tibia fansite, TibiaPal,
+          TibiaLootSplit, Tibia loot split, Tibia loot analyser,
+          Tibia hunting places, Tibia hunting guide, Tibia spawn guide,
+          Tibia quest reference, Tibia quest guide, Tibia quest list, Tibia quest levels, Tibia boss access quests, Tibia hunting ground quests,
+          Tibia equipment reference, Tibia vocation equipment, Tibia best equipment,
+          Tibia bestiary reference, Tibia bestiary guide, Tibia bosstiary guide,
+          Tibia charm planner, Tibia charm guide, Tibia charm damage calculator,
+          Tibia weekly deliveries, Tibia NPC deliveries,
+          Tibia experience calculator, Tibia levelling calculator,
+          Tibia exp share calculator, Tibia party exp,
+          Tibia stamina calculator, Tibia bless calculator, Tibia bless cost,
+          Tibia imbue calculator, Tibia imbuement cost,
+          Tibia leech calculator, Tibia life leech, Tibia mana leech,
+          Tibia exercise weapons calculator, Tibia exercise training,
+          Tibia offline training calculator, Tibia training calculator,
+          Tibia weekly task calculator, Tibia weekly tasks">
+    <link rel="shortcut icon" href=/images/crystalcoin.ico type="image/x-icon">
+
+    <!-- css files -->
+    <link rel="stylesheet" href=/css/main.css>
+    
+
+    <!-- javascript files -->
+    <script type="module" src="/damage-calculator/app.js?v=20260812-3"></script>
+    <script src=/scripts/onload.js></script>
+
+    <!-- extra googleapi fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+    <!-- Analytics and ad related section-->
+    <!-- Global site tag (gtag.js) - Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVVNY9BHWM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PVVNY9BHWM');
+    </script>
+    <script data-ad-client="ca-pub-2936542406889680" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+    <div id="mobile-top-ad">
+        <!-- Mobile Top Banner (Responsive) -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-2936542406889680"
+            data-ad-slot="1926019821"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <main id="page-container">
+        <div id="tibiatrade_low_res">
+            <div class="tibiatrade_span">
+                Featured on <a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank"><b>TibiaTrade</b>:</a>
+            </div>
+            <iframe id="tibiatrade" src="https://tibiatrade.gg/iframe/highlighted/" title="TibiaTrade" loading="lazy" scrolling="no"></iframe>
+        </div>
+    
+        <div id="header">
+            <a href="https://tibiapal.com"> 
+                <img src=/images/mainlogo.png style="width:100px" alt="TibiaPal beaver logo">
+            </a>
+        </div>
+
+        <div id="banner">
+            
+            <span class="tibiatrade_span">Featured on <a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank"><b>TibiaTrade</b>:</a></span>
+            <iframe id="tibiatrade" src="https://tibiatrade.gg/iframe/highlighted/" title="TibiaTrade" loading="lazy" scrolling="no"></iframe>
+                <!--<a href="https://store.steampowered.com/app/2948410/Talus/" target="_blank">
+                    <img src=/images/talus/small_capsule.png style="width:300px"  alt="Logo of upcoming ARPG 'Talus'">
+                </a>-->
+            
+        </div>
+        <div id="right-header">
+            <!-- 275x90 Top -->
+            <ins class="adsbygoogle"
+                style="display:inline-block;width:275px;height:90px"
+                data-ad-client="ca-pub-2936542406889680"
+                data-ad-slot="4113199466"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    <!--
+<span style="color:red">NEW!</span>
+!-->
+<nav id="left-sidebar">
+    <div class="nav-section">GENERAL</div>
+        <div class="nav-item"> <a href="/">
+                <div class="nav-image-container"><img class="nav-image" src=/images/icon-news.gif>Latest News</div>
+                </a>
+        </div>
+        <div class="nav-item"><a href="/about">
+                <div class="nav-image-container"><img class="nav-image" src=/images/icon-abouttibia.gif>About & Contact
+                </div>
+                </a>
+        </div>
+        <div class="nav-item"><a href="https://iglaots.net/?view=register&refcode=Kusnier" target="_blank">
+                <div class="nav-image-container"><img class="nav-image" src=/images/iglaots.png>IglaOTS.net - Partner OTS</div>
+                </a>
+        </div>
+        <div class="nav-item"><a href="https://tibiatrade.gg/?ref=tibiapal" target="_blank">
+                <div class="nav-image-container"><img class="nav-image" src=/images/tibiatrade_favicon.png>TibiaTrade.gg - Partner Fansite</div>
+                </a>
+        </div>
+    </div>
+
+    <div class="nav-section">TOOLS</div>
+    <!--<div class="active nav-item"><a href="/damage-calculator">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Sword.gif><span style="color:red">NEW!</span>Damage Calculator</div>
+        </a></div>!-->
+    <div class="nav-item"><a href="/tibialootsplit">
+            <div class="nav-image-container"><img class="nav-image" src=/images/crystalcoin.ico>TibiaLootSplit</div>
+        </a></div>
+    <div class="nav-item"><a href="/charm_planner">
+            <div class="nav-image-container"><img class="nav-image" src=/images/charms/vampiric_embrace.png>Charm Planner</div>
+        </a></div>
+    <div class="nav-item"><a href="/weapon-proficiency">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Catalyst.gif>Weapon Proficiency Planner
+            </div>
+        </a></div>
+    <div class="nav-item"><a href="/wheel-planner">
+            <div class="nav-image-container"><img class="nav-image" src=/images/wheel_of_destiny.png>Wheel of Destiny Planner
+            </div>
+        </a></div>
+    </div>
+
+    <div class="nav-section">GUIDES / REFERENCES</div>
+    <div class="nav-item"><a href="/hunting">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Sword.gif>Hunting
+                Places</div>
+        </a></div>
+<div class="nav-item"><a href="/wheels">
+        <div class="nav-image-container"><img class="nav-image" src=/images/Wheel.gif>Wheel of Destiny Builds
+        </div></a> </div>
+<div class="nav-item"><a href="/proficiency">
+        <div class="nav-image-container"><img class="nav-image" src=/images/Hammer.gif>Perk Refinement Guide
+        </div></a> </div>
+<div class="nav-item"><a href="/equipment">
+        <div class="nav-image-container"><img class="nav-image" src=/images/equipment.gif>Vocation Equipment Reference
+        </div></a> </div>
+<div class="nav-item"><a href="/quest-reference">
+        <div class="nav-image-container"><img class="nav-image" src=/images/old_map.gif>Quest Reference</div>
+        </a></div>
+<div class="nav-item"><a href="/deliveries">
+        <div class="nav-image-container"><img class="nav-image" src=/images/Weekly.png>Weekly Deliveries
+        </div></a> </div>
+    <div class="nav-item"><a href="/bestiary">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bestiary_Betterment.gif>Bestiary
+                Reference</div>
+        </a> </div>
+    <div class="nav-item"><a href="/bosstiary">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Falcon_Greaves.gif>Bosstiary Reference
+            </div>
+        </a> </div>
+    <div class="nav-item"><a href="https://www.youtube.com/kusnierr" target="_blank">
+            <div class="nav-image-container"><img class="nav-image" src=/images/youtube-icon.png>YouTube Videos &
+                Guides</div>
+        </a></div>
+    </div>
+
+    <div class="nav-section">CALCULATORS</div>
+    <div class="nav-item"><a href="/exercise">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Exercise_Wand.gif>Exercise
+                Weapons Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/offlinetraining">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Skill_Trainer.gif>Training
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/imbue">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Imbuing_Shrine.gif>Imbue
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/weekly_tasks">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Weekly.png>Weekly Task Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/charm_calculator">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Overpower.png>Charms Damage
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/expshare">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Bricklayers.gif>Exp Share
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/stamina">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Staminafull.png>Stamina
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/bless">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Solitude_Charm.gif>Bless
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/expcalculator">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Demon.gif>Levelling
+                Calculator</div>
+        </a></div>
+    <div class="nav-item"><a href="/leech">
+            <div class="nav-image-container"><img class="nav-image" src=/images/Leech.gif>Leech Calculator
+            </div>
+        </a></div>
+
+    <!-- AdSense: below nav, desktop only -->
+    <div class="nav-ad">
+        <ins class="adsbygoogle"
+            style="display:inline-block;width:250px;height:250px"
+            data-ad-client="ca-pub-2936542406889680"
+            data-ad-slot="8263243174"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+</nav>
+
+    
+    <!-- Navigation toggle button for mobile -->
+    <button class="nav-toggle" onclick="toggleNavigation()" style="display: none;">☰ Menu</button>
+    
+    <section id="main-content">
+    <section id="damageCalculator" class="dc-app" aria-busy="true">
+  <header class="dc-hero">
+    <div>
+      <h1>Damage Calculator</h1>
+      <p>Compare two builds' effective damage per turn, accounting for your Wheel of Destiny, proficiency, rotation and more.</p>
+    </div>
+    <div class="dc-hero-actions">
+      <button id="saveBuildImage" class="dc-button dc-button-secondary" type="button" disabled>Save image</button>
+      <button id="shareBuild" class="dc-button dc-button-secondary" type="button">Copy build link</button>
+      <button id="resetBuild" class="dc-button dc-button-quiet" type="button">Reset</button>
+    </div>
+  </header>
+
+  <div id="metadataStatus" class="dc-status" role="status">
+    <span class="dc-spinner" aria-hidden="true"></span>
+    Loading TibiaTools data…
+  </div>
+
+  <script id="rotationPresetsData" type="application/json">{"druid":[{"name":"2x Fork","spells":[{"name":"Forked Thorns","ratio":0.5},{"name":"Forked Glacier","ratio":0.5}]},{"name":"2x Fork - Ice Burst - Eternal Winter","spells":[{"name":"Forked Thorns","ratio":0.4625},{"name":"Forked Glacier","ratio":0.4625},{"name":"Ice Burst","ratio":0.05},{"name":"Eternal Winter","ratio":0.025}]},{"name":"Forked Glacier - Strong Ice Wave","spells":[{"name":"Forked Glacier","ratio":0.5},{"name":"Strong Ice Wave","ratio":0.5}]}],"knight":[{"name":"Exori Gran - Exori - Exori Min","spells":[{"name":"Fierce Berserk","ratio":0.333},{"name":"Berserk","ratio":0.333},{"name":"Front Sweep","ratio":0.333}]},{"name":"Exori Gran - Exori - Exori Mas","spells":[{"name":"Fierce Berserk","ratio":0.333},{"name":"Berserk","ratio":0.333},{"name":"Groundshaker","ratio":0.333}]}],"monk":[{"name":"VoH: Chain - GFoB - Chain - TFB - Takedown","spells":[{"name":"Chained Penance","ratio":0.4},{"name":"Greater Flurry of Blows","ratio":0.2},{"name":"Thousand Fist Blows","ratio":0.2},{"name":"Sweeping Takedown","ratio":0.2}]},{"name":"VoJ: Chain - GFoB - Chain - TFB - Chain - Takedown","spells":[{"name":"Chained Penance","ratio":0.5},{"name":"Greater Flurry of Blows","ratio":0.166},{"name":"Thousand Fist Blows","ratio":0.166},{"name":"Sweeping Takedown","ratio":0.166}]}],"paladin":[{"name":"Ethereal Barrage - Divine Caldera","spells":[{"name":"Ethereal Barrage","ratio":0.5},{"name":"Divine Caldera","ratio":0.5}]},{"name":"Divine Barrage - Divine Caldera","spells":[{"name":"Divine Barrage","ratio":0.5},{"name":"Divine Caldera","ratio":0.5}]},{"name":"Divine Barrage - Ethereal Barrage","spells":[{"name":"Divine Barrage","ratio":0.5},{"name":"Ethereal Barrage","ratio":0.5}]}],"sorcerer":[{"name":"Great Fire Wave - Death Echo","spells":[{"name":"Great Fire Wave","ratio":0.5},{"name":"Death Echo","ratio":0.5}]},{"name":"Death Echo - Energy Wave - Death Echo - Great Death Beam","spells":[{"name":"Death Echo","ratio":0.5},{"name":"Energy Wave","ratio":0.25},{"name":"Great Death Beam","ratio":0.25}]}]}</script>
+  <script id="spellAverageHitsData" type="application/json">{"runes":{"Great Fireball":9.1,"Sudden Death":1.0,"Avalanche":9.1,"Thunderstorm":9.1,"Stone Shower":9.1},"spells":{"Rage of the Skies":15.5,"Hell's Core":13.7,"Death Echo":5.9,"Great Death Beam":6.1,"Energy Wave":6.4,"Great Fire Wave":6.3,"Great Energy Beam":6.1,"Divine Grenade":9.3,"Divine Caldera":7.3,"Divine Barrage":6.5,"Ethereal Barrage":6.5,"Strong Ethereal Spear":1.0,"Divine Missile":1.0,"Wrath of Nature":15.5,"Eternal Winter":13.7,"Ice Burst":9.5,"Terra Burst":9.5,"Forked Glacier":7.5,"Forked Thorns":6.7,"Terra Wave":5.8,"Strong Ice Wave":5.3,"Groundshaker":6.3,"Berserk":6.3,"Fierce Berserk":6.0,"Executioner's Throw":3.2,"Front Sweep":4.0,"Annihilation":1.0,"Whirlwind Throw":1.0,"Spiritual Outburst":5.9,"Sweeping Takedown":6.4,"Chained Penance":5.0,"Greater Flurry of Blows":5.8,"Thousand Fist Blows":7.1,"Flurry of Blows":4.3,"Mystic Repulse":1.0,"Forceful Uppercut":1.0}}</script>
+
+  <div id="damageTabs" class="hunting_tab four-tabs" hidden>
+    <button type="button" class="tablinks active" data-dc-tab="a" onclick="show_tab(event, 'build-a')">Build A</button>
+    <button type="button" class="tablinks" data-dc-tab="b" onclick="show_tab(event, 'build-b')">Build B</button>
+    <button type="button" class="tablinks" data-dc-tab="results" onclick="show_tab(event, 'results')">Results</button>
+    <button type="button" class="tablinks" data-dc-tab="howto" onclick="show_tab(event, 'how-to')">How-to-use</button>
+  </div>
+
+  <div id="damageForm" class="dc-tabpanels" hidden>
+    <div id="build-a" class="tabcontent">
+      <div class="dc-import-row">
+        <div class="dc-saved-build-tools">
+          <label for="savedBuildSelect-a">Presets:</label>
+          <select id="savedBuildSelect-a"><option value="">No saved builds</option></select>
+          <button id="savedBuildDelete-a" class="dc-button dc-button-danger" type="button">Delete Build</button>
+          <button id="savedBuildSave-a" class="dc-button dc-button-secondary" type="button">Save Build</button>
+        </div>
+        <button id="importBuildB" class="dc-button dc-button-secondary" type="button">Import Build B</button>
+      </div>
+      <div class="dc-builder">
+  <section class="dc-panel">
+    <div class="dc-panel-heading">
+      <span class="dc-step">01</span>
+      <div><h2>Character</h2><p>Final stats after equipment, imbuements and buffs — including skill-only stance bonuses like Sharpshooter, Blood Rage or Virtue of Justice. Crit chance and crit damage assume the base 10% / 50%.</p></div>
+    </div>
+    <div class="dc-fields dc-fields-basic">
+      <label>Vocation<select id="vocation-a" data-stat="vocation"></select></label>
+      <label>Level<input type="number" min="0" step="1" inputmode="numeric" data-stat="level"></label>
+      <label id="skillField-a"><span id="skillFieldLabel-a">Main skill</span><input type="number" min="0" step="1" inputmode="numeric" data-stat="skill"></label>
+      <label id="magicLevelField-a"><span>Magic level</span><input type="number" min="0" step="0.01" inputmode="decimal" data-stat="magicLevel"></label>
+    </div>
+    <fieldset id="stanceChoices-a" class="dc-stance-list"><legend>Active stances</legend></fieldset>
+  </section>
+
+  <section class="dc-panel dc-accent-wheel">
+    <div class="dc-panel-heading">
+      <span class="dc-step">02</span>
+      <div><h2>Wheel of Destiny</h2><p>Synced directly from the TibiaPal Wheel planner.</p></div>
+    </div>
+    <div class="dc-planner-launch">
+      <button class="dc-button dc-planner-launch-btn dc-planner-launch-wheel" type="button" data-open-planner="wheel" data-build="a">
+        <span class="dc-planner-launch-icon" aria-hidden="true">◆</span>
+        <span>Edit Wheel of Destiny</span>
+      </button>
+      <div class="dc-info" data-effects-info="wheel">
+        <button type="button" class="dc-info-toggle" aria-label="Show selected wheel bonuses" aria-expanded="false">
+          <span class="dc-info-glyph" aria-hidden="true">i</span>
+          <span class="dc-info-count" id="wheelEffectsCount-a" hidden>0</span>
+        </button>
+        <div class="dc-info-popover" role="tooltip">
+          <div class="dc-info-popover-head">Selected wheel bonuses</div>
+          <div id="wheelSyncedEffects-a" class="dc-synced-effects" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+    <div class="dc-fields">
+      <label>Wheel damage bonus<span class="dc-static-value" data-stat="bonus"></span></label>
+    </div>
+  </section>
+
+  <section class="dc-panel dc-accent-proficiency">
+    <div class="dc-panel-heading">
+      <span class="dc-step">03</span>
+      <div><h2>Weapon &amp; Proficiency</h2><p>Weapon and effects synced directly from the TibiaPal Proficiency planner.</p></div>
+    </div>
+    <div class="dc-planner-launch">
+      <button class="dc-button dc-planner-launch-btn dc-planner-launch-proficiency" type="button" data-open-planner="proficiency" data-build="a">
+        <span class="dc-planner-launch-icon" aria-hidden="true">◆</span>
+        <span>Edit Weapon Proficiency</span>
+      </button>
+      <div class="dc-info" data-effects-info="proficiency">
+        <button type="button" class="dc-info-toggle" aria-label="Show selected proficiency bonuses" aria-expanded="false">
+          <span class="dc-info-glyph" aria-hidden="true">i</span>
+          <span class="dc-info-count" id="proficiencyEffectsCount-a" hidden>0</span>
+        </button>
+        <div class="dc-info-popover" role="tooltip">
+          <div class="dc-info-popover-head">Selected proficiency bonuses</div>
+          <div id="proficiencySyncedEffects-a" class="dc-synced-effects" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+    <div class="dc-equipment-grid">
+      <label class="dc-equipment-main">Weapon
+        <input id="weaponSearch-a" type="text" placeholder="Choose a weapon in the planner" readonly>
+        <small id="weaponMeta-a"></small>
+      </label>
+      <label id="ammoField-a">Ammo<select id="ammoSelect-a"><option value="">None</option></select></label>
+      <label id="shieldField-a">Shield<select id="shieldSelect-a"><option value="">None</option></select></label>
+    </div>
+  </section>
+
+  <section class="dc-panel">
+    <div class="dc-panel-heading">
+      <span class="dc-step">04</span>
+      <div><h2>Rotation</h2><p><strong>Average Targets</strong> is pre-filled for convenience with an approximate value from real hunting data — adjust it to your own hunts/results if necessary.<br><strong>Ratio</strong> is how often you cast it relative to your basic attack: 1 means every turn, 0.5 means every other turn, 0.2 means once every 5 turns.</p></div>
+    </div>
+    <div class="dc-narrow-fields">
+      <div class="dc-preset-row">
+        <label for="rotationPresetSelect-a">Common rotations</label>
+        <select id="rotationPresetSelect-a"><option value="">Choose a preset…</option></select>
+        <small class="dc-preset-hint">Loads a common rotation for your vocation, pre-filled with average targets — tweak targets/ratio after applying.</small>
+      </div>
+      <div class="dc-add-row">
+        <label for="spellSearch-a">Add an attack or spell</label>
+        <div><input id="spellSearch-a" type="search" list="spellOptions-a" placeholder="Search your vocation's spells…" autocomplete="off"><button id="addSpell-a" type="button">Add</button></div>
+      </div>
+      <div class="dc-list-head dc-rotation-head"><span>Attack</span><span>Average Targets</span><span>Ratio</span><span></span></div>
+      <div id="rotationRows-a" class="dc-row-list"></div>
+    </div>
+  </section>
+
+  <section class="dc-panel">
+    <div class="dc-panel-heading">
+      <span class="dc-step">05</span>
+      <div><h2>Targets (Optional)</h2><p>Add the creatures you're hunting so their defenses, resistances and charms factor into the damage calculation. Ratio sets what share of the kills in this list come from this creature.</p></div>
+    </div>
+    <div class="dc-wide-fields">
+      <div class="dc-hunt-import">
+        <label for="huntAnalyserLog-a">Paste a Hunt Analyser log — creatures and kill ratios are added automatically</label>
+        <textarea id="huntAnalyserLog-a" placeholder="Session data: From ...&#10;...&#10;Killed Monsters:&#10;  6x cave rat&#10;  7x rat&#10;  10x rotworm"></textarea>
+        <div class="dc-hunt-import-row">
+          <button id="importHuntLog-a" type="button" class="dc-button">Parse &amp; add targets</button>
+          <small id="huntLogStatus-a" class="dc-hunt-import-status" aria-live="polite"></small>
+        </div>
+      </div>
+      <div class="dc-add-row">
+        <label for="creatureSearch-a">Add a creature</label>
+        <div><input id="creatureSearch-a" type="search" list="creatureOptions-a" placeholder="Search creatures…" autocomplete="off"><button id="addTarget-a" type="button">Add</button></div>
+      </div>
+      <div class="dc-list-head dc-target-head"><span>Creature</span><span>Ratio</span><span>Charm</span><span>Tier</span><span></span></div>
+      <div id="targetRows-a" class="dc-row-list"></div>
+    </div>
+  </section>
+
+  <section class="dc-panel">
+    <div class="dc-panel-heading">
+      <span class="dc-step">06</span>
+      <div><h2>Additional API perks (Optional, Advanced Users only)</h2><p>Use this only for equipment or specialized effects that are not part of any other section.</p></div>
+    </div>
+    <div class="dc-wide-fields">
+      <div class="dc-add-row">
+        <label for="manualPerkSearch-a">Add an extra damage perk</label>
+        <div><input id="manualPerkSearch-a" type="search" list="perkOptions-a" placeholder="Search API perks…" autocomplete="off"><button type="button" data-add-perk="manual">Add</button></div>
+      </div>
+      <div id="manualPerks-a" class="dc-row-list" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <datalist id="perkOptions-a"></datalist>
+  <datalist id="spellOptions-a"></datalist>
+  <datalist id="creatureOptions-a"></datalist>
+</div>
+
+    </div>
+
+    <div id="build-b" class="tabcontent">
+      <div class="dc-import-row">
+        <div class="dc-saved-build-tools">
+          <label for="savedBuildSelect-b">Presets:</label>
+          <select id="savedBuildSelect-b"><option value="">No saved builds</option></select>
+          <button id="savedBuildDelete-b" class="dc-button dc-button-danger" type="button">Delete Build</button>
+          <button id="savedBuildSave-b" class="dc-button dc-button-secondary" type="button">Save Build</button>
+        </div>
+        <button id="importBuildA" class="dc-button dc-button-secondary" type="button">Import Build A</button>
+      </div>
+      <div class="dc-builder">
+  <section class="dc-panel">
+    <div class="dc-panel-heading">
+      <span class="dc-step">01</span>
+      <div><h2>Character</h2><p>Final stats after equipment, imbuements and buffs — including skill-only stance bonuses like Sharpshooter, Blood Rage or Virtue of Justice. Crit chance and crit damage assume the base 10% / 50%.</p></div>
+    </div>
+    <div class="dc-fields dc-fields-basic">
+      <label>Vocation<select id="vocation-b" data-stat="vocation"></select></label>
+      <label>Level<input type="number" min="0" step="1" inputmode="numeric" data-stat="level"></label>
+      <label id="skillField-b"><span id="skillFieldLabel-b">Main skill</span><input type="number" min="0" step="1" inputmode="numeric" data-stat="skill"></label>
+      <label id="magicLevelField-b"><span>Magic level</span><input type="number" min="0" step="0.01" inputmode="decimal" data-stat="magicLevel"></label>
+    </div>
+    <fieldset id="stanceChoices-b" class="dc-stance-list"><legend>Active stances</legend></fieldset>
+  </section>
+
+  <section class="dc-panel dc-accent-wheel">
+    <div class="dc-panel-heading">
+      <span class="dc-step">02</span>
+      <div><h2>Wheel of Destiny</h2><p>Synced directly from the TibiaPal Wheel planner.</p></div>
+    </div>
+    <div class="dc-planner-launch">
+      <button class="dc-button dc-planner-launch-btn dc-planner-launch-wheel" type="button" data-open-planner="wheel" data-build="b">
+        <span class="dc-planner-launch-icon" aria-hidden="true">◆</span>
+        <span>Edit Wheel of Destiny</span>
+      </button>
+      <div class="dc-info" data-effects-info="wheel">
+        <button type="button" class="dc-info-toggle" aria-label="Show selected wheel bonuses" aria-expanded="false">
+          <span class="dc-info-glyph" aria-hidden="true">i</span>
+          <span class="dc-info-count" id="wheelEffectsCount-b" hidden>0</span>
+        </button>
+        <div class="dc-info-popover" role="tooltip">
+          <div class="dc-info-popover-head">Selected wheel bonuses</div>
+          <div id="wheelSyncedEffects-b" class="dc-synced-effects" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+    <div class="dc-fields">
+      <label>Wheel damage bonus<span class="dc-static-value" data-stat="bonus"></span></label>
+    </div>
+  </section>
+
+  <section class="dc-panel dc-accent-proficiency">
+    <div class="dc-panel-heading">
+      <span class="dc-step">03</span>
+      <div><h2>Weapon &amp; Proficiency</h2><p>Weapon and effects synced directly from the TibiaPal Proficiency planner.</p></div>
+    </div>
+    <div class="dc-planner-launch">
+      <button class="dc-button dc-planner-launch-btn dc-planner-launch-proficiency" type="button" data-open-planner="proficiency" data-build="b">
+        <span class="dc-planner-launch-icon" aria-hidden="true">◆</span>
+        <span>Edit Weapon Proficiency</span>
+      </button>
+      <div class="dc-info" data-effects-info="proficiency">
+        <button type="button" class="dc-info-toggle" aria-label="Show selected proficiency bonuses" aria-expanded="false">
+          <span class="dc-info-glyph" aria-hidden="true">i</span>
+          <span class="dc-info-count" id="proficiencyEffectsCount-b" hidden>0</span>
+        </button>
+        <div class="dc-info-popover" role="tooltip">
+          <div class="dc-info-popover-head">Selected proficiency bonuses</div>
+          <div id="proficiencySyncedEffects-b" class="dc-synced-effects" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+    <div class="dc-equipment-grid">
+      <label class="dc-equipment-main">Weapon
+        <input id="weaponSearch-b" type="text" placeholder="Choose a weapon in the planner" readonly>
+        <small id="weaponMeta-b"></small>
+      </label>
+      <label id="ammoField-b">Ammo<select id="ammoSelect-b"><option value="">None</option></select></label>
+      <label id="shieldField-b">Shield<select id="shieldSelect-b"><option value="">None</option></select></label>
+    </div>
+  </section>
+
+  <section class="dc-panel">
+    <div class="dc-panel-heading">
+      <span class="dc-step">04</span>
+      <div><h2>Rotation</h2><p><strong>Average Targets</strong> is pre-filled for convenience with an approximate value from real hunting data — adjust it to your own hunts/results if necessary.<br><strong>Ratio</strong> is how often you cast it relative to your basic attack: 1 means every turn, 0.5 means every other turn, 0.2 means once every 5 turns.</p></div>
+    </div>
+    <div class="dc-narrow-fields">
+      <div class="dc-preset-row">
+        <label for="rotationPresetSelect-b">Common rotations</label>
+        <select id="rotationPresetSelect-b"><option value="">Choose a preset…</option></select>
+        <small class="dc-preset-hint">Loads a common rotation for your vocation, pre-filled with average targets — tweak targets/ratio after applying.</small>
+      </div>
+      <div class="dc-add-row">
+        <label for="spellSearch-b">Add an attack or spell</label>
+        <div><input id="spellSearch-b" type="search" list="spellOptions-b" placeholder="Search your vocation's spells…" autocomplete="off"><button id="addSpell-b" type="button">Add</button></div>
+      </div>
+      <div class="dc-list-head dc-rotation-head"><span>Attack</span><span>Average Targets</span><span>Ratio</span><span></span></div>
+      <div id="rotationRows-b" class="dc-row-list"></div>
+    </div>
+  </section>
+
+  <section class="dc-panel">
+    <div class="dc-panel-heading">
+      <span class="dc-step">05</span>
+      <div><h2>Targets (Optional)</h2><p>Add the creatures you're hunting so their defenses, resistances and charms factor into the damage calculation. Ratio sets what share of the kills in this list come from this creature.</p></div>
+    </div>
+    <div class="dc-wide-fields">
+      <div class="dc-hunt-import">
+        <label for="huntAnalyserLog-b">Paste a Hunt Analyser log — creatures and kill ratios are added automatically</label>
+        <textarea id="huntAnalyserLog-b" placeholder="Session data: From ...&#10;...&#10;Killed Monsters:&#10;  6x cave rat&#10;  7x rat&#10;  10x rotworm"></textarea>
+        <div class="dc-hunt-import-row">
+          <button id="importHuntLog-b" type="button" class="dc-button">Parse &amp; add targets</button>
+          <small id="huntLogStatus-b" class="dc-hunt-import-status" aria-live="polite"></small>
+        </div>
+      </div>
+      <div class="dc-add-row">
+        <label for="creatureSearch-b">Add a creature</label>
+        <div><input id="creatureSearch-b" type="search" list="creatureOptions-b" placeholder="Search creatures…" autocomplete="off"><button id="addTarget-b" type="button">Add</button></div>
+      </div>
+      <div class="dc-list-head dc-target-head"><span>Creature</span><span>Ratio</span><span>Charm</span><span>Tier</span><span></span></div>
+      <div id="targetRows-b" class="dc-row-list"></div>
+    </div>
+  </section>
+
+  <section class="dc-panel">
+    <div class="dc-panel-heading">
+      <span class="dc-step">06</span>
+      <div><h2>Additional API perks (Optional, Advanced Users only)</h2><p>Use this only for equipment or specialized effects that are not part of any other section.</p></div>
+    </div>
+    <div class="dc-wide-fields">
+      <div class="dc-add-row">
+        <label for="manualPerkSearch-b">Add an extra damage perk</label>
+        <div><input id="manualPerkSearch-b" type="search" list="perkOptions-b" placeholder="Search API perks…" autocomplete="off"><button type="button" data-add-perk="manual">Add</button></div>
+      </div>
+      <div id="manualPerks-b" class="dc-row-list" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <datalist id="perkOptions-b"></datalist>
+  <datalist id="spellOptions-b"></datalist>
+  <datalist id="creatureOptions-b"></datalist>
+</div>
+
+    </div>
+
+    <div id="results" class="tabcontent">
+      <div class="dc-results-heading">
+        <button id="recalculateBoth" class="dc-button" type="button">Recalculate</button>
+      </div>
+      <div id="compareStatus" class="dc-calculation-status" role="status">Switch to this tab to calculate both builds.</div>
+      <div id="resultsLoading" class="dc-results-loading" hidden>
+        <span class="dc-spinner" aria-hidden="true"></span>
+        <span>Calculating both builds…</span>
+      </div>
+      <div id="resultsContent" class="dc-results-content">
+        <div class="dc-comparison">
+          <div class="dc-cmp-row dc-cmp-columns-header" aria-hidden="true">
+            <span></span>
+            <span class="dc-cmp-col-label dc-cmp-col-a" id="compareColLabel-a">Build A</span>
+            <span></span>
+            <span class="dc-cmp-col-label dc-cmp-col-b" id="compareColLabel-b">Build B</span>
+          </div>
+          <section class="dc-result-group">
+            <header class="dc-result-group-heading"><strong>Damage Comparison Summary</strong></header>
+            <div id="compareSummary" class="dc-compare-summary">
+              <div class="dc-cmp-row" data-summary-key="effectiveDamagePerTurn">
+                <span class="dc-cmp-row-label">Effective / turn</span>
+                <span class="dc-cmp-value dc-cmp-value-a">—</span>
+                <span class="dc-diff-badge-slot"></span>
+                <span class="dc-cmp-value dc-cmp-value-b">—</span>
+              </div>
+              <div class="dc-cmp-row" data-summary-key="effectiveDamagePerHit">
+                <span class="dc-cmp-row-label">Effective / hit</span>
+                <span class="dc-cmp-value dc-cmp-value-a">—</span>
+                <span class="dc-diff-badge-slot"></span>
+                <span class="dc-cmp-value dc-cmp-value-b">—</span>
+              </div>
+              <div class="dc-cmp-row" data-summary-key="damageFromCharms">
+                <span class="dc-cmp-row-label">Charm damage</span>
+                <span class="dc-cmp-value dc-cmp-value-a">—</span>
+                <span class="dc-diff-badge-slot"></span>
+                <span class="dc-cmp-value dc-cmp-value-b">—</span>
+              </div>
+            </div>
+          </section>
+          <div class="dc-result-filter">
+            <label for="resultFilterCompare">Filter attacks</label>
+            <input id="resultFilterCompare" type="search" placeholder="Search spells and runes…" autocomplete="off">
+          </div>
+          <div id="compareResults" class="dc-result-sections"><p class="dc-empty">Complete both builds and switch to this tab.</p></div>
+        </div>
+      </div>
+      <p class="dc-api-credit">Calculated by the <a href="https://tibiatools.io" target="_blank" rel="noopener">TibiaTools.io</a> Damage Calculator API.</p>
+    </div>
+
+    <div id="how-to" class="tabcontent">
+      <section class="dc-panel">
+        <div class="dc-panel-heading">
+          <span class="dc-step">?</span>
+          <div><h2>How to compare builds</h2><p>A quick walkthrough of the Build A / Build B comparison workflow.</p></div>
+        </div>
+        <ol class="dc-howto-list">
+          <li>Fill out <strong>Build A</strong> — Character, Wheel of Destiny, Weapon &amp; Proficiency, perks, rotation and targets.</li>
+          <li>Switch to <strong>Build B</strong> and either start from scratch, or click <strong>Import Build A</strong> to copy Build A over so you can tweak just a few things.</li>
+          <li>Open the <strong>Results</strong> tab — both builds calculate automatically, and stay in sync whenever you come back after making a change.</li>
+          <li>Every card shows a percentage badge comparing it to the other build: <span class="dc-diff-badge dc-diff-up">green</span> means that build is stronger on that metric, <span class="dc-diff-badge dc-diff-down">red</span> means it's weaker.</li>
+          <li>Use <strong>Copy build link</strong> in the header to share the full A/B comparison with someone else — opening the link restores both builds.</li>
+          <li>The <strong>Reset</strong> button only clears whichever build tab (A or B) you're currently viewing.</li>
+        </ol>
+      </section>
+    </div>
+  </div>
+
+  <div id="plannerModal" class="dc-planner-modal" hidden>
+    <div class="dc-planner-window" role="dialog" aria-modal="true" aria-labelledby="plannerModalTitle">
+      <header>
+        <div><span class="dc-kicker">TIBIAPAL PLANNER</span><h2 id="plannerModalTitle">Edit build</h2></div>
+        <button id="closePlannerModal" type="button" aria-label="Close planner">×</button>
+      </header>
+      <div id="wheelToolbar" class="dc-wheel-toolbar" hidden>
+        <div class="dc-wheel-tool">
+          <label for="wheelImportInput">Import a wheel</label>
+          <div class="dc-wheel-tool-row">
+            <input id="wheelImportInput" type="text" placeholder="Paste a wheel link or code" autocomplete="off" spellcheck="false">
+            <button id="wheelImportBtn" class="dc-button dc-button-secondary" type="button">Import</button>
+          </div>
+          <small id="wheelImportError" class="dc-wheel-tool-error" hidden></small>
+        </div>
+        <div class="dc-wheel-tool">
+          <label for="wheelPresetSelect">Saved wheels for this vocation</label>
+          <div class="dc-wheel-tool-row">
+            <select id="wheelPresetSelect"><option value="">No saved wheels</option></select>
+            <button id="wheelPresetLoad" class="dc-button dc-button-secondary" type="button">Load</button>
+            <button id="wheelPresetSave" class="dc-button dc-button-secondary" type="button">Save current</button>
+            <button id="wheelPresetDelete" class="dc-button dc-button-quiet" type="button" title="Delete selected wheel">✕</button>
+          </div>
+        </div>
+      </div>
+      <div id="proficiencyToolbar" class="dc-wheel-toolbar" hidden>
+        <div class="dc-wheel-tool">
+          <label for="proficiencyImportInput">Import a proficiency build</label>
+          <div class="dc-wheel-tool-row">
+            <input id="proficiencyImportInput" type="text" placeholder="Paste a proficiency link or code" autocomplete="off" spellcheck="false">
+            <button id="proficiencyImportBtn" class="dc-button dc-button-secondary" type="button">Import</button>
+          </div>
+          <small id="proficiencyImportError" class="dc-wheel-tool-error" hidden></small>
+        </div>
+      </div>
+      <div class="dc-planner-frame-wrap">
+        <iframe id="wheelPlannerFrame" title="Wheel of Destiny planner" loading="eager"></iframe>
+        <iframe id="proficiencyPlannerFrame" title="Weapon Proficiency planner" loading="eager" hidden></iframe>
+      </div>
+      <footer>
+        <div id="plannerModalPoints" class="dc-planner-points" hidden><span>Points required</span><strong>0</strong></div>
+        <span class="dc-planner-sync-note">Changes sync to the damage build automatically.</span>
+        <button id="donePlannerModal" class="dc-button" type="button">Done</button>
+      </footer>
+    </div>
+  </div>
+</section>
+
+    </section>
+    
+    <aside id="right-sidebar" class="right-sidebar">
+            <section id="banner-paragraph" class="right-sidebar__inner">
+
+                <article class="feature-item feature-item--discord">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Community</span>
+                        <h4 class="feature-item__title">Join the TibiaPal & Kusnier Discord</h4>
+                    </header>
+                    <a class="feature-item__cta" href="https://discord.gg/kusnier" target="_blank" rel="noopener">
+                        discord.gg/Kusnier
+                    </a><br>
+                </article>
+                
+                <!-- IglaOTS -->
+                 <article id="iglaots-display" class="feature-item feature-item--igla">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Partner</span>
+                        <h4 class="feature-item__title">
+                            Join <a href="https://lowrate.iglaots.net/?view=register&refcode=Kusnier" target="_blank" rel="noopener">IgłaOTS</a>, new edition starting on <b>21st August</b>!
+                        </h4>
+                    </header>
+                    <p class="feature-item__body">
+                        Register to receive a custom TibiaPal Beaver backpack!
+                    </p><br>
+                    <div class="feature-item__frame feature-item__frame--16x9">
+                        <a href="https://lowrate.iglaots.net/?view=register&refcode=Kusnier" target="_blank" rel="noopener">
+                            <video src=/images/iglaots2.webm autoplay muted loop playsinline>
+                                Your browser does not support the video tag.
+                            </video>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Stream online (Embed) -->
+                <article id="stream-status" class="feature-item feature-item--stream-status" style="display: none">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Live now</span>
+                        <h4 class="feature-item__title">
+                            Live on <a href="https://www.kick.com/Kusnier" target="_blank" rel="noopener">Kick</a>
+                        </h4>
+                    </header>
+                    <div class="feature-item__frame feature-item__frame--16x9">
+                        <iframe src="" title="Kusnier Kick livestream" loading="lazy" allow="autoplay; fullscreen" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+                    </div>
+                </article>
+
+                <!-- Tibia Kantor 
+                <article class="feature-item feature-item--tibia-kantor">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Partner</span>
+                        <h4 class="feature-item__title">
+                            Visit our partnered TC reseller <a href="https://tibiakantor.pl/en/tibia-coins-en/" target="_blank" rel="noopener">TibiaKantor</a> for best TC rates!
+                        </h4>
+                    </header>
+                    <a href="https://tibiakantor.pl/en/tibia-coins-en/" target="_blank" rel="noopener">
+                        <img src=/images/tibia_kantor.png alt="Tibia Kantor" style="max-width:100%; max-height:220px; display:block; margin:0 auto;">
+                    </a>
+                </article>-->
+
+                <!-- Bestiary Arena -->
+                <article class="feature-item feature-item--bestiary">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Partner</span>
+                        <h4 class="feature-item__title">
+                            Browser-based idle Tibia:
+                            <a href="https://bestiaryarena.com/?t=tibiapal" target="_blank" rel="noopener">Bestiary Arena</a>
+                        </h4>
+                    </header>
+                    <div class="feature-item__frame">
+                        <iframe src="https://bestiaryarena.com/iframe-obs-4?tag=tibiapal" width="277" height="313" scrolling="no" loading="lazy" frameborder="0" title="Bestiary Arena"></iframe>
+                    </div>
+                </article>
+
+                <!-- Stream offline (YouTube video) -->
+                <article id="kick-offline" class="feature-item feature-item--youtube">
+                    <header class="content-top">
+                        <span class="feature-item__eyebrow">Content</span>
+                        <h4 class="feature-item__title">
+                            Watch our latest <a href="https://www.youtube.com/kusnierr" target="_blank" rel="noopener">YouTube</a> video!
+                        </h4>
+                    </header>
+                    <div class="feature-item__frame feature-item__frame--16x9">
+                        <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLC0KAO2SnwlREgB3ScVsAK9OeAqwLXq8-" title="Latest Kusnierr YouTube video" loading="lazy" allowfullscreen></iframe> 
+                    </div>
+                </article>
+            </section>
+            <br>
+        </aside>
+        <aside id="left-footer-space"></aside>
+        <footer id="footer"><!--
+            <p id="footerParagraph">
+                Tibia and all products related to Tibia are copyrighted by <a href="https://www.cipsoft.com"
+                    target="_blank">CipSoft GmbH</a>. The official
+                website of Tibia is <a href="https://www.tibia.com" target="_blank">tibia.com</a>.<br><br>
+                Created by Kusnier.
+            </p><br><br>!-->
+        </footer>
+        <aside id="right-footer-space"></aside>
+        </main>
+            <script>
+                //showAdblockPopup(); bump
+            </script>
+</body>
+</html>

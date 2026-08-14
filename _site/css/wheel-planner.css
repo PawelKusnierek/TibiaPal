@@ -1,0 +1,342 @@
+/* TibiaPal skin for the Wheel of Destiny Planner.
+   Loaded after the scraped tibia.com stylesheets (wod-*.css) so every rule
+   here wins the cascade; !important is only used to beat inline styles baked
+   into the planner markup / injected by wheelofdestinyplanner.min.js. */
+
+#wod-wrapper {
+  font-family: Verdana, Arial, sans-serif;
+  color: #e7f2ff;
+  text-align: left;
+}
+
+/* The scraped tibia.com stylesheets (wod-basic-1/2.css) redeclare body's
+   background-position (and, below 768px, the background-image itself, with
+   !important) for their own site chrome. Loaded after main.css, they clobber
+   the TibiaPal site artwork set there. Restore it here for the real page;
+   the iframe embed (damage calculator) explicitly wants no artwork at all,
+   see planner-embed.css, so it's excluded. */
+html:not(.planner-embed) body {
+  background-image: url(../images/Background_Artwork.webp) !important;
+  background-size: 1600px 800px !important;
+  background-position: 300px top !important;
+  background-repeat: no-repeat !important;
+}
+
+/* ---------- Panels & tables ---------- */
+
+#wod-wrapper .TableContainer {
+  border: 1px solid #315f91;
+  background: linear-gradient(145deg, #0b1b32, #071326);
+  box-shadow: 0 5px 18px #020814;
+}
+#wod-wrapper .TableContainer.Captionless {
+  border: 1px solid #315f91;
+}
+#wod-wrapper .TableContainer .Odd {
+  background-color: #0d2038;
+}
+#wod-wrapper .TableContainer .Even {
+  background-color: #0a1a31;
+}
+#wod-wrapper .TableContainer .Table3,
+#wod-wrapper .TableContainer .Table5 {
+  border: none;
+  background-color: transparent;
+}
+#wod-wrapper .TableContentContainer {
+  border: 1px solid #173b61;
+  background-color: #0a1a31;
+}
+#wod-wrapper .InnerTableContainer .TableContentContainer {
+  box-shadow: none;
+}
+#wod-wrapper table.TableContent {
+  border-color: #173b61 !important;
+}
+#wod-wrapper .TableContainer .Table3 .TableContent td,
+#wod-wrapper .TableContainer .Table2 .InnerTableContainer td,
+#wod-wrapper .TableContainer .RowInnerTableDataBorders td {
+  border-color: #173b61;
+}
+#wod-wrapper .InnerTableContainer,
+#wod-wrapper .InnerTableContainer td {
+  color: #e7f2ff;
+}
+/* tibia.com collapses whitespace with font-size:1px on .TableContainer and
+   restores it in a stylesheet that was never scraped; restore it here or all
+   inherited text renders 1px tall */
+#wod-wrapper .InnerTableContainer,
+#wod-wrapper .TableContentContainer {
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+/* ---------- Caption headers -> titlebars ---------- */
+
+#wod-wrapper .TableContainer .CaptionContainer,
+#wod-wrapper .CaptionContainer .CaptionInnerContainer {
+  background: linear-gradient(#16375f, #0b203b) !important;
+  border-bottom: 1px solid #2d8cf8;
+}
+#wod-wrapper .CaptionContainer .CaptionEdgeLeftTop,
+#wod-wrapper .CaptionContainer .CaptionEdgeRightTop,
+#wod-wrapper .CaptionContainer .CaptionEdgeLeftBottom,
+#wod-wrapper .CaptionContainer .CaptionEdgeRightBottom,
+#wod-wrapper .CaptionContainer .CaptionBorderTop,
+#wod-wrapper .CaptionContainer .CaptionBorderBottom,
+#wod-wrapper .CaptionContainer .CaptionVerticalLeft,
+#wod-wrapper .CaptionContainer .CaptionVerticalRight {
+  display: none;
+}
+#wod-wrapper .CaptionContainer .Text {
+  color: #eef6ff;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #000;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+/* ---------- Buttons ---------- */
+
+/* Same look as the weapon-proficiency calculator footer buttons */
+#wod-wrapper .BigButton,
+#wod-wrapper .SmallButton {
+  border: 1px solid #315f91;
+  background: linear-gradient(#1a4677, #0c2848) !important;
+  box-shadow: inset 0 0 0 1px #071525;
+}
+#wod-wrapper .BigButton:hover,
+#wod-wrapper .SmallButton:hover {
+  filter: brightness(1.2);
+}
+#wod-wrapper .BigButton:active,
+#wod-wrapper .SmallButton:active {
+  filter: brightness(1.35);
+}
+#wod-wrapper .BigButtonOver,
+#wod-wrapper .SmallButtonOver {
+  display: none !important;
+}
+#wod-wrapper input.BigButtonText,
+#wod-wrapper input.SmallButtonText {
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent !important;
+  color: #d5d5d5;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-shadow: none;
+  cursor: pointer;
+}
+#wod-wrapper input.BigButtonText:hover,
+#wod-wrapper input.SmallButtonText:hover {
+  top: 0;
+  left: 0;
+}
+
+/* ---------- Inputs & selects ---------- */
+
+#wod-wrapper input[type="text"],
+#wod-wrapper select,
+#wod-wrapper .GemDropdown {
+  padding: 3px 6px;
+  color: #e7f2ff;
+  font: 11px Verdana, Arial, sans-serif;
+  border: 1px solid #315f91;
+  background: #071426;
+  box-shadow: inset 0 0 0 1px #071525;
+}
+#wod-wrapper input[type="text"]:focus,
+#wod-wrapper select:focus {
+  outline: none;
+  border-color: #2d8cf8;
+}
+#wod-wrapper select option {
+  background: #071426;
+  color: #e7f2ff;
+}
+#wod-wrapper input[type="radio"] {
+  accent-color: #2d8cf8;
+}
+
+/* ---------- Progress bars ---------- */
+
+#wod-wrapper .SkillPercentage {
+  background-color: #071426;
+  border: 1px solid #315f91;
+  box-shadow: inset 0 0 0 1px #071525;
+}
+#wod-wrapper .SkillPercentage .CaptionEdgeLeftTop,
+#wod-wrapper .SkillPercentage .CaptionEdgeRightTop,
+#wod-wrapper .SkillPercentage .CaptionEdgeLeftBottom,
+#wod-wrapper .SkillPercentage .CaptionEdgeRightBottom,
+#wod-wrapper .SkillPercentage .CaptionBorderTop,
+#wod-wrapper .SkillPercentage .CaptionBorderBottom,
+#wod-wrapper .SkillPercentage .CaptionVerticalLeft,
+#wod-wrapper .SkillPercentage .CaptionVerticalRight {
+  display: none;
+}
+#wod-wrapper .SkillPercentage .PercentageBar {
+  top: 2px;
+  left: 2px;
+  height: calc(100% - 4px);
+  max-width: calc(100% - 4px);
+  background: #14a99b !important;
+  transition: width .25s;
+}
+#wod-wrapper .SkillPercentage .Text {
+  top: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #000;
+}
+
+/* ---------- Code box: code on top, import input below it, and all 5 action
+   buttons combined into a single horizontal row at the bottom (instead of a
+   tall column of stacked buttons split across two rows on the right).
+   Scoped to .WodCodeBoxTable only -- the vocation-selection block reuses the
+   same .CodeExport/.CodeImport/.ButtonColumn class names for its own
+   (normally hidden-on-desktop) mobile code UI, so an unscoped rule here would
+   leak in and make that block visible too.
+   The row/tbody/ButtonColumn wrappers are all flattened with display:contents
+   so every button ends up a direct flex child of the same single container --
+   that's what keeps the gap between buttons uniform (nesting a second flex
+   container with its own `gap` inside a `gap`-ed parent double-counts the
+   spacing between the two groups). ---------- */
+#wod-wrapper .WodCodeBoxTable {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+#wod-wrapper .WodCodeBoxTable > tbody,
+#wod-wrapper .WodCodeBoxTable .WodCodeBoxRow,
+#wod-wrapper .WodCodeBoxTable .WodCodeBoxRow .ButtonColumn {
+  display: contents;
+}
+#wod-wrapper .WodCodeBoxRow .CodeColumn {
+  width: 100%;
+  padding-right: 0;
+}
+#wod-wrapper .WodCodeBoxRow:first-child .CodeColumn {
+  order: 1;
+}
+#wod-wrapper .WodCodeBoxRow:last-child .CodeColumn {
+  order: 2;
+}
+#wod-wrapper .WodCodeBoxRow .ButtonColumn .BigButton {
+  order: 3;
+  margin: 0 !important;
+}
+
+/* ---------- Locked / unlocked states ---------- */
+
+#wod-wrapper .Locked,
+#wod-wrapper .SkillValue.Locked,
+#wod-wrapper .LargePerkName.Locked,
+#wod-wrapper .LargePerkValue.Locked {
+  color: #7f899c;
+}
+#wod-wrapper .Unlocked,
+#wod-wrapper .SkillValue.Unlocked {
+  color: #e7f2ff;
+}
+#wod-wrapper .ModEffectValue.Locked .InvalidMod,
+#wod-wrapper .ModEffectValue .Locked .InvalidMod {
+  color: #e74336;
+}
+#wod-wrapper .ColorRed {
+  color: #e74336;
+  font-weight: bold;
+}
+
+/* ---------- Perks summary ---------- */
+
+/* No hover-only info in the summary: drop the ? tooltip icons and let the
+   value column take the room it needs so nothing is clipped */
+#PerksSummary .PerkTooltipContainer {
+  display: none;
+}
+#wod-wrapper #PerksSummary td .TableContent td:last-child {
+  max-width: none;
+  white-space: nowrap;
+}
+#wod-wrapper .PerksSummaryValue {
+  margin-right: 4px;
+}
+
+/* ---------- Text details ---------- */
+
+#wod-wrapper .PerksSummaryHeader {
+  color: #eef6ff;
+  letter-spacing: .5px;
+}
+#wod-wrapper .PerksSummaryNote {
+  color: #7897b8;
+  font-size: 11px;
+}
+#wod-wrapper .PerkFillInfo,
+#wod-wrapper #wod-selection-box-empty,
+#wod-wrapper #wod-information-box-empty {
+  color: #7897b8;
+  font-size: 11px;
+}
+#wod-code,
+#wod-code-mobile {
+  color: #75d5f0;
+  font-family: Consolas, Menlo, monospace;
+  font-size: 13px;
+  word-break: break-all;
+}
+
+/* ---------- Tooltip ---------- */
+
+#HelperDivContainer {
+  position: fixed;
+  z-index: 1000;
+  max-width: 260px;
+  padding: 8px 10px;
+  border: 1px solid #315f91;
+  border-radius: 5px;
+  background: #071426;
+  color: #e7f2ff;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+  text-align: left;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .5);
+  pointer-events: none;
+  margin-left: 0;
+}
+#HelperDivContainer #HelperDivHeadline {
+  color: #eef6ff;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+#HelperDivContainer #HelperDivText {
+  text-align: left;
+}
+#HelperDivContainer #HelperDivText .Locked {
+  color: #7f899c;
+}
+#HelperDivContainer #HelperDivText .Highlight {
+  color: #a7f52a;
+}
