@@ -2,32 +2,36 @@
   {
     "name": "Great Fire Wave - Death Echo",
     "spells": [
-      { "name": "Great Fire Wave", "ratio": 0.5 },
-      { "name": "Death Echo", "ratio": 0.5 }
+      { "name": "Great Fire Wave", "ratio": 0.4762 },
+      { "name": "Death Echo", "ratio": 0.4762 },
+      { "name": "Hell's Core", "ratio": 0.0476 }
     ]
   },
   {
     "name": "Death Echo - Energy Wave - Death Echo - Great Death Beam",
     "spells": [
-      { "name": "Death Echo", "ratio": 0.5 },
-      { "name": "Energy Wave", "ratio": 0.25 },
-      { "name": "Great Death Beam", "ratio": 0.25 }
+      { "name": "Death Echo", "ratio": 0.4762 },
+      { "name": "Energy Wave", "ratio": 0.2381 },
+      { "name": "Great Death Beam", "ratio": 0.2381 },
+      { "name": "Hell's Core", "ratio": 0.0476 }
     ]
   },
   {
     "name": "Great Fire Wave - Energy Wave - Great Fire Wave - Great Energy Beam",
     "spells": [
-      { "name": "Great Fire Wave", "ratio": 0.5 },
-      { "name": "Energy Wave", "ratio": 0.25 },
-      { "name": "Great Energy Beam", "ratio": 0.25 }
+      { "name": "Great Fire Wave", "ratio": 0.4762 },
+      { "name": "Energy Wave", "ratio": 0.2381 },
+      { "name": "Great Energy Beam", "ratio": 0.2381 },
+      { "name": "Hell's Core", "ratio": 0.0476 }
     ]
   },
   {
     "name": "Energy Wave - Death Echo - Great Energy Beam - Death Echo",
     "spells": [
-      { "name": "Energy Wave", "ratio": 0.25 },
-      { "name": "Death Echo", "ratio": 0.5 },
-      { "name": "Great Energy Beam", "ratio": 0.25 }
+      { "name": "Energy Wave", "ratio": 0.2381 },
+      { "name": "Death Echo", "ratio": 0.4762 },
+      { "name": "Great Energy Beam", "ratio": 0.2381 },
+      { "name": "Hell's Core", "ratio": 0.0476 }
     ]
   }
 ]
