@@ -36,6 +36,11 @@ const PURE_SKILL_STANCE_IDS = new Set([
   12, // Virtue of Justice (monk, +8% fist fighting)
 ]);
 
+// Stances the API marks selectable but which are purely defensive and never affect damage output.
+const NON_DAMAGE_STANCE_IDS = new Set([
+  14, // Virtue of Sustain (monk, healing/defense stance)
+]);
+
 // Burst/beam spells are returned by the API as one card per tier (No Bonus, Stage 1-3).
 // Which tier is live depends on the governing wheel revelation perk, so only that tier is shown.
 const STAGED_SCOPE_PERK = {
@@ -205,7 +210,7 @@ function sanitizeState(candidate) {
   if (!candidate || typeof candidate !== "object") return fallback;
   const stats = { ...fallback.stats, ...(candidate.stats && typeof candidate.stats === "object" ? candidate.stats : {}) };
   stats.vocation = typeof stats.vocation === "string" ? stats.vocation : fallback.stats.vocation;
-  stats.stanceIds = Array.isArray(stats.stanceIds) ? stats.stanceIds.map(Number).filter((id) => Number.isInteger(id) && !PURE_SKILL_STANCE_IDS.has(id)) : [];
+  stats.stanceIds = Array.isArray(stats.stanceIds) ? stats.stanceIds.map(Number).filter((id) => Number.isInteger(id) && !PURE_SKILL_STANCE_IDS.has(id) && !NON_DAMAGE_STANCE_IDS.has(id)) : [];
   stats.critChance = BASE_CRIT_CHANCE;
   stats.critDamage = BASE_CRIT_DAMAGE;
   if (stats.vocation === "paladin" && candidate.stats?.magicLevel == null) stats.magicLevel = DEFAULT_PALADIN_MAGIC_LEVEL;
@@ -493,7 +498,7 @@ function createBuild(key) {
 
   function renderStances() {
     const fieldset = $("stanceChoices");
-    const choices = metadata.stances.filter((stance) => !PURE_SKILL_STANCE_IDS.has(stance.id) && (stance.selectable || LOCAL_STANCE_MODS[stance.id]) && stance.vocation === state.stats.vocation);
+    const choices = metadata.stances.filter((stance) => !PURE_SKILL_STANCE_IDS.has(stance.id) && !NON_DAMAGE_STANCE_IDS.has(stance.id) && (stance.selectable || LOCAL_STANCE_MODS[stance.id]) && stance.vocation === state.stats.vocation);
     const legend = document.createElement("legend");
     legend.textContent = "Active stances";
     fieldset.replaceChildren(legend);
@@ -935,10 +940,13 @@ function createBuild(key) {
 
   // The tier-matched card for a staged scope (Ice Burst, Terra Burst, the beam spells, ...) at
   // whatever stage the wheel currently has unlocked - "No Bonus" when the perk isn't active yet.
+  // The stage 1-3 sibling cards are marked selectable:false (they're hidden from the spell
+  // search so users can't add them directly) but that's exactly the card we need here, so
+  // selectability isn't part of this match - only the search step (addSpell) should filter on it.
   function stagedSpellFor(scope) {
     const stage = activeSpellStages()[scope] ?? 0;
     return metadata.spells.find((candidate) => candidate.scope === scope && (candidate.stage ?? 0) === stage
-      && candidate.selectable !== false && vocationAllows(candidate));
+      && vocationAllows(candidate));
   }
 
   // Swaps a matched spell for its wheel-stage-correct sibling card, so picking "Ice Burst" always
