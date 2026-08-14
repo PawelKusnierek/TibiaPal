@@ -1259,7 +1259,8 @@ function refreshWheelPresetOptions(build, selectedName = "") {
 function saveCurrentWheelPreset(build) {
   const code = String(build.state.wheelPlanner.code ?? "").trim();
   if (!WHEEL_CODE_PATTERN.test(code)) { setWheelImportError("Build or import a wheel before saving it as a preset."); return; }
-  const name = window.prompt("Name this wheel preset:")?.trim();
+  const selectedName = document.querySelector("#wheelPresetSelect")?.value ?? "";
+  const name = window.prompt("Name this wheel preset:", selectedName)?.trim();
   if (!name) return;
   const vocation = build.state.stats.vocation;
   const all = loadWheelPresets();
