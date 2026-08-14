@@ -563,11 +563,18 @@ function createBuild(key) {
   }
 
   function typedProficiencyPerk(effect) {
+    const type = Number(effect.type);
+    if (type === 25 || type === 26) {
+      const skill = item("weapons", state.weapon.id)?.skill;
+      const prefix = skill === "magic" ? "magic-level" : skill;
+      const scope = type === 25 ? "auto-attack" : "spell";
+      return prefix ? metadata.perks.find((perk) => perk.bonusType === `${prefix}-percent-extra` && perk.scope === scope && perk.selectable !== false) ?? null : null;
+    }
     let bonusType = null;
-    if (Number(effect.type) === 28) bonusType = "alpha-strike";
-    if (Number(effect.type) === 29) bonusType = "omega-strike";
-    if (Number(effect.type) === 30) bonusType = "armor-penetration";
-    if (Number(effect.type) === 31) {
+    if (type === 28) bonusType = "alpha-strike";
+    if (type === 29) bonusType = "omega-strike";
+    if (type === 30) bonusType = "armor-penetration";
+    if (type === 31) {
       const element = ({ 1: "physical", 8: "energy", 16: "earth", 32: "fire", 64: "ice", 128: "holy", 256: "death" })[Number(effect.elementId)];
       if (element) bonusType = `${element}-pierce-weapon`;
     }

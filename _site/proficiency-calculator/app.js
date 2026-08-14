@@ -277,8 +277,13 @@ function shapingRecordToPerk(record) {
     effect = effects[record.name] ?? `${record.name} +{value}%`;
   }
   const icon = `images/proficiency/shaping/${record.icon.split("/").pop()}`;
+  const typedTypes = {
+    "Alpha Strike Extra Damage": 28, "Omega Strike Extra Damage": 29, "Armor Penetration": 30,
+    "Highest Combat Skill Percentage Auto-Attack Damage": 25, "Highest Combat Skill Percentage Spell Damage": 26,
+    "Highest Combat Skill Percentage Spell Healing": 27,
+  };
   return {
-    Type: spellMatch ? 5 : -1,
+    Type: spellMatch ? 5 : typedTypes[record.name] ?? -1,
     ShapeKey: record.sourceUrl.split("/").pop(),
     ShapeName: title,
     ShapeCategory: category,
