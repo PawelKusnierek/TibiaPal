@@ -173,4 +173,9 @@ scripts: <script type="module" src="/damage-calculator/app.js?v=20260812-3"></sc
       </footer>
     </div>
   </div>
+
+  <!-- Boot-time only: resolve the inactive build's wheel code / proficiency token into perks
+       without opening its editor, so its damage isn't silently calculated as if it had none. -->
+  <iframe id="wheelHydrateFrame" title="Wheel of Destiny hydrator" hidden></iframe>
+  <iframe id="proficiencyHydrateFrame" title="Weapon Proficiency hydrator" hidden></iframe>
 </section>

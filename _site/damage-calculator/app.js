@@ -95,6 +95,12 @@ let activeBuildKey = null;
 let activeTabKey = "a";
 let compareInFlight = null;
 let compareSignature = null;
+// Only the active build's planner state is live in the shared modal iframes at boot - the
+// other build's wheel code / proficiency token would otherwise sit un-decoded (and so
+// contribute zero bonus) until its editor happens to be opened. These two hidden iframes
+// resolve it once in the background instead. See hydrateInactiveBuild().
+let wheelHydrateKey = null;
+let proficiencyHydrateKey = null;
 
 const defaultState = () => ({
   stats: {
@@ -1192,6 +1198,21 @@ function initializePlannerFrames(build) {
   setPlannerFrameSrc(document.querySelector("#proficiencyPlannerFrame"), plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260806-2", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token }));
 }
 
+// Silently resolves a build's wheel code / proficiency token into perks via the hidden
+// hydrate iframes, for whichever build isn't backed by the live modal iframes (see the
+// module-level comment above wheelHydrateKey). No-ops for a build with nothing to resolve
+// or whose effects are already populated (e.g. its editor has already been opened).
+function hydrateInactiveBuild(build) {
+  if (build.state.wheelPlanner.code && !build.state.wheelPlanner.effects.length) {
+    wheelHydrateKey = build.key;
+    document.querySelector("#wheelHydrateFrame").src = plannerUrl("/wheel-planner.html", { embed: "damage", v: "20260805-8", vocation: build.state.stats.vocation, code: build.state.wheelPlanner.code });
+  }
+  if (build.state.proficiencyPlanner.token && !build.state.proficiencyPlanner.effects.length) {
+    proficiencyHydrateKey = build.key;
+    document.querySelector("#proficiencyHydrateFrame").src = plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260806-2", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token });
+  }
+}
+
 function syncWheelGrades(build) {
   document.querySelector("#wheelPlannerFrame").contentWindow?.postMessage({
     type: "tibiapal:set-wheel-grades",
@@ -1818,16 +1839,20 @@ async function triggerCompare(force = false) {
 // kicking off the comparison when the Results tab is opened.
 function wireTabs() {
   const resetButton = document.querySelector("#resetBuild");
+  const activateTab = (tabKey) => {
+    activeTabKey = tabKey;
+    resetButton.hidden = tabKey === "results" || tabKey === "howto";
+    if (tabKey === "results") triggerCompare();
+  };
   document.querySelectorAll("#damageTabs .tablinks").forEach((button) => {
-    button.addEventListener("click", () => {
-      const tabKey = button.dataset.dcTab;
-      activeTabKey = tabKey;
-      resetButton.hidden = tabKey === "results" || tabKey === "howto";
-      if (tabKey === "results") triggerCompare();
-    });
+    button.addEventListener("click", () => activateTab(button.dataset.dcTab));
   });
-  activeTabKey = "a";
-  resetButton.hidden = false;
+  // onload.js's enable_default_tabs() already shows the right panel for a "#results" deep
+  // link (it matches the hash to a .tabcontent id directly), but it only flips CSS display -
+  // it doesn't know about the dc-tab click handler above, so the comparison never actually
+  // ran. Mirror that same activation here so a shared link's Results tab isn't stuck on "-".
+  if (location.hash.slice(1) === "results") activateTab("results");
+  else { activeTabKey = "a"; resetButton.hidden = false; }
 }
 
 function wireGlobalEvents() {
@@ -1858,6 +1883,16 @@ function wireGlobalEvents() {
     syncPlannerVocation(build, "proficiency");
     document.querySelector("#proficiencyPlannerFrame").contentWindow?.postMessage({ type: "tibiapal:request-proficiency-build" }, window.location.origin);
   });
+  document.querySelector("#wheelHydrateFrame").addEventListener("load", (event) => {
+    const build = builds[wheelHydrateKey];
+    if (!build) return;
+    syncWheelGrades(build);
+    event.currentTarget.contentWindow?.postMessage({ type: "tibiapal:request-wheel-build" }, window.location.origin);
+  });
+  document.querySelector("#proficiencyHydrateFrame").addEventListener("load", (event) => {
+    if (!builds[proficiencyHydrateKey]) return;
+    event.currentTarget.contentWindow?.postMessage({ type: "tibiapal:request-proficiency-build" }, window.location.origin);
+  });
   setupEffectsInfo();
   document.querySelector("#closePlannerModal").addEventListener("click", closePlanner);
   document.querySelector("#donePlannerModal").addEventListener("click", closePlanner);
@@ -1865,12 +1900,31 @@ function wireGlobalEvents() {
   document.addEventListener("keydown", (event) => { if (event.key === "Escape" && !plannerModal.hidden) closePlanner(); });
   window.addEventListener("message", (event) => {
     if (event.origin !== window.location.origin) return;
-    const build = builds[activeBuildKey];
-    if (!build) return;
     const wheelFrame = document.querySelector("#wheelPlannerFrame");
     const proficiencyFrame = document.querySelector("#proficiencyPlannerFrame");
-    if (event.source === wheelFrame.contentWindow && event.data?.type === "tibiapal:wheel-build" && !wheelFrame.dataset.pendingNav) receiveWheelBuild(build, event.data.payload);
-    if (event.source === proficiencyFrame.contentWindow && event.data?.type === "tibiapal:proficiency-build" && !proficiencyFrame.dataset.pendingNav) receiveProficiencyBuild(build, event.data.payload);
+    const wheelHydrateFrame = document.querySelector("#wheelHydrateFrame");
+    const proficiencyHydrateFrame = document.querySelector("#proficiencyHydrateFrame");
+    const build = builds[activeBuildKey];
+    if (build) {
+      if (event.source === wheelFrame.contentWindow && event.data?.type === "tibiapal:wheel-build" && !wheelFrame.dataset.pendingNav) receiveWheelBuild(build, event.data.payload);
+      if (event.source === proficiencyFrame.contentWindow && event.data?.type === "tibiapal:proficiency-build" && !proficiencyFrame.dataset.pendingNav) receiveProficiencyBuild(build, event.data.payload);
+    }
+    // A "#results" deep link kicks off triggerCompare() before this background hydration can
+    // possibly finish (it's a cross-frame round trip) - recompute once it lands so the Results
+    // tab doesn't stick with Build B's pre-hydration (zero-bonus) numbers. Chained after
+    // whatever compare is already in flight, rather than called directly, since triggerCompare
+    // treats an in-flight call as a no-op and would otherwise ignore the forced recompute.
+    const recomputeResultsIfNeeded = () => { if (activeTabKey === "results") Promise.resolve(compareInFlight).finally(() => triggerCompare(true)); };
+    if (event.source === wheelHydrateFrame.contentWindow && event.data?.type === "tibiapal:wheel-build") {
+      const target = builds[wheelHydrateKey];
+      wheelHydrateKey = null;
+      if (target) { receiveWheelBuild(target, event.data.payload); recomputeResultsIfNeeded(); }
+    }
+    if (event.source === proficiencyHydrateFrame.contentWindow && event.data?.type === "tibiapal:proficiency-build") {
+      const target = builds[proficiencyHydrateKey];
+      proficiencyHydrateKey = null;
+      if (target) { receiveProficiencyBuild(target, event.data.payload); recomputeResultsIfNeeded(); }
+    }
   });
   document.querySelector("#resetBuild").addEventListener("click", () => {
     const build = builds[activeTabKey];
@@ -1955,9 +2009,12 @@ async function loadMetadata() {
     });
     initializePlannerFrames(builds.a);
     // Build A's iframe is the one live at boot, so route its self-reported build there;
-    // Build B's wheel/proficiency perks hydrate the first time its own planner is opened.
+    // Build B's wheel/proficiency perks additionally hydrate in the background right away
+    // (see hydrateInactiveBuild) so a shared A/B link calculates correctly even if Build B's
+    // own planner is never opened.
     activeBuildKey = "a";
     wireGlobalEvents();
+    hydrateInactiveBuild(builds.b);
     wireTabs();
     saveAllState();
     refreshAllSavedBuildOptions();

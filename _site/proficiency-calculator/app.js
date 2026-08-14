@@ -697,10 +697,17 @@ function renderBuildSummary() {
   const grouped = new Map();
   for (const { level, perk } of selected) {
     const key = summaryKey(perk);
-    const entry = grouped.get(key) ?? { perk: { ...perk, Value: 0 }, levels: [] };
-    entry.perk.Value += Number(perk.Value) || 0;
-    entry.levels.push(level);
-    grouped.set(key, entry);
+    const entry = grouped.get(key);
+    if (entry) {
+      entry.perk.Value += Number(perk.Value) || 0;
+      // The stacked total no longer matches any single level's wording (e.g. two
+      // "+4%"/"+8%" picks stacking to "+12%"), so drop the stale per-level text and
+      // let perkLabel() fall back to its generic "name + formatted total" branch.
+      entry.perk.sourceDescription = null;
+      entry.levels.push(level);
+    } else {
+      grouped.set(key, { perk: { ...perk }, levels: [level] });
+    }
   }
 
   $("#buildSummaryMeta").textContent = `${profile.Name} · ${selected.length} selected level${selected.length === 1 ? "" : "s"}`;
