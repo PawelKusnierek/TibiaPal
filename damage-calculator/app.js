@@ -10,6 +10,10 @@ const METADATA_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
 const BASE_CRIT_CHANCE = 10;
 const BASE_CRIT_DAMAGE = 50;
 const DEFAULT_PALADIN_MAGIC_LEVEL = 35;
+const DEFAULT_CASTER_MAGIC_LEVEL = 120;
+// Default skill for a fresh build, pre-filled to a value that already includes
+// that vocation's pure +skill stance bonus (Blood Rage / Sharpshooter / Virtue of Justice).
+const DEFAULT_SKILL_BY_VOCATION = { knight: 160, paladin: 180, monk: 140 };
 const META_RESOURCES = ["vocations", "stances", "weapons", "ammo", "shields", "perks", "spells", "creatures", "charms"];
 const FANDOM_ICON_ALIASES = { "exec-throw": "executioner-s-throw", "hells-core": "hell-s-core" };
 
@@ -19,11 +23,18 @@ const FANDOM_ICON_ALIASES = { "exec-throw": "executioner-s-throw", "hells-core":
 // `multiplier` scales the stance's own stat; `addFromStat`/`addFactor` add a share of a
 // different stat on top (e.g. Divine Defiance turning distance fighting into magic level).
 const LOCAL_STANCE_MODS = {
-  1: { stat: "skill", multiplier: 1.30, note: "+30% skill" },        // Blood Rage (knight)
-  3: { stat: "skill", multiplier: 1.32, note: "+32% distance" },     // Sharpshooter (paladin)
   4: { stat: "magicLevel", addFromStat: "skill", addFactor: 0.06, note: "+6% distance as holy magic level" }, // Divine Defiance (paladin)
-  10: { stat: "magicLevel", multiplier: 1.10, note: "+10% magic level" }, // Elemental Synthesis (druid)
+  10: { stat: "magicLevel", multiplier: 1.10, note: "+10% magic level for ice/earth spells" }, // Elemental Synthesis (druid)
 };
+
+// Pure +skill stances (a flat % boost to the same skill the calculator already asks for)
+// aren't shown as a toggle at all - the user is expected to type their skill value with
+// the bonus already baked in, same as any other passive skill increase.
+const PURE_SKILL_STANCE_IDS = new Set([
+  1,  // Blood Rage (knight, +30% skill)
+  3,  // Sharpshooter (paladin, +32% distance)
+  12, // Virtue of Justice (monk, +8% fist fighting)
+]);
 
 // Burst/beam spells are returned by the API as one card per tier (No Bonus, Stage 1-3).
 // Which tier is live depends on the governing wheel revelation perk, so only that tier is shown.
@@ -67,8 +78,16 @@ const SPELL_AVERAGE_HITS_BY_KEY = Object.fromEntries(
     .map(([name, value]) => [normalized(name), value])
 );
 
+// Staged cards (Ice Burst, the beam spells, ...) carry a "(No Bonus)"/"(Stage 2)" suffix in
+// their API name — split it off so both the average-hits lookup and the rotation row display
+// can work off the plain spell name, with the tier available separately when it's useful.
+function spellNameParts(name) {
+  const match = String(name ?? "").match(/^(.*?)\s*\(([^)]*)\)\s*$/);
+  return match ? { base: match[1], suffix: match[2] } : { base: String(name ?? ""), suffix: null };
+}
+
 function averageHitsFor(spellName) {
-  return numberOrZero(SPELL_AVERAGE_HITS_BY_KEY[normalized(spellName)]) || 1;
+  return numberOrZero(SPELL_AVERAGE_HITS_BY_KEY[normalized(spellNameParts(spellName).base)]) || 1;
 }
 
 let plannerCloseTimer = null;
@@ -79,7 +98,7 @@ let compareSignature = null;
 
 const defaultState = () => ({
   stats: {
-    vocation: "knight", level: 1000, bonus: 0, skill: 120, magicLevel: 13,
+    vocation: "knight", level: 1000, bonus: 0, skill: DEFAULT_SKILL_BY_VOCATION.knight, magicLevel: 13,
     critChance: BASE_CRIT_CHANCE, critDamage: BASE_CRIT_DAMAGE, fatalChance: 0, transcendenceChance: 0,
     hitPoints: 0, manaPoints: 0, baseMagicLevel: 0, axe: 0, club: 0,
     sword: 0, fist: 0, distance: 0, shielding: 0, fishing: 0,
@@ -180,10 +199,11 @@ function sanitizeState(candidate) {
   if (!candidate || typeof candidate !== "object") return fallback;
   const stats = { ...fallback.stats, ...(candidate.stats && typeof candidate.stats === "object" ? candidate.stats : {}) };
   stats.vocation = typeof stats.vocation === "string" ? stats.vocation : fallback.stats.vocation;
-  stats.stanceIds = Array.isArray(stats.stanceIds) ? stats.stanceIds.map(Number).filter(Number.isInteger) : [];
+  stats.stanceIds = Array.isArray(stats.stanceIds) ? stats.stanceIds.map(Number).filter((id) => Number.isInteger(id) && !PURE_SKILL_STANCE_IDS.has(id)) : [];
   stats.critChance = BASE_CRIT_CHANCE;
   stats.critDamage = BASE_CRIT_DAMAGE;
   if (stats.vocation === "paladin" && candidate.stats?.magicLevel == null) stats.magicLevel = DEFAULT_PALADIN_MAGIC_LEVEL;
+  if ((stats.vocation === "druid" || stats.vocation === "sorcerer") && candidate.stats?.magicLevel == null) stats.magicLevel = DEFAULT_CASTER_MAGIC_LEVEL;
   const rows = (key, defaults) => Array.isArray(candidate[key])
     ? candidate[key].filter((row) => row && Number.isInteger(Number(row.id))).map((row) => ({ ...defaults, ...row, id: Number(row.id) }))
     : [];
@@ -434,7 +454,8 @@ function createBuild(key) {
     if (!preset) return;
     const rows = [{ id: 1, targets: state.stats.vocation === "paladin" ? 6 : 1, ratio: 1 }];
     preset.spells.forEach((entry) => {
-      const spell = matchByName("spells", entry.name, (candidate) => candidate.selectable !== false && vocationAllows(candidate));
+      const matched = matchByName("spells", entry.name, (candidate) => candidate.selectable !== false && vocationAllows(candidate));
+      const spell = resolveStagedSpell(matched);
       if (spell && !rows.some((row) => row.id === spell.id)) rows.push({ id: spell.id, targets: averageHitsFor(spell.name), ratio: numberOrZero(entry.ratio) || 1 });
     });
     state.rotation = rows;
@@ -466,7 +487,7 @@ function createBuild(key) {
 
   function renderStances() {
     const fieldset = $("stanceChoices");
-    const choices = metadata.stances.filter((stance) => (stance.selectable || LOCAL_STANCE_MODS[stance.id]) && stance.vocation === state.stats.vocation);
+    const choices = metadata.stances.filter((stance) => !PURE_SKILL_STANCE_IDS.has(stance.id) && (stance.selectable || LOCAL_STANCE_MODS[stance.id]) && stance.vocation === state.stats.vocation);
     const legend = document.createElement("legend");
     legend.textContent = "Active stances";
     fieldset.replaceChildren(legend);
@@ -699,9 +720,10 @@ function createBuild(key) {
       element.className = "dc-data-row dc-rotation-row";
       const identity = document.createElement("div");
       const title = document.createElement("strong");
-      title.textContent = spell.name;
+      const { base: spellName, suffix: spellTier } = spellNameParts(spell.name);
+      title.textContent = spellName;
       const hint = document.createElement("small");
-      hint.textContent = [spell.spellType, spell.element, spell.targetsLabel].filter(Boolean).join(" · ");
+      hint.textContent = [spell.spellType, spell.element, spell.targetsLabel, spellTier].filter(Boolean).join(" · ");
       identity.append(title, hint);
       const targets = numericRowInput(row, "targets", 0, "Average targets", changed);
       const ratio = numericRowInput(row, "ratio", 0, "Cast ratio", changed);
@@ -769,9 +791,10 @@ function createBuild(key) {
 
   function addSpell() {
     const input = $("spellSearch");
-    const spell = matchByName("spells", input.value, (entry) => entry.selectable !== false && vocationAllows(entry));
-    if (!spell) { input.setCustomValidity("Choose a spell from the list."); input.reportValidity(); return; }
+    const matched = matchByName("spells", input.value, (entry) => entry.selectable !== false && vocationAllows(entry));
+    if (!matched) { input.setCustomValidity("Choose a spell from the list."); input.reportValidity(); return; }
     input.setCustomValidity("");
+    const spell = resolveStagedSpell(matched);
     if (!state.rotation.some((row) => row.id === spell.id)) state.rotation.push({ id: spell.id, targets: averageHitsFor(spell.name), ratio: 1 });
     input.value = "";
     renderRotation();
@@ -883,15 +906,50 @@ function createBuild(key) {
     }
   }
 
+  // Reads off state.wheelPerks (already resolved through mappedPlannerPerks/effectNumber, which
+  // understands both "Stage N" text and roman-numeral tiers like "II") instead of re-parsing raw
+  // wheel effect text here - a second, weaker parser here previously missed roman-numeral tiers
+  // and effect text living in .detail/.label instead of .name/.value, so it always read stage 0.
   function activeSpellStages() {
-    const effects = state.wheelPlanner.effects ?? [];
     const result = {};
     Object.entries(STAGED_SCOPE_PERK).forEach(([scope, perkName]) => {
-      const effect = effects.find((entry) => normalized(entry.name).startsWith(perkName));
-      const match = effect ? `${effect.name ?? ""} ${effect.value ?? ""}`.match(/stage\s*([0-3])/i) : null;
-      result[scope] = match ? Number(match[1]) : 0;
+      const perk = metadata.perks.find((candidate) => normalized(candidate.name).startsWith(perkName) && candidate.selectable !== false);
+      const row = perk ? state.wheelPerks.find((entry) => entry.id === perk.id) : null;
+      result[scope] = row ? Math.max(0, Math.min(3, Math.round(numberOrZero(row.value)))) : 0;
     });
     return result;
+  }
+
+  // The tier-matched card for a staged scope (Ice Burst, Terra Burst, the beam spells, ...) at
+  // whatever stage the wheel currently has unlocked - "No Bonus" when the perk isn't active yet.
+  function stagedSpellFor(scope) {
+    const stage = activeSpellStages()[scope] ?? 0;
+    return metadata.spells.find((candidate) => candidate.scope === scope && (candidate.stage ?? 0) === stage
+      && candidate.selectable !== false && vocationAllows(candidate));
+  }
+
+  // Swaps a matched spell for its wheel-stage-correct sibling card, so picking "Ice Burst" always
+  // lands on the tier that matches the character's current Twin Bursts (etc.) stage.
+  function resolveStagedSpell(spell) {
+    if (!spell?.scope || !(spell.scope in STAGED_SCOPE_PERK)) return spell;
+    return stagedSpellFor(spell.scope) ?? spell;
+  }
+
+  // Called whenever the wheel changes: re-points existing rotation rows at the sibling card for
+  // their scope's new stage, so a rotation built before a wheel edit doesn't keep scoring the
+  // stale tier.
+  function syncStagedRotationStages() {
+    let mutated = false;
+    state.rotation = state.rotation.map((row) => {
+      const spell = item("spells", row.id);
+      if (!spell?.scope || !(spell.scope in STAGED_SCOPE_PERK)) return row;
+      const staged = stagedSpellFor(spell.scope);
+      if (!staged || staged.id === row.id) return row;
+      mutated = true;
+      return { ...row, id: staged.id };
+    });
+    if (mutated) renderRotation();
+    return mutated;
   }
 
   function visibleResultSpells(spells) {
@@ -967,6 +1025,8 @@ function createBuild(key) {
           state.stats.stanceIds = [];
           state.stats.bonus = 0;
           if (state.stats.vocation === "paladin") state.stats.magicLevel = DEFAULT_PALADIN_MAGIC_LEVEL;
+          if (state.stats.vocation === "druid" || state.stats.vocation === "sorcerer") state.stats.magicLevel = DEFAULT_CASTER_MAGIC_LEVEL;
+          if (DEFAULT_SKILL_BY_VOCATION[state.stats.vocation]) state.stats.skill = DEFAULT_SKILL_BY_VOCATION[state.stats.vocation];
           state.wheelPlanner = { code: "", vocation: state.stats.vocation, promotionPoints: 0, bonus: 0, effects: [], gemGrades: {} };
           state.proficiencyPlanner = { token: "", weaponName: "", weaponSprite: "", vocation: state.stats.vocation, effects: [] };
           state.manualPerks = state.manualPerks.filter((row) => vocationAllows(item("perks", row.id)));
@@ -1012,6 +1072,7 @@ function createBuild(key) {
     renderEquipment,
     mappedPlannerPerks,
     visibleResultSpells,
+    syncStagedRotationStages,
     wireEvents,
     changed,
     calculate,
@@ -1426,6 +1487,7 @@ function receiveWheelBuild(build, payload) {
     syncPlannerVocation(build, "proficiency");
   }
   state.wheelPerks = build.mappedPlannerPerks("wheel");
+  build.syncStagedRotationStages();
   build.renderStatControls();
   build.renderSyncedEffects("wheel");
   document.querySelector("#plannerModalPoints strong").textContent = Number(payload.promotionPoints ?? 0).toLocaleString("en-US");
@@ -1487,7 +1549,7 @@ function renderComparisonSummary(a, b) {
     const bValue = Number(b.summary?.[summaryKey]);
     row.querySelector(".dc-cmp-value-a").textContent = formatDamage(aValue);
     row.querySelector(".dc-cmp-value-b").textContent = formatDamage(bValue);
-    row.querySelector(".dc-diff-badge-slot").replaceChildren(diffBadgeEl(percentDiff(aValue, bValue)));
+    row.querySelector(".dc-diff-badge-slot").replaceChildren(diffBadgeEl(percentDiff(bValue, aValue)));
   });
 }
 
@@ -1507,7 +1569,7 @@ function comparisonResultRow(name, spellMeta, aSpell, bSpell, iconFn = resultIco
   const bValue = Number(spellMetric(bSpell, "effective", "avg"));
   const aEl = document.createElement("span"); aEl.className = "dc-cmp-value dc-cmp-value-a"; aEl.textContent = aSpell ? formatDamage(aValue) : "—";
   const bEl = document.createElement("span"); bEl.className = "dc-cmp-value dc-cmp-value-b"; bEl.textContent = bSpell ? formatDamage(bValue) : "—";
-  row.append(identity, aEl, diffBadgeEl(aSpell && bSpell ? percentDiff(aValue, bValue) : null), bEl);
+  row.append(identity, aEl, diffBadgeEl(aSpell && bSpell ? percentDiff(bValue, aValue) : null), bEl);
   return row;
 }
 
@@ -1536,7 +1598,7 @@ function comparisonEntries(a, b) {
     const id = idOf(spell);
     if (!entries.has(id)) {
       const meta = item("spells", spell.id) ?? metadata.spells.find((candidate) => candidate.name === spell.name);
-      entries.set(id, { id, name: spell.name, meta });
+      entries.set(id, { id, name: spellNameParts(spell.name).base, meta });
       order.push(id);
     }
   }));
@@ -1611,7 +1673,7 @@ function exportSummarySection(a, b) {
     const bValue = Number(b.summary?.[summaryKey]);
     const aEl = document.createElement("span"); aEl.className = "dc-cmp-value dc-cmp-value-a"; aEl.textContent = formatDamage(aValue);
     const bEl = document.createElement("span"); bEl.className = "dc-cmp-value dc-cmp-value-b"; bEl.textContent = formatDamage(bValue);
-    row.append(labelEl, aEl, diffBadgeEl(percentDiff(aValue, bValue)), bEl);
+    row.append(labelEl, aEl, diffBadgeEl(percentDiff(bValue, aValue)), bEl);
     summary.append(row);
   });
   section.append(heading, summary);
