@@ -283,56 +283,64 @@
     {
         "level":  "90+",
         "place":  "Nightmare Scions Krailos",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.2kk",
+        "loot":  "100k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Holy Portal",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.1kk",
+        "loot":  "400k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Dragon Lords Fenrock",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "900k",
+        "loot":  "0k",
+        "runes":  "Crystalline Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "90+",
+        "place":  "Dragon Lords Darashia",
+        "raw_exp":  "750k",
+        "loot":  "0k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Edron South Were",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Crystalline Arrows, Ethereal",
+        "raw_exp":  "1.55kk",
+        "loot":  "400k",
+        "runes":  "Crystalline Arrows, Ethereal, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Grimvale -4",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.3kk",
+        "loot":  "200k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Werehyaenas -1",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "850k",
+        "loot":  "10k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
-        "place":  "Oramond Minos",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Oramond Minos South",
+        "raw_exp":  "1.3kk",
+        "loot":  "100k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -347,129 +355,137 @@
     {
         "level":  "90+",
         "place":  "Mini Rosha",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.15kk",
+        "loot":  "400k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Yielothax",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Crystalline Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "90+",
-        "place":  "Feyrist Surface",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Crystalline Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "90+",
-        "place":  "Ice Witch Temple",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "950k",
+        "loot":  "150k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Old Masonry (Death portal)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.05kk",
+        "loot":  "100k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Quaras Liberty Bay",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Crystalline Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "90+",
-        "place":  "Misguided",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.2kk",
+        "loot":  "150k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Putrid Mummy",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "700k",
+        "loot":  "700k",
+        "runes":  "Crystalline Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "90+",
+        "place":  "Muggy Plains",
+        "raw_exp":  "1.05kk",
+        "loot":  "400k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Lizard Chosens",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Crystalline Arrows, Ethereal",
+        "raw_exp":  "1.4kk",
+        "loot":  "250k",
+        "runes":  "Crystalline Arrows, Ethereal, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Orc Cults",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.15kk",
+        "loot":  "300k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Dark Faun Cave",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Crystalline Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "90+",
-        "place":  "Edron Vampire Crypt",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "950k",
+        "loot":  "400k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Yalahar Sunken Quarter",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.4kk",
+        "loot":  "150k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Okolnir Frost Dragons",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.3kk",
+        "loot":  "-100k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Edron Vampire Crypt -4",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "950k",
+        "loot":  "400k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "100+",
         "place":  "Ravenous Lava Lurkers",
+        "raw_exp":  "2.1kk",
+        "loot":  "-250k",
+        "runes":  "Shatterstorm Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "120+",
+        "place":  "Misguided",
+        "raw_exp":  "1.2kk",
+        "loot":  "50k",
+        "runes":  "Crystalline Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "90+",
+        "place":  "Edron Heroes -2 & -3",
+        "raw_exp":  "1.75kk",
+        "loot":  "50k",
+        "runes":  "Shatterstorm Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "90+",
+        "place":  "Carlin Cults",
+        "raw_exp":  "1.5kk",
+        "loot":  "50k",
+        "runes":  "Crystalline Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "120+",
+        "place":  "Lizard City",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Shatterstorm Arrows, Ethereal",
+        "runes":  "Crystalline Arrows, Ethereal, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -506,14 +522,6 @@
     },
     {
         "level":  "150+",
-        "place":  "Ravenous Lava Lurkers",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
         "place":  "Exotic Cave",
         "raw_exp":  "-",
         "loot":  "-",
@@ -530,30 +538,6 @@
     },
     {
         "level":  "150+",
-        "place":  "Edron Heroes -3",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
-        "place":  "Carlin Cults",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
-        "place":  "Edron Heroes -2",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
         "place":  "Oramond West",
         "raw_exp":  "-",
         "loot":  "-",
@@ -561,7 +545,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "200+",
+        "level":  "150+",
         "place":  "Yalahar Grim Reapers",
         "raw_exp":  "-",
         "loot":  "-",
@@ -569,7 +553,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "200+",
+        "level":  "150+",
         "place":  "Pirats",
         "raw_exp":  "-",
         "loot":  "-",
@@ -577,7 +561,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "200+",
+        "level":  "150+",
         "place":  "Lower Spike",
         "raw_exp":  "-",
         "loot":  "-",
@@ -601,7 +585,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "200+",
+        "level":  "150+",
         "place":  "Werehyaenas North",
         "raw_exp":  "-",
         "loot":  "-",
@@ -634,22 +618,6 @@
     },
     {
         "level":  "200+",
-        "place":  "Lizard City",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "200+",
-        "place":  "Werecreatures Edron",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "200+",
         "place":  "Otherworld Kazordoon (Dwarf Bridge)",
         "raw_exp":  "-",
         "loot":  "-",
@@ -665,7 +633,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "250+",
+        "level":  "150+",
         "place":  "Werehyaenas South",
         "raw_exp":  "-",
         "loot":  "-",
@@ -681,7 +649,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "250+",
+        "level":  "200+",
         "place":  "Medusa Tower",
         "raw_exp":  "-",
         "loot":  "-",
@@ -705,7 +673,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "250+",
+        "level":  "200+",
         "place":  "Hive Stage 3",
         "raw_exp":  "-",
         "loot":  "-",
@@ -713,7 +681,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "250+",
+        "level":  "200+",
         "place":  "Deeper Banuta -6",
         "raw_exp":  "-",
         "loot":  "-",
@@ -721,7 +689,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "250+",
+        "level":  "150+",
         "place":  "Elder Wyrms Drefia",
         "raw_exp":  "-",
         "loot":  "-",
@@ -729,7 +697,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "250+",
+        "level":  "200+",
         "place":  "Seacrest Serpents Birthing Grounds",
         "raw_exp":  "-",
         "loot":  "-",
@@ -737,7 +705,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Oramond Wildlife Raid",
         "raw_exp":  "-",
         "loot":  "-",
@@ -745,7 +713,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Asura Palace",
         "raw_exp":  "-",
         "loot":  "-",
@@ -753,7 +721,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Werelions -1",
         "raw_exp":  "-",
         "loot":  "-",
@@ -761,7 +729,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "200+",
         "place":  "Drefia Grim Reapers",
         "raw_exp":  "-",
         "loot":  "-",
@@ -769,7 +737,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Werelions -2",
         "raw_exp":  "-",
         "loot":  "-",
@@ -785,7 +753,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Draken Walls",
         "raw_exp":  "-",
         "loot":  "-",
@@ -793,7 +761,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Candia Nibblemaws",
         "raw_exp":  "-",
         "loot":  "-",
@@ -809,7 +777,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Book World: Chapter III",
         "raw_exp":  "-",
         "loot":  "-",
@@ -817,7 +785,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Book World: Chapter IV",
         "raw_exp":  "-",
         "loot":  "-",
@@ -833,7 +801,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "400+",
         "place":  "Port Hope Flimsies -1 only",
         "raw_exp":  "6.0kk",
         "loot":  "1.0kk",
@@ -841,7 +809,7 @@
         "link":  "https://youtu.be/"
     },
         {
-        "level":  "300+",
+        "level":  "400+",
         "place":  "Venore Flimsies -1 only",
         "raw_exp":  "5.5kk",
         "loot":  "1.0kk",
@@ -933,7 +901,7 @@
         "place":  "Werecrocodiles -1",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
+        "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -965,7 +933,7 @@
         "place":  "Prison -1",
         "raw_exp":  "-",
         "loot":  "-",
-        "runes":  "Firestorm Arrows, Ethereal",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -1171,16 +1139,16 @@
     {
         "level":  "600+",
         "place":  "Azzilon Walls",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "5.5kk",
+        "loot":  "700k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "600+",
         "place":  "Azzilon Castle",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "8.0kk",
+        "loot":  "800k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
