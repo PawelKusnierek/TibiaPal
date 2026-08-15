@@ -68,6 +68,23 @@ function isHealingOnlyEffect(effect) {
   return /healing/.test(text) && !/damage/.test(text);
 }
 
+// Flat +skill / +magic level bonuses a planner grants unconditionally - the wheel's dedication
+// perks and gem basic mods, the weapon proficiency's skill boosts - are deliberately treated as
+// dead perks: the calculator asks for the skill straight off the character sheet, which already
+// shows those bonuses, so mapping them would count them twice. Same reasoning as
+// PURE_SKILL_STANCE_IDS above.
+// Two things deliberately stay live: element-scoped magic level (e.g. "+3 holy magic level"),
+// which is a hidden per-element stat the character sheet never shows, and the situational
+// skill perks (Battle Instinct, Positional Tactics), which only apply while their condition
+// holds and so can't be baked into a typed-in skill value - those never reach mapPlannerEffect.
+const CHARACTER_SHEET_SKILL_BONUS_TYPES = new Set([
+  "axe-fighting", "club-fighting", "sword-fighting", "fist-fighting", "distance-fighting", "magic-level",
+]);
+
+function isCharacterSheetSkillPerk(perk) {
+  return perk?.valueType === "flat" && perk?.scope === "all" && CHARACTER_SHEET_SKILL_BONUS_TYPES.has(perk.bonusType);
+}
+
 // Wheel conviction perks whose live bonus depends on a situational condition. The planner
 // reports every one of them as a summary row with an empty value (FormatType
 // "NoEffectDisplay"), so they used to sync as an inert "unmapped" chip. Each option names the
@@ -834,14 +851,16 @@ function createBuild(key) {
   }
 
   // Every mapping path funnels through here so a single effect can contribute more than one perk.
-  function mapPlannerEffectPerks(effect) {
+  // `keepSkillBonuses` is only for the synced-effect chips, which need to know whether a row was
+  // dropped as an already-on-the-character-sheet skill bonus or genuinely didn't map to anything.
+  function mapPlannerEffectPerks(effect, { keepSkillBonuses = false } = {}) {
     const situational = situationalPerks(effect);
     if (situational) return situational;
-    const mapped = mapPlannerEffect(effect);
+    const mapped = mapPlannerEffect(effect, { keepSkillBonuses });
     return mapped ? [mapped] : [];
   }
 
-  function mapPlannerEffect(effect) {
+  function mapPlannerEffect(effect, { keepSkillBonuses = false } = {}) {
     const text = normalized(effectText(effect));
     if (!text || /damage and healing/.test(text) || isHealingOnlyEffect(effect)) return null;
     const scopedSpell = effectSpell(effect);
@@ -861,6 +880,9 @@ function createBuild(key) {
       perk = candidates[0]?.candidate ?? null;
     }
     if (!perk) return null;
+    // See CHARACTER_SHEET_SKILL_BONUS_TYPES: a planner's flat skill rows are already part of the
+    // skill the user types in the character section, so they map to nothing.
+    if (!keepSkillBonuses && isCharacterSheetSkillPerk(perk)) return null;
     const value = effectNumber(effect, perk);
     if (value == null || !Number.isFinite(value)) return null;
     return { id: perk.id, value, apiName: perk.name, sourceLabel: effect.label ?? `${effect.name}${effect.value ? ` ${effect.value}` : ""}` };
@@ -940,7 +962,10 @@ function createBuild(key) {
     }
     planner.effects.forEach((effect) => {
       const details = [...new Set((Array.isArray(effect.details) ? effect.details : []).map((detail) => String(detail).trim()).filter(Boolean))];
-      const mapped = (details.length ? details.flatMap((detail) => mapPlannerEffectPerks({ ...effect, detail })) : mapPlannerEffectPerks(effect)).length > 0;
+      const perksOf = (options) => (details.length
+        ? details.flatMap((detail) => mapPlannerEffectPerks({ ...effect, detail }, options))
+        : mapPlannerEffectPerks(effect, options));
+      const mapped = perksOf().length > 0;
       // Situational perks report which branch is live; the user picks it in the planner
       // section's own dropdown (renderEffectChoices), not in this hover popover.
       const choices = plannerEffectChoices(effect);
@@ -963,7 +988,12 @@ function createBuild(key) {
         description.textContent = details.join(" · ");
         chip.append(description);
       }
-      chip.title = mapped ? "Included in damage calculation" : "Informational or not supported by the damage API";
+      // A flat-skill row does map to a real API perk - it is dropped on purpose (see
+      // CHARACTER_SHEET_SKILL_BONUS_TYPES), so say that rather than calling it unsupported.
+      const bakedIntoSkill = !mapped && perksOf({ keepSkillBonuses: true }).length > 0;
+      chip.title = mapped ? "Included in damage calculation"
+        : bakedIntoSkill ? "Already part of the skill you enter in the character section - not added again"
+          : "Informational or not supported by the damage API";
       container.append(chip);
     });
   }

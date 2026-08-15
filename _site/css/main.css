@@ -4251,6 +4251,11 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   font-size: 12px;
 }
 
+.dc-panel-heading p strong {
+  color: #cfe3f8;
+  font-weight: 600;
+}
+
 .dc-panel-heading > a {
   align-self: center;
   font-size: 11px;
