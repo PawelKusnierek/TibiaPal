@@ -68,24 +68,73 @@ function isHealingOnlyEffect(effect) {
   return /healing/.test(text) && !/damage/.test(text);
 }
 
-// Wheel perks whose live bonus depends on a positional/situational condition the calculator
-// can't know from the build alone. The planner reports them as a summary row with an empty
-// value (FormatType "NoEffectDisplay"), so they used to sync as an inert "unmapped" chip.
-// Instead the user picks which half of the perk to model and that choice maps onto a real
-// API perk. Keyed by the effect name exactly as the planner reports it, lower-cased.
+// Wheel conviction perks whose live bonus depends on a situational condition. The planner
+// reports every one of them as a summary row with an empty value (FormatType
+// "NoEffectDisplay"), so they used to sync as an inert "unmapped" chip. Each option names the
+// API perks it becomes: `weaponSkill: true` resolves to the equipped weapon's fighting skill,
+// otherwise `bonusType` (+ `scope` when the bonus type is shared by several perks) is looked
+// up directly. Keyed by the effect name exactly as the planner reports it, lower-cased.
 const PLANNER_EFFECT_CHOICES = {
   "positional tactics": {
     options: [
       // Listed first = the default, and for hunting builds a monster is nearly always adjacent.
       // The perk's third part (+3 healing magic level) has no damage effect, so it is ignored.
-      { id: "holy", label: "+3 holy magic level (monster within 1 square)", bonusType: "magic-level", scope: "holy", value: 3 },
-      { id: "distance", label: "+3 distance fighting (no monster adjacent)", bonusType: "distance-fighting", value: 3 },
+      { id: "holy", label: "+3 holy magic level (monster within 1 square)", perks: [{ bonusType: "magic-level", scope: "holy", value: 3 }] },
+      { id: "distance", label: "+3 distance fighting (no monster adjacent)", perks: [{ bonusType: "distance-fighting", value: 3 }] },
     ],
+  },
+  // +6 shielding and +1 weapon skill per adjacent creature from the 5th, capped at 8. Only the
+  // skill half is modelled - the calculator has no shielding stat to raise. Defaults to "off"
+  // so a build that syncs the perk isn't silently credited with a crowd it may not have.
+  "battle instinct": {
+    options: [
+      { id: "off", label: "Under 5 adjacent creatures (no bonus)", perks: [] },
+      { id: "5", label: "5 adjacent creatures (+1 weapon skill)", perks: [{ weaponSkill: true, value: 1 }] },
+      { id: "6", label: "6 adjacent creatures (+2 weapon skill)", perks: [{ weaponSkill: true, value: 2 }] },
+      { id: "7", label: "7 adjacent creatures (+3 weapon skill)", perks: [{ weaponSkill: true, value: 3 }] },
+      { id: "8", label: "8 adjacent creatures (+4 weapon skill)", perks: [{ weaponSkill: true, value: 4 }] },
+    ],
+  },
+  // "+35% damage to your next damage spell after a focus spell" - the API models this as the
+  // single spellId-valued perk "Focus mastery", so the options are the rotation's own spells.
+  "focus mastery": { spellChoice: true },
+};
+
+// The focus spell is what triggers the buff, so it is never the spell that receives it -
+// it stays out of the Focus Mastery dropdown. Compared punctuation-insensitively (plainName).
+const FOCUS_MASTERY_TRIGGER_SPELLS = new Set(["hell s core"]);
+
+// Situational perks whose branch is decided by the build rather than by the user: Ballistic
+// Mastery does one thing with a crossbow and another with a bow, and the weapon is already
+// synced from the proficiency planner. Resolved on every render, so swapping weapons updates it.
+const PLANNER_EFFECT_AUTO = {
+  "ballistic mastery": (weapon) => {
+    if (weapon?.ammoType === "bolts") {
+      return { note: "Crossbow: +10% critical extra damage for auto-attacks", perks: [{ bonusType: "crit-damage", scope: "auto-attack", value: 10 }] };
+    }
+    if (weapon?.ammoType === "arrows") {
+      // "your attacks and spells have +4% physical and holy pierce" - weapon pierce covers the
+      // attacks, regular pierce the spells, so both scopes are applied for both elements.
+      return {
+        note: "Bow: +4% physical and holy pierce",
+        perks: [
+          { bonusType: "physical-pierce-weapon", value: 4 },
+          { bonusType: "holy-pierce-weapon", value: 4 },
+          { bonusType: "physical-pierce-regular", value: 4 },
+          { bonusType: "holy-pierce-regular", value: 4 },
+        ],
+      };
+    }
+    return { note: "No bow or crossbow equipped", perks: [] };
   },
 };
 
 function plannerEffectChoices(effect) {
   return PLANNER_EFFECT_CHOICES[normalized(effect?.name)] ?? null;
+}
+
+function plannerEffectAuto(effect) {
+  return PLANNER_EFFECT_AUTO[normalized(effect?.name)] ?? null;
 }
 
 // Burst/beam spells are returned by the API as one card per tier (No Bonus, Stage 1-3).
@@ -290,7 +339,11 @@ function sanitizeState(candidate) {
   const effectChoices = {};
   if (candidate.effectChoices && typeof candidate.effectChoices === "object" && !Array.isArray(candidate.effectChoices)) {
     Object.entries(candidate.effectChoices).forEach(([name, choice]) => {
-      if (PLANNER_EFFECT_CHOICES[name]?.options.some((option) => option.id === choice)) effectChoices[name] = choice;
+      const choices = PLANNER_EFFECT_CHOICES[name];
+      if (!choices || typeof choice !== "string") return;
+      // A spellChoice's options are the build's own rotation, so only the shape can be checked
+      // here - a spell that is no longer in the rotation falls back to "no spell boosted".
+      if (choices.spellChoice ? /^\d*$/.test(choice) : choices.options.some((option) => option.id === choice)) effectChoices[name] = choice;
     });
   }
   const wheelPlanner = { ...fallback.wheelPlanner, ...(candidate.wheelPlanner && typeof candidate.wheelPlanner === "object" ? candidate.wheelPlanner : {}) };
@@ -704,16 +757,20 @@ function createBuild(key) {
       : String(DEFAULT_IMBUEMENT_VALUE);
   }
 
+  // The bonus type of the equipped weapon's own skill, for perks that say "weapon skill"
+  // instead of naming one (the Weapon Skill Boost conviction perk, Battle Instinct).
+  function weaponSkillBonusType() {
+    const skill = item("weapons", state.weapon.id)?.skill;
+    return skill === "magic" ? "magic-level" : skill ? `${skill}-fighting` : null;
+  }
+
   function skillBoostPerk(effect) {
     const name = normalized(effect.name ?? effect.label);
     let bonusType = null;
     if (name.includes("distance skill boost")) bonusType = "distance-fighting";
     else if (name.includes("magic skill boost")) bonusType = "magic-level";
     else if (name.includes("fist fighting skill boost")) bonusType = "fist-fighting";
-    else if (name.includes("weapon skill boost")) {
-      const skill = item("weapons", state.weapon.id)?.skill;
-      bonusType = skill === "magic" ? "magic-level" : skill ? `${skill}-fighting` : null;
-    }
+    else if (name.includes("weapon skill boost")) bonusType = weaponSkillBonusType();
     return bonusType ? metadata.perks.find((perk) => perk.bonusType === bonusType && perk.selectable !== false) : null;
   }
 
@@ -736,23 +793,55 @@ function createBuild(key) {
     return bonusType ? metadata.perks.find((perk) => perk.bonusType === bonusType && perk.selectable !== false) : null;
   }
 
-  function activeEffectChoice(effect, choices) {
-    return choices.options.find((entry) => entry.id === state.effectChoices?.[normalized(effect.name)]) ?? choices.options[0];
+  // Focus Mastery boosts one spell of the rotation, so its options are the rotation itself.
+  // Auto-attack is excluded (the perk only applies to a damage spell), and so is the focus
+  // spell that triggers it.
+  function effectChoiceOptions(choices) {
+    if (!choices.spellChoice) return choices.options;
+    return [
+      { id: "", label: "No spell boosted", perks: [] },
+      ...state.rotation.flatMap((row) => {
+        const spell = row.id === 1 ? null : item("spells", row.id);
+        const name = spell ? spellNameParts(spell.name).base : "";
+        if (!spell || FOCUS_MASTERY_TRIGGER_SPELLS.has(plainName(name))) return [];
+        return [{ id: String(spell.id), label: name, perks: [{ bonusType: "focus-mastery", value: spell.id }] }];
+      }),
+    ];
   }
 
-  // A situational perk (PLANNER_EFFECT_CHOICES) carries no value of its own - the option the
-  // user picked in renderEffectChoices decides both which API perk it becomes and its amount.
-  function choicePerk(effect, choices) {
-    const chosen = activeEffectChoice(effect, choices);
-    const perk = metadata.perks.find((candidate) => candidate.bonusType === chosen.bonusType
-      && (!chosen.scope || candidate.scope === chosen.scope)
+  function activeEffectChoice(effect, choices) {
+    const options = effectChoiceOptions(choices);
+    return options.find((entry) => entry.id === state.effectChoices?.[normalized(effect.name)]) ?? options[0];
+  }
+
+  function perkFromSpec(spec) {
+    const bonusType = spec.weaponSkill ? weaponSkillBonusType() : spec.bonusType;
+    const perk = bonusType && metadata.perks.find((candidate) => candidate.bonusType === bonusType
+      && (!spec.scope || candidate.scope === spec.scope)
       && candidate.selectable !== false && vocationAllows(candidate));
-    return perk ? { id: perk.id, value: chosen.value, apiName: perk.name, sourceLabel: `${effect.name}: ${chosen.label}` } : null;
+    return perk ? { id: perk.id, value: spec.value, apiName: perk.name } : null;
+  }
+
+  // A situational perk carries no value of its own: either the option the user picked in
+  // renderEffectChoices or - for PLANNER_EFFECT_AUTO - the equipped weapon decides which API
+  // perks it becomes. Returns a list because one perk can map onto several (Ballistic Mastery).
+  function situationalPerks(effect) {
+    const auto = plannerEffectAuto(effect);
+    if (auto) return auto(item("weapons", state.weapon.id)).perks.map(perkFromSpec).filter(Boolean);
+    const choices = plannerEffectChoices(effect);
+    if (!choices) return null;
+    return (activeEffectChoice(effect, choices).perks ?? []).map(perkFromSpec).filter(Boolean);
+  }
+
+  // Every mapping path funnels through here so a single effect can contribute more than one perk.
+  function mapPlannerEffectPerks(effect) {
+    const situational = situationalPerks(effect);
+    if (situational) return situational;
+    const mapped = mapPlannerEffect(effect);
+    return mapped ? [mapped] : [];
   }
 
   function mapPlannerEffect(effect) {
-    const choices = plannerEffectChoices(effect);
-    if (choices) return choicePerk(effect, choices);
     const text = normalized(effectText(effect));
     if (!text || /damage and healing/.test(text) || isHealingOnlyEffect(effect)) return null;
     const scopedSpell = effectSpell(effect);
@@ -787,12 +876,16 @@ function createBuild(key) {
   function mappedPlannerPerks(source) {
     const grouped = new Map();
     expandedEffects(source).forEach((effect) => {
-      const mapped = mapPlannerEffect(effect);
-      if (!mapped) return;
-      const perk = item("perks", mapped.id);
-      const previous = grouped.get(mapped.id);
-      const value = perk?.valueType === "stage" ? Math.max(previous?.value ?? 0, mapped.value) : (previous?.value ?? 0) + mapped.value;
-      grouped.set(mapped.id, { id: mapped.id, value, apiName: mapped.apiName });
+      mapPlannerEffectPerks(effect).forEach((mapped) => {
+        const perk = item("perks", mapped.id);
+        const previous = grouped.get(mapped.id);
+        // A spellId perk (Focus mastery) names a spell rather than carrying an amount, so the
+        // last one wins - adding two spell ids together would point at an unrelated spell.
+        const value = perk?.valueType === "stage" ? Math.max(previous?.value ?? 0, mapped.value)
+          : perk?.valueType === "spellId" ? mapped.value
+            : (previous?.value ?? 0) + mapped.value;
+        grouped.set(mapped.id, { id: mapped.id, value, apiName: mapped.apiName });
+      });
     });
     return [...grouped.values()];
   }
@@ -817,7 +910,7 @@ function createBuild(key) {
       const select = document.createElement("select");
       select.setAttribute("aria-label", `${effect.name} active bonus`);
       const active = activeEffectChoice(effect, choices);
-      select.replaceChildren(...choices.options.map((entry) => option(entry.id, entry.label, entry.id === active.id)));
+      select.replaceChildren(...effectChoiceOptions(choices).map((entry) => option(entry.id, entry.label, entry.id === active.id)));
       select.addEventListener("change", () => {
         state.effectChoices = { ...state.effectChoices, [key]: select.value };
         state.wheelPerks = mappedPlannerPerks("wheel");
@@ -847,19 +940,22 @@ function createBuild(key) {
     }
     planner.effects.forEach((effect) => {
       const details = [...new Set((Array.isArray(effect.details) ? effect.details : []).map((detail) => String(detail).trim()).filter(Boolean))];
-      const mapped = (details.length ? details.map((detail) => mapPlannerEffect({ ...effect, detail })) : [mapPlannerEffect(effect)]).some(Boolean);
+      const mapped = (details.length ? details.flatMap((detail) => mapPlannerEffectPerks({ ...effect, detail })) : mapPlannerEffectPerks(effect)).length > 0;
+      // Situational perks report which branch is live; the user picks it in the planner
+      // section's own dropdown (renderEffectChoices), not in this hover popover.
       const choices = plannerEffectChoices(effect);
+      const auto = plannerEffectAuto(effect);
+      const chosen = choices ? activeEffectChoice(effect, choices) : null;
+      const situationalNote = auto ? auto(item("weapons", state.weapon.id)).note
+        : chosen ? (choices.spellChoice && chosen.id ? `Boosts ${chosen.label}` : chosen.label) : null;
       const chip = document.createElement("span");
-      chip.className = `dc-synced-effect ${mapped ? "mapped" : "unmapped"}${details.length || choices ? " has-details" : ""}`;
+      chip.className = `dc-synced-effect ${mapped ? "mapped" : "unmapped"}${details.length || situationalNote ? " has-details" : ""}`;
       const label = document.createElement("strong");
       label.textContent = effect.label ?? `${effect.name}${effect.value ? ` ${effect.value}` : ""}`;
       chip.append(label);
-      // The chip only reports which half of a situational perk is live - it is picked in the
-      // planner section's own dropdown (renderEffectChoices), not in this hover popover.
-      if (choices) {
-        const active = activeEffectChoice(effect, choices);
+      if (situationalNote) {
         const description = document.createElement("small");
-        description.textContent = active.label;
+        description.textContent = situationalNote;
         chip.append(description);
       }
       if (details.length) {
@@ -928,6 +1024,8 @@ function createBuild(key) {
     const container = $("rotationRows");
     container.replaceChildren();
     state.rotation = state.rotation.filter((row) => item("spells", row.id));
+    // Focus Mastery's dropdown lists the rotation's spells, so it follows every rotation edit.
+    renderEffectChoices("wheel");
     if (!state.rotation.length) {
       const empty = document.createElement("div");
       empty.className = "dc-empty-row";
@@ -1074,6 +1172,8 @@ function createBuild(key) {
       const perk = item("perks", row.id);
       const previous = totals.get(row.id);
       if (perk?.valueType === "stage") totals.set(row.id, Math.max(previous ?? 0, numberOrZero(row.value)));
+      // Same as in mappedPlannerPerks: a spellId value is an id, not an amount to add up.
+      else if (perk?.valueType === "spellId") totals.set(row.id, numberOrZero(row.value));
       else totals.set(row.id, (previous ?? 0) + numberOrZero(row.value));
     });
     return [...totals].map(([id, value]) => ({ id, value }));
@@ -1821,6 +1921,9 @@ function receiveProficiencyBuild(build, payload) {
   state.proficiencyPerks = build.mappedPlannerPerks("proficiency");
   build.renderEquipment();
   build.renderSyncedEffects("proficiency");
+  // Wheel perks can depend on the weapon too (Ballistic Mastery's bow/crossbow branch,
+  // Battle Instinct's weapon skill), so their chips and dropdowns refresh with it.
+  build.renderSyncedEffects("wheel");
   const after = JSON.stringify({ proficiencyPlanner: state.proficiencyPlanner, weapon: state.weapon });
   if (before !== after) build.changed();
 }
