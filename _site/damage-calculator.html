@@ -32,7 +32,7 @@
     
 
     <!-- javascript files -->
-    <script type="module" src="/damage-calculator/app.js?v=20260815-13"></script>
+    <script type="module" src="/damage-calculator/app.js?v=20260815-15"></script>
     <script src=/scripts/onload.js></script>
 
     <!-- extra googleapi fonts -->
@@ -313,6 +313,9 @@
     <div class="dc-fields">
       <label>Wheel damage bonus<span class="dc-static-value" data-stat="bonus"></span></label>
     </div>
+    <!-- Filled by renderEffectChoices() with one dropdown per situational wheel perk the build
+         actually has (e.g. Positional Tactics), and hidden while there are none. -->
+    <div id="wheelEffectChoices-a" class="dc-fields dc-effect-choices" hidden></div>
   </section>
 
   <section class="dc-panel dc-accent-proficiency">
@@ -477,6 +480,9 @@
     <div class="dc-fields">
       <label>Wheel damage bonus<span class="dc-static-value" data-stat="bonus"></span></label>
     </div>
+    <!-- Filled by renderEffectChoices() with one dropdown per situational wheel perk the build
+         actually has (e.g. Positional Tactics), and hidden while there are none. -->
+    <div id="wheelEffectChoices-b" class="dc-fields dc-effect-choices" hidden></div>
   </section>
 
   <section class="dc-panel dc-accent-proficiency">

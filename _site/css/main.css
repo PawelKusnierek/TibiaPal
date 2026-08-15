@@ -4298,6 +4298,14 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   opacity: 0.85;
 }
 
+.dc-effect-choices {
+  margin-top: 6px;
+}
+
+.dc-effect-choices select {
+  max-width: 100%;
+}
+
 .dc-planner-launch-wheel {
   border-color: var(--dc-gold);
   background: linear-gradient(#3a3111, #201a08);

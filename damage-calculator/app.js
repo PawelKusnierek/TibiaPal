@@ -51,6 +51,43 @@ const NON_DAMAGE_STANCE_IDS = new Set([
   14, // Virtue of Sustain (monk, healing/defense stance)
 ]);
 
+// Planner effects that only ever affect healing. They have to be recognised explicitly because
+// their wording is one word away from the damage version ("+200% of your Magic Level as extra
+// healing for your spells" vs "% magic level as extra damage for spells"), which is close
+// enough for mapPlannerEffect's fuzzy name match to treat a Sanguine bow's healing scaling as
+// a triple-damage spell perk. The same guard drops the wheel's "Healing Magic Level" row,
+// which was otherwise counted as plain "+ magic level".
+const HEALING_ONLY_PROFICIENCY_TYPES = new Set([27]); // Combat skill scaling for healing
+const HEALING_SPELL_AUGMENT_TYPE = 3; // Type 5 (Spell augmentation) variant "+X% healing for <spell>"
+
+function isHealingOnlyEffect(effect) {
+  const type = Number(effect.type);
+  if (HEALING_ONLY_PROFICIENCY_TYPES.has(type)) return true;
+  if (type === 5 && Number(effect.augmentType) === HEALING_SPELL_AUGMENT_TYPE) return true;
+  const text = normalized(effectText(effect));
+  return /healing/.test(text) && !/damage/.test(text);
+}
+
+// Wheel perks whose live bonus depends on a positional/situational condition the calculator
+// can't know from the build alone. The planner reports them as a summary row with an empty
+// value (FormatType "NoEffectDisplay"), so they used to sync as an inert "unmapped" chip.
+// Instead the user picks which half of the perk to model and that choice maps onto a real
+// API perk. Keyed by the effect name exactly as the planner reports it, lower-cased.
+const PLANNER_EFFECT_CHOICES = {
+  "positional tactics": {
+    options: [
+      // Listed first = the default, and for hunting builds a monster is nearly always adjacent.
+      // The perk's third part (+3 healing magic level) has no damage effect, so it is ignored.
+      { id: "holy", label: "+3 holy magic level (monster within 1 square)", bonusType: "magic-level", scope: "holy", value: 3 },
+      { id: "distance", label: "+3 distance fighting (no monster adjacent)", bonusType: "distance-fighting", value: 3 },
+    ],
+  },
+};
+
+function plannerEffectChoices(effect) {
+  return PLANNER_EFFECT_CHOICES[normalized(effect?.name)] ?? null;
+}
+
 // Burst/beam spells are returned by the API as one card per tier (No Bonus, Stage 1-3).
 // Which tier is live depends on the governing wheel revelation perk, so only that tier is shown.
 // Values are the revelation perk's name exactly as the wheel planner reports it - see
@@ -139,6 +176,8 @@ const defaultState = () => ({
   wheelPerks: [],
   proficiencyPerks: [],
   manualPerks: [],
+  // Which option of a PLANNER_EFFECT_CHOICES perk this build models, keyed by effect name.
+  effectChoices: {},
   rotation: [{ id: 1, targets: 1, ratio: 1 }],
   targets: [],
 });
@@ -246,6 +285,14 @@ function sanitizeState(candidate) {
   const rows = (key, defaults) => Array.isArray(candidate[key])
     ? candidate[key].filter((row) => row && Number.isInteger(Number(row.id))).map((row) => ({ ...defaults, ...row, id: Number(row.id) }))
     : [];
+  // Only known effects and known option ids survive: a stale or hand-edited entry would
+  // otherwise silently fall back to the default option anyway.
+  const effectChoices = {};
+  if (candidate.effectChoices && typeof candidate.effectChoices === "object" && !Array.isArray(candidate.effectChoices)) {
+    Object.entries(candidate.effectChoices).forEach(([name, choice]) => {
+      if (PLANNER_EFFECT_CHOICES[name]?.options.some((option) => option.id === choice)) effectChoices[name] = choice;
+    });
+  }
   const wheelPlanner = { ...fallback.wheelPlanner, ...(candidate.wheelPlanner && typeof candidate.wheelPlanner === "object" ? candidate.wheelPlanner : {}) };
   wheelPlanner.gemGrades = wheelPlanner.gemGrades && typeof wheelPlanner.gemGrades === "object" && !Array.isArray(wheelPlanner.gemGrades) ? wheelPlanner.gemGrades : {};
   return {
@@ -256,6 +303,7 @@ function sanitizeState(candidate) {
     wheelPerks: rows("wheelPerks", { value: 0 }),
     proficiencyPerks: rows("proficiencyPerks", { value: 0 }),
     manualPerks: rows("manualPerks", { value: 0 }),
+    effectChoices,
     rotation: rows("rotation", { targets: 1, ratio: 1 }),
     targets: rows("targets", { ratio: 1, charmId: null, charmTier: 1 }),
   };
@@ -688,9 +736,25 @@ function createBuild(key) {
     return bonusType ? metadata.perks.find((perk) => perk.bonusType === bonusType && perk.selectable !== false) : null;
   }
 
+  function activeEffectChoice(effect, choices) {
+    return choices.options.find((entry) => entry.id === state.effectChoices?.[normalized(effect.name)]) ?? choices.options[0];
+  }
+
+  // A situational perk (PLANNER_EFFECT_CHOICES) carries no value of its own - the option the
+  // user picked in renderEffectChoices decides both which API perk it becomes and its amount.
+  function choicePerk(effect, choices) {
+    const chosen = activeEffectChoice(effect, choices);
+    const perk = metadata.perks.find((candidate) => candidate.bonusType === chosen.bonusType
+      && (!chosen.scope || candidate.scope === chosen.scope)
+      && candidate.selectable !== false && vocationAllows(candidate));
+    return perk ? { id: perk.id, value: chosen.value, apiName: perk.name, sourceLabel: `${effect.name}: ${chosen.label}` } : null;
+  }
+
   function mapPlannerEffect(effect) {
+    const choices = plannerEffectChoices(effect);
+    if (choices) return choicePerk(effect, choices);
     const text = normalized(effectText(effect));
-    if (!text || /damage and healing/.test(text)) return null;
+    if (!text || /damage and healing/.test(text) || isHealingOnlyEffect(effect)) return null;
     const scopedSpell = effectSpell(effect);
     let perk = typedProficiencyPerk(effect) ?? skillBoostPerk(effect);
     if (!perk) {
@@ -733,12 +797,46 @@ function createBuild(key) {
     return [...grouped.values()];
   }
 
+  // Situational perks can't be read off the planner - which half of Positional Tactics is live
+  // depends on where the character is standing - so they get a real dropdown in the planner's
+  // own section, appearing only while the synced build actually contains the perk.
+  function renderEffectChoices(source) {
+    const container = $(source === "wheel" ? "wheelEffectChoices" : "proficiencyEffectChoices");
+    if (!container) return;
+    const effects = (source === "wheel" ? state.wheelPlanner.effects : state.proficiencyPlanner.effects) ?? [];
+    const rows = effects.flatMap((effect) => {
+      const choices = plannerEffectChoices(effect);
+      return choices ? [{ effect, choices }] : [];
+    });
+    container.replaceChildren();
+    container.hidden = rows.length === 0;
+    rows.forEach(({ effect, choices }) => {
+      const key = normalized(effect.name);
+      const label = document.createElement("label");
+      label.append(document.createTextNode(effect.name));
+      const select = document.createElement("select");
+      select.setAttribute("aria-label", `${effect.name} active bonus`);
+      const active = activeEffectChoice(effect, choices);
+      select.replaceChildren(...choices.options.map((entry) => option(entry.id, entry.label, entry.id === active.id)));
+      select.addEventListener("change", () => {
+        state.effectChoices = { ...state.effectChoices, [key]: select.value };
+        state.wheelPerks = mappedPlannerPerks("wheel");
+        state.proficiencyPerks = mappedPlannerPerks("proficiency");
+        renderSyncedEffects(source);
+        changed();
+      });
+      label.append(select);
+      container.append(label);
+    });
+  }
+
   function renderSyncedEffects(source) {
     const planner = source === "wheel" ? state.wheelPlanner : state.proficiencyPlanner;
     const container = $(source === "wheel" ? "wheelSyncedEffects" : "proficiencySyncedEffects");
     const countEl = $(source === "wheel" ? "wheelEffectsCount" : "proficiencyEffectsCount");
     const effectCount = planner.effects?.length ?? 0;
     if (countEl) { countEl.textContent = String(effectCount); countEl.hidden = effectCount === 0; }
+    renderEffectChoices(source);
     container.replaceChildren();
     if (!planner.effects?.length) {
       const empty = document.createElement("div");
@@ -750,11 +848,20 @@ function createBuild(key) {
     planner.effects.forEach((effect) => {
       const details = [...new Set((Array.isArray(effect.details) ? effect.details : []).map((detail) => String(detail).trim()).filter(Boolean))];
       const mapped = (details.length ? details.map((detail) => mapPlannerEffect({ ...effect, detail })) : [mapPlannerEffect(effect)]).some(Boolean);
+      const choices = plannerEffectChoices(effect);
       const chip = document.createElement("span");
-      chip.className = `dc-synced-effect ${mapped ? "mapped" : "unmapped"}${details.length ? " has-details" : ""}`;
+      chip.className = `dc-synced-effect ${mapped ? "mapped" : "unmapped"}${details.length || choices ? " has-details" : ""}`;
       const label = document.createElement("strong");
       label.textContent = effect.label ?? `${effect.name}${effect.value ? ` ${effect.value}` : ""}`;
       chip.append(label);
+      // The chip only reports which half of a situational perk is live - it is picked in the
+      // planner section's own dropdown (renderEffectChoices), not in this hover popover.
+      if (choices) {
+        const active = activeEffectChoice(effect, choices);
+        const description = document.createElement("small");
+        description.textContent = active.label;
+        chip.append(description);
+      }
       if (details.length) {
         const description = document.createElement("small");
         description.textContent = details.join(" · ");
@@ -988,7 +1095,13 @@ function createBuild(key) {
     if (state.stats.vocation === "paladin") statKeys.push("magicLevel");
     statKeys.forEach((key) => {
       const value = key === "bonus" && !wheel ? 0 : Number(state.stats[key]);
-      if (Number.isFinite(value)) stats[key] = (statMultipliers[key] ? value * statMultipliers[key] : value) + (statAdders[key] ?? 0);
+      if (!Number.isFinite(value)) return;
+      const boosted = (statMultipliers[key] ? value * statMultipliers[key] : value) + (statAdders[key] ?? 0);
+      // Skills and magic level are whole numbers in game, so a stance that adds a share of
+      // another stat (Divine Defiance: 6% of distance fighting) or scales its own (Elemental
+      // Synthesis) rounds to the nearest integer rather than handing the formula a fractional
+      // magic level - which is what made otherwise-correct paladin builds come out slightly off.
+      stats[key] = boosted === value ? value : Math.round(boosted);
     });
     const imbuementValue = Number(state.stats.imbuementValue);
     if (state.stats.vocation === "knight" && IMBUEMENT_ELEMENTS.includes(state.stats.imbuementElement) && IMBUEMENT_VALUES.includes(imbuementValue)) {
@@ -1131,6 +1244,7 @@ function createBuild(key) {
       wheelPlanner: { code: state.wheelPlanner.code, gemGrades: state.wheelPlanner.gemGrades },
       proficiencyPlanner: { token: state.proficiencyPlanner.token },
       manualPerks: state.manualPerks,
+      effectChoices: state.effectChoices,
       rotation: state.rotation,
       targets: state.targets,
     };

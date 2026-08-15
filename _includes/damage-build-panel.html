@@ -37,6 +37,9 @@
     <div class="dc-fields">
       <label>Wheel damage bonus<span class="dc-static-value" data-stat="bonus"></span></label>
     </div>
+    <!-- Filled by renderEffectChoices() with one dropdown per situational wheel perk the build
+         actually has (e.g. Positional Tactics), and hidden while there are none. -->
+    <div id="wheelEffectChoices-{{ include.key }}" class="dc-fields dc-effect-choices" hidden></div>
   </section>
 
   <section class="dc-panel dc-accent-proficiency">
