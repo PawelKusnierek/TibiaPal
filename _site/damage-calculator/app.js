@@ -156,7 +156,12 @@ function matchByName(resource, value, allowed = () => true) {
   const query = normalized(value);
   if (!query) return null;
   const candidates = metadata[resource].filter(allowed);
+  // The base-name pass lets a plain "Divine Grenade" / "Ice Burst" match the API's suffixed
+  // card ("... (Stage 1)", "... (No Bonus)"), which is what both the spell datalist and the
+  // rotation presets now spell out. Base names are unique among selectable spells, and for
+  // unsuffixed names it's the same comparison as the exact pass above, so it's a no-op there.
   return candidates.find((candidate) => normalized(candidate.name) === query)
+    ?? candidates.find((candidate) => normalized(spellNameParts(candidate.name).base) === query)
     ?? candidates.find((candidate) => normalized(candidate.name).startsWith(query))
     ?? null;
 }
@@ -192,10 +197,10 @@ function option(value, label, selected = false) {
   return element;
 }
 
-function setDatalist(id, items) {
+function setDatalist(id, items, label = (entry) => entry.name) {
   const list = document.querySelector(`#${id}`);
   if (!list) return;
-  list.replaceChildren(...items.map((entry) => option(entry.name, entry.name)));
+  list.replaceChildren(...items.map((entry) => option(label(entry), label(entry))));
 }
 
 function encodeBuild(build) {
@@ -315,7 +320,7 @@ function numericRowInput(row, key, minimum, label, onChange) {
   const input = document.createElement("input");
   input.type = "number";
   input.min = String(minimum);
-  input.step = "0.01";
+  input.step = "0.1";
   input.value = row[key];
   input.setAttribute("aria-label", label);
   input.addEventListener("input", () => { row[key] = numberOrZero(input.value); onChange(); });
@@ -408,6 +413,33 @@ function diffBadgeEl(pct) {
   return badge;
 }
 
+// Green-chips the better of the two values in a comparison row, so the winning build is
+// readable at a glance instead of only via the sign of the % badge. Takes the raw values
+// rather than the badge's percentage so that a build having a spell the other one lacks
+// still counts as a win (percentDiff can't express that - it returns null). Ties use the
+// same +/-0.05% dead zone as diffBadgeEl() so a row shown as "0.00%" claims no winner.
+// Pass a non-finite value (NaN/null) for a build that doesn't have the attack at all.
+// Toggles rather than adds because the summary rows are live markup re-rendered in place.
+function applyWinnerHighlight(aEl, bEl, aValue, bValue) {
+  const aHas = Number.isFinite(aValue);
+  const bHas = Number.isFinite(bValue);
+  let aWins = aHas && !bHas;
+  let bWins = bHas && !aHas;
+  if (aHas && bHas) {
+    // Note the argument order: percentDiff(bValue, aValue) is A relative to B, so a
+    // positive percentage means A is ahead - same convention as the badge next to it.
+    const pct = percentDiff(bValue, aValue);
+    const rounded = pct == null ? null : Math.round(pct * 100) / 100;
+    // pct is null when B is 0 and A isn't (no meaningful percentage) - still a clear win.
+    aWins = rounded == null ? aValue > bValue : rounded > 0.05;
+    bWins = rounded == null ? bValue > aValue : rounded < -0.05;
+  }
+  aEl.classList.toggle("dc-cmp-win", aWins);
+  bEl.classList.toggle("dc-cmp-win", bWins);
+  aEl.classList.toggle("dc-cmp-lose", bWins);
+  bEl.classList.toggle("dc-cmp-lose", aWins);
+}
+
 // ---------------------------------------------------------------------------
 // Per-build module: everything that reads/writes a single build's state and
 // its own half of the page. Instantiated once per build slot ("a" and "b").
@@ -443,7 +475,12 @@ function createBuild(key) {
     const vocation = $("vocation");
     vocation.replaceChildren(...metadata.vocations.map((entry) => option(entry.id, entry.name, entry.id === state.stats.vocation)));
     setDatalist(`perkOptions-${key}`, metadata.perks.filter((entry) => entry.selectable !== false && vocationAllows(entry)));
-    setDatalist(`spellOptions-${key}`, metadata.spells.filter((entry) => entry.selectable !== false && vocationAllows(entry)));
+    // Staged spells are listed under their plain name: the selectable card's suffix is an
+    // artifact of which tier the API happens to expose ("(No Bonus)", "(Central)", and for
+    // Divine Grenade "(Stage 1)", since it has no stage-0 card), never a choice the user
+    // makes - the live tier comes from the wheel via resolveStagedSpell().
+    setDatalist(`spellOptions-${key}`, metadata.spells.filter((entry) => entry.selectable !== false && vocationAllows(entry)),
+      (entry) => spellNameParts(entry.name).base);
     setDatalist(`creatureOptions-${key}`, metadata.creatures);
     renderStatControls();
     renderStances();
@@ -682,7 +719,7 @@ function createBuild(key) {
       control.replaceChildren(option("", "Choose spell"), ...spells.map((spell) => option(spell.id, spell.name, spell.id === Number(row.value))));
     } else {
       control.type = "number";
-      control.step = perk.valueType === "stage" ? "1" : "0.01";
+      control.step = perk.valueType === "stage" ? "1" : "0.1";
       control.min = "0";
       if (perk.valueType === "stage") control.max = "3";
       control.value = perk.valueType === "ignored" ? "0" : row.value;
@@ -1619,9 +1656,13 @@ function renderComparisonSummary(a, b) {
     const summaryKey = row.dataset.summaryKey;
     const aValue = Number(a.summary?.[summaryKey]);
     const bValue = Number(b.summary?.[summaryKey]);
-    row.querySelector(".dc-cmp-value-a").textContent = formatDamage(aValue);
-    row.querySelector(".dc-cmp-value-b").textContent = formatDamage(bValue);
-    row.querySelector(".dc-diff-badge-slot").replaceChildren(diffBadgeEl(percentDiff(bValue, aValue)));
+    const aEl = row.querySelector(".dc-cmp-value-a");
+    const bEl = row.querySelector(".dc-cmp-value-b");
+    aEl.textContent = formatDamage(aValue);
+    bEl.textContent = formatDamage(bValue);
+    const pct = percentDiff(bValue, aValue);
+    row.querySelector(".dc-diff-badge-slot").replaceChildren(diffBadgeEl(pct));
+    applyWinnerHighlight(aEl, bEl, aValue, bValue);
   });
 }
 
@@ -1641,7 +1682,9 @@ function comparisonResultRow(name, spellMeta, aSpell, bSpell, iconFn = resultIco
   const bValue = Number(spellMetric(bSpell, "effective", "avg"));
   const aEl = document.createElement("span"); aEl.className = "dc-cmp-value dc-cmp-value-a"; aEl.textContent = aSpell ? formatDamage(aValue) : "—";
   const bEl = document.createElement("span"); bEl.className = "dc-cmp-value dc-cmp-value-b"; bEl.textContent = bSpell ? formatDamage(bValue) : "—";
-  row.append(identity, aEl, diffBadgeEl(aSpell && bSpell ? percentDiff(bValue, aValue) : null), bEl);
+  const pct = aSpell && bSpell ? percentDiff(bValue, aValue) : null;
+  applyWinnerHighlight(aEl, bEl, aSpell ? aValue : NaN, bSpell ? bValue : NaN);
+  row.append(identity, aEl, diffBadgeEl(pct), bEl);
   return row;
 }
 
@@ -1745,7 +1788,9 @@ function exportSummarySection(a, b) {
     const bValue = Number(b.summary?.[summaryKey]);
     const aEl = document.createElement("span"); aEl.className = "dc-cmp-value dc-cmp-value-a"; aEl.textContent = formatDamage(aValue);
     const bEl = document.createElement("span"); bEl.className = "dc-cmp-value dc-cmp-value-b"; bEl.textContent = formatDamage(bValue);
-    row.append(labelEl, aEl, diffBadgeEl(percentDiff(bValue, aValue)), bEl);
+    const pct = percentDiff(bValue, aValue);
+    applyWinnerHighlight(aEl, bEl, aValue, bValue);
+    row.append(labelEl, aEl, diffBadgeEl(pct), bEl);
     summary.append(row);
   });
   section.append(heading, summary);

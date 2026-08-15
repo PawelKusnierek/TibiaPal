@@ -5008,6 +5008,7 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
 
 .dc-cmp-col-label {
   overflow: hidden;
+  padding: 0 8px;
   color: var(--dc-muted);
   font-size: 12px;
   font-weight: 800;
@@ -5052,7 +5053,11 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
 
 .dc-cmp-value {
   min-width: 0;
+  max-width: 100%;
   overflow: hidden;
+  padding: 3px 8px;
+  border: 1px solid transparent;
+  border-radius: 7px;
   color: #d9e5f1;
   font-size: 16px;
   font-weight: 800;
@@ -5062,12 +5067,23 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
 }
 
 .dc-cmp-value-a {
+  justify-self: end;
   color: var(--dc-blue);
 }
 
 .dc-cmp-value-b {
+  justify-self: start;
   color: var(--dc-cyan);
   text-align: left;
+}
+
+.dc-cmp-value.dc-cmp-win {
+  border-color: rgba(76, 175, 80, 0.85);
+  background: rgba(76, 175, 80, 0.26);
+}
+
+.dc-cmp-value.dc-cmp-lose {
+  opacity: 0.72;
 }
 
 .dc-diff-badge-slot {
@@ -5556,7 +5572,11 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
     gap: 12px;
   }
   .dc-cmp-value {
+    padding: 2px 5px;
     font-size: 14px;
+  }
+  .dc-cmp-col-label {
+    padding: 0 5px;
   }
   .dc-planner-modal {
     padding: 0;

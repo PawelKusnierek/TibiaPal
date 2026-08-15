@@ -856,6 +856,9 @@
 
 .dc-cmp-col-label
   overflow: hidden
+  // Matches the horizontal padding of .dc-cmp-value's winner chip so the header labels
+  // stay flush with the numbers underneath them.
+  padding: 0 8px
   color: var(--dc-muted)
   font-size: 12px
   font-weight: 800
@@ -893,7 +896,13 @@
 
 .dc-cmp-value
   min-width: 0
+  max-width: 100%
   overflow: hidden
+  // Padding + transparent border are always present so adding .dc-cmp-win never shifts
+  // the numbers around; only the border/background colours change.
+  padding: 3px 8px
+  border: 1px solid transparent
+  border-radius: 7px
   color: #d9e5f1
   font-size: 16px
   font-weight: 800
@@ -902,11 +911,26 @@
   white-space: nowrap
 
 .dc-cmp-value-a
+  justify-self: end
   color: var(--dc-blue)
 
 .dc-cmp-value-b
+  justify-self: start
   color: var(--dc-cyan)
   text-align: left
+
+// Winner highlight: the better value in a row gets a soft green chip so the stronger
+// build is obvious at a glance, without having to read the sign of the % badge. Ties
+// (within the badge's +/-0.05% dead zone) and rows where one build lacks the spell get
+// no chip. Literal hex/rgba rather than var(--dc-green) for the same html2canvas reason
+// as .dc-diff-badge below; box-shadow is avoided because html2canvas drops it, which
+// would make the "Save image" export differ from the live tab.
+.dc-cmp-value.dc-cmp-win
+  border-color: rgba(76, 175, 80, .85)
+  background: rgba(76, 175, 80, .26)
+
+.dc-cmp-value.dc-cmp-lose
+  opacity: .72
 
 .dc-diff-badge-slot
   display: flex
@@ -1312,7 +1336,10 @@
     grid-template-columns: minmax(0, 1fr) 64px 46px 64px
     gap: 12px
   .dc-cmp-value
+    padding: 2px 5px
     font-size: 14px
+  .dc-cmp-col-label
+    padding: 0 5px
   .dc-planner-modal
     padding: 0
   .dc-planner-window
