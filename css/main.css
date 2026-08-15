@@ -4439,7 +4439,8 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   align-content: start;
 }
 
-.dc-equipment-grid > .dc-equipment-main {
+.dc-equipment-grid > .dc-equipment-main,
+.dc-equipment-grid > .dc-equipment-hinted {
   grid-template-rows: auto 26px auto;
 }
 
@@ -4562,7 +4563,8 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   gap: 6px;
 }
 
-.dc-equipment-main small {
+.dc-equipment-main small,
+.dc-equipment-hinted small {
   min-height: 15px;
   color: #7491ad;
   font-weight: 500;

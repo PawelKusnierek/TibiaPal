@@ -32,7 +32,7 @@
     
 
     <!-- javascript files -->
-    <script type="module" src="/damage-calculator/app.js?v=20260815-8"></script>
+    <script type="module" src="/damage-calculator/app.js?v=20260815-10"></script>
     <script src=/scripts/onload.js></script>
 
     <!-- extra googleapi fonts -->
@@ -343,6 +343,24 @@
       </label>
       <label id="ammoField-a">Ammo<select id="ammoSelect-a"><option value="">None</option></select></label>
       <label id="shieldField-a">Shield<select id="shieldSelect-a"><option value="">None</option></select></label>
+      <label id="imbuementField-a" class="dc-equipment-hinted">Elemental imbuement
+        <select data-stat="imbuementElement">
+          <option value="">None</option>
+          <option value="fire">Scorch (Fire)</option>
+          <option value="ice">Frost (Ice)</option>
+          <option value="energy">Electrify (Energy)</option>
+          <option value="earth">Venom (Earth)</option>
+          <option value="death">Reap (Death)</option>
+        </select>
+        <small>Only applies to weapons that deal physical damage.</small>
+      </label>
+      <label id="imbuementTierField-a">Imbuement tier
+        <select id="imbuementTierSelect-a" data-stat="imbuementValue">
+          <option value="0.1">Basic · 10%</option>
+          <option value="0.25">Intricate · 25%</option>
+          <option value="0.5">Powerful · 50%</option>
+        </select>
+      </label>
     </div>
   </section>
 
@@ -489,6 +507,24 @@
       </label>
       <label id="ammoField-b">Ammo<select id="ammoSelect-b"><option value="">None</option></select></label>
       <label id="shieldField-b">Shield<select id="shieldSelect-b"><option value="">None</option></select></label>
+      <label id="imbuementField-b" class="dc-equipment-hinted">Elemental imbuement
+        <select data-stat="imbuementElement">
+          <option value="">None</option>
+          <option value="fire">Scorch (Fire)</option>
+          <option value="ice">Frost (Ice)</option>
+          <option value="energy">Electrify (Energy)</option>
+          <option value="earth">Venom (Earth)</option>
+          <option value="death">Reap (Death)</option>
+        </select>
+        <small>Only applies to weapons that deal physical damage.</small>
+      </label>
+      <label id="imbuementTierField-b">Imbuement tier
+        <select id="imbuementTierSelect-b" data-stat="imbuementValue">
+          <option value="0.1">Basic · 10%</option>
+          <option value="0.25">Intricate · 25%</option>
+          <option value="0.5">Powerful · 50%</option>
+        </select>
+      </label>
     </div>
   </section>
 

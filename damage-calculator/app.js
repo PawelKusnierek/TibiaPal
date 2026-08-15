@@ -17,6 +17,16 @@ const DEFAULT_SKILL_BY_VOCATION = { knight: 160, paladin: 180, monk: 140 };
 const META_RESOURCES = ["vocations", "stances", "weapons", "ammo", "shields", "perks", "spells", "creatures", "charms"];
 const FANDOM_ICON_ALIASES = { "exec-throw": "executioner-s-throw", "hells-core": "hell-s-core" };
 
+// Elemental attack imbuements (Scorch/Frost/Electrify/Venom/Reap) convert a share of a weapon's
+// physical damage into an element, which is what makes them matter against creature resistances.
+// Both values are enums the damage API validates, so anything outside these lists is dropped
+// rather than sent - an unknown/invalid stats field 400s the whole calculation.
+// The API only applies them to physical single-target weapons; a natively elemental weapon
+// (e.g. Amber Axe, which is pure ice) ignores the conversion server-side.
+const IMBUEMENT_ELEMENTS = ["fire", "ice", "energy", "earth", "death"];
+const IMBUEMENT_VALUES = [0.1, 0.25, 0.5]; // Basic / Intricate / Powerful
+const DEFAULT_IMBUEMENT_VALUE = 0.5;
+
 // Stances the damage API marks non-selectable ("only selectable stances affect damage"),
 // but whose skill/magic-level boost we can apply client-side to the stat we already send.
 // These ids are applied locally and are NOT forwarded to the API as stanceIds.
@@ -226,6 +236,11 @@ function sanitizeState(candidate) {
   stats.critDamage = BASE_CRIT_DAMAGE;
   if (stats.vocation === "paladin" && candidate.stats?.magicLevel == null) stats.magicLevel = DEFAULT_PALADIN_MAGIC_LEVEL;
   if ((stats.vocation === "druid" || stats.vocation === "sorcerer") && candidate.stats?.magicLevel == null) stats.magicLevel = DEFAULT_CASTER_MAGIC_LEVEL;
+  // Restored state can come from an old localStorage entry or a hand-edited share link; an
+  // imbuement outside the API's enums would 400 the whole calculation, so drop it here.
+  if (stats.vocation !== "knight" || !IMBUEMENT_ELEMENTS.includes(stats.imbuementElement)) stats.imbuementElement = "";
+  if (!stats.imbuementElement || !IMBUEMENT_VALUES.includes(Number(stats.imbuementValue))) stats.imbuementValue = 0;
+  else stats.imbuementValue = Number(stats.imbuementValue);
   const rows = (key, defaults) => Array.isArray(candidate[key])
     ? candidate[key].filter((row) => row && Number.isInteger(Number(row.id))).map((row) => ({ ...defaults, ...row, id: Number(row.id) }))
     : [];
@@ -537,6 +552,9 @@ function createBuild(key) {
       if ("value" in control) control.value = value;
       else control.textContent = value;
     });
+    // Must come after the loop above: it writes imbuementValue 0 (the "no imbuement" sentinel)
+    // straight onto the tier <select>, which matches no option and would blank it out.
+    renderImbuement();
   }
 
   function renderStances() {
@@ -601,6 +619,26 @@ function createBuild(key) {
     shieldSelect.replaceChildren(option("", "None"), ...sortedShields.map((entry) => option(entry.id, `${entry.name} · ${entry.defense} def`, entry.id === Number(state.weapon.shieldId))));
     shieldSelect.disabled = !canUseShield;
     if (!canUseShield) state.weapon.shieldId = null;
+
+    renderImbuement();
+  }
+
+  // Elemental imbuements are a knight-only control here. Kept in its own function because the
+  // element/tier pair also has to be re-synced from the change handler, without re-running the
+  // whole equipment render.
+  function renderImbuement() {
+    const showImbuement = state.stats.vocation === "knight";
+    $("imbuementField").hidden = !showImbuement;
+    $("imbuementTierField").hidden = !showImbuement;
+    if (!showImbuement) {
+      state.stats.imbuementElement = "";
+      state.stats.imbuementValue = 0;
+    }
+    const tierSelect = $("imbuementTierSelect");
+    tierSelect.disabled = !state.stats.imbuementElement;
+    tierSelect.value = IMBUEMENT_VALUES.includes(Number(state.stats.imbuementValue))
+      ? String(state.stats.imbuementValue)
+      : String(DEFAULT_IMBUEMENT_VALUE);
   }
 
   function skillBoostPerk(effect) {
@@ -937,6 +975,11 @@ function createBuild(key) {
       const value = key === "bonus" && !wheel ? 0 : Number(state.stats[key]);
       if (Number.isFinite(value)) stats[key] = (statMultipliers[key] ? value * statMultipliers[key] : value) + (statAdders[key] ?? 0);
     });
+    const imbuementValue = Number(state.stats.imbuementValue);
+    if (state.stats.vocation === "knight" && IMBUEMENT_ELEMENTS.includes(state.stats.imbuementElement) && IMBUEMENT_VALUES.includes(imbuementValue)) {
+      stats.imbuementElement = state.stats.imbuementElement;
+      stats.imbuementValue = imbuementValue;
+    }
     if (apiStanceIds.length) stats.stanceIds = apiStanceIds;
     const weapon = { id: Number(state.weapon.id) || 1 };
     if (state.weapon.ammoId) weapon.ammoId = Number(state.weapon.ammoId);
@@ -1052,6 +1095,12 @@ function createBuild(key) {
     const s = state.stats;
     const stats = { vocation: s.vocation, level: s.level, skill: s.skill, magicLevel: s.magicLevel };
     if (s.stanceIds?.length) stats.stanceIds = s.stanceIds;
+    // Only carried when actually set, to keep share links short. sanitizeState() re-validates
+    // both on the way back in, so a tampered link can't smuggle a bad enum into the request.
+    if (IMBUEMENT_ELEMENTS.includes(s.imbuementElement) && IMBUEMENT_VALUES.includes(Number(s.imbuementValue))) {
+      stats.imbuementElement = s.imbuementElement;
+      stats.imbuementValue = Number(s.imbuementValue);
+    }
     return {
       stats,
       weapon: state.weapon,
@@ -1084,10 +1133,23 @@ function createBuild(key) {
     root.querySelectorAll("[data-stat]").forEach((control) => {
       control.addEventListener("input", () => {
         const statKey = control.dataset.stat;
-        state.stats[statKey] = control.tagName === "SELECT" || statKey === "imbuementElement" ? control.value : numberOrZero(control.value);
+        // imbuementValue is a <select>, so it would arrive as a string ("0.5") - the API wants a
+        // number, and this is the single place that coercion happens.
+        state.stats[statKey] = statKey === "imbuementValue"
+          ? numberOrZero(control.value)
+          : control.tagName === "SELECT" || statKey === "imbuementElement" ? control.value : numberOrZero(control.value);
+        if (statKey === "imbuementElement") {
+          // Picking an element with no tier yet lands on Powerful, the tier most builds run;
+          // clearing the element clears the tier so nothing stale is ever sent.
+          if (!state.stats.imbuementElement) state.stats.imbuementValue = 0;
+          else if (!IMBUEMENT_VALUES.includes(Number(state.stats.imbuementValue))) state.stats.imbuementValue = DEFAULT_IMBUEMENT_VALUE;
+          renderImbuement();
+        }
         if (statKey === "vocation") {
           state.stats.stanceIds = [];
           state.stats.bonus = 0;
+          state.stats.imbuementElement = "";
+          state.stats.imbuementValue = 0;
           if (state.stats.vocation === "paladin") state.stats.magicLevel = DEFAULT_PALADIN_MAGIC_LEVEL;
           if (state.stats.vocation === "druid" || state.stats.vocation === "sorcerer") state.stats.magicLevel = DEFAULT_CASTER_MAGIC_LEVEL;
           if (DEFAULT_SKILL_BY_VOCATION[state.stats.vocation]) state.stats.skill = DEFAULT_SKILL_BY_VOCATION[state.stats.vocation];
