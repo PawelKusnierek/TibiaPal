@@ -53,6 +53,8 @@ const NON_DAMAGE_STANCE_IDS = new Set([
 
 // Burst/beam spells are returned by the API as one card per tier (No Bonus, Stage 1-3).
 // Which tier is live depends on the governing wheel revelation perk, so only that tier is shown.
+// Values are the revelation perk's name exactly as the wheel planner reports it - see
+// activeSpellStages(), which matches its summary row to read the unlocked stage.
 const STAGED_SCOPE_PERK = {
   "exec-throw": "executioner's throw",
   "divine-grenade": "divine grenade",
@@ -268,13 +270,26 @@ function effectText(effect) {
   return [effect.name, effect.value, effect.detail, effect.label].filter(Boolean).join(" ");
 }
 
+function plainName(value) {
+  return normalized(value).replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+// Revelation perks are reported by the wheel planner as "Stage N" (LargePerkLevelNames), but
+// roman numerals show up in other places the same text can come from, so accept both.
+function revelationStage(text) {
+  const value = String(text ?? "");
+  const staged = value.match(/stage\s*([0-3])/i)?.[1];
+  if (staged != null) return Number(staged);
+  const roman = value.match(/\b(III|II|I)\b/i)?.[1]?.toUpperCase();
+  return roman ? ({ I: 1, II: 2, III: 3 })[roman] : 0;
+}
+
 function effectNumber(effect, perk) {
   const text = [effect.detail, effect.label, effect.value].filter(Boolean).join(" ").replace(",", ".");
   if (perk.valueType === "stage") {
-    const stage = text.match(/stage\s*([0-3])/i)?.[1];
-    if (stage != null) return Number(stage);
-    const roman = text.match(/\b(III|II|I)\b/i)?.[1]?.toUpperCase();
-    if (roman) return ({ I: 1, II: 2, III: 3 })[roman];
+    const stage = revelationStage(text);
+    if (stage) return stage;
+    if (/stage\s*0/i.test(text)) return 0;
   }
   if (perk.valueType === "ignored") return 0;
   if (perk.valueType === "spellId") return null;
@@ -1010,16 +1025,25 @@ function createBuild(key) {
     }
   }
 
-  // Reads off state.wheelPerks (already resolved through mappedPlannerPerks/effectNumber, which
-  // understands both "Stage N" text and roman-numeral tiers like "II") instead of re-parsing raw
-  // wheel effect text here - a second, weaker parser here previously missed roman-numeral tiers
-  // and effect text living in .detail/.label instead of .name/.value, so it always read stage 0.
+  // The stage of a staged spell comes from the wheel's *revelation* perk ("Spiritual Outburst",
+  // "Twin Bursts", "Beam Mastery", ...), which the planner reports as its own summary row with a
+  // "Stage N" value. It is read straight off those rows because state.wheelPerks can't carry it:
+  // the damage API has no perk for the revelation itself, only percent perks named
+  // "<Spell> base damage" / "... critical hit damage", so mappedPlannerPerks drops the revelation
+  // row entirely. Matching those percent perks by name prefix instead (the previous approach) read
+  // an augment's percentage as a stage, so a monk with Spiritual Outburst III but no Augmented
+  // Spiritual Outburst scored stage 0 and lost the whole repeat hit, while any augment at all
+  // pinned it to stage 3.
   function activeSpellStages() {
+    const effects = state.wheelPlanner.effects ?? [];
     const result = {};
     Object.entries(STAGED_SCOPE_PERK).forEach(([scope, perkName]) => {
-      const perk = metadata.perks.find((candidate) => normalized(candidate.name).startsWith(perkName) && candidate.selectable !== false);
-      const row = perk ? state.wheelPerks.find((entry) => entry.id === perk.id) : null;
-      result[scope] = row ? Math.max(0, Math.min(3, Math.round(numberOrZero(row.value)))) : 0;
+      // Older saved builds predate the planner's `group` field, so only reject a wrong group.
+      // Names are compared punctuation-insensitively: the planner renders "Executioner's Throw"
+      // with whichever apostrophe the client string uses.
+      const effect = effects.find((entry) => (entry.group ?? "revelation") === "revelation"
+        && plainName(entry.name) === plainName(perkName));
+      result[scope] = effect ? revelationStage(effectText(effect)) : 0;
     });
     return result;
   }
