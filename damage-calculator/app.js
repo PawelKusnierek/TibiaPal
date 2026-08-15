@@ -1763,6 +1763,10 @@ function comparisonResultRow(name, spellMeta, aSpell, bSpell, iconFn = resultIco
   const identity = document.createElement("div");
   identity.className = "dc-result-identity";
   const nameEl = document.createElement("strong"); nameEl.textContent = name;
+  // The row is a single number covering every hit of the cast, so name them on hover rather than
+  // splitting the row - see mergeStagedResults().
+  const hitLabels = aSpell?.hitLabels ?? bSpell?.hitLabels;
+  if (hitLabels?.length > 1) nameEl.title = `${hitLabels.length} hits per cast: ${hitLabels.join(" + ")}`;
   identity.append(iconFn({ name }, spellMeta), nameEl);
   const aValue = Number(spellMetric(aSpell, "effective", "avg"));
   const bValue = Number(spellMetric(bSpell, "effective", "avg"));
@@ -1787,11 +1791,51 @@ function comparisonResultGroup(title, entries, iconFn = resultIcon) {
   return section;
 }
 
+// A staged scope's wheel-unlocked extra hit (Spiritual Outburst's Repeat, the beams' Sides,
+// Ice/Terra Burst's Green HP, Executioner's Throw's Red HP) is its own API card, but it always
+// lands on the same cast as the base card and is sent with the same target count - so the two are
+// folded into one row here. Reading them as separate same-named rows made a working Repeat hit
+// look like it wasn't counted at all, and the API's own per-turn total already sums them.
+function mergeStagedResults(spells) {
+  const sum = (left, right) => {
+    const total = Number(left) + Number(right);
+    return Number.isFinite(total) ? total : null;
+  };
+  const byId = new Map(spells.map((spell) => [String(spell.id), spell]));
+  const combined = new Map();
+  const absorbed = new Set();
+  spells.forEach((spell) => {
+    const meta = item("spells", spell.id);
+    if (!meta?.isExtra) return;
+    const baseId = (meta.bundledSpellIds ?? []).map(String).find((id) => id !== String(meta.id));
+    const base = baseId ? byId.get(baseId) : null;
+    if (!base) return;
+    const into = combined.get(baseId) ?? { ...base, hitLabels: [item("spells", base.id)?.targetsLabel].filter(Boolean) };
+    combined.set(baseId, {
+      ...into,
+      raw: { min: sum(into.raw?.min, spell.raw?.min), avg: sum(into.raw?.avg, spell.raw?.avg), max: sum(into.raw?.max, spell.raw?.max) },
+      effective: { ...into.effective, avg: sum(into.effective?.avg, spell.effective?.avg) },
+      hitLabels: [...into.hitLabels, meta.targetsLabel].filter(Boolean),
+    });
+    absorbed.add(String(spell.id));
+  });
+  return spells.filter((spell) => !absorbed.has(String(spell.id)))
+    .map((spell) => combined.get(String(spell.id)) ?? spell);
+}
+
+// Merged rows carry the plain spell name; only a lone extra card (its base somehow missing from
+// the results) keeps the API's role label, so it can't show up as an unexplained duplicate.
+function resultSpellName(spell, meta) {
+  const base = spellNameParts(spell.name).base;
+  const label = meta?.targetsLabel;
+  return meta?.isExtra && label ? `${base} · ${label}` : base;
+}
+
 // Union of both builds' visible spells, each carrying whichever side(s) it appears on -
 // shared by the live results list and the "Save image" export so both stay in sync.
 function comparisonEntries(a, b) {
-  const aSpells = builds.a.visibleResultSpells(a.spells ?? []);
-  const bSpells = builds.b.visibleResultSpells(b.spells ?? []);
+  const aSpells = mergeStagedResults(builds.a.visibleResultSpells(a.spells ?? []));
+  const bSpells = mergeStagedResults(builds.b.visibleResultSpells(b.spells ?? []));
   const idOf = (spell) => String(spell.id ?? normalized(spell.name));
   const entries = new Map();
   const order = [];
@@ -1799,7 +1843,7 @@ function comparisonEntries(a, b) {
     const id = idOf(spell);
     if (!entries.has(id)) {
       const meta = item("spells", spell.id) ?? metadata.spells.find((candidate) => candidate.name === spell.name);
-      entries.set(id, { id, name: spellNameParts(spell.name).base, meta });
+      entries.set(id, { id, name: resultSpellName(spell, meta), meta });
       order.push(id);
     }
   }));
