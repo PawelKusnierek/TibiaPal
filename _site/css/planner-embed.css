@@ -107,12 +107,14 @@ html.planner-embed #PerkInformationTables > .TableContainer:nth-of-type(2) {
   box-shadow: inset 0 0 0 1px #071525, 0 5px 16px rgba(0, 0, 0, .35);
 }
 
+/* Selection holds the +/- buttons, so it always comes first (above Information when
+   the cards are stacked, left of it when they sit side by side). */
 html.planner-embed #PerkInformationTables > .TableContainer:first-of-type {
-  order: 2;
+  order: 1;
 }
 
 html.planner-embed #PerkInformationTables > .TableContainer:nth-of-type(2) {
-  order: 1;
+  order: 2;
 }
 
 html.planner-embed #PerkInformationTables .CaptionContainer {
@@ -272,6 +274,40 @@ html.planner-embed .ModEffectValue.ColorRed,
 html.planner-embed .ModEffectValue .ColorRed {
   color: #dce9f6 !important;
   text-decoration: none !important;
+}
+
+/* Wide embeds (the damage calculator drawer on desktop): put the Selection and
+   Information cards in a single column on the left and the wheel on the right, and
+   size the wheel off the viewport *height* so the "- Max / - 1 / + 1 / + Max" buttons
+   stay above the fold on 1080p (and shorter) screens without any scrolling. */
+@media (min-width: 960px) {
+  html.planner-embed #WheelOfDestinySelection {
+    grid-template-areas: "info wheel";
+    grid-template-columns: minmax(300px, 360px) minmax(0, 1fr);
+    align-items: start;
+    justify-items: stretch;
+    gap: 16px;
+  }
+
+  html.planner-embed #PerkInformationTables {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  html.planner-embed #PerkInformationTables .BoxWrapper {
+    min-height: 0;
+  }
+
+  html.planner-embed #WheelOfDestiny {
+    align-items: flex-start;
+    margin-top: 0;
+  }
+
+  /* Square canvas: driving the width off 100vh keeps the whole wheel inside the
+     iframe viewport (26px covers the block's 14px/10px top/bottom margins). */
+  html.planner-embed #wod-canvas {
+    width: min(100%, calc(100vh - 26px), 720px) !important;
+  }
 }
 
 @media (max-width: 900px) {

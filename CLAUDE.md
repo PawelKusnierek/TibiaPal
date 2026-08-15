@@ -2,6 +2,12 @@
 
 Project-specific gotchas for working in this repo. Read before editing CSS or the damage-calculator/wheel/proficiency planner integration.
 
+## Don't verify finished work with screenshots — the repo owner does that
+
+The owner runs the local Jekyll server themselves and prefers to check the result in a real browser once a change is implemented. Don't spin up a headless browser (Playwright/`chrome --headless`) just to confirm that a finished fix looks right, and don't screenshot a change as a final "proof it works" step — just make the edit and describe what changed.
+
+Headless rendering/measuring is fine when it's genuinely part of *diagnosing* a problem: reproducing a reported bug, measuring an actual overflow, or figuring out which rule is contributing unexpected pixels. In that case use it to answer the specific question, then stop.
+
 ## `css/main.css` is a compiled file — never hand-edit it alone
 
 `css/main.css` is generated from `css/main.sass`, which `@import`s partials from `_sass/*.sass` (e.g. `_sass/_damage_calculator.sass`, `_sass/_wheel.sass`, `_sass/_proficiency_calculator.sass`, etc.). There's a Sass watcher (e.g. VS Code's "Live Sass Compiler") that can recompile `css/main.css` from those partials at any time and will silently discard any edit made only to the compiled `css/main.css`.
