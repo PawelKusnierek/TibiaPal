@@ -5244,10 +5244,6 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   display: none;
 }
 
-.dc-planner-modal {
-  animation: dc-backdrop-in 0.22s ease;
-}
-
 .dc-planner-window {
   display: flex;
   flex-direction: column;
@@ -5307,14 +5303,6 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   }
   to {
     transform: translateX(100%);
-  }
-}
-@keyframes dc-backdrop-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 @keyframes dc-backdrop-out {
@@ -5443,6 +5431,25 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
 
 .dc-planner-frame-wrap iframe[hidden] {
   display: none;
+}
+
+.dc-planner-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  background: #050b14;
+}
+
+.dc-planner-loading[hidden] {
+  display: none;
+}
+
+.dc-planner-loading .dc-spinner {
+  width: 38px;
+  height: 38px;
+  border-width: 3px;
 }
 
 .dc-planner-window > footer {

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: TibiaPal.com - Damage Calculator
-scripts: <script type="module" src="/damage-calculator/app.js?v=20260812-3"></script>
+scripts: <script type="module" src="/damage-calculator/app.js?v=20260815-2"></script>
 ---
 
 <section id="damageCalculator" class="dc-app" aria-busy="true">
@@ -165,6 +165,8 @@ scripts: <script type="module" src="/damage-calculator/app.js?v=20260812-3"></sc
       <div class="dc-planner-frame-wrap">
         <iframe id="wheelPlannerFrame" title="Wheel of Destiny planner" loading="eager"></iframe>
         <iframe id="proficiencyPlannerFrame" title="Weapon Proficiency planner" loading="eager" hidden></iframe>
+        <div id="wheelPlannerLoading" class="dc-planner-loading"><span class="dc-spinner" aria-hidden="true"></span></div>
+        <div id="proficiencyPlannerLoading" class="dc-planner-loading" hidden><span class="dc-spinner" aria-hidden="true"></span></div>
       </div>
       <footer>
         <div id="plannerModalPoints" class="dc-planner-points" hidden><span>Points required</span><strong>0</strong></div>

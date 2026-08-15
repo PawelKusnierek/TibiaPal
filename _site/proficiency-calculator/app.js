@@ -786,7 +786,10 @@ function syncBuildUrl() {
   url.searchParams.delete("perks");
   url.searchParams.delete("shaped");
   history.replaceState(null, "", url);
-  setCookie(BUILD_COOKIE, token, 365);
+  // Don't let edits made inside the damage calculator's embedded planner (potentially several
+  // different builds in the same session) clobber the standalone page's "last visited build"
+  // cookie — see the isPlannerEmbed check in restoreBuildFromUrl's caller above.
+  if (!isPlannerEmbed) setCookie(BUILD_COOKIE, token, 365);
 }
 
 function restoreBuildFromUrl() {
@@ -991,7 +994,12 @@ try {
   }));
   state.filtered = state.profiles.filter(matchesPlannerVocation).sort((a, b) => weaponDisplayPriority(a.Name) - weaponDisplayPriority(b.Name));
   buildFamilies();
-  const restored = restoreBuildFromUrl() ?? restoreBuildFromCookie();
+  // The "last visited build" cookie is only meaningful for the standalone page. Inside the
+  // damage calculator's embedded planner, each build (A/B) navigates this same page with its
+  // own `build` token (or none, for an untouched build) — falling back to the cookie here would
+  // leak whichever build was most recently edited into every other build that hasn't been
+  // customized yet.
+  const restored = restoreBuildFromUrl() ?? (isPlannerEmbed ? null : restoreBuildFromCookie());
   selectProfile((matchesPlannerVocation(restored) ? restored : null) ?? state.filtered.find((p) => p.Name.toLowerCase() === "moonsilver epee") ?? state.filtered[0]);
 } catch (error) {
   $("#weaponName").textContent = "Tibia data unavailable";

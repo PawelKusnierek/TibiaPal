@@ -96,6 +96,12 @@ function averageHitsFor(spellName) {
 }
 
 let plannerCloseTimer = null;
+const plannerLoadingTimers = { wheel: null, proficiency: null };
+const plannerLoadingShownAt = { wheel: 0, proficiency: 0 };
+// Even when a frame doesn't need to navigate, reopening the modal can still show a brief
+// flash of whatever's behind/underneath it before the frame's own content settles back in.
+// Keep the spinner up for at least this long so that flash never has a gap to show through.
+const PLANNER_LOADING_MIN_MS = 220;
 let activeBuildKey = null;
 let activeTabKey = "a";
 let compareInFlight = null;
@@ -1196,6 +1202,28 @@ function setupEffectsInfo() {
 // we've already moved on. Mark a frame "pending" whenever we point it at a new URL so the
 // message handler can ignore anything that arrives before the matching "load" event confirms
 // the new document is the one actually talking to us.
+
+// The embedded planner pages re-fetch their own data and re-render in a couple of visible
+// steps as they boot (default weapon, then the actual saved build), which otherwise reads as
+// the window "flashing" a few times right after it opens. Cover the frame with a spinner
+// while a navigation is in flight and only lift it once the frame's settled build has been
+// received, so the user sees a single loading state instead of that flicker.
+function setPlannerLoading(name, loading) {
+  const overlay = document.querySelector(`#${name}PlannerLoading`);
+  window.clearTimeout(plannerLoadingTimers[name]);
+  if (loading) {
+    plannerLoadingShownAt[name] = Date.now();
+    if (overlay) overlay.hidden = false;
+    // Safety net: if the frame never reports back (e.g. a network hiccup), don't leave the
+    // user staring at a spinner forever.
+    plannerLoadingTimers[name] = window.setTimeout(() => setPlannerLoading(name, false), 8000);
+    return;
+  }
+  const remaining = PLANNER_LOADING_MIN_MS - (Date.now() - plannerLoadingShownAt[name]);
+  if (remaining > 0) plannerLoadingTimers[name] = window.setTimeout(() => { if (overlay) overlay.hidden = true; }, remaining);
+  else if (overlay) overlay.hidden = true;
+}
+
 function setPlannerFrameSrc(frame, url) {
   if (frame.getAttribute("src") !== url) frame.dataset.pendingNav = "1";
   frame.src = url;
@@ -1203,7 +1231,7 @@ function setPlannerFrameSrc(frame, url) {
 
 function initializePlannerFrames(build) {
   setPlannerFrameSrc(document.querySelector("#wheelPlannerFrame"), plannerUrl("/wheel-planner.html", { embed: "damage", v: "20260805-8", vocation: build.state.stats.vocation, code: build.state.wheelPlanner.code }));
-  setPlannerFrameSrc(document.querySelector("#proficiencyPlannerFrame"), plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260806-2", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token }));
+  setPlannerFrameSrc(document.querySelector("#proficiencyPlannerFrame"), plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260815-1", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token }));
 }
 
 // Silently resolves a build's wheel code / proficiency token into perks via the hidden
@@ -1217,7 +1245,7 @@ function hydrateInactiveBuild(build) {
   }
   if (build.state.proficiencyPlanner.token && !build.state.proficiencyPlanner.effects.length) {
     proficiencyHydrateKey = build.key;
-    document.querySelector("#proficiencyHydrateFrame").src = plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260806-2", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token });
+    document.querySelector("#proficiencyHydrateFrame").src = plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260815-1", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token });
   }
 }
 
@@ -1473,6 +1501,13 @@ function openPlanner(build, name) {
   const previousWheelSrc = wheel.getAttribute("src");
   const previousProficiencySrc = proficiency.getAttribute("src");
   initializePlannerFrames(build);
+  // Only the planner actually on screen needs a spinner — the other one navigates silently
+  // in the background (its content isn't visible either way). Show it even when the frame
+  // isn't navigating: the modal is still animating/settling into view at this point, and the
+  // spinner is cheaper cover for that than trying to guarantee the frame underneath never
+  // shows a stray frame of its own.
+  setPlannerLoading("wheel", name === "wheel");
+  setPlannerLoading("proficiency", name === "proficiency");
   if (name === "wheel") {
     syncWheelGrades(build);
     // If the src didn't change, the iframe won't navigate and no "load" event will fire to
@@ -1914,8 +1949,8 @@ function wireGlobalEvents() {
     const proficiencyHydrateFrame = document.querySelector("#proficiencyHydrateFrame");
     const build = builds[activeBuildKey];
     if (build) {
-      if (event.source === wheelFrame.contentWindow && event.data?.type === "tibiapal:wheel-build" && !wheelFrame.dataset.pendingNav) receiveWheelBuild(build, event.data.payload);
-      if (event.source === proficiencyFrame.contentWindow && event.data?.type === "tibiapal:proficiency-build" && !proficiencyFrame.dataset.pendingNav) receiveProficiencyBuild(build, event.data.payload);
+      if (event.source === wheelFrame.contentWindow && event.data?.type === "tibiapal:wheel-build" && !wheelFrame.dataset.pendingNav) { receiveWheelBuild(build, event.data.payload); setPlannerLoading("wheel", false); }
+      if (event.source === proficiencyFrame.contentWindow && event.data?.type === "tibiapal:proficiency-build" && !proficiencyFrame.dataset.pendingNav) { receiveProficiencyBuild(build, event.data.payload); setPlannerLoading("proficiency", false); }
     }
     // A "#results" deep link kicks off triggerCompare() before this background hydration can
     // possibly finish (it's a cross-frame round trip) - recompute once it lands so the Results

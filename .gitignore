@@ -3,6 +3,7 @@ _site/CODE_OF_CONDUCT.md
 _site/CONTRIBUTING.md
 _site/LICENSE
 _site/README.md
+_site/CLAUDE.md
 
 # Environment variables
 .env
