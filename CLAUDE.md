@@ -1,42 +1,59 @@
 # CLAUDE.md
 
-Project-specific gotchas for working in this repo. Read before editing CSS or the damage-calculator/wheel/proficiency planner integration.
+Project-specific gotchas. Read before editing CSS or the damage-calculator/wheel/proficiency planner integration.
 
-## Don't verify finished work with screenshots — the repo owner does that
+## Don't verify finished work in a browser — the owner does that
 
-The owner runs the local Jekyll server themselves and prefers to check the result in a real browser once a change is implemented. Don't spin up a headless browser (Playwright/`chrome --headless`) just to confirm that a finished fix looks right, and don't screenshot a change as a final "proof it works" step — just make the edit and describe what changed.
+The owner runs the local Jekyll server and checks the result themselves. Don't launch a headless browser or screenshot a change as a final "proof it works" step; make the edit and describe it.
 
-Headless rendering/measuring is fine when it's genuinely part of *diagnosing* a problem: reproducing a reported bug, measuring an actual overflow, or figuring out which rule is contributing unexpected pixels. In that case use it to answer the specific question, then stop.
+Headless rendering *is* fine for **diagnosis** — reproducing a reported bug, measuring an actual overflow, working out which rule contributes unexpected pixels. Answer the specific question, then stop.
 
-## `css/main.css` is a compiled file — never hand-edit it alone
+## `css/main.css` is compiled — never hand-edit it alone
 
-`css/main.css` is generated from `css/main.sass`, which `@import`s partials from `_sass/*.sass` (e.g. `_sass/_damage_calculator.sass`, `_sass/_wheel.sass`, `_sass/_proficiency_calculator.sass`, etc.). There's a Sass watcher (e.g. VS Code's "Live Sass Compiler") that can recompile `css/main.css` from those partials at any time and will silently discard any edit made only to the compiled `css/main.css`.
+It's built from `css/main.sass`, which `@import`s the `_sass/*.sass` partials (indented syntax: no braces/semicolons). A Sass watcher (VS Code Live Sass Compiler) can recompile at any time and will silently discard edits made only to `css/main.css`.
 
-**Always make the real edit in the matching `_sass/_*.sass` partial first.** Sass here uses the indented syntax (no braces/semicolons, indentation-significant).
+- **Always edit the matching `_sass/_*.sass` partial.** You may *additionally* mirror the change into `css/main.css` to see it immediately, but never instead — if the mirror doesn't match the source, a recompile erases it and the fix looks unapplied.
+- Don't recompile `main.sass` with an ad hoc `sass` CLI. A different implementation/version drops autoprefixer vendor prefixes and reflows comments, producing a huge unrelated diff.
+- `css/main.css.map`'s `sources` array confirms the partial chain if in doubt.
 
-If you need the fix visible immediately (e.g. to test against a running local server) without waiting for the watcher to recompile, you can *also* patch `css/main.css` directly with the equivalent change — but treat that as a temporary mirror of the source edit, never a substitute for it. If a watcher then recompiles from source and your direct patch didn't match the source, the direct patch will disappear and the bug will look "unfixed" even though the CSS change was correct.
+## `_site/` is committed and mirrors a live Jekyll server
 
-`css/main.css.map` exists and confirms the source chain — if in doubt, check it (`sources` array lists every `_sass/*.sass` partial that feeds the build).
-
-Don't recompile the whole `css/main.sass` locally with an ad hoc `sass` CLI unless you've confirmed it reproduces the project's actual toolchain output byte-for-byte — a different Sass implementation/version can silently drop autoprefixer vendor-prefixes (`-webkit-*`, `-ms-*`) and reflow comments, producing a huge unrelated diff.
-
-## `_site/` is checked into git and mirrors a live local Jekyll server
-
-This repo commits its Jekyll build output (`_site/`). If a local `jekyll serve` is already running (check `netstat`/`tasklist` for a listener on port 4000, process name `ruby.exe`), edits to source files (`.html`, `_includes/*`, `css/main.css`, `_sass/*`, etc.) get picked up and mirrored into `_site/` automatically — you'll see matching changes in `git status` for both the source file and its `_site/` counterpart. Don't manually edit files under `_site/` — edit the source and let the build regenerate it.
+The Jekyll build output is checked into git. If `jekyll serve` is running (port 4000, `ruby.exe`), source edits are mirrored into `_site/` automatically — expect both to show in `git status`. Never edit `_site/` by hand.
 
 ## Cache-busting query params
 
-Several files reference each other with explicit `?v=YYYYMMDD-N` query strings for cache-busting:
-- `damage-calculator.html` → `<script src="/damage-calculator/app.js?v=...">`
-- `weapon-proficiency.html` → `<script src="/proficiency-calculator/app.js?v=...">`
-- `damage-calculator/app.js` → passes matching `v` values into `plannerUrl()` when building the `wheel-planner.html` / `weapon-proficiency.html` iframe URLs it embeds
+These reference each other with explicit `?v=YYYYMMDD-N` strings:
 
-When you edit any of `damage-calculator/app.js`, `proficiency-calculator/app.js`, or their host `.html` files, bump the relevant `?v=` string(s) too (increment the date/suffix). Otherwise a browser that already loaded the old URL under that exact query string can keep serving the stale cached script even after a refresh, making a real fix look like it "didn't work."
+- `damage-calculator.html` → `/damage-calculator/app.js?v=…`
+- `weapon-proficiency.html` → `/proficiency-calculator/app.js?v=…`
+- `damage-calculator/app.js` → matching `v` values passed to `plannerUrl()` for the `wheel-planner.html` / `weapon-proficiency.html` iframes
 
-## Damage calculator planner modal (Wheel of Destiny / Weapon Proficiency editors)
+Bump the relevant one whenever you edit those files, or a browser keeps serving the cached script and a real fix looks like it didn't work.
 
-`damage-calculator.html` has a single shared modal (`#plannerModal`) with two iframes (`#wheelPlannerFrame`, `#proficiencyPlannerFrame`) reused across both Build A and Build B — see `openPlanner()` / `initializePlannerFrames()` in `damage-calculator/app.js`. Notable behavior worth knowing before touching this:
+## Damage calculator share links (`?build=`) — the schema is append-only
 
-- Reopening an *unchanged* build reuses the iframe's current document (no navigation) rather than reloading it — see the `pendingNav` handling in `setPlannerFrameSrc()`.
-- A loading overlay (`.dc-planner-loading` + `.dc-spinner`, styled in `_sass/_damage_calculator.sass`) covers each iframe on every open (not just on real navigation) with a minimum visible duration (`PLANNER_LOADING_MIN_MS`), because even a "no navigation needed" reopen can otherwise show a frame of stale/raw content while the modal settles.
-- `proficiency-calculator/app.js` has a `wpBuild` cookie meant only for the *standalone* `/weapon-proficiency.html` page's "remember my last build" feature. It's explicitly skipped (read and write) when `isPlannerEmbed` is true, so editing one build inside the damage calculator doesn't leak its weapon/perk choices into a different, not-yet-customized build. Don't remove that `isPlannerEmbed` guard.
+A token is `compactBuild()` output (one **positional array** per build, defaults trimmed off the end) → JSON → `deflate-raw` → base64url, behind a one-character format marker. The codec sits in `damage-calculator/app.js` between `bytesToBase64Url()` and `sanitizeState()`.
+
+Every index is baked into links already posted to Discord and forums, so when adding a field to `shareableFromState()`:
+
+- **Append to the end** of `compactBuild()` and read the same new index in `expandBuild()`. Inserting or reordering makes old links decode as a *different* build instead of failing loudly. `SHARE_VOCATIONS` indices are part of the format too — new vocations go on the end.
+- **`expandBuild()` must leave absent fields absent, not `null`.** `sanitizeState()` merges over `defaultState()`, and an explicit `null` beats the default it would otherwise pick (that's what re-derives `magicLevel` for paladins/casters).
+
+Markers: `3` = positional + deflate, `2` = positional uncompressed (no `CompressionStream`), anything else = the original plain-base64-JSON. Legacy tokens are base64 of a string starting `{"`, so they always begin `ey` and can't collide. **Keep the legacy branch** — old links must still open.
+
+`wheelPlanner.code` is CIP's own opaque planner code (~49 chars, already compressed) and sets the floor on link length. There's no backend in this repo to shorten it further.
+
+## The damage calculator mirrors its state into the address bar
+
+`saveAllState()` → `syncBuildUrl()`, which debounces and `history.replaceState`s the builds into `?build=` (same idea as `syncBuildUrl()` in `proficiency-calculator/app.js`).
+
+- **`replaceState`, never `pushState`** — every edit would otherwise become a Back-button step.
+- Boot can't treat "`?build=` exists" as "someone else's link". It compares against the token this tab last wrote (`SHARE_TOKEN_KEY` in `sessionStorage`, per-tab deliberately) so a refresh doesn't drop the saved-preset name and dirty marker via `isSharedLink`. Keep that comparison honest if you change how tokens are written.
+
+## Damage calculator planner modal (Wheel of Destiny / Weapon Proficiency)
+
+One shared modal (`#plannerModal`) with two iframes reused across Build A and Build B — see `openPlanner()` / `initializePlannerFrames()`.
+
+- Reopening an *unchanged* build reuses the iframe's current document instead of reloading it — see `pendingNav` in `setPlannerFrameSrc()`.
+- The `.dc-planner-loading` overlay covers each iframe on *every* open with a minimum duration (`PLANNER_LOADING_MIN_MS`), because even a no-navigation reopen can flash stale content while the modal settles.
+- `proficiency-calculator/app.js`'s `wpBuild` cookie is only for the standalone `/weapon-proficiency.html` page. It's skipped (read and write) when `isPlannerEmbed` — otherwise editing one build inside the damage calculator leaks its weapon/perk choices into a different, not-yet-customized build. **Don't remove that guard.**

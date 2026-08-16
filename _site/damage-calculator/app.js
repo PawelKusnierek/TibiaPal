@@ -320,17 +320,180 @@ function setDatalist(id, items, label = (entry) => entry.name) {
   list.replaceChildren(...items.map((entry) => option(label(entry), label(entry))));
 }
 
-function encodeBuild(build) {
-  const bytes = new TextEncoder().encode(JSON.stringify(build));
+function bytesToBase64Url(bytes) {
   let binary = "";
   bytes.forEach((byte) => { binary += String.fromCharCode(byte); });
   return btoa(binary).replaceAll("+", "-").replaceAll("/", "_").replace(/=+$/, "");
 }
 
-function decodeBuild(token) {
+function base64UrlToBytes(token) {
   const padded = token.replaceAll("-", "+").replaceAll("_", "/").padEnd(Math.ceil(token.length / 4) * 4, "=");
-  const binary = atob(padded);
-  return JSON.parse(new TextDecoder().decode(Uint8Array.from(binary, (character) => character.charCodeAt(0))));
+  return Uint8Array.from(atob(padded), (character) => character.charCodeAt(0));
+}
+
+function encodeBuild(build) {
+  return bytesToBase64Url(new TextEncoder().encode(JSON.stringify(build)));
+}
+
+function decodeBuild(token) {
+  return JSON.parse(new TextDecoder().decode(base64UrlToBytes(token)));
+}
+
+// ---------------------------------------------------------------------------
+// Share links.
+//
+// A link used to be plain base64url of the whole shareableBuild() JSON, which ran to ~1800
+// characters for an A/B comparison - long enough that chat clients wrapped it over several lines
+// and linkified only part of it. The payload is now rewritten as positional arrays (no repeated
+// key names, defaults trimmed off the end) and deflated before base64url, which gets that same
+// comparison down to ~280 characters.
+//
+// The first character of the token says which format it is. Legacy tokens are base64 of a string
+// starting `{"`, so they always begin "ey" and can never collide with these markers. Links posted
+// to Discord and forums long ago still have to open, so that branch stays for good.
+const SHARE_FORMAT_DEFLATE = "3";
+const SHARE_FORMAT_PLAIN = "2"; // positional but uncompressed, for browsers without CompressionStream
+// Append-only: a vocation's index here is baked into every link ever shared with it, so new
+// vocations go on the end. Anything not listed falls back to its literal name.
+const SHARE_VOCATIONS = ["knight", "paladin", "druid", "sorcerer", "monk"];
+
+async function deflateRaw(bytes) {
+  const stream = new Blob([bytes]).stream().pipeThrough(new CompressionStream("deflate-raw"));
+  return new Uint8Array(await new Response(stream).arrayBuffer());
+}
+
+async function inflateRaw(bytes) {
+  const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream("deflate-raw"));
+  return new Uint8Array(await new Response(stream).arrayBuffer());
+}
+
+// Empty strings/arrays/objects mean "default" on the way back in, so they're worth no characters.
+function blank(value) {
+  if (value == null || value === "") return null;
+  if (Array.isArray(value)) return value.length ? value : null;
+  if (typeof value === "object") return Object.keys(value).length ? value : null;
+  return value;
+}
+
+function trimTrailingBlanks(values) {
+  let end = values.length;
+  while (end > 0 && values[end - 1] == null) end -= 1;
+  return values.slice(0, end);
+}
+
+// The proficiency planner hands us its own base64url-of-JSON token, so a share link would
+// otherwise carry base64 nested inside base64: ~47 characters per build that deflate can't
+// compress and that don't dedupe between Build A and Build B. Unpack it to the underlying
+// {w,p,s} arrays here and re-encode on the way back out. Anything that doesn't parse to that
+// shape is carried through verbatim, so a later change to the token format can't break links.
+function compactProficiencyToken(token) {
+  if (!token) return null;
+  try {
+    const decoded = decodeBuild(token);
+    if (decoded && typeof decoded === "object" && Array.isArray(decoded.p) && Array.isArray(decoded.s)) {
+      return [decoded.w ?? null, decoded.p, decoded.s];
+    }
+  } catch { /* not a token we recognise - keep it as-is below */ }
+  return token;
+}
+
+function expandProficiencyToken(value) {
+  if (Array.isArray(value)) return encodeBuild({ w: value[0], p: value[1] ?? [], s: value[2] ?? [] });
+  return typeof value === "string" ? value : "";
+}
+
+// Positional form of one shareableBuild(). Append-only: every index below is baked into links
+// that are already public, so new fields go on the END and nothing ever moves.
+//   0 vocation (index into SHARE_VOCATIONS, or the literal name)   8 wheel code
+//   1 level      2 skill      3 magicLevel      4 stanceIds        9 wheel gemGrades
+//   5 weapon id  6 ammoId     7 shieldId                          10 proficiency [w,p,s]
+//  11 manualPerks [[id,value]]        12 effectChoices            13 rotation [[id,targets,ratio]]
+//  14 targets [[id,ratio,charmId,charmTier]]   15/16 imbuement element+value (knight-only)
+function compactBuild(build) {
+  const stats = build.stats ?? {};
+  const weapon = build.weapon ?? {};
+  const vocationIndex = SHARE_VOCATIONS.indexOf(stats.vocation);
+  return trimTrailingBlanks([
+    vocationIndex === -1 ? blank(stats.vocation) : vocationIndex,
+    stats.level ?? null,
+    stats.skill ?? null,
+    stats.magicLevel ?? null,
+    blank(stats.stanceIds),
+    weapon.id ?? null,
+    weapon.ammoId ?? null,
+    weapon.shieldId ?? null,
+    blank(build.wheelPlanner?.code),
+    blank(build.wheelPlanner?.gemGrades),
+    compactProficiencyToken(build.proficiencyPlanner?.token),
+    blank((build.manualPerks ?? []).map((row) => [row.id, row.value])),
+    blank(build.effectChoices),
+    blank((build.rotation ?? []).map((row) => [row.id, row.targets, row.ratio])),
+    blank((build.targets ?? []).map((row) => [row.id, row.ratio, row.charmId, row.charmTier])),
+    blank(stats.imbuementElement),
+    stats.imbuementElement ? stats.imbuementValue ?? null : null,
+  ]);
+}
+
+// Rebuilds the shareableBuild() shape. No validation happens here on purpose - the result goes
+// straight to sanitizeState(), which already merges over defaultState(), drops unknown enums and
+// re-derives magicLevel for paladins/casters. Absent keys therefore have to stay absent rather
+// than become null, or they'd override those defaults.
+function expandBuild(compact) {
+  const row = Array.isArray(compact) ? compact : [];
+  const at = (index) => row[index] ?? null;
+  const stats = {};
+  const vocation = typeof at(0) === "number" ? SHARE_VOCATIONS[at(0)] : at(0);
+  if (vocation != null) stats.vocation = vocation;
+  if (at(1) != null) stats.level = at(1);
+  if (at(2) != null) stats.skill = at(2);
+  if (at(3) != null) stats.magicLevel = at(3);
+  if (Array.isArray(at(4))) stats.stanceIds = at(4);
+  if (at(15) != null) {
+    stats.imbuementElement = at(15);
+    stats.imbuementValue = at(16);
+  }
+  const weapon = {};
+  if (at(5) != null) weapon.id = at(5);
+  if (at(6) != null) weapon.ammoId = at(6);
+  if (at(7) != null) weapon.shieldId = at(7);
+  const list = (index, map) => (Array.isArray(at(index)) ? at(index).map(map) : []);
+  return {
+    stats,
+    weapon,
+    wheelPlanner: { code: at(8) ?? "", gemGrades: at(9) ?? {} },
+    proficiencyPlanner: { token: expandProficiencyToken(at(10)) },
+    manualPerks: list(11, ([id, value]) => ({ id, value })),
+    effectChoices: at(12) ?? {},
+    rotation: list(13, ([id, targets, ratio]) => ({ id, targets, ratio })),
+    targets: list(14, ([id, ratio, charmId, charmTier]) => ({ id, ratio, charmId, charmTier })),
+  };
+}
+
+async function encodeShareToken(shared) {
+  const compact = [compactBuild(shared.a), compactBuild(shared.b)];
+  // Most links only customise Build A, so drop an untouched Build B rather than spend a few
+  // hundred characters restating the defaults.
+  if (JSON.stringify(compact[1]) === JSON.stringify(compactBuild(shareableFromState(defaultState())))) compact.pop();
+  const bytes = new TextEncoder().encode(JSON.stringify(compact));
+  if (typeof CompressionStream === "undefined") return SHARE_FORMAT_PLAIN + bytesToBase64Url(bytes);
+  return SHARE_FORMAT_DEFLATE + bytesToBase64Url(await deflateRaw(bytes));
+}
+
+// Returns { a, b } in shareableBuild() shape, with b === null when the link only carries one
+// build. Throws on anything malformed; the caller falls back to stored builds.
+async function decodeShareToken(token) {
+  const marker = token.slice(0, 1);
+  if (marker === SHARE_FORMAT_DEFLATE || marker === SHARE_FORMAT_PLAIN) {
+    const bytes = base64UrlToBytes(token.slice(1));
+    const json = new TextDecoder().decode(marker === SHARE_FORMAT_DEFLATE ? await inflateRaw(bytes) : bytes);
+    const compact = JSON.parse(json);
+    if (!Array.isArray(compact) || !compact.length) throw new Error("Malformed share payload.");
+    return { a: expandBuild(compact[0]), b: compact.length > 1 ? expandBuild(compact[1]) : null };
+  }
+  const decoded = decodeBuild(token);
+  if (!decoded || typeof decoded !== "object") throw new Error("Malformed share payload.");
+  // Old single-build share links carry the build itself rather than an { a, b } envelope.
+  return decoded.a || decoded.b ? { a: decoded.a, b: decoded.b ?? null } : { a: decoded, b: null };
 }
 
 function sanitizeState(candidate) {
@@ -376,6 +539,32 @@ function sanitizeState(candidate) {
     effectChoices,
     rotation: rows("rotation", { targets: 1, ratio: 1 }),
     targets: rows("targets", { ratio: 1, charmId: null, charmTier: 1 }),
+  };
+}
+
+// The subset of a build that travels in share links and named presets: everything the calculator
+// can't re-derive on its own. Notably absent are wheelPerks/proficiencyPerks and the planners'
+// `effects` - those are recomputed from the wheel code and proficiency token by the hidden
+// planner iframes (see hydrateInactiveBuild).
+function shareableFromState(state) {
+  const s = state.stats;
+  const stats = { vocation: s.vocation, level: s.level, skill: s.skill, magicLevel: s.magicLevel };
+  if (s.stanceIds?.length) stats.stanceIds = s.stanceIds;
+  // Only carried when actually set, to keep share links short. sanitizeState() re-validates
+  // both on the way back in, so a tampered link can't smuggle a bad enum into the request.
+  if (IMBUEMENT_ELEMENTS.includes(s.imbuementElement) && IMBUEMENT_VALUES.includes(Number(s.imbuementValue))) {
+    stats.imbuementElement = s.imbuementElement;
+    stats.imbuementValue = Number(s.imbuementValue);
+  }
+  return {
+    stats,
+    weapon: state.weapon,
+    wheelPlanner: { code: state.wheelPlanner.code, gemGrades: state.wheelPlanner.gemGrades },
+    proficiencyPlanner: { token: state.proficiencyPlanner.token },
+    manualPerks: state.manualPerks,
+    effectChoices: state.effectChoices,
+    rotation: state.rotation,
+    targets: state.targets,
   };
 }
 
@@ -1359,25 +1548,7 @@ function createBuild(key) {
   }
 
   function shareableBuild() {
-    const s = state.stats;
-    const stats = { vocation: s.vocation, level: s.level, skill: s.skill, magicLevel: s.magicLevel };
-    if (s.stanceIds?.length) stats.stanceIds = s.stanceIds;
-    // Only carried when actually set, to keep share links short. sanitizeState() re-validates
-    // both on the way back in, so a tampered link can't smuggle a bad enum into the request.
-    if (IMBUEMENT_ELEMENTS.includes(s.imbuementElement) && IMBUEMENT_VALUES.includes(Number(s.imbuementValue))) {
-      stats.imbuementElement = s.imbuementElement;
-      stats.imbuementValue = Number(s.imbuementValue);
-    }
-    return {
-      stats,
-      weapon: state.weapon,
-      wheelPlanner: { code: state.wheelPlanner.code, gemGrades: state.wheelPlanner.gemGrades },
-      proficiencyPlanner: { token: state.proficiencyPlanner.token },
-      manualPerks: state.manualPerks,
-      effectChoices: state.effectChoices,
-      rotation: state.rotation,
-      targets: state.targets,
-    };
+    return shareableFromState(state);
   }
 
   function replaceState(nextState) {
@@ -1487,6 +1658,63 @@ const builds = { a: createBuild("a"), b: createBuild("b") };
 
 function saveAllState() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify({ a: builds.a.state, b: builds.b.state }));
+  syncBuildUrl();
+}
+
+// Keeps the address bar in step with the builds, the way /weapon-proficiency.html already does.
+// "Copy build link" always encodes the live state, so it was never stale - but someone who opened
+// a link, tweaked it, then copied the URL straight out of the browser would have re-shared the
+// ORIGINAL build without noticing. This closes that gap, and incidentally rewrites an old-format
+// link to the short one as soon as the page settles.
+const SHARE_TOKEN_KEY = "tibiapalDamageShareTokenV1";
+// Long enough that typing a level doesn't deflate a payload per keystroke, short enough that the
+// URL is current by the time anyone reaches for the address bar.
+const URL_SYNC_DEBOUNCE_MS = 500;
+let urlSyncReady = false;
+let urlSyncTimer = null;
+let urlSyncSequence = 0;
+
+// sessionStorage throws outright in some privacy modes rather than just failing to persist.
+function sessionStorageItem(key) {
+  try { return sessionStorage.getItem(key); } catch { return null; }
+}
+
+function syncBuildUrl() {
+  // Boot calls saveAllState() while the builds are still being wired up; nothing goes into the
+  // URL until the page is actually ready (see the tail of loadMetadata).
+  if (!urlSyncReady) return;
+  window.clearTimeout(urlSyncTimer);
+  urlSyncTimer = window.setTimeout(async () => {
+    const sequence = ++urlSyncSequence;
+    let token = null;
+    // An untouched calculator gets a clean URL rather than a token describing nothing; resetting
+    // both builds takes the param back off again.
+    if (!buildsAreDefault()) {
+      try {
+        token = await encodeShareToken(shareableBuilds());
+      } catch (error) {
+        console.warn("Could not mirror the build into the URL", error);
+        return;
+      }
+      // Encoding is async (deflate), so a slow earlier run must not land on top of a newer one.
+      if (sequence !== urlSyncSequence) return;
+    }
+    const url = new URL(window.location.href);
+    if ((url.searchParams.get("build") ?? null) === token) return;
+    if (token === null) url.searchParams.delete("build");
+    else url.searchParams.set("build", token);
+    // replaceState, never pushState: every edit would otherwise become a Back-button step.
+    window.history.replaceState(null, "", url.href);
+    // Remember what we wrote so a refresh can tell our own mirror from a link the user was
+    // genuinely sent — see isSharedLink in loadMetadata. sessionStorage is per-tab, so two tabs
+    // editing different builds don't confuse each other.
+    try { sessionStorage.setItem(SHARE_TOKEN_KEY, token ?? ""); } catch { /* private mode - not important */ }
+  }, URL_SYNC_DEBOUNCE_MS);
+}
+
+function buildsAreDefault() {
+  const fallback = JSON.stringify(compactBuild(shareableFromState(defaultState())));
+  return ["a", "b"].every((key) => JSON.stringify(compactBuild(builds[key].shareableBuild())) === fallback);
 }
 
 // Which named saved build (if any) each tab currently reflects, so a refresh reopens the same
@@ -1522,16 +1750,13 @@ function loadStoredBuilds() {
   return { a: defaultState(), b: defaultState() };
 }
 
-function restoreBuilds() {
+async function restoreBuilds() {
   const shared = new URLSearchParams(window.location.search).get("build");
   if (shared) {
     try {
-      const decoded = decodeBuild(shared);
-      if (decoded && typeof decoded === "object" && (decoded.a || decoded.b)) {
-        return { a: sanitizeState(decoded.a), b: sanitizeState(decoded.b) };
-      }
-      // Old single-build share links: load into Build A, leave Build B default.
-      return { a: sanitizeState(decoded), b: defaultState() };
+      const decoded = await decodeShareToken(shared);
+      // A link that only carries Build A leaves Build B on its defaults.
+      return { a: sanitizeState(decoded.a), b: decoded.b ? sanitizeState(decoded.b) : defaultState() };
     } catch (error) { console.warn("Ignored invalid shared damage build", error); }
   }
   return loadStoredBuilds();
@@ -2400,7 +2625,7 @@ function wireGlobalEvents() {
   document.querySelector("#shareBuild").addEventListener("click", async (event) => {
     const button = event.currentTarget;
     const url = new URL(window.location.href);
-    url.searchParams.set("build", encodeBuild(shareableBuilds()));
+    url.searchParams.set("build", await encodeShareToken(shareableBuilds()));
     try {
       await navigator.clipboard.writeText(url.href);
     } catch {
@@ -2458,12 +2683,16 @@ async function loadMetadata() {
       saveCachedMetadata(metadata);
     }
 
-    const restored = restoreBuilds();
+    const restored = await restoreBuilds();
     builds.a.state = restored.a;
     builds.b.state = restored.b;
     // A shared "?build=" link describes an ad-hoc build, not the user's own saved presets —
-    // don't relabel it with whichever preset name happened to be active before.
-    const isSharedLink = Boolean(new URLSearchParams(window.location.search).get("build"));
+    // don't relabel it with whichever preset name happened to be active before. The calculator
+    // now mirrors its own state into that same param (syncBuildUrl), so a refresh would otherwise
+    // look like an incoming shared link and drop the preset name; a token this tab wrote itself
+    // doesn't count.
+    const shared = new URLSearchParams(window.location.search).get("build");
+    const isSharedLink = Boolean(shared) && shared !== sessionStorageItem(SHARE_TOKEN_KEY);
     const meta = isSharedLink ? {} : loadBuildMeta();
     ["a", "b"].forEach((key) => {
       const build = builds[key];
@@ -2490,6 +2719,10 @@ async function loadMetadata() {
     document.querySelector("#damageTabs").hidden = false;
     damageForm.hidden = false;
     appRoot.setAttribute("aria-busy", "false");
+    // From here on every saveAllState() also mirrors the builds into the address bar. The first
+    // run rewrites a legacy or hand-trimmed "?build=" into the current short format.
+    urlSyncReady = true;
+    syncBuildUrl();
   } catch (error) {
     metadataStatus.classList.add("dc-error");
     metadataStatus.replaceChildren(document.createTextNode(`${error.message} Please reload to try again.`));
