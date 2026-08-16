@@ -971,7 +971,7 @@ $("#clearShapedPerkButton").addEventListener("click", () => {
 
 try {
   const [data, shaping] = await Promise.all([
-    fetch("../data/proficiency/weapon-proficiencies.json?v=20260729-7"),
+    fetch("../data/proficiency/weapon-proficiencies.json?v=20260816-1"),
     fetch("../data/proficiency/perk-shaping-options.json?v=20260723-1"),
   ]).then(async (responses) => {
     const failed = responses.find((response) => !response.ok);

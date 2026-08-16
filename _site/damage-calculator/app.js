@@ -1823,7 +1823,7 @@ function setPlannerFrameSrc(frame, url) {
 
 function initializePlannerFrames(build) {
   setPlannerFrameSrc(document.querySelector("#wheelPlannerFrame"), plannerUrl("/wheel-planner.html", { embed: "damage", v: "20260815-2", vocation: build.state.stats.vocation, code: build.state.wheelPlanner.code }));
-  setPlannerFrameSrc(document.querySelector("#proficiencyPlannerFrame"), plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260815-1", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token }));
+  setPlannerFrameSrc(document.querySelector("#proficiencyPlannerFrame"), plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260816-1", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token }));
 }
 
 // Silently resolves a build's wheel code / proficiency token into perks via the hidden
@@ -1837,7 +1837,7 @@ function hydrateInactiveBuild(build) {
   }
   if (build.state.proficiencyPlanner.token && !build.state.proficiencyPlanner.effects.length) {
     proficiencyHydrateKey = build.key;
-    document.querySelector("#proficiencyHydrateFrame").src = plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260815-1", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token });
+    document.querySelector("#proficiencyHydrateFrame").src = plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260816-1", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token });
   }
 }
 
