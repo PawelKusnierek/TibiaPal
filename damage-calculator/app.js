@@ -260,9 +260,24 @@ function weaponDisplayName(weapon) {
 
 const DEFAULT_AMMO_NAME_BY_TYPE = { arrows: "Diamond Arrow", bolts: "Spectral Bolt" };
 
+// T2 is by far the most common charm tier people actually run, so a freshly added target
+// starts there instead of at T1.
+const DEFAULT_CHARM_TIER = 2;
+
+// Average auto-attack hits per turn for a paladin. The storm arrows cover a smaller area than
+// diamond arrows, so they land on fewer creatures per shot.
+const PALADIN_AUTO_ATTACK_HITS = 6;
+const STORM_ARROW_AUTO_ATTACK_HITS = 5.3;
+const STORM_ARROW_NAMES = new Set(["Firestorm Arrow", "Froststorm Arrow", "Terrastorm Arrow", "Thunderstorm Arrow", "Shatterstorm Arrow"]);
+
 function defaultAmmoId(weapon) {
   const name = DEFAULT_AMMO_NAME_BY_TYPE[weapon?.ammoType];
   return name ? metadata.ammo.find((entry) => entry.name === name)?.id ?? null : null;
+}
+
+function paladinAutoAttackHits(ammoId) {
+  const ammo = item("ammo", ammoId);
+  return STORM_ARROW_NAMES.has(ammo?.name) ? STORM_ARROW_AUTO_ATTACK_HITS : PALADIN_AUTO_ATTACK_HITS;
 }
 
 function normalized(value) {
@@ -538,7 +553,7 @@ function sanitizeState(candidate) {
     manualPerks: rows("manualPerks", { value: 0 }),
     effectChoices,
     rotation: rows("rotation", { targets: 1, ratio: 1 }),
-    targets: rows("targets", { ratio: 1, charmId: null, charmTier: 1 }),
+    targets: rows("targets", { ratio: 1, charmId: null, charmTier: DEFAULT_CHARM_TIER }),
   };
 }
 
@@ -843,7 +858,7 @@ function createBuild(key) {
     const select = $("rotationPresetSelect");
     const preset = (ROTATION_PRESETS[state.stats.vocation] ?? []).find((entry) => entry.name === select.value);
     if (!preset) return;
-    const rows = [{ id: 1, targets: state.stats.vocation === "paladin" ? 6 : 1, ratio: 1 }];
+    const rows = [{ id: 1, targets: state.stats.vocation === "paladin" ? paladinAutoAttackHits(state.weapon.ammoId) : 1, ratio: 1 }];
     preset.spells.forEach((entry) => {
       const matched = matchByName("spells", entry.name, (candidate) => candidate.selectable !== false && vocationAllows(candidate));
       const spell = resolveStagedSpell(matched);
@@ -1265,6 +1280,9 @@ function createBuild(key) {
       identity.append(title, hint);
       const targets = numericRowInput(row, "targets", 0, "Average targets", changed);
       const ratio = numericRowInput(row, "ratio", 0, "Cast ratio", changed);
+      // The API adds the basic attack once per turn on top of the ratio-weighted average of the
+      // spells, so its own ratio is ignored server-side (0 included). An editable field here
+      // would be a control that silently does nothing.
       if (row.id === 1) { ratio.type = "text"; ratio.value = "N/A"; ratio.disabled = true; }
       element.append(identity, targets, ratio, removeButton(() => {
         state.rotation = state.rotation.filter((candidate) => candidate !== row);
@@ -1303,9 +1321,15 @@ function createBuild(key) {
       charm.replaceChildren(option("", "No charm"), ...metadata.charms.map((entry) => option(entry.id, entry.name, entry.id === Number(row.charmId))));
       const tier = document.createElement("select");
       tier.setAttribute("aria-label", `${creature.name} charm tier`);
-      tier.replaceChildren(...[1, 2, 3].map((value) => option(value, `T${value}`, value === Number(row.charmTier))));
+      const selectedTier = Number(row.charmTier) || DEFAULT_CHARM_TIER;
+      tier.replaceChildren(...[1, 2, 3].map((value) => option(value, `T${value}`, value === selectedTier)));
       tier.disabled = !row.charmId;
-      charm.addEventListener("change", () => { row.charmId = charm.value ? Number(charm.value) : null; tier.disabled = !row.charmId; changed(); });
+      charm.addEventListener("change", () => {
+        row.charmId = charm.value ? Number(charm.value) : null;
+        row.charmTier = Number(tier.value) || DEFAULT_CHARM_TIER;
+        tier.disabled = !row.charmId;
+        changed();
+      });
       tier.addEventListener("change", () => { row.charmTier = Number(tier.value); changed(); });
       element.append(identity, ratio, charm, tier, removeButton(() => {
         state.targets = state.targets.filter((candidate) => candidate !== row);
@@ -1345,10 +1369,22 @@ function createBuild(key) {
     const creature = matchByName("creatures", input.value);
     if (!creature) { input.setCustomValidity("Choose a creature from the list."); input.reportValidity(); return; }
     input.setCustomValidity("");
-    if (!state.targets.some((row) => row.id === creature.id)) state.targets.push({ id: creature.id, ratio: 1, charmId: null, charmTier: 1 });
+    if (!state.targets.some((row) => row.id === creature.id)) state.targets.push({ id: creature.id, ratio: 1, charmId: null, charmTier: DEFAULT_CHARM_TIER });
     input.value = "";
     renderTargets();
     changed();
+  }
+
+  // Storm arrows hit a smaller area than diamond arrows, so the auto-attack row's average
+  // targets follows the equipped ammunition. Only a row still sitting on one of the two known
+  // defaults is moved — anything else is the user's own measured value.
+  function syncAutoAttackTargets() {
+    if (state.stats.vocation !== "paladin") return;
+    const row = state.rotation.find((entry) => entry.id === 1);
+    if (!row) return;
+    const current = Number(row.targets);
+    if (current !== PALADIN_AUTO_ATTACK_HITS && current !== STORM_ARROW_AUTO_ATTACK_HITS) return;
+    row.targets = paladinAutoAttackHits(state.weapon.ammoId);
   }
 
   function setHuntLogStatus(message, isError) {
@@ -1370,7 +1406,7 @@ function createBuild(key) {
       if (!creature) { unmatched.push(name); return; }
       const ratio = Math.round((count / total) * 100) / 100;
       const existing = state.targets.find((row) => row.id === creature.id);
-      if (existing) existing.ratio = ratio; else state.targets.push({ id: creature.id, ratio, charmId: null, charmTier: 1 });
+      if (existing) existing.ratio = ratio; else state.targets.push({ id: creature.id, ratio, charmId: null, charmTier: DEFAULT_CHARM_TIER });
       added++;
     });
     if (!added) { setHuntLogStatus(`Couldn't match any creatures from the log: ${unmatched.join(", ")}.`, true); return; }
@@ -1597,7 +1633,7 @@ function createBuild(key) {
           state.manualPerks = state.manualPerks.filter((row) => vocationAllows(item("perks", row.id)));
           state.rotation = state.rotation.filter((row) => vocationAllows(item("spells", row.id)));
           const autoAttackRow = state.rotation.find((row) => row.id === 1);
-          if (autoAttackRow) autoAttackRow.targets = state.stats.vocation === "paladin" ? 6 : 1;
+          if (autoAttackRow) autoAttackRow.targets = state.stats.vocation === "paladin" ? paladinAutoAttackHits(state.weapon.ammoId) : 1;
           state.wheelPerks = mappedPlannerPerks("wheel");
           state.proficiencyPerks = mappedPlannerPerks("proficiency");
           populateStaticControls();
@@ -1608,12 +1644,24 @@ function createBuild(key) {
     root.querySelectorAll("[data-add-perk]").forEach((button) => button.addEventListener("click", addPerk));
     $("addSpell").addEventListener("click", addSpell);
     $("rotationPresetSelect").addEventListener("change", applyRotationPreset);
-    $("addTarget").addEventListener("click", addTarget);
     $("importHuntLog").addEventListener("click", importHuntLog);
     $("manualPerkSearch").addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); addPerk(); } });
     $("spellSearch").addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); addSpell(); } });
     $("creatureSearch").addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); addTarget(); } });
-    $("ammoSelect").addEventListener("change", (event) => { state.weapon.ammoId = event.target.value ? Number(event.target.value) : null; changed(); });
+    // Picking a creature from the datalist adds it straight away, so the "Add" button is only
+    // needed when typing the name by hand. Browsers report the pick either as
+    // "insertReplacementText" or with no inputType at all, and the name has to match an entry
+    // exactly - a plain keystroke that happens to be a prefix ("rat") must not fire this.
+    $("creatureSearch").addEventListener("input", (event) => {
+      if (event.inputType && event.inputType !== "insertReplacementText") return;
+      if (metadata.creatures.some((entry) => normalized(entry.name) === normalized(event.target.value))) addTarget();
+    });
+    $("ammoSelect").addEventListener("change", (event) => {
+      state.weapon.ammoId = event.target.value ? Number(event.target.value) : null;
+      syncAutoAttackTargets();
+      renderRotation();
+      changed();
+    });
     $("shieldSelect").addEventListener("change", (event) => { state.weapon.shieldId = event.target.value ? Number(event.target.value) : null; changed(); });
     root.querySelectorAll("[data-open-planner]").forEach((button) => button.addEventListener("click", () => openPlanner(build, button.dataset.openPlanner)));
   }
@@ -1635,6 +1683,8 @@ function createBuild(key) {
     renderStatControls,
     renderSyncedEffects,
     renderEquipment,
+    renderRotation,
+    syncAutoAttackTargets,
     mappedPlannerPerks,
     visibleResultSpells,
     syncStagedRotationStages,
@@ -2170,7 +2220,12 @@ function receiveProficiencyBuild(build, payload) {
   const weapon = metadata.weapons.find((candidate) => normalized(candidate.name) === normalized(payload.weaponName));
   if (weapon) {
     state.weapon.id = weapon.id;
-    if (previousWeapon !== weapon.id) { state.weapon.ammoId = defaultAmmoId(weapon); state.weapon.shieldId = null; }
+    if (previousWeapon !== weapon.id) {
+      state.weapon.ammoId = defaultAmmoId(weapon);
+      state.weapon.shieldId = null;
+      build.syncAutoAttackTargets();
+      build.renderRotation();
+    }
   }
   state.wheelPerks = build.mappedPlannerPerks("wheel");
   state.proficiencyPerks = build.mappedPlannerPerks("proficiency");

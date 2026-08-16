@@ -94,7 +94,7 @@
   <section class="dc-panel">
     <div class="dc-panel-heading">
       <span class="dc-step">04</span>
-      <div><h2>Rotation</h2><p><strong>Average Targets</strong> is pre-filled for convenience with an approximate value from real hunting data — adjust it to your own hunts/results if necessary.<br><strong>Ratio</strong> is how often you cast it relative to your basic attack: 1 means every turn, 0.5 means every other turn, 0.2 means once every 5 turns.</p></div>
+      <div><h2>Rotation</h2><p><strong>Average Targets</strong> is pre-filled for convenience with an approximate value from real hunting data — adjust it to your own hunts/results if necessary.<br><strong>Ratio</strong> is how often you cast each spell relative to the other spells — only the proportions matter, so the values don't need to add up to anything in particular: 2, 4 and 6 give exactly the same result as 1, 2 and 3 (the second spell twice as often as the first, the third three times as often). Set a ratio to 0 to leave a spell out without deleting it. Your basic attack isn't part of that split — it lands every turn on top of the spells.</p></div>
     </div>
     <div class="dc-narrow-fields">
       <div class="dc-preset-row">
@@ -114,7 +114,7 @@
   <section class="dc-panel">
     <div class="dc-panel-heading">
       <span class="dc-step">05</span>
-      <div><h2>Targets (Optional)</h2><p>Add the creatures you're hunting so their defenses, resistances and charms factor into the damage calculation. Ratio sets what share of the kills in this list come from this creature.</p></div>
+      <div><h2>Targets (Optional)</h2><p>Add the creatures you're hunting so their defenses, resistances and charms factor into the damage calculation. <strong>Ratio</strong> is how often you kill this creature relative to the others — only the proportions matter, so the values don't need to add up to anything in particular: 1 and 1 give the same result as 0.5 and 0.5 (an even split), while 2 and 1 means the first creature is killed twice as often as the second.</p></div>
     </div>
     <div class="dc-wide-fields">
       <div class="dc-hunt-import">
@@ -126,8 +126,8 @@
         </div>
       </div>
       <div class="dc-add-row">
-        <label for="creatureSearch-{{ include.key }}">Add a creature</label>
-        <div><input id="creatureSearch-{{ include.key }}" type="search" list="creatureOptions-{{ include.key }}" placeholder="Search creatures…" autocomplete="off"><button id="addTarget-{{ include.key }}" type="button">Add</button></div>
+        <label for="creatureSearch-{{ include.key }}">Add a creature — pick one from the list to add it</label>
+        <div><input id="creatureSearch-{{ include.key }}" type="search" list="creatureOptions-{{ include.key }}" placeholder="Search creatures…" autocomplete="off"></div>
       </div>
       <div class="dc-list-head dc-target-head"><span>Creature</span><span>Ratio</span><span>Charm</span><span>Tier</span><span></span></div>
       <div id="targetRows-{{ include.key }}" class="dc-row-list"></div>
