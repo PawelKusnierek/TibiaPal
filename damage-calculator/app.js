@@ -27,6 +27,13 @@ const IMBUEMENT_ELEMENTS = ["fire", "ice", "energy", "earth", "death"];
 const IMBUEMENT_VALUES = [0.1, 0.25, 0.5]; // Basic / Intricate / Powerful
 const DEFAULT_IMBUEMENT_VALUE = 0.5;
 
+// Onslaught, the forge tier bonus of a weapon: a "Fatal Hit" chance for 60% bonus damage, which
+// the damage API takes as `stats.fatalChance` (a percentage, e.g. 9.05). The chance is fixed per
+// weapon tier - indexed by tier, so tier 0 (an unforged weapon) is 0.
+// Source: https://tibia.fandom.com/wiki/Onslaught
+const ONSLAUGHT_CHANCE_BY_TIER = [0, 0.5, 1.05, 1.7, 2.45, 3.3, 4.25, 5.3, 6.45, 7.7, 9.05];
+const MAX_WEAPON_TIER = ONSLAUGHT_CHANCE_BY_TIER.length - 1;
+
 // Stances the damage API marks non-selectable ("only selectable stances affect damage"),
 // but whose skill/magic-level boost we can apply client-side to the stat we already send.
 // These ids are applied locally and are NOT forwarded to the API as stanceIds.
@@ -231,12 +238,14 @@ let proficiencyHydrateKey = null;
 const defaultState = () => ({
   stats: {
     vocation: "knight", level: 1000, bonus: 0, skill: DEFAULT_SKILL_BY_VOCATION.knight, magicLevel: 13,
-    critChance: BASE_CRIT_CHANCE, critDamage: BASE_CRIT_DAMAGE, fatalChance: 0, transcendenceChance: 0,
+    critChance: BASE_CRIT_CHANCE, critDamage: BASE_CRIT_DAMAGE, transcendenceChance: 0,
     hitPoints: 0, manaPoints: 0, baseMagicLevel: 0, axe: 0, club: 0,
     sword: 0, fist: 0, distance: 0, shielding: 0, fishing: 0,
     imbuementElement: "", imbuementValue: 0, stanceIds: [],
   },
-  weapon: { id: 1, ammoId: null, shieldId: null },
+  // `tier` is the forge tier of the weapon, which is only there to drive Onslaught
+  // (stats.fatalChance); 0 means unforged.
+  weapon: { id: 1, ammoId: null, shieldId: null, tier: 0 },
   wheelPlanner: { code: "", vocation: "knight", promotionPoints: 0, bonus: 0, effects: [], gemGrades: {} },
   proficiencyPlanner: { token: "", weaponName: "", weaponSprite: "", vocation: "knight", effects: [] },
   wheelPerks: [],
@@ -424,6 +433,7 @@ function expandProficiencyToken(value) {
 //   5 weapon id  6 ammoId     7 shieldId                          10 proficiency [w,p,s]
 //  11 manualPerks [[id,value]]        12 effectChoices            13 rotation [[id,targets,ratio]]
 //  14 targets [[id,ratio,charmId,charmTier]]   15/16 imbuement element+value (knight-only)
+//  17 weapon forge tier (Onslaught)
 function compactBuild(build) {
   const stats = build.stats ?? {};
   const weapon = build.weapon ?? {};
@@ -446,6 +456,7 @@ function compactBuild(build) {
     blank((build.targets ?? []).map((row) => [row.id, row.ratio, row.charmId, row.charmTier])),
     blank(stats.imbuementElement),
     stats.imbuementElement ? stats.imbuementValue ?? null : null,
+    weapon.tier || null,
   ]);
 }
 
@@ -471,6 +482,7 @@ function expandBuild(compact) {
   if (at(5) != null) weapon.id = at(5);
   if (at(6) != null) weapon.ammoId = at(6);
   if (at(7) != null) weapon.shieldId = at(7);
+  if (at(17) != null) weapon.tier = at(17);
   const list = (index, map) => (Array.isArray(at(index)) ? at(index).map(map) : []);
   return {
     stats,
@@ -541,11 +553,16 @@ function sanitizeState(candidate) {
       if (choices.spellChoice ? /^\d*$/.test(choice) : choices.options.some((option) => option.id === choice)) effectChoices[name] = choice;
     });
   }
+  const weapon = { ...fallback.weapon, ...(candidate.weapon && typeof candidate.weapon === "object" ? candidate.weapon : {}) };
+  // Same reasoning as the imbuement above: the tier only exists to pick an Onslaught chance,
+  // so anything outside the forge's 0-10 range is treated as an unforged weapon.
+  const tier = Math.round(Number(weapon.tier));
+  weapon.tier = Number.isFinite(tier) ? Math.min(Math.max(tier, 0), MAX_WEAPON_TIER) : 0;
   const wheelPlanner = { ...fallback.wheelPlanner, ...(candidate.wheelPlanner && typeof candidate.wheelPlanner === "object" ? candidate.wheelPlanner : {}) };
   wheelPlanner.gemGrades = wheelPlanner.gemGrades && typeof wheelPlanner.gemGrades === "object" && !Array.isArray(wheelPlanner.gemGrades) ? wheelPlanner.gemGrades : {};
   return {
     stats,
-    weapon: { ...fallback.weapon, ...(candidate.weapon && typeof candidate.weapon === "object" ? candidate.weapon : {}) },
+    weapon,
     wheelPlanner,
     proficiencyPlanner: { ...fallback.proficiencyPlanner, ...(candidate.proficiencyPlanner && typeof candidate.proficiencyPlanner === "object" ? candidate.proficiencyPlanner : {}) },
     wheelPerks: rows("wheelPerks", { value: 0 }),
@@ -937,6 +954,14 @@ function createBuild(key) {
     weaponInput.value = weaponDisplayName(weapon);
     const details = [weapon?.skill, weapon?.hands ? `${weapon.hands}-handed` : null, weapon?.attack != null ? `${weapon.attack} atk` : null, weapon?.damage != null ? `${weapon.damage} ${weapon.damageType ?? ""} damage` : null].filter(Boolean);
     $("weaponMeta").textContent = details.join(" · ");
+
+    // Fists can't be forged, so the tier - and with it Onslaught - only applies to a real weapon.
+    const tierSelect = $("weaponTierSelect");
+    const canForge = weapon?.id !== 1;
+    if (!canForge) state.weapon.tier = 0;
+    tierSelect.replaceChildren(option(0, "Not forged", !state.weapon.tier), ...ONSLAUGHT_CHANCE_BY_TIER.slice(1)
+      .map((chance, index) => option(index + 1, `Tier ${index + 1} · ${chance}% Onslaught`, index + 1 === Number(state.weapon.tier))));
+    tierSelect.disabled = !canForge;
 
     const ammoField = $("ammoField");
     const ammoSelect = $("ammoSelect");
@@ -1464,6 +1489,10 @@ function createBuild(key) {
       stats.imbuementValue = imbuementValue;
     }
     if (apiStanceIds.length) stats.stanceIds = apiStanceIds;
+    // The API has no field for the forge tier itself - it only takes the Onslaught chance the
+    // tier grants, under its in-game name for that hit type ("Fatal").
+    const fatalChance = ONSLAUGHT_CHANCE_BY_TIER[state.weapon.tier] ?? 0;
+    if (fatalChance) stats.fatalChance = fatalChance;
     const weapon = { id: Number(state.weapon.id) || 1 };
     if (state.weapon.ammoId) weapon.ammoId = Number(state.weapon.ammoId);
     if (state.weapon.shieldId) weapon.shieldId = Number(state.weapon.shieldId);
@@ -1663,6 +1692,7 @@ function createBuild(key) {
       changed();
     });
     $("shieldSelect").addEventListener("change", (event) => { state.weapon.shieldId = event.target.value ? Number(event.target.value) : null; changed(); });
+    $("weaponTierSelect").addEventListener("change", (event) => { state.weapon.tier = numberOrZero(event.target.value); changed(); });
     root.querySelectorAll("[data-open-planner]").forEach((button) => button.addEventListener("click", () => openPlanner(build, button.dataset.openPlanner)));
   }
 

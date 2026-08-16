@@ -68,6 +68,10 @@
         <input id="weaponSearch-{{ include.key }}" type="text" placeholder="Choose a weapon in the planner" readonly>
         <small id="weaponMeta-{{ include.key }}"></small>
       </label>
+      <label id="weaponTierField-{{ include.key }}" class="dc-equipment-hinted">Weapon tier (Onslaught)
+        <select id="weaponTierSelect-{{ include.key }}"></select>
+        <small>Forge tier of the weapon — its Onslaught chance to deal 60% bonus damage.</small>
+      </label>
       <label id="ammoField-{{ include.key }}">Ammo<select id="ammoSelect-{{ include.key }}"><option value="">None</option></select></label>
       <label id="shieldField-{{ include.key }}">Shield<select id="shieldSelect-{{ include.key }}"><option value="">None</option></select></label>
       <label id="imbuementField-{{ include.key }}" class="dc-equipment-hinted">Elemental imbuement
