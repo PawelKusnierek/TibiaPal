@@ -130,13 +130,13 @@ const PLANNER_EFFECT_AUTO = {
       return { note: "Crossbow: +10% critical extra damage for auto-attacks", perks: [{ bonusType: "crit-damage", scope: "auto-attack", value: 10 }] };
     }
     if (weapon?.ammoType === "arrows") {
-      // "your attacks and spells have +4% physical and holy pierce" - weapon pierce covers the
-      // attacks, regular pierce the spells, so both scopes are applied for both elements.
+      // "your attacks and spells have +4% physical and holy pierce". The API's "(regular)" and
+      // "(weapon)" pierce perks are NOT different scopes - both apply to auto-attacks and to
+      // spells of that element, and the API just sums them. Sending both variants therefore
+      // credited the build with 8% instead of 4%, so only one variant is sent per element.
       return {
         note: "Bow: +4% physical and holy pierce",
         perks: [
-          { bonusType: "physical-pierce-weapon", value: 4 },
-          { bonusType: "holy-pierce-weapon", value: 4 },
           { bonusType: "physical-pierce-regular", value: 4 },
           { bonusType: "holy-pierce-regular", value: 4 },
         ],
