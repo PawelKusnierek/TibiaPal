@@ -138,6 +138,14 @@ const PLANNER_EFFECT_CHOICES = {
 // it stays out of the Focus Mastery dropdown. Compared punctuation-insensitively (plainName).
 const FOCUS_MASTERY_TRIGGER_SPELLS = new Set(["hell s core"]);
 
+// Element bit flag carried by the elemental proficiency rows (ElementId in
+// data/proficiency/weapon-proficiencies.json), mapped to the damage API's scope names.
+// 8 is fire and 32 is energy: that JSON's own `element` label has those two swapped, but every
+// row's text agrees with the mapping here - ElementId 8 rows on the Wand of Inferno all read
+// "for Fire spells and runes", and ElementId 32 rows on the Wand of Cosmic Energy read
+// "for Energy spells and runes". Verified across every ElementId row in the file.
+const PROFICIENCY_ELEMENTS = { 1: "physical", 8: "fire", 16: "earth", 32: "energy", 64: "ice", 128: "holy", 256: "death" };
+
 // Situational perks whose branch is decided by the build rather than by the user: Ballistic
 // Mastery does one thing with a crossbow and another with a bow, and the weapon is already
 // synced from the proficiency planner. Resolved on every render, so swapping weapons updates it.
@@ -1142,12 +1150,25 @@ function createBuild(key) {
       const scope = type === 25 ? "auto-attack" : "spell";
       return prefix ? metadata.perks.find((perk) => perk.bonusType === `${prefix}-percent-extra` && perk.scope === scope && perk.selectable !== false) ?? null : null;
     }
+    // Elemental critical hit chance (9) and critical extra damage (13). These have to be matched
+    // on their type rather than their text: "+1% critical hit chance for Ice spells and runes"
+    // also scores a full token match against "Critical hit chance for runes", and the rune perk
+    // wins that tie - so an elemental crit chance pick used to land on runes and do nothing at
+    // all for a spell rotation. Matching by type also keeps the right element when two of them
+    // score the same, instead of leaving it to which perk the API happens to list first.
+    if (type === 9 || type === 13) {
+      const element = PROFICIENCY_ELEMENTS[Number(effect.elementId)];
+      const critBonusType = type === 9 ? "crit-chance" : "crit-damage";
+      return element
+        ? metadata.perks.find((perk) => perk.scope === element && perk.bonusType === critBonusType && perk.selectable !== false) ?? null
+        : null;
+    }
     let bonusType = null;
     if (type === 28) bonusType = "alpha-strike";
     if (type === 29) bonusType = "omega-strike";
     if (type === 30) bonusType = "armor-penetration";
     if (type === 31) {
-      const element = ({ 1: "physical", 8: "energy", 16: "earth", 32: "fire", 64: "ice", 128: "holy", 256: "death" })[Number(effect.elementId)];
+      const element = PROFICIENCY_ELEMENTS[Number(effect.elementId)];
       if (element) bonusType = `${element}-pierce-weapon`;
     }
     return bonusType ? metadata.perks.find((perk) => perk.bonusType === bonusType && perk.selectable !== false) : null;
