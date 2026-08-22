@@ -146,6 +146,25 @@ const FOCUS_MASTERY_TRIGGER_SPELLS = new Set(["hell s core"]);
 // "for Energy spells and runes". Verified across every ElementId row in the file.
 const PROFICIENCY_ELEMENTS = { 1: "physical", 8: "fire", 16: "earth", 32: "energy", 64: "ice", 128: "holy", 256: "death" };
 
+// Every critical hit row a weapon proficiency tree can hand over, keyed by its Type, so the
+// scope comes from the row's type instead of its wording. The wordings overlap badly and the
+// text matcher scores on token coverage, so several of them used to land on the wrong perk:
+// "Auto-attack critical hit chance" covers the plain "Critical hit chance" perk completely and
+// beat the auto-attack one, "+1% critical hit chance for Ice spells and runes" tied with
+// "Critical hit chance for runes" and lost the tie on API list order, and rows that arrive with
+// no description at all fall back to a generic label with no scope words in it whatsoever.
+// `element: true` means the scope is the row's own ElementId, via PROFICIENCY_ELEMENTS.
+const PROFICIENCY_CRIT_PERKS = {
+  8: { scope: "character", bonusType: "crit-chance" },
+  9: { element: true, bonusType: "crit-chance" },
+  10: { scope: "rune", bonusType: "crit-chance" },
+  11: { scope: "auto-attack", bonusType: "crit-chance" },
+  12: { scope: "character", bonusType: "crit-damage" },
+  13: { element: true, bonusType: "crit-damage" },
+  14: { scope: "rune", bonusType: "crit-damage" },
+  15: { scope: "auto-attack", bonusType: "crit-damage" },
+};
+
 // Situational perks whose branch is decided by the build rather than by the user: Ballistic
 // Mastery does one thing with a crossbow and another with a bow, and the weapon is already
 // synced from the proficiency planner. Resolved on every render, so swapping weapons updates it.
@@ -1150,17 +1169,11 @@ function createBuild(key) {
       const scope = type === 25 ? "auto-attack" : "spell";
       return prefix ? metadata.perks.find((perk) => perk.bonusType === `${prefix}-percent-extra` && perk.scope === scope && perk.selectable !== false) ?? null : null;
     }
-    // Elemental critical hit chance (9) and critical extra damage (13). These have to be matched
-    // on their type rather than their text: "+1% critical hit chance for Ice spells and runes"
-    // also scores a full token match against "Critical hit chance for runes", and the rune perk
-    // wins that tie - so an elemental crit chance pick used to land on runes and do nothing at
-    // all for a spell rotation. Matching by type also keeps the right element when two of them
-    // score the same, instead of leaving it to which perk the API happens to list first.
-    if (type === 9 || type === 13) {
-      const element = PROFICIENCY_ELEMENTS[Number(effect.elementId)];
-      const critBonusType = type === 9 ? "crit-chance" : "crit-damage";
-      return element
-        ? metadata.perks.find((perk) => perk.scope === element && perk.bonusType === critBonusType && perk.selectable !== false) ?? null
+    const crit = PROFICIENCY_CRIT_PERKS[type];
+    if (crit) {
+      const scope = crit.element ? PROFICIENCY_ELEMENTS[Number(effect.elementId)] : crit.scope;
+      return scope
+        ? metadata.perks.find((perk) => perk.scope === scope && perk.bonusType === crit.bonusType && perk.selectable !== false) ?? null
         : null;
     }
     let bonusType = null;
@@ -2044,7 +2057,7 @@ function setPlannerFrameSrc(frame, url) {
 
 function initializePlannerFrames(build) {
   setPlannerFrameSrc(document.querySelector("#wheelPlannerFrame"), plannerUrl("/wheel-planner.html", { embed: "damage", v: "20260815-2", vocation: build.state.stats.vocation, code: build.state.wheelPlanner.code }));
-  setPlannerFrameSrc(document.querySelector("#proficiencyPlannerFrame"), plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260816-1", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token }));
+  setPlannerFrameSrc(document.querySelector("#proficiencyPlannerFrame"), plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260822-1", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token }));
 }
 
 // Silently resolves a build's wheel code / proficiency token into perks via the hidden
@@ -2058,7 +2071,7 @@ function hydrateInactiveBuild(build) {
   }
   if (build.state.proficiencyPlanner.token && !build.state.proficiencyPlanner.effects.length) {
     proficiencyHydrateKey = build.key;
-    document.querySelector("#proficiencyHydrateFrame").src = plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260816-1", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token });
+    document.querySelector("#proficiencyHydrateFrame").src = plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260822-1", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token });
   }
 }
 

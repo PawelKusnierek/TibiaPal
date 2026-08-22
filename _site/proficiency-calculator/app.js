@@ -114,7 +114,11 @@ const augmentNames = {
   2: "base damage", 3: "healing", 6: "cooldown", 14: "life leech",
   15: "mana leech", 16: "critical extra damage", 17: "critical hit chance",
 };
-const elementNames = { 1: "Physical", 8: "Energy", 16: "Earth", 32: "Fire", 64: "Ice", 128: "Holy", 256: "Death", 1048576: "Healing" };
+// 8 is Fire and 32 is Energy, not the other way around: every ElementId 8 row in
+// weapon-proficiencies.json reads "Fire" in its own description (Wand of Inferno) and every
+// ElementId 32 row reads "Energy" (Wand of Cosmic Energy). The file's `element`/`damageType`
+// label fields have those two swapped, which is where the old mapping came from.
+const elementNames = { 1: "Physical", 8: "Fire", 16: "Earth", 32: "Energy", 64: "Ice", 128: "Holy", 256: "Death", 1048576: "Healing" };
 const weaponGlyphs = { Sword: "⚔", Axe: "⚒", Club: "✥", Bow: "➶", Crossbow: "➵", Wand: "⚚", Rod: "ϟ", Fist: "✊", Throw: "✦" };
 function weaponType(name) {
   return Object.keys(weaponGlyphs).find((type) => name.includes(type)) ?? "Throw";
