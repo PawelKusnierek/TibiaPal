@@ -920,10 +920,10 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "350+",
+        "level":  "400+",
         "place":  "Ripper Spectres",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "5.0kk",
+        "loot":  "1.0kk",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -966,14 +966,6 @@
         "loot":  "900k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
-    },
-    {
-        "level":  "400+",
-        "place":  "Nightmare Isles",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "link":  "https://youtu.be/",
-        "mastery":  "Energy"
     },
     {
         "level":  "400+",
