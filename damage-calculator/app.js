@@ -6,9 +6,19 @@ const METADATA_CACHE_KEY = "tibiapalDamageMetadataCacheV1";
 // Vocations/weapons/spells/etc. barely change - refetching all 9 endpoints on every single
 // page view was hammering the TibiaTools API for no reason. Cache them for a while instead.
 const METADATA_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
-// Everyone starts with these base values; wheel/proficiency/stance bonuses are added on top by the perks the calculator sends.
-const BASE_CRIT_CHANCE = 10;
-const BASE_CRIT_DAMAGE = 50;
+// Critical hit chance / extra critical damage a build is assumed to already have before any
+// wheel/proficiency/stance bonus is added on top by the perks the calculator sends. Which of
+// these three a build gets is decided by its weapon - see critProfileForWeapon().
+//  - powerful:  a Powerful Strike (critical hit) imbuement, which is what ~every build runs.
+//  - intricate: the strongest Strike a low-level wand/rod can take.
+//  - none:      the game's inherent critical hit, for weapons that take no Strike at all.
+const CRIT_PROFILES = {
+  powerful: { chance: 10, damage: 50, label: "Powerful Strike" },
+  intricate: { chance: 10, damage: 25, label: "Intricate Strike (highest this wand/rod takes)" },
+  none: { chance: 5, damage: 10, label: "no Strike imbuement possible" },
+};
+const BASE_CRIT_CHANCE = CRIT_PROFILES.powerful.chance;
+const BASE_CRIT_DAMAGE = CRIT_PROFILES.powerful.damage;
 const DEFAULT_PALADIN_MAGIC_LEVEL = 35;
 const DEFAULT_CASTER_MAGIC_LEVEL = 120;
 // Default skill for a fresh build, pre-filled to a value that already includes
@@ -293,6 +303,72 @@ function normalized(value) {
   return String(value ?? "").trim().toLocaleLowerCase().replaceAll("‑", "-");
 }
 
+// Weapons that can't take a Critical Hit ("Strike") imbuement at all - they carry critical hit
+// chance/damage in their own weapon proficiency tree instead, so CIP blocks the imbuement. Every
+// Rending Inferniarch weapon is in this group, matched by prefix so future ones are covered too.
+// Some of them additionally have crit built into the item itself; that innate part is the value
+// mapped here, in percentage points on top of the `none` profile. It is *only* the item's own
+// modifier - whatever the user then picks in the proficiency planner is added separately, as
+// perks, exactly as it is for every other weapon.
+const NO_STRIKE_WEAPON_PREFIX = "rending inferniarch ";
+const NO_STRIKE_WEAPONS = new Map([
+  ["Cobra Wand", { chance: 5, damage: 25 }],
+  ["Deepling Fork", null],
+  ["Lion Claws", { chance: 5, damage: 0 }],
+  ["Lion Rod", { chance: 5, damage: 25 }],
+].map(([name, innate]) => [normalized(name), innate]));
+
+// Wands and rods that top out at Intricate Strike. That's every wand/rod below Jungle Rod /
+// Jungle Wand (level 150), plus a few above it that are capped anyway - listed first below.
+// A closed historical list: everything else from Jungle upwards takes Powerful, so a wand or
+// rod that isn't named here - including any added by a future update - falls through to Powerful.
+// The (Charged)/(Heavily Charged)/(Overcharged) upgrades of the level-100 wands and rods are
+// level 150+ themselves, which is why only the base items are listed.
+const INTRICATE_STRIKE_WANDS = new Set([
+  "Deepling Ceremonial Dagger", "Energized Limb",
+  "Dream Blossom Staff",
+  "Ferumbras' Staff (Enchanted)", "Ferumbras' Staff (Failed)", "Glacial Rod", "Hailstorm Rod",
+  "Moonlight Rod", "Muck Rod", "Necrotic Rod", "Northwind Rod", "Ogre Scepta", "Rod of Carving",
+  "Rod of Mayhem", "Rod of Remedy", "Shimmer Rod", "Shimmer Wand", "Snakebite Rod",
+  "Sorcerer and Druid Staff", "Springsprout Rod", "Terra Rod", "The Chiller", "The Scorcher",
+  "Underworld Rod", "Wand of Carving", "Wand of Cosmic Energy", "Wand of Darkness",
+  "Wand of Decay", "Wand of Defiance", "Wand of Dimensions", "Wand of Draconia",
+  "Wand of Dragonbreath", "Wand of Everblazing", "Wand of Inferno", "Wand of Mayhem",
+  "Wand of Remedy", "Wand of Starstorm", "Wand of Voodoo", "Wand of Vortex",
+  // Quest/decorative variants of the carving, mayhem and remedy wands and rods.
+  "Ornate Carving Rod", "Ornate Carving Wand", "Ornate Mayhem Rod", "Ornate Mayhem Wand",
+  "Ornate Remedy Rod", "Ornate Remedy Wand", "Plain Carving Rod", "Plain Carving Wand",
+  "Plain Mayhem Rod", "Plain Mayhem Wand", "Plain Remedy Rod", "Plain Remedy Wand",
+  "Valuable Carving Rod", "Valuable Carving Wand", "Valuable Mayhem Rod", "Valuable Mayhem Wand",
+  "Valuable Remedy Rod", "Valuable Remedy Wand",
+].map(normalized));
+
+// Which of CRIT_PROFILES a build's weapon implies. Falls back to the Powerful profile whenever
+// the weapon can't be resolved - metadata still loading, or the Fists placeholder.
+function critProfileForWeapon(weaponId) {
+  const name = normalized(item("weapons", weaponId)?.name);
+  if (!name) return CRIT_PROFILES.powerful;
+  if (!name.startsWith(NO_STRIKE_WEAPON_PREFIX) && !NO_STRIKE_WEAPONS.has(name)) {
+    return INTRICATE_STRIKE_WANDS.has(name) ? CRIT_PROFILES.intricate : CRIT_PROFILES.powerful;
+  }
+  const innate = NO_STRIKE_WEAPONS.get(name);
+  if (!innate) return CRIT_PROFILES.none;
+  return {
+    chance: CRIT_PROFILES.none.chance + innate.chance,
+    damage: CRIT_PROFILES.none.damage + innate.damage,
+    label: `${CRIT_PROFILES.none.label} + innate crit`,
+  };
+}
+
+// Critical hit is never edited directly - it's derived from the weapon every time the build is
+// rendered, saved or calculated, so switching weapons can't leave a stale value behind.
+function applyCritDefaults(stats, weaponId) {
+  const profile = critProfileForWeapon(weaponId);
+  stats.critChance = profile.chance;
+  stats.critDamage = profile.damage;
+  return profile;
+}
+
 function matchByName(resource, value, allowed = () => true) {
   const query = normalized(value);
   if (!query) return null;
@@ -529,8 +605,6 @@ function sanitizeState(candidate) {
   const stats = { ...fallback.stats, ...(candidate.stats && typeof candidate.stats === "object" ? candidate.stats : {}) };
   stats.vocation = typeof stats.vocation === "string" ? stats.vocation : fallback.stats.vocation;
   stats.stanceIds = Array.isArray(stats.stanceIds) ? stats.stanceIds.map(Number).filter((id) => Number.isInteger(id) && !PURE_SKILL_STANCE_IDS.has(id) && !NON_DAMAGE_STANCE_IDS.has(id)) : [];
-  stats.critChance = BASE_CRIT_CHANCE;
-  stats.critDamage = BASE_CRIT_DAMAGE;
   if (stats.vocation === "paladin" && candidate.stats?.magicLevel == null) stats.magicLevel = DEFAULT_PALADIN_MAGIC_LEVEL;
   if ((stats.vocation === "druid" || stats.vocation === "sorcerer") && candidate.stats?.magicLevel == null) stats.magicLevel = DEFAULT_CASTER_MAGIC_LEVEL;
   // Restored state can come from an old localStorage entry or a hand-edited share link; an
@@ -558,6 +632,9 @@ function sanitizeState(candidate) {
   // so anything outside the forge's 0-10 range is treated as an unforged weapon.
   const tier = Math.round(Number(weapon.tier));
   weapon.tier = Number.isFinite(tier) ? Math.min(Math.max(tier, 0), MAX_WEAPON_TIER) : 0;
+  // After the weapon, because the assumed Strike imbuement depends on it. A stored or shared
+  // critChance/critDamage is always overwritten - it isn't a field the user gets to set.
+  applyCritDefaults(stats, weapon.id);
   const wheelPlanner = { ...fallback.wheelPlanner, ...(candidate.wheelPlanner && typeof candidate.wheelPlanner === "object" ? candidate.wheelPlanner : {}) };
   wheelPlanner.gemGrades = wheelPlanner.gemGrades && typeof wheelPlanner.gemGrades === "object" && !Array.isArray(wheelPlanner.gemGrades) ? wheelPlanner.gemGrades : {};
   return {
@@ -888,8 +965,7 @@ function createBuild(key) {
   }
 
   function renderStatControls() {
-    state.stats.critChance = BASE_CRIT_CHANCE;
-    state.stats.critDamage = BASE_CRIT_DAMAGE;
+    applyCritDefaults(state.stats, state.weapon.id);
     const usesMagicLevel = state.stats.vocation === "druid" || state.stats.vocation === "sorcerer";
     const skillField = $("skillField");
     const magicLevelField = $("magicLevelField");
@@ -946,14 +1022,52 @@ function createBuild(key) {
     });
   }
 
+  // Only the "character" scope is unconditional. Every other crit perk scope (auto-attacks,
+  // runes, a single element, a named spell) applies to part of the rotation at most, so folding
+  // those into one headline number would claim a crit the build doesn't actually run at.
+  const UNCONDITIONAL_CRIT_SCOPE = "character";
+
+  function unconditionalCritBonus() {
+    const bonus = { chance: 0, damage: 0 };
+    aggregatePerks().forEach((row) => {
+      const perk = item("perks", row.id);
+      if (perk?.scope !== UNCONDITIONAL_CRIT_SCOPE) return;
+      if (perk.bonusType === "crit-chance") bonus.chance += numberOrZero(row.value);
+      if (perk.bonusType === "crit-damage") bonus.damage += numberOrZero(row.value);
+    });
+    return bonus;
+  }
+
+  // The weapon's own stats, followed by the critical hit the build actually runs at. Crit is not
+  // an input anywhere on the page, so without this line neither the weapon's Strike imbuement
+  // (or lack of one) nor the crit picked up from the wheel and proficiency trees would show up
+  // anywhere - the damage would just quietly differ from the build next to it.
+  function renderWeaponMeta() {
+    const weapon = item("weapons", state.weapon.id);
+    const crit = applyCritDefaults(state.stats, state.weapon.id);
+    const bonus = unconditionalCritBonus();
+    const critNote = bonus.chance || bonus.damage
+      ? `crit ${crit.chance + bonus.chance}% / ${crit.damage + bonus.damage}% (${crit.chance}% / ${crit.damage}% ${crit.label} + ${bonus.chance}% / ${bonus.damage}% from wheel/proficiency perks)`
+      : `crit ${crit.chance}% / ${crit.damage}% (${crit.label})`;
+    const details = [
+      weapon?.skill,
+      weapon?.hands ? `${weapon.hands}-handed` : null,
+      weapon?.attack != null ? `${weapon.attack} atk` : null,
+      weapon?.damage != null ? `${weapon.damage} ${weapon.damageType ?? ""} damage` : null,
+      // Fists are the "no weapon" placeholder and can't be imbued at all, so the note would
+      // only be describing a weapon that isn't equipped.
+      weapon?.id === 1 ? null : critNote,
+    ].filter(Boolean);
+    $("weaponMeta").textContent = details.join(" · ");
+  }
+
   function renderEquipment() {
     let weapon = item("weapons", state.weapon.id);
     if (!weapon || !vocationAllows(weapon)) weapon = metadata.weapons.find((entry) => entry.id === 1);
     state.weapon.id = weapon?.id ?? 1;
     const weaponInput = $("weaponSearch");
     weaponInput.value = weaponDisplayName(weapon);
-    const details = [weapon?.skill, weapon?.hands ? `${weapon.hands}-handed` : null, weapon?.attack != null ? `${weapon.attack} atk` : null, weapon?.damage != null ? `${weapon.damage} ${weapon.damageType ?? ""} damage` : null].filter(Boolean);
-    $("weaponMeta").textContent = details.join(" · ");
+    renderWeaponMeta();
 
     // Fists can't be forged, so the tier - and with it Onslaught - only applies to a real weapon.
     const tierSelect = $("weaponTierSelect");
@@ -1460,6 +1574,9 @@ function createBuild(key) {
   }
 
   function damageRequest({ wheel = true, proficiency = true, manual = true } = {}) {
+    // The proficiency planner can swap the weapon without a stat re-render, so the Strike
+    // assumption is refreshed here rather than trusted from the last render.
+    applyCritDefaults(state.stats, state.weapon.id);
     const stats = { vocation: state.stats.vocation };
     const usesMagicLevel = state.stats.vocation === "druid" || state.stats.vocation === "sorcerer";
     const apiStanceIds = [];
@@ -1514,6 +1631,9 @@ function createBuild(key) {
   }
 
   function changed() {
+    // Perks move from many places - planner syncs, manual perk rows, effect choices - and they
+    // all land here, so this is the one hook that keeps the crit summary from going stale.
+    renderWeaponMeta();
     saveState();
     if (savedName && !dirty) {
       dirty = true;
