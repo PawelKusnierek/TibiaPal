@@ -196,7 +196,13 @@ async function check_livestream() {
     const isLive = data.livestream !== null;
     const embed_iframe = live_element.querySelector('iframe');
 
-    if (isLive && data.livestream.viewer_count <= 400) {
+    // Only advertise the stream when the category being played is Tibia
+    const isTibia = isLive && is_tibia_category(data.livestream);
+    if (isLive && !isTibia) {
+      console.log(`Stream is LIVE but the category is not Tibia, hiding the embed.`);
+    }
+
+    if (isTibia) {
       console.log(`Stream is LIVE!`);
       // Show the live advert card and hide the IgłaOTS card
       live_element.style.display = "block";
@@ -226,6 +232,27 @@ async function check_livestream() {
     }
     return null;
   }
+}
+
+// Only advertise the embed when the streamed game category is Tibia.
+// Kick exposes the category on `livestream.categories[]` (and sometimes a
+// singular `category`), so check every shape it may arrive in.
+function is_tibia_category(livestream) {
+  if (!livestream) {
+    return false;
+  }
+
+  const candidates = []
+    .concat(livestream.categories || [])
+    .concat(livestream.category ? [livestream.category] : []);
+
+  return candidates.some(entry => {
+    if (!entry) {
+      return false;
+    }
+    const names = [entry.name, entry.slug, entry.category && entry.category.name];
+    return names.some(name => typeof name === 'string' && name.toLowerCase().includes('tibia'));
+  });
 }
 
 function remove_embed(live_element) {
