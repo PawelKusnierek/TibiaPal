@@ -148,12 +148,42 @@ function combatSkill(profile) {
   return "Combat Skill";
 }
 
+// weapon-proficiencies.json carries two numbers for the same perk: `Value`, read out of the
+// client's own proficiency table, and whatever number `sourceDescription` was scraped with from
+// the wiki. Where they disagree the scrape is the stale one - the Moonsilver and Umbral Master
+// lines were rebalanced after those pages were written, so the chopper's Groundshaker augment
+// still reads "+7.5% base damage" while the client says 0.12. `Value` is also what every
+// consumer downstream already uses (publishProficiencyBuild sends it to the damage calculator),
+// so the label was the only place still quoting pre-release numbers. Keep the scrape's wording -
+// spell, bestiary and skill names the generated fallback below can't always reproduce - and
+// correct just the number it leads with.
+function reconciledDescription(perk) {
+  const description = perk.sourceDescription;
+  const value = Number(perk.Value);
+  // Cooldown augments hold seconds but are written "-2m30s", so there is no single number to
+  // line up against.
+  if (!description || !Number.isFinite(value) || perk.AugmentType === 6) return description;
+  const match = description.match(/([+-]?)(\d+(?:[.,]\d+)?)(%?)/);
+  if (!match) return description;
+  const percent = match[3] === "%";
+  // A fractional Value written without "%" (or a whole one written with it) means the sentence
+  // is describing some other effect entirely - a handful of rows carry a neighbouring perk's
+  // text. Correcting the number there would only make a wrong sentence look precise.
+  if (percent !== (Math.abs(value) < 1 && value !== 0)) return description;
+  const shown = percent ? value * 100 : value;
+  if (Math.abs(shown - Number(match[2].replace(",", "."))) < 1e-9) return description;
+  const sign = value < 0 ? "-" : match[1];
+  const magnitude = `${Math.round(Math.abs(shown) * 100) / 100}${percent ? "%" : ""}`;
+  return description.slice(0, match.index) + sign + magnitude + description.slice(match.index + match[0].length);
+}
+
 function perkLabel(perk, profile = state.current) {
   if (perk.ShapeEffect) {
     const value = Math.round(Number(perk.Value) * 100) / 100;
     return perk.ShapeEffect.replace("{value}", value.toLocaleString("en-US", { maximumFractionDigits: 2 }));
   }
-  if (perk.sourceDescription) return perk.sourceDescription;
+  const described = reconciledDescription(perk);
+  if (described) return described;
   if (perk.ShapeLabel) return perk.ShapeLabel.replace("{value}", formatValue(perk.Value));
   const name = perkNames[perk.Type] ?? `Proficiency effect ${perk.Type}`;
   if (perk.SpellId != null) {
