@@ -202,7 +202,7 @@ async function check_livestream() {
       console.log(`Stream is LIVE but the category is not Tibia, hiding the embed.`);
     }
 
-    if (isTibia) {
+    if (isTibia && data.livestream.viewer_count <= 400) {
       console.log(`Stream is LIVE!`);
       // Show the live advert card and hide the IgłaOTS card
       live_element.style.display = "block";

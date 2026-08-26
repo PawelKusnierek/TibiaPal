@@ -14508,7 +14508,7 @@
             },
             {
               "name": "Elemental critical extra damage",
-              "sourceDescription": "+10.00% critical extra damage for Holy spells e runes",
+              "sourceDescription": "+10.00% critical extra damage for Holy spells and runes",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-element-critical-dmg-holy.png",
               "iconImage": "",
               "borderImage": "images/proficiency/wiki/002-weapon-proficiency-border-active.png",
@@ -82092,7 +82092,7 @@
           "proficiencies": [
             {
               "name": "Elemental critical extra damage",
-              "sourceDescription": "+12.50% critical extra damage for Fire spells e runes",
+              "sourceDescription": "+12.50% critical extra damage for Fire spells and runes",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-element-critical-dmg-fire.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -82131,7 +82131,7 @@
             },
             {
               "name": "Elemental critical extra damage",
-              "sourceDescription": "+12.50% critical extra damage for Death spells e runes",
+              "sourceDescription": "+12.50% critical extra damage for Death spells and runes",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-element-critical-dmg-death.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -82478,7 +82478,7 @@
           "proficiencies": [
             {
               "name": "Elemental critical extra damage",
-              "sourceDescription": "+12.50% critical extra damage for Fire spells e runes",
+              "sourceDescription": "+12.50% critical extra damage for Fire spells and runes",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-element-critical-dmg-fire.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -82517,7 +82517,7 @@
             },
             {
               "name": "Elemental critical extra damage",
-              "sourceDescription": "+12.50% critical extra damage for Death spells e runes",
+              "sourceDescription": "+12.50% critical extra damage for Death spells and runes",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-element-critical-dmg-death.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -82864,7 +82864,7 @@
           "proficiencies": [
             {
               "name": "Elemental critical extra damage",
-              "sourceDescription": "+12.50% critical extra damage for Ice spells e runes",
+              "sourceDescription": "+12.50% critical extra damage for Ice spells and runes",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-element-critical-dmg-ice.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -82903,7 +82903,7 @@
             },
             {
               "name": "Elemental critical extra damage",
-              "sourceDescription": "+12.50% critical extra damage for Earth spells e runes",
+              "sourceDescription": "+12.50% critical extra damage for Earth spells and runes",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-element-critical-dmg-earth.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -82948,7 +82948,7 @@
             },
             {
               "name": "Combat skill scaling for healing",
-              "sourceDescription": "+18.00% of your Magic Level como extra healing for your spells",
+              "sourceDescription": "+18.00% of your Magic Level as extra healing for your spells",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-perc-spell-heal-magic.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -83249,7 +83249,7 @@
           "proficiencies": [
             {
               "name": "Elemental critical extra damage",
-              "sourceDescription": "+12.50% critical extra damage for Ice spells e runes",
+              "sourceDescription": "+12.50% critical extra damage for Ice spells and runes",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-element-critical-dmg-ice.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -83288,7 +83288,7 @@
             },
             {
               "name": "Elemental critical extra damage",
-              "sourceDescription": "+12.50% critical extra damage for Earth spells e runes",
+              "sourceDescription": "+12.50% critical extra damage for Earth spells and runes",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-element-critical-dmg-earth.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -83333,7 +83333,7 @@
             },
             {
               "name": "Combat skill scaling for healing",
-              "sourceDescription": "+18.00% of your Magic Level como extra healing for your spells",
+              "sourceDescription": "+18.00% of your Magic Level as extra healing for your spells",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-perc-spell-heal-magic.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -85020,7 +85020,7 @@
           "proficiencies": [
             {
               "name": "Damage against bosses and Sinister Embraced",
-              "sourceDescription": "+3.00% damage against bosses e Sinister Embraced",
+              "sourceDescription": "+3.00% damage against bosses and Sinister Embraced",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-powerful-foe-bonus.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -85080,7 +85080,7 @@
           "proficiencies": [
             {
               "name": "Elemental critical extra damage",
-              "sourceDescription": "+12.00% critical extra damage for Physical spells e runes",
+              "sourceDescription": "+12.00% critical extra damage for Physical spells and runes",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-element-critical-dmg-physical.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -85125,7 +85125,7 @@
             },
             {
               "name": "Elemental critical extra damage",
-              "sourceDescription": "+10.00% critical extra damage for Holy spells e runes",
+              "sourceDescription": "+10.00% critical extra damage for Holy spells and runes",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-element-critical-dmg-holy.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -85209,7 +85209,7 @@
           "proficiencies": [
             {
               "name": "Elemental critical hit chance",
-              "sourceDescription": "+2.00% critical hit chance for Physical spells e runes",
+              "sourceDescription": "+2.00% critical hit chance for Physical spells and runes",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-element-critical-chance-physical.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -85248,7 +85248,7 @@
             },
             {
               "name": "Elemental critical hit chance",
-              "sourceDescription": "+1.50% critical hit chance for Holy spells e runes",
+              "sourceDescription": "+1.50% critical hit chance for Holy spells and runes",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-element-critical-chance-holy.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -85398,7 +85398,7 @@
           "proficiencies": [
             {
               "name": "Damage against bosses and Sinister Embraced",
-              "sourceDescription": "+3.00% damage against bosses e Sinister Embraced",
+              "sourceDescription": "+3.00% damage against bosses and Sinister Embraced",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-powerful-foe-bonus.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -85458,7 +85458,7 @@
           "proficiencies": [
             {
               "name": "Elemental critical extra damage",
-              "sourceDescription": "+18.00% critical extra damage for Physical spells e runes",
+              "sourceDescription": "+18.00% critical extra damage for Physical spells and runes",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-element-critical-dmg-physical.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -85503,7 +85503,7 @@
             },
             {
               "name": "Elemental critical extra damage",
-              "sourceDescription": "+15.00% critical extra damage for Holy spells e runes",
+              "sourceDescription": "+15.00% critical extra damage for Holy spells and runes",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-element-critical-dmg-holy.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -85587,7 +85587,7 @@
           "proficiencies": [
             {
               "name": "Elemental critical hit chance",
-              "sourceDescription": "+2.00% critical hit chance for Physical spells e runes",
+              "sourceDescription": "+2.00% critical hit chance for Physical spells and runes",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-element-critical-chance-physical.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",
@@ -85626,7 +85626,7 @@
             },
             {
               "name": "Elemental critical hit chance",
-              "sourceDescription": "+1.50% critical hit chance for Holy spells e runes",
+              "sourceDescription": "+1.50% critical hit chance for Holy spells and runes",
               "optionImage": "images/proficiency/source/fandom/proficiency-type-element-critical-chance-holy.png",
               "iconImage": "",
               "borderImage": "images/proficiency/source/fandom/proficiency-border.png",

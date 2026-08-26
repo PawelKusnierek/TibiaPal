@@ -1144,10 +1144,20 @@ function createBuild(key) {
       : String(DEFAULT_IMBUEMENT_VALUE);
   }
 
+  // The fighting skill the equipped weapon uses. The API's weapon list has no "magic" skill
+  // value - wands and rods simply carry no `skill` field at all, and every skill-less entry in
+  // /meta/weapons is one - so a missing skill is what identifies a magic weapon. Reading
+  // `.skill` and comparing it to "magic" therefore never matched, and every perk below that
+  // branches on the weapon's skill silently mapped to nothing on a wand or rod.
+  function weaponSkillKind() {
+    const weapon = item("weapons", state.weapon.id);
+    return weapon ? weapon.skill ?? "magic" : null;
+  }
+
   // The bonus type of the equipped weapon's own skill, for perks that say "weapon skill"
   // instead of naming one (the Weapon Skill Boost conviction perk, Battle Instinct).
   function weaponSkillBonusType() {
-    const skill = item("weapons", state.weapon.id)?.skill;
+    const skill = weaponSkillKind();
     return skill === "magic" ? "magic-level" : skill ? `${skill}-fighting` : null;
   }
 
@@ -1164,7 +1174,7 @@ function createBuild(key) {
   function typedProficiencyPerk(effect) {
     const type = Number(effect.type);
     if (type === 25 || type === 26) {
-      const skill = item("weapons", state.weapon.id)?.skill;
+      const skill = weaponSkillKind();
       const prefix = skill === "magic" ? "magic-level" : skill;
       const scope = type === 25 ? "auto-attack" : "spell";
       return prefix ? metadata.perks.find((perk) => perk.bonusType === `${prefix}-percent-extra` && perk.scope === scope && perk.selectable !== false) ?? null : null;

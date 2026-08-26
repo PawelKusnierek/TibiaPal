@@ -347,7 +347,7 @@
     {
         "level":  "90+",
         "place":  "Exotic Cave",
-        "raw_exp":  "1.55kk",
+        "raw_exp":  "1.5kk",
         "loot":  "300k",
         "runes":  "Crystalline Arrows, Ethereal",
         "link":  "https://youtu.be/"
@@ -457,14 +457,6 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "120+",
-        "place":  "Misguided",
-        "raw_exp":  "1.2kk",
-        "loot":  "50k",
-        "runes":  "Crystalline Arrows, Divine",
-        "link":  "https://youtu.be/"
-    },
-    {
         "level":  "90+",
         "place":  "Edron Heroes -2 & -3",
         "raw_exp":  "1.75kk",
@@ -486,6 +478,14 @@
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Crystalline Arrows, Ethereal, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "120+",
+        "place":  "Misguided",
+        "raw_exp":  "1.2kk",
+        "loot":  "50k",
+        "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -513,22 +513,6 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "130+",
-        "place":  "MoTa Fury",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Crystalline Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
-        "place":  "Exotic Cave",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
         "level":  "150+",
         "place":  "Deeplings Library",
         "raw_exp":  "-",
@@ -537,7 +521,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "150+",
+        "level":  "120+",
         "place":  "Oramond West",
         "raw_exp":  "-",
         "loot":  "-",
@@ -569,22 +553,6 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "200+",
-        "place":  "Crumbling Caverns",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "200+",
-        "place":  "Barkless Elves",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
         "level":  "150+",
         "place":  "Werehyaenas North",
         "raw_exp":  "-",
@@ -602,6 +570,22 @@
     },
     {
         "level":  "200+",
+        "place":  "Crumbling Caverns",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "200+",
+        "place":  "Barkless Elves",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "200+",
         "place":  "Otherworld Edron",
         "raw_exp":  "-",
         "loot":  "-",
@@ -609,15 +593,15 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "150+",
+        "level":  "90+",
         "place":  "Glooth Bandits",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.6kk",
+        "loot":  "400k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "200+",
+        "level":  "150+",
         "place":  "Otherworld Kazordoon (Dwarf Bridge)",
         "raw_exp":  "-",
         "loot":  "-",
@@ -625,7 +609,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "200+",
+        "level":  "150+",
         "place":  "Brimstone Bugs WOTE",
         "raw_exp":  "-",
         "loot":  "-",
@@ -633,7 +617,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "150+",
+        "level":  "200+",
         "place":  "Werehyaenas South",
         "raw_exp":  "-",
         "loot":  "-",
@@ -721,7 +705,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "250+",
+        "level":  "200+",
         "place":  "Werelions -1",
         "raw_exp":  "-",
         "loot":  "-",
@@ -737,7 +721,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "250+",
+        "level":  "200+",
         "place":  "Werelions -2",
         "raw_exp":  "-",
         "loot":  "-",
@@ -761,7 +745,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "250+",
+        "level":  "200+",
         "place":  "Candia Nibblemaws",
         "raw_exp":  "-",
         "loot":  "-",
@@ -793,7 +777,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Weretigers -1",
         "raw_exp":  "-",
         "loot":  "-",
@@ -825,7 +809,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Warzone 5",
         "raw_exp":  "-",
         "loot":  "-",
@@ -833,7 +817,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Oramond Fury Dungeon",
         "raw_exp":  "-",
         "loot":  "-",
@@ -841,7 +825,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Warzone 4",
         "raw_exp":  "-",
         "loot":  "-",
@@ -849,7 +833,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Lower Roshamuul",
         "raw_exp":  "-",
         "loot":  "-",
