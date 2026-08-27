@@ -475,16 +475,16 @@
     {
         "level":  "120+",
         "place":  "Lizard City",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.5kk",
+        "loot":  "700k",
         "runes":  "Crystalline Arrows, Ethereal, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "120+",
         "place":  "Misguided",
-        "raw_exp":  "1.2kk",
-        "loot":  "50k",
+        "raw_exp":  "1.4kk",
+        "loot":  "-100k",
         "runes":  "Crystalline Arrows, Divine",
         "link":  "https://youtu.be/"
     },
