@@ -906,8 +906,8 @@
     {
         "level":  "400+",
         "place":  "Marapur Nagas",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "5.5kk",
+        "loot":  "1.0kk",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
@@ -930,24 +930,24 @@
     {
         "level":  "400+",
         "place":  "Iksupan Occupied Sanctuary",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "5.6kk",
+        "loot":  "800k",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
     {
         "level":  "400+",
         "place":  "Winter Court (Full Lap)",
-        "raw_exp":  "",
-        "loot":  "-",
+        "raw_exp":  "5.6kk",
+        "loot":  "1.0kk",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
     {
         "level":  "400+",
         "place":  "Crypt Warriors",
-        "raw_exp":  "5.5kk",
-        "loot":  "800k",
+        "raw_exp":  "5.4kk",
+        "loot":  "600k",
         "link":  "https://youtu.be/",
         "mastery":  "Fire/Energy"
     },

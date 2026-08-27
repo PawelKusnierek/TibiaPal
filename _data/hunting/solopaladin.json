@@ -497,23 +497,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "130+",
-        "place":  "Talahu Medusas/Serpents",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Crystalline Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "130+",
-        "place":  "Ghastly Dragons",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Crystalline Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
+        "level":  "120+",
         "place":  "Deeplings Library",
         "raw_exp":  "-",
         "loot":  "-",
@@ -595,8 +579,8 @@
     {
         "level":  "90+",
         "place":  "Glooth Bandits",
-        "raw_exp":  "1.6kk",
-        "loot":  "400k",
+        "raw_exp":  "1.7kk",
+        "loot":  "350k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
