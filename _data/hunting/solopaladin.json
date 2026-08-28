@@ -499,17 +499,25 @@
     {
         "level":  "120+",
         "place":  "Deeplings Library",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
+        "raw_exp":  "1.6kk",
+        "loot":  "800k",
+        "runes":  "Shatterstorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "120+",
-        "place":  "Oramond West",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
+        "place":  "Oramond West (Quara Raid)",
+        "raw_exp":  "2.3kk",
+        "loot":  "200k",
+        "runes":  "Shatterstorm Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "120+",
+        "place":  "Oramond West (No Quara Raid)",
+        "raw_exp":  "1.9kk",
+        "loot":  "150k",
+        "runes":  "Shatterstorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
