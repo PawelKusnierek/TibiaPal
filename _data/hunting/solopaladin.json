@@ -491,8 +491,8 @@
     {
         "level":  "125+",
         "place":  "Souleater Mountain",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.25kk",
+        "loot":  "200k",
         "runes":  "Firestorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -515,7 +515,7 @@
     {
         "level":  "120+",
         "place":  "Oramond West (No Quara Raid)",
-        "raw_exp":  "1.9kk",
+        "raw_exp":  "1.8kk",
         "loot":  "150k",
         "runes":  "Shatterstorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
