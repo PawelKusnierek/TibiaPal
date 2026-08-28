@@ -475,7 +475,7 @@
     {
         "level":  "120+",
         "place":  "Lizard City",
-        "raw_exp":  "1.5kk",
+        "raw_exp":  "1.6kk",
         "loot":  "700k",
         "runes":  "Crystalline Arrows, Ethereal, Divine",
         "link":  "https://youtu.be/"
@@ -530,22 +530,6 @@
     },
     {
         "level":  "150+",
-        "place":  "Pirats",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
-        "place":  "Lower Spike",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
         "place":  "Werehyaenas North",
         "raw_exp":  "-",
         "loot":  "-",
@@ -555,6 +539,22 @@
     {
         "level":  "200+",
         "place":  "Glooth Tower",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "200+",
+        "place":  "Pirats",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "200+",
+        "place":  "Lower Spike",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Diamond Arrows, Ethereal",
