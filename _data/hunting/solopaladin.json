@@ -547,8 +547,8 @@
     {
         "level":  "150+",
         "place":  "Brimstone Bugs WOTE",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.3kk",
+        "loot":  "1.0kk",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -683,16 +683,16 @@
     {
         "level":  "150+",
         "place":  "Oramond Wildlife Raid (Inactive)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.6kk",
+        "loot":  "300k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "200+",
         "place":  "Oramond Wildlife Raid (Active)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.5kk",
+        "loot":  "700k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
