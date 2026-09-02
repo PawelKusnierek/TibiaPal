@@ -537,7 +537,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "200+",
+        "level":  "150+",
         "place":  "Glooth Tower",
         "raw_exp":  "-",
         "loot":  "-",
@@ -553,7 +553,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "200+",
+        "level":  "275+",
         "place":  "Lower Spike",
         "raw_exp":  "-",
         "loot":  "-",
@@ -589,14 +589,22 @@
         "place":  "Glooth Bandits",
         "raw_exp":  "1.7kk",
         "loot":  "350k",
-        "runes":  "Diamond Arrows, Ethereal",
+        "runes":  "Shatterstorm Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "150+",
         "place":  "Otherworld Kazordoon (Dwarf Bridge)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.4kk",
+        "loot":  "250k",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "150+",
+        "place":  "Elder Wyrms Drefia",
+        "raw_exp":  "1.8kk",
+        "loot":  "200k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -665,14 +673,6 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "150+",
-        "place":  "Elder Wyrms Drefia",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
         "level":  "200+",
         "place":  "Seacrest Serpents Birthing Grounds",
         "raw_exp":  "-",
@@ -681,15 +681,23 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "250+",
-        "place":  "Oramond Wildlife Raid",
+        "level":  "150+",
+        "place":  "Oramond Wildlife Raid (Inactive)",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "250+",
+        "level":  "200+",
+        "place":  "Oramond Wildlife Raid (Active)",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "200+",
         "place":  "Asura Palace",
         "raw_exp":  "-",
         "loot":  "-",
