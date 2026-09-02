@@ -521,6 +521,38 @@
         "link":  "https://youtu.be/"
     },
     {
+        "level":  "90+",
+        "place":  "Glooth Bandits",
+        "raw_exp":  "1.7kk",
+        "loot":  "350k",
+        "runes":  "Shatterstorm Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "150+",
+        "place":  "Otherworld Kazordoon (Dwarf Bridge)",
+        "raw_exp":  "1.4kk",
+        "loot":  "250k",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "150+",
+        "place":  "Elder Wyrms Drefia",
+        "raw_exp":  "1.8kk",
+        "loot":  "200k",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "150+",
+        "place":  "Brimstone Bugs WOTE",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
         "level":  "150+",
         "place":  "Yalahar Grim Reapers",
         "raw_exp":  "-",
@@ -530,18 +562,18 @@
     },
     {
         "level":  "150+",
+        "place":  "Glooth Tower",
+        "raw_exp":  "2.1kk",
+        "loot":  "400k",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "200+",
         "place":  "Werehyaenas North",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Diamond Arrows, Divine",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
-        "place":  "Glooth Tower",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -579,38 +611,6 @@
     {
         "level":  "200+",
         "place":  "Otherworld Edron",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "90+",
-        "place":  "Glooth Bandits",
-        "raw_exp":  "1.7kk",
-        "loot":  "350k",
-        "runes":  "Shatterstorm Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
-        "place":  "Otherworld Kazordoon (Dwarf Bridge)",
-        "raw_exp":  "1.4kk",
-        "loot":  "250k",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
-        "place":  "Elder Wyrms Drefia",
-        "raw_exp":  "1.8kk",
-        "loot":  "200k",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
-        "place":  "Brimstone Bugs WOTE",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Diamond Arrows, Ethereal",
@@ -675,8 +675,8 @@
     {
         "level":  "200+",
         "place":  "Seacrest Serpents Birthing Grounds",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.2kk",
+        "loot":  "350k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
