@@ -957,7 +957,7 @@
         "raw_exp":  "5.9kk",
         "loot":  "1.5kk",
         "link":  "https://youtu.be/",
-        "mastery":  "Energy"
+        "mastery":  "Fire/Energy"
     },
     {
         "level":  "400+",
@@ -1034,24 +1034,24 @@
     {
         "level":  "500+",
         "place":  "Warzone 3",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "6.7kk",
+        "loot":  "2.0kk",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
     {
         "level":  "500+",
         "place":  "Girtablilu",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "4.5kk",
+        "loot":  "1.7kk",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
     {
         "level":  "500+",
         "place":  "Carnisylvans",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.4kk",
+        "loot":  "1.8kk",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
@@ -1082,8 +1082,8 @@
     {
         "level":  "500+",
         "place":  "Issavi Goannas",
-        "raw_exp":  "6.0kk",
-        "loot":  "1.8kk",
+        "raw_exp":  "6.4kk",
+        "loot":  "1.4kk",
         "link":  "https://youtu.be/",
         "mastery":  "Energy"
     },
@@ -1136,10 +1136,10 @@
         "mastery":  "Energy"
     },
     {
-        "level":  "500+",
+        "level":  "600+",
         "place":  "Norcferatu Fortress",
-        "raw_exp":  "6.5kk",
-        "loot":  "1.4kk",
+        "raw_exp":  "-",
+        "loot":  "-",
         "link":  "https://youtu.be/",
         "mastery":  "Fire"
     },
