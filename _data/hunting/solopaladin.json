@@ -555,9 +555,9 @@
     {
         "level":  "150+",
         "place":  "Yalahar Grim Reapers",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Divine",
+        "raw_exp":  "2.75kk",
+        "loot":  "-400k",
+        "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -566,6 +566,14 @@
         "raw_exp":  "2.1kk",
         "loot":  "400k",
         "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "200+",
+        "place":  "Yalahar Grim Reapers (Result Update)",
+        "raw_exp":  "3.2kk",
+        "loot":  "-100k",
+        "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
