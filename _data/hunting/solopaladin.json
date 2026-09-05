@@ -180,7 +180,7 @@
         "place":  "Wyrms Liberty Bay -1",
         "raw_exp":  "350k",
         "loot":  "0k",
-        "runes":  "Onyx Arrows, Ethereal",
+        "runes":  "Onyx Arrows",
         "link":  "https://youtu.be/"
     },
     {
@@ -573,7 +573,7 @@
         "place":  "Yalahar Grim Reapers (Result Update)",
         "raw_exp":  "3.2kk",
         "loot":  "-100k",
-        "runes":  "Firestorm Arrows, Divine",
+        "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
@@ -689,10 +689,18 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "200+",
+        "level":  "180+",
         "place":  "Oramond Wildlife Raid (Active)",
-        "raw_exp":  "3.5kk",
-        "loot":  "700k",
+        "raw_exp":  "4.3kk",
+        "loot":  "1.0kk",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "180+",
+        "place":  "Oramond Golem Raid (Active)",
+        "raw_exp":  "3.3kk",
+        "loot":  "1.0kk",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
