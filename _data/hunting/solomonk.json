@@ -2,158 +2,86 @@
     {
         "level":  "8+",
         "place":  "Targuna Lizards",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "50k",
+        "loot":  "50k",
         "link":  "https://youtu.be/",
         "weapon_type":  "Energy"
     },
     {
         "level":  "10+",
         "place":  "Targuna Pirates",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "60k",
+        "loot":  "35k",
         "link":  "https://youtu.be/",
         "weapon_type":  "Energy"
     },
     {
         "level":  "12+",
         "place":  "Targuna Infernoids",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "80k",
+        "loot":  "35k",
         "link":  "https://youtu.be/",
         "weapon_type":  "Energy"
     },
     {
         "level":  "8+",
-        "place":  "Rotworms Liberty Bay/Darashia",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Energy",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "8+",
         "place":  "Swamp Trolls Port Hope/Venore",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Energy",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "8+",
-        "place":  "Larva Ankh",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Energy",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "8+",
-        "place":  "Crocodiles Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "30k",
+        "loot":  "50k",
         "weapon_type":  "Energy",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "14+",
         "place":  "Edron Forgotten Tomb",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "60k",
+        "loot":  "100k",
         "weapon_type":  "Energy",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "14+",
-        "place":  "Tarantulas Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Energy",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "14+",
-        "place":  "Larva/Mummy MOSL -1/-2",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Energy",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "14+",
-        "place":  "Amazon Camp (Profit)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Amazon Camp",
+        "raw_exp":  "30k",
+        "loot":  "80k",
         "weapon_type":  "Energy",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "15+",
         "place":  "Minotaurs Darashia (Stealth Ring)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "80k",
+        "loot":  "-20k",
         "weapon_type":  "Earth",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "15+",
         "place":  "Elves Yalahar",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Earth",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "15+",
-        "place":  "Cyclops Mistrock/Mount Sternum",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "50k",
+        "loot":  "100k",
         "weapon_type":  "Earth",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "20+",
         "place":  "Stonerefiners (Stealth Ring)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "140k",
+        "loot":  "50k",
         "weapon_type":  "Energy",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "20+",
         "place":  "Mutated Humans Alchemist",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "80k",
+        "loot":  "20k",
         "weapon_type":  "Energy",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "30+",
         "place":  "Chor (Runes)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "30+",
-        "place":  "Zombies Treasure Island",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "30+",
-        "place":  "Banuta Apes (Runes)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "30+",
-        "place":  "Carniphilas Port Hope",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -1089,7 +1017,7 @@
     },
     {
         "level":  "600+",
-        "place":  "Nimmersatt\u0027s Dragons -7 (Bottom Floor)",
+        "place":  "Nimmersatt's Dragons -7 (Bottom Floor)",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Earth",
@@ -1113,7 +1041,7 @@
     },
     {
         "level":  "600+",
-        "place":  "Nimmersatt\u0027s Dragons -6 (Boss Floor)",
+        "place":  "Nimmersatt's Dragons -6 (Boss Floor)",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Earth",
