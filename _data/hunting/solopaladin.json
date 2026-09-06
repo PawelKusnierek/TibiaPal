@@ -579,8 +579,8 @@
     {
         "level":  "200+",
         "place":  "Werehyaenas North",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.5kk",
+        "loot":  "250k",
         "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
@@ -611,24 +611,24 @@
     {
         "level":  "200+",
         "place":  "Barkless Elves",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.4kk",
+        "loot":  "-300k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "200+",
         "place":  "Otherworld Edron",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.3kk",
+        "loot":  "200k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "200+",
         "place":  "Werehyaenas South",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.1kk",
+        "loot":  "300k",
         "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
@@ -643,16 +643,16 @@
     {
         "level":  "200+",
         "place":  "Medusa Tower",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.6kk",
+        "loot":  "100k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "250+",
+        "level":  "200+",
         "place":  "Deeper Banuta -8",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.6kk",
+        "loot":  "300k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -667,8 +667,8 @@
     {
         "level":  "200+",
         "place":  "Deeper Banuta -6",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.3kk",
+        "loot":  "250k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -707,32 +707,32 @@
     {
         "level":  "200+",
         "place":  "Asura Palace",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.1kk",
+        "loot":  "100k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "200+",
         "place":  "Werelions -1",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.2kk",
+        "loot":  "300k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "200+",
         "place":  "Drefia Grim Reapers",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.2kk",
+        "loot":  "-250k",
         "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "200+",
         "place":  "Werelions -2",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.8kk",
+        "loot":  "300k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -755,16 +755,16 @@
     {
         "level":  "200+",
         "place":  "Candia Nibblemaws",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.2kk",
+        "loot":  "250k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "200+",
         "place":  "Book World: Chapter II",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.6kk",
+        "loot":  "200k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
