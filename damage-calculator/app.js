@@ -1173,6 +1173,18 @@ function createBuild(key) {
 
   function typedProficiencyPerk(effect) {
     const type = Number(effect.type);
+    // Bestiary-family damage rows carry the family in `bestiaryName`, so the perk is looked up
+    // by it instead of by the row's wording. The text matcher below scores its tokens with
+    // `includes()` - a substring test - so "human" also matches inside "humanoid": both perks
+    // tied at full coverage and the stable sort handed every Humanoid row to "Damage against
+    // Human". Every family the proficiency data uses has a `damage-<family>` perk; an unknown
+    // one falls through to the text matcher rather than dropping the row.
+    if (type === 6 && effect.bestiaryName) {
+      const family = normalized(effect.bestiaryName).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+      const perk = family && metadata.perks.find((candidate) => candidate.bonusType === `damage-${family}`
+        && candidate.selectable !== false);
+      if (perk) return perk;
+    }
     if (type === 25 || type === 26) {
       const skill = weaponSkillKind();
       const prefix = skill === "magic" ? "magic-level" : skill;
