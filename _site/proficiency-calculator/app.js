@@ -283,15 +283,16 @@ function shapingRecordToPerk(record) {
   let title = record.name;
   let category = "General";
   let effect = record.name;
+  let bestiaryFamily = null;
   if (spellMatch) {
     const [, spell, augment] = spellMatch;
     title = `${spell} ${augment}`;
     category = "Spell Augment";
     effect = `+{value}% ${augment.toLowerCase()} for ${spell}`;
   } else if (record.name.startsWith("Bestiary Damage ")) {
-    const family = record.name.slice("Bestiary Damage ".length);
+    bestiaryFamily = record.name.slice("Bestiary Damage ".length);
     category = "Bestiary Damage";
-    effect = `+{value}% damage against ${family} creatures`;
+    effect = `+{value}% damage against ${bestiaryFamily} creatures`;
   } else {
     const effects = {
       "Alpha Strike Extra Damage": "+{value}% damage against targets above 95% health",
@@ -316,8 +317,15 @@ function shapingRecordToPerk(record) {
     "Highest Combat Skill Percentage Auto-Attack Damage": 25, "Highest Combat Skill Percentage Spell Damage": 26,
     "Highest Combat Skill Percentage Spell Healing": 27,
   };
+  // A rolled bestiary perk is typed like the native ones (Type 6 + BestiaryName) rather than
+  // left untyped, so the damage calculator can resolve it by family instead of by wording: its
+  // text matcher scores tokens with a substring test, and "+X% damage against Humanoid
+  // creatures" therefore covered "Damage against Human" just as completely as the right perk.
+  // Same reasoning as the typedTypes rows below. Native perks additionally carry a BestiaryId,
+  // so the two stay separate rows in the build summary and are only summed by the calculator.
   return {
-    Type: spellMatch ? 5 : typedTypes[record.name] ?? -1,
+    Type: spellMatch ? 5 : bestiaryFamily ? 6 : typedTypes[record.name] ?? -1,
+    ...(bestiaryFamily ? { BestiaryName: bestiaryFamily } : {}),
     ShapeKey: record.sourceUrl.split("/").pop(),
     ShapeName: title,
     ShapeCategory: category,
