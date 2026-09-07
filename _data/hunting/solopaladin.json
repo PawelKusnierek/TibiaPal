@@ -659,8 +659,8 @@
     {
         "level":  "200+",
         "place":  "Diremaw Task Area",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.7kk",
+        "loot":  "600k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -747,8 +747,8 @@
     {
         "level":  "200+",
         "place":  "Draken Walls",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.8kk",
+        "loot":  "750k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -790,22 +790,6 @@
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "400+",
-        "place":  "Port Hope Flimsies -1 only",
-        "raw_exp":  "6.0kk",
-        "loot":  "1.0kk",
-        "runes":  "Firestorm Arrows, Divine",
-        "link":  "https://youtu.be/"
-    },
-        {
-        "level":  "400+",
-        "place":  "Venore Flimsies -1 only",
-        "raw_exp":  "5.5kk",
-        "loot":  "1.0kk",
-        "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
@@ -862,6 +846,22 @@
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "400+",
+        "place":  "Port Hope Flimsies -1 only",
+        "raw_exp":  "6.0kk",
+        "loot":  "1.0kk",
+        "runes":  "Firestorm Arrows, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "400+",
+        "place":  "Venore Flimsies -1 only",
+        "raw_exp":  "5.5kk",
+        "loot":  "1.0kk",
+        "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
