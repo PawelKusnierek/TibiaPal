@@ -739,8 +739,8 @@
     {
         "level":  "230+",
         "place":  "Warzone 6",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.5kk",
+        "loot":  "1.2kk",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -769,18 +769,18 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "250+",
+        "level":  "200+",
         "place":  "Book World: Chapter III",
-        "raw_exp":  "-",
+        "raw_exp":  "3.9kk",
         "loot":  "-",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "250+",
+        "level":  "230+",
         "place":  "Book World: Chapter IV",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "4.2kk",
+        "loot":  "400k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -803,8 +803,8 @@
     {
         "level":  "230+",
         "place":  "Warzone 5",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "4.3kk",
+        "loot":  "800k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -819,8 +819,8 @@
     {
         "level":  "230+",
         "place":  "Warzone 4",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.5kk",
+        "loot":  "1.2kk",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -1041,14 +1041,6 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
-        "place":  "Upper Roshamuul (North)",
-        "raw_exp":  "6.0kk",
-        "loot":  "1.5kk",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
         "level":  "500+",
         "place":  "Bashmu",
         "raw_exp":  "4.1kk",
@@ -1059,22 +1051,22 @@
     {
         "level":  "500+",
         "place":  "Venore Flimsies -1 and -2",
-        "raw_exp":  "9.0kk",
-        "loot":  "1.0kk",
+        "raw_exp":  "8.8kk",
+        "loot":  "1.5kk",
         "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "500+",
         "place":  "Port Hope Flimsies -1 and -2",
-        "raw_exp":  "8.5kk",
+        "raw_exp":  "8.3kk",
         "loot":  "1.0kk",
         "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "500+",
-        "place":  "Upper Roshamuul (South)",
+        "place":  "Upper Roshamuul (South only)",
         "raw_exp":  "7.5kk",
         "loot":  "2.0kk",
         "runes":  "Diamond Arrows, Ethereal",
@@ -1139,7 +1131,7 @@
     {
         "level":  "600+",
         "place":  "Azzilon Castle",
-        "raw_exp":  "8.0kk",
+        "raw_exp":  "8.6kk",
         "loot":  "800k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
@@ -1195,8 +1187,8 @@
     {
         "level":  "600+",
         "place":  "Deep Desert",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "5.1kk",
+        "loot":  "1.8kk",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -1254,6 +1246,14 @@
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "800+",
+        "place":  "Venore Flimsies -1, -2 and -3",
+        "raw_exp":  "10.5kk",
+        "loot":  "2.0kk",
+        "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
