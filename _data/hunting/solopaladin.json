@@ -786,14 +786,6 @@
     },
     {
         "level":  "250+",
-        "place":  "Weretigers -1",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "250+",
         "place":  "Asura Mirror",
         "raw_exp":  "-",
         "loot":  "-",
@@ -809,7 +801,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "250+",
+        "level":  "300+",
         "place":  "Oramond Fury Dungeon",
         "raw_exp":  "-",
         "loot":  "-",
@@ -825,10 +817,10 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "250+",
+        "level":  "230+",
         "place":  "Lower Roshamuul",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.4kk",
+        "loot":  "400k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -873,7 +865,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Winter Court",
         "raw_exp":  "-",
         "loot":  "-",
@@ -881,7 +873,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Weretigers -2",
         "raw_exp":  "-",
         "loot":  "-",
@@ -889,7 +881,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Werecrocodiles -1",
         "raw_exp":  "-",
         "loot":  "-",
@@ -897,7 +889,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Wote 8 Drakens",
         "raw_exp":  "-",
         "loot":  "-",
@@ -905,7 +897,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Burster Spectres",
         "raw_exp":  "-",
         "loot":  "-",
@@ -913,7 +905,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Ripper Spectres",
         "raw_exp":  "-",
         "loot":  "-",
@@ -929,7 +921,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Buried Cathedral -8",
         "raw_exp":  "-",
         "loot":  "-",
@@ -937,7 +929,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Gazer Spectres",
         "raw_exp":  "-",
         "loot":  "-",
@@ -961,15 +953,15 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
-        "place":  "Rosha West",
+        "level":  "300+",
+        "place":  "Roshamuul West",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Roshamuul Mines (Terrorsleeps)",
         "raw_exp":  "-",
         "loot":  "-",
@@ -977,7 +969,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Rosha Bones + Shockheads",
         "raw_exp":  "-",
         "loot":  "-",
@@ -993,7 +985,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Nightmare Isles",
         "raw_exp":  "-",
         "loot":  "-",
@@ -1009,7 +1001,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Summer Court",
         "raw_exp":  "-",
         "loot":  "-",
@@ -1017,7 +1009,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Marapur Naga",
         "raw_exp":  "-",
         "loot":  "-",
@@ -1025,7 +1017,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Deathlings",
         "raw_exp":  "-",
         "loot":  "-",
