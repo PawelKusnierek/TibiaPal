@@ -57,6 +57,18 @@
             "notes": "Physical Build"
         },
         {
+            "points": 575,
+            "description": "Ballistic Mastery",
+            "link": "/wheel-planner?subtopic=wheelofdestinyplanner&code=P0Y2DAAoy8U8D0NDB54j8SAAA",
+            "notes": "Physical Resistant Build, e.g. Rosh"
+        },
+        {
+            "points": 575,
+            "description": "Positional Tactics",
+            "link": "/wheel-planner?subtopic=wheelofdestinyplanner&code=P0O8EAAtPAZIq3EQM28B8JAAA",
+            "notes": "Holy Build"
+        },
+        {
             "points": 600,
             "description": "T2 Divine Barrage + T1 Empowerment",
             "link": "/wheel-planner?subtopic=wheelofdestinyplanner&code=P0Y2BAgBQoaQSmvL1ToOL_kQAA",
