@@ -1060,7 +1060,7 @@
         "level":  "500+",
         "place":  "Upper Roshamuul (South only)",
         "raw_exp":  "7.5kk",
-        "loot":  "2.0kk",
+        "loot":  "1.5kk",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -1227,8 +1227,8 @@
     {
         "level":  "600+",
         "place":  "Upper Roshamuul (North + South)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "9.0kk",
+        "loot":  "1.8kk",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
