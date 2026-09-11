@@ -2,22 +2,22 @@
   {
     "name": "Ethereal Barrage - Divine Caldera",
     "spells": [
-      { "name": "Ethereal Barrage", "ratio": 0.5 },
-      { "name": "Divine Caldera", "ratio": 0.5 }
+      { "name": "Ethereal Barrage", "ratio": 1 },
+      { "name": "Divine Caldera", "ratio": 1 }
     ]
   },
   {
     "name": "Divine Barrage - Divine Caldera",
     "spells": [
-      { "name": "Divine Barrage", "ratio": 0.5 },
-      { "name": "Divine Caldera", "ratio": 0.5 }
+      { "name": "Divine Barrage", "ratio": 1 },
+      { "name": "Divine Caldera", "ratio": 1 }
     ]
   },
   {
     "name": "Divine Barrage - Ethereal Barrage",
     "spells": [
-      { "name": "Divine Barrage", "ratio": 0.5 },
-      { "name": "Ethereal Barrage", "ratio": 0.5 }
+      { "name": "Divine Barrage", "ratio": 1 },
+      { "name": "Ethereal Barrage", "ratio": 1 }
     ]
   }
 ]

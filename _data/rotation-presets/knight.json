@@ -2,17 +2,17 @@
   {
     "name": "Exori Gran - Exori - Exori Min",
     "spells": [
-      { "name": "Fierce Berserk", "ratio": 0.333 },
-      { "name": "Berserk", "ratio": 0.333 },
-      { "name": "Front Sweep", "ratio": 0.333 }
+      { "name": "Fierce Berserk", "ratio": 1 },
+      { "name": "Berserk", "ratio": 1 },
+      { "name": "Front Sweep", "ratio": 1 }
     ]
   },
   {
     "name": "Exori Gran - Exori - Exori Mas",
     "spells": [
-      { "name": "Fierce Berserk", "ratio": 0.333 },
-      { "name": "Berserk", "ratio": 0.333 },
-      { "name": "Groundshaker", "ratio": 0.333 }
+      { "name": "Fierce Berserk", "ratio": 1 },
+      { "name": "Berserk", "ratio": 1 },
+      { "name": "Groundshaker", "ratio": 1 }
     ]
   }
 ]

@@ -2,24 +2,24 @@
   {
     "name": "2x Fork",
     "spells": [
-      { "name": "Forked Thorns", "ratio": 0.5 },
-      { "name": "Forked Glacier", "ratio": 0.5 }
+      { "name": "Forked Thorns", "ratio": 1 },
+      { "name": "Forked Glacier", "ratio": 1 }
     ]
   },
   {
     "name": "2x Fork - Ice Burst - Eternal Winter",
     "spells": [
-      { "name": "Forked Thorns", "ratio": 0.4625 },
-      { "name": "Forked Glacier", "ratio": 0.4625 },
-      { "name": "Ice Burst", "ratio": 0.05 },
-      { "name": "Eternal Winter", "ratio": 0.025 }
+      { "name": "Forked Thorns", "ratio": 8 },
+      { "name": "Forked Glacier", "ratio": 9 },
+      { "name": "Ice Burst", "ratio": 2 },
+      { "name": "Eternal Winter", "ratio": 1 }
     ]
   },
   {
     "name": "Forked Glacier - Strong Ice Wave",
     "spells": [
-      { "name": "Forked Glacier", "ratio": 0.5 },
-      { "name": "Strong Ice Wave", "ratio": 0.5 }
+      { "name": "Forked Glacier", "ratio": 1 },
+      { "name": "Strong Ice Wave", "ratio": 1 }
     ]
   }
 ]
