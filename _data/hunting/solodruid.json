@@ -1161,6 +1161,14 @@
     },
     {
         "level":  "600+",
+        "place":  "Barren Drift",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "link":  "https://youtu.be/",
+        "playstyle":  "Forked Thorns + Forked Glacier"
+    },
+    {
+        "level":  "600+",
         "place":  "Azzilon Catacombs",
         "raw_exp":  "-",
         "loot":  "-",
