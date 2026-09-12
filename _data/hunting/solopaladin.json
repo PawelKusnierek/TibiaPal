@@ -635,8 +635,8 @@
     {
         "level":  "250+",
         "place":  "Carnivora's Rocks",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.0kk",
+        "loot":  "600k",
         "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
@@ -889,10 +889,10 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Wote 8 Drakens",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.0kk",
+        "loot":  "1.2kk",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -921,7 +921,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "400+",
         "place":  "Buried Cathedral -8",
         "raw_exp":  "-",
         "loot":  "-",
@@ -929,15 +929,15 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Gazer Spectres",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.0kk",
+        "loot":  "300k",
         "runes":  "Froststorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Oramond Abandoned Sewers",
         "raw_exp":  "-",
         "loot":  "-",
