@@ -97,9 +97,13 @@ function isHealingOnlyEffect(effect) {
 const CHARACTER_SHEET_SKILL_BONUS_TYPES = new Set([
   "axe-fighting", "club-fighting", "sword-fighting", "fist-fighting", "distance-fighting", "magic-level",
 ]);
+// The API used to scope these perks "all" and now scopes them "character". Matching only "all"
+// let every planner's flat skill through again, on top of the skill already typed in. "all" stays
+// accepted for metadata cached before the rename (METADATA_CACHE_TTL_MS).
+const CHARACTER_SHEET_SKILL_SCOPES = new Set(["character", "all"]);
 
 function isCharacterSheetSkillPerk(perk) {
-  return perk?.valueType === "flat" && perk?.scope === "all" && CHARACTER_SHEET_SKILL_BONUS_TYPES.has(perk.bonusType);
+  return perk?.valueType === "flat" && CHARACTER_SHEET_SKILL_SCOPES.has(perk?.scope) && CHARACTER_SHEET_SKILL_BONUS_TYPES.has(perk.bonusType);
 }
 
 // Wheel conviction perks whose live bonus depends on a situational condition. The planner
