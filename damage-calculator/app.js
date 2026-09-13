@@ -254,6 +254,50 @@ function averageHitsFor(spellName) {
   return numberOrZero(SPELL_AVERAGE_HITS_BY_KEY[normalized(spellNameParts(spellName).base)]) || 1;
 }
 
+// Beam Mastery adds outer beams beside the central one, and a creature is hit by one or the
+// other, never both. So a beam's plain entry in spell-average-hits.json is the central line
+// alone, and the outer beams have their own "<Spell> (Outer)" entry.
+function averageOuterBeamHitsFor(spellName) {
+  return numberOrZero(SPELL_AVERAGE_HITS_BY_KEY[normalized(`${spellNameParts(spellName).base} (Outer)`)]);
+}
+
+// Once the wheel unlocks a staged spell, its rotation row sits on the extra card (a beam's
+// "Sides", Spiritual Outburst's "Repeat", ...) but scores the whole bundle, so the row names every
+// hit instead of just that card's - a beam row labelled "Sides" read as if the central beam was
+// missing. "No bonus" is the label of a base hit that has nothing extra to say about it.
+function rotationHitsLabel(spell) {
+  const labels = (spell.bundledSpellIds?.length ? spell.bundledSpellIds : [spell.id])
+    .map((id) => item("spells", id)?.targetsLabel)
+    .filter((label) => label && normalized(label) !== "no bonus");
+  return [...new Set(labels)].join(" + ");
+}
+
+function isBeamSpell(spell) {
+  return STAGED_SCOPE_PERK[spell?.scope] === "beam mastery";
+}
+
+function newRotationRow(spell, ratio = 1) {
+  const row = { id: spell.id, targets: averageHitsFor(spell.name), ratio };
+  if (isBeamSpell(spell)) row.sideTargets = averageOuterBeamHitsFor(spell.name);
+  return row;
+}
+
+// Central/outer target counts for a beam row with Beam Mastery unlocked - the row then sits on
+// the staged "Sides" card, whose bundle is Central + Sides - or null for every other row.
+// `targets` is the central line and `sideTargets` the outer beams, each sent to its own card.
+// Rows saved before that split have no sideTargets, and their `targets` meant every creature
+// hit; that total is divided in the same proportion as the default averages.
+function beamTargetSplit(row) {
+  const spell = item("spells", row.id);
+  if (!isBeamSpell(spell) || !spell.isExtra) return null;
+  if (row.sideTargets != null) return { central: numberOrZero(row.targets), outer: numberOrZero(row.sideTargets) };
+  const total = numberOrZero(row.targets);
+  const defaultCentral = averageHitsFor(spell.name);
+  const defaultOuter = averageOuterBeamHitsFor(spell.name);
+  const outer = Math.round((total * defaultOuter) / (defaultCentral + defaultOuter) * 10) / 10;
+  return { central: Math.round((total - outer) * 10) / 10, outer };
+}
+
 let plannerCloseTimer = null;
 const plannerLoadingTimers = { wheel: null, proficiency: null };
 const plannerLoadingShownAt = { wheel: 0, proficiency: 0 };
@@ -534,9 +578,11 @@ function expandProficiencyToken(value) {
 //   0 vocation (index into SHARE_VOCATIONS, or the literal name)   8 wheel code
 //   1 level      2 skill      3 magicLevel      4 stanceIds        9 wheel gemGrades
 //   5 weapon id  6 ammoId     7 shieldId                          10 proficiency [w,p,s]
-//  11 manualPerks [[id,value]]        12 effectChoices            13 rotation [[id,targets,ratio]]
+//  11 manualPerks [[id,value]]        12 effectChoices            13 rotation [[id,targets,ratio,sideTargets?]]
 //  14 targets [[id,ratio,charmId,charmTier]]   15/16 imbuement element+value (knight-only)
 //  17 weapon forge tier (Onslaught)
+// The same rule holds inside a tuple: sideTargets (a beam's outer-beam count) was appended to the
+// rotation tuple and is only written when the row has one.
 function compactBuild(build) {
   const stats = build.stats ?? {};
   const weapon = build.weapon ?? {};
@@ -555,7 +601,7 @@ function compactBuild(build) {
     compactProficiencyToken(build.proficiencyPlanner?.token),
     blank((build.manualPerks ?? []).map((row) => [row.id, row.value])),
     blank(build.effectChoices),
-    blank((build.rotation ?? []).map((row) => [row.id, row.targets, row.ratio])),
+    blank((build.rotation ?? []).map((row) => (row.sideTargets == null ? [row.id, row.targets, row.ratio] : [row.id, row.targets, row.ratio, row.sideTargets]))),
     blank((build.targets ?? []).map((row) => [row.id, row.ratio, row.charmId, row.charmTier])),
     blank(stats.imbuementElement),
     stats.imbuementElement ? stats.imbuementValue ?? null : null,
@@ -594,7 +640,7 @@ function expandBuild(compact) {
     proficiencyPlanner: { token: expandProficiencyToken(at(10)) },
     manualPerks: list(11, ([id, value]) => ({ id, value })),
     effectChoices: at(12) ?? {},
-    rotation: list(13, ([id, targets, ratio]) => ({ id, targets, ratio })),
+    rotation: list(13, ([id, targets, ratio, sideTargets]) => ({ id, targets, ratio, ...(sideTargets != null ? { sideTargets } : {}) })),
     targets: list(14, ([id, ratio, charmId, charmTier]) => ({ id, ratio, charmId, charmTier })),
   };
 }
@@ -800,6 +846,39 @@ function numericRowInput(row, key, minimum, label, onChange) {
   return input;
 }
 
+// The "Average targets" cell of a beam row with Beam Mastery: central line and outer beams as
+// two counts. Editing either writes both, so a row still on the legacy combined count (see
+// beamTargetSplit) switches to the explicit split as soon as it's touched.
+function beamTargetsInput(row, split, onChange) {
+  const wrap = document.createElement("div");
+  wrap.className = "dc-beam-targets";
+  const field = (caption, value, description) => {
+    const label = document.createElement("label");
+    label.title = description;
+    const text = document.createElement("span");
+    text.textContent = caption;
+    const input = document.createElement("input");
+    input.type = "number";
+    input.min = "0";
+    input.step = "0.1";
+    input.value = value;
+    input.setAttribute("aria-label", description);
+    label.append(text, input);
+    wrap.append(label);
+    return input;
+  };
+  const central = field("Center", split.central, "Average targets hit by the central beam");
+  const outer = field("Sides", split.outer, "Average targets hit by the side beams");
+  const update = () => {
+    row.targets = numberOrZero(central.value);
+    row.sideTargets = numberOrZero(outer.value);
+    onChange();
+  };
+  central.addEventListener("input", update);
+  outer.addEventListener("input", update);
+  return wrap;
+}
+
 async function fetchDamage(request, signal) {
   const response = await fetch(`${API_ROOT}/damage`, {
     method: "POST",
@@ -983,7 +1062,7 @@ function createBuild(key) {
     preset.spells.forEach((entry) => {
       const matched = matchByName("spells", entry.name, (candidate) => candidate.selectable !== false && vocationAllows(candidate));
       const spell = resolveStagedSpell(matched);
-      if (spell && !rows.some((row) => row.id === spell.id)) rows.push({ id: spell.id, targets: averageHitsFor(spell.name), ratio: numberOrZero(entry.ratio) || 1 });
+      if (spell && !rows.some((row) => row.id === spell.id)) rows.push(newRotationRow(spell, numberOrZero(entry.ratio) || 1));
     });
     state.rotation = rows;
     renderRotation();
@@ -1453,6 +1532,9 @@ function createBuild(key) {
     const container = $("rotationRows");
     container.replaceChildren();
     state.rotation = state.rotation.filter((row) => item("spells", row.id));
+    // A Beam Mastery row fits two counts into the targets cell, so that column (header included)
+    // widens while one is in the rotation - at the usual width the numbers get clipped.
+    container.parentElement.classList.toggle("dc-rotation-has-beam", state.rotation.some((row) => beamTargetSplit(row)));
     // Focus Mastery's dropdown lists the rotation's spells, so it follows every rotation edit.
     renderEffectChoices("wheel");
     if (!state.rotation.length) {
@@ -1468,12 +1550,12 @@ function createBuild(key) {
       element.className = "dc-data-row dc-rotation-row";
       const identity = document.createElement("div");
       const title = document.createElement("strong");
-      const { base: spellName, suffix: spellTier } = spellNameParts(spell.name);
-      title.textContent = spellName;
+      title.textContent = spellNameParts(spell.name).base;
       const hint = document.createElement("small");
-      hint.textContent = [spell.spellType, spell.element, spell.targetsLabel, spellTier].filter(Boolean).join(" · ");
+      hint.textContent = [spell.spellType, spell.element, rotationHitsLabel(spell), spell.stage ? `Stage ${spell.stage}` : null].filter(Boolean).join(" · ");
       identity.append(title, hint);
-      const targets = numericRowInput(row, "targets", 0, "Average targets", changed);
+      const beamSplit = beamTargetSplit(row);
+      const targets = beamSplit ? beamTargetsInput(row, beamSplit, changed) : numericRowInput(row, "targets", 0, "Average targets", changed);
       const ratio = numericRowInput(row, "ratio", 0, "Cast ratio", changed);
       // The API adds the basic attack once per turn on top of the ratio-weighted average of the
       // spells, so its own ratio is ignored server-side (0 included). An editable field here
@@ -1552,7 +1634,7 @@ function createBuild(key) {
     if (!matched) { input.setCustomValidity("Choose a spell from the list."); input.reportValidity(); return; }
     input.setCustomValidity("");
     const spell = resolveStagedSpell(matched);
-    if (!state.rotation.some((row) => row.id === spell.id)) state.rotation.push({ id: spell.id, targets: averageHitsFor(spell.name), ratio: 1 });
+    if (!state.rotation.some((row) => row.id === spell.id)) state.rotation.push(newRotationRow(spell));
     input.value = "";
     renderRotation();
     renderPerks();
@@ -1672,7 +1754,13 @@ function createBuild(key) {
     const rotation = state.rotation.flatMap((row) => {
       const spell = item("spells", row.id);
       const ids = spell?.bundledSpellIds?.length ? spell.bundledSpellIds : [row.id];
-      return ids.map((id) => ({ id, targets: Math.max(0, numberOrZero(row.targets)), ...(id === 1 ? {} : { ratio: Math.max(0, numberOrZero(row.ratio)) }) }));
+      // Every other bundle's extra card lands on the same creatures as its base card, so they
+      // share one count; a beam's central and outer hits land on different ones.
+      const beamSplit = beamTargetSplit(row);
+      return ids.map((id) => {
+        const targets = beamSplit ? (item("spells", id)?.isExtra ? beamSplit.outer : beamSplit.central) : row.targets;
+        return { id, targets: Math.max(0, numberOrZero(targets)), ...(id === 1 ? {} : { ratio: Math.max(0, numberOrZero(row.ratio)) }) };
+      });
     });
     const targets = state.targets.map((row) => ({
       id: row.id,
@@ -2499,7 +2587,10 @@ function comparisonResultRow(name, spellMeta, aSpell, bSpell, iconFn = resultIco
   // The row is a single number covering every hit of the cast, so name them on hover rather than
   // splitting the row - see mergeStagedResults().
   const hitLabels = aSpell?.hitLabels ?? bSpell?.hitLabels;
-  if (hitLabels?.length > 1) nameEl.title = `${hitLabels.length} hits per cast: ${hitLabels.join(" + ")}`;
+  const [aNote, bNote] = [aSpell?.hitNote, bSpell?.hitNote];
+  if (aNote && bNote && aNote !== bNote) nameEl.title = `Build A - ${aNote}\nBuild B - ${bNote}`;
+  else if (aNote || bNote) nameEl.title = aNote || bNote;
+  else if (hitLabels?.length > 1) nameEl.title = `${hitLabels.length} hits per cast: ${hitLabels.join(" + ")}`;
   identity.append(iconFn({ name }, spellMeta), nameEl);
   const aValue = Number(spellMetric(aSpell, "effective", "avg"));
   const bValue = Number(spellMetric(bSpell, "effective", "avg"));
@@ -2529,7 +2620,10 @@ function comparisonResultGroup(title, entries, iconFn = resultIcon) {
 // lands on the same cast as the base card and is sent with the same target count - so the two are
 // folded into one row here. Reading them as separate same-named rows made a working Repeat hit
 // look like it wasn't counted at all, and the API's own per-turn total already sums them.
-function mergeStagedResults(spells) {
+// The beams are the exception: their central and outer hits land on different creatures (see
+// beamTargetSplit), so their row is the average damage per creature hit, weighted by the build's
+// central/outer counts, rather than the two hits added together.
+function mergeStagedResults(spells, rotation = []) {
   const sum = (left, right) => {
     const total = Number(left) + Number(right);
     return Number.isFinite(total) ? total : null;
@@ -2543,6 +2637,23 @@ function mergeStagedResults(spells) {
     const baseId = (meta.bundledSpellIds ?? []).map(String).find((id) => id !== String(meta.id));
     const base = baseId ? byId.get(baseId) : null;
     if (!base) return;
+    const beamRow = isBeamSpell(meta) ? rotation.find((row) => String(row.id) === String(meta.id)) : null;
+    const beamSplit = beamRow ? beamTargetSplit(beamRow) : null;
+    if (beamSplit) {
+      const hits = beamSplit.central + beamSplit.outer;
+      const perCreature = (central, outer) => {
+        const value = hits > 0 ? (Number(central) * beamSplit.central + Number(outer) * beamSplit.outer) / hits : Number(central);
+        return Number.isFinite(value) ? value : null;
+      };
+      combined.set(baseId, {
+        ...base,
+        raw: { min: perCreature(base.raw?.min, spell.raw?.min), avg: perCreature(base.raw?.avg, spell.raw?.avg), max: perCreature(base.raw?.max, spell.raw?.max) },
+        effective: { ...base.effective, avg: perCreature(base.effective?.avg, spell.effective?.avg) },
+        hitNote: `Average per creature hit: ${beamSplit.central} on the central beam, ${beamSplit.outer} on the side beams`,
+      });
+      absorbed.add(String(spell.id));
+      return;
+    }
     const into = combined.get(baseId) ?? { ...base, hitLabels: [item("spells", base.id)?.targetsLabel].filter(Boolean) };
     combined.set(baseId, {
       ...into,
@@ -2567,8 +2678,8 @@ function resultSpellName(spell, meta) {
 // Union of both builds' visible spells, each carrying whichever side(s) it appears on -
 // shared by the live results list and the "Save image" export so both stay in sync.
 function comparisonEntries(a, b) {
-  const aSpells = mergeStagedResults(builds.a.visibleResultSpells(a.spells ?? []));
-  const bSpells = mergeStagedResults(builds.b.visibleResultSpells(b.spells ?? []));
+  const aSpells = mergeStagedResults(builds.a.visibleResultSpells(a.spells ?? []), builds.a.state.rotation);
+  const bSpells = mergeStagedResults(builds.b.visibleResultSpells(b.spells ?? []), builds.b.state.rotation);
   const idOf = (spell) => String(spell.id ?? normalized(spell.name));
   const entries = new Map();
   const order = [];
