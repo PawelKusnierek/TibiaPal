@@ -315,6 +315,13 @@ let activeBuildKey = null;
 let activeTabKey = "a";
 let compareInFlight = null;
 let compareSignature = null;
+// Right after boot the planner iframes (Build A's live modal frames and Build B's hydrate
+// frames) are still loading and reporting their wheel/proficiency perks back in a few steps, so
+// a comparison run straight away - a refresh on "#results", or clicking Results immediately -
+// scores builds with half their bonuses missing. triggerCompare() waits out this grace period
+// (started in loadMetadata, alongside the frames) before calculating anything.
+const BOOT_SETTLE_MS = 3000;
+let bootSettled = null;
 // Only the active build's planner state is live in the shared modal iframes at boot - the
 // other build's wheel code / proficiency token would otherwise sit un-decoded (and so
 // contribute zero bonus) until its editor happens to be opened. These two hidden iframes
@@ -2893,12 +2900,15 @@ async function triggerCompare(force = false) {
   const signature = buildSignature();
   if (!force && signature === compareSignature && builds.a.lastResult && builds.b.lastResult) return;
   if (compareInFlight) return compareInFlight;
-  compareSignature = signature;
   compareStatus.classList.remove("error");
   compareStatus.textContent = "Calculating both builds…";
   setResultsLoading(true);
   compareInFlight = (async () => {
     try {
+      await bootSettled;
+      // Taken after the grace period, not before: planner reports landing during it change the
+      // state, and the signature must describe what's actually being calculated.
+      compareSignature = buildSignature();
       await Promise.all([builds.a.calculate(), builds.b.calculate()]);
       renderComparison();
       document.querySelector("#saveBuildImage").disabled = !(builds.a.hasCalculated && builds.b.hasCalculated);
@@ -2999,8 +3009,10 @@ function wireGlobalEvents() {
     // possibly finish (it's a cross-frame round trip) - recompute once it lands so the Results
     // tab doesn't stick with Build B's pre-hydration (zero-bonus) numbers. Chained after
     // whatever compare is already in flight, rather than called directly, since triggerCompare
-    // treats an in-flight call as a no-op and would otherwise ignore the forced recompute.
-    const recomputeResultsIfNeeded = () => { if (activeTabKey === "results") Promise.resolve(compareInFlight).finally(() => triggerCompare(true)); };
+    // treats an in-flight call as a no-op and would otherwise ignore the recompute. Not forced:
+    // hydration that lands inside the boot grace period is already part of the in-flight compare
+    // (same signature), so only a genuinely late one costs a second calculation.
+    const recomputeResultsIfNeeded = () => { if (activeTabKey === "results") Promise.resolve(compareInFlight).finally(() => triggerCompare()); };
     if (event.source === wheelHydrateFrame.contentWindow && event.data?.type === "tibiapal:wheel-build") {
       const target = builds[wheelHydrateKey];
       wheelHydrateKey = null;
@@ -3098,6 +3110,8 @@ async function loadMetadata() {
       build.populateStaticControls();
     });
     initializePlannerFrames(builds.a);
+    // Has to start before wireTabs(), which runs the comparison straight away for a "#results" link.
+    bootSettled = new Promise((resolve) => window.setTimeout(resolve, BOOT_SETTLE_MS));
     // Build A's iframe is the one live at boot, so route its self-reported build there;
     // Build B's wheel/proficiency perks additionally hydrate in the background right away
     // (see hydrateInactiveBuild) so a shared A/B link calculates correctly even if Build B's
