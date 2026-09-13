@@ -5,47 +5,84 @@
   const summaryIds = ["wod-dedication-perks", "wod-conviction-perks", "wod-revelation-perks", "wod-gem-perks"];
   const gradeLabels = ["I", "II", "III", "IV"];
   const supportedVocations = new Set(["knight", "paladin", "sorcerer", "druid", "monk"]);
+  // Points a revelation perk's domain needs for stages 1-3, and the Damage and Healing bonus
+  // each stage grants (LargePerkInfos.ExtraDamageHealingInfo).
+  const revelationStagePoints = [250, 500, 1000];
+  const revelationDamageHealing = [0, 4, 9, 20];
   let strings = null;
+  let stringsReady = null;
   let gemGrades = {};
   let gradesHydrated = false;
   let publishTimer = null;
   let refreshTimer = null;
+  let wheelModule = null;
 
-  function exposeWheelCorners() {
+  function listOf(vector) {
+    return Array.from({ length: vector.size() }, (_, index) => vector.get(index));
+  }
+
+  // Stands in for an engine vector: the planner only ever reads these through size()/get().
+  function vectorOf(items) {
+    return { size: () => items.length, get: (index) => items[index] };
+  }
+
+  function wrapEngineMethod(prototype, name, wrapper) {
+    const original = prototype?.[name];
+    if (typeof original !== "function" || original.__tibiapalWrapped) return;
+    const wrapped = function (...args) {
+      return wrapper.call(this, original, args);
+    };
+    wrapped.__tibiapalWrapped = true;
+    wrapped.__tibiapalOriginal = original;
+    prototype[name] = wrapped;
+  }
+
+  // The engine scores every gem mod at grade IV. For most mods only the summary text is off
+  // (computedGemRows() re-derives those), but Revelation Mastery feeds the engine's own output:
+  // its points count towards a revelation perk's domain, so a lower grade can cost that perk a
+  // stage - which the canvas, the Selection bar, the Revelation summary and its Damage and
+  // Healing bonus all read. These wrappers re-score those domains at the chosen grades.
+  function wrapWheelEngine() {
     const originalCreateModule = window.createModule;
     if (typeof originalCreateModule !== "function" || originalCreateModule.__tibiapalWrapped) return;
     const wrappedCreateModule = async function (...args) {
       const module = await originalCreateModule(...args);
+      wheelModule = module;
       const prototype = module.SkillwheelPlanner?.prototype;
-      if (prototype?.getCornerParameters && !prototype.getCornerParameters.__tibiapalWrapped) {
-        const originalGetCorners = prototype.getCornerParameters;
-        const wrappedGetCorners = function (...methodArgs) {
-          const result = originalGetCorners.apply(this, methodArgs);
-          const corners = [];
-          for (let index = 0; index < result.size(); index += 1) {
-            const corner = result.get(index);
-            corners.push({
-              hasGem: Boolean(corner.hasGem),
-              gemQuality: Number(corner.gemQuality),
-              vesselLevel: Number(corner.vesselLevel),
-              keyBasicMod1: Number(corner.keyBasicMod1),
-              keyBasicMod2: Number(corner.keyBasicMod2),
-              keySupremeMod: Number(corner.keySupremeMod),
-            });
-          }
-          window.__tibiapalWheelCorners = corners;
-          return result;
-        };
-        wrappedGetCorners.__tibiapalWrapped = true;
-        prototype.getCornerParameters = wrappedGetCorners;
-      }
+      wrapEngineMethod(prototype, "getCornerParameters", function (original, args) {
+        const result = original.apply(this, args);
+        const corners = listOf(result);
+        window.__tibiapalWheelCorners = corners.map((corner) => ({
+          hasGem: Boolean(corner.hasGem),
+          gemQuality: Number(corner.gemQuality),
+          vesselLevel: Number(corner.vesselLevel),
+          keyBasicMod1: Number(corner.keyBasicMod1),
+          keyBasicMod2: Number(corner.keyBasicMod2),
+          keySupremeMod: Number(corner.keySupremeMod),
+        }));
+        const rescored = rescoredCorners(this, corners);
+        return rescored ? vectorOf(rescored) : result;
+      });
+      wrapEngineMethod(prototype, "getGridDamageAndHealingBonus", function (original, args) {
+        const bonus = original.apply(this, args);
+        const corners = listOf(prototype.getCornerParameters.__tibiapalOriginal.call(this));
+        const rescored = rescoredCorners(this, corners);
+        if (!rescored) return bonus;
+        return corners.reduce((total, corner, index) => total + revelationDamageHealing[rescored[index].level] - revelationDamageHealing[corner.level], bonus);
+      });
+      wrapEngineMethod(prototype, "getGemsSupremeModSummary", function (original, args) {
+        const result = original.apply(this, args);
+        const { byMod } = revelationMasteryPoints(listOf(prototype.getCornerParameters.__tibiapalOriginal.call(this)));
+        if (!byMod.size) return result;
+        return vectorOf(listOf(result).map((mod) => (byMod.has(mod.id) ? { ...mod, value: mod.value - byMod.get(mod.id) } : mod)));
+      });
       return module;
     };
     wrappedCreateModule.__tibiapalWrapped = true;
     window.createModule = wrappedCreateModule;
   }
 
-  exposeWheelCorners();
+  wrapWheelEngine();
 
   function cleanName(value) {
     return String(value ?? "").split("|")[0].replace(/^Aug\.\s*/i, "Augmented ").trim();
@@ -80,6 +117,103 @@
       const parsed = Number(grade);
       return /^(basic|supreme):\d+$/.test(key) && Number.isInteger(parsed) && parsed >= 0 && parsed <= 3 ? [[key, parsed]] : [];
     }));
+  }
+
+  // A gem's active mods in slot order, each at its applied grade: a slot can't run at a higher
+  // grade than the one before it (what renderGradeControls() shows as "capped by previous slot").
+  function gemSlots(corner) {
+    let cap = 3;
+    return [
+      { active: corner.vesselLevel >= 1, type: "basic", id: corner.keyBasicMod1 },
+      { active: corner.vesselLevel >= 2, type: "basic", id: corner.keyBasicMod2 },
+      { active: corner.vesselLevel >= 3, type: "supreme", id: corner.keySupremeMod },
+    ].filter((slot) => slot.active && slot.id >= 0).map((slot) => {
+      cap = Math.min(selectedGrade(slot.type, slot.id), cap);
+      return { ...slot, grade: cap };
+    });
+  }
+
+  // The revelation perk a Revelation Mastery supreme mod feeds, and its points at grades I-IV.
+  function revelationMastery(modId) {
+    const info = strings?.SupremeModInfos?.[modId];
+    if (!info || cleanName(info.Name) !== "Revelation Mastery") return null;
+    const perkName = cleanName(info.NameSummary).replace(/^Revelation Mastery\s+/i, "");
+    const largePerkId = Object.keys(strings.LargePerkInfos ?? {}).find((key) => /^\d+$/.test(key) && cleanName(strings.LargePerkInfos[key]?.Name) === perkName);
+    if (largePerkId == null) return null;
+    return { largePerkId: Number(largePerkId), points: [0, 1, 2, 3].map((grade) => numberFrom(info.EffectInfo?.[grade])) };
+  }
+
+  // Revelation Mastery points per revelation perk, both as the engine counts them (grade IV) and
+  // at the chosen grades, plus how far each mod falls short of grade IV. Only perks/mods where a
+  // lower grade actually changes something are included.
+  function revelationMasteryPoints(corners) {
+    const byPerk = new Map();
+    const byMod = new Map();
+    corners.forEach((corner) => {
+      if (!corner.hasGem) return;
+      gemSlots(corner).forEach((slot) => {
+        const mastery = slot.type === "supreme" ? revelationMastery(slot.id) : null;
+        if (!mastery) return;
+        const entry = byPerk.get(mastery.largePerkId) ?? { engine: 0, applied: 0 };
+        entry.engine += mastery.points[3];
+        entry.applied += mastery.points[slot.grade];
+        byPerk.set(mastery.largePerkId, entry);
+        const shortfall = mastery.points[3] - mastery.points[slot.grade];
+        if (shortfall > 0) byMod.set(slot.id, (byMod.get(slot.id) ?? 0) + shortfall);
+      });
+    });
+    byPerk.forEach((entry, largePerkId) => {
+      if (entry.applied >= entry.engine) byPerk.delete(largePerkId);
+    });
+    return { byPerk, byMod };
+  }
+
+  function enumName(enumType, value) {
+    return Object.keys(enumType ?? {}).find((key) => enumType[key]?.value === value?.value);
+  }
+
+  // Promotion points spent in each domain ("TL", "TR", "BL", "BR"), from the slices themselves.
+  function domainSlicePoints(planner) {
+    const vector = planner.getSkillParameters();
+    const points = new Map();
+    listOf(vector).forEach((tile) => {
+      const domain = enumName(wheelModule?.EGridTile, tile.id)?.match(/^Q(TL|TR|BL|BR)\d+$/)?.[1];
+      if (domain) points.set(domain, (points.get(domain) ?? 0) + Number(tile.currentSkillPoints));
+    });
+    vector.delete?.();
+    return points;
+  }
+
+  // The engine's corner fields for a domain holding `points`: the stage, the bar towards the next
+  // stage (capped at the stage 3 threshold) and the fill of the stage in progress.
+  function revelationProgress(points) {
+    const level = revelationStagePoints.filter((threshold) => points >= threshold).length;
+    const floor = level ? revelationStagePoints[level - 1] : 0;
+    const maxSkillPoints = revelationStagePoints[Math.min(level, revelationStagePoints.length - 1)];
+    return {
+      level,
+      currentSkillPoints: Math.min(points, maxSkillPoints),
+      maxSkillPoints,
+      fillPercent: level === revelationStagePoints.length ? 1 : (points - floor) / (maxSkillPoints - floor),
+    };
+  }
+
+  // The engine's corners with each domain re-scored at the chosen Revelation Mastery grades, or
+  // null when nothing differs from the engine's grade IV scoring. A domain is left untouched if
+  // its slices plus grade IV mastery don't reproduce the engine's own number, so a change in how
+  // CIP scores domains degrades to the grade IV values instead of showing something wrong.
+  function rescoredCorners(planner, corners) {
+    const { byPerk } = revelationMasteryPoints(corners);
+    if (!byPerk.size || !wheelModule) return null;
+    const slicePoints = domainSlicePoints(planner);
+    return corners.map((corner) => {
+      const mastery = byPerk.get(corner.largePerkId);
+      const slices = slicePoints.get(enumName(wheelModule.EQuarter, corner.id));
+      if (!mastery || slices == null) return corner;
+      const engine = revelationProgress(slices + mastery.engine);
+      if (engine.level !== corner.level || engine.currentSkillPoints !== corner.currentSkillPoints) return corner;
+      return { ...corner, ...revelationProgress(slices + mastery.applied) };
+    });
   }
 
   function mediumDetails(name, value) {
@@ -150,16 +284,8 @@
     const activeVocation = vocation();
     window.__tibiapalWheelCorners.forEach((corner) => {
       if (!corner.hasGem) return;
-      let effectiveCap = 3;
-      const slots = [
-        { active: corner.vesselLevel >= 1, type: "basic", id: corner.keyBasicMod1 },
-        { active: corner.vesselLevel >= 2, type: "basic", id: corner.keyBasicMod2 },
-        { active: corner.vesselLevel >= 3, type: "supreme", id: corner.keySupremeMod },
-      ];
-      slots.forEach((slot) => {
-        if (!slot.active || slot.id < 0) return;
-        const grade = Math.min(selectedGrade(slot.type, slot.id), effectiveCap);
-        effectiveCap = grade;
+      gemSlots(corner).forEach((slot) => {
+        const { grade } = slot;
         if (slot.type === "basic") {
           (strings.BasicModConfig?.[slot.id] ?? []).forEach((effect) => {
             const info = strings.BasicModEffectInfos?.[effect.EffectId];
@@ -252,6 +378,7 @@
         if (!type || id < 0) return;
         gradesHydrated = true;
         gemGrades[gradeKey(type, id)] = index;
+        refreshPlanner();
         renderGradeControls();
         publish();
       });
@@ -316,6 +443,13 @@
     window.parent.postMessage({ type: "tibiapal:wheel-build", payload }, window.location.origin);
   }
 
+  // Re-reads the engine (through the wrappers in wrapWheelEngine()) and redraws the canvas and the
+  // Selection, Information and summary boxes. The planner only does that on its own when the wheel
+  // code changes, and grades aren't part of the code. Hook added to wheelofdestinyplanner.min.js.
+  function refreshPlanner() {
+    window.wodPlannerRefresh?.();
+  }
+
   function schedulePublish() {
     clearTimeout(publishTimer);
     publishTimer = window.setTimeout(publish, 100);
@@ -362,8 +496,12 @@
   window.addEventListener("message", (event) => {
     if (event.origin !== window.location.origin) return;
     if (event.data?.type === "tibiapal:request-wheel-build") {
-      renderGradeControls();
-      publish();
+      // The hidden hydrate frame keeps only its first reply, so wait until Revelation Mastery can
+      // be re-scored at the build's grades rather than answering with grade IV stages.
+      Promise.resolve(stringsReady).then(() => {
+        renderGradeControls();
+        publish();
+      });
     }
     if (event.data?.type === "tibiapal:set-vocation") setVocation(event.data.vocation);
     if (event.data?.type === "tibiapal:reset-wheel") resetWheel();
@@ -371,15 +509,21 @@
     if (event.data?.type === "tibiapal:set-wheel-grades") {
       gemGrades = sanitizedGrades(event.data.grades);
       gradesHydrated = true;
+      refreshPlanner();
       scheduleRefresh();
     }
   });
 
   window.addEventListener("DOMContentLoaded", async () => {
-    try {
-      const response = await fetch("/data/wheel-planner/SkillwheelStringsJsonLibrary.json");
-      if (response.ok) strings = await response.json();
-    } catch { /* The official maximum-grade values remain available as a fallback. */ }
+    stringsReady = (async () => {
+      try {
+        const response = await fetch("/data/wheel-planner/SkillwheelStringsJsonLibrary.json");
+        if (response.ok) strings = await response.json();
+      } catch { /* The official maximum-grade values remain available as a fallback. */ }
+      // Grades that arrived first were scored at grade IV - Revelation Mastery needs the strings.
+      if (Object.values(gemGrades).some((grade) => grade < 3)) refreshPlanner();
+    })();
+    await stringsReady;
     const wrapper = document.querySelector("#wod-wrapper");
     if (wrapper) new MutationObserver(scheduleRefresh).observe(wrapper, { childList: true, subtree: true, characterData: true });
     document.addEventListener("change", (event) => {

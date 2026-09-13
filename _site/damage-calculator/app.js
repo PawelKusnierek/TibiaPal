@@ -2078,7 +2078,7 @@ function setPlannerFrameSrc(frame, url) {
 }
 
 function initializePlannerFrames(build) {
-  setPlannerFrameSrc(document.querySelector("#wheelPlannerFrame"), plannerUrl("/wheel-planner.html", { embed: "damage", v: "20260815-2", vocation: build.state.stats.vocation, code: build.state.wheelPlanner.code }));
+  setPlannerFrameSrc(document.querySelector("#wheelPlannerFrame"), plannerUrl("/wheel-planner.html", { embed: "damage", v: "20260913-1", vocation: build.state.stats.vocation, code: build.state.wheelPlanner.code }));
   setPlannerFrameSrc(document.querySelector("#proficiencyPlannerFrame"), plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260906-2", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token }));
 }
 
@@ -2089,7 +2089,7 @@ function initializePlannerFrames(build) {
 function hydrateInactiveBuild(build) {
   if (build.state.wheelPlanner.code && !build.state.wheelPlanner.effects.length) {
     wheelHydrateKey = build.key;
-    document.querySelector("#wheelHydrateFrame").src = plannerUrl("/wheel-planner.html", { embed: "damage", v: "20260815-2", vocation: build.state.stats.vocation, code: build.state.wheelPlanner.code });
+    document.querySelector("#wheelHydrateFrame").src = plannerUrl("/wheel-planner.html", { embed: "damage", v: "20260913-1", vocation: build.state.stats.vocation, code: build.state.wheelPlanner.code });
   }
   if (build.state.proficiencyPlanner.token && !build.state.proficiencyPlanner.effects.length) {
     proficiencyHydrateKey = build.key;
