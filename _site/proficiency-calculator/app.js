@@ -166,10 +166,14 @@ function reconciledDescription(perk) {
   const match = description.match(/([+-]?)(\d+(?:[.,]\d+)?)(%?)/);
   if (!match) return description;
   const percent = match[3] === "%";
-  // A fractional Value written without "%" (or a whole one written with it) means the sentence
-  // is describing some other effect entirely - a handful of rows carry a neighbouring perk's
-  // text. Correcting the number there would only make a wrong sentence look precise.
-  if (percent !== (Math.abs(value) < 1 && value !== 0)) return description;
+  const fractional = Math.abs(value) < 1 && value !== 0;
+  // A fractional Value written as a flat number can't be this perk at all: the Umbral Master
+  // row-4 spell scaling (Type 26, 0.05) was scraped as the neighbouring "+1 Sword Fighting".
+  // Drop the sentence so perkLabel() generates one from Type/Value instead.
+  if (fractional && !percent) return null;
+  // A whole Value written with "%" is usually a multiplier of 100% or more ("+200% of your Magic
+  // Level", Value 2), so it's left alone rather than rewritten into a wrong number.
+  if (percent !== fractional) return description;
   const shown = percent ? value * 100 : value;
   if (Math.abs(shown - Number(match[2].replace(",", "."))) < 1e-9) return description;
   const sign = value < 0 ? "-" : match[1];
