@@ -53,6 +53,9 @@ calculator.addEventListener("scroll", hideTooltip, true);
 window.addEventListener("resize", hideTooltip);
 const state = { profiles: [], shapingGroups: {}, filtered: [], current: null, selected: {}, applied: {}, modified: {}, filter: "all", family: "all", modifyTarget: null, picker: null };
 const BUILD_COOKIE = "wpBuild";
+// A level's choice when no perk is assigned to it - for a proficiency that isn't fully unlocked
+// yet, so its missing levels don't count towards the build. Share tokens carry it as-is in `p`.
+const UNASSIGNED = -1;
 
 function setCookie(name, value, days) {
   const expires = new Date(Date.now() + days * 864e5).toUTCString();
@@ -674,6 +677,15 @@ function renderBoard() {
         state.modifyTarget = levelIndex;
         renderBoard();
       });
+      // Right-click unassigns the level entirely. A shaped perk keeps its shaping and comes back
+      // with a normal click.
+      node.addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+        if (!selected) return;
+        choices[levelIndex] = UNASSIGNED;
+        if (state.modifyTarget === levelIndex) state.modifyTarget = null;
+        renderBoard();
+      });
       column.append(node);
     });
     const modification = modificationMap()[levelIndex];
@@ -704,7 +716,7 @@ function renderBoard() {
     ? "⚒ Select a perk"
     : targetIsModified ? "🔮 Reshape selected perk" : "⚒ Modify selected perk";
   $("#selectionHint").textContent = state.modifyTarget == null
-    ? "Choose a perk on the board to modify it."
+    ? "Click a perk to modify it · right-click to unassign it."
     : targetIsModified
       ? `Level ${state.modifyTarget + 1} custom perk selected · click Reshape to replace it.`
       : `Level ${state.modifyTarget + 1} selected · click Modify to reshape it.`;
@@ -884,7 +896,7 @@ function buildFromParts(weaponId, choicesValue, shapedValue) {
   if (!profile) return null;
   state.selected[profile.ProficiencyId] = profile.Levels.map((level, index) => {
     const choice = choicesValue[index];
-    return Number.isInteger(choice) && choice >= 0 && choice < level.Perks.length ? choice : 0;
+    return Number.isInteger(choice) && choice >= UNASSIGNED && choice < level.Perks.length ? choice : 0;
   });
   if (shapedValue) {
     try {
@@ -901,7 +913,7 @@ function buildFromParts(weaponId, choicesValue, shapedValue) {
         if (!source) return [];
         const originalChoice = Number(modification.originalChoice);
         return [[slot, {
-          originalChoice: Number.isInteger(originalChoice) && profile.Levels[level].Perks[originalChoice] ? originalChoice : state.selected[profile.ProficiencyId][level],
+          originalChoice: Number.isInteger(originalChoice) && profile.Levels[level].Perks[originalChoice] ? originalChoice : Math.max(0, state.selected[profile.ProficiencyId][level]),
           rank,
           perk: valueAtRank(source, rank),
         }]];
