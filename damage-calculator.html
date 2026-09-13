@@ -1,8 +1,25 @@
 ---
 layout: default
-title: TibiaPal.com - Damage Calculator
+title: Tibia Damage Calculator - Compare Builds | TibiaPal.com
+description: "Free Tibia damage calculator: compare two builds' damage per turn with Wheel of Destiny, weapon proficiency, spell rotation, creature resistances and charms."
 scripts: <script type="module" src="/damage-calculator/app.js?v=20260906-2"></script>
 ---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Tibia Damage Calculator",
+  "url": "https://tibiapal.com/damage-calculator",
+  "description": {{ page.description | jsonify }},
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Person", "name": "Kusnier" },
+  "publisher": { "@type": "Organization", "name": "TibiaPal", "url": "https://tibiapal.com" }
+}
+</script>
 
 <section id="damageCalculator" class="dc-app" aria-busy="true">
   <header class="dc-hero">
