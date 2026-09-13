@@ -165,6 +165,12 @@ const PROFICIENCY_CRIT_PERKS = {
   15: { scope: "auto-attack", bonusType: "crit-damage" },
 };
 
+// Spell augmentation rows (Type 5) by AugmentType, looked up on the augmented spell's own scope.
+// Only these three change damage - the healing, cooldown and leech augments have no damage perk.
+// Typed for the same reason as the crit rows above: "+20% critical extra damage for Fierce
+// Berserk" only beat the base damage perk on token coverage by .8 to .75.
+const SPELL_AUGMENT_BONUS_TYPES = { 2: "base-damage", 16: "crit-damage", 17: "crit-chance" };
+
 // Situational perks whose branch is decided by the build rather than by the user: Ballistic
 // Mastery does one thing with a crossbow and another with a bow, and the weapon is already
 // synced from the proficiency planner. Resolved on every render, so swapping weapons updates it.
@@ -789,10 +795,21 @@ function effectNumber(effect, perk) {
   return perk.valueType === "percent" && Math.abs(raw) <= 2 ? Math.abs(raw * 100) : Math.abs(raw);
 }
 
+// A proficiency row's `spellId` is the Tibia client's spell id, not the damage API's - the API's
+// 105 is Homing missile (holy), the client's is Fierce Berserk - so it is never looked up in
+// metadata.spells. Doing that scoped every augment on a colliding id (Fierce Berserk, Berserk,
+// Groundshaker, Front Sweep, the beams, ...) onto an unrelated spell with no perks, and the row
+// silently mapped to nothing. The planner sends the name instead (`spellName`), matched exactly;
+// the API writes runes as "<Name> Rune". A named spell the API doesn't model (Lesser Front Sweep)
+// resolves to null so mapPlannerEffect drops it, rather than the text match below crediting
+// it to Front Sweep.
 function effectSpell(effect) {
-  if (effect.spellId != null) {
-    const byId = item("spells", effect.spellId);
-    if (byId) return byId;
+  if (effect.spellName) {
+    const name = plainName(effect.spellName);
+    return metadata.spells.find((spell) => {
+      const base = plainName(spellNameParts(spell.name).base);
+      return base === name || base === `${name} rune`;
+    }) ?? null;
   }
   const text = normalized([effect.name, effect.label].filter(Boolean).join(" "));
   return metadata.spells
@@ -1250,8 +1267,13 @@ function createBuild(key) {
     return bonusType ? metadata.perks.find((perk) => perk.bonusType === bonusType && perk.selectable !== false) : null;
   }
 
-  function typedProficiencyPerk(effect) {
+  function typedProficiencyPerk(effect, scopedSpell) {
     const type = Number(effect.type);
+    if (type === 5 && scopedSpell) {
+      const bonusType = SPELL_AUGMENT_BONUS_TYPES[Number(effect.augmentType)];
+      return bonusType ? metadata.perks.find((perk) => perk.scope === scopedSpell.scope && perk.bonusType === bonusType
+        && perk.selectable !== false) ?? null : null;
+    }
     // Bestiary-family damage rows carry the family in `bestiaryName`, so the perk is looked up
     // by it instead of by the row's wording. The text matcher below scores its tokens with
     // `includes()` - a substring test - so "human" also matches inside "humanoid": both perks
@@ -1342,7 +1364,9 @@ function createBuild(key) {
     const text = normalized(effectText(effect));
     if (!text || /damage and healing/.test(text) || isHealingOnlyEffect(effect)) return null;
     const scopedSpell = effectSpell(effect);
-    let perk = typedProficiencyPerk(effect) ?? skillBoostPerk(effect);
+    // See effectSpell: the row is about one spell and the API doesn't model it.
+    if (effect.spellName && !scopedSpell) return null;
+    let perk = typedProficiencyPerk(effect, scopedSpell) ?? skillBoostPerk(effect);
     if (!perk) {
       const name = normalized(effect.name ?? "");
       perk = metadata.perks.find((candidate) => normalized(candidate.name) === name && candidate.selectable !== false);
@@ -2167,7 +2191,7 @@ function setPlannerFrameSrc(frame, url) {
 
 function initializePlannerFrames(build) {
   setPlannerFrameSrc(document.querySelector("#wheelPlannerFrame"), plannerUrl("/wheel-planner.html", { embed: "damage", v: "20260913-1", vocation: build.state.stats.vocation, code: build.state.wheelPlanner.code }));
-  setPlannerFrameSrc(document.querySelector("#proficiencyPlannerFrame"), plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260913-2", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token }));
+  setPlannerFrameSrc(document.querySelector("#proficiencyPlannerFrame"), plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260913-3", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token }));
 }
 
 // Silently resolves a build's wheel code / proficiency token into perks via the hidden
@@ -2181,7 +2205,7 @@ function hydrateInactiveBuild(build) {
   }
   if (build.state.proficiencyPlanner.token && !build.state.proficiencyPlanner.effects.length) {
     proficiencyHydrateKey = build.key;
-    document.querySelector("#proficiencyHydrateFrame").src = plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260913-2", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token });
+    document.querySelector("#proficiencyHydrateFrame").src = plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260913-3", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token });
   }
 }
 

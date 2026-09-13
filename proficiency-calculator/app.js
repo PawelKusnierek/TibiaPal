@@ -799,7 +799,10 @@ function publishProficiencyBuild(profile, grouped) {
     type: perk.Type,
     value: Number(perk.Value) || 0,
     skillId: perk.SkillId ?? null,
+    // SpellId is the client's spell id, which the damage API numbers differently (its 105 is a
+    // Homing missile, not Fierce Berserk), so the damage calculator resolves the spell by name.
     spellId: perk.SpellId ?? null,
+    spellName: perk.SpellId == null ? null : perk.SpellName ?? spellNames[perk.SpellId] ?? spellDetails(perk.SpellId, profile)?.name ?? null,
     augmentType: perk.AugmentType ?? null,
     elementId: perk.ElementId ?? perk.DamageType ?? null,
     bestiaryName: perk.BestiaryName ?? null,
