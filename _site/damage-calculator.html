@@ -51,7 +51,7 @@
     
 
     <!-- javascript files -->
-    <script type="module" src="/damage-calculator/app.js?v=20260913-9"></script>
+    <script type="module" src="/damage-calculator/app.js?v=20260914-1"></script>
     <script src=/scripts/onload.js></script>
 
     <!-- extra googleapi fonts -->
@@ -427,6 +427,17 @@
       </div>
       <div class="dc-list-head dc-target-head"><span>Creature</span><span>Ratio</span><span>Charm</span><span>Tier</span><span></span></div>
       <div id="targetRows-a" class="dc-row-list"></div>
+      <!-- Shown by renderCharmStatFields() only while a target runs Overpower / Overflux. -->
+      <div id="charmStatFields-a" class="dc-fields dc-charm-stats" hidden>
+        <label data-charm-stat="hitPoints">Max hit points
+          <input type="number" min="0" step="1" inputmode="numeric" placeholder="Enter max HP" data-stat="hitPoints">
+          <small>Overpower hits for 5% of this. Use the in-game value, after gear and wheel.</small>
+        </label>
+        <label data-charm-stat="manaPoints">Max mana
+          <input type="number" min="0" step="1" inputmode="numeric" placeholder="Enter max mana" data-stat="manaPoints">
+          <small>Overflux hits for 2.5% of this. Use the in-game value, after gear and wheel.</small>
+        </label>
+      </div>
     </div>
   </section>
 
@@ -598,6 +609,17 @@
       </div>
       <div class="dc-list-head dc-target-head"><span>Creature</span><span>Ratio</span><span>Charm</span><span>Tier</span><span></span></div>
       <div id="targetRows-b" class="dc-row-list"></div>
+      <!-- Shown by renderCharmStatFields() only while a target runs Overpower / Overflux. -->
+      <div id="charmStatFields-b" class="dc-fields dc-charm-stats" hidden>
+        <label data-charm-stat="hitPoints">Max hit points
+          <input type="number" min="0" step="1" inputmode="numeric" placeholder="Enter max HP" data-stat="hitPoints">
+          <small>Overpower hits for 5% of this. Use the in-game value, after gear and wheel.</small>
+        </label>
+        <label data-charm-stat="manaPoints">Max mana
+          <input type="number" min="0" step="1" inputmode="numeric" placeholder="Enter max mana" data-stat="manaPoints">
+          <small>Overflux hits for 2.5% of this. Use the in-game value, after gear and wheel.</small>
+        </label>
+      </div>
     </div>
   </section>
 

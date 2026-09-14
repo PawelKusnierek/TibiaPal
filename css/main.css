@@ -4735,6 +4735,21 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   grid-template-columns: minmax(120px, 1fr) 70px minmax(115px, 0.8fr) 56px 30px;
 }
 
+.dc-charm-stats {
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  max-width: 420px;
+  margin-top: 12px;
+}
+
+.dc-charm-stats > label {
+  grid-template-rows: auto 26px auto;
+}
+
+.dc-charm-stats small {
+  color: #7491ad;
+  font-weight: 500;
+}
+
 .dc-data-row {
   display: grid;
   align-items: center;

@@ -371,6 +371,15 @@ const DEFAULT_AMMO_NAME_BY_TYPE = { arrows: "Diamond Arrow", bolts: "Spectral Bo
 // starts there instead of at T1.
 const DEFAULT_CHARM_TIER = 2;
 
+// Overpower and Overflux hit for a share of the character's own max HP / mana, which the API reads
+// from these stats (the charm's `requiresStat`). Nothing else uses them, so 0 means "not entered"
+// and the inputs only show while a target runs one of those charms - see renderCharmStatFields().
+const CHARM_STAT_KEYS = ["hitPoints", "manaPoints"];
+
+function charmStatsRequiredBy(targets) {
+  return new Set((targets ?? []).map((row) => row.charmId && item("charms", row.charmId)?.requiresStat).filter(Boolean));
+}
+
 // Average auto-attack hits per turn for a paladin. The storm arrows cover a smaller area than
 // diamond arrows, so they land on fewer creatures per shot.
 const PALADIN_AUTO_ATTACK_HITS = 6;
@@ -597,7 +606,7 @@ function expandProficiencyToken(value) {
 //   5 weapon id  6 ammoId     7 shieldId                          10 proficiency [w,p,s]
 //  11 manualPerks [[id,value]]        12 effectChoices            13 rotation [[id,targets,ratio,sideTargets?]]
 //  14 targets [[id,ratio,charmId,charmTier]]   15/16 imbuement element+value (knight-only)
-//  17 weapon forge tier (Onslaught)
+//  17 weapon forge tier (Onslaught)   18/19 max hitPoints/manaPoints (Overpower/Overflux)
 // The same rule holds inside a tuple: sideTargets (a beam's outer-beam count) was appended to the
 // rotation tuple and is only written when the row has one.
 function compactBuild(build) {
@@ -623,6 +632,8 @@ function compactBuild(build) {
     blank(stats.imbuementElement),
     stats.imbuementElement ? stats.imbuementValue ?? null : null,
     weapon.tier || null,
+    stats.hitPoints || null,
+    stats.manaPoints || null,
   ]);
 }
 
@@ -644,6 +655,8 @@ function expandBuild(compact) {
     stats.imbuementElement = at(15);
     stats.imbuementValue = at(16);
   }
+  if (at(18) != null) stats.hitPoints = at(18);
+  if (at(19) != null) stats.manaPoints = at(19);
   const weapon = {};
   if (at(5) != null) weapon.id = at(5);
   if (at(6) != null) weapon.ammoId = at(6);
@@ -702,6 +715,7 @@ function sanitizeState(candidate) {
   if (stats.vocation !== "knight" || !IMBUEMENT_ELEMENTS.includes(stats.imbuementElement)) stats.imbuementElement = "";
   if (!stats.imbuementElement || !IMBUEMENT_VALUES.includes(Number(stats.imbuementValue))) stats.imbuementValue = 0;
   else stats.imbuementValue = Number(stats.imbuementValue);
+  CHARM_STAT_KEYS.forEach((key) => { stats[key] = Math.max(0, Math.round(numberOrZero(stats[key]))); });
   const rows = (key, defaults) => Array.isArray(candidate[key])
     ? candidate[key].filter((row) => row && Number.isInteger(Number(row.id))).map((row) => ({ ...defaults, ...row, id: Number(row.id) }))
     : [];
@@ -755,6 +769,9 @@ function shareableFromState(state) {
     stats.imbuementElement = s.imbuementElement;
     stats.imbuementValue = Number(s.imbuementValue);
   }
+  // Kept even while no target runs Overpower/Overflux, so switching the charm off and back on
+  // doesn't lose what was typed.
+  CHARM_STAT_KEYS.forEach((key) => { if (Number(s[key]) > 0) stats[key] = Number(s[key]); });
   return {
     stats,
     weapon: state.weapon,
@@ -1112,7 +1129,8 @@ function createBuild(key) {
         : "Main skill";
     root.querySelectorAll("[data-stat]").forEach((control) => {
       const statKey = control.dataset.stat;
-      const value = state.stats[statKey] ?? "";
+      // 0 is "not entered" for the charm stats, so show the empty field and its placeholder.
+      const value = CHARM_STAT_KEYS.includes(statKey) && !state.stats[statKey] ? "" : state.stats[statKey] ?? "";
       if ("value" in control) control.value = value;
       else control.textContent = value;
     });
@@ -1610,6 +1628,7 @@ function createBuild(key) {
     const container = $("targetRows");
     container.replaceChildren();
     state.targets = state.targets.filter((row) => item("creatures", row.id));
+    renderCharmStatFields();
     if (!state.targets.length) {
       const empty = document.createElement("div");
       empty.className = "dc-empty-row";
@@ -1640,6 +1659,7 @@ function createBuild(key) {
         row.charmId = charm.value ? Number(charm.value) : null;
         row.charmTier = Number(tier.value) || DEFAULT_CHARM_TIER;
         tier.disabled = !row.charmId;
+        renderCharmStatFields();
         changed();
       });
       tier.addEventListener("change", () => { row.charmTier = Number(tier.value); changed(); });
@@ -1650,6 +1670,13 @@ function createBuild(key) {
       }));
       container.append(element);
     });
+  }
+
+  // Max HP / max mana under the target list, each shown only while some target's charm reads it.
+  function renderCharmStatFields() {
+    const required = charmStatsRequiredBy(state.targets);
+    root.querySelectorAll("[data-charm-stat]").forEach((field) => { field.hidden = !required.has(field.dataset.charmStat); });
+    $("charmStatFields").hidden = !required.size;
   }
 
   function addPerk() {
@@ -1779,6 +1806,11 @@ function createBuild(key) {
       stats.imbuementValue = imbuementValue;
     }
     if (apiStanceIds.length) stats.stanceIds = apiStanceIds;
+    // Without these the API scores Overpower/Overflux as 0 rather than rejecting the request.
+    CHARM_STAT_KEYS.forEach((key) => {
+      const value = Math.round(numberOrZero(state.stats[key]));
+      if (value > 0) stats[key] = value;
+    });
     // The API has no field for the forge tier itself - it only takes the Onslaught chance the
     // tier grants, under its in-game name for that hit type ("Fatal").
     const fatalChance = ONSLAUGHT_CHANCE_BY_TIER[state.weapon.tier] ?? 0;
