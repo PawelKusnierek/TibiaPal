@@ -136,6 +136,39 @@ const PLANNER_EFFECT_CHOICES = {
   // "+35% damage to your next damage spell after a focus spell" - the API models this as the
   // single spellId-valued perk "Focus mastery", so the options are the rotation's own spells.
   "focus mastery": { spellChoice: true },
+  // No API perks here: the option says how much of the fight is spent inside the field, and
+  // divineEmpowerment() turns that into a multiplier on the result (see DIVINE_EMPOWERMENT).
+  // Listed first = the default: regular use through a hunt, at DIVINE_EMPOWERMENT.usageEfficiency.
+  // "field" is for comparing a burst window (a boss phase) fought entirely inside the field.
+  // The ids are stored in saved builds and share links, so "cooldown" keeps its name.
+  "divine empowerment": {
+    options: [
+      { id: "cooldown", label: "Regular use (average over time)" },
+      { id: "field", label: "Always inside the field (burst window)" },
+      { id: "off", label: "Not used (no bonus)" },
+    ],
+  },
+};
+
+// Divine Empowerment, the paladin revelation perk: a 5-second field under the paladin that raises
+// all damage they deal by 8/10/12% (stage 1-3) while they stand in it, on a 32/28/24s cooldown
+// that the Augmented Divine Empowerment gem mod shortens. Values are the client's own, from
+// data/wheel-planner/SkillwheelStringsJsonLibrary.json. It's a support spell with its own group
+// cooldown, so casting it costs the rotation no attack turn.
+// Combat runs in 2-second turns, so the 5-second field covers 3 of them (the 0s, 2s and 4s
+// marks) - worth 6 seconds of damage, not 5. Nobody recasts it the instant it's ready, so a
+// regular hunt is assumed to use it at 80% of the rate its cooldown allows: an 18s cooldown is
+// cast every 22.5s, which puts 6s of every 22.5s (26.7%) inside the field.
+// The damage API has no perk for it, so nothing is sent: the API's result is scaled instead - see
+// divineEmpowerment() and scaleDamageResult().
+const COMBAT_TURN_SECONDS = 2;
+const DIVINE_EMPOWERMENT = {
+  perkName: "divine empowerment",
+  augmentName: "augmented divine empowerment",
+  durationSeconds: 5,
+  usageEfficiency: 0.8,
+  bonusByStage: [0, 8, 10, 12],
+  cooldownByStage: [0, 32, 28, 24],
 };
 
 // The focus spell is what triggers the buff, so it is never the spell that receives it -
@@ -939,6 +972,34 @@ async function fetchDamage(request, signal) {
   return body;
 }
 
+// Applies a "+X% damage dealt" effect the API can't model (Divine Empowerment) to its /damage
+// result. Every figure in it is linear in the damage dealt except the charms: the per-turn total
+// is the rotation's damage plus `damageFromCharms`, and a charm hits for a share of max HP rather
+// than of the attack - so that part is taken out, the rest scaled, and the charm part added back.
+// Only averages are scaled; a raw min/max is the bound of a single hit, which lands either inside
+// the field or outside it, and nothing displays them anyway.
+function scaleDamageResult(result, multiplier) {
+  if (!result || multiplier === 1) return result;
+  const scale = (value) => (typeof value === "number" ? value * multiplier : value);
+  const summary = result.summary ?? {};
+  const charms = numberOrZero(summary.damageFromCharms);
+  return {
+    ...result,
+    summary: {
+      ...summary,
+      effectiveDamagePerTurn: typeof summary.effectiveDamagePerTurn === "number"
+        ? (summary.effectiveDamagePerTurn - charms) * multiplier + charms
+        : summary.effectiveDamagePerTurn,
+      effectiveDamagePerHit: scale(summary.effectiveDamagePerHit),
+    },
+    spells: (result.spells ?? []).map((spell) => ({
+      ...spell,
+      ...(spell.raw ? { raw: { ...spell.raw, avg: scale(spell.raw.avg) } } : {}),
+      ...(spell.effective ? { effective: { ...spell.effective, avg: scale(spell.effective.avg) } } : {}),
+    })),
+  };
+}
+
 function plannerUrl(path, values) {
   const url = new URL(path, window.location.origin);
   Object.entries(values).forEach(([key, value]) => { if (value) url.searchParams.set(key, value); });
@@ -1496,14 +1557,16 @@ function createBuild(key) {
       const perksOf = (options) => (details.length
         ? details.flatMap((detail) => mapPlannerEffectPerks({ ...effect, detail }, options))
         : mapPlannerEffectPerks(effect, options));
-      const mapped = perksOf().length > 0;
+      const local = localEffectState(effect);
+      const mapped = perksOf().length > 0 || Boolean(local?.applied);
       // Situational perks report which branch is live; the user picks it in the planner
       // section's own dropdown (renderEffectChoices), not in this hover popover.
       const choices = plannerEffectChoices(effect);
       const auto = plannerEffectAuto(effect);
       const chosen = choices ? activeEffectChoice(effect, choices) : null;
-      const situationalNote = auto ? auto(item("weapons", state.weapon.id)).note
-        : chosen ? (choices.spellChoice && chosen.id ? `Boosts ${chosen.label}` : chosen.label) : null;
+      const situationalNote = local ? local.note
+        : auto ? auto(item("weapons", state.weapon.id)).note
+          : chosen ? (choices.spellChoice && chosen.id ? `Boosts ${chosen.label}` : chosen.label) : null;
       const chip = document.createElement("span");
       chip.className = `dc-synced-effect ${mapped ? "mapped" : "unmapped"}${details.length || situationalNote ? " has-details" : ""}`;
       const label = document.createElement("strong");
@@ -1522,9 +1585,10 @@ function createBuild(key) {
       // A flat-skill row does map to a real API perk - it is dropped on purpose (see
       // CHARACTER_SHEET_SKILL_BONUS_TYPES), so say that rather than calling it unsupported.
       const bakedIntoSkill = !mapped && perksOf({ keepSkillBonuses: true }).length > 0;
-      chip.title = mapped ? "Included in damage calculation"
-        : bakedIntoSkill ? "Already part of the skill you enter in the character section - not added again"
-          : "Informational or not supported by the damage API";
+      chip.title = local?.applied ? "Included in damage calculation - applied on top of the API's result, which has no perk for it"
+        : mapped ? "Included in damage calculation"
+          : bakedIntoSkill ? "Already part of the skill you enter in the character section - not added again"
+            : "Informational or not supported by the damage API";
       container.append(chip);
     });
   }
@@ -1863,17 +1927,62 @@ function createBuild(key) {
   // Spiritual Outburst scored stage 0 and lost the whole repeat hit, while any augment at all
   // pinned it to stage 3.
   function activeSpellStages() {
-    const effects = state.wheelPlanner.effects ?? [];
-    const result = {};
-    Object.entries(STAGED_SCOPE_PERK).forEach(([scope, perkName]) => {
-      // Older saved builds predate the planner's `group` field, so only reject a wrong group.
-      // Names are compared punctuation-insensitively: the planner renders "Executioner's Throw"
-      // with whichever apostrophe the client string uses.
-      const effect = effects.find((entry) => (entry.group ?? "revelation") === "revelation"
-        && plainName(entry.name) === plainName(perkName));
-      result[scope] = effect ? revelationStage(effectText(effect)) : 0;
-    });
-    return result;
+    return Object.fromEntries(Object.entries(STAGED_SCOPE_PERK).map(([scope, perkName]) => [scope, wheelRevelationStage(perkName)]));
+  }
+
+  // The unlocked stage (0-3) of a revelation perk, read off its wheel summary row.
+  function wheelRevelationStage(perkName) {
+    // Older saved builds predate the planner's `group` field, so only reject a wrong group.
+    // Names are compared punctuation-insensitively: the planner renders "Executioner's Throw"
+    // with whichever apostrophe the client string uses.
+    const effect = (state.wheelPlanner.effects ?? []).find((entry) => (entry.group ?? "revelation") === "revelation"
+      && plainName(entry.name) === plainName(perkName));
+    return effect ? revelationStage(effectText(effect)) : 0;
+  }
+
+  // What Divine Empowerment is worth to this build, or null while the wheel hasn't unlocked it.
+  // `uptime` is the share of combat turns fought inside the field: with the default "cooldown"
+  // choice that's the 3 turns (6s) it covers out of every cast interval - 6 of 30s at stage 3,
+  // 6 of 22.5s with the gem mod - so the multiplier is the turn-weighted average of hits landing
+  // inside (+12%) and outside it. See DIVINE_EMPOWERMENT for where those numbers come from.
+  function divineEmpowerment() {
+    const stage = wheelRevelationStage(DIVINE_EMPOWERMENT.perkName);
+    if (!stage) return null;
+    // The planner sums every copy of the mod into one row valued like "-6s".
+    const reduction = (state.wheelPlanner.effects ?? [])
+      .filter((entry) => plainName(entry.name) === DIVINE_EMPOWERMENT.augmentName)
+      .reduce((total, entry) => total + Math.abs(numberOrZero(String(entry.value ?? "").replace(",", ".").match(/[-+]?\d+(?:\.\d+)?/)?.[0])), 0);
+    const baseCooldown = DIVINE_EMPOWERMENT.cooldownByStage[stage];
+    const cooldown = Math.max(DIVINE_EMPOWERMENT.durationSeconds, baseCooldown - reduction);
+    const bonus = DIVINE_EMPOWERMENT.bonusByStage[stage];
+    const choice = activeEffectChoice({ name: DIVINE_EMPOWERMENT.perkName }, PLANNER_EFFECT_CHOICES[DIVINE_EMPOWERMENT.perkName]).id;
+    const turns = Math.ceil(DIVINE_EMPOWERMENT.durationSeconds / COMBAT_TURN_SECONDS);
+    const interval = cooldown / DIVINE_EMPOWERMENT.usageEfficiency;
+    const uptime = choice === "field" ? 1 : choice === "off" ? 0 : Math.min(1, (turns * COMBAT_TURN_SECONDS) / interval);
+    return { stage, bonus, baseCooldown, cooldown, turns, interval, choice, uptime, multiplier: 1 + (bonus / 100) * uptime };
+  }
+
+  // Divine Empowerment's two summary rows - the revelation perk and the gem mod that shortens its
+  // cooldown - map to no API perk, but they aren't dead: divineEmpowerment() scales the result
+  // with them. Returns the chip's note and whether the row currently changes the damage, or null
+  // for every other row.
+  function localEffectState(effect) {
+    const name = plainName(effect.name);
+    const isPerk = name === DIVINE_EMPOWERMENT.perkName && (effect.group ?? "revelation") === "revelation";
+    if (!isPerk && name !== DIVINE_EMPOWERMENT.augmentName) return null;
+    const model = divineEmpowerment();
+    if (!model) return isPerk ? { applied: false, note: "Not unlocked - no bonus" } : null;
+    if (!isPerk) {
+      return model.choice === "cooldown"
+        ? { applied: true, note: `Divine Empowerment cooldown ${model.baseCooldown}s → ${model.cooldown}s` }
+        : { applied: false, note: "Only matters when Divine Empowerment is set to regular use" };
+    }
+    if (model.choice === "off") return { applied: false, note: "Not used - no bonus" };
+    if (model.choice === "field") return { applied: true, note: `+${model.bonus}% damage (always inside the field)` };
+    const average = Math.round((model.multiplier - 1) * 10000) / 100;
+    const interval = Math.round(model.interval * 10) / 10;
+    const usage = Math.round(DIVINE_EMPOWERMENT.usageEfficiency * 100);
+    return { applied: true, note: `+${model.bonus}% on ${model.turns} turns every ${interval}s (${model.cooldown}s cooldown, used at ${usage}%): +${average}% average damage` };
   }
 
   // The tier-matched card for a staged scope (Ice Burst, Terra Burst, the beam spells, ...) at
@@ -1935,7 +2044,8 @@ function createBuild(key) {
   async function calculate() {
     requestController?.abort();
     requestController = new AbortController();
-    lastResult = await fetchDamage(damageRequest(), requestController.signal);
+    const result = await fetchDamage(damageRequest(), requestController.signal);
+    lastResult = scaleDamageResult(result, divineEmpowerment()?.multiplier ?? 1);
     hasCalculated = true;
   }
 
