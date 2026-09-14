@@ -85,6 +85,15 @@ function isHealingOnlyEffect(effect) {
   return /healing/.test(text) && !/damage/.test(text);
 }
 
+// A gem's "Revelation Mastery <perk>" row is promotion points towards that revelation perk's
+// domain, not a bonus of its own - the wheel bridge already counts them into the perk's
+// "Stage N" summary row. Its name alone fully covers the API's staged perk of the same name
+// (Ascetic, Combat Mastery, Lord of Destruction), so mapPlannerEffect's fuzzy match used to take
+// "+225 Ascetic" as Ascetic stage 225 and multiply every harmony spender by an order of magnitude.
+function isRevelationMasteryEffect(effect) {
+  return /^revelation mastery\b/.test(plainName(effect?.name));
+}
+
 // Flat +skill / +magic level bonuses a planner grants unconditionally - the wheel's dedication
 // perks and gem basic mods, the weapon proficiency's skill boosts - are deliberately treated as
 // dead perks: the calculator asks for the skill straight off the character sheet, which already
@@ -842,10 +851,12 @@ function revelationStage(text) {
 
 function effectNumber(effect, perk) {
   const text = [effect.detail, effect.label, effect.value].filter(Boolean).join(" ").replace(",", ".");
+  // Only a stage reads as a stage: falling through to "the first number in the text" below is
+  // how a points row (see isRevelationMasteryEffect) became a stage in the hundreds.
   if (perk.valueType === "stage") {
     const stage = revelationStage(text);
     if (stage) return stage;
-    if (/stage\s*0/i.test(text)) return 0;
+    return /stage\s*0/i.test(text) ? 0 : null;
   }
   if (perk.valueType === "ignored") return 0;
   if (perk.valueType === "spellId") return null;
@@ -1452,7 +1463,7 @@ function createBuild(key) {
 
   function mapPlannerEffect(effect, { keepSkillBonuses = false } = {}) {
     const text = normalized(effectText(effect));
-    if (!text || /damage and healing/.test(text) || isHealingOnlyEffect(effect)) return null;
+    if (!text || /damage and healing/.test(text) || isHealingOnlyEffect(effect) || isRevelationMasteryEffect(effect)) return null;
     const scopedSpell = effectSpell(effect);
     // See effectSpell: the row is about one spell and the API doesn't model it.
     if (effect.spellName && !scopedSpell) return null;
@@ -1587,6 +1598,7 @@ function createBuild(key) {
       const bakedIntoSkill = !mapped && perksOf({ keepSkillBonuses: true }).length > 0;
       chip.title = local?.applied ? "Included in damage calculation - applied on top of the API's result, which has no perk for it"
         : mapped ? "Included in damage calculation"
+          : isRevelationMasteryEffect(effect) ? "Already counted in the revelation perk's stage - not added again"
           : bakedIntoSkill ? "Already part of the skill you enter in the character section - not added again"
             : "Informational or not supported by the damage API";
       container.append(chip);
@@ -1829,7 +1841,9 @@ function createBuild(key) {
     groups.flat().forEach((row) => {
       const perk = item("perks", row.id);
       const previous = totals.get(row.id);
-      if (perk?.valueType === "stage") totals.set(row.id, Math.max(previous ?? 0, numberOrZero(row.value)));
+      // The API takes a stage perk's value as-is rather than rejecting one outside 0-3, so it's
+      // clamped here, on the one path every planner and manual perk takes to the request.
+      if (perk?.valueType === "stage") totals.set(row.id, Math.min(3, Math.max(previous ?? 0, numberOrZero(row.value))));
       // Same as in mappedPlannerPerks: a spellId value is an id, not an amount to add up.
       else if (perk?.valueType === "spellId") totals.set(row.id, numberOrZero(row.value));
       else totals.set(row.id, (previous ?? 0) + numberOrZero(row.value));
