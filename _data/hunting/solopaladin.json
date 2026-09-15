@@ -826,9 +826,17 @@
     },
     {
         "level":  "250+",
+        "place":  "Oramond Catacombs (No Fatal Hold)",
+        "raw_exp":  "4.1kk",
+        "loot":  "300k",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "250+",
         "place":  "Oramond Catacombs",
-        "raw_exp":  "4.5kk",
-        "loot":  "200k",
+        "raw_exp":  "5.0kk",
+        "loot":  "400k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -953,10 +961,10 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Roshamuul West",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "5.2kk",
+        "loot":  "600k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },

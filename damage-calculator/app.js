@@ -3161,18 +3161,22 @@ function wireGlobalEvents() {
     const wheelHydrateFrame = document.querySelector("#wheelHydrateFrame");
     const proficiencyHydrateFrame = document.querySelector("#proficiencyHydrateFrame");
     const build = builds[activeBuildKey];
-    if (build) {
-      if (event.source === wheelFrame.contentWindow && event.data?.type === "tibiapal:wheel-build" && !wheelFrame.dataset.pendingNav) { receiveWheelBuild(build, event.data.payload); setPlannerLoading("wheel", false); }
-      if (event.source === proficiencyFrame.contentWindow && event.data?.type === "tibiapal:proficiency-build" && !proficiencyFrame.dataset.pendingNav) { receiveProficiencyBuild(build, event.data.payload); setPlannerLoading("proficiency", false); }
-    }
-    // A "#results" deep link kicks off triggerCompare() before this background hydration can
-    // possibly finish (it's a cross-frame round trip) - recompute once it lands so the Results
-    // tab doesn't stick with Build B's pre-hydration (zero-bonus) numbers. Chained after
-    // whatever compare is already in flight, rather than called directly, since triggerCompare
-    // treats an in-flight call as a no-op and would otherwise ignore the recompute. Not forced:
-    // hydration that lands inside the boot grace period is already part of the in-flight compare
-    // (same signature), so only a genuinely late one costs a second calculation.
+    // A "#results" deep link kicks off triggerCompare() before any planner can report back (it's
+    // a cross-frame round trip) - recompute once a report lands so the Results tab doesn't stick
+    // with pre-sync (zero-bonus) numbers. That covers Build A's live frames as well as Build B's
+    // hydration: a "?build=" token carries no wheelPerks/proficiencyPerks, and show_tab() writes
+    // "#results" into the URL, so a refresh on the Results tab boots exactly like this. The live
+    // frames' early reports are dropped while pendingNav is set, and the heavy wheel planner can
+    // take longer than BOOT_SETTLE_MS to fire "load", so its report often arrives after the boot
+    // compare. Chained after whatever compare is already in flight, rather than called directly,
+    // since triggerCompare treats an in-flight call as a no-op and would otherwise ignore the
+    // recompute. Not forced: a report that lands inside the boot grace period, or an echo of
+    // state we already have, leaves the signature unchanged and costs no second calculation.
     const recomputeResultsIfNeeded = () => { if (activeTabKey === "results") Promise.resolve(compareInFlight).finally(() => triggerCompare()); };
+    if (build) {
+      if (event.source === wheelFrame.contentWindow && event.data?.type === "tibiapal:wheel-build" && !wheelFrame.dataset.pendingNav) { receiveWheelBuild(build, event.data.payload); setPlannerLoading("wheel", false); recomputeResultsIfNeeded(); }
+      if (event.source === proficiencyFrame.contentWindow && event.data?.type === "tibiapal:proficiency-build" && !proficiencyFrame.dataset.pendingNav) { receiveProficiencyBuild(build, event.data.payload); setPlannerLoading("proficiency", false); recomputeResultsIfNeeded(); }
+    }
     if (event.source === wheelHydrateFrame.contentWindow && event.data?.type === "tibiapal:wheel-build") {
       const target = builds[wheelHydrateKey];
       wheelHydrateKey = null;
