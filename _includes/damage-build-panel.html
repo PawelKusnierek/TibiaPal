@@ -93,6 +93,15 @@
         </select>
       </label>
     </div>
+    <!-- Shown by renderShieldingField() only while the build runs a "% of your Shielding as extra
+         damage" perk (the falcon set, summerblade/winterblade, ...). Every other skill a perk can
+         scale off is already asked for in the Character section. -->
+    <div id="shieldingFields-{{ include.key }}" class="dc-fields dc-shielding-stat" hidden>
+      <label>Shielding
+        <input type="number" min="0" step="1" inputmode="numeric" data-stat="shielding">
+        <small>Your proficiency adds a share of this skill as extra damage. Pre-filled with a typical value for your vocation — replace it with your character's own shielding.</small>
+      </label>
+    </div>
   </section>
 
   <section class="dc-panel">

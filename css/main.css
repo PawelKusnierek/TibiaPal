@@ -4750,6 +4750,20 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   font-weight: 500;
 }
 
+.dc-shielding-stat {
+  max-width: 260px;
+  margin-top: 12px;
+}
+
+.dc-shielding-stat > label {
+  grid-template-rows: auto 26px auto;
+}
+
+.dc-shielding-stat small {
+  color: #7491ad;
+  font-weight: 500;
+}
+
 .dc-data-row {
   display: grid;
   align-items: center;

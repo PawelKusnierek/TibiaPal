@@ -139,7 +139,18 @@ function formatValue(value) {
   return Number.isInteger(value) ? `${value}` : `${Math.round(value * 100) / 100}`;
 }
 
-function combatSkill(profile) {
+// A skill-scaling perk names the skill it reads in `SkillId`. It is usually the weapon's own
+// fighting skill, but some weapons scale off Shielding (the falcon set, summerblade/winterblade,
+// ...) or Fishing (the shimmer and inferniarch wands/rods), so guessing from the weapon's name
+// put the wrong skill in the label - and the damage calculator shows that label as-is.
+const SKILL_NAMES = {
+  1: "Magic Level", 6: "Shielding", 7: "Distance Fighting", 8: "Sword Fighting",
+  9: "Club Fighting", 10: "Axe Fighting", 11: "Fist Fighting", 13: "Fishing",
+};
+
+function combatSkill(profile, perk) {
+  const named = SKILL_NAMES[perk?.SkillId];
+  if (named) return named;
   const name = profile?.ProfileName ?? profile?.Name ?? "";
   if (/\b(Wand|Rod)\b/i.test(name)) return "Magic Level";
   if (/\b(Bow|Crossbow|Distance|Throw)\b/i.test(name)) return "Distance Fighting";
@@ -198,14 +209,14 @@ function perkLabel(perk, profile = state.current) {
     const value = formatValue(perk.Value);
     return `${spell}: ${augment}${value ? ` +${value}` : ""}`;
   }
-  if (perk.Type === 3) return `+${formatValue(perk.Value)} ${combatSkill(profile)}`;
+  if (perk.Type === 3) return `+${formatValue(perk.Value)} ${combatSkill(profile, perk)}`;
   if (perk.Type === 4) return `+${formatValue(perk.Value)} ${elementNames[perk.DamageType ?? perk.ElementId] ?? "Specialized"} Magic Level`;
   if (perk.Type === 7) return `+${formatValue(perk.Value)} damage against bosses and Sinister Embraced`;
   if (perk.Type === 9) return `+${formatValue(perk.Value)} critical hit chance for ${elementNames[perk.ElementId] ?? "elemental"} spells and runes`;
   if (perk.Type === 13) return `+${formatValue(perk.Value)} critical extra damage for ${elementNames[perk.ElementId] ?? "elemental"} spells and runes`;
-  if (perk.Type === 25) return `+${formatValue(perk.Value)} of your ${combatSkill(profile)} as extra damage for auto-attacks`;
-  if (perk.Type === 26) return `+${formatValue(perk.Value)} of your ${combatSkill(profile)} as extra damage for spells`;
-  if (perk.Type === 27) return `+${formatValue(perk.Value)} of your ${combatSkill(profile)} as extra healing for spells`;
+  if (perk.Type === 25) return `+${formatValue(perk.Value)} of your ${combatSkill(profile, perk)} as extra damage for auto-attacks`;
+  if (perk.Type === 26) return `+${formatValue(perk.Value)} of your ${combatSkill(profile, perk)} as extra damage for spells`;
+  if (perk.Type === 27) return `+${formatValue(perk.Value)} of your ${combatSkill(profile, perk)} as extra healing for spells`;
   const target = perk.BestiaryName ? ` against ${perk.BestiaryName}` : "";
   const value = formatValue(perk.Value);
   return `${name}${target}${value ? ` +${value}` : ""}`;

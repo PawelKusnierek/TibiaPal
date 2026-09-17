@@ -24,6 +24,16 @@ const DEFAULT_CASTER_MAGIC_LEVEL = 120;
 // Default skill for a fresh build, pre-filled to a value that already includes
 // that vocation's pure +skill stance bonus (Blood Rage / Sharpshooter / Virtue of Justice).
 const DEFAULT_SKILL_BY_VOCATION = { knight: 160, paladin: 180, monk: 140 };
+// A weapon proficiency's "combat skill scaling" perks (Type 25/26) name the skill they scale off
+// in `skillId`. It is almost always the weapon's own fighting skill - which the Character section
+// already asks for - but a handful of weapons (the falcon set, summerblade/winterblade, demonwing
+// axe, ...) scale off Shielding instead, a skill nothing else on the page needs. See
+// typedProficiencyPerk() for the mapping and renderShieldingField() for the input.
+const SHIELDING_SKILL_ID = 6;
+// Pre-filled so the field is useful the moment it appears: a typical end-game shielding skill
+// for the vocation, which most builds only have to nudge. Same idea as DEFAULT_SKILL_BY_VOCATION.
+const DEFAULT_SHIELDING_BY_VOCATION = { knight: 110, paladin: 110, druid: 30, sorcerer: 30, monk: 70 };
+const defaultShielding = (vocation) => DEFAULT_SHIELDING_BY_VOCATION[vocation] ?? DEFAULT_SHIELDING_BY_VOCATION.knight;
 const META_RESOURCES = ["vocations", "stances", "weapons", "ammo", "shields", "perks", "spells", "creatures", "charms"];
 const FANDOM_ICON_ALIASES = { "exec-throw": "executioner-s-throw", "hells-core": "hell-s-core" };
 
@@ -380,7 +390,7 @@ const defaultState = () => ({
     vocation: "knight", level: 1000, bonus: 0, skill: DEFAULT_SKILL_BY_VOCATION.knight, magicLevel: 13,
     critChance: BASE_CRIT_CHANCE, critDamage: BASE_CRIT_DAMAGE, transcendenceChance: 0,
     hitPoints: 0, manaPoints: 0, baseMagicLevel: 0, axe: 0, club: 0,
-    sword: 0, fist: 0, distance: 0, shielding: 0, fishing: 0,
+    sword: 0, fist: 0, distance: 0, shielding: defaultShielding("knight"), fishing: 0,
     imbuementElement: "", imbuementValue: 0, stanceIds: [],
   },
   // `tier` is the forge tier of the weapon, which is only there to drive Onslaught
@@ -649,6 +659,7 @@ function expandProficiencyToken(value) {
 //  11 manualPerks [[id,value]]        12 effectChoices            13 rotation [[id,targets,ratio,sideTargets?]]
 //  14 targets [[id,ratio,charmId,charmTier]]   15/16 imbuement element+value (knight-only)
 //  17 weapon forge tier (Onslaught)   18/19 max hitPoints/manaPoints (Overpower/Overflux)
+//  20 shielding skill (only when it differs from the vocation's default)
 // The same rule holds inside a tuple: sideTargets (a beam's outer-beam count) was appended to the
 // rotation tuple and is only written when the row has one.
 function compactBuild(build) {
@@ -676,6 +687,7 @@ function compactBuild(build) {
     weapon.tier || null,
     stats.hitPoints || null,
     stats.manaPoints || null,
+    stats.shielding ?? null,
   ]);
 }
 
@@ -699,6 +711,7 @@ function expandBuild(compact) {
   }
   if (at(18) != null) stats.hitPoints = at(18);
   if (at(19) != null) stats.manaPoints = at(19);
+  if (at(20) != null) stats.shielding = at(20);
   const weapon = {};
   if (at(5) != null) weapon.id = at(5);
   if (at(6) != null) weapon.ammoId = at(6);
@@ -752,6 +765,12 @@ function sanitizeState(candidate) {
   stats.stanceIds = Array.isArray(stats.stanceIds) ? stats.stanceIds.map(Number).filter((id) => Number.isInteger(id) && !PURE_SKILL_STANCE_IDS.has(id) && !NON_DAMAGE_STANCE_IDS.has(id)) : [];
   if (stats.vocation === "paladin" && candidate.stats?.magicLevel == null) stats.magicLevel = DEFAULT_PALADIN_MAGIC_LEVEL;
   if ((stats.vocation === "druid" || stats.vocation === "sorcerer") && candidate.stats?.magicLevel == null) stats.magicLevel = DEFAULT_CASTER_MAGIC_LEVEL;
+  // Re-derived for the same reason as the magic levels above: share links and presets only carry
+  // shielding when it differs from the vocation's default (see shareableFromState), and links
+  // made before the field existed carry none at all.
+  stats.shielding = candidate.stats?.shielding == null
+    ? defaultShielding(stats.vocation)
+    : Math.max(0, Math.round(numberOrZero(stats.shielding)));
   // Restored state can come from an old localStorage entry or a hand-edited share link; an
   // imbuement outside the API's enums would 400 the whole calculation, so drop it here.
   if (stats.vocation !== "knight" || !IMBUEMENT_ELEMENTS.includes(stats.imbuementElement)) stats.imbuementElement = "";
@@ -814,6 +833,10 @@ function shareableFromState(state) {
   // Kept even while no target runs Overpower/Overflux, so switching the charm off and back on
   // doesn't lose what was typed.
   CHARM_STAT_KEYS.forEach((key) => { if (Number(s[key]) > 0) stats[key] = Number(s[key]); });
+  // Only carried once it has been changed from the pre-filled default, which sanitizeState()
+  // re-derives from the vocation on the way back in - so the common build stays as short as it
+  // was before the field existed.
+  if (Number(s.shielding) !== defaultShielding(s.vocation)) stats.shielding = Math.max(0, Math.round(numberOrZero(s.shielding)));
   return {
     stats,
     weapon: state.weapon,
@@ -1157,6 +1180,7 @@ function createBuild(key) {
     renderSyncedEffects("wheel");
     renderSyncedEffects("proficiency");
     renderPerks();
+    renderShieldingField();
     renderRotation();
     renderRotationPresets();
     renderTargets();
@@ -1388,7 +1412,12 @@ function createBuild(key) {
       if (perk) return perk;
     }
     if (type === 25 || type === 26) {
-      const skill = weaponSkillKind();
+      // The row says which skill it scales off (SHIELDING_SKILL_ID); every other id is the
+      // weapon's own fighting skill, so the equipped weapon answers for them. Reading the
+      // weapon's skill for a shielding row was crediting e.g. a falcon battleaxe's "+10% of
+      // your Shielding" as 10% of axe fighting - and the falcon wand/rod's +100% as a whole
+      // extra magic level's worth of damage.
+      const skill = Number(effect.skillId) === SHIELDING_SKILL_ID ? "shield" : weaponSkillKind();
       const prefix = skill === "magic" ? "magic-level" : skill;
       const scope = type === 25 ? "auto-attack" : "spell";
       return prefix ? metadata.perks.find((perk) => perk.bonusType === `${prefix}-percent-extra` && perk.scope === scope && perk.selectable !== false) ?? null : null;
@@ -1755,6 +1784,22 @@ function createBuild(key) {
     $("charmStatFields").hidden = !required.size;
   }
 
+  // Whether any perk in the build scales its damage off shielding. Checked against the perks
+  // themselves rather than the planner rows, so a perk added by hand in the "Additional API
+  // perks" section counts too - it would otherwise be sent with no skill to scale and score 0.
+  function usesShieldingPerks(perks = aggregatePerks()) {
+    return perks.some((row) => item("perks", row.id)?.bonusType === "shield-percent-extra" && numberOrZero(row.value) > 0);
+  }
+
+  // Shielding is the one skill a bonus can scale off that the Character section never asks for
+  // (see SHIELDING_SKILL_ID), so rather than a field every build has to scroll past, it appears
+  // under the proficiency that needs it. The value itself is written by renderStatControls with
+  // every other [data-stat] control, already pre-filled for the vocation.
+  function renderShieldingField() {
+    const field = $("shieldingFields");
+    if (field) field.hidden = !usesShieldingPerks();
+  }
+
   function addPerk() {
     const input = $("manualPerkSearch");
     const perk = matchByName("perks", input.value, (entry) => entry.selectable !== false && vocationAllows(entry));
@@ -1916,13 +1961,20 @@ function createBuild(key) {
     if (wheel) perkGroups.push(state.wheelPerks);
     if (proficiency) perkGroups.push(state.proficiencyPerks);
     if (manual) perkGroups.push(state.manualPerks);
-    return { stats, weapon, perks: aggregatePerks(perkGroups), rotation, targets };
+    const perks = aggregatePerks(perkGroups);
+    // The API scores a "% shielding as extra damage" perk against stats.shielding and silently
+    // adds nothing when it is missing, so the stat rides along with the perk - and only with it,
+    // since a build without one never shows the input (see renderShieldingField). A contribution
+    // run that drops the proficiency group drops the perk, and with it the stat.
+    if (usesShieldingPerks(perks)) stats.shielding = Math.max(0, Math.round(numberOrZero(state.stats.shielding)));
+    return { stats, weapon, perks, rotation, targets };
   }
 
   function changed() {
     // Perks move from many places - planner syncs, manual perk rows, effect choices - and they
     // all land here, so this is the one hook that keeps the crit summary from going stale.
     renderWeaponMeta();
+    renderShieldingField();
     saveState();
     if (savedName && !dirty) {
       dirty = true;
@@ -2112,6 +2164,7 @@ function createBuild(key) {
           if (state.stats.vocation === "paladin") state.stats.magicLevel = DEFAULT_PALADIN_MAGIC_LEVEL;
           if (state.stats.vocation === "druid" || state.stats.vocation === "sorcerer") state.stats.magicLevel = DEFAULT_CASTER_MAGIC_LEVEL;
           if (DEFAULT_SKILL_BY_VOCATION[state.stats.vocation]) state.stats.skill = DEFAULT_SKILL_BY_VOCATION[state.stats.vocation];
+          state.stats.shielding = defaultShielding(state.stats.vocation);
           state.wheelPlanner = { code: "", vocation: state.stats.vocation, promotionPoints: 0, bonus: 0, effects: [], gemGrades: {} };
           state.proficiencyPlanner = { token: "", weaponName: "", weaponSprite: "", vocation: state.stats.vocation, effects: [] };
           state.manualPerks = state.manualPerks.filter((row) => vocationAllows(item("perks", row.id)));
@@ -2358,7 +2411,7 @@ function setPlannerFrameSrc(frame, url) {
 
 function initializePlannerFrames(build) {
   setPlannerFrameSrc(document.querySelector("#wheelPlannerFrame"), plannerUrl("/wheel-planner.html", { embed: "damage", v: "20260913-1", vocation: build.state.stats.vocation, code: build.state.wheelPlanner.code }));
-  setPlannerFrameSrc(document.querySelector("#proficiencyPlannerFrame"), plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260916-1", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token }));
+  setPlannerFrameSrc(document.querySelector("#proficiencyPlannerFrame"), plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260917-1", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token }));
 }
 
 // Silently resolves a build's wheel code / proficiency token into perks via the hidden
@@ -2372,7 +2425,7 @@ function hydrateInactiveBuild(build) {
   }
   if (build.state.proficiencyPlanner.token && !build.state.proficiencyPlanner.effects.length) {
     proficiencyHydrateKey = build.key;
-    document.querySelector("#proficiencyHydrateFrame").src = plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260916-1", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token });
+    document.querySelector("#proficiencyHydrateFrame").src = plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260917-1", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token });
   }
 }
 
