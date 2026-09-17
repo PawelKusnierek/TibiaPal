@@ -104,6 +104,21 @@ function isRevelationMasteryEffect(effect) {
   return /^revelation mastery\b/.test(plainName(effect?.name));
 }
 
+// The API is renaming `perk.scope` (a string) to `perk.scopes` (an array). Every existing perk
+// becomes a one-element array; only the hidden Master of Flames/Thunder/Decay perks carry two.
+// Multi-scope is an AND - ["spell", "fire"] is fire damage dealt by spells - so a perk answers
+// to a lookup for either of its scopes, never the reverse: nothing here asks for a scope pair.
+// Both shapes stay readable because /meta is cached for METADATA_CACHE_TTL_MS, so a browser can
+// hold pre-rename metadata for hours after the API switches (and a stale CDN the other way).
+function perkScopes(perk) {
+  if (Array.isArray(perk?.scopes)) return perk.scopes;
+  return perk?.scope == null ? [] : [perk.scope];
+}
+
+function perkHasScope(perk, scope) {
+  return scope != null && perkScopes(perk).includes(scope);
+}
+
 // Flat +skill / +magic level bonuses a planner grants unconditionally - the wheel's dedication
 // perks and gem basic mods, the weapon proficiency's skill boosts - are deliberately treated as
 // dead perks: the calculator asks for the skill straight off the character sheet, which already
@@ -122,7 +137,7 @@ const CHARACTER_SHEET_SKILL_BONUS_TYPES = new Set([
 const CHARACTER_SHEET_SKILL_SCOPES = new Set(["character", "all"]);
 
 function isCharacterSheetSkillPerk(perk) {
-  return perk?.valueType === "flat" && CHARACTER_SHEET_SKILL_SCOPES.has(perk?.scope) && CHARACTER_SHEET_SKILL_BONUS_TYPES.has(perk.bonusType);
+  return perk?.valueType === "flat" && perkScopes(perk).some((scope) => CHARACTER_SHEET_SKILL_SCOPES.has(scope)) && CHARACTER_SHEET_SKILL_BONUS_TYPES.has(perk.bonusType);
 }
 
 // Wheel conviction perks whose live bonus depends on a situational condition. The planner
@@ -1279,7 +1294,7 @@ function createBuild(key) {
     const bonus = { chance: 0, damage: 0 };
     aggregatePerks().forEach((row) => {
       const perk = item("perks", row.id);
-      if (perk?.scope !== UNCONDITIONAL_CRIT_SCOPE) return;
+      if (!perkHasScope(perk, UNCONDITIONAL_CRIT_SCOPE)) return;
       if (perk.bonusType === "crit-chance") bonus.chance += numberOrZero(row.value);
       if (perk.bonusType === "crit-damage") bonus.damage += numberOrZero(row.value);
     });
@@ -1396,7 +1411,7 @@ function createBuild(key) {
     const type = Number(effect.type);
     if (type === 5 && scopedSpell) {
       const bonusType = SPELL_AUGMENT_BONUS_TYPES[Number(effect.augmentType)];
-      return bonusType ? metadata.perks.find((perk) => perk.scope === scopedSpell.scope && perk.bonusType === bonusType
+      return bonusType ? metadata.perks.find((perk) => perkHasScope(perk, scopedSpell.scope) && perk.bonusType === bonusType
         && perk.selectable !== false) ?? null : null;
     }
     // Bestiary-family damage rows carry the family in `bestiaryName`, so the perk is looked up
@@ -1420,13 +1435,13 @@ function createBuild(key) {
       const skill = Number(effect.skillId) === SHIELDING_SKILL_ID ? "shield" : weaponSkillKind();
       const prefix = skill === "magic" ? "magic-level" : skill;
       const scope = type === 25 ? "auto-attack" : "spell";
-      return prefix ? metadata.perks.find((perk) => perk.bonusType === `${prefix}-percent-extra` && perk.scope === scope && perk.selectable !== false) ?? null : null;
+      return prefix ? metadata.perks.find((perk) => perk.bonusType === `${prefix}-percent-extra` && perkHasScope(perk, scope) && perk.selectable !== false) ?? null : null;
     }
     const crit = PROFICIENCY_CRIT_PERKS[type];
     if (crit) {
       const scope = crit.element ? PROFICIENCY_ELEMENTS[Number(effect.elementId)] : crit.scope;
       return scope
-        ? metadata.perks.find((perk) => perk.scope === scope && perk.bonusType === crit.bonusType && perk.selectable !== false) ?? null
+        ? metadata.perks.find((perk) => perkHasScope(perk, scope) && perk.bonusType === crit.bonusType && perk.selectable !== false) ?? null
         : null;
     }
     let bonusType = null;
@@ -1464,7 +1479,7 @@ function createBuild(key) {
   function perkFromSpec(spec) {
     const bonusType = spec.weaponSkill ? weaponSkillBonusType() : spec.bonusType;
     const perk = bonusType && metadata.perks.find((candidate) => candidate.bonusType === bonusType
-      && (!spec.scope || candidate.scope === spec.scope)
+      && (!spec.scope || perkHasScope(candidate, spec.scope))
       && candidate.selectable !== false && vocationAllows(candidate));
     return perk ? { id: perk.id, value: spec.value, apiName: perk.name } : null;
   }
@@ -1503,7 +1518,7 @@ function createBuild(key) {
     }
     if (!perk) {
       const candidates = metadata.perks.filter((candidate) => candidate.selectable !== false && vocationAllows(candidate)
-        && (!scopedSpell || candidate.scope === scopedSpell.scope)).map((candidate) => {
+        && (!scopedSpell || perkHasScope(candidate, scopedSpell.scope))).map((candidate) => {
         const tokens = words(candidate.name);
         const matches = tokens.filter((token) => text.includes(token)).length;
         return { candidate, matches, coverage: tokens.length ? matches / tokens.length : 0 };
