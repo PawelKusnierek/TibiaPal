@@ -546,6 +546,14 @@
     },
     {
         "level":  "150+",
+        "place":  "Pirats Wreckoning",
+        "raw_exp":  "1.9kk",
+        "loot":  "600k",
+        "runes":  "Diamond Arrows, Ethereal, Divine",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "150+",
         "place":  "Brimstone Bugs WOTE",
         "raw_exp":  "1.3kk",
         "loot":  "1.0kk",
@@ -586,17 +594,9 @@
     },
     {
         "level":  "275+",
-        "place":  "Pirats",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "275+",
         "place":  "Lower Spike",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.2kk",
+        "loot":  "1.5kk",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
