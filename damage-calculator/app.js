@@ -25,11 +25,46 @@ const DEFAULT_CASTER_MAGIC_LEVEL = 120;
 // that vocation's pure +skill stance bonus (Blood Rage / Sharpshooter / Virtue of Justice).
 const DEFAULT_SKILL_BY_VOCATION = { knight: 160, paladin: 180, monk: 140 };
 // A weapon proficiency's "combat skill scaling" perks (Type 25/26) name the skill they scale off
-// in `skillId`. It is almost always the weapon's own fighting skill - which the Character section
-// already asks for - but a handful of weapons (the falcon set, summerblade/winterblade, demonwing
-// axe, ...) scale off Shielding instead, a skill nothing else on the page needs. See
-// typedProficiencyPerk() for the mapping and renderShieldingField() for the input.
-const SHIELDING_SKILL_ID = 6;
+// in `skillId`, by CIP's own skill ids. It is usually the weapon's own fighting skill - which the
+// Character section already asks for - but around seventy weapons scale off a different one:
+// every eldritch/gilded eldritch/naga/amber/crypt hybrid and a dozen classics (thaian sword,
+// solar axe, magic longsword, ...) off Magic Level, the enlightenment staves and a few other
+// clubs off Fist Fighting, the falcon set and summerblade/winterblade off Shielding, the
+// shimmer/inferniarch set off Fishing, and a handful of one-offs (the ironworker, ravenwing,
+// broken Iks spear, incredible mumpiz slayer) off another weapon skill entirely.
+//
+// Reading the weapon's own skill for all of them credited e.g. the eldritch bow's "+15% of your
+// Magic Level as extra damage for your spells" as 15% of distance fighting - 25.5 extra damage
+// per hit at skill 170 instead of 4.35 at magic level 29 - which was enough to flip an A/B
+// comparison against the bow of destruction.
+// A row with no `skillId` at all (a reshaped "% of your highest combat skill" perk) keeps falling
+// back to the weapon's own skill.
+const PROFICIENCY_SKILLS = { 1: "magic", 6: "shield", 7: "distance", 8: "sword", 9: "club", 10: "axe", 11: "fist", 13: "fishing" };
+// The skill the Character section's one skill field stands for. A knight's axe, club and sword
+// are the same field - they only ever train the one their weapon uses - so a row naming any of
+// them is credited against whatever the equipped weapon swings with, which is exactly what the
+// API reads `stats.skill` as. Same for a paladin's distance and a monk's fist.
+const MAIN_SKILLS_BY_VOCATION = {
+  knight: ["axe", "club", "sword"], paladin: ["distance"], monk: ["fist"], druid: ["magic"], sorcerer: ["magic"],
+};
+// What a skill nobody in that vocation trains is worth: a knight's fist fighting on an amber
+// staff, anyone's fishing on a shimmer weapon, a paladin's sword fighting on the ironworker. All
+// of them sit at or near the untrained floor, and none is worth six more fields in the Character
+// section that nobody would fill in - so they all count as a base 10.
+// Shielding is the exception: every vocation has a real one, so it keeps its own input
+// (see renderShieldingField).
+const DEFAULT_OFF_SKILL = 10;
+// Magic level is the other exception, for the vocations whose Character section never shows the
+// field. A knight or monk still has one, and 21 knight weapons and 9 monk ones scale real damage
+// off it - the whole eldritch/gilded eldritch/naga/crypt line plus a dozen classics, at up to
+// +200% of it on a magic longsword - so the generic floor above is too blunt for it. A monk's
+// runs far higher than a knight's, hence the two values rather than one shared floor.
+// Paladins and casters never reach this: they type their own magic level, and damageRequest
+// sends it for them.
+const OFF_MAGIC_LEVEL_BY_VOCATION = { knight: 12, monk: 50 };
+// The API stat each skill is scored against, by the same names weaponSkillKind() returns.
+const SKILL_STATS = { axe: "axe", club: "club", sword: "sword", fist: "fist", distance: "distance", magic: "magicLevel", shield: "shielding", fishing: "fishing" };
+const SKILL_SCALING_SUFFIX = "-percent-extra";
 // Pre-filled so the field is useful the moment it appears: a typical end-game shielding skill
 // for the vocation, which most builds only have to nudge. Same idea as DEFAULT_SKILL_BY_VOCATION.
 const DEFAULT_SHIELDING_BY_VOCATION = { knight: 110, paladin: 110, druid: 30, sorcerer: 30, monk: 70 };
@@ -138,6 +173,15 @@ const CHARACTER_SHEET_SKILL_SCOPES = new Set(["character", "all"]);
 
 function isCharacterSheetSkillPerk(perk) {
   return perk?.valueType === "flat" && perkScopes(perk).some((scope) => CHARACTER_SHEET_SKILL_SCOPES.has(scope)) && CHARACTER_SHEET_SKILL_BONUS_TYPES.has(perk.bonusType);
+}
+
+// The stat a "% of your <skill> as extra damage" perk (API perks 8-23) is scored against, or null
+// for any other perk.
+function skillStatForPerk(perk) {
+  const bonusType = perk?.bonusType ?? "";
+  if (!bonusType.endsWith(SKILL_SCALING_SUFFIX)) return null;
+  const skill = bonusType.slice(0, -SKILL_SCALING_SUFFIX.length);
+  return SKILL_STATS[skill === "magic-level" ? "magic" : skill] ?? null;
 }
 
 // Wheel conviction perks whose live bonus depends on a situational condition. The planner
@@ -1427,12 +1471,16 @@ function createBuild(key) {
       if (perk) return perk;
     }
     if (type === 25 || type === 26) {
-      // The row says which skill it scales off (SHIELDING_SKILL_ID); every other id is the
-      // weapon's own fighting skill, so the equipped weapon answers for them. Reading the
-      // weapon's skill for a shielding row was crediting e.g. a falcon battleaxe's "+10% of
-      // your Shielding" as 10% of axe fighting - and the falcon wand/rod's +100% as a whole
-      // extra magic level's worth of damage.
-      const skill = Number(effect.skillId) === SHIELDING_SKILL_ID ? "shield" : weaponSkillKind();
+      // The row says which skill it scales off in `skillId` (PROFICIENCY_SKILLS), so take it from
+      // there rather than assuming the weapon's own. Assuming it credited a falcon battleaxe's
+      // "+10% of your Shielding" as 10% of axe fighting, the falcon wand/rod's +100% as a whole
+      // extra magic level's worth of damage, and every magic-level hybrid's scaling as its full
+      // weapon skill.
+      // A row naming the vocation's own skill is then credited back against the equipped weapon's
+      // skill, the one `stats.skill` carries: an eldritch greataxe's axe rows and an incredible
+      // mumpiz slayer's axe rows are both just "your main skill" to a knight.
+      const rowSkill = PROFICIENCY_SKILLS[Number(effect.skillId)] ?? weaponSkillKind();
+      const skill = (MAIN_SKILLS_BY_VOCATION[state.stats.vocation] ?? []).includes(rowSkill) ? weaponSkillKind() : rowSkill;
       const prefix = skill === "magic" ? "magic-level" : skill;
       const scope = type === 25 ? "auto-attack" : "spell";
       return prefix ? metadata.perks.find((perk) => perk.bonusType === `${prefix}-percent-extra` && perkHasScope(perk, scope) && perk.selectable !== false) ?? null : null;
@@ -1807,9 +1855,10 @@ function createBuild(key) {
   }
 
   // Shielding is the one skill a bonus can scale off that the Character section never asks for
-  // (see SHIELDING_SKILL_ID), so rather than a field every build has to scroll past, it appears
-  // under the proficiency that needs it. The value itself is written by renderStatControls with
-  // every other [data-stat] control, already pre-filled for the vocation.
+  // and that is worth asking for at all (every other one falls back to DEFAULT_OFF_SKILL), so
+  // rather than a field every build has to scroll past, it appears under the proficiency that
+  // needs it. The value itself is written by renderStatControls with every other [data-stat]
+  // control, already pre-filled for the vocation.
   function renderShieldingField() {
     const field = $("shieldingFields");
     if (field) field.hidden = !usesShieldingPerks();
@@ -1982,6 +2031,20 @@ function createBuild(key) {
     // since a build without one never shows the input (see renderShieldingField). A contribution
     // run that drops the proficiency group drops the perk, and with it the stat.
     if (usesShieldingPerks(perks)) stats.shielding = Math.max(0, Math.round(numberOrZero(state.stats.shielding)));
+    // Same reasoning for every other skill a perk can scale off. The weapon's own is already in
+    // `stats.skill` and the API reads it from there, so only the ones nobody in this vocation
+    // trains are left - they ride along at DEFAULT_OFF_SKILL rather than as a field to fill in.
+    // `??=`, so a magic level the statKeys loop above already wrote - a paladin's or a caster's,
+    // with its stance bonuses applied (Divine Defiance) - isn't replaced by the floor here.
+    const ownSkillStat = SKILL_STATS[weaponSkillKind()];
+    const offSkillValue = (statKey) => (statKey === "magicLevel"
+      ? OFF_MAGIC_LEVEL_BY_VOCATION[state.stats.vocation] ?? DEFAULT_OFF_SKILL
+      : DEFAULT_OFF_SKILL);
+    perks.forEach((row) => {
+      const statKey = skillStatForPerk(item("perks", row.id));
+      if (!statKey || statKey === ownSkillStat || statKey === "shielding") return;
+      if (numberOrZero(row.value) > 0) stats[statKey] ??= offSkillValue(statKey);
+    });
     return { stats, weapon, perks, rotation, targets };
   }
 
