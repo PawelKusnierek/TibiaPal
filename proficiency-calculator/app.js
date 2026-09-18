@@ -116,6 +116,13 @@ const augmentNames = {
   2: "base damage", 3: "healing", 6: "cooldown", 14: "life leech",
   15: "mana leech", 16: "critical extra damage", 17: "critical hit chance",
 };
+// Reshaped perks are rolled from scraped wording ("Spell Augment Divine Caldera Critical Hit
+// Chance"), not from the client rows, so these turn that wording back into the SpellId/
+// AugmentType the native rows carry - see shapingRecordToPerk(). The scrape writes Hell's Core
+// with a curly apostrophe, hence the normalisation.
+const plainSpellName = (name) => name.toLowerCase().replaceAll("’", "'");
+const spellIds = new Map(Object.entries(spellNames).map(([id, name]) => [plainSpellName(name), Number(id)]));
+const augmentTypes = new Map(Object.entries(augmentNames).map(([type, name]) => [name, Number(type)]));
 // 8 is Fire and 32 is Energy, not the other way around: every ElementId 8 row in
 // weapon-proficiencies.json reads "Fire" in its own description (Wand of Inferno) and every
 // ElementId 32 row reads "Energy" (Wand of Cosmic Energy). The file's `element`/`damageType`
@@ -301,11 +308,17 @@ function shapingRecordToPerk(record) {
   let category = "General";
   let effect = record.name;
   let bestiaryFamily = null;
+  let spellAugment = null;
   if (spellMatch) {
     const [, spell, augment] = spellMatch;
     title = `${spell} ${augment}`;
     category = "Spell Augment";
     effect = `+{value}% ${augment.toLowerCase()} for ${spell}`;
+    spellAugment = {
+      SpellName: spell,
+      ...(spellIds.has(plainSpellName(spell)) ? { SpellId: spellIds.get(plainSpellName(spell)) } : {}),
+      ...(augmentTypes.has(augment.toLowerCase()) ? { AugmentType: augmentTypes.get(augment.toLowerCase()) } : {}),
+    };
   } else if (record.name.startsWith("Bestiary Damage ")) {
     bestiaryFamily = record.name.slice("Bestiary Damage ".length);
     category = "Bestiary Damage";
@@ -343,6 +356,11 @@ function shapingRecordToPerk(record) {
   return {
     Type: spellMatch ? 5 : bestiaryFamily ? 6 : typedTypes[record.name] ?? -1,
     ...(bestiaryFamily ? { BestiaryName: bestiaryFamily } : {}),
+    // Same reasoning as the bestiary note above, and the reason two reshaped augments of one
+    // spell stay apart: without SpellId/AugmentType every spell augment shared a summaryKey(),
+    // so a rolled "+3% critical hit chance" and "+20% critical extra damage" for Divine Caldera
+    // were folded into a single +23% row, credited to whichever slot came first.
+    ...(spellAugment ?? {}),
     ShapeKey: record.sourceUrl.split("/").pop(),
     ShapeName: title,
     ShapeCategory: category,
@@ -735,9 +753,14 @@ function renderBoard() {
   syncBuildUrl();
 }
 
+// Two perks share a summary row - and have their values summed - only when every discriminator
+// here matches. Reshaped perks are keyed by ShapeKey as well: the rolled pool has several rows
+// that carry no other discriminator at all (Life Gain on Hit / on Kill / Mana Gain on Kill are
+// all Type -1), and merging those silently added their values together under one label.
 function summaryKey(perk) {
   return [
     perk.Type,
+    perk.ShapeKey ?? "",
     perk.SkillId ?? "",
     perk.ElementId ?? "",
     perk.DamageType ?? "",
@@ -812,7 +835,10 @@ function publishProficiencyBuild(profile, grouped) {
     // SpellId is the client's spell id, which the damage API numbers differently (its 105 is a
     // Homing missile, not Fierce Berserk), so the damage calculator resolves the spell by name.
     spellId: perk.SpellId ?? null,
-    spellName: perk.SpellId == null ? null : perk.SpellName ?? spellNames[perk.SpellId] ?? spellDetails(perk.SpellId, profile)?.name ?? null,
+    // Keyed off SpellName first, not SpellId: a reshaped augment of a spell the client id table
+    // doesn't list (Forked Glacier, Terra Burst) still knows its own spell from the rolled
+    // wording, and the calculator matches on the name anyway.
+    spellName: perk.SpellName ?? (perk.SpellId == null ? null : spellNames[perk.SpellId] ?? spellDetails(perk.SpellId, profile)?.name ?? null),
     augmentType: perk.AugmentType ?? null,
     elementId: perk.ElementId ?? perk.DamageType ?? null,
     bestiaryName: perk.BestiaryName ?? null,
