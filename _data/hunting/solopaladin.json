@@ -875,8 +875,8 @@
     {
         "level":  "300+",
         "place":  "Winter Court",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "4.4kk",
+        "loot":  "500k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -954,7 +954,7 @@
     },
     {
         "level":  "300+",
-        "place":  "Marapur Turtles and Foam Stalkers",
+        "place":  "Marapur Turtles",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Diamond Arrows, Ethereal",
@@ -977,7 +977,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "400+",
         "place":  "Rosha Bones + Shockheads",
         "raw_exp":  "-",
         "loot":  "-",
@@ -1011,14 +1011,14 @@
     {
         "level":  "300+",
         "place":  "Summer Court",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "5.0kk",
+        "loot":  "800k",
         "runes":  "Diamond Arrows, Ethereal, Divine",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
-        "place":  "Marapur Naga",
+        "level":  "400+",
+        "place":  "Nagas",
         "raw_exp":  "-",
         "loot":  "-",
         "runes":  "Diamond Arrows, Ethereal",
