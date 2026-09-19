@@ -105,7 +105,7 @@
     },
     {
         "level":  "35+",
-        "place":  "MoSL -3",
+        "place":  "Mother of Scarabs Lair -3",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -114,14 +114,6 @@
     {
         "level":  "35+",
         "place":  "Peninsula Tomb",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "35+",
-        "place":  "Mutated Rats Yalahar Alchemist",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -138,14 +130,6 @@
     {
         "level":  "35+",
         "place":  "Laguna Blood Crabs (Runes)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "35+",
-        "place":  "Mutated Rats Yalahar Arena",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -177,7 +161,7 @@
     },
     {
         "level":  "50+",
-        "place":  "Lion\u0027s Rock",
+        "place":  "Lion's Rock",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -193,14 +177,6 @@
     },
     {
         "level":  "50+",
-        "place":  "Killer Caiman Cave Zao",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "50+",
         "place":  "Vengoth Haunted Treelings",
         "raw_exp":  "-",
         "loot":  "-",
@@ -209,7 +185,7 @@
     },
     {
         "level":  "50+",
-        "place":  "Kha\u0027Zeel Ancient Scarabs",
+        "place":  "Kha'Zeel Ancient Scarabs",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",

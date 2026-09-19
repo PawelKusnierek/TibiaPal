@@ -841,7 +841,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Iksupan Occupied Sanctuary",
         "raw_exp":  "-",
         "loot":  "-",
@@ -865,7 +865,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
+        "level":  "300+",
         "place":  "Iksupan Last Stand",
         "raw_exp":  "-",
         "loot":  "-",
@@ -883,16 +883,16 @@
     {
         "level":  "300+",
         "place":  "Weretigers -2",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "4.3kk",
+        "loot":  "800k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "300+",
         "place":  "Werecrocodiles -1",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.9kk",
+        "loot":  "600k",
         "runes":  "Diamond Arrows, Divine",
         "link":  "https://youtu.be/"
     },
@@ -914,9 +914,9 @@
     },
     {
         "level":  "300+",
-        "place":  "Ripper Spectres",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Ripper Spectres Haunted House",
+        "raw_exp":  "4.1kk",
+        "loot":  "500k",
         "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
@@ -1025,7 +1025,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "400+",
         "place":  "Deathlings",
         "raw_exp":  "-",
         "loot":  "-",

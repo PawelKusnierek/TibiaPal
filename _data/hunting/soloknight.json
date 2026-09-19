@@ -2,69 +2,37 @@
     {
         "level":  "8+",
         "place":  "Targuna Lizards",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "45k",
+        "loot":  "45k",
         "link":  "https://youtu.be/",
         "weapon_type":  "Physical"
     },
     {
         "level":  "10+",
         "place":  "Targuna Pirates",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "55k",
+        "loot":  "30k",
         "link":  "https://youtu.be/",
         "weapon_type":  "Physical"
     },
     {
         "level":  "12+",
         "place":  "Targuna Infernoids",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "70k",
+        "loot":  "30k",
         "link":  "https://youtu.be/",
         "weapon_type":  "Physical"
     },
     {
         "level":  "8+",
-        "place":  "Rotworms Liberty Bay/Darashia",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "8+",
-        "place":  "Larva Ankrahmun",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "8+",
         "place":  "Swamp Trolls Port Hope/Venore",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "30k",
+        "loot":  "50k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "8+",
-        "place":  "Crocodiles Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "16+",
-        "place":  "Tarantulas Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "16+",
+        "level":  "18+",
         "place":  "Elves Yalahar",
         "raw_exp":  "-",
         "loot":  "-",
@@ -72,15 +40,15 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "16+",
-        "place":  "Yalahar/Darashia Minotaurs (Stealth Ring)",
+        "level":  "18+",
+        "place":  "Minotaurs Darashia (Stealth Ring)",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "20+",
+        "level":  "18+",
         "place":  "Stonerefiners (Stealth Ring)",
         "raw_exp":  "-",
         "loot":  "-",
@@ -88,8 +56,8 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "20+",
-        "place":  "Mutated Humans Yalahar (Single target)",
+        "level":  "18+",
+        "place":  "Mutated Humans Yalahar",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -105,14 +73,6 @@
     },
     {
         "level":  "30+",
-        "place":  "Zombies Treasure Island",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "35+",
         "place":  "Mother of Scarabs Lair -3",
         "raw_exp":  "-",
         "loot":  "-",
@@ -120,23 +80,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "35+",
-        "place":  "Pirates Yalahar",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "35+",
-        "place":  "Mutated Humans Yalahar (Exori)",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "35+",
+        "level":  "30+",
         "place":  "Blood Crabs Laguna Islands",
         "raw_exp":  "-",
         "loot":  "-",
@@ -144,8 +88,8 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "35+",
-        "place":  "Laguna Islands",
+        "level":  "30+",
+        "place":  "Meriana Gargoyle Cave",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -153,7 +97,15 @@
     },
     {
         "level":  "50+",
-        "place":  "Lion\u0027s Rock",
+        "place":  "Kha'Zeel Ancient Scarabs",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "weapon_type":  "Physical",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "50+",
+        "place":  "Lion's Rock",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -177,7 +129,7 @@
     },
     {
         "level":  "50+",
-        "place":  "Old Fortress -1 (Bonebeasts)",
+        "place":  "Old Fortress Bonebeasts -1",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -193,14 +145,6 @@
     },
     {
         "level":  "50+",
-        "place":  "Mutated Rats Alchemist Quarter",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "50+",
         "place":  "Yalahar Dragons",
         "raw_exp":  "-",
         "loot":  "-",
@@ -209,7 +153,7 @@
     },
     {
         "level":  "70+",
-        "place":  "Mother of Scarabs Lair -4/-5",
+        "place":  "Mother of Scarabs Lair -5",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -217,7 +161,7 @@
     },
     {
         "level":  "70+",
-        "place":  "Yalahar Bog Raiders Central",
+        "place":  "Yalahar Alchemist Center",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -257,7 +201,7 @@
     },
     {
         "level":  "80+",
-        "place":  "Giant Spiders PH",
+        "place":  "Giant Spiders Port Hope",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -298,14 +242,6 @@
     {
         "level":  "90+",
         "place":  "Edron Vampire Crypt",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "90+",
-        "place":  "Inner Hive Stage2 East",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
