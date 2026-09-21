@@ -82,8 +82,8 @@
     {
         "level":  "30+",
         "place":  "Chor (Runes)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "230k",
+        "loot":  "-25k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
@@ -112,15 +112,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "35+",
-        "place":  "Peninsula Tomb",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "35+",
+        "level":  "30+",
         "place":  "Meriana Gargoyle Cave (Runes)",
         "raw_exp":  "-",
         "loot":  "-",
@@ -128,27 +120,11 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "35+",
+        "level":  "30+",
         "place":  "Laguna Blood Crabs (Runes)",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "40+",
-        "place":  "Yalahar Cults",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "40+",
-        "place":  "LB Quara Scouts",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Earth",
         "link":  "https://youtu.be/"
     },
     {
