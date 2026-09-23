@@ -440,9 +440,19 @@ let bootSettled = null;
 // Only the active build's planner state is live in the shared modal iframes at boot - the
 // other build's wheel code / proficiency token would otherwise sit un-decoded (and so
 // contribute zero bonus) until its editor happens to be opened. These two hidden iframes
-// resolve it once in the background instead. See hydrateInactiveBuild().
-let wheelHydrateKey = null;
-let proficiencyHydrateKey = null;
+// resolve it once in the background instead. See hydratePlannerPerks().
+//
+// Each hidden frame serves one build at a time: pointing it at a second token while the first
+// is still in flight loses the first build's perks (its reply lands after we've stopped
+// listening for it), which is easy to trigger now that loading a saved build hydrates too.
+// `key` is the build a frame is currently resolving, `queue` the builds waiting their turn.
+const hydrateSlots = {
+  wheel: { selector: "#wheelHydrateFrame", key: null, queue: [], timer: null, settled: null, resolveSettled: null },
+  proficiency: { selector: "#proficiencyHydrateFrame", key: null, queue: [], timer: null, settled: null, resolveSettled: null },
+};
+// A hidden frame that never reports back (a network hiccup, a planner that failed to boot) must
+// not leave its slot busy for the rest of the session, or every later hydration queues behind it.
+const HYDRATE_TIMEOUT_MS = 8000;
 
 const defaultState = () => ({
   stats: {
@@ -878,7 +888,7 @@ function sanitizeState(candidate) {
 // The subset of a build that travels in share links and named presets: everything the calculator
 // can't re-derive on its own. Notably absent are wheelPerks/proficiencyPerks and the planners'
 // `effects` - those are recomputed from the wheel code and proficiency token by the hidden
-// planner iframes (see hydrateInactiveBuild).
+// planner iframes (see hydratePlannerPerks).
 function shareableFromState(state) {
   const s = state.stats;
   const stats = { vocation: s.vocation, level: s.level, skill: s.skill, magicLevel: s.magicLevel };
@@ -2493,22 +2503,126 @@ function initializePlannerFrames(build) {
 }
 
 // Silently resolves a build's wheel code / proficiency token into perks via the hidden
-// hydrate iframes, for whichever build isn't backed by the live modal iframes (see the
-// module-level comment above wheelHydrateKey). No-ops for a build with nothing to resolve
+// hydrate iframes, for a build that isn't backed by the live modal iframes (see the
+// module-level comment above hydrateSlots). No-ops for a build with nothing to resolve
 // or whose effects are already populated (e.g. its editor has already been opened).
-function hydrateInactiveBuild(build) {
+function hydratePlannerPerks(build) {
   if (build.state.wheelPlanner.code && !build.state.wheelPlanner.effects.length) {
-    wheelHydrateKey = build.key;
-    document.querySelector("#wheelHydrateFrame").src = plannerUrl("/wheel-planner.html", { embed: "damage", v: "20260913-1", vocation: build.state.stats.vocation, code: build.state.wheelPlanner.code });
+    requestHydration("wheel", build.key, plannerUrl("/wheel-planner.html", { embed: "damage", v: "20260913-1", vocation: build.state.stats.vocation, code: build.state.wheelPlanner.code }));
   }
   if (build.state.proficiencyPlanner.token && !build.state.proficiencyPlanner.effects.length) {
-    proficiencyHydrateKey = build.key;
-    document.querySelector("#proficiencyHydrateFrame").src = plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260918-1", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token });
+    requestHydration("proficiency", build.key, plannerUrl("/weapon-proficiency.html", { embed: "damage", v: "20260918-1", vocation: build.state.stats.vocation, build: build.state.proficiencyPlanner.token }));
   }
 }
 
-function syncWheelGrades(build) {
-  document.querySelector("#wheelPlannerFrame").contentWindow?.postMessage({
+function requestHydration(name, key, url) {
+  const slot = hydrateSlots[name];
+  // Already resolving another build: wait. A build queued twice (preset loaded, swapped, loaded
+  // again) only needs its newest token, so the older entry is replaced rather than stacked.
+  if (slot.key && slot.key !== key) {
+    const queued = slot.queue.find((entry) => entry.key === key);
+    if (queued) queued.url = url; else slot.queue.push({ key, url });
+    return;
+  }
+  startHydration(name, key, url);
+}
+
+function startHydration(name, key, url) {
+  const slot = hydrateSlots[name];
+  const frame = document.querySelector(slot.selector);
+  slot.key = key;
+  if (!slot.settled) slot.settled = new Promise((resolve) => { slot.resolveSettled = resolve; });
+  window.clearTimeout(slot.timer);
+  slot.timer = window.setTimeout(() => finishHydration(name), HYDRATE_TIMEOUT_MS);
+  // Same URL as the document already loaded (the same preset loaded back into the same build):
+  // no navigation, so no "load" event will fire to ask for the build - ask straight away.
+  if (frame.getAttribute("src") === url) {
+    requestHydrateBuild(name);
+    return;
+  }
+  // Same idea as the live frames' pendingNav (see setPlannerFrameSrc): the outgoing document
+  // keeps running until the new one loads, and its stale reply must not be taken for this one's.
+  frame.dataset.pendingNav = "1";
+  frame.src = url;
+}
+
+// Asks a hydrate frame for the build it has settled on. The wheel's summary rows are scored at
+// the build's own mod grades, which aren't part of the wheel code, so they have to be sent first.
+function requestHydrateBuild(name) {
+  const slot = hydrateSlots[name];
+  const build = builds[slot.key];
+  if (!build) return;
+  const frame = document.querySelector(slot.selector);
+  if (name === "wheel") syncWheelGrades(build, slot.selector);
+  frame.contentWindow?.postMessage({ type: `tibiapal:request-${name}-build` }, window.location.origin);
+}
+
+// Frees the slot and starts whatever was waiting on it. Returns the build whose reply this was,
+// so the caller applies the payload to the build that actually asked for it.
+function finishHydration(name) {
+  const slot = hydrateSlots[name];
+  const build = builds[slot.key];
+  window.clearTimeout(slot.timer);
+  slot.key = null;
+  const next = slot.queue.shift();
+  if (next) startHydration(name, next.key, next.url);
+  else {
+    slot.resolveSettled?.();
+    slot.settled = null;
+    slot.resolveSettled = null;
+  }
+  return build;
+}
+
+// Resolves once neither hidden frame has a build left to resolve. Same purpose as bootSettled, for
+// a hydration started later: a saved build loaded a moment ago would otherwise be calculated
+// before its wheel/proficiency perks have come back, scoring it without any of their bonuses.
+function hydrationSettled() {
+  return Promise.all(Object.values(hydrateSlots).map((slot) => slot.settled));
+}
+
+// Hydration only re-derives perks the stored wheel code / proficiency token already described, so
+// a build must come out of it exactly as saved or unsaved as it went in - receiveWheelBuild() and
+// receiveProficiencyBuild() both call changed(), which would otherwise pin the unsaved-changes
+// marker on a saved build the user hasn't touched.
+function withPreservedSaveState(build, apply) {
+  const { savedName, dirty } = build;
+  apply();
+  if (build.savedName !== savedName || build.dirty === dirty) return;
+  build.restoreMeta({ savedName, dirty });
+  updateBuildHeading(build.key);
+  saveBuildMeta();
+}
+
+// The live modal frames answer for the build the user is editing, so their replies normally *are*
+// edits. The exception is a build whose stored code/token had never been decoded into effects yet:
+// opening the planner right after loading a saved build (before the hidden frame has answered)
+// hydrates it through the live frame instead, and that isn't a change the user made.
+function receivePlannerReply(build, name, payload) {
+  const planner = name === "wheel" ? build.state.wheelPlanner : build.state.proficiencyPlanner;
+  const stored = name === "wheel" ? planner.code : planner.token;
+  const reported = name === "wheel" ? payload?.code : payload?.token;
+  // With the modal closed, a live frame can still be finishing a navigation started for an earlier
+  // build - or its cold boot, which carried no build at all and so reports the planner's own
+  // default weapon. Either way the report describes a different build than the one this slot holds
+  // now, and must not overwrite a build that already carries its own code/token: that is what made
+  // a freshly loaded preset flip back to a default weapon a second later.
+  if (plannerModal.hidden && stored && reported !== stored) return;
+  const receive = () => (name === "wheel" ? receiveWheelBuild(build, payload) : receiveProficiencyBuild(build, payload));
+  // Two cases that are hydration rather than an edit, and so must leave the saved/unsaved state
+  // alone: the modal is closed, so the user isn't editing anything and the report can only be an
+  // echo of state we already have; or it's open on a build whose stored code/token hadn't been
+  // decoded into effects yet, because the planner was opened before the hidden frame answered.
+  if (plannerModal.hidden || (stored && !planner.effects?.length)) withPreservedSaveState(build, receive);
+  else receive();
+}
+
+// `selector` picks the frame: the live modal one by default, or a hidden hydrate frame when
+// resolving a build in the background. Sending a hydrating build's grades to the live frame would
+// both leave the hydrate frame scoring at default grades and overwrite the grades of whichever
+// build the modal is holding.
+function syncWheelGrades(build, selector = "#wheelPlannerFrame") {
+  document.querySelector(selector).contentWindow?.postMessage({
     type: "tibiapal:set-wheel-grades",
     grades: build.state.wheelPlanner.gemGrades,
   }, window.location.origin);
@@ -2724,6 +2838,11 @@ function loadSelectedSavedBuild(build) {
   build.replaceState(sanitizeState(entry.state));
   build.markSaved(entry.name);
   refreshSavedBuildOptions(build.key, entry.name);
+  // A saved build stores only the wheel code and proficiency token (see shareableFromState), so
+  // the perks they stand for have to be resolved again - otherwise the build calculates with no
+  // wheel or proficiency bonuses at all until its planner is opened, which is what made switching
+  // presets look like it needed a trip through the Weapon & Proficiency window to "take".
+  hydratePlannerPerks(build);
 }
 
 function deleteSelectedSavedBuild(key) {
@@ -3197,6 +3316,7 @@ async function triggerCompare(force = false) {
   compareInFlight = (async () => {
     try {
       await bootSettled;
+      await hydrationSettled();
       // Taken after the grace period, not before: planner reports landing during it change the
       // state, and the signature must describe what's actually being calculated.
       compareSignature = buildSignature();
@@ -3271,14 +3391,12 @@ function wireGlobalEvents() {
     document.querySelector("#proficiencyPlannerFrame").contentWindow?.postMessage({ type: "tibiapal:request-proficiency-build" }, window.location.origin);
   });
   document.querySelector("#wheelHydrateFrame").addEventListener("load", (event) => {
-    const build = builds[wheelHydrateKey];
-    if (!build) return;
-    syncWheelGrades(build);
-    event.currentTarget.contentWindow?.postMessage({ type: "tibiapal:request-wheel-build" }, window.location.origin);
+    delete event.currentTarget.dataset.pendingNav;
+    requestHydrateBuild("wheel");
   });
   document.querySelector("#proficiencyHydrateFrame").addEventListener("load", (event) => {
-    if (!builds[proficiencyHydrateKey]) return;
-    event.currentTarget.contentWindow?.postMessage({ type: "tibiapal:request-proficiency-build" }, window.location.origin);
+    delete event.currentTarget.dataset.pendingNav;
+    requestHydrateBuild("proficiency");
   });
   setupEffectsInfo();
   document.querySelector("#closePlannerModal").addEventListener("click", closePlanner);
@@ -3305,18 +3423,16 @@ function wireGlobalEvents() {
     // state we already have, leaves the signature unchanged and costs no second calculation.
     const recomputeResultsIfNeeded = () => { if (activeTabKey === "results") Promise.resolve(compareInFlight).finally(() => triggerCompare()); };
     if (build) {
-      if (event.source === wheelFrame.contentWindow && event.data?.type === "tibiapal:wheel-build" && !wheelFrame.dataset.pendingNav) { receiveWheelBuild(build, event.data.payload); setPlannerLoading("wheel", false); recomputeResultsIfNeeded(); }
-      if (event.source === proficiencyFrame.contentWindow && event.data?.type === "tibiapal:proficiency-build" && !proficiencyFrame.dataset.pendingNav) { receiveProficiencyBuild(build, event.data.payload); setPlannerLoading("proficiency", false); recomputeResultsIfNeeded(); }
+      if (event.source === wheelFrame.contentWindow && event.data?.type === "tibiapal:wheel-build" && !wheelFrame.dataset.pendingNav) { receivePlannerReply(build, "wheel", event.data.payload); setPlannerLoading("wheel", false); recomputeResultsIfNeeded(); }
+      if (event.source === proficiencyFrame.contentWindow && event.data?.type === "tibiapal:proficiency-build" && !proficiencyFrame.dataset.pendingNav) { receivePlannerReply(build, "proficiency", event.data.payload); setPlannerLoading("proficiency", false); recomputeResultsIfNeeded(); }
     }
-    if (event.source === wheelHydrateFrame.contentWindow && event.data?.type === "tibiapal:wheel-build") {
-      const target = builds[wheelHydrateKey];
-      wheelHydrateKey = null;
-      if (target) { receiveWheelBuild(target, event.data.payload); recomputeResultsIfNeeded(); }
+    if (event.source === wheelHydrateFrame.contentWindow && event.data?.type === "tibiapal:wheel-build" && !wheelHydrateFrame.dataset.pendingNav) {
+      const target = finishHydration("wheel");
+      if (target) { withPreservedSaveState(target, () => receiveWheelBuild(target, event.data.payload)); recomputeResultsIfNeeded(); }
     }
-    if (event.source === proficiencyHydrateFrame.contentWindow && event.data?.type === "tibiapal:proficiency-build") {
-      const target = builds[proficiencyHydrateKey];
-      proficiencyHydrateKey = null;
-      if (target) { receiveProficiencyBuild(target, event.data.payload); recomputeResultsIfNeeded(); }
+    if (event.source === proficiencyHydrateFrame.contentWindow && event.data?.type === "tibiapal:proficiency-build" && !proficiencyHydrateFrame.dataset.pendingNav) {
+      const target = finishHydration("proficiency");
+      if (target) { withPreservedSaveState(target, () => receiveProficiencyBuild(target, event.data.payload)); recomputeResultsIfNeeded(); }
     }
   });
   document.querySelector("#resetBuild").addEventListener("click", () => {
@@ -3409,11 +3525,11 @@ async function loadMetadata() {
     bootSettled = new Promise((resolve) => window.setTimeout(resolve, BOOT_SETTLE_MS));
     // Build A's iframe is the one live at boot, so route its self-reported build there;
     // Build B's wheel/proficiency perks additionally hydrate in the background right away
-    // (see hydrateInactiveBuild) so a shared A/B link calculates correctly even if Build B's
+    // (see hydratePlannerPerks) so a shared A/B link calculates correctly even if Build B's
     // own planner is never opened.
     activeBuildKey = "a";
     wireGlobalEvents();
-    hydrateInactiveBuild(builds.b);
+    hydratePlannerPerks(builds.b);
     wireTabs();
     saveAllState();
     refreshAllSavedBuildOptions();

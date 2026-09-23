@@ -82,7 +82,7 @@
     {
         "level":  "30+",
         "place":  "Chor (Runes)",
-        "raw_exp":  "230k",
+        "raw_exp":  "200k",
         "loot":  "-25k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
@@ -90,16 +90,16 @@
     {
         "level":  "30+",
         "place":  "Coryms PH (Runes)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "180k",
+        "loot":  "0k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "30+",
         "place":  "Upper Spike (Runes)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "220k",
+        "loot":  "50k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },

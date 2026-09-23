@@ -57,3 +57,17 @@ One shared modal (`#plannerModal`) with two iframes reused across Build A and Bu
 - Reopening an *unchanged* build reuses the iframe's current document instead of reloading it — see `pendingNav` in `setPlannerFrameSrc()`.
 - The `.dc-planner-loading` overlay covers each iframe on *every* open with a minimum duration (`PLANNER_LOADING_MIN_MS`), because even a no-navigation reopen can flash stale content while the modal settles.
 - `proficiency-calculator/app.js`'s `wpBuild` cookie is only for the standalone `/weapon-proficiency.html` page. It's skipped (read and write) when `isPlannerEmbed` — otherwise editing one build inside the damage calculator leaks its weapon/perk choices into a different, not-yet-customized build. **Don't remove that guard.**
+
+## Planner perks are derived state — any path that swaps a build must re-derive them
+
+Saved presets and `?build=` links carry only the wheel *code* and the proficiency *token* (see `shareableFromState()`). `wheelPlanner.effects` / `proficiencyPlanner.effects` and the `wheelPerks` / `proficiencyPerks` they map to are **not** stored: the only thing that can decode a code/token is a planner page, so they're re-derived by loading one in a hidden iframe (`hydratePlannerPerks()`).
+
+So whenever you add a path that replaces a build's state from a token — a preset load, a new kind of link, an import — it has to:
+
+- **Call `hydratePlannerPerks(build)`.** Without it the build calculates with *no* wheel or proficiency bonuses until its planner is opened. (`replaceState()` on its own doesn't do this; the A↔B copy buttons don't need it because they clone live state, effects included.)
+- **Not let hydration mark the build dirty.** `receiveWheelBuild()` / `receiveProficiencyBuild()` call `changed()`, which pins the unsaved-changes marker — on a build the user only *loaded*. `withPreservedSaveState()` wraps that; a build stamped dirty then also pops a bogus "discard unsaved changes?" confirm on the next preset switch.
+
+Two related traps in the same machinery:
+
+- **A closed modal's live frames are not a source of truth.** They keep answering for whatever build they last navigated to, including their cold boot with no build at all — for which the proficiency planner reports its own fallback weapon (Moonsilver Epee, in `selectProfile(... ?? "moonsilver epee")`). `receivePlannerReply()` therefore ignores a report that contradicts a build which already has its own code/token while `#plannerModal` is hidden. Without that, a just-loaded preset gets overwritten by a default build a second later.
+- **The hidden hydrate frames are one shared resource each**, so they serve one build at a time and queue the rest (`hydrateSlots`). Pointing one at a second token while the first is in flight loses the first build's perks, and `syncWheelGrades()` must be passed the *hydrating* frame's selector — its default targets the live modal frame, which would score the hydrating build's wheel at default grades and overwrite the modal build's grades.
