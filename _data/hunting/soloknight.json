@@ -98,8 +98,8 @@
     {
         "level":  "50+",
         "place":  "Kha'Zeel Ancient Scarabs",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "375k",
+        "loot":  "50k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
@@ -114,8 +114,8 @@
     {
         "level":  "50+",
         "place":  "Nibelor Crystal Spiders",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "375k",
+        "loot":  "-25k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
@@ -137,7 +137,15 @@
     },
     {
         "level":  "50+",
-        "place":  "Darashia Dragon Lair",
+        "place":  "Yalahar Dragons",
+        "raw_exp":  "275k",
+        "loot":  "100k",
+        "weapon_type":  "Physical",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "60+",
+        "place":  "Middle Spike",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -145,7 +153,7 @@
     },
     {
         "level":  "50+",
-        "place":  "Yalahar Dragons",
+        "place":  "Wyrms Liberty Bay -1",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -170,22 +178,6 @@
     {
         "level":  "70+",
         "place":  "Yalahar Alchemist Outskirts",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "50+",
-        "place":  "Middle Spike",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "50+",
-        "place":  "Wyrms Liberty Bay -1",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
