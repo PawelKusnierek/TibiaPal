@@ -176,15 +176,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "70+",
-        "place":  "Hive Surface",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "70+",
+        "level":  "50+",
         "place":  "Middle Spike",
         "raw_exp":  "-",
         "loot":  "-",
@@ -192,8 +184,8 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "70+",
-        "place":  "Wyrms LB -1",
+        "level":  "50+",
+        "place":  "Wyrms Liberty Bay -1",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -240,7 +232,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "90+",
+        "level":  "70+",
         "place":  "Edron Vampire Crypt",
         "raw_exp":  "-",
         "loot":  "-",
@@ -248,7 +240,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "90+",
+        "level":  "70+",
         "place":  "Krailos Bug Cave",
         "raw_exp":  "-",
         "loot":  "-",
@@ -256,7 +248,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "90+",
+        "level":  "70+",
         "place":  "Sea Serpents",
         "raw_exp":  "-",
         "loot":  "-",
@@ -264,7 +256,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "90+",
+        "level":  "70+",
         "place":  "Yielothax",
         "raw_exp":  "-",
         "loot":  "-",
@@ -272,7 +264,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "100+",
+        "level":  "90+",
         "place":  "Exotic Cave",
         "raw_exp":  "-",
         "loot":  "-",
@@ -280,7 +272,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "130+",
+        "level":  "100+",
         "place":  "Ravenous Lava Lurkers",
         "raw_exp":  "-",
         "loot":  "-",
@@ -288,7 +280,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "130+",
+        "level":  "90+",
         "place":  "Oramond West",
         "raw_exp":  "-",
         "loot":  "-",
@@ -296,7 +288,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "130+",
+        "level":  "90+",
         "place":  "Yalahar Sunken Quarter",
         "raw_exp":  "-",
         "loot":  "-",
@@ -304,7 +296,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "130+",
+        "level":  "90+",
         "place":  "Okolnir",
         "raw_exp":  "-",
         "loot":  "-",
@@ -321,14 +313,6 @@
     },
     {
         "level":  "130+",
-        "place":  "Hydras Oramond",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "130+",
         "place":  "Mini Rosha",
         "raw_exp":  "-",
         "loot":  "-",
@@ -336,7 +320,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "130+",
+        "level":  "90+",
         "place":  "Edron Orc Cults",
         "raw_exp":  "-",
         "loot":  "-",
@@ -353,14 +337,6 @@
     },
     {
         "level":  "130+",
-        "place":  "Replica Dungeon",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "130+",
         "place":  "Lizard Chosens",
         "raw_exp":  "-",
         "loot":  "-",
@@ -368,16 +344,8 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "130+",
-        "place":  "Desecrated Glade",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
         "level":  "150+",
-        "place":  "Barkless Ab Cults",
+        "place":  "Barkless",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -392,7 +360,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "150+",
+        "level":  "130+",
         "place":  "Elder Wyrms Drefia",
         "raw_exp":  "-",
         "loot":  "-",
@@ -432,7 +400,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "185+",
+        "level":  "150+",
         "place":  "Deeplings Library",
         "raw_exp":  "-",
         "loot":  "-",
