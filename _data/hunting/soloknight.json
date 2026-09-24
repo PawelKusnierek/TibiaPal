@@ -66,32 +66,32 @@
     {
         "level":  "30+",
         "place":  "Coryms Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "190k",
+        "loot":  "200k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "30+",
         "place":  "Mother of Scarabs Lair -3",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "30+",
-        "place":  "Blood Crabs Laguna Islands",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "170k",
+        "loot":  "250k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "30+",
         "place":  "Meriana Gargoyle Cave",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "140k",
+        "loot":  "300k",
+        "weapon_type":  "Physical",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "30",
+        "place":  "Blood Crabs Laguna Islands",
+        "raw_exp":  "150k",
+        "loot":  "400k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
