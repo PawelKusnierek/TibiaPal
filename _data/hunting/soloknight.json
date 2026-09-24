@@ -32,34 +32,34 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "18+",
+        "level":  "20+",
         "place":  "Elves Yalahar",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "80k",
+        "loot":  "200k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "18+",
+        "level":  "20+",
         "place":  "Minotaurs Darashia (Stealth Ring)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "115k",
+        "loot":  "5k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "18+",
+        "level":  "20+",
         "place":  "Stonerefiners (Stealth Ring)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "160k",
+        "loot":  "100k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "18+",
+        "level":  "20+",
         "place":  "Mutated Humans Yalahar",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "140k",
+        "loot":  "100k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
