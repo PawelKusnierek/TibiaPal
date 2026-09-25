@@ -146,16 +146,16 @@
     {
         "level":  "60+",
         "place":  "Middle Spike",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "600k",
+        "loot":  "300k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "50+",
         "place":  "Wyrms Liberty Bay -1",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "550k",
+        "loot":  "-10k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
