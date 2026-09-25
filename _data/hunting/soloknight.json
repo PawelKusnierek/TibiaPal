@@ -201,7 +201,7 @@
     },
     {
         "level":  "70+",
-        "place":  "Sea Serpents",
+        "place":  "Yielothax",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -209,7 +209,15 @@
     },
     {
         "level":  "70+",
-        "place":  "Yielothax",
+        "place":  "Carlin Cults",
+        "raw_exp":  "1.05kk",
+        "loot":  "50k",
+        "weapon_type":  "Physical",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "70+",
+        "place":  "Nightmare Scions Krailos",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -226,22 +234,6 @@
     {
         "level":  "90+",
         "place":  "Exotic Cave",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "70+",
-        "place":  "Carlin Cults",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "70+",
-        "place":  "Nightmare Scions Krailos",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
