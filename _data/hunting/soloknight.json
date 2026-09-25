@@ -88,6 +88,22 @@
         "link":  "https://youtu.be/"
     },
     {
+        "level":  "35+",
+        "place":  "Vengoth Haunted Treelings",
+        "raw_exp":  "350k",
+        "loot":  "20k",
+        "weapon_type":  "Physical",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "40+",
+        "place":  "Old Fortress Bonebeasts -1",
+        "raw_exp":  "350k",
+        "loot":  "-50k",
+        "weapon_type":  "Physical",
+        "link":  "https://youtu.be/"
+    },
+    {
         "level":  "30",
         "place":  "Blood Crabs Laguna Islands",
         "raw_exp":  "150k",
@@ -116,22 +132,6 @@
         "place":  "Nibelor Crystal Spiders",
         "raw_exp":  "375k",
         "loot":  "-25k",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "50+",
-        "place":  "Vengoth Haunted Treelings",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "50+",
-        "place":  "Old Fortress Bonebeasts -1",
-        "raw_exp":  "-",
-        "loot":  "-",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
@@ -232,7 +232,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "90+",
+        "level":  "70+",
         "place":  "Carlin Cults",
         "raw_exp":  "-",
         "loot":  "-",
@@ -240,7 +240,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "90+",
+        "level":  "70+",
         "place":  "Nightmare Scions Krailos",
         "raw_exp":  "-",
         "loot":  "-",
@@ -273,7 +273,15 @@
     },
     {
         "level":  "90+",
-        "place":  "Yalahar Sunken Quarter",
+        "place":  "Liberty Bay Quaras",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "weapon_type":  "Physical",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "90+",
+        "place":  "Yalahar Sunken Quarter Quaras",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
