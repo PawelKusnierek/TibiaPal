@@ -144,14 +144,6 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "60+",
-        "place":  "Middle Spike",
-        "raw_exp":  "600k",
-        "loot":  "300k",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
         "level":  "50+",
         "place":  "Wyrms Liberty Bay -1",
         "raw_exp":  "550k",
@@ -160,10 +152,18 @@
         "link":  "https://youtu.be/"
     },
     {
+        "level":  "60+",
+        "place":  "Middle Spike",
+        "raw_exp":  "600k",
+        "loot":  "300k",
+        "weapon_type":  "Physical",
+        "link":  "https://youtu.be/"
+    },
+    {
         "level":  "70+",
         "place":  "Ancient Scarabs MoSL -5",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "650k",
+        "loot":  "50k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
@@ -202,8 +202,8 @@
     {
         "level":  "70+",
         "place":  "Yielothax",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "850k",
+        "loot":  "100k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
@@ -218,8 +218,8 @@
     {
         "level":  "70+",
         "place":  "Nightmare Scions Krailos",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.1kk",
+        "loot":  "100k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
@@ -228,6 +228,22 @@
         "place":  "Giant Spiders Port Hope",
         "raw_exp":  "-",
         "loot":  "-",
+        "weapon_type":  "Physical",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "90+",
+        "place":  "Carlin Cults",
+        "raw_exp":  "1.3kk",
+        "loot":  "150k",
+        "weapon_type":  "Physical",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "90+",
+        "place":  "Nightmare Scions Krailos",
+        "raw_exp":  "1.4kk",
+        "loot":  "150k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
@@ -242,14 +258,6 @@
     {
         "level":  "90+",
         "place":  "Edron Heroes -2/-3",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "90+",
-        "place":  "Fenrock Dragon Lords",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
