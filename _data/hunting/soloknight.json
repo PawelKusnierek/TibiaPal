@@ -170,16 +170,8 @@
     {
         "level":  "70+",
         "place":  "Yalahar Alchemist Center",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "70+",
-        "place":  "Yalahar Alchemist Outskirts",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "700k",
+        "loot":  "300k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
@@ -194,8 +186,8 @@
     {
         "level":  "70+",
         "place":  "Krailos Bug Cave",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "600k",
+        "loot":  "400k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
@@ -220,14 +212,6 @@
         "place":  "Nightmare Scions Krailos",
         "raw_exp":  "1.1kk",
         "loot":  "100k",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "80+",
-        "place":  "Giant Spiders Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },

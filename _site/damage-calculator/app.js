@@ -94,9 +94,12 @@ const MAX_WEAPON_TIER = ONSLAUGHT_CHANCE_BY_TIER.length - 1;
 // These ids are applied locally and are NOT forwarded to the API as stanceIds.
 // `multiplier` scales the stance's own stat; `addFromStat`/`addFactor` add a share of a
 // different stat on top (e.g. Divine Defiance turning distance fighting into magic level).
+// `asPerks` sends the stance's gain as those flat perks instead of raising the stat itself,
+// for a boost that only covers some elements: `stats.magicLevel` applies to every spell, while
+// the API's "+ ice/earth magic level" perks are scoped to their element.
 const LOCAL_STANCE_MODS = {
   4: { stat: "magicLevel", addFromStat: "skill", addFactor: 0.06, note: "+6% distance as holy magic level" }, // Divine Defiance (paladin)
-  10: { stat: "magicLevel", multiplier: 1.10, note: "+10% magic level for ice/earth spells" }, // Elemental Synthesis (druid)
+  10: { stat: "magicLevel", multiplier: 1.10, asPerks: [41, 29], note: "+10% magic level for ice/earth damage" }, // Elemental Synthesis (druid): + ice / + earth magic level
 };
 
 // Pure +skill stances (a flat % boost to the same skill the calculator already asks for)
@@ -1979,9 +1982,17 @@ function createBuild(key) {
     const apiStanceIds = [];
     const statMultipliers = {};
     const statAdders = {};
+    const stancePerks = [];
     state.stats.stanceIds.forEach((id) => {
       const mod = LOCAL_STANCE_MODS[id];
       if (!mod) { apiStanceIds.push(id); return; }
+      if (mod.asPerks) {
+        // Rounded like the statKeys loop below: magic level is a whole number in game.
+        const value = numberOrZero(state.stats[mod.stat]);
+        const gain = Math.round(value * mod.multiplier) - value;
+        if (gain > 0) mod.asPerks.forEach((perkId) => stancePerks.push({ id: perkId, value: gain }));
+        return;
+      }
       if (mod.multiplier) statMultipliers[mod.stat] = (statMultipliers[mod.stat] ?? 1) * mod.multiplier;
       if (mod.addFromStat) statAdders[mod.stat] = (statAdders[mod.stat] ?? 0) + numberOrZero(state.stats[mod.addFromStat]) * mod.addFactor;
     });
@@ -1992,8 +2003,8 @@ function createBuild(key) {
       if (!Number.isFinite(value)) return;
       const boosted = (statMultipliers[key] ? value * statMultipliers[key] : value) + (statAdders[key] ?? 0);
       // Skills and magic level are whole numbers in game, so a stance that adds a share of
-      // another stat (Divine Defiance: 6% of distance fighting) or scales its own (Elemental
-      // Synthesis) rounds to the nearest integer rather than handing the formula a fractional
+      // another stat (Divine Defiance: 6% of distance fighting) or scales its own rounds to
+      // the nearest integer rather than handing the formula a fractional
       // magic level - which is what made otherwise-correct paladin builds come out slightly off.
       stats[key] = boosted === value ? value : Math.round(boosted);
     });
@@ -2035,6 +2046,7 @@ function createBuild(key) {
     if (wheel) perkGroups.push(state.wheelPerks);
     if (proficiency) perkGroups.push(state.proficiencyPerks);
     if (manual) perkGroups.push(state.manualPerks);
+    perkGroups.push(stancePerks);
     const perks = aggregatePerks(perkGroups);
     // The API scores a "% shielding as extra damage" perk against stats.shielding and silently
     // adds nothing when it is missing, so the stat rides along with the perk - and only with it,
