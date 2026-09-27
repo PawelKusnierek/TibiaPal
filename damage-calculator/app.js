@@ -62,6 +62,9 @@ const DEFAULT_OFF_SKILL = 10;
 // Paladins and casters never reach this: they type their own magic level, and damageRequest
 // sends it for them.
 const OFF_MAGIC_LEVEL_BY_VOCATION = { knight: 12, monk: 50 };
+// Runic Mastery's base magic level (without buffs) is pre-filled as this share of the magic level
+// typed in the Character section, until the user enters their own (see renderRunicMasteryField).
+const BASE_MAGIC_LEVEL_SHARE = 0.8;
 // The API stat each skill is scored against, by the same names weaponSkillKind() returns.
 const SKILL_STATS = { axe: "axe", club: "club", sword: "sword", fist: "fist", distance: "distance", magic: "magicLevel", shield: "shielding", fishing: "fishing" };
 const SKILL_SCALING_SUFFIX = "-percent-extra";
@@ -732,6 +735,7 @@ function expandProficiencyToken(value) {
 //  14 targets [[id,ratio,charmId,charmTier]]   15/16 imbuement element+value (knight-only)
 //  17 weapon forge tier (Onslaught)   18/19 max hitPoints/manaPoints (Overpower/Overflux)
 //  20 shielding skill (only when it differs from the vocation's default)
+//  21 base magic level (Runic Mastery; only when entered)
 // The same rule holds inside a tuple: sideTargets (a beam's outer-beam count) was appended to the
 // rotation tuple and is only written when the row has one.
 function compactBuild(build) {
@@ -760,6 +764,7 @@ function compactBuild(build) {
     stats.hitPoints || null,
     stats.manaPoints || null,
     stats.shielding ?? null,
+    stats.baseMagicLevel || null,
   ]);
 }
 
@@ -784,6 +789,7 @@ function expandBuild(compact) {
   if (at(18) != null) stats.hitPoints = at(18);
   if (at(19) != null) stats.manaPoints = at(19);
   if (at(20) != null) stats.shielding = at(20);
+  if (at(21) != null) stats.baseMagicLevel = at(21);
   const weapon = {};
   if (at(5) != null) weapon.id = at(5);
   if (at(6) != null) weapon.ammoId = at(6);
@@ -849,6 +855,7 @@ function sanitizeState(candidate) {
   if (!stats.imbuementElement || !IMBUEMENT_VALUES.includes(Number(stats.imbuementValue))) stats.imbuementValue = 0;
   else stats.imbuementValue = Number(stats.imbuementValue);
   CHARM_STAT_KEYS.forEach((key) => { stats[key] = Math.max(0, Math.round(numberOrZero(stats[key]))); });
+  stats.baseMagicLevel = Math.max(0, Math.round(numberOrZero(stats.baseMagicLevel)));
   const rows = (key, defaults) => Array.isArray(candidate[key])
     ? candidate[key].filter((row) => row && Number.isInteger(Number(row.id))).map((row) => ({ ...defaults, ...row, id: Number(row.id) }))
     : [];
@@ -909,6 +916,8 @@ function shareableFromState(state) {
   // re-derives from the vocation on the way back in - so the common build stays as short as it
   // was before the field existed.
   if (Number(s.shielding) !== defaultShielding(s.vocation)) stats.shielding = Math.max(0, Math.round(numberOrZero(s.shielding)));
+  // 0 means "not entered" (the request falls back to the magic level), so only a typed value travels.
+  if (Number(s.baseMagicLevel) > 0) stats.baseMagicLevel = Math.round(Number(s.baseMagicLevel));
   return {
     stats,
     weapon: state.weapon,
@@ -1297,6 +1306,8 @@ function createBuild(key) {
         : "Main skill";
     root.querySelectorAll("[data-stat]").forEach((control) => {
       const statKey = control.dataset.stat;
+      // Written with its pre-fill by renderRunicMasteryField below.
+      if (statKey === "baseMagicLevel") return;
       // 0 is "not entered" for the charm stats, so show the empty field and its placeholder.
       const value = CHARM_STAT_KEYS.includes(statKey) && !state.stats[statKey] ? "" : state.stats[statKey] ?? "";
       if ("value" in control) control.value = value;
@@ -1305,6 +1316,7 @@ function createBuild(key) {
     // Must come after the loop above: it writes imbuementValue 0 (the "no imbuement" sentinel)
     // straight onto the tier <select>, which matches no option and would blank it out.
     renderImbuement();
+    renderRunicMasteryField();
   }
 
   function renderStances() {
@@ -1877,6 +1889,33 @@ function createBuild(key) {
     if (field) field.hidden = !usesShieldingPerks();
   }
 
+  // Runic Mastery (API perk "Runic mastery", an on/off perk whose value is ignored) raises a rune's
+  // magic level by a share of stats.baseMagicLevel - the magic level without buffs - and the API
+  // silently adds nothing when that stat is missing. Unlike shielding its value is 0, so the
+  // check is presence rather than a positive value.
+  function usesRunicMastery(perks = aggregatePerks()) {
+    return perks.some((row) => item("perks", row.id)?.bonusType === "runic-mastery");
+  }
+
+  // What stats.baseMagicLevel stands in for while the user hasn't typed one (it's 0), recomputed
+  // as the magic level changes. Only druids and sorcerers have Runic Mastery on their wheel, and
+  // both type their magic level in the Character section.
+  function fallbackBaseMagicLevel() {
+    return Math.round(numberOrZero(state.stats.magicLevel) * BASE_MAGIC_LEVEL_SHARE);
+  }
+
+  // Lives in the wheel section, since Runic Mastery is a wheel perk. The pre-fill is written as the
+  // field's value, but not while the field has focus: clearing it to type a new number would
+  // otherwise refill it mid-edit.
+  function renderRunicMasteryField() {
+    const field = $("runicMasteryFields");
+    if (!field) return;
+    field.hidden = !usesRunicMastery();
+    const input = field.querySelector("input");
+    if (!input || input === document.activeElement) return;
+    input.value = numberOrZero(state.stats.baseMagicLevel) || fallbackBaseMagicLevel();
+  }
+
   function addPerk() {
     const input = $("manualPerkSearch");
     const perk = matchByName("perks", input.value, (entry) => entry.selectable !== false && vocationAllows(entry));
@@ -2053,6 +2092,7 @@ function createBuild(key) {
     // since a build without one never shows the input (see renderShieldingField). A contribution
     // run that drops the proficiency group drops the perk, and with it the stat.
     if (usesShieldingPerks(perks)) stats.shielding = Math.max(0, Math.round(numberOrZero(state.stats.shielding)));
+    if (usesRunicMastery(perks)) stats.baseMagicLevel = Math.round(numberOrZero(state.stats.baseMagicLevel)) || fallbackBaseMagicLevel();
     // Same reasoning for every other skill a perk can scale off. The weapon's own is already in
     // `stats.skill` and the API reads it from there, so only the ones nobody in this vocation
     // trains are left - they ride along at DEFAULT_OFF_SKILL rather than as a field to fill in.
@@ -2075,6 +2115,7 @@ function createBuild(key) {
     // all land here, so this is the one hook that keeps the crit summary from going stale.
     renderWeaponMeta();
     renderShieldingField();
+    renderRunicMasteryField();
     saveState();
     if (savedName && !dirty) {
       dirty = true;
@@ -2265,6 +2306,7 @@ function createBuild(key) {
           if (state.stats.vocation === "druid" || state.stats.vocation === "sorcerer") state.stats.magicLevel = DEFAULT_CASTER_MAGIC_LEVEL;
           if (DEFAULT_SKILL_BY_VOCATION[state.stats.vocation]) state.stats.skill = DEFAULT_SKILL_BY_VOCATION[state.stats.vocation];
           state.stats.shielding = defaultShielding(state.stats.vocation);
+          state.stats.baseMagicLevel = 0;
           state.wheelPlanner = { code: "", vocation: state.stats.vocation, promotionPoints: 0, bonus: 0, effects: [], gemGrades: {} };
           state.proficiencyPlanner = { token: "", weaponName: "", weaponSprite: "", vocation: state.stats.vocation, effects: [] };
           state.manualPerks = state.manualPerks.filter((row) => vocationAllows(item("perks", row.id)));
@@ -2278,6 +2320,9 @@ function createBuild(key) {
         changed();
       });
     });
+    // A base magic level cleared and left empty goes back to showing its pre-fill, which
+    // renderRunicMasteryField holds off on while the field has focus.
+    root.querySelector('[data-stat="baseMagicLevel"]')?.addEventListener("blur", renderRunicMasteryField);
     root.querySelectorAll("[data-add-perk]").forEach((button) => button.addEventListener("click", addPerk));
     $("addSpell").addEventListener("click", addSpell);
     $("rotationPresetSelect").addEventListener("change", applyRotationPreset);

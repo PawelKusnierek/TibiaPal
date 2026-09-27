@@ -258,16 +258,16 @@
     {
         "level":  "90+",
         "place":  "Liberty Bay Quaras",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.3kk",
+        "loot":  "300k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
-        "place":  "Yalahar Sunken Quarter Quaras",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Yalahar Sunken Quaras",
+        "raw_exp":  "1.6kk",
+        "loot":  "200k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },

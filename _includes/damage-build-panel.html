@@ -40,6 +40,15 @@
     <!-- Filled by renderEffectChoices() with one dropdown per situational wheel perk the build
          actually has (e.g. Positional Tactics), and hidden while there are none. -->
     <div id="wheelEffectChoices-{{ include.key }}" class="dc-fields dc-effect-choices" hidden></div>
+    <!-- Shown by renderRunicMasteryField() only while the build has Runic Mastery, whose bonus is
+         a share of the magic level *without* buffs - which the Character section doesn't ask for.
+         Shares the shielding field's layout. -->
+    <div id="runicMasteryFields-{{ include.key }}" class="dc-fields dc-shielding-stat" hidden>
+      <label>Base magic level
+        <input type="number" min="0" step="1" inputmode="numeric" data-stat="baseMagicLevel">
+        <small>Runic Mastery scales with your magic level without equipment, wheel or other buffs. Pre-filled with 80% of your magic level — replace it with your character's own base magic level.</small>
+      </label>
+    </div>
   </section>
 
   <section class="dc-panel dc-accent-proficiency">

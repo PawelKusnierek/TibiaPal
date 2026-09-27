@@ -106,22 +106,22 @@
     {
         "level":  "35+",
         "place":  "Mother of Scarabs Lair -3",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "190k",
+        "loot":  "200k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "30+",
-        "place":  "Meriana Gargoyle Cave (Runes)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "level":  "35+",
+        "place":  "Meriana Gargoyle Cave",
+        "raw_exp":  "160k",
+        "loot":  "300k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "30+",
-        "place":  "Laguna Blood Crabs (Runes)",
+        "level":  "50+",
+        "place":  "Laguna Blood Crabs",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
