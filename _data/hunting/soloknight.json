@@ -234,16 +234,16 @@
     {
         "level":  "90+",
         "place":  "Exotic Cave",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.5kk",
+        "loot":  "400k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
-        "place":  "Edron Heroes -2/-3",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Edron Heroes -2 & -3",
+        "raw_exp":  "1.75kk",
+        "loot":  "300k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
@@ -296,7 +296,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "130+",
+        "level":  "90+",
         "place":  "Grimvale -4",
         "raw_exp":  "-",
         "loot":  "-",
@@ -314,14 +314,6 @@
     {
         "level":  "130+",
         "place":  "Dark Faun Cave",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "130+",
-        "place":  "Lizard Chosens",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
