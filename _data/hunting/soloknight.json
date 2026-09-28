@@ -248,8 +248,16 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "90+",
-        "place":  "Oramond West",
+        "level":  "130+",
+        "place":  "Oramond West (No Quara Raid)",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "weapon_type":  "Physical",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "130+",
+        "place":  "Oramond West (Quara Raid)",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
@@ -312,12 +320,12 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "130+",
+        "level":  "90+",
         "place":  "Dark Faun Cave",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.1kk",
+        "loot":  "500k",
         "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/VVyzX69WqqI"
     },
     {
         "level":  "150+",
