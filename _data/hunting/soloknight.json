@@ -218,16 +218,16 @@
     {
         "level":  "90+",
         "place":  "Carlin Cults",
-        "raw_exp":  "1.3kk",
-        "loot":  "150k",
+        "raw_exp":  "1.55kk",
+        "loot":  "50k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "90+",
         "place":  "Nightmare Scions Krailos",
-        "raw_exp":  "1.4kk",
-        "loot":  "150k",
+        "raw_exp":  "1.5kk",
+        "loot":  "100k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
@@ -298,8 +298,8 @@
     {
         "level":  "100+",
         "place":  "Ravenous Lava Lurkers",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.15kk",
+        "loot":  "-200k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
