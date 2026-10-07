@@ -54,7 +54,7 @@ Markers: `3` = positional + deflate, `2` = positional uncompressed (no `Compress
 
 One shared modal (`#plannerModal`) with two iframes reused across Build A and Build B — see `openPlanner()` / `initializePlannerFrames()`.
 
-- Reopening an *unchanged* build reuses the iframe's current document instead of reloading it — see `pendingNav` in `setPlannerFrameSrc()`.
+- Every open reloads both frames: assigning an iframe's `src` navigates even when the URL is unchanged. So `setPlannerFrameSrc()` always sets `pendingNav`, and the build is only requested from the `load` listener. Never ask the outgoing document — a wheel preset/code imported in the modal changes the document without changing its `src`, so "same URL" does not mean "same build".
 - The `.dc-planner-loading` overlay covers each iframe on *every* open with a minimum duration (`PLANNER_LOADING_MIN_MS`), because even a no-navigation reopen can flash stale content while the modal settles.
 - `proficiency-calculator/app.js`'s `wpBuild` cookie is only for the standalone `/weapon-proficiency.html` page. It's skipped (read and write) when `isPlannerEmbed` — otherwise editing one build inside the damage calculator leaks its weapon/perk choices into a different, not-yet-customized build. **Don't remove that guard.**
 

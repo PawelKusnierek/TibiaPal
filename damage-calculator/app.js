@@ -2549,8 +2549,14 @@ function setPlannerLoading(name, loading) {
   else if (overlay) overlay.hidden = true;
 }
 
+// Assigning src always navigates, even to the URL the frame is already showing - so the outgoing
+// document's replies are stale every time, not just when the URL changed. They matter most when it
+// is the same URL: a wheel preset or code imported in the modal changes the document without
+// changing its src, so reopening a saved build whose code matches that src would otherwise take
+// the imported wheel for the saved build's own (and, if the modal was closed before the reload
+// reported back, keep it, since receivePlannerReply() then rejects the correct report).
 function setPlannerFrameSrc(frame, url) {
-  if (frame.getAttribute("src") !== url) frame.dataset.pendingNav = "1";
+  frame.dataset.pendingNav = "1";
   frame.src = url;
 }
 
@@ -2932,29 +2938,15 @@ function openPlanner(build, name) {
   plannerModal.classList.remove("dc-closing");
   plannerModal.hidden = false;
   document.body.style.overflow = "hidden";
-  const previousWheelSrc = wheel.getAttribute("src");
-  const previousProficiencySrc = proficiency.getAttribute("src");
+  // Both frames navigate (see setPlannerFrameSrc), and their "load" listeners in wireGlobalEvents()
+  // sync the grades/vocation and ask for the build - asking now would only reach the outgoing
+  // document, which can be holding another build's wheel or an imported preset.
   initializePlannerFrames(build);
   // Only the planner actually on screen needs a spinner — the other one navigates silently
-  // in the background (its content isn't visible either way). Show it even when the frame
-  // isn't navigating: the modal is still animating/settling into view at this point, and the
-  // spinner is cheaper cover for that than trying to guarantee the frame underneath never
-  // shows a stray frame of its own.
+  // in the background (its content isn't visible either way). It also covers the outgoing
+  // document, which keeps showing until the new one is ready.
   setPlannerLoading("wheel", name === "wheel");
   setPlannerLoading("proficiency", name === "proficiency");
-  if (name === "wheel") {
-    syncWheelGrades(build);
-    // If the src didn't change, the iframe won't navigate and no "load" event will fire to
-    // request a fresh build — safe to ask immediately since no navigation is racing us. If it
-    // did change, wait for the "load" listener below: requesting now can hit the outgoing
-    // (stale) document mid-navigation, which reports its old vocation and corrupts our state.
-    if (wheel.getAttribute("src") === previousWheelSrc) {
-      wheel.contentWindow?.postMessage({ type: "tibiapal:request-wheel-build" }, window.location.origin);
-    }
-  }
-  if (name === "proficiency" && proficiency.getAttribute("src") === previousProficiencySrc) {
-    proficiency.contentWindow?.postMessage({ type: "tibiapal:request-proficiency-build" }, window.location.origin);
-  }
 }
 
 function closePlanner() {
