@@ -41,13 +41,13 @@ function submit_exercise_form() {
   points_main_skill_durable_weapon = points_main_skill_regular_weapon * 3.6;
   points_main_skill_lasting_weapon = points_main_skill_regular_weapon * 28.8;
 
-  cost_regular_k = 347.222
+  cost_regular_k = 434.028
   cost_regular_tc = 25
 
-  cost_durable_k = 1250
+  cost_durable_k = 1562.5
   cost_durable_tc = 90
 
-  cost_lasting_k = 10000
+  cost_lasting_k = 12500
   cost_lasting_tc = 720
 
   magic_skill_constant = 1600;
@@ -115,9 +115,9 @@ function submit_exercise_form() {
   }
 
   //filling out the html after calculation
-  IsTCOver13900 = IsDummy = document.getElementById("tc_price").checked;
+  IsTCOverBreakpoint = IsDummy = document.getElementById("tc_price").checked;
 
-  if (IsTCOver13900) {
+  if (IsTCOverBreakpoint) {
     exerciseformresults.innerHTML = "To get from skill " + currentskill + " to skill " + targetskill + ", you need to use a total of: <br><br><b>"
       + regular_weapons_required + " regular exercise weapons</b>, at a cost of " + regular_cost + " " + regular_k_or_kk + ", time required: " + Math.floor(regular_weapons_required / 3.6) + " hours and " + Math.round(((regular_weapons_required * 10) % 36) * 1.667) + " minutes<br><br><b>"
       + durable_weapons_required + " durable exercise weapons</b>, at a cost of " + durable_cost + " " + durable_k_or_kk + ", time required: " + durable_weapons_required + " hours<br><br><b>"
@@ -202,7 +202,7 @@ function calculate_skill_gain_from_weapons() {
   const loyalty = parseFloat(document.getElementById("loyalty_spend").value);
   const isDummy = document.getElementById("dummy_spend").checked;
   const isEvent = document.getElementById("event_spend").checked;
-  const isTCOver13900 = document.getElementById("tc_price_spend").checked;
+  const isTCOverBreakpoint = document.getElementById("tc_price_spend").checked;
   
   // Exercise weapon skill points (same as in original function)
   const pointsMainSkillRegularWeapon = 300000;
@@ -210,11 +210,11 @@ function calculate_skill_gain_from_weapons() {
   const pointsMainSkillLastingWeapon = pointsMainSkillRegularWeapon * 28.8;
   
   // Costs
-  const costRegularK = 347.222;
+  const costRegularK = 434.028;
   const costRegularTc = 25;
-  const costDurableK = 1250;
+  const costDurableK = 1562.5;
   const costDurableTc = 90;
-  const costLastingK = 10000;
+  const costLastingK = 12500;
   const costLastingTc = 720;
   
   // Determine weapon type and points
@@ -296,7 +296,7 @@ function calculate_skill_gain_from_weapons() {
   const exerciseFormResults = document.getElementById("exerciseformresults_spend");
   const skillGain = newSkillLevel - preciseCurrentSkill;
   
-  if (isTCOver13900) {
+  if (isTCOverBreakpoint) {
     exerciseFormResults.innerHTML = "Using " + weaponCount + " " + weaponType.toLowerCase() + " exercise weapons will give you:<br><br><b>" +
       skillGain.toFixed(2) + " skill levels</b><br><br>" +
       "You will go from skill " + preciseCurrentSkill.toFixed(2) + " to approximately skill " + newSkillLevel.toFixed(2) + "<br><br>" +
