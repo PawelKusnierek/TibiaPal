@@ -2,7 +2,7 @@
 layout: default
 title: "Tibia Exercise Weapons Calculator | TibiaPal.com"
 description: "Calculate how many Tibia exercise weapons you need to reach your target skill, or which skill you'll reach with a given number of exercise weapons."
-scripts: <script src="scripts/exercise.js"></script>
+scripts: <script src="scripts/exercise.js?v=20261010-1"></script>
 
 ---
 
@@ -57,7 +57,7 @@ scripts: <script src="scripts/exercise.js"></script>
         <input type="submit" id="exercisesubmitbutton" value="Submit"
             onclick="event.preventDefault(); submit_exercise_form()" />
     </form>
-    <p id="exerciseformresults"></p>
+    <div id="exerciseformresults"></div>
 </div>
 
 <div id="TargetSpend" class="tabcontent">
@@ -112,5 +112,5 @@ scripts: <script src="scripts/exercise.js"></script>
         <input type="submit" id="exercisesubmitbutton_spend" value="Submit"
             onclick="event.preventDefault(); submit_exercise_form_spend()" />
     </form>
-    <p id="exerciseformresults_spend"></p>
+    <div id="exerciseformresults_spend"></div>
 </div>

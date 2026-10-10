@@ -1776,12 +1776,131 @@ ol, ul {
   display: block;
 }
 
-#exerciseformresults {
-  padding-bottom: 15px;
+#exerciseformresults, #exerciseformresults_spend {
+  padding: 0px 15px 15px 15px;
+  text-align: left;
 }
 
-#exerciseformresults_spend {
-  padding-bottom: 15px;
+.ex-results {
+  max-width: 600px;
+}
+
+.ex-results .ex-summary {
+  padding: 12px 14px;
+  background-color: #0f2344e8;
+  border: 1px solid rgba(45, 140, 248, 0.45);
+  border-radius: 6px;
+}
+
+.ex-results .ex-label {
+  font-size: 12px;
+  color: rgba(203, 212, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ex-results .ex-headline {
+  margin-top: 4px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ex-results .ex-subline {
+  margin-top: 4px;
+}
+
+.ex-results .ex-arrow {
+  padding: 0px 4px;
+  color: #6f9ae4;
+}
+
+.ex-results .ex-muted {
+  font-size: 0.85em;
+  font-weight: normal;
+  color: rgba(203, 212, 255, 0.7);
+}
+
+.ex-results .ex-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.ex-results .ex-tag {
+  padding: 2px 8px;
+  font-size: 12px;
+  border: 1px solid rgba(111, 154, 228, 0.6);
+  border-radius: 999px;
+  background-color: rgba(45, 140, 248, 0.15);
+}
+
+.ex-results .ex-intro {
+  display: block;
+  margin: 14px 0px 4px 0px;
+}
+
+.ex-results .ex-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ex-results .ex-table th, .ex-results .ex-table td {
+  width: auto;
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid rgba(203, 212, 255, 0.15);
+}
+
+.ex-results .ex-table thead th {
+  font-size: 12px;
+  font-weight: normal;
+  color: rgba(203, 212, 255, 0.8);
+  border-bottom-color: rgba(45, 140, 248, 0.45);
+}
+
+.ex-results .ex-table .ex-num {
+  text-align: right;
+}
+
+.ex-results .ex-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 12px 0px 0px 0px;
+}
+
+.ex-results .ex-stats div {
+  padding: 10px 12px;
+  border: 1px solid rgba(203, 212, 255, 0.15);
+  border-radius: 6px;
+  background-color: rgba(6, 16, 33, 0.6);
+}
+
+.ex-results .ex-stats dt {
+  font-size: 12px;
+  color: rgba(203, 212, 255, 0.8);
+}
+
+.ex-results .ex-stats dd {
+  margin: 4px 0px 0px 0px;
+  font-weight: bold;
+}
+
+.ex-results .ex-note {
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgba(203, 212, 255, 0.7);
+}
+
+@media (max-width: 600px) {
+  .ex-results .ex-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .ex-results .ex-table th, .ex-results .ex-table td {
+    padding: 6px;
+  }
 }
 
 #other_tools_list li {

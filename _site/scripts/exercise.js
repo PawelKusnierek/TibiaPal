@@ -1,4 +1,73 @@
 //Each weapon is equivalent to 300k mana points - 600 ultimate mana potions * 500 average value, and all vocs progress their main skill at the same rate with the weapons
+
+// Above this Tibia Coin price (gp per coin), buying weapons for gold is cheaper: 12 500 000 gp / 720 TC ≈ 17 361
+const TC_BREAKPOINT_LABEL = "17 400 gp";
+
+// points: main skill points per weapon; gold / tc: price per weapon;
+// hours: training time per weapon (a regular weapon lasts 1000 charges at 2 s each)
+const EXERCISE_WEAPONS = {
+  Regular: { name: "Regular", points: 300000, gold: 434028, tc: 25, hours: 1 / 3.6 },
+  Durable: { name: "Durable", points: 300000 * 3.6, gold: 1562500, tc: 90, hours: 1 },
+  Lasting: { name: "Lasting", points: 300000 * 28.8, gold: 12500000, tc: 720, hours: 8 }
+};
+
+function format_number(value) {
+  return Math.round(value).toLocaleString("en-US");
+}
+
+// Tibia shorthand: 434k, 1.56kk, 125kk
+function format_gold(gp) {
+  if (gp >= 1000000) {
+    return (Math.round(gp / 10000) / 100).toLocaleString("en-US") + "kk";
+  }
+  return format_number(gp / 1000) + "k";
+}
+
+function format_cost(weapon, count, useGold) {
+  if (useGold) {
+    return '<span title="' + format_number(weapon.gold * count) + ' gp">' + format_gold(weapon.gold * count) + "</span>";
+  }
+  return format_number(weapon.tc * count) + " TC";
+}
+
+function format_duration(hours) {
+  const totalMinutes = Math.round(hours * 60);
+  const h = Math.floor(totalMinutes / 60);
+  const m = totalMinutes % 60;
+  let text = h > 0 ? format_number(h) + " h" : "";
+  if (m > 0 || h === 0) {
+    text += (text ? " " : "") + m + " min";
+  }
+  if (h >= 24) {
+    text += ' <span class="ex-muted">(' + (Math.round(hours / 24 * 10) / 10).toLocaleString("en-US") + " days)</span>";
+  }
+  return text;
+}
+
+function format_skill(skill, percentToNext) {
+  return skill + ' <span class="ex-muted">(' + (Math.round(percentToNext * 10) / 10) + "% to next)</span>";
+}
+
+function selected_option_text(selectId) {
+  const select = document.getElementById(selectId);
+  return select.options[select.selectedIndex].text;
+}
+
+function modifier_tags(loyalty, isEvent, isDummy) {
+  const tags = [];
+  if (Number(loyalty) > 0) tags.push("Loyalty " + loyalty + "%");
+  if (isEvent) tags.push("Double event");
+  if (isDummy) tags.push("Private dummy");
+  if (tags.length === 0) return "";
+  return '<div class="ex-tags">' + tags.map(tag => '<span class="ex-tag">' + tag + "</span>").join("") + "</div>";
+}
+
+function currency_note(useGold) {
+  return '<div class="ex-note">' + (useGold
+    ? "Prices in gold, since Tibia Coins cost more than " + TC_BREAKPOINT_LABEL + " on your server."
+    : "Prices in Tibia Coins, since they cost less than " + TC_BREAKPOINT_LABEL + " on your server.") + "</div>";
+}
+
 function submit_exercise_form() {
   // Get the required field values
   const currentSkill = document.getElementById("currentskill").value;
@@ -37,19 +106,6 @@ function submit_exercise_form() {
     return;
   }
 
-  points_main_skill_regular_weapon = 300000;
-  points_main_skill_durable_weapon = points_main_skill_regular_weapon * 3.6;
-  points_main_skill_lasting_weapon = points_main_skill_regular_weapon * 28.8;
-
-  cost_regular_k = 434.028
-  cost_regular_tc = 25
-
-  cost_durable_k = 1562.5
-  cost_durable_tc = 90
-
-  cost_lasting_k = 12500
-  cost_lasting_tc = 720
-
   magic_skill_constant = 1600;
   main_magic_constant = 1.1;
 
@@ -84,51 +140,39 @@ function submit_exercise_form() {
 
   points_required = main_skill_calculation_points_required(vocation_constant, currentskill, currentskillpercentage, targetskill, IsDummy, IsEvent, 0)
 
-  regular_weapons_required = Math.ceil(points_required / (points_main_skill_regular_weapon * (1 + (loyalty / 100))))
-  durable_weapons_required = Math.ceil(points_required / (points_main_skill_durable_weapon * (1 + (loyalty / 100))))
-  lasting_weapons_required = Math.ceil(points_required / (points_main_skill_lasting_weapon * (1 + (loyalty / 100))))
-
-  regular_k_or_kk = "k"
-  regular_cost = regular_weapons_required * cost_regular_k
-  regular_cost_tc = regular_weapons_required * cost_regular_tc
-
-  if (Math.round(regular_cost) > 1000) {
-    regular_cost = regular_cost / 1000
-    regular_k_or_kk = "kk"
-    regular_cost = Math.round(regular_cost * 100) / 100
-  }
-
-  durable_k_or_kk = "k"
-  durable_cost = durable_weapons_required * cost_durable_k
-  durable_cost_tc = durable_weapons_required * cost_durable_tc
-  if (Math.round(durable_cost) > 1000) {
-    durable_cost = durable_cost / 1000
-    durable_k_or_kk = "kk"
-  }
-
-  lasting_k_or_kk = "k"
-  lasting_cost = lasting_weapons_required * cost_lasting_k
-  lasting_cost_tc = lasting_weapons_required * cost_lasting_tc
-  if (Math.round(lasting_cost) > 1000) {
-    lasting_cost = lasting_cost / 1000
-    lasting_k_or_kk = "kk"
-  }
+  regular_weapons_required = Math.ceil(points_required / (EXERCISE_WEAPONS.Regular.points * (1 + (loyalty / 100))))
+  durable_weapons_required = Math.ceil(points_required / (EXERCISE_WEAPONS.Durable.points * (1 + (loyalty / 100))))
+  lasting_weapons_required = Math.ceil(points_required / (EXERCISE_WEAPONS.Lasting.points * (1 + (loyalty / 100))))
 
   //filling out the html after calculation
-  IsTCOverBreakpoint = IsDummy = document.getElementById("tc_price").checked;
+  IsTCOverBreakpoint = document.getElementById("tc_price").checked;
 
-  if (IsTCOverBreakpoint) {
-    exerciseformresults.innerHTML = "To get from skill " + currentskill + " to skill " + targetskill + ", you need to use a total of: <br><br><b>"
-      + regular_weapons_required + " regular exercise weapons</b>, at a cost of " + regular_cost + " " + regular_k_or_kk + ", time required: " + Math.floor(regular_weapons_required / 3.6) + " hours and " + Math.round(((regular_weapons_required * 10) % 36) * 1.667) + " minutes<br><br><b>"
-      + durable_weapons_required + " durable exercise weapons</b>, at a cost of " + durable_cost + " " + durable_k_or_kk + ", time required: " + durable_weapons_required + " hours<br><br><b>"
-      + lasting_weapons_required + " lasting exercise weapons</b>, at a cost of " + lasting_cost + " " + lasting_k_or_kk + ", time required: " + lasting_weapons_required * 8 + " hours"
-  }
-  else {
-    exerciseformresults.innerHTML = "To get from skill " + currentskill + " to skill " + targetskill + ", you need to use a total of: <br><br><b>"
-      + regular_weapons_required + " regular exercise weapons</b>, at a cost of " + regular_cost_tc + " Tibia Coins, time required: " + Math.floor(regular_weapons_required / 3.6) + " hours and " + Math.round(((regular_weapons_required * 10) % 36) * 1.667) + " minutes<br><br><b>"
-      + durable_weapons_required + " durable exercise weapons</b>, at a cost of " + durable_cost_tc + " Tibia Coins, time required: " + durable_weapons_required + " hours<br><br><b>"
-      + lasting_weapons_required + " lasting exercise weapons</b>, at a cost of " + lasting_cost_tc + " Tibia Coins, time required: " + lasting_weapons_required * 8 + " hours"
-  }
+  const rows = [
+    [EXERCISE_WEAPONS.Lasting, lasting_weapons_required],
+    [EXERCISE_WEAPONS.Durable, durable_weapons_required],
+    [EXERCISE_WEAPONS.Regular, regular_weapons_required]
+  ].map(([weapon, count]) =>
+    "<tr>"
+    + '<th scope="row">' + weapon.name + "</th>"
+    + '<td class="ex-num"><b>' + format_number(count) + "</b></td>"
+    + '<td class="ex-num">' + format_cost(weapon, count, IsTCOverBreakpoint) + "</td>"
+    + '<td class="ex-num">' + format_duration(count * weapon.hours) + "</td>"
+    + "</tr>"
+  ).join("")
+
+  exerciseformresults.innerHTML = '<div class="ex-results">'
+    + '<div class="ex-summary">'
+    + '<div class="ex-label">' + selected_option_text("vocation") + "</div>"
+    + '<div class="ex-headline">Skill ' + format_skill(parseInt(currentskill), parseFloat(currentskillpercentage)) + ' <span class="ex-arrow">→</span> ' + parseInt(targetskill) + "</div>"
+    + modifier_tags(loyalty, IsEvent, IsDummy)
+    + "</div>"
+    + '<p class="ex-intro">Use <b>one</b> of the following:</p>'
+    + '<table class="ex-table">'
+    + '<thead><tr><th scope="col">Weapon</th><th scope="col" class="ex-num">Amount</th><th scope="col" class="ex-num">Cost</th><th scope="col" class="ex-num">Training time</th></tr></thead>'
+    + "<tbody>" + rows + "</tbody>"
+    + "</table>"
+    + currency_note(IsTCOverBreakpoint)
+    + "</div>"
 
 }
 
@@ -204,40 +248,10 @@ function calculate_skill_gain_from_weapons() {
   const isEvent = document.getElementById("event_spend").checked;
   const isTCOverBreakpoint = document.getElementById("tc_price_spend").checked;
   
-  // Exercise weapon skill points (same as in original function)
-  const pointsMainSkillRegularWeapon = 300000;
-  const pointsMainSkillDurableWeapon = pointsMainSkillRegularWeapon * 3.6;
-  const pointsMainSkillLastingWeapon = pointsMainSkillRegularWeapon * 28.8;
-  
-  // Costs
-  const costRegularK = 434.028;
-  const costRegularTc = 25;
-  const costDurableK = 1562.5;
-  const costDurableTc = 90;
-  const costLastingK = 12500;
-  const costLastingTc = 720;
-  
-  // Determine weapon type and points
-  let weaponPoints, weaponCostK, weaponCostTc, weaponTime;
-  if (weaponType === "Regular") {
-    weaponPoints = pointsMainSkillRegularWeapon;
-    weaponCostK = costRegularK;
-    weaponCostTc = costRegularTc;
-    weaponTime = weaponCount / 3.6; // hours
-  } else if (weaponType === "Durable") {
-    weaponPoints = pointsMainSkillDurableWeapon;
-    weaponCostK = costDurableK;
-    weaponCostTc = costDurableTc;
-    weaponTime = weaponCount; // hours
-  } else if (weaponType === "Lasting") {
-    weaponPoints = pointsMainSkillLastingWeapon;
-    weaponCostK = costLastingK;
-    weaponCostTc = costLastingTc;
-    weaponTime = weaponCount * 8; // hours
-  }
-  
+  const weapon = EXERCISE_WEAPONS[weaponType];
+
   // Calculate total points gained (with loyalty bonus)
-  let totalPointsGained = weaponCount * weaponPoints * (1 + (loyalty / 100));
+  let totalPointsGained = weaponCount * weapon.points * (1 + (loyalty / 100));
   
   // Apply modifiers (reverse of the original calculation)
   if (isEvent) {
@@ -265,50 +279,35 @@ function calculate_skill_gain_from_weapons() {
   // Calculate new total points after using weapons
   const newTotalPoints = currentSkillEffectivePoints + totalPointsGained;
   
-  // Find the skill level that corresponds to these total points
-  const newSkillLevel = find_skill_level_from_points(1600, vocationConstant, newTotalPoints);
-  
-  // Calculate costs
-  let costK = weaponCount * weaponCostK;
-  let costTc = weaponCount * weaponCostTc;
-  let costUnit = "k";
-  
-  if (Math.round(costK) > 1000) {
-    costK = costK / 1000;
-    costUnit = "kk";
-    costK = Math.round(costK * 100) / 100;
-  }
-  
-  // Format time
-  let timeDisplay;
-  if (weaponType === "Regular") {
-    const hours = Math.floor(weaponTime);
-    const minutes = Math.round((weaponTime % 1) * 60);
-    timeDisplay = hours + " hours and " + minutes + " minutes";
-  } else {
-    timeDisplay = Math.round(weaponTime) + " hours";
-  }
-  
-  // Calculate precise current skill level
+  // Find the skill level that corresponds to these total points, and how far into it they reach
+  const newSkill = Math.floor(find_skill_level_from_points(1600, vocationConstant, newTotalPoints) + 1e-9);
+  const pointsInNewSkill = points_to_next_skill_level(1600, vocationConstant, newSkill, 0);
+  const pointsLeftInNewSkill = total_skill_points_at_given_level(1600, vocationConstant, newSkill + 1, 0) - newTotalPoints;
+  const newSkillPercentage = Math.min(100, Math.max(0, pointsLeftInNewSkill / pointsInNewSkill * 100));
+
+  // Skill as a decimal (112.25 = skill 112 with 75% to next), the same way for both ends
   const preciseCurrentSkill = Math.floor(currentSkill) + ((100 - currentSkillPercentage) / 100);
-  
+  const preciseNewSkill = newSkill + ((100 - newSkillPercentage) / 100);
+  const skillGain = preciseNewSkill - preciseCurrentSkill;
+
   // Display results
   const exerciseFormResults = document.getElementById("exerciseformresults_spend");
-  const skillGain = newSkillLevel - preciseCurrentSkill;
-  
-  if (isTCOverBreakpoint) {
-    exerciseFormResults.innerHTML = "Using " + weaponCount + " " + weaponType.toLowerCase() + " exercise weapons will give you:<br><br><b>" +
-      skillGain.toFixed(2) + " skill levels</b><br><br>" +
-      "You will go from skill " + preciseCurrentSkill.toFixed(2) + " to approximately skill " + newSkillLevel.toFixed(2) + "<br><br>" +
-      "Cost: " + costK + " " + costUnit + "<br>" +
-      "Time required: " + timeDisplay;
-  } else {
-    exerciseFormResults.innerHTML = "Using " + weaponCount + " " + weaponType.toLowerCase() + " exercise weapons will give you:<br><br><b>" +
-      skillGain.toFixed(2) + " skill levels</b><br><br>" +
-      "You will go from skill " + preciseCurrentSkill.toFixed(2) + " to approximately skill " + newSkillLevel.toFixed(2) + "<br><br>" +
-      "Cost: " + costTc + " Tibia Coins<br>" +
-      "Time required: " + timeDisplay;
-  }
+
+  exerciseFormResults.innerHTML = '<div class="ex-results">' +
+    '<div class="ex-summary">' +
+    '<div class="ex-label">' + selected_option_text("vocation_spend") + "</div>" +
+    '<div class="ex-headline">+' + skillGain.toFixed(2) + " skill levels</div>" +
+    '<div class="ex-subline">Skill ' + format_skill(Math.floor(currentSkill), currentSkillPercentage) +
+    ' <span class="ex-arrow">→</span> ' + format_skill(newSkill, newSkillPercentage) + "</div>" +
+    modifier_tags(loyalty, isEvent, isDummy) +
+    "</div>" +
+    '<dl class="ex-stats">' +
+    "<div><dt>Weapons</dt><dd>" + format_number(weaponCount) + " " + weapon.name.toLowerCase() + "</dd></div>" +
+    "<div><dt>Cost</dt><dd>" + format_cost(weapon, weaponCount, isTCOverBreakpoint) + "</dd></div>" +
+    "<div><dt>Training time</dt><dd>" + format_duration(weaponCount * weapon.hours) + "</dd></div>" +
+    "</dl>" +
+    currency_note(isTCOverBreakpoint) +
+    "</div>";
 }
 
 function find_skill_level_from_points(skill_constant, vocation_constant, total_points) {
