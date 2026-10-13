@@ -120,74 +120,74 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "50+",
+        "level":  "35+",
         "place":  "Laguna Blood Crabs",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "160k",
+        "loot":  "350k",
         "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/ru3lLIUJ8eI"
     },
     {
         "level":  "50+",
         "place":  "Wyrms LB",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "420k",
+        "loot":  "0k",
         "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/DujCnEzUF4A"
     },
     {
         "level":  "50+",
         "place":  "Lion's Rock",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "375k",
+        "loot":  "0k",
         "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/ADda5KzhdG0"
     },
     {
         "level":  "50+",
         "place":  "Edron Bonebeasts",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "375k",
+        "loot":  "-50k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "50+",
         "place":  "Vengoth Haunted Treelings",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "320k",
+        "loot":  "-80k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "50+",
         "place":  "Kha'Zeel Ancient Scarabs",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "300k",
+        "loot":  "0k",
         "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/xKoWjt3bG74"
     },
     {
         "level":  "60+",
         "place":  "Water Elementals South Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "650k",
+        "loot":  "200k",
         "weapon_type":  "Energy",
-        "link":  "https://youtu.be/"
+        "link":  "https://youtu.be/1muhbsZofTM"
     },
     {
         "level":  "60+",
         "place":  "Water Elementals West Port Hope",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "440k",
+        "loot":  "20k",
         "weapon_type":  "Energy",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "60+",
         "place":  "Nibelor Crystal Spiders",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "440k",
+        "loot":  "-30k",
         "weapon_type":  "Energy",
         "link":  "https://youtu.be/"
     },

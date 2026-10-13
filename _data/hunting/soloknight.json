@@ -250,8 +250,8 @@
     {
         "level":  "130+",
         "place":  "Oramond West (No Quara Raid)",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.65kk",
+        "loot":  "200k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
@@ -298,7 +298,7 @@
     {
         "level":  "100+",
         "place":  "Ravenous Lava Lurkers",
-        "raw_exp":  "2.15kk",
+        "raw_exp":  "2.1kk",
         "loot":  "-200k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
@@ -320,6 +320,14 @@
         "link":  "https://youtu.be/Iq47VL2AulA"
     },
     {
+        "level":  "130+",
+        "place":  "Elder Wyrms Drefia",
+        "raw_exp":  "1.8kk",
+        "loot":  "100k",
+        "weapon_type":  "Physical",
+        "link":  "https://youtu.be/"
+    },
+    {
         "level":  "90+",
         "place":  "Dark Faun Cave",
         "raw_exp":  "1.1kk",
@@ -338,14 +346,6 @@
     {
         "level":  "150+",
         "place":  "Lower Spike",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "130+",
-        "place":  "Elder Wyrms Drefia",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical",
