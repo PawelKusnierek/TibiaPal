@@ -336,11 +336,19 @@
         "link":  "https://youtu.be/VVyzX69WqqI"
     },
     {
-        "level":  "150+",
+        "level":  "130+",
         "place":  "Barkless",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.3kk",
+        "loot":  "0k",
         "weapon_type":  "Physical",
+        "link":  "https://youtu.be/"
+    },
+        {
+        "level":  "130+",
+        "place":  "Yalahar Grim Reapers (Advanced)",
+        "raw_exp":  "2.9kk",
+        "loot":  "-100k",
+        "weapon_type":  "Fire, Energy",
         "link":  "https://youtu.be/"
     },
     {
@@ -384,10 +392,10 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "150+",
+        "level":  "130+",
         "place":  "Deeplings Library",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.6kk",
+        "loot":  "800k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
@@ -456,11 +464,11 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "200+",
+        "level":  "130+",
         "place":  "Glooth Bandits",
         "raw_exp":  "-",
         "loot":  "-",
-        "weapon_type":  "Fire",
+        "weapon_type":  "Physical, Fire",
         "link":  "https://youtu.be/"
     },
     {
@@ -480,7 +488,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "250+",
+        "level":  "200+",
         "place":  "Medusa Tower",
         "raw_exp":  "-",
         "loot":  "-",
@@ -489,7 +497,7 @@
     },
     {
         "level":  "250+",
-        "place":  "Carnivora\u0027s Rock",
+        "place":  "Carnivora's Rock",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Fire, Ice",
@@ -504,7 +512,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "200+",
         "place":  "Asura Palace",
         "raw_exp":  "-",
         "loot":  "-",
@@ -512,7 +520,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Deeper Banuta (Bottom Floor)",
         "raw_exp":  "-",
         "loot":  "-",
