@@ -353,17 +353,9 @@
     },
     {
         "level":  "150+",
-        "place":  "Lower Spike",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "150+",
         "place":  "Edron South Werecreatures",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "1.65kk",
+        "loot":  "600k",
         "weapon_type":  "Physical",
         "link":  "https://youtu.be/"
     },
@@ -384,19 +376,27 @@
         "link":  "https://youtu.be/p84-jPg3_D8"
     },
     {
-        "level":  "150+",
-        "place":  "Iksupan",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical",
-        "link":  "https://youtu.be/"
-    },
-    {
         "level":  "130+",
         "place":  "Deeplings Library",
         "raw_exp":  "1.6kk",
         "loot":  "800k",
         "weapon_type":  "Physical",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "150+",
+        "place":  "Glooth Tower",
+        "raw_exp":  "2.1kk",
+        "loot":  "500k",
+        "weapon_type":  "Physical, Energy",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "200+",
+        "place":  "Lower Spike -8",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "weapon_type":  "Ice",
         "link":  "https://youtu.be/"
     },
     {
@@ -437,14 +437,6 @@
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Physical, Ice, Energy",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "200+",
-        "place":  "Glooth Tower",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical, Energy",
         "link":  "https://youtu.be/"
     },
     {
