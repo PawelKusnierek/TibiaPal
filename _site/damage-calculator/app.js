@@ -501,7 +501,26 @@ const DEFAULT_CHARM_TIER = 2;
 // Overpower and Overflux hit for a share of the character's own max HP / mana, which the API reads
 // from these stats (the charm's `requiresStat`). Nothing else uses them, so 0 means "not entered"
 // and the inputs only show while a target runs one of those charms - see renderCharmStatFields().
+// Until the user enters their own, estimatedCharmStat() stands in for them.
 const CHARM_STAT_KEYS = ["hitPoints", "manaPoints"];
+const CHARM_STAT_LABELS = { hitPoints: "max HP", manaPoints: "max mana" };
+// Every character has 185 HP / 90 mana at level 8 (gaining 5 of each per level before that),
+// and from there gains a fixed amount per level for its vocation. That's the naked base value:
+// wheel, equipment and other bonuses all come on top, so the estimate always runs low.
+const CHARM_STAT_LEVEL_8 = { hitPoints: 185, manaPoints: 90 };
+const CHARM_STAT_GAIN_BY_VOCATION = {
+  knight: { hitPoints: 15, manaPoints: 5 },
+  paladin: { hitPoints: 10, manaPoints: 15 },
+  druid: { hitPoints: 5, manaPoints: 30 },
+  sorcerer: { hitPoints: 5, manaPoints: 30 },
+  monk: { hitPoints: 10, manaPoints: 10 },
+};
+
+function estimatedCharmStat(stats, key) {
+  const level = Math.max(1, Math.round(numberOrZero(stats.level)));
+  const gain = CHARM_STAT_GAIN_BY_VOCATION[stats.vocation]?.[key] ?? 5;
+  return CHARM_STAT_LEVEL_8[key] + (Math.min(level, 8) - 8) * 5 + Math.max(level - 8, 0) * gain;
+}
 
 function charmStatsRequiredBy(targets) {
   return new Set((targets ?? []).map((row) => row.charmId && item("charms", row.charmId)?.requiresStat).filter(Boolean));
@@ -1306,10 +1325,9 @@ function createBuild(key) {
         : "Main skill";
     root.querySelectorAll("[data-stat]").forEach((control) => {
       const statKey = control.dataset.stat;
-      // Written with its pre-fill by renderRunicMasteryField below.
-      if (statKey === "baseMagicLevel") return;
-      // 0 is "not entered" for the charm stats, so show the empty field and its placeholder.
-      const value = CHARM_STAT_KEYS.includes(statKey) && !state.stats[statKey] ? "" : state.stats[statKey] ?? "";
+      // Written with their pre-fills by renderRunicMasteryField / renderCharmStatFields below.
+      if (statKey === "baseMagicLevel" || CHARM_STAT_KEYS.includes(statKey)) return;
+      const value = state.stats[statKey] ?? "";
       if ("value" in control) control.value = value;
       else control.textContent = value;
     });
@@ -1317,6 +1335,7 @@ function createBuild(key) {
     // straight onto the tier <select>, which matches no option and would blank it out.
     renderImbuement();
     renderRunicMasteryField();
+    renderCharmStatFields();
   }
 
   function renderStances() {
@@ -1866,10 +1885,27 @@ function createBuild(key) {
   }
 
   // Max HP / max mana under the target list, each shown only while some target's charm reads it.
+  // A stat left at 0 is pre-filled with its estimate from vocation and level, with a warning that
+  // it leaves out wheel and gear. As with Runic Mastery, the pre-fill isn't written while the field
+  // has focus, so clearing it to type a new number doesn't refill it mid-edit.
   function renderCharmStatFields() {
     const required = charmStatsRequiredBy(state.targets);
-    root.querySelectorAll("[data-charm-stat]").forEach((field) => { field.hidden = !required.has(field.dataset.charmStat); });
+    const estimated = [];
+    root.querySelectorAll("[data-charm-stat]").forEach((field) => {
+      const key = field.dataset.charmStat;
+      field.hidden = !required.has(key);
+      if (required.has(key) && !state.stats[key]) estimated.push(key);
+      const input = field.querySelector("input");
+      if (input && input !== document.activeElement) input.value = state.stats[key] || estimatedCharmStat(state.stats, key);
+    });
     $("charmStatFields").hidden = !required.size;
+    const warning = $("charmStatEstimate");
+    warning.hidden = !estimated.length;
+    if (estimated.length) {
+      const stats = estimated.map((key) => CHARM_STAT_LABELS[key]).join(" and ");
+      const vocation = item("vocations", state.stats.vocation)?.name ?? state.stats.vocation;
+      warning.textContent = `Estimated ${stats} for a level ${state.stats.level} ${vocation} without wheel, gear or other bonuses, so the charm damage comes out low. Enter your in-game ${stats} for an accurate result.`;
+    }
   }
 
   // Whether any perk in the build scales its damage off shielding. Checked against the perks
@@ -2053,9 +2089,11 @@ function createBuild(key) {
       stats.imbuementValue = imbuementValue;
     }
     if (apiStanceIds.length) stats.stanceIds = apiStanceIds;
-    // Without these the API scores Overpower/Overflux as 0 rather than rejecting the request.
+    // Without these the API scores Overpower/Overflux as 0 rather than rejecting the request, so a
+    // charm whose stat wasn't entered gets the same estimate renderCharmStatFields pre-fills.
+    const charmStats = charmStatsRequiredBy(state.targets);
     CHARM_STAT_KEYS.forEach((key) => {
-      const value = Math.round(numberOrZero(state.stats[key]));
+      const value = Math.round(numberOrZero(state.stats[key])) || (charmStats.has(key) ? estimatedCharmStat(state.stats, key) : 0);
       if (value > 0) stats[key] = value;
     });
     // The API has no field for the forge tier itself - it only takes the Onslaught chance the
@@ -2116,6 +2154,7 @@ function createBuild(key) {
     renderWeaponMeta();
     renderShieldingField();
     renderRunicMasteryField();
+    renderCharmStatFields();
     saveState();
     if (savedName && !dirty) {
       dirty = true;
@@ -2323,6 +2362,8 @@ function createBuild(key) {
     // A base magic level cleared and left empty goes back to showing its pre-fill, which
     // renderRunicMasteryField holds off on while the field has focus.
     root.querySelector('[data-stat="baseMagicLevel"]')?.addEventListener("blur", renderRunicMasteryField);
+    // Same for a cleared max HP / mana and its estimate.
+    CHARM_STAT_KEYS.forEach((key) => root.querySelector(`[data-stat="${key}"]`)?.addEventListener("blur", renderCharmStatFields));
     root.querySelectorAll("[data-add-perk]").forEach((button) => button.addEventListener("click", addPerk));
     $("addSpell").addEventListener("click", addSpell);
     $("rotationPresetSelect").addEventListener("change", applyRotationPreset);

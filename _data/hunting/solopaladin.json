@@ -748,7 +748,7 @@
         "level":  "200+",
         "place":  "Draken Walls",
         "raw_exp":  "2.8kk",
-        "loot":  "750k",
+        "loot":  "700k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -922,17 +922,9 @@
     },
     {
         "level":  "400+",
-        "place":  "Prison -1",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "runes":  "Diamond Arrows, Ethereal",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "400+",
         "place":  "Buried Cathedral -8",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "5.1kk",
+        "loot":  "600k",
         "runes":  "Firestorm Arrows, Divine",
         "link":  "https://youtu.be/"
     },
@@ -978,9 +970,17 @@
     },
     {
         "level":  "400+",
+        "place":  "Rosha Shockheads & Bones",
+        "raw_exp":  "5.7kk",
+        "loot":  "1.0kk",
+        "runes":  "Diamond Arrows, Ethereal",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "400+",
         "place":  "Otherworld",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "4.3kk",
+        "loot":  "1.6kk",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -1019,8 +1019,8 @@
     {
         "level":  "400+",
         "place":  "Deathlings",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "4.9kk",
+        "loot":  "500k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"
     },
@@ -1107,7 +1107,7 @@
     {
         "level":  "600+",
         "place":  "Norcferatu Fortress",
-        "raw_exp":  "8.8kk",
+        "raw_exp":  "8.6kk",
         "loot":  "1.1kk",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/rlWvWq8b85w"
@@ -1259,7 +1259,7 @@
     {
         "level":  "600+",
         "place":  "Norcferatu Dungeons West",
-        "raw_exp":  "9.0kk",
+        "raw_exp":  "8.5kk",
         "loot":  "800k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/8eVtHuNek_g"
@@ -1267,7 +1267,7 @@
     {
         "level":  "700+",
         "place":  "Norcferatu Dungeons East",
-        "raw_exp":  "9.5kk",
+        "raw_exp":  "8.5kk",
         "loot":  "800k",
         "runes":  "Diamond Arrows, Ethereal",
         "link":  "https://youtu.be/"

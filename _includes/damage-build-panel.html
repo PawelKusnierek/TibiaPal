@@ -163,6 +163,8 @@
           <input type="number" min="0" step="1" inputmode="numeric" placeholder="Enter max mana" data-stat="manaPoints">
           <small>Overflux hits for 2.5% of this. Use the in-game value, after gear and wheel.</small>
         </label>
+        <!-- Filled in by renderCharmStatFields() while a shown stat is still its vocation/level estimate. -->
+        <p id="charmStatEstimate-{{ include.key }}" class="dc-charm-estimate" role="status" hidden></p>
       </div>
     </div>
   </section>

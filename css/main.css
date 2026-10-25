@@ -4869,6 +4869,15 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   font-weight: 500;
 }
 
+.dc-charm-estimate {
+  grid-column: 1/-1;
+  margin: 0;
+  color: #f5c86f;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
 .dc-shielding-stat {
   max-width: 260px;
   margin-top: 12px;
