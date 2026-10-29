@@ -394,16 +394,16 @@
     {
         "level":  "200+",
         "place":  "Lower Spike -8",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.5kk",
+        "loot":  "1.0kk",
         "weapon_type":  "Ice",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "200+",
         "place":  "Yalahar Grim Reapers",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.8kk",
+        "loot":  "200k",
         "weapon_type":  "Fire, Energy",
         "link":  "https://youtu.be/"
     },
@@ -434,16 +434,16 @@
     {
         "level":  "200+",
         "place":  "Draken Walls",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical, Ice, Energy",
+        "raw_exp":  "2.5kk",
+        "loot":  "500k",
+        "weapon_type":  "Ice, Physical, Energy",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "200+",
         "place":  "Hive Stage3",
         "raw_exp":  "2.0kk",
-        "loot":  "1.2kk",
+        "loot":  "1.0kk",
         "weapon_type":  "Ice",
         "link":  "https://youtu.be/"
     },
@@ -468,7 +468,7 @@
         "place":  "Pirats",
         "raw_exp":  "-",
         "loot":  "-",
-        "weapon_type":  "Earth",
+        "weapon_type":  "Earth, Physical",
         "link":  "https://youtu.be/"
     },
     {
@@ -536,7 +536,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Werelions -1",
         "raw_exp":  "-",
         "loot":  "-",
@@ -552,7 +552,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
+        "level":  "250+",
         "place":  "Werelions -2",
         "raw_exp":  "-",
         "loot":  "-",
@@ -584,19 +584,19 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "200+",
+        "level":  "250+",
         "place":  "Book World: II",
         "raw_exp":  "-",
         "loot":  "-",
-        "weapon_type":  "Fire, Death",
+        "weapon_type":  "Fire, Death, Ice",
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "200+",
+        "level":  "250+",
         "place":  "Book World: III",
         "raw_exp":  "-",
         "loot":  "-",
-        "weapon_type":  "Earth",
+        "weapon_type":  "Earth, Fire, Energy, Ice",
         "link":  "https://youtu.be/"
     },
     {
@@ -688,15 +688,7 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "400+",
-        "place":  "Prison -1",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Physical, Energy",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "270+",
+        "level":  "300+",
         "place":  "Winter Court",
         "raw_exp":  "-",
         "loot":  "-",
@@ -709,6 +701,14 @@
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Ice",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "400+",
+        "place":  "Prison -1",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "weapon_type":  "Physical, Energy",
         "link":  "https://youtu.be/"
     },
     {
