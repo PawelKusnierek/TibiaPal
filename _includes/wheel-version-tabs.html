@@ -1,0 +1,4 @@
+<nav id="wod-version-tabs" class="wod-version-tabs" aria-label="Wheel version">
+  <a href="{{ '/wheel-planner' | relative_url }}" {% unless page.winter_wheel %}aria-current="page"{% endunless %}>Current version</a>
+  <a href="{{ '/wheel-planner-winter' | relative_url }}" {% if page.winter_wheel %}aria-current="page"{% endif %}>Winter Update 2026 <span class="wod-preview-badge">Preview</span></a>
+</nav>

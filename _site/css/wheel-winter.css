@@ -1,0 +1,144 @@
+/* Version navigation and winter-only additions to the existing wheel-planner.css skin. */
+.wod-version-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #315f91;
+  font: 13px/1.4 Verdana, Arial, sans-serif;
+}
+.wod-version-tabs a, #wod-wrapper .WodWinterTabs button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 36px;
+  padding: 0 16px;
+  border: 1px solid #315f91;
+  border-radius: 0;
+  background: linear-gradient(#1a4677, #0c2848);
+  box-shadow: inset 0 0 0 1px #071525;
+  color: #d5d5d5;
+  text-decoration: none;
+  font: bold 11px Verdana, Arial, sans-serif;
+  cursor: pointer;
+}
+.wod-version-tabs a:hover, #wod-wrapper .WodWinterTabs button:hover { filter: brightness(1.2); }
+.wod-version-tabs a[aria-current="page"], #wod-wrapper .WodWinterTabs button[aria-selected="true"] { border-color: #2d8cf8; background: linear-gradient(#23588d, #123b67); color: #eef6ff; }
+.wod-preview-badge { color: #75d5f0; font-size: 10px; }
+html.planner-embed #wod-version-tabs { display: none; }
+.wod-winter-notice { color: #9bb4ce; font: 11px/1.5 Verdana, Arial, sans-serif; text-align: left; }
+#wod-wrapper.WodWinter .BigButton[hidden], #wod-wrapper .WodWinterPanel[hidden] { display: none !important; }
+#wod-wrapper .WodWinterTools { margin: 16px 0; container-type: inline-size; }
+#wod-wrapper .WodWinterTabs { display: flex; gap: 6px; margin-bottom: 8px; }
+#wod-wrapper .WodWinterTabs button { flex: 1; }
+#wod-wrapper .WodWinterPanel { margin: 0 0 12px; }
+#wod-wrapper .WodWinterPanel .CaptionInnerContainer { min-height: 24px; }
+#wod-wrapper .WodWinterPanel .CaptionInnerContainer .Text { position: static; padding: 5px 8px; }
+#wod-wrapper .WodWinterPanel .Table5 { width: 100%; border-collapse: collapse; table-layout: fixed; }
+#wod-wrapper .WodWinterPanel .Table5 > tbody > tr > td { padding: 10px; }
+#wod-wrapper .WodWinterPanel .InnerTableContainer { width: 100%; min-width: 0; max-width: none; }
+#wod-wrapper .WodWinterNote { color: #7897b8; font: 11px/1.5 Verdana, Arial, sans-serif; text-align: left; }
+#wod-wrapper .WodWinterVessels { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 12px 0 18px; }
+#wod-wrapper .WodWinterVessel, #wod-wrapper .WodWinterGrades button, #wod-wrapper .WodWinterButton {
+  position: relative;
+  padding: 7px 10px;
+  border: 1px solid #315f91;
+  background: linear-gradient(#1a4677, #0c2848);
+  box-shadow: inset 0 0 0 1px #071525;
+  color: #d5d5d5;
+  font: 11px Verdana, Arial, sans-serif;
+  cursor: pointer;
+}
+#wod-wrapper .WodWinterVessel { display: flex; flex-direction: column; align-items: center; gap: 5px; min-width: 0; padding: 22px 4px 12px; border-radius: 4px; background: linear-gradient(160deg, #102640, #08182c); transition: border-color .15s, background .15s; }
+#wod-wrapper .WodWinterVessel[aria-pressed="true"], #wod-wrapper .WodWinterGrades button[aria-pressed="true"] { border-color: #2d8cf8; background: #173b61; color: #eef6ff; }
+#wod-wrapper .WodWinterVessel.Locked { color: #7f899c; }
+#wod-wrapper .WodWinterVesselNumber { position: absolute; top: 6px; left: 8px; color: #7897b8; font-size: 10px; }
+#wod-wrapper .WodWinterVesselDot { position: absolute; top: 9px; right: 8px; width: 5px; height: 5px; border-radius: 50%; background: #315373; }
+#wod-wrapper .WodWinterVessel.Unlocked .WodWinterVesselDot { background: #75d5f0; }
+#wod-wrapper .WodWinterVessel.Unlocked.HasGem .WodWinterVesselDot { background: #83d5b3; box-shadow: 0 0 5px #83d5b344; }
+#wod-wrapper .WodWinterVessel[aria-pressed="true"] { border-color: #75d5f0; box-shadow: inset 0 0 0 1px #315f91, 0 0 0 1px #071525; background: linear-gradient(160deg, #193e61, #102b46); }
+#wod-wrapper .WodWinterVessel:hover { border-color: #6199bd; }
+#wod-wrapper .WodWinterVessel strong { margin-top: 3px; font-size: 11px; }
+#wod-wrapper .WodWinterVesselState { font-size: 10px; color: #91adc7; }
+#wod-wrapper .WodWinterVessel.Unlocked.HasGem .WodWinterVesselState { color: #83d5b3; }
+#wod-wrapper .WodWinterVesselGrade { font-size: 9px; color: #6f8ca8; }
+#wod-wrapper .WodWinterSocket { display: flex; position: relative; align-items: center; justify-content: center; width: 40px; height: 40px; background: url("https://static.tibia.com/images/community/wheelofdestiny/icons-skillwheel-mediumperks.png") no-repeat -1480px 0; background-size: auto 40px; font-size: 28px; }
+#wod-wrapper .WodWinterSocket.HasGem { background-image: none; }
+#wod-wrapper .WodWinterGemSprite { display: block; flex-shrink: 0; width: 40px; height: 40px; background-image: url("https://static.tibia.com/images/global/common/skillwheel/icons-gematelier-gemvariants.png"); background-size: auto 40px; background-repeat: no-repeat; image-rendering: pixelated; }
+#wod-wrapper .WodWinterGemBezel { position: absolute; inset: 0; background-image: url("https://static.tibia.com/images/community/wheelofdestiny/icons-skillwheel-sockets.png"); background-size: auto 40px; background-repeat: no-repeat; image-rendering: pixelated; pointer-events: none; }
+#wod-wrapper .Locked .WodWinterSocket { opacity: .4; filter: grayscale(1); }
+#wod-wrapper .WodWinterQuality { display: block; min-width: 30px; padding: 3px 5px; border: 1px solid #315f91; border-radius: 50%; color: #7897b8; font-size: 7px; letter-spacing: 2px; line-height: 1; }
+#wod-wrapper .WodWinterLoadoutHeader { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 10px 6px 20px; border-bottom: 1px solid #173b61; margin-bottom: 18px; }
+#wod-wrapper .WodWinterEyebrow { display: block; color: #6d98be; font: bold 9px/1.4 Verdana, Arial, sans-serif; letter-spacing: 1.2px; }
+#wod-wrapper .WodWinterLoadoutHeader h3 { margin: 6px 0; color: #e7f2ff; font: bold 18px/1.4 Verdana, Arial, sans-serif; }
+#wod-wrapper .WodWinterLoadoutHeader p { margin: 0; color: #8da7c0; font-size: 11px; }
+#wod-wrapper .WodWinterLoadoutCount { display: flex; flex-direction: column; gap: 3px; flex-shrink: 0; text-align: right; color: #8da7c0; font-size: 10px; }
+#wod-wrapper .WodWinterLoadoutCount strong { color: #75d5f0; font: bold 26px/1 Verdana, Arial, sans-serif; }
+#wod-wrapper .WodWinterLoadoutCount strong span { color: #527695; font-size: 15px; }
+#wod-wrapper .WodWinterLoadoutCount small { margin-top: 3px; color: #a5bdd3; font-size: 10px; }
+#wod-wrapper .WodWinterAtelierLayout { display: grid; grid-template-columns: minmax(280px, .85fr) minmax(0, 1.35fr); gap: 18px; align-items: start; }
+#wod-wrapper .WodWinterRack { min-width: 0; padding: 12px; border: 1px solid #173b61; border-radius: 5px; background: #071629; }
+#wod-wrapper .WodWinterRackHeading { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; color: #cbdff0; font-size: 11px; }
+#wod-wrapper .WodWinterRackHeading span { color: #6383a0; font-size: 9px; }
+#wod-wrapper .WodWinterRack .WodWinterVessels { gap: 7px; margin: 12px 0; }
+#wod-wrapper .WodWinterRackHelp { margin: 0; padding-top: 10px; border-top: 1px solid #17334e; color: #7897b8; font: 10px/1.6 Verdana, Arial, sans-serif; }
+#wod-wrapper .WodWinterGemEditor { min-width: 0; border: 1px solid #315f91; border-radius: 5px; overflow: hidden; background: #091b30; }
+#wod-wrapper .WodWinterEditorHeader { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; padding: 16px; background: linear-gradient(120deg, #143453, #0b213a); border-bottom: 1px solid #234a6a; }
+#wod-wrapper .WodWinterEditorIdentity { display: flex; align-items: center; gap: 12px; min-width: 0; }
+#wod-wrapper .WodWinterEditorIdentity > .WodWinterSocket { flex-shrink: 0; }
+#wod-wrapper .WodWinterEditorHeader h3 { margin: 5px 0 10px; color: #edf6ff; font: bold 15px/1.4 Verdana, Arial, sans-serif; }
+#wod-wrapper .WodWinterStatus { display: inline-block; padding: 3px 7px; border: 1px solid #38516b; border-radius: 3px; color: #8ea3b9; background: #091a2c; font: 9px/1.3 Verdana, Arial, sans-serif; }
+#wod-wrapper .WodWinterStatus.is-active { border-color: #2b625e; color: #86cdb7; background: #102e34; }
+#wod-wrapper .WodWinterClear { flex-shrink: 0; padding: 6px 9px; background: #102740; font-size: 10px; border-radius: 3px; }
+#wod-wrapper .WodWinterGemGrade { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #1c3c5a; background: #0b2037; }
+#wod-wrapper .WodWinterGemGrade > div:first-child { min-width: 0; }
+#wod-wrapper .WodWinterGemGrade strong { display: block; color: #c8dfef; font-size: 11px; }
+#wod-wrapper .WodWinterGemGrade span { display: block; margin-top: 3px; color: #7897b8; font-size: 9px; line-height: 1.5; }
+#wod-wrapper .WodWinterGemMods { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin: 0; padding: 14px; }
+#wod-wrapper .WodWinterModCard { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 10px; padding: 12px; border: 1px solid #1d3f60; border-radius: 4px; background: #0b2037; }
+#wod-wrapper .WodWinterModCard.is-supreme { border-color: #40566f; background: linear-gradient(120deg, #142940, #0d2037); }
+#wod-wrapper .WodWinterModIcon { display: block; width: 32px; height: 32px; margin-top: 2px; background-size: auto 32px; background-repeat: no-repeat; image-rendering: pixelated; }
+#wod-wrapper .WodWinterModIcon.is-empty { display: flex; justify-content: center; align-items: center; border: 1px dashed #365572; border-radius: 4px; color: #527d9f; background: #09182a; font-size: 20px; }
+#wod-wrapper .WodWinterModContent { min-width: 0; }
+#wod-wrapper .WodWinterModHeading { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+#wod-wrapper .WodWinterModHeading label { color: #c8dfef; font-size: 11px; font-weight: bold; }
+#wod-wrapper .WodWinterModHeading > span { color: #6689a8; font-size: 9px; }
+#wod-wrapper .WodWinterGemMods select { display: block; width: 100%; min-width: 0; max-width: 100%; min-height: 33px; margin: 7px 0; border-radius: 3px; color-scheme: dark; }
+#wod-wrapper .WodWinterGemMods .ModEffectValue { width: auto; height: auto; margin: 7px 0 10px; color: #9ac9de; font-size: 11px; line-height: 1.5; }
+#wod-wrapper .WodWinterModEmpty { margin: 5px 0 0; color: #6484a1; font-size: 10px; }
+#wod-wrapper .WodWinterModGrade { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding-top: 8px; border-top: 1px solid #1b3a56; }
+#wod-wrapper .WodWinterModGrade > span { color: #7897b8; font-size: 10px; }
+#wod-wrapper .WodWinterEditorNote { margin: 0; padding: 0 16px 14px; color: #6d8ca8; font: 10px/1.6 Verdana, Arial, sans-serif; }
+#wod-wrapper .WodWinterFilter { display: block; margin: 10px 0; }
+#wod-wrapper .WodWinterFilter input { margin-left: 8px; max-width: 70%; }
+#wod-wrapper .WodWinterModRow { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px; align-items: center; padding: 9px; }
+#wod-wrapper .WodWinterModRow .ModEffectValue { width: auto; height: auto; font-size: 11px; }
+#wod-wrapper .WodWinterTools .ModEffectValue { display: block; min-height: 0; max-height: none; -webkit-line-clamp: unset; }
+#wod-wrapper .WodWinterGrades { display: flex; gap: 4px; }
+#wod-wrapper .WodWinterGrades button { min-width: 30px; padding: 6px; }
+#wod-wrapper .WodWinterGemEditor .WodWinterGrades { flex-shrink: 0; }
+#wod-wrapper .WodWinterGemEditor .WodWinterGrades button { min-width: 32px; min-height: 30px; border-radius: 3px; }
+#wod-wrapper .WodWinterGemEditor .WodWinterGrades button[aria-pressed="true"] { border-color: #75d5f0; background: #21577b; color: #e6f8ff; }
+#wod-wrapper .WodWinterGemEditor .WodWinterGrades button:disabled { opacity: .3; cursor: default; }
+#wod-wrapper .WodWinterButton:disabled { opacity: .4; cursor: default; }
+#wod-wrapper .WodWinterTools :focus-visible, .wod-version-tabs a:focus-visible { outline: 2px solid #75d5f0; outline-offset: 2px; }
+@container (max-width: 760px) {
+  #wod-wrapper .WodWinterAtelierLayout { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 1000px) {
+  #wod-wrapper .WodWinterAtelierLayout { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 500px) {
+  .wod-version-tabs a { flex: 1; padding: 6px; font-size: 10px; }
+  .wod-preview-badge { display: none; }
+  #wod-wrapper .WodWinterModRow { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  #wod-wrapper .WodWinterLoadoutHeader { gap: 12px; }
+  #wod-wrapper .WodWinterLoadoutHeader h3 { font-size: 15px; }
+  #wod-wrapper .WodWinterRack { padding: 9px; }
+  #wod-wrapper .WodWinterGemGrade { align-items: flex-start; flex-direction: column; gap: 8px; }
+  #wod-wrapper .WodWinterEditorHeader { padding: 12px; gap: 8px; }
+  #wod-wrapper .WodWinterGemMods { padding: 9px; }
+  #wod-wrapper .WodWinterModCard { gap: 8px; padding: 9px; }
+}
