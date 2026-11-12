@@ -530,8 +530,8 @@
     {
         "level":  "250+",
         "place":  "Deeper Banuta -8",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.1kk",
+        "loot":  "800k",
         "weapon_type":  "Energy",
         "link":  "https://youtu.be/"
     },
@@ -576,24 +576,24 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "200+",
+        "level":  "230+",
         "place":  "Diremaw Task Area",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.3kk",
+        "loot":  "400k",
         "weapon_type":  "Ice",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "250+",
-        "place":  "Book World: II",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Fire, Death, Ice",
+        "place":  "Book World: Chapter II",
+        "raw_exp":  "2.8kk",
+        "loot":  "600k",
+        "weapon_type":  "Fire, Death",
         "link":  "https://youtu.be/"
     },
     {
         "level":  "250+",
-        "place":  "Book World: III",
+        "place":  "Book World: Chapter III",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Earth, Fire, Energy, Ice",
@@ -601,10 +601,10 @@
     },
     {
         "level":  "250+",
-        "place":  "Book World: IV",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Earth",
+        "place":  "Book World: Chapter IV",
+        "raw_exp":  "3.6kk",
+        "loot":  "600k",
+        "weapon_type":  "Ice, Earth, Death",
         "link":  "https://youtu.be/"
     },
     {
