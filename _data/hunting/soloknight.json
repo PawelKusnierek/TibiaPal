@@ -560,14 +560,6 @@
         "link":  "https://youtu.be/"
     },
     {
-        "level":  "300+",
-        "place":  "Wote 8 Drakens",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Ice",
-        "link":  "https://youtu.be/"
-    },
-    {
         "level":  "250+",
         "place":  "Oramond Fury Dungeon",
         "raw_exp":  "-",
@@ -616,19 +608,27 @@
         "link":  "https://youtu.be/"
     },
     {
+        "level":  "250+",
+        "place":  "Oramond Wildlife Raid",
+        "raw_exp":  "3.4kk",
+        "loot":  "1.5kk",
+        "weapon_type":  "Ice, Physical",
+        "link":  "https://youtu.be/"
+    },
+    {
+        "level":  "300+",
+        "place":  "Wote 8 Drakens",
+        "raw_exp":  "-",
+        "loot":  "-",
+        "weapon_type":  "Ice",
+        "link":  "https://youtu.be/"
+    },
+    {
         "level":  "300+",
         "place":  "Warzone 5",
         "raw_exp":  "-",
         "loot":  "-",
         "weapon_type":  "Ice, Fire",
-        "link":  "https://youtu.be/"
-    },
-    {
-        "level":  "300+",
-        "place":  "Oramond Wildlife Raid",
-        "raw_exp":  "-",
-        "loot":  "-",
-        "weapon_type":  "Ice",
         "link":  "https://youtu.be/"
     },
     {
