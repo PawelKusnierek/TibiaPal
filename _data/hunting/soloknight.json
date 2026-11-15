@@ -490,8 +490,8 @@
     {
         "level":  "250+",
         "place":  "Carnivora's Rock",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "2.1kk",
+        "loot":  "750k",
         "weapon_type":  "Fire, Ice",
         "link":  "https://youtu.be/"
     },
@@ -562,8 +562,8 @@
     {
         "level":  "250+",
         "place":  "Oramond Fury Dungeon",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.7kk",
+        "loot":  "800k",
         "weapon_type":  "Energy",
         "link":  "https://youtu.be/"
     },
@@ -642,8 +642,8 @@
     {
         "level":  "250+",
         "place":  "Lower Rosha",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.5kk",
+        "loot":  "800k",
         "weapon_type":  "Physical, Ice",
         "link":  "https://youtu.be/"
     },
