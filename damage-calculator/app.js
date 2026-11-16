@@ -356,6 +356,12 @@ const ROTATION_PRESETS = (() => {
   catch { return {}; }
 })();
 
+// Shared with the standalone wheel planner and /wheels; maintained in _data/wheels/.
+const WHEEL_TEMPLATES = (() => {
+  try { return JSON.parse(document.querySelector("#wheelTemplatesData")?.textContent || "{}"); }
+  catch { return {}; }
+})();
+
 // Average number of targets each spell/rune hits, edited in _data/spell-average-hits.json and
 // embedded into the page at build time. Used to pre-populate the "Average targets" field
 // whenever a spell is added to the rotation, whether via a preset or manually.
@@ -2576,6 +2582,7 @@ function setupEffectsInfo() {
 // received, so the user sees a single loading state instead of that flicker.
 function setPlannerLoading(name, loading) {
   const overlay = document.querySelector(`#${name}PlannerLoading`);
+  if (name === "wheel") document.querySelector("#wheelTemplateSelect").disabled = loading || Boolean(document.querySelector("#wheelPlannerFrame").dataset.pendingNav);
   window.clearTimeout(plannerLoadingTimers[name]);
   if (loading) {
     plannerLoadingShownAt[name] = Date.now();
@@ -2776,6 +2783,23 @@ function importWheelFromInput() {
   if (importWheelCode(build, input.value)) input.value = "";
 }
 
+function refreshWheelTemplateOptions(build, reset = false) {
+  const select = document.querySelector("#wheelTemplateSelect");
+  const vocation = build.state.stats.vocation;
+  if (!reset && select.dataset.vocation === vocation) return;
+  select.dataset.vocation = vocation;
+  const templates = WHEEL_TEMPLATES[vocation]?.builds ?? [];
+  select.replaceChildren(option("", "Choose a wheel template…"), ...templates.map((template) => option(template.link, `${template.points} points — ${template.description}`)));
+}
+
+function loadSelectedWheelTemplate() {
+  const build = builds[activeBuildKey];
+  const select = document.querySelector("#wheelTemplateSelect");
+  if (!build || select.disabled || document.querySelector("#wheelPlannerFrame").dataset.pendingNav) return;
+  const template = WHEEL_TEMPLATES[build.state.stats.vocation]?.builds?.find((entry) => entry.link === select.value);
+  if (template) importWheelCode(build, template.link);
+}
+
 function loadWheelPresets() {
   try { const stored = JSON.parse(localStorage.getItem(WHEEL_PRESETS_KEY)); return stored && typeof stored === "object" && !Array.isArray(stored) ? stored : {}; }
   catch { return {}; }
@@ -2973,7 +2997,7 @@ function openPlanner(build, name) {
   points.querySelector("strong").textContent = Number(build.state.wheelPlanner.promotionPoints ?? 0).toLocaleString("en-US");
   document.querySelector("#wheelToolbar").hidden = name !== "wheel";
   document.querySelector("#proficiencyToolbar").hidden = name !== "proficiency";
-  if (name === "wheel") { setWheelImportError(""); refreshWheelPresetOptions(build); }
+  if (name === "wheel") { setWheelImportError(""); refreshWheelPresetOptions(build); refreshWheelTemplateOptions(build, true); }
   if (name === "proficiency") setProficiencyImportError("");
   window.clearTimeout(plannerCloseTimer);
   plannerModal.classList.remove("dc-closing");
@@ -3023,6 +3047,7 @@ function receiveWheelBuild(build, payload) {
     state.rotation = state.rotation.filter((row) => build.vocationAllows(item("spells", row.id)));
     state.manualPerks = state.manualPerks.filter((row) => build.vocationAllows(item("perks", row.id)));
     build.populateStaticControls();
+    if (build.key === activeBuildKey) refreshWheelTemplateOptions(build);
     syncPlannerVocation(build, "proficiency");
   }
   state.wheelPerks = build.mappedPlannerPerks("wheel");
@@ -3453,6 +3478,7 @@ function wireTabs() {
 }
 
 function wireGlobalEvents() {
+  document.querySelector("#wheelTemplateSelect").addEventListener("change", loadSelectedWheelTemplate);
   document.querySelector("#wheelImportBtn").addEventListener("click", importWheelFromInput);
   document.querySelector("#wheelImportInput").addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); importWheelFromInput(); } });
   document.querySelector("#wheelPresetLoad").addEventListener("click", () => { const build = builds[activeBuildKey]; if (build) loadSelectedWheelPreset(build); });

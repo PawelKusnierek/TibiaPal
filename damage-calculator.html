@@ -2,7 +2,7 @@
 layout: default
 title: Tibia Damage Calculator - Compare Builds | TibiaPal.com
 description: "Free Tibia damage calculator: compare two builds' damage per turn with Wheel of Destiny, weapon proficiency, spell rotation, creature resistances and charms."
-scripts: <script type="module" src="/damage-calculator/app.js?v=20261025-1"></script>
+scripts: <script type="module" src="/damage-calculator/app.js?v=20261116-1"></script>
 ---
 
 <script type="application/ld+json">
@@ -155,6 +155,12 @@ scripts: <script type="module" src="/damage-calculator/app.js?v=20261025-1"></sc
         <button id="closePlannerModal" type="button" aria-label="Close planner">×</button>
       </header>
       <div id="wheelToolbar" class="dc-wheel-toolbar" hidden>
+        <div class="dc-wheel-tool dc-wheel-template">
+          <div class="dc-wheel-tool-row">
+            <select id="wheelTemplateSelect" aria-label="Wheel template" disabled><option value="">Choose a wheel template…</option></select>
+          </div>
+        </div>
+        <script id="wheelTemplatesData" type="application/json">{{ site.data.wheels | jsonify }}</script>
         <div class="dc-wheel-tool">
           <label for="wheelImportInput">Import a wheel</label>
           <div class="dc-wheel-tool-row">

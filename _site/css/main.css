@@ -5606,6 +5606,10 @@ button.proficiency-weapon-toggle.active-expanded-div:after {
   display: none;
 }
 
+.dc-wheel-template {
+  grid-column: 1 / -1;
+}
+
 .dc-wheel-tool {
   display: grid;
   gap: 5px;
