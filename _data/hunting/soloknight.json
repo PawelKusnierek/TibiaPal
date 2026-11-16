@@ -498,8 +498,8 @@
     {
         "level":  "250+",
         "place":  "Crumbling Caverns",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "raw_exp":  "3.1kk",
+        "loot":  "650k",
         "weapon_type":  "Ice, Earth",
         "link":  "https://youtu.be/"
     },
@@ -545,9 +545,9 @@
     },
     {
         "level":  "250+",
-        "place":  "Candia Nibblemaws",
-        "raw_exp":  "-",
-        "loot":  "-",
+        "place":  "Candia Nibblemaws (Chocolate Mines)",
+        "raw_exp":  "3.2kk",
+        "loot":  "600k",
         "weapon_type":  "Energy",
         "link":  "https://youtu.be/"
     },
