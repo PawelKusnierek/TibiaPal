@@ -1,0 +1,13 @@
+<tr>
+  <td colspan="2">
+    <div id="wod-suggestions" class="WodSuggestions">
+      <div class="WodSuggestionsControls">
+        <select id="wod-suggestion" aria-label="Wheel template">
+          <option value="">Choose a wheel template…</option>
+        </select>
+      </div>
+      <p id="wod-suggestion-status" role="status" hidden></p>
+    </div>
+    <script id="wod-suggestions-data" type="application/json">{{ site.data.wheels | jsonify }}</script>
+  </td>
+</tr>

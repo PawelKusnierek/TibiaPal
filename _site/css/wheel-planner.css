@@ -9,6 +9,27 @@
   text-align: left;
 }
 
+/* Suggested wheels share the existing vocation/points panel. */
+#wod-wrapper .WodSuggestions {
+  padding: 6px 0;
+  font-size: 12px;
+}
+#wod-wrapper .WodSuggestions p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+#wod-wrapper .WodSuggestionsControls select {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 9px;
+  border: 1px solid #315f91;
+  border-radius: 3px;
+  background: #0c2848;
+  color: #e7f2ff;
+  font: inherit;
+}
+
 /* The scraped tibia.com stylesheets (wod-basic-1/2.css) redeclare body's
    background-position (and, below 768px, the background-image itself, with
    !important) for their own site chrome. Loaded after main.css, they clobber

@@ -1,4 +1,4 @@
-# CLAUDE.md
+# AGENTS.md
 
 Project-specific gotchas. Read before editing CSS or the damage-calculator/wheel/proficiency planner integration.
 
