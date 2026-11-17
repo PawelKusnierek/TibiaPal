@@ -4,7 +4,7 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
 const vm = require("node:vm");
-const { WinterWheel, VOCATIONS, QUALITIES } = require("../scripts/wheel-winter-model.js");
+const { WinterWheel, VOCATIONS, QUALITIES, CHAIN_MODS } = require("../scripts/wheel-winter-model.js");
 const { createPlannerClass, strings: winterStrings, drawPerk, perkSpriteId } = require("../scripts/wheel-winter-adapter.js");
 const strings = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/wheel-planner/SkillwheelStringsJsonLibrary.json")));
 vm.runInThisContext(fs.readFileSync(path.join(__dirname, "../scripts/wod-assets/skillgrid.js"), "utf8"));
@@ -20,14 +20,14 @@ function fill(model) {
   for (let round = 0; round < 5; round++) model.tiles().forEach(tile => model.change(tile.key, "fill"));
 }
 function middlePath(model) {
-  for (const key of ["QTL0", "QTL1", "QTL4"]) model.change(key, "fill");
+  for (const key of ["QTL0", "QTL3"]) model.change(key, "fill");
 }
 
 for (const vocation of VOCATIONS) {
-  test(`${vocation}: middle Mastery, side augment and outer gem match the winter reference`, t => {
+  test(`${vocation}: ring-2 Mastery, side leech and central augment match the feedback`, t => {
     const model = wheel(t, vocation), tiles = model.tiles();
     assert.equal(tiles.length, 36);
-    assert.deepEqual(tiles.filter(tile => tile.kind === "mastery").map(tile => tile.key).sort(), ["QBL4", "QBR4", "QTL4", "QTR4"]);
+    assert.deepEqual(tiles.filter(tile => tile.kind === "mastery").map(tile => tile.key).sort(), ["QBL1", "QBR3", "QTL3", "QTR1"]);
     assert.deepEqual(tiles.filter(tile => tile.kind === "vessel").map(tile => tile.key).sort(), ["QBL3", "QBL7", "QBR0", "QBR5", "QTL0", "QTL5", "QTR3", "QTR7"]);
     for (const [domain, sideKey, movedKey] of [["TL", "QTL6", "QTL5"], ["TR", "QTR2", "QTR7"], ["BL", "QBL2", "QBL7"], ["BR", "QBR6", "QBR5"]]) {
       const side = tiles.find(tile => tile.key === sideKey);
@@ -36,8 +36,9 @@ for (const vocation of VOCATIONS) {
       const originalMiddle = model.rawTiles().find(tile => tile.key === `Q${domain}4`);
       assert.equal(side.kind, "conviction");
       assert.equal(side.maxSkillPoints, 100);
-      assert.equal(side.mediumPerkId, originalMiddle.mediumPerkId);
-      assert.equal(middle.kind, "mastery");
+      assert.equal(side.mediumPerkId, ["TL", "TR"].includes(domain) ? 6 : 5);
+      assert.equal(middle.kind, "conviction");
+      assert.equal(middle.mediumPerkId, originalMiddle.mediumPerkId);
       assert.equal(moved.kind, "vessel");
       assert.equal(moved.maxSkillPoints, 150);
     }
@@ -47,19 +48,20 @@ for (const vocation of VOCATIONS) {
     assert.deepEqual(model.corners().map(corner => corner.mastery), [125, 125, 125, 125]);
     assert.deepEqual(model.corners().map(corner => corner.level), [3, 3, 3, 3]);
     assert.equal(model.summary().vesselDamage, 8);
+    assert.equal(model.convictions().find(row => row.name === "Mana Leech").display, "+1%");
   });
 }
 test("Mastery activates only when filled and advances revelation without spending points", t => {
   const model = wheel(t);
-  model.change("QTL0", "fill"); model.change("QTL1", "fill"); model.change("QTL4", 99);
+  model.change("QTL0", "fill"); model.change("QTL3", 74);
   assert.equal(model.corners()[0].mastery, 0);
   assert.equal(model.corners()[0].level, 0);
-  model.change("QTL4", 1);
-  assert.equal(model.spent, 225);
-  assert.equal(model.corners()[0].points, 350);
+  model.change("QTL3", 1);
+  assert.equal(model.spent, 125);
+  assert.equal(model.corners()[0].points, 250);
   assert.equal(model.corners()[0].level, 1);
   assert.equal(model.corners()[0].damage, 4);
-  model.change("QTL4", -1);
+  model.change("QTL3", -1);
   assert.equal(model.corners()[0].mastery, 0);
   assert.equal(model.corners()[0].level, 0);
 });
@@ -125,16 +127,16 @@ test("Atelier gem images match the current engine's vocation and quality sprites
     } finally { native.delete(); }
   }
 });
-test("middle grants Mastery, the outer vessel unlocks a gem, and the side grants the displaced augment", t => {
+test("ring-2 Mastery, central augment and side life leech activate independently", t => {
   const model = wheel(t);
   middlePath(model);
   assert.equal(model.convictions().some(row => row.name === "Augmented Shield Slam"), false);
   assert.equal(model.corners()[0].mastery, 125);
-  model.change("QTL5", "fill");
-  assert.equal(model.convictions().some(row => row.name === "Augmented Shield Slam"), false);
-  assert.equal(model.unlockedVessels, 2);
-  model.change("QTL3", "fill");
   model.change("QTL6", "fill");
+  assert.equal(model.convictions().find(row => row.name === "Life Leech").display, "+0.75%");
+  assert.equal(model.convictions().some(row => row.name === "Augmented Shield Slam"), false);
+  model.change("QTL4", "fill");
+  model.change("QTL5", "fill");
   const row = model.convictions().find(row => row.name === "Augmented Shield Slam");
   assert.equal(row.value, 1); assert.equal(row.display, "I");
   assert.equal(model.corners()[0].mastery, 125);
@@ -206,7 +208,7 @@ test("preview share round trip preserves vocation, point limit, gems, grades and
   const code = model.exportCode(), copy = wheel(t);
   copy.importCode(`https://tibiapal.com/wheel-planner-winter?winter=${code}`);
   assert.equal(copy.exportCode(), code);
-  assert.equal(copy.vocation, "druid"); assert.equal(copy.spent, 225);
+  assert.equal(copy.vocation, "druid"); assert.equal(copy.spent, 125);
 });
 test("invalid imports leave the existing build unchanged", t => {
   const model = wheel(t); middlePath(model);
@@ -231,7 +233,7 @@ test("official Tibia codes import points and select the encoded vocation", t => 
   copy.importCode(model.planner.getCode());
   assert.equal(copy.vocation, "monk"); assert.equal(copy.spent, model.spent);
 });
-test("new spell augments scale to exactly 7% base damage and 12% critical extra damage at grade IV", t => {
+test("ordinary new spell damage and crit augments retain their grade scaling", t => {
   for (const vocation of VOCATIONS) {
     const model = wheel(t, vocation); fill(model);
     for (const spell of [0, 1]) {
@@ -240,6 +242,7 @@ test("new spell augments scale to exactly 7% base damage and 12% critical extra 
         [2, ["+8% Critical Extra Damage", "+8.8% Critical Extra Damage", "+9.6% Critical Extra Damage", "+12% Critical Extra Damage"]],
       ]) {
         const id = `new:${spell}:${augment}`;
+        if ((vocation === "knight" && spell === 0) || CHAIN_MODS[vocation]?.id === id) continue;
         model.gems[2] = { mods: [null, null, id] };
         for (const grade of [0, 1, 2, 3]) {
           model.grades[`supreme:${id}`] = grade;
@@ -264,20 +267,72 @@ test("new damage and crit augments show explicit percentages and remain active a
   copy.importCode(model.exportCode());
   assert.deepEqual(copy.gemEffects().map(effect => effect.value), ["+7% Base Damage", "+12% Critical Extra Damage"]);
 });
+test("Shield Slam supreme damage and crit use the feedback values at all four grades", t => {
+  const model = wheel(t); fill(model);
+  for (const [id, values, effect] of [
+    ["new:0:1", [8, 8.8, 9.6, 12], "Base Damage"],
+    ["new:0:2", [15, 16.5, 18, 22.5], "Critical Extra Damage"],
+  ]) {
+    model.gems[2] = { mods: [null, null, id] };
+    values.forEach((value, grade) => {
+      model.setGemGrade(2, grade);
+      assert.equal(model.modLabel("supreme", id), `Augmented Shield Slam — +${value}% ${effect}`);
+      assert.equal(model.gemEffects()[0].value, `+${value}% ${effect}`);
+    });
+  }
+  assert.equal(strings.SupremeModInfos[10].EffectInfo[3], "+7.5% Base Damage", "current-version data remains intact");
+});
+for (const [vocation, chain] of Object.entries(CHAIN_MODS)) {
+  test(`${vocation}: chain grades, stacking caps and shared builds`, t => {
+    const model = wheel(t, vocation);
+    assert.ok(model.modOptions("supreme").includes(chain.id));
+    assert.equal(model.supremeModInfo(chain.id).replaces, chain.replaces);
+    model.gems[2] = { mods: [null, null, chain.id] };
+    assert.equal(model.chainBonus(), null, "locked gems contribute nothing");
+    fill(model);
+    for (const grade of [0, 1, 2, 3]) {
+      model.setGemGrade(2, grade);
+      const targets = [1, 1, 1, 2][grade], range = [0, 1, 2, 2][grade];
+      assert.equal(model.modName("supreme", chain.id), chain.name);
+      assert.match(model.modLabel("supreme", chain.id), new RegExp(`\\+${targets} chain target`));
+      assert.match(model.modLabel("supreme", chain.id), new RegExp(`\\+${range} cast and jump range`));
+      assert.deepEqual(model.chainBonus().apply(4, 3, 2), { targets: 4 + targets, castRange: 3 + range, jumpRange: 2 + range });
+    }
+    for (const index of [4, 6, 7]) model.gems[index] = { mods: [null, null, chain.id] };
+    const total = model.chainBonus();
+    assert.equal(total.targets, 8); assert.equal(total.range, 8);
+    assert.deepEqual(total.apply(6, 3, 2), { targets: 12, castRange: 6, jumpRange: 4 });
+    const copy = wheel(t);
+    copy.importCode(model.exportCode());
+    assert.equal(copy.exportCode(), model.exportCode());
+    assert.deepEqual(copy.chainBonus().apply(6, 3, 2), total.apply(6, 3, 2));
+    model.setGemGrade(2, 0);
+    assert.equal(model.chainBonus().targets, 4, "every copy uses the same mod grade");
+    assert.equal(model.chainBonus().range, 0);
+  });
+}
+test("replaced supreme IDs load as chain mods while current-version metadata stays intact", t => {
+  const sorcerer = wheel(t, "sorcerer"), paladin = wheel(t, "paladin");
+  assert.equal(sorcerer.modName("supreme", "new:1:2"), "Lightning Chain");
+  assert.equal(paladin.modName("supreme", 25), "Divine Dazzle Chain");
+  assert.equal(strings.SupremeModInfos[25].EffectInfo[0], "-4s Cooldown");
+  assert.equal(paladin.modOptions("supreme").filter(id => id === 25).length, 1);
+});
 test("winter adapter feeds the existing canvas and selection boxes transformed perks and stages", t => {
   const data = winterStrings(strings), Planner = createPlannerClass(engine, data);
   const planner = new Planner(engine.EActiveVocation.Knight);
   t.after(() => planner.delete());
-  for (const key of ["QTL0", "QTL1", "QTL4", "QTL5"]) planner.fillSkill(engine.EGridTile[key]);
+  for (const key of ["QTL0", "QTL3", "QTL4", "QTL5"]) planner.fillSkill(engine.EGridTile[key]);
   const vector = planner.getSkillParameters();
   const tiles = Array.from({ length: vector.size() }, (_, i) => vector.get(i));
-  const middle = tiles.find(tile => tile.key === "QTL4");
+  const middle = tiles.find(tile => tile.key === "QTL3");
   assert.equal(middle.mediumPerkId, 50);
   assert.equal(middle.mediumPerkValue, 125);
   assert.equal(middle.kind, "mastery");
   assert.equal(typeof middle.masterySpriteId, "number");
   assert.equal(tiles.find(tile => tile.key === "QTL0").mediumPerkId, 49);
-  assert.equal(tiles.find(tile => tile.key === "QTL6").mediumPerkId, 14);
+  assert.equal(tiles.find(tile => tile.key === "QTL6").mediumPerkId, 6);
+  assert.equal(tiles.find(tile => tile.key === "QTL4").mediumPerkId, 14);
   assert.equal(tiles.find(tile => tile.key === "QTL5").mediumPerkId, 49);
   assert.equal(tiles.find(tile => tile.key === "QTL5").sourceMediumPerkId, 37);
   assert.equal(tiles.find(tile => tile.key === "QTL5").mediumPerkValue, 1);

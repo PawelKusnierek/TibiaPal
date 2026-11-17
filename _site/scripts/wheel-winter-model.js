@@ -14,6 +14,16 @@
     sorcerer: ["Death Echo", "Lightning"],
     monk: ["Chained Penance", "Thousand Fist Blows"],
   };
+  // Keep replaced IDs stable so existing preview builds and grades still load.
+  const CHAIN_MODS = {
+    knight: { id: "chain:chivalrous-challenge", name: "Chivalrous Challenge Chain", replaces: "Intense Wound Cleansing Cooldown" },
+    sorcerer: { id: "new:1:2", name: "Lightning Chain", replaces: "Lightning Critical Extra Damage" },
+    paladin: { id: 25, name: "Divine Dazzle Chain", replaces: "Divine Dazzle Cooldown" },
+  };
+  const extraSupremeMods = vocation => [
+    ...NEW_SPELLS[vocation].flatMap((_, index) => [`new:${index}:1`, `new:${index}:2`]),
+    ...(vocation === "knight" ? [CHAIN_MODS.knight.id] : []),
+  ];
   const clean = value => String(value ?? "").split("|")[0];
   const number = value => Number(String(value).match(/[-+]?\d+(?:\.\d+)?/)?.[0] ?? 0);
   function readVector(vector, map = value => value) {
@@ -73,17 +83,18 @@
         mod.effects?.delete(); return mod.id;
       });
       this.supreme = readVector(this.planner.getAvailableSupremeMods());
-      // Winter layout: central 100-point slice = Mastery;
-      // former side 100-point vessel = displaced augment; 150-point vessel
-      // stays a gem slot. Dedication stats and point paths stay in position.
+      // Feedback layout: Mastery takes the ring-2 leech position;
+      // that leech perk takes the former side ring-3 vessel, and the augment
+      // returns to the central ring-3 slice. Dedication and paths stay put.
       DOMAINS.forEach(domain => {
         const middle = this.definitions.find(tile => tile.key === `Q${domain}4`);
         const sideVessel = this.definitions.find(tile => tile.domain === domain && tile.maxSkillPoints === 100 && tile.category === "VesselResonance");
-        if (!middle || !sideVessel) throw new Error("Unsupported base wheel layout.");
-        sideVessel.mediumPerkId = middle.mediumPerkId;
-        sideVessel.category = middle.category;
-        sideVessel.fullValue = middle.fullValue;
-        middle.kind = "mastery";
+        const leech = this.definitions.find(tile => tile.domain === domain && tile.maxSkillPoints === 75 && [5, 6].includes(tile.mediumPerkId));
+        if (!middle || !sideVessel || !leech) throw new Error("Unsupported base wheel layout.");
+        sideVessel.mediumPerkId = leech.mediumPerkId;
+        sideVessel.category = leech.category;
+        sideVessel.fullValue = leech.fullValue;
+        leech.kind = "mastery";
       });
       this.definitions.forEach(tile => {
         tile.kind ||= tile.category === "VesselResonance" ? "vessel" : "conviction";
@@ -139,9 +150,15 @@
     }
     modOptions(type, slot = 0) {
       if (type === "basic") return slot === 0 ? this.basic1 : this.basic2;
-      return [...this.supreme, ...NEW_SPELLS[this.vocation].flatMap((_, index) => [`new:${index}:1`, `new:${index}:2`])];
+      return [...this.supreme, ...extraSupremeMods(this.vocation)];
     }
     supremeModInfo(id) {
+      const chain = CHAIN_MODS[this.vocation];
+      if (chain?.id === id) return {
+        Name: chain.name, NameSummary: chain.name, replaces: chain.replaces,
+        EffectInfo: Object.fromEntries([0, 1, 2, 3].map(grade => [grade,
+          `+${[1, 1, 1, 2][grade]} chain target${grade === 3 ? "s" : ""}, +${[0, 1, 2, 2][grade]} cast and jump range (max. 12 total targets; max. 2× base range)`])),
+      };
       const match = String(id).match(/^new:([01]):([12])$/);
       if (!match) return this.strings.SupremeModInfos[id];
       // New augments: base damage 5/5.5/6/7%, critical extra 8/8.8/9.6/12%.
@@ -150,6 +167,10 @@
       const template = this.strings.SupremeModInfos[baseDamage ? 10 : 11];
       const effectInfo = { ...template.EffectInfo };
       if (baseDamage) effectInfo[3] = "+7% Base Damage";
+      if (this.vocation === "knight" && match[1] === "0") {
+        const values = baseDamage ? [8, 8.8, 9.6, 12] : [15, 16.5, 18, 22.5];
+        values.forEach((value, grade) => { effectInfo[grade] = `+${value}% ${baseDamage ? "Base Damage" : "Critical Extra Damage"}`; });
+      }
       const name = `Augmented ${NEW_SPELLS[this.vocation][Number(match[1])]}`;
       return { ...template, Name: name, NameSummary: name, EffectInfo: effectInfo };
     }
@@ -176,6 +197,20 @@
         if (!gem || index >= this.unlockedVessels) return [];
         return gem.mods.flatMap((id, slot) => id === null ? [] : this.modEffects(slot === 2 ? "supreme" : "basic", id));
       });
+    }
+    chainBonus() {
+      const mod = CHAIN_MODS[this.vocation];
+      if (!mod) return null;
+      const copies = this.gems.filter((gem, index) => index < this.unlockedVessels && gem?.mods[2] === mod.id).length;
+      if (!copies) return null;
+      const grade = this.grade("supreme", mod.id);
+      return { name: mod.name, targets: copies * [1, 1, 1, 2][grade], range: copies * [0, 1, 2, 2][grade],
+        // Each cap uses the spell's unmodified base range, not the boosted range.
+        apply(baseTargets, baseCastRange, baseJumpRange) {
+          return { targets: Math.min(12, baseTargets + this.targets),
+            castRange: Math.min(baseCastRange * 2, baseCastRange + this.range),
+            jumpRange: Math.min(baseJumpRange * 2, baseJumpRange + this.range) };
+        } };
     }
     corners() {
       const tiles = this.tiles();
@@ -237,7 +272,7 @@
         // Validate mod IDs against the imported vocation's engine, not the outgoing build.
         const allowed1 = readVector(candidate.getAvailableBasicModsPos1(), mod => { mod.effects?.delete(); return mod.id; });
         const allowed2 = readVector(candidate.getAvailableBasicModsPos2(), mod => { mod.effects?.delete(); return mod.id; });
-        const allowedSupreme = [...readVector(candidate.getAvailableSupremeMods()), "new:0:1", "new:0:2", "new:1:1", "new:1:2"];
+        const allowedSupreme = [...readVector(candidate.getAvailableSupremeMods()), ...extraSupremeMods(vocation)];
         const allowed = [allowed1, allowed2, allowedSupreme];
         if (preview) {
           if (!Array.isArray(data.gems) || data.gems.length !== 8 || !data.grades || typeof data.grades !== "object" || Array.isArray(data.grades)) throw new Error("Invalid preview gems or grades.");
@@ -273,7 +308,7 @@
       return preview;
     }
   }
-  const api = { WinterWheel, DOMAINS, QUALITIES, VOCATIONS, NEW_SPELLS, clean, format, number };
+  const api = { WinterWheel, DOMAINS, QUALITIES, VOCATIONS, NEW_SPELLS, CHAIN_MODS, clean, format, number };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else root.TibiaPalWinterWheel = api;
 })(typeof window === "undefined" ? globalThis : window);
