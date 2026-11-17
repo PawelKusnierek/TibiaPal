@@ -14,7 +14,7 @@
     const tools = document.createElement("div");
     tools.className = "WodWinterTools";
     const atelierContent = `<div class="WodWinterLoadoutHeader"><div><span class="WodWinterEyebrow">EIGHT VESSELS</span><h3>Gem loadout</h3><p>Choose a vessel to configure its gem and grades.</p></div><div id="wod-winter-loadout-count" class="WodWinterLoadoutCount" aria-live="polite"></div></div><div class="WodWinterAtelierLayout"><div class="WodWinterRack"><div class="WodWinterRackHeading"><strong>Gem vessels</strong><span>Unlock order →</span></div><div id="wod-winter-vessels" class="WodWinterVessels" role="group" aria-label="Eight gem vessels in unlock order"></div><p class="WodWinterRackHelp">Fill Gem Vessel perks to unlock slots in this order. You can plan gems in locked slots; they activate when unlocked.</p></div><div id="wod-winter-gem-editor" class="WodWinterGemEditor"></div></div>`;
-    tools.innerHTML = `<div class="WodWinterTabs" role="tablist" aria-label="Gem tools"><button type="button" role="tab" id="wod-winter-atelier-tab" aria-selected="true" aria-controls="wod-winter-atelier">Gem Atelier</button><button type="button" role="tab" id="wod-winter-workshop-tab" aria-selected="false" aria-controls="wod-winter-workshop" tabindex="-1">Fragment Workshop</button></div>${panel("wod-winter-atelier", "Gem Atelier", atelierContent)}${panel("wod-winter-workshop", "Fragment Workshop", '<p class="WodWinterNote">Choose the highest grade you have unlocked. The grade applies to every copy of the mod, independently of other mods on the gem.</p><label class="WodWinterFilter">Filter mods <input type="text" id="wod-winter-mod-filter" placeholder="Spell or effect"></label><div id="wod-winter-mods"></div>')}<p class="WodWinterNote">New spell augments reach +7% base damage or +12% critical extra damage at grade IV. Winter preview codes save the complete build for TibiaPal and cannot be imported into the game.</p>`;
+    tools.innerHTML = `<div class="WodWinterTabs" role="tablist" aria-label="Gem tools"><button type="button" role="tab" id="wod-winter-atelier-tab" aria-selected="true" aria-controls="wod-winter-atelier">Gem Atelier</button><button type="button" role="tab" id="wod-winter-workshop-tab" aria-selected="false" aria-controls="wod-winter-workshop" tabindex="-1">Fragment Workshop</button></div>${panel("wod-winter-atelier", "Gem Atelier", atelierContent)}${panel("wod-winter-workshop", "Fragment Workshop", '<p class="WodWinterNote">Choose the highest grade you have unlocked. The grade applies to every copy of the mod, independently of other mods on the gem.</p><label class="WodWinterFilter">Filter mods <input type="text" id="wod-winter-mod-filter" placeholder="Spell or effect"></label><div id="wod-winter-mods"></div>')}<p class="WodWinterNote">New spell augments reach +7% base damage or +12% critical extra damage at grade IV. Shield Slam instead reaches +12% base damage or +22.5% critical extra damage. Chain bonuses stack up to 12 total targets and twice the spell's base cast and jump range.</p><p class="WodWinterNote">Winter preview codes save the complete build for TibiaPal and cannot be imported into the game.</p>`;
     wrapper.querySelector("#PerksSummary").closest(".TableContainer").before(tools);
     const atelier = document.getElementById("wod-winter-atelier");
     const workshop = document.getElementById("wod-winter-workshop");
@@ -37,7 +37,10 @@
       button.closest(".BigButton").hidden = true;
     }
     function effects(type, id) {
-      return controller.model.modEffects(type, id).map(effect => `${effect.value} ${effect.name}`).join(" / ") || "No effect selected";
+      const model = controller.model;
+      const text = model.modEffects(type, id).map(effect => `${effect.value} ${effect.name}`).join(" / ") || "No effect selected";
+      const replaces = type === "supreme" ? model.supremeModInfo(id)?.replaces : null;
+      return text + (replaces ? ` · Replaces ${replaces}` : "");
     }
     function gemVisual(slot) {
       return `<span class="WodWinterSocket ${slot.gem ? "HasGem" : ""}" aria-hidden="true">${slot.gem ? `<span class="WodWinterGemSprite" style="background-position:-${slot.spriteId * 40}px 0"></span><span class="WodWinterGemBezel" style="background-position:-${slot.bezelId * 40}px 0"></span>` : ""}</span>`;
@@ -82,6 +85,8 @@
       if (!model) return;
       const summary = model.summary();
       const rows = [{ name: "Gem vessels unlocked", value: `${model.unlockedVessels} / 8` }, { name: "Damage and Healing", value: `+${summary.vesselDamage}` }, ...summary.effects];
+      const chain = model.chainBonus();
+      if (chain) rows.push({ name: `${chain.name} · combined`, value: `Up to +${chain.targets} targets (12 total max), +${chain.range} cast and jump range (2× base max)` });
       if (summary.momentum) rows.push({ name: "Momentum", value: `+${summary.momentum}%` });
       document.getElementById("wod-gem-perks").innerHTML = rows.map((row, index) => `<tr class="${index % 2 ? "Odd" : "Even"}"><td>${escape(row.name)}</td><td><span class="PerksSummaryValue">${escape(row.value)}</span></td></tr>`).join("");
     }
@@ -125,7 +130,7 @@
       if (!select || !controller.model) return;
       const model = controller.model, slot = Number(select.dataset.modSlot);
       const gem = model.gems[selectedVessel] ?? { mods: Array(model.vessels()[selectedVessel].quality + 1).fill(null) };
-      gem.mods[slot] = select.value === "" ? null : select.value.startsWith("new:") ? select.value : Number(select.value);
+      gem.mods[slot] = select.value === "" ? null : /^\d+$/.test(select.value) ? Number(select.value) : select.value;
       model.gems[selectedVessel] = gem.mods.some(id => id !== null) ? gem : null;
       refresh(); editor.querySelector(`[data-mod-slot="${slot}"]`).focus();
     });
